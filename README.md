@@ -29,7 +29,7 @@ Before you can run the site, your computer needs two essential pieces of softwar
 
 1. **Git:** This is used to download the code from the internet to your computer.
 
-- **Download:** Go to [git-scm.com](https://www.google.com/search?q=https://git-scm.com/downloads) and download the version for your operating system (Windows/Mac). Run the installer and click "Next" through the default options.
+- **Download:** Go to [git-scm.com](https://git-scm.com/downloads) and download the version for your operating system (Windows/Mac). Run the installer and click "Next" through the default options.
 
 2. **Node.js:** This is the engine that runs the website's code on your computer.
 
@@ -85,7 +85,7 @@ npm run dev
 
 1. Open your favorite web browser (Chrome, Safari, Edge, etc.).
 2. Type the following address into the URL bar and press Enter:
-   **[http://localhost:3000](https://www.google.com/search?q=http://localhost:3000)**
+   **[http://localhost:3000](http://localhost:3000)**
 
 You should now see the fully functioning myloandesk website running on your computer! Keep the terminal window open as long as you want to use the site. To stop the server, go back to the terminal and press `Ctrl + C`.
 
@@ -93,13 +93,13 @@ You should now see the fully functioning myloandesk website running on your comp
 
 ## 🛠 Next.js Default Documentation
 
-_This project was bootstrapped with [`create-next-app`](<https://www.google.com/search?q=%5Bhttps://nextjs.org/docs/app/api-reference/cli/create-next-app%5D(https://nextjs.org/docs/app/api-reference/cli/create-next-app)>)._
+_This project was bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app)._
 
 ### Editing the Project
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](<https://www.google.com/search?q=%5Bhttps://nextjs.org/docs/app/building-your-application/optimizing/fonts%5D(https://nextjs.org/docs/app/building-your-application/optimizing/fonts)>) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 ### Learn More
 
@@ -108,4 +108,4 @@ To learn more about Next.js, take a look at the following resources:
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://www.google.com/search?q=https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
