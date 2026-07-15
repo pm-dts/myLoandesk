@@ -1,8 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { DollarSign, ArrowRight } from "lucide-react";
-
+import { Calculator as CalcIcon, ArrowUp } from "lucide-react";
 import { Fraunces } from "next/font/google";
 
 const fraunces = Fraunces({
@@ -12,9 +11,9 @@ const fraunces = Fraunces({
 });
 
 export default function Calculator() {
-  // State for inputs (initialized to match the image)
-  const [homePrice, setHomePrice] = useState<number>(450000);
-  const [downPayment, setDownPayment] = useState<number>(90000);
+  // State for inputs
+  const [homePrice, setHomePrice] = useState<number>(400000);
+  const [downPayment, setDownPayment] = useState<number>(80000);
   const [loanTerm, setLoanTerm] = useState<number>(30);
   const [interestRate, setInterestRate] = useState<number>(6.5);
 
@@ -44,199 +43,166 @@ export default function Calculator() {
       maximumFractionDigits: 0,
     }).format(val);
 
-  const formatShortCurrency = (val: number) => `$${Math.round(val / 1000)}k`;
-
-  // Calculate percentages for the progress bar
-  const principalPercent = (loanAmount / totalPaid) * 100;
-  const interestPercent = (totalInterest / totalPaid) * 100;
-
-  // Slider background fill helper
+  // Slider background fill helper matching the exact image colors
   const getSliderStyle = (value: number, min: number, max: number) => {
     const percentage = ((value - min) / (max - min)) * 100;
     return {
-      background: `linear-gradient(to right, var(--color-moss-deep) ${percentage}%, var(--color-line) ${percentage}%)`,
+      background: `linear-gradient(to right, #FF6B00 ${percentage}%, #1E293B ${percentage}%)`,
     };
   };
 
   return (
-    <div className="max-w-md mx-auto bg-primary-bg rounded-3xl p-6 md:p-8 shadow-sm border border-line">
-      {/* Header */}
-      <div className="flex justify-between items-start mb-4">
-        <div>
-          <p className="text-xs font-semibold tracking-wider text-ink-2 uppercase mb-1">
-            Live Estimate
-          </p>
-          <h2 className="text-2xl font-display font-medium text-ink">
-            Monthly payment
+    <div
+      className="relative w-full max-w-[768px] mx-auto my-12"
+      id="calculator"
+    >
+      {/* Soft dark shadow/shape offset behind the card matching the design */}
+      <div className="absolute inset-0 bg-[#E3DBCB] rounded-[40px] transform rotate-[2deg] scale-[1.03] translate-x-3 translate-y-3 z-0"></div>
+
+      {/* Main Calculator Card */}
+      <div className="relative z-10 bg-white rounded-[40px] p-6 md:p-10 shadow-sm border border-white/60">
+        {/* Header */}
+        <div className="flex items-center gap-4 mb-6">
+          <div className="w-10 h-10 rounded-full bg-[#FFF4ED] flex items-center justify-center text-[#FF6B00] shrink-0">
+            <CalcIcon size={20} strokeWidth={2} />
+          </div>
+          <h2
+            className={`text-2xl md:text-3xl text-[#0B1221] ${fraunces.className}`}
+          >
+            Payment Estimator
           </h2>
         </div>
-        <div className="w-10 h-10 bg-moss-deep rounded-xl flex items-center justify-center text-primary-bg">
-          <DollarSign size={20} strokeWidth={2.5} />
-        </div>
-      </div>
 
-      <div className="space-y-2">
-        {/* Home Price */}
-        <div>
-          <div className="flex justify-between items-center mb-3 text-sm">
-            <label className="text-ink-2">Home price</label>
-            <span className="font-semibold text-ink font-mono text-base">
-              {formatCurrency(homePrice)}
+        {/* Result Box */}
+        <div className="bg-[#F4EFE6] rounded-[24px] p-6 mb-6">
+          <p className="text-gray-600 font-medium mb-1">
+            Estimated Monthly Payment
+          </p>
+          <div className="flex items-baseline gap-2 mb-6 border-b border-gray-300/50 pb-4">
+            <span
+              className={`text-4xl md:text-5xl font-bold text-[#FF6B00] tracking-tight ${fraunces.className}`}
+            >
+              {formatCurrency(monthlyPayment)}
             </span>
+            <span className="text-gray-600 text-base font-medium">/mo</span>
           </div>
-          <input
-            type="range"
-            min={50000}
-            max={2000000}
-            step={5000}
-            value={homePrice}
-            onChange={(e) => {
-              const newPrice = Number(e.target.value);
-              setHomePrice(newPrice);
-              // Maintain down payment percentage when home price changes
-              setDownPayment(newPrice * (downPaymentPercent / 100));
-            }}
-            className="w-full h-1.5 rounded-full appearance-none cursor-pointer focus-ring slider-thumb"
-            style={getSliderStyle(homePrice, 50000, 2000000)}
-          />
-        </div>
 
-        {/* Down Payment */}
-        <div>
-          <div className="flex justify-between items-center mb-3 text-sm">
-            <label className="text-ink-2">Down payment</label>
-            <div className="flex items-center gap-2">
-              <span className="font-semibold text-ink font-mono text-base">
-                {formatCurrency(downPayment)}
+          <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4 text-sm md:text-base">
+            <div>
+              <span className="text-gray-600">Loan Amount: </span>
+              <span className="font-bold text-[#0B1221] font-mono">
+                {formatCurrency(loanAmount)}
               </span>
-              <span className="text-xs font-medium text-ink-2 bg-line/50 px-1.5 py-0.5 rounded">
-                {downPaymentPercent}%
+            </div>
+            <div>
+              <span className="text-gray-600">Interest: </span>
+              <span className="font-bold text-[#0B1221] font-mono">
+                {formatCurrency(totalInterest)}
               </span>
             </div>
           </div>
-          <input
-            type="range"
-            min={0}
-            max={homePrice}
-            step={1000}
-            value={downPayment}
-            onChange={(e) => setDownPayment(Number(e.target.value))}
-            className="w-full h-1.5 rounded-full appearance-none cursor-pointer focus-ring slider-thumb"
-            style={getSliderStyle(downPayment, 0, homePrice)}
-          />
         </div>
 
-        {/* Loan Term */}
-        <div>
-          <label className="block text-sm text-ink-2 mb-3">Loan term</label>
-          <div className="flex gap-2 text-sm font-medium">
-            {[15, 20, 30].map((term) => (
-              <button
-                key={term}
-                onClick={() => setLoanTerm(term)}
-                className={`flex-1 py-2.5 rounded-lg border transition-colors focus-ring ${
-                  loanTerm === term
-                    ? "bg-moss-deep text-primary-bg border-moss-deep"
-                    : "bg-transparent text-ink border-line hover:border-moss-deep"
-                }`}
+        {/* Inputs Section */}
+        <div className="space-y-4">
+          {/* Home Price */}
+          <div>
+            <div className="flex justify-between items-center mb-3">
+              <label className="text-lg font-medium text-[#0B1221]">
+                Home Price
+              </label>
+              <span
+                className={`text-xl font-bold text-[#FF6B00] ${fraunces.className}`}
               >
-                {term} yr
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Interest Rate */}
-        <div>
-          <div className="flex justify-between items-center mb-3 text-sm">
-            <label className="text-ink-2">Interest rate</label>
-            <span className="font-semibold text-ink font-mono text-base">
-              {interestRate.toFixed(2)}%
-            </span>
-          </div>
-          <input
-            type="range"
-            min={1}
-            max={12}
-            step={0.1}
-            value={interestRate}
-            onChange={(e) => setInterestRate(Number(e.target.value))}
-            className="w-full h-1.5 rounded-full appearance-none cursor-pointer focus-ring slider-thumb"
-            style={getSliderStyle(interestRate, 1, 12)}
-          />
-        </div>
-      </div>
-
-      <hr className="my-4 border-line border-dashed" />
-
-      {/* Results Section */}
-      <div>
-        <div className="flex justify-between items-end mb-4">
-          <p className="text-sm text-ink-2">Estimated monthly</p>
-          <p className={`text-4xl text-moss-deep ${fraunces.className} `}>
-            {formatCurrency(monthlyPayment)}
-          </p>
-        </div>
-
-        {/* Progress Bar */}
-        <div className="h-2.5 flex rounded-full overflow-hidden mb-3">
-          <div
-            className="bg-moss-deep h-full"
-            style={{ width: `${principalPercent}%` }}
-          />
-          <div
-            className="bg-brand-orange h-full"
-            style={{ width: `${interestPercent}%` }}
-          />
-        </div>
-
-        {/* Legend */}
-        <div className="flex justify-between text-xs text-ink-2 mb-4">
-          <div className="flex items-center gap-1.5">
-            <span className="w-2 h-2 rounded-full bg-moss-deep" />
-            <span>
-              Principal{" "}
-              <span className="font-mono text-ink font-medium">
-                {formatShortCurrency(loanAmount)}
+                {formatCurrency(homePrice)}
               </span>
-            </span>
+            </div>
+            <input
+              type="range"
+              min={50000}
+              max={2000000}
+              step={1000}
+              value={homePrice}
+              onChange={(e) => {
+                const newPrice = Number(e.target.value);
+                setHomePrice(newPrice);
+                setDownPayment(newPrice * (downPaymentPercent / 100));
+              }}
+              className="w-full h-3 rounded-full appearance-none cursor-pointer focus:outline-none focus:ring-4 focus:ring-[#FF6B00]/20 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:bg-[#FF6B00] [&::-webkit-slider-thumb]:rounded-full"
+              style={getSliderStyle(homePrice, 50000, 2000000)}
+            />
           </div>
-          <div className="flex items-center gap-1.5">
-            <span className="w-2 h-2 rounded-full bg-brand-orange" />
-            <span>
-              Interest{" "}
-              <span className="font-mono text-ink font-medium">
-                {formatShortCurrency(totalInterest)}
+
+          {/* Down Payment */}
+          <div>
+            <div className="flex justify-between items-center mb-3">
+              <label className="text-lg font-medium text-[#0B1221]">
+                Down Payment
+              </label>
+              <span
+                className={`text-xl font-bold text-[#FF6B00] ${fraunces.className}`}
+              >
+                {formatCurrency(downPayment)}
               </span>
-            </span>
+            </div>
+            <input
+              type="range"
+              min={0}
+              max={homePrice}
+              step={1000}
+              value={downPayment}
+              onChange={(e) => setDownPayment(Number(e.target.value))}
+              className="w-full h-3 rounded-full appearance-none cursor-pointer focus:outline-none focus:ring-4 focus:ring-[#FF6B00]/20 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:bg-[#FF6B00] [&::-webkit-slider-thumb]:rounded-full"
+              style={getSliderStyle(downPayment, 0, homePrice)}
+            />
+          </div>
+
+          {/* Interest Rate */}
+          <div>
+            <div className="flex justify-between items-center mb-3">
+              <label className="text-lg font-medium text-[#0B1221]">
+                Interest Rate
+              </label>
+              <span
+                className={`text-xl font-bold text-[#FF6B00] ${fraunces.className}`}
+              >
+                {interestRate.toFixed(2)}%
+              </span>
+            </div>
+            <input
+              type="range"
+              min={1}
+              max={12}
+              step={0.1}
+              value={interestRate}
+              onChange={(e) => setInterestRate(Number(e.target.value))}
+              className="w-full h-3 rounded-full appearance-none cursor-pointer focus:outline-none focus:ring-4 focus:ring-[#FF6B00]/20 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:bg-[#FF6B00] [&::-webkit-slider-thumb]:rounded-full"
+              style={getSliderStyle(interestRate, 1, 12)}
+            />
+          </div>
+
+          {/* Loan Term */}
+          <div className="pt-1">
+            <label className="text-lg font-medium text-[#0B1221] block mb-4">
+              Loan Term
+            </label>
+            <div className="bg-[#F4EFE6] p-1.5 rounded-full flex gap-2">
+              {[15, 20, 30].map((term) => (
+                <button
+                  key={term}
+                  onClick={() => setLoanTerm(term)}
+                  className={`flex-1 py-2.5 text-base font-semibold rounded-full transition-all duration-300 outline-none focus-visible:ring-2 focus-visible:ring-[#FF6B00] ${
+                    loanTerm === term
+                      ? "bg-white text-[#FF6B00] shadow-sm"
+                      : "bg-transparent text-gray-500 hover:text-gray-800"
+                  }`}
+                >
+                  {term} yr
+                </button>
+              ))}
+            </div>
           </div>
         </div>
-
-        {/* Summary Cards */}
-        <div className="grid grid-cols-2 gap-3 mb-4">
-          <div className="bg-[#f0ece1] p-3.5 rounded-xl border border-line/50">
-            <p className="text-[10px] font-semibold text-ink-2 uppercase tracking-wider mb-1">
-              Loan Amount
-            </p>
-            <p className="font-mono font-medium text-ink">
-              {formatCurrency(loanAmount)}
-            </p>
-          </div>
-          <div className="bg-[#f0ece1] p-3.5 rounded-xl border border-line/50">
-            <p className="text-[10px] font-semibold text-ink-2 uppercase tracking-wider mb-1">
-              Total Interest
-            </p>
-            <p className="font-mono font-medium text-ink">
-              {formatCurrency(totalInterest)}
-            </p>
-          </div>
-        </div>
-
-        {/* CTA Button */}
-        <button className="btn-shine w-full bg-moss-deep text-primary-bg py-4 rounded-xl font-medium flex items-center justify-center gap-2 hover:bg-moss-darker transition-colors focus-ring">
-          Get pre-qualified in 5 min
-          <ArrowRight size={18} />
-        </button>
       </div>
     </div>
   );

@@ -6,10 +6,13 @@ import { cn } from "@/lib/utils";
 import Calculator from "@/components/site/Home/Calculator";
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
 import LenderMarquee from "@/components/site/Home/LenderMarquee";
+import CurrentRates from "@/components/site/Home/InterestRates";
+import Contact from "@/components/site/Home/Contact";
 
 import { Fraunces } from "next/font/google";
 import Faq from "@/components/site/Home/FAQ";
 import StartApplication from "@/components/site/Home/ApplicationForm";
+// import CalculatorSection from "@/components/site/Home/CalculatorSection";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -19,16 +22,16 @@ const fraunces = Fraunces({
 
 export default function Hero() {
   return (
-    <main className="min-h-screen bg-primary-bg pt-28 pb-16 lg:pt-36 lg:pb-24">
+    <main className="min-h-screen bg-primary-bg pt-16 pb-16 lg:pt-16 lg:pb-24">
       <section className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-8 items-center">
           {/* Left Column: Copy & CTAs */}
           <div className="max-w-xl">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-line text-xs font-medium text-ink-2">
+            {/* <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-line text-xs font-medium text-ink-2">
               <span className="w-1.5 h-1.5 rounded-full bg-brand-orange"></span>
               Independent mortgage brokerage · Est. 2014
-            </div>
+            </div> */}
 
             {/* Headline */}
             <h1
@@ -57,12 +60,7 @@ export default function Hero() {
                   Start your application
                   <ArrowRight size={18} />
                 </a>
-                <a
-                  href="#calculator"
-                  className="px-6 py-3.5 text-ink font-medium border border-transparent hover:border-line rounded-full transition-colors focus-ring"
-                >
-                  Try the calculator
-                </a>
+                <CurrentRates />
               </div>
 
               {/* Social Proof (Avatars & Rating) */}
@@ -117,7 +115,7 @@ export default function Hero() {
           </div>
 
           {/* Right Column: Calculator Component */}
-          <div className="relative w-full max-w-md mx-auto lg:ml-auto lg:mr-0 mt-8 lg:mt-0">
+          <div className="relative w-full max-w-xl mx-auto lg:ml-auto lg:mr-0 mt-8 lg:mt-0">
             <div className="absolute inset-0 bg-[#E8E4D8] rounded-3xl transform rotate-2 translate-x-3 translate-y-3 -z-10"></div>
 
             <div className="relative z-10">
@@ -176,6 +174,7 @@ export default function Hero() {
         </div>
       </section>
       <LenderMarquee />
+      {/* <CalculatorSection /> */}
       <section id="loans" className="py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           {/* Header Section */}
@@ -667,6 +666,7 @@ export default function Hero() {
       </section>
       <Faq />
       <StartApplication />
+      <Contact />
     </main>
   );
 }
