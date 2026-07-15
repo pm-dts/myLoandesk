@@ -1,7 +1,14 @@
 "use client";
 
 import React, { useState } from "react";
-import { Menu, X, ChevronDown, Calendar, ArrowRight, ArrowUpRight } from "lucide-react";
+import {
+  Menu,
+  X,
+  ChevronDown,
+  Calendar,
+  ArrowRight,
+  ArrowUpRight,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -69,10 +76,8 @@ export const Header: React.FC = () => {
   return (
     /* Changed 'fixed' to 'sticky' so it naturally pushes layout content down without requiring manual page padding adjustments */
     <header className="sticky top-0 left-0 right-0 z-50 nav-blur border-b border-line bg-primary-bg w-full">
-
       {/* --- DESKTOP NAVIGATION --- */}
       <nav className="hidden lg:flex max-w-7xl mx-auto px-6 lg:px-10 h-32 items-center justify-between gap-4">
-
         {/* Desktop Logo Layout */}
         <Link href="/" className="flex-shrink-0 flex items-center py-2">
           <Image
@@ -92,16 +97,23 @@ export const Header: React.FC = () => {
             onMouseEnter={() => setIsDropdownOpen(true)}
             onMouseLeave={() => setIsDropdownOpen(false)}
           >
-            <Link href="/loan-programs" className="ulink focus-ring flex items-center gap-1 cursor-pointer">
+            <Link
+              href="/loan-programs"
+              className="ulink focus-ring flex items-center gap-1 cursor-pointer"
+            >
               Loan types
-              <ChevronDown size={13} className={`transition-transform duration-300 ${isDropdownOpen ? "rotate-180" : ""}`} />
+              <ChevronDown
+                size={13}
+                className={`transition-transform duration-300 ${isDropdownOpen ? "rotate-180" : ""}`}
+              />
             </Link>
 
             <div
-              className={`absolute left-0 mt-2 w-[560px] bg-primary-bg border border-line rounded-2xl shadow-xl p-5 grid grid-cols-2 gap-x-4 gap-y-1.5 transition-all duration-200 origin-top z-[60] ${isDropdownOpen
-                ? "opacity-100 scale-100 pointer-events-auto"
-                : "opacity-0 scale-95 pointer-events-none"
-                }`}
+              className={`absolute left-0 mt-2 w-[560px] bg-primary-bg border border-line rounded-2xl shadow-xl p-5 grid grid-cols-2 gap-x-4 gap-y-1.5 transition-all duration-200 origin-top z-[60] ${
+                isDropdownOpen
+                  ? "opacity-100 scale-100 pointer-events-auto"
+                  : "opacity-0 scale-95 pointer-events-none"
+              }`}
             >
               {loanLinks.map((link) => (
                 <Link
@@ -116,19 +128,41 @@ export const Header: React.FC = () => {
             </div>
           </div>
 
-          <Link href="/realtors" className="ulink focus-ring">Realtors</Link>
-          <Link href="/careers" className="ulink focus-ring">Careers</Link>
-          <Link href="/calendar" className="ulink focus-ring">Our Calendar</Link>
-          <Link href="/#process" className="ulink focus-ring">Process</Link>
-          <Link href="/#calculator" className="ulink focus-ring">Calculator</Link>
-          <Link href="/#why" className="ulink focus-ring">Why us</Link>
-          <Link href="/#stories" className="ulink focus-ring">Stories</Link>
-          <Link href="/#faq" className="ulink focus-ring">FAQ</Link>
+          <Link href="/realtors" className="ulink focus-ring">
+            Realtors
+          </Link>
+          <Link href="/careers" className="ulink focus-ring">
+            Careers
+          </Link>
+          <Link href="/calendar" className="ulink focus-ring">
+            Our Calendar
+          </Link>
+          <Link href="/#process" className="ulink focus-ring">
+            Process
+          </Link>
+          <Link href="/#calculator" className="ulink focus-ring">
+            Calculator
+          </Link>
+          <Link href="/#why" className="ulink focus-ring">
+            Why us
+          </Link>
+          <Link href="/#stories" className="ulink focus-ring">
+            Stories
+          </Link>
+          <Link href="/#faq" className="ulink focus-ring">
+            FAQ
+          </Link>
+          <Link href="/blog" className="ulink focus-ring">
+            Blog
+          </Link>
         </div>
 
         {/* Action Button Deck */}
         <div className="flex items-center gap-3 flex-shrink-0 text-[13px] font-medium">
-          <a href="#" className="text-ink-2 hover:text-ink transition-colors focus-ring px-2 py-1">
+          <a
+            href="#"
+            className="text-ink-2 hover:text-ink transition-colors focus-ring px-2 py-1"
+          >
             Sign in
           </a>
 
@@ -144,10 +178,8 @@ export const Header: React.FC = () => {
 
       {/* --- MOBILE NAVIGATION --- */}
       <div className="lg:hidden flex flex-col w-full bg-primary-bg">
-
         {/* Row 1: Top branding bar */}
         <div className="relative h-28 px-4 flex items-center justify-center border-b border-line/30">
-
           {/* Menu Button */}
           <button
             onClick={toggleMobileMenu}
@@ -159,7 +191,10 @@ export const Header: React.FC = () => {
           </button>
 
           {/* Centered Bigger Logo */}
-          <Link href="/" className="flex-shrink-0 flex items-center justify-center py-2">
+          <Link
+            href="/"
+            className="flex-shrink-0 flex items-center justify-center py-2"
+          >
             <Image
               src={brandLogo}
               alt="My Loan Desk Logo"
@@ -187,16 +222,27 @@ export const Header: React.FC = () => {
       {isMobileMenuOpen && (
         <div className="lg:hidden border-t border-line bg-primary-bg absolute top-full left-0 w-full shadow-2xl max-h-[calc(100vh-11rem)] overflow-y-auto z-50">
           <div className="px-5 py-5 flex flex-col gap-1.5 text-base font-medium text-ink">
-
-            <Link href="/realtors" className="p-3 rounded-xl hover:bg-cream/30 text-sm" onClick={toggleMobileMenu}>
+            <Link
+              href="/realtors"
+              className="p-3 rounded-xl hover:bg-cream/30 text-sm"
+              onClick={toggleMobileMenu}
+            >
               Realtors
             </Link>
 
-            <Link href="/careers" className="p-3 rounded-xl hover:bg-cream/30 text-sm" onClick={toggleMobileMenu}>
+            <Link
+              href="/careers"
+              className="p-3 rounded-xl hover:bg-cream/30 text-sm"
+              onClick={toggleMobileMenu}
+            >
               Careers
             </Link>
 
-            <Link href="/calendar" className="p-3 rounded-xl hover:bg-cream/30 text-sm flex items-center gap-2 text-brand-orange" onClick={toggleMobileMenu}>
+            <Link
+              href="/calendar"
+              className="p-3 rounded-xl hover:bg-cream/30 text-sm flex items-center gap-2 text-brand-orange"
+              onClick={toggleMobileMenu}
+            >
               <Calendar size={16} />
               Our Calendar
             </Link>
@@ -209,7 +255,10 @@ export const Header: React.FC = () => {
                 className="w-full p-3 flex items-center justify-between text-xs font-semibold uppercase tracking-wider text-ink-2/70"
               >
                 Loan Programs Options
-                <ChevronDown size={16} className={`transition-transform duration-200 ${isMobileLoanOpen ? "rotate-180 text-brand-orange" : ""}`} />
+                <ChevronDown
+                  size={16}
+                  className={`transition-transform duration-200 ${isMobileLoanOpen ? "rotate-180 text-brand-orange" : ""}`}
+                />
               </button>
 
               {isMobileLoanOpen && (
@@ -237,19 +286,55 @@ export const Header: React.FC = () => {
 
             <hr className="border-line my-2" />
 
-            <span className="px-3 pt-1 text-[10px] uppercase font-semibold tracking-widest text-ink-2/40">Jump To Section</span>
+            <span className="px-3 pt-1 text-[10px] uppercase font-semibold tracking-widest text-ink-2/40">
+              Jump To Section
+            </span>
 
             <div className="grid grid-cols-2 gap-1 text-xs">
-              <Link href="/#process" className="p-3 rounded-xl hover:bg-cream/30" onClick={toggleMobileMenu}>Process</Link>
-              <Link href="/#calculator" className="p-3 rounded-xl hover:bg-cream/30" onClick={toggleMobileMenu}>Calculator</Link>
-              <Link href="/#why" className="p-3 rounded-xl hover:bg-cream/30" onClick={toggleMobileMenu}>Why us</Link>
-              <Link href="/#stories" className="p-3 rounded-xl hover:bg-cream/30" onClick={toggleMobileMenu}>Stories</Link>
-              <Link href="/#faq" className="p-3 rounded-xl hover:bg-cream/30" onClick={toggleMobileMenu}>FAQ</Link>
+              <Link
+                href="/#process"
+                className="p-3 rounded-xl hover:bg-cream/30"
+                onClick={toggleMobileMenu}
+              >
+                Process
+              </Link>
+              <Link
+                href="/#calculator"
+                className="p-3 rounded-xl hover:bg-cream/30"
+                onClick={toggleMobileMenu}
+              >
+                Calculator
+              </Link>
+              <Link
+                href="/#why"
+                className="p-3 rounded-xl hover:bg-cream/30"
+                onClick={toggleMobileMenu}
+              >
+                Why us
+              </Link>
+              <Link
+                href="/#stories"
+                className="p-3 rounded-xl hover:bg-cream/30"
+                onClick={toggleMobileMenu}
+              >
+                Stories
+              </Link>
+              <Link
+                href="/#faq"
+                className="p-3 rounded-xl hover:bg-cream/30"
+                onClick={toggleMobileMenu}
+              >
+                FAQ
+              </Link>
             </div>
 
             <hr className="border-line my-2" />
 
-            <a href="#" className="p-3 text-center rounded-xl border border-line text-sm text-ink-2 mt-2" onClick={toggleMobileMenu}>
+            <a
+              href="#"
+              className="p-3 text-center rounded-xl border border-line text-sm text-ink-2 mt-2"
+              onClick={toggleMobileMenu}
+            >
               Sign In to Your Account
             </a>
           </div>
