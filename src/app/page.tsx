@@ -12,7 +12,7 @@ import Contact from "@/components/site/Home/Contact";
 import { Fraunces } from "next/font/google";
 import Faq from "@/components/site/Home/FAQ";
 import StartApplication from "@/components/site/Home/ApplicationForm";
-// import CalculatorSection from "@/components/site/Home/CalculatorSection";
+import CalculatorSection from "@/components/site/Home/CalculatorSection";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -174,7 +174,7 @@ export default function Hero() {
         </div>
       </section>
       <LenderMarquee />
-      {/* <CalculatorSection /> */}
+      <CalculatorSection />
       <section id="loans" className="py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           {/* Header Section */}
