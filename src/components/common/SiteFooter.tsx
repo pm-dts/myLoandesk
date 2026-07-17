@@ -1,278 +1,187 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 import brandLogo from "@/assets/icon.jpeg";
-import { Home } from "lucide-react";
+import youTubeIcon from "@/assets/youtube.png";
+import facebookIcon from "@/assets/communication.png";
+import instagramIcon from "@/assets/instagram.png";
+import tikTokIcon from "@/assets/tik-tok.png";
+import whatsappIcon from "@/assets/whatsapp.png";
+import qrImg from "@/assets/qr.avif";
 
 export default function Footer() {
   return (
-    <footer className=" text-ink bg-cream pt-20 pb-10">
+    <footer className="text-ink bg-cream pt-20 pb-10 select-none">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
-        {/* Main Footer Content */}
-        <div className="grid lg:grid-cols-12 gap-12 pb-14 border-b border-cream/10">
+        {/* Main Footer Content Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-10 gap-10 lg:gap-8 pb-14 border-b border-ink/10">
           {/* Brand & Socials Column */}
-          <div className="lg:col-span-4">
-            {/* Logo */}
-            <Link href="/" className="flex items-center gap-2 mb-6">
+          <div className="md:col-span-2 lg:col-span-4 space-y-6">
+            <Link href="/" className="inline-block">
               <Image
                 src={brandLogo}
                 alt="My Loan Desk Logo"
-                width={120}
-                height={120}
-                className=""
+                width={220}
+                height={160}
+                className="w-56 h-auto object-contain"
+                priority
               />
             </Link>
 
-            <p className="text-sm leading-relaxed text-ink/60 max-w-sm mb-6">
-              An independent mortgage brokerage sitting on your side of the
-              desk. Licensed in 38 states. NMLS #1846297.
+            <p className="text-sm leading-relaxed text-ink/65 max-w-sm">
+              MyLoanDesk.com is a dba of Secured Horizon Financial Group, Inc.
+              Secured Horizon Mortgage Group, Inc. NMLS 314226, 1444825.
+              <br />
+              <a
+                href="http://www.nmlsconsumeraccess.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-ink/75 hover:text-brand-orange underline inline-block mt-1 transition-colors break-all"
+              >
+                http://www.nmlsconsumeraccess.org/
+              </a>
             </p>
 
-            {/* Social Links (Using inline SVGs for brand logos) */}
-            <div className="flex items-center gap-3">
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full border border-cream/15 flex items-center justify-center hover:bg-cream/10 transition-colors group"
-                aria-label="X (Twitter)"
-              >
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="text-ink/70 group-hover:text-ink transition-colors"
+            {/* Social Links */}
+            <div className="flex items-center gap-3 pt-2">
+              {[
+                {
+                  icon: tikTokIcon,
+                  label: "TikTok",
+                  href: "https://www.tiktok.com/@talk2abe",
+                },
+                {
+                  icon: youTubeIcon,
+                  label: "YouTube",
+                  href: "https://www.tiktok.com/@talk2abe",
+                },
+                {
+                  icon: instagramIcon,
+                  label: "Instagram",
+                  href: "https://www.instagram.com/myloandesk/",
+                },
+                {
+                  icon: facebookIcon,
+                  label: "Facebook",
+                  href: "https://www.facebook.com/profile.php?id=100084628975766",
+                },
+                {
+                  icon: whatsappIcon,
+                  label: "WhatsApp",
+                  href: "tel:+1-305-8916500",
+                },
+              ].map((social, idx) => (
+                <a
+                  key={idx}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 rounded-full border border-ink/15 bg-white/40 flex items-center justify-center hover:bg-brand-orange/10 hover:border-brand-orange/30 transition-all duration-200 group shrink-0"
+                  aria-label={social.label}
                 >
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                </svg>
-              </a>
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full border border-cream/15 flex items-center justify-center hover:bg-cream/10 transition-colors group"
-                aria-label="LinkedIn"
-              >
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="text-ink/70 group-hover:text-ink transition-colors"
-                >
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                </svg>
-              </a>
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full border border-cream/15 flex items-center justify-center hover:bg-cream/10 transition-colors group"
-                aria-label="Instagram"
-              >
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="text-ink/70 group-hover:text-ink transition-colors"
-                >
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                </svg>
-              </a>
+                  <Image
+                    src={social.icon}
+                    className="w-5 h-5 object-contain"
+                    alt={social.label}
+                  />
+                </a>
+              ))}
             </div>
           </div>
 
-          {/* Links: Loans */}
+          {/* Links Section */}
           <div className="lg:col-span-2">
-            <div className="text-[10px] uppercase tracking-[0.2em] text-ink/40 font-semibold mb-5">
-              Loans
+            <div className="text-[10px] uppercase tracking-[0.2em] text-ink/40 font-bold mb-5">
+              Links
             </div>
-            <ul className="space-y-3 text-sm">
-              <li>
-                <Link
-                  href="#loans"
-                  className="hover:text-[#D4A574] transition-colors"
-                >
-                  Conventional
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#loans"
-                  className="hover:text-[#D4A574] transition-colors"
-                >
-                  FHA
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#loans"
-                  className="hover:text-[#D4A574] transition-colors"
-                >
-                  VA
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#loans"
-                  className="hover:text-[#D4A574] transition-colors"
-                >
-                  Jumbo
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#loans"
-                  className="hover:text-[#D4A574] transition-colors"
-                >
-                  Refinance
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#loans"
-                  className="hover:text-[#D4A574] transition-colors"
-                >
-                  Investment
-                </Link>
-              </li>
+            <ul className="space-y-3 text-sm font-medium">
+              {[
+                { label: "Get a quote", href: "/get-quote" },
+                {
+                  label: "Loan Application",
+                  href: "https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/pos#/?loid=c0d569d5-e33a-46d1-a6aa-fa9cab1edea5",
+                },
+                { label: "Loan Programs", href: "/loan-programs" },
+                { label: "Our Calendar", href: "/calendar" },
+                { label: "Realtors", href: "/realtors" },
+                { label: "Lenders", href: "/#lenders" },
+                { label: "Careers", href: "/careers" },
+                { label: "Blog", href: "/blog" },
+                { label: "Privacy Policy", href: "/privacy-policy" },
+              ].map((link, idx) => (
+                <li key={idx}>
+                  <Link
+                    href={link.href}
+                    className="text-ink/70 hover:text-brand-orange transition-colors duration-200"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Links: Company */}
+          {/* Resources Section */}
           <div className="lg:col-span-2">
-            <div className="text-[10px] uppercase tracking-[0.2em] text-ink/40 font-semibold mb-5">
-              Company
-            </div>
-            <ul className="space-y-3 text-sm">
-              <li>
-                <Link
-                  href="#process"
-                  className="hover:text-[#D4A574] transition-colors"
-                >
-                  How it works
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#why"
-                  className="hover:text-[#D4A574] transition-colors"
-                >
-                  Why us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#stories"
-                  className="hover:text-[#D4A574] transition-colors"
-                >
-                  Client stories
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="hover:text-[#D4A574] transition-colors"
-                >
-                  Careers
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="hover:text-[#D4A574] transition-colors"
-                >
-                  Press
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Links: Resources */}
-          <div className="lg:col-span-2">
-            <div className="text-[10px] uppercase tracking-[0.2em] text-ink/40 font-semibold mb-5">
+            <div className="text-[10px] uppercase tracking-[0.2em] text-ink/40 font-bold mb-5">
               Resources
             </div>
-            <ul className="space-y-3 text-sm">
-              <li>
-                <Link
-                  href="#calculator"
-                  className="hover:text-[#D4A574] transition-colors"
-                >
-                  Calculator
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#faq"
-                  className="hover:text-[#D4A574] transition-colors"
-                >
-                  FAQ
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="hover:text-[#D4A574] transition-colors"
-                >
-                  Rate watch
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="hover:text-[#D4A574] transition-colors"
-                >
-                  Buyer's guide
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="hover:text-[#D4A574] transition-colors"
-                >
-                  Glossary
-                </Link>
-              </li>
+            <ul className="space-y-3 text-sm font-medium">
+              {[
+                { label: "Calculator", href: "/#calculator" },
+                { label: "FAQ", href: "/#faq" },
+                { label: "Rate watch", href: "#" },
+                { label: "Buyer's guide", href: "#" },
+                { label: "Glossary", href: "#" },
+              ].map((link, idx) => (
+                <li key={idx}>
+                  <Link
+                    href={link.href}
+                    className="text-ink/70 hover:text-brand-orange transition-colors duration-200"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Links: Talk to us */}
+          {/* Talk to us Section */}
           <div className="lg:col-span-2">
-            <div className="text-[10px] uppercase tracking-[0.2em] text-ink/40 font-semibold mb-5">
+            <div className="text-[10px] uppercase tracking-[0.2em] text-ink/40 font-bold mb-5">
               Talk to us
             </div>
-            <ul className="space-y-3 text-sm">
+            <ul className="space-y-3 text-sm font-medium">
               <li>
+                <span className="">Call: </span>
+
                 <a
-                  href="tel:18005551234"
-                  className="hover:text-[#D4A574] transition-colors font-mono"
+                  href="tel:+13058916500"
+                  className="text-ink/70 hover:text-brand-orange transition-colors duration-200 font-mono"
                 >
-                  1-800-555-1234
+                  +1-305-8916500
                 </a>
               </li>
               <li>
+                <span className="">Email: </span>
                 <a
-                  href="mailto:hello@myloandesk.com"
-                  className="hover:text-[#D4A574] transition-colors"
+                  href="mailto:info@myloandesk.com"
+                  className="text-ink/70 hover:text-brand-orange transition-colors duration-200 break-all"
                 >
-                  hello@myloandesk.com
+                  info@myloandesk.com
                 </a>
               </li>
-              <li className="text-ink/60">Mon–Sun, 7am–9pm CT</li>
+              <li className="text-ink/50 text-xs font-normal">
+                <Image src={qrImg} className="" alt="qr" />
+              </li>
               <li className="pt-2">
                 <Link
-                  href="#start"
-                  className="inline-block bg-brand-orange text-primary-bg px-4 py-2 rounded-full text-xs font-medium hover:bg-brand-orange/90 transition-colors"
+                  href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
+                  target="_blank"
+                  className="inline-block bg-brand-orange text-primary-bg px-5 py-2.5 rounded-full text-xs font-semibold hover:bg-orange-600 shadow-sm transition-colors duration-200"
                 >
                   Start application
                 </Link>
@@ -281,29 +190,45 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Legal Bar */}
-        <div className="pt-8 flex flex-col lg:flex-row gap-6 justify-between items-start lg:items-center text-xs text-ink/50">
-          <div>
-            © {new Date().getFullYear()} myloandesk LLC · NMLS #1846297 · Equal
-            Housing Lender
+        {/* Bottom Legal Section */}
+        <div className="pt-8 flex flex-col gap-6 justify-between items-start text-xs text-ink/50 leading-relaxed">
+          <div className="w-full">
+            <p className="font-medium text-ink/60">
+              © {new Date().getFullYear()} myloandesk LLC · NMLS #1846297 ·
+              Equal Housing Lender
+            </p>
+            <p className="mt-4">
+              Interest Rates, APR's & programs are illustrations subject to
+              change at any time. These do not constitute a 'Loan or Good Faith
+              Estimate' for payments and closing costs. Not all applicants will
+              qualify. APR may vary by product type. Consumer is not obligated
+              to use any party mentioned. MyLoanDesk.com is not affiliated with
+              FHA, VA, USDA or the Federal Government. MyLoanDesk.com supports
+              Equal Housing Opportunity. MyLoanDesk.com is a dba of Secured
+              Horizon Financial Group, Inc. Secured Horizon Mortgage Group, Inc.
+              NMLS 314226,1444825 (www.nmlsconsumeraccess.org) | (305) 891-6500
+              | 1801 NE 123 St, Suite 314, North Miami, FL 33181. Regulated by
+              FL Division of Real Estate.
+            </p>
           </div>
-          <div className="flex flex-wrap gap-x-6 gap-y-2">
-            <Link href="#" className="hover:text-[#D4A574] transition-colors">
-              Privacy
-            </Link>
-            <Link href="#" className="hover:text-[#D4A574] transition-colors">
-              Terms
-            </Link>
-            <Link href="#" className="hover:text-[#D4A574] transition-colors">
-              Licensing
-            </Link>
-            <Link href="#" className="hover:text-[#D4A574] transition-colors">
-              Accessibility
-            </Link>
-            <Link href="#" className="hover:text-[#D4A574] transition-colors">
-              Disclosures
-            </Link>
-          </div>
+
+          {/* <div className="flex flex-wrap gap-x-6 gap-y-2 font-medium border-t border-ink/5 pt-4 w-full">
+            {[
+              "Privacy",
+              "Terms",
+              "Licensing",
+              "Accessibility",
+              "Disclosures",
+            ].map((legal) => (
+              <Link
+                key={legal}
+                href="#"
+                className="hover:text-brand-orange transition-colors duration-200"
+              >
+                {legal}
+              </Link>
+            ))}
+          </div> */}
         </div>
       </div>
     </footer>
