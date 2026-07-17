@@ -49,7 +49,7 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-start">
           {/* Left Column: Contact Details */}
-          <div className="lg:col-span-5 sticky top-32">
+          <div className="lg:col-span-5 lg:sticky top-32">
             <div className="text-[10px] uppercase tracking-[0.25em] text-brand-orange font-semibold mb-5">
               Get in touch
             </div>
