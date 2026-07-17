@@ -35,28 +35,28 @@ export default function Hero() {
           {/* Left Column: Copy & CTAs */}
           <div className="max-w-xl">
             <div className="flex gap-2">
-              <Link href={"/loan-programs"} className="">
+              <Link href={"/loan-programs#home-equity"} className="">
                 <Image
                   src={homeLoansImg}
                   className="w-18 sm:w-25 aspect-auto"
                   alt="home loans"
                 />
               </Link>
-              <Link href={"/loan-programs"} className="">
+              <Link href={"/loan-programs#bridge"} className="">
                 <Image
                   src={realEstateLoansImg}
                   className="w-18 sm:w-25 aspect-auto"
                   alt="home loans"
                 />
               </Link>
-              <Link href={"/loan-programs"} className="">
+              <Link href={"/loan-programs#commercial"} className="">
                 <Image
                   src={commercialLoansImg}
                   className="w-18 sm:w-25 aspect-auto"
                   alt="home loans"
                 />
               </Link>
-              <Link href={"/loan-programs"} className="">
+              <Link href={"/loan-programs#business-lines"} className="">
                 <Image
                   src={businessLoansImg}
                   className="w-18 sm:w-25 aspect-auto"
@@ -92,7 +92,14 @@ export default function Hero() {
                   Start your application
                   <ArrowRight size={18} />
                 </a>
-                <CurrentRates />
+
+                <a
+                  href="#calculator"
+                  className="btn-shine bg-cream text-ink px-7 py-3.5 rounded-full font-medium flex items-center justify-center gap-2 border border-transparent hover:border-moss-deep/60 transition-colors focus-ring duration-200"
+                >
+                  Try Our Calculators
+                  <ArrowRight size={18} />
+                </a>
               </div>
 
               {/* Social Proof (Avatars & Rating) */}
@@ -156,6 +163,11 @@ export default function Hero() {
           </div>
         </div>
       </section>
+
+      <section className="py-10 px-2 sm:px-4">
+        <CurrentRates />
+      </section>
+
       <section className="px-6 lg:px-10 mt-16 lg:mt-24 border-t border-b border-line py-8">
         <div className="max-w-7xl mx-auto flex flex-wrap gap-8 justify-between items-center">
           <div className="">

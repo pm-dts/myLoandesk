@@ -1,14 +1,8 @@
 "use client";
 
 import { useState, useEffect, useMemo } from "react";
-import {
-  TrendingUp,
-  TrendingDown,
-  Loader2,
-  AlertCircle,
-  X,
-  Activity,
-} from "lucide-react";
+import { Fraunces } from "next/font/google";
+import { TrendingUp, TrendingDown, Loader2, AlertCircle } from "lucide-react";
 import {
   BarChart,
   Bar,
@@ -21,6 +15,12 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
+
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+});
 
 // --- Types ---
 interface RateItem {
@@ -65,7 +65,6 @@ const TAB_MAPPINGS = {
   ],
 };
 
-// Keeping the distinct line colors for the Trend chart so they are readable
 const CHART_LINES = [
   { key: "30-Yr. Conforming", color: "#1d70b8" },
   { key: "30-Yr. Jumbo", color: "#40b4e5" },
@@ -98,7 +97,6 @@ const formatDateFull = (timestamp: number) => {
 };
 
 export default function CurrentRates() {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
   const [activeTab, setActiveTab] = useState<string>(TABS.INDICES);
 
   // Data States
@@ -113,10 +111,8 @@ export default function CurrentRates() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
-  // Fetch all necessary data when dialog opens
+  // Fetch all data immediately on mount since it is on-page content now
   useEffect(() => {
-    if (!isOpen || (ratesData && fullChartData)) return;
-
     const fetchAllData = async () => {
       try {
         setIsLoading(true);
@@ -150,7 +146,6 @@ export default function CurrentRates() {
           });
         });
 
-        // Convert map to sorted array
         const sortedData = Array.from(mergedMap.values()).sort(
           (a, b) => a.timestamp - b.timestamp,
         );
@@ -167,22 +162,11 @@ export default function CurrentRates() {
     };
 
     fetchAllData();
-  }, [isOpen, ratesData, fullChartData]);
-
-  // Handle escape key to close dialog
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape" && isOpen) setIsOpen(false);
-    };
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [isOpen]);
+  }, []);
 
   const activeKeys = TAB_MAPPINGS[TABS.INDICES];
 
   // --- Memos for Charts ---
-
-  // 1. Credit & LTV Chart Data mapping
   const creditChartData = useMemo(() => {
     if (!ratesData) return [];
     return [
@@ -245,15 +229,12 @@ export default function CurrentRates() {
       )
     : 0;
 
-  // 2. Trend Chart Data filtering based on selected timeframe
   const filteredTrendData = useMemo(() => {
     if (!fullChartData) return [];
-    // Calculate cutoff timestamp (timeframe days in milliseconds)
     const cutoffTs = fullChartData.maxTs - timeframe * 24 * 60 * 60 * 1000;
     return fullChartData.full.filter((d) => d.timestamp >= cutoffTs);
   }, [fullChartData, timeframe]);
 
-  // Determine optimal Y-axis bounds for the Line chart to prevent lines clustering at the top
   const { trendMin, trendMax } = useMemo(() => {
     if (!filteredTrendData.length) return { trendMin: 0, trendMax: 10 };
     let min = Infinity;
@@ -305,325 +286,290 @@ export default function CurrentRates() {
   };
 
   return (
-    <>
-      {/* Trigger Button */}
-      <button
-        onClick={() => setIsOpen(true)}
-        className="btn-shine inline-flex items-center gap-2 bg-moss-deep text-primary-bg px-6 py-3.5 rounded-full font-semibold hover:bg-moss-darker transition-colors focus-ring shadow-sm"
-      >
-        <Activity size={18} />
-        Interest Rates
-      </button>
-
-      {/* Dialog Overlay */}
-      {isOpen && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-ink/40 backdrop-blur-sm animate-in fade-in duration-200"
-          onClick={() => setIsOpen(false)}
+    <div className="w-full max-w-5xl mx-auto bg-primary-bg rounded-3xl shadow-xl border border-line overflow-hidden flex flex-col">
+      {/* On-Page Title Header Area */}
+      <div className="px-6 py-5 sm:px-8 sm:py-6 border-b border-line bg-cream/30">
+        <h2
+          className={`text-2xl sm:text-3xl font-display text-ink tracking-tight text-center ${fraunces.className}`}
         >
-          {/* Dialog Content */}
-          <div
-            className="relative w-full max-w-5xl max-h-[90vh] bg-primary-bg rounded-3xl shadow-2xl flex flex-col overflow-hidden border border-line animate-in zoom-in-95 duration-200"
-            onClick={(e) => e.stopPropagation()}
+          Live Interest Rates
+        </h2>
+      </div>
+
+      {/* Tabs Row */}
+      <div className="flex flex-wrap border-b-[3px] border-moss-deep bg-cream/50 sticky top-0 z-10">
+        {Object.values(TABS).map((tab) => (
+          <button
+            key={tab}
+            onClick={() => setActiveTab(tab)}
+            className={`px-6 py-4 text-xs sm:text-sm font-semibold uppercase tracking-wider transition-colors outline-none focus:outline-none ${
+              activeTab === tab
+                ? "bg-moss-deep text-primary-bg"
+                : "bg-transparent text-ink-2 hover:text-moss-deep hover:bg-moss-deep/5"
+            }`}
           >
-            {/* Modal Header */}
-            <div className="flex items-center justify-between px-6 py-5 sm:px-8 sm:py-6 border-b border-line bg-cream/30 shrink-0">
-              <h2 className="text-2xl sm:text-3xl font-display text-ink tracking-tight">
-                Current Rates
-              </h2>
-              <button
-                onClick={() => setIsOpen(false)}
-                className="p-2 -mr-2 rounded-full text-ink-2 hover:bg-line/50 hover:text-ink transition-colors focus-ring"
-                aria-label="Close dialog"
-              >
-                <X size={24} />
-              </button>
-            </div>
+            {tab}
+          </button>
+        ))}
+      </div>
 
-            {/* Modal Body */}
-            <div className="flex-1 overflow-y-auto bg-primary-bg">
-              {/* BRAND THEMED Tabs Row */}
-              <div className="flex flex-wrap border-b-[3px] border-moss-deep bg-cream/50 sticky top-0 z-10">
-                {Object.values(TABS).map((tab) => (
-                  <button
-                    key={tab}
-                    onClick={() => setActiveTab(tab)}
-                    className={`px-6 py-4 text-xs sm:text-sm font-semibold uppercase tracking-wider transition-colors focus-ring outline-none ${
-                      activeTab === tab
-                        ? "bg-moss-deep text-primary-bg"
-                        : "bg-transparent text-ink-2 hover:text-moss-deep hover:bg-moss-deep/5"
-                    }`}
-                  >
-                    {tab}
-                  </button>
-                ))}
+      {/* Panel Render Body */}
+      <div className="flex-1 bg-primary-bg min-h-[480px]">
+        {/* Loading Spinner Block */}
+        {isLoading && (
+          <div className="flex flex-col items-center justify-center h-96 text-moss-deep">
+            <Loader2 className="animate-spin mb-4" size={32} />
+            <p className="text-sm font-medium animate-pulse">
+              Fetching live rates...
+            </p>
+          </div>
+        )}
+
+        {/* Error Block */}
+        {!isLoading && error && (
+          <div className="flex flex-col items-center justify-center h-96 text-brand-orange px-6 text-center">
+            <AlertCircle size={32} className="mb-4" />
+            <p className="font-medium">{error}</p>
+          </div>
+        )}
+
+        {/* Success Tab Interfaces */}
+        {!isLoading && !error && ratesData && fullChartData && (
+          <>
+            {/* TAB 1: Rate Indices Grid */}
+            {activeTab === TABS.INDICES && (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 animate-in fade-in duration-300">
+                {activeKeys.map((key, index) => {
+                  const data = ratesData[key];
+                  if (!data) return null;
+
+                  const isPositive = data.lastChange > 0;
+                  const isNegative = data.lastChange < 0;
+                  const isZero = data.lastChange === 0;
+
+                  const formattedChange = isPositive
+                    ? `+${data.lastChange.toFixed(3)}`
+                    : data.lastChange.toFixed(3);
+
+                  return (
+                    <div
+                      key={key}
+                      className={`p-6 sm:p-8 flex flex-col items-center justify-center text-center border-b border-line
+                        ${(index + 1) % 3 !== 0 ? "lg:border-r" : ""} 
+                        ${(index + 1) % 2 !== 0 ? "sm:border-r lg:border-r-0" : ""}
+                      `}
+                    >
+                      <h3 className="text-[11px] sm:text-xs font-bold text-ink-2 uppercase tracking-widest mb-4 h-8 flex items-center justify-center">
+                        {data.displayName}
+                      </h3>
+
+                      <div className="text-4xl sm:text-5xl lg:text-6xl font-bold text-moss-deep mb-4 font-mono tracking-tighter">
+                        {data.current.toFixed(3)}
+                        <span className="text-2xl sm:text-3xl lg:text-4xl">
+                          %
+                        </span>
+                      </div>
+
+                      <div
+                        className={`flex items-center gap-1 sm:gap-1.5 text-base sm:text-lg font-bold mb-3 ${
+                          isPositive
+                            ? "text-green-600"
+                            : isNegative
+                              ? "text-red-500"
+                              : "text-ink-2"
+                        }`}
+                      >
+                        {isPositive && <TrendingUp size={18} strokeWidth={3} />}
+                        {isNegative && (
+                          <TrendingDown size={18} strokeWidth={3} />
+                        )}
+                        <span>{isZero ? "0.000" : formattedChange}</span>
+                      </div>
+
+                      <div className="text-[10px] sm:text-[11px] font-semibold text-ink-2 uppercase tracking-widest mt-2">
+                        30-Day Range: {data.monthMin.toFixed(3)}% -{" "}
+                        {data.monthMax.toFixed(3)}%
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
+            )}
 
-              {/* State Handling: Loading (Brand Themed) */}
-              {isLoading && (
-                <div className="flex flex-col items-center justify-center h-80 text-moss-deep">
-                  <Loader2 className="animate-spin mb-4" size={32} />
-                  <p className="text-sm font-medium animate-pulse">
-                    Fetching live rates...
+            {/* TAB 2: Credit and LTV Bar Chart */}
+            {activeTab === TABS.CREDIT && (
+              <div className="p-6 sm:p-10 animate-in fade-in duration-300">
+                <div className="mb-8">
+                  <h3 className="text-2xl font-display text-ink mb-2">
+                    Rate Adjustments by FICO & LTV
+                  </h3>
+                  <p className="text-ink-2 text-sm">
+                    Compare how your credit score and down payment
+                    (Loan-to-Value) impact your 30-Year Fixed conforming rate.
                   </p>
                 </div>
-              )}
 
-              {/* State Handling: Error */}
-              {!isLoading && error && (
-                <div className="flex flex-col items-center justify-center h-80 text-brand-orange px-6 text-center">
-                  <AlertCircle size={32} className="mb-4" />
-                  <p className="font-medium">{error}</p>
+                <div className="h-[380px] w-full">
+                  <ResponsiveContainer width="100%" height="100%">
+                    <BarChart
+                      data={creditChartData}
+                      margin={{ top: 20, right: 30, left: 0, bottom: 5 }}
+                    >
+                      <CartesianGrid
+                        strokeDasharray="3 3"
+                        vertical={false}
+                        stroke="#E5E7EB"
+                      />
+                      <XAxis
+                        dataKey="fico"
+                        tickLine={false}
+                        axisLine={false}
+                        tick={{
+                          fill: "#4B5563",
+                          fontSize: 13,
+                          fontWeight: 500,
+                        }}
+                        dy={10}
+                      />
+                      <YAxis
+                        domain={[
+                          Math.floor(minCreditRate * 10) / 10 - 0.2,
+                          "auto",
+                        ]}
+                        tickFormatter={(val) => `${val.toFixed(2)}%`}
+                        tickLine={false}
+                        axisLine={false}
+                        tick={{ fill: "#4B5563", fontSize: 13 }}
+                        dx={-10}
+                      />
+                      <Tooltip
+                        cursor={{ fill: "#F3F4F6" }}
+                        contentStyle={{
+                          borderRadius: "12px",
+                          border: "none",
+                          boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)",
+                        }}
+                        formatter={(value: any) => [
+                          `${value ? Number(value).toFixed(3) : "0.000"}%`,
+                          undefined,
+                        ]}
+                        labelStyle={{
+                          color: "#111827",
+                          fontWeight: "bold",
+                          marginBottom: "4px",
+                        }}
+                      />
+                      <Legend
+                        iconType="circle"
+                        wrapperStyle={{ paddingTop: "20px" }}
+                      />
+                      <Bar
+                        dataKey="LTV ≤ 80%"
+                        fill="#153B2C"
+                        radius={[4, 4, 0, 0]}
+                        maxBarSize={60}
+                      />
+                      <Bar
+                        dataKey="LTV > 80%"
+                        fill="#FF6B00"
+                        radius={[4, 4, 0, 0]}
+                        maxBarSize={60}
+                      />
+                    </BarChart>
+                  </ResponsiveContainer>
                 </div>
-              )}
+              </div>
+            )}
 
-              {/* State Handling: Success */}
-              {!isLoading && !error && ratesData && fullChartData && (
-                <>
-                  {/* TAB 1: Rate Indices Grid */}
-                  {activeTab === TABS.INDICES && (
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-                      {activeKeys.map((key, index) => {
-                        const data = ratesData[key];
-                        if (!data) return null;
+            {/* TAB 3: Rate Trends Line Chart */}
+            {activeTab === TABS.TRENDS && (
+              <div className="p-6 sm:p-10 flex flex-col h-full animate-in fade-in duration-300">
+                {/* BRAND THEMED Timeframe Toggles */}
+                <div className="flex items-center gap-1 bg-line/30 p-1 rounded-lg w-fit mb-8 border border-line">
+                  {[30, 90, 180, 365].map((days) => (
+                    <button
+                      key={days}
+                      onClick={() => setTimeframe(days)}
+                      className={`px-4 py-1.5 text-sm font-semibold rounded-md transition-colors ${
+                        timeframe === days
+                          ? "bg-moss-deep text-primary-bg shadow-sm"
+                          : "text-ink-2 hover:bg-moss-deep/5 hover:text-moss-deep"
+                      }`}
+                    >
+                      {days}
+                    </button>
+                  ))}
+                </div>
 
-                        const isPositive = data.lastChange > 0;
-                        const isNegative = data.lastChange < 0;
-                        const isZero = data.lastChange === 0;
+                {/* Line Chart */}
+                <div className="h-[380px] w-full mt-2">
+                  <ResponsiveContainer width="100%" height="100%">
+                    <LineChart
+                      data={filteredTrendData}
+                      margin={{
+                        top: 10,
+                        right: 30,
+                        left: 10,
+                        bottom: 20,
+                      }}
+                    >
+                      <CartesianGrid
+                        strokeDasharray="3 3"
+                        vertical={false}
+                        stroke="#E5E7EB"
+                      />
+                      <XAxis
+                        dataKey="timestamp"
+                        type="number"
+                        domain={["dataMin", "dataMax"]}
+                        tickFormatter={formatDateShort}
+                        tickLine={false}
+                        axisLine={{ stroke: "#D1D5DB" }}
+                        tick={{ fill: "#6B7280", fontSize: 12 }}
+                        dy={15}
+                        minTickGap={50}
+                      />
+                      <YAxis
+                        domain={[trendMin, trendMax]}
+                        tickFormatter={(val) => `${val.toFixed(3)}%`}
+                        tickLine={false}
+                        axisLine={false}
+                        tick={{ fill: "#6B7280", fontSize: 12 }}
+                        dx={-10}
+                      />
+                      <Tooltip content={<CustomTrendTooltip />} />
+                      <Legend
+                        iconType="circle"
+                        wrapperStyle={{
+                          paddingTop: "30px",
+                          fontSize: "13px",
+                        }}
+                      />
 
-                        const formattedChange = isPositive
-                          ? `+${data.lastChange.toFixed(3)}`
-                          : data.lastChange.toFixed(3);
-
-                        return (
-                          <div
-                            key={key}
-                            className={`p-6 sm:p-8 flex flex-col items-center justify-center text-center 
-                              border-b border-line
-                              ${(index + 1) % 3 !== 0 ? "lg:border-r" : ""} 
-                              ${(index + 1) % 2 !== 0 ? "sm:border-r lg:border-r-0" : ""}
-                            `}
-                          >
-                            <h3 className="text-[11px] sm:text-xs font-bold text-ink-2 uppercase tracking-widest mb-4 h-8 flex items-center justify-center">
-                              {data.displayName}
-                            </h3>
-
-                            {/* BRAND THEMED Main Rate */}
-                            <div className="text-4xl sm:text-5xl lg:text-6xl font-bold text-moss-deep mb-4 font-mono tracking-tighter">
-                              {data.current.toFixed(3)}
-                              <span className="text-2xl sm:text-3xl lg:text-4xl">
-                                %
-                              </span>
-                            </div>
-
-                            <div
-                              className={`flex items-center gap-1 sm:gap-1.5 text-base sm:text-lg font-bold mb-3 ${
-                                isPositive
-                                  ? "text-green-600"
-                                  : isNegative
-                                    ? "text-red-500"
-                                    : "text-ink-2"
-                              }`}
-                            >
-                              {isPositive && (
-                                <TrendingUp size={18} strokeWidth={3} />
-                              )}
-                              {isNegative && (
-                                <TrendingDown size={18} strokeWidth={3} />
-                              )}
-                              <span>{isZero ? "0.000" : formattedChange}</span>
-                            </div>
-
-                            <div className="text-[10px] sm:text-[11px] font-semibold text-ink-2 uppercase tracking-widest mt-2">
-                              30-Day Range: {data.monthMin.toFixed(3)}% -{" "}
-                              {data.monthMax.toFixed(3)}%
-                            </div>
-                          </div>
-                        );
-                      })}
-                    </div>
-                  )}
-
-                  {/* TAB 2: Credit and LTV Bar Chart */}
-                  {activeTab === TABS.CREDIT && (
-                    <div className="p-6 sm:p-10">
-                      <div className="mb-8">
-                        <h3 className="text-2xl font-display text-ink mb-2">
-                          Rate Adjustments by FICO & LTV
-                        </h3>
-                        <p className="text-ink-2 text-sm">
-                          Compare how your credit score and down payment
-                          (Loan-to-Value) impact your 30-Year Fixed conforming
-                          rate.
-                        </p>
-                      </div>
-
-                      <div className="h-[350px] w-full">
-                        <ResponsiveContainer width="100%" height="100%">
-                          <BarChart
-                            data={creditChartData}
-                            margin={{ top: 20, right: 30, left: 0, bottom: 5 }}
-                          >
-                            <CartesianGrid
-                              strokeDasharray="3 3"
-                              vertical={false}
-                              stroke="#E5E7EB"
-                            />
-                            <XAxis
-                              dataKey="fico"
-                              tickLine={false}
-                              axisLine={false}
-                              tick={{
-                                fill: "#4B5563",
-                                fontSize: 13,
-                                fontWeight: 500,
-                              }}
-                              dy={10}
-                            />
-                            <YAxis
-                              domain={[
-                                Math.floor(minCreditRate * 10) / 10 - 0.2,
-                                "auto",
-                              ]}
-                              tickFormatter={(val) => `${val.toFixed(2)}%`}
-                              tickLine={false}
-                              axisLine={false}
-                              tick={{ fill: "#4B5563", fontSize: 13 }}
-                              dx={-10}
-                            />
-                            <Tooltip
-                              cursor={{ fill: "#F3F4F6" }}
-                              contentStyle={{
-                                borderRadius: "12px",
-                                border: "none",
-                                boxShadow:
-                                  "0 10px 25px -5px rgba(0, 0, 0, 0.1)",
-                              }}
-                              formatter={(value: any) => [
-                                `${Number(value).toFixed(3)}%`,
-                                undefined,
-                              ]}
-                              labelStyle={{
-                                color: "#111827",
-                                fontWeight: "bold",
-                                marginBottom: "4px",
-                              }}
-                            />
-                            <Legend
-                              iconType="circle"
-                              wrapperStyle={{ paddingTop: "20px" }}
-                            />
-                            {/* BRAND THEMED Bars */}
-                            <Bar
-                              dataKey="LTV ≤ 80%"
-                              fill="#153B2C"
-                              radius={[4, 4, 0, 0]}
-                              maxBarSize={60}
-                            />
-                            <Bar
-                              dataKey="LTV > 80%"
-                              fill="#FF6B00"
-                              radius={[4, 4, 0, 0]}
-                              maxBarSize={60}
-                            />
-                          </BarChart>
-                        </ResponsiveContainer>
-                      </div>
-                    </div>
-                  )}
-
-                  {/* TAB 3: Rate Trends Line Chart */}
-                  {activeTab === TABS.TRENDS && (
-                    <div className="p-6 sm:p-10 flex flex-col h-full">
-                      {/* BRAND THEMED Timeframe Toggles */}
-                      <div className="flex items-center gap-1 bg-line/30 p-1 rounded-lg w-fit mb-8 border border-line">
-                        {[30, 90, 180, 365].map((days) => (
-                          <button
-                            key={days}
-                            onClick={() => setTimeframe(days)}
-                            className={`px-4 py-1.5 text-sm font-semibold rounded-md transition-colors ${
-                              timeframe === days
-                                ? "bg-moss-deep text-primary-bg shadow-sm"
-                                : "text-ink-2 hover:bg-moss-deep/5 hover:text-moss-deep"
-                            }`}
-                          >
-                            {days}
-                          </button>
-                        ))}
-                      </div>
-
-                      {/* Line Chart */}
-                      <div className="h-[350px] w-full mt-2">
-                        <ResponsiveContainer width="100%" height="100%">
-                          <LineChart
-                            data={filteredTrendData}
-                            margin={{
-                              top: 10,
-                              right: 30,
-                              left: 10,
-                              bottom: 20,
-                            }}
-                          >
-                            <CartesianGrid
-                              strokeDasharray="3 3"
-                              vertical={false}
-                              stroke="#E5E7EB"
-                            />
-                            <XAxis
-                              dataKey="timestamp"
-                              type="number"
-                              domain={["dataMin", "dataMax"]}
-                              tickFormatter={formatDateShort}
-                              tickLine={false}
-                              axisLine={{ stroke: "#D1D5DB" }}
-                              tick={{ fill: "#6B7280", fontSize: 12 }}
-                              dy={15}
-                              minTickGap={50}
-                            />
-                            <YAxis
-                              domain={[trendMin, trendMax]}
-                              tickFormatter={(val) => `${val.toFixed(3)}%`}
-                              tickLine={false}
-                              axisLine={false}
-                              tick={{ fill: "#6B7280", fontSize: 12 }}
-                              dx={-10}
-                            />
-                            <Tooltip content={<CustomTrendTooltip />} />
-                            <Legend
-                              iconType="circle"
-                              wrapperStyle={{
-                                paddingTop: "30px",
-                                fontSize: "13px",
-                              }}
-                            />
-
-                            {/* Render Lines Dynamically */}
-                            {CHART_LINES.map((line) => (
-                              <Line
-                                key={line.key}
-                                type="monotone"
-                                dataKey={line.key}
-                                stroke={line.color}
-                                strokeWidth={2.5}
-                                dot={false}
-                                activeDot={{
-                                  r: 6,
-                                  strokeWidth: 0,
-                                  fill: line.color,
-                                }}
-                              />
-                            ))}
-                          </LineChart>
-                        </ResponsiveContainer>
-                      </div>
-                    </div>
-                  )}
-                </>
-              )}
-            </div>
-          </div>
-        </div>
-      )}
-    </>
+                      {/* Render Lines Dynamically */}
+                      {CHART_LINES.map((line) => (
+                        <Line
+                          key={line.key}
+                          type="monotone"
+                          dataKey={line.key}
+                          stroke={line.color}
+                          strokeWidth={2.5}
+                          dot={false}
+                          activeDot={{
+                            r: 6,
+                            strokeWidth: 0,
+                            fill: line.color,
+                          }}
+                        />
+                      ))}
+                    </LineChart>
+                  </ResponsiveContainer>
+                </div>
+              </div>
+            )}
+          </>
+        )}
+      </div>
+    </div>
   );
 }

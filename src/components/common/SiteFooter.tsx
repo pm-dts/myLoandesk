@@ -175,6 +175,9 @@ export default function Footer() {
                 </a>
               </li>
               <li className="text-ink/50 text-xs font-normal">
+                <p className="text-sm font-medium text-ink-2 mb-2">
+                  Let's connect on whatsapp:
+                </p>
                 <Image src={qrImg} className="" alt="qr" />
               </li>
               <li className="pt-2">
