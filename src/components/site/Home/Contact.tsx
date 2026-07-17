@@ -45,7 +45,7 @@ export default function Contact() {
   });
 
   return (
-    <main className="min-h-screen bg-cream py-24 px-6">
+    <main className="min-h-screen bg-cream py-24 px-6" id="contact">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-start">
           {/* Left Column: Contact Details */}

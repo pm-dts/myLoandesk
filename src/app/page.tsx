@@ -2,6 +2,8 @@ import { ArrowRight, Star } from "lucide-react";
 import { Home, Shield, Building, RefreshCw, Briefcase } from "lucide-react";
 import { Clock, FileText, Phone, FileCheck } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
+import Image from "next/image";
 
 import Calculator from "@/components/site/Home/Calculator";
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
@@ -13,6 +15,11 @@ import { Fraunces } from "next/font/google";
 import Faq from "@/components/site/Home/FAQ";
 import StartApplication from "@/components/site/Home/ApplicationForm";
 import CalculatorSection from "@/components/site/Home/CalculatorSection";
+
+import homeLoansImg from "@/assets/home-loans.jpeg";
+import realEstateLoansImg from "@/assets/real-estate-loans.jpeg";
+import commercialLoansImg from "@/assets/commercial-loans.jpeg";
+import businessLoansImg from "@/assets/business-loans.jpeg";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -27,15 +34,40 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-8 items-center">
           {/* Left Column: Copy & CTAs */}
           <div className="max-w-xl">
-            {/* Badge */}
-            {/* <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-line text-xs font-medium text-ink-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-brand-orange"></span>
-              Independent mortgage brokerage · Est. 2014
-            </div> */}
+            <div className="flex gap-2">
+              <Link href={"/loan-programs"} className="">
+                <Image
+                  src={homeLoansImg}
+                  className="w-18 sm:w-25 aspect-auto"
+                  alt="home loans"
+                />
+              </Link>
+              <Link href={"/loan-programs"} className="">
+                <Image
+                  src={realEstateLoansImg}
+                  className="w-18 sm:w-25 aspect-auto"
+                  alt="home loans"
+                />
+              </Link>
+              <Link href={"/loan-programs"} className="">
+                <Image
+                  src={commercialLoansImg}
+                  className="w-18 sm:w-25 aspect-auto"
+                  alt="home loans"
+                />
+              </Link>
+              <Link href={"/loan-programs"} className="">
+                <Image
+                  src={businessLoansImg}
+                  className="w-18 sm:w-25 aspect-auto"
+                  alt="home loans"
+                />
+              </Link>
+            </div>
 
             {/* Headline */}
             <h1
-              className={`text-5xl sm:text-6xl lg:text-7xl ${fraunces.className} text-ink leading-[1.1] tracking-tight mt-6 mb-6`}
+              className={`text-5xl sm:text-6xl lg:text-7xl ${fraunces.className} text-ink leading-[1.1] tracking-tight mt-2 mb-6`}
             >
               Your mortgage gets a{" "}
               <em className="text-moss-deep italic font-serif">desk</em> of its
