@@ -682,7 +682,7 @@ export default function CalculatorsHub() {
   const currentCalc = calculators.find((c) => c.id === activeCalc);
 
   return (
-    <section className="py-24 px-6 bg-[#F8F6F1]">
+    <section className="py-24 px-6 bg-[#F8F6F1]" id="calculator">
       <div className="max-w-5xl mx-auto">
         {/* Hub Header */}
         <div className="mb-12">

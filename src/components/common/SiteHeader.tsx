@@ -1,14 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import {
-  Menu,
-  X,
-  ChevronDown,
-  Calendar,
-  ArrowRight,
-  ArrowUpRight,
-} from "lucide-react";
+import { Menu, X, ChevronDown, Calendar } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -47,7 +40,6 @@ export const Header: React.FC = () => {
     const handleHashScroll = () => {
       const hash = window.location.hash;
       if (hash) {
-        // Small timeout gives Next.js time to render the DOM target if changing pages
         setTimeout(() => {
           const element = document.querySelector(hash);
           if (element) {
@@ -57,10 +49,7 @@ export const Header: React.FC = () => {
       }
     };
 
-    // Listen for internal URL hash shifts
     window.addEventListener("hashchange", handleHashScroll);
-
-    // Fire once on initial page entry load if coming from a different route
     handleHashScroll();
 
     return () => window.removeEventListener("hashchange", handleHashScroll);
@@ -74,18 +63,17 @@ export const Header: React.FC = () => {
   };
 
   return (
-    /* Changed 'fixed' to 'sticky' so it naturally pushes layout content down without requiring manual page padding adjustments */
     <header className="sticky top-0 left-0 right-0 z-50 nav-blur border-b border-line bg-primary-bg w-full">
       {/* --- DESKTOP NAVIGATION --- */}
       <nav className="hidden lg:flex max-w-7xl mx-auto px-6 lg:px-10 h-36 items-center justify-between gap-4">
         {/* Desktop Logo Layout */}
-        <Link href="/" className="flex-shrink-0 flex items-center py-2">
+        <Link href="/" className="shrink-0 flex items-center py-2">
           <Image
             src={brandLogo}
             alt="My Loan Desk Logo"
             width={260}
             height={96}
-            className="w-auto h-36 object-contain"
+            className="w-auto h-32 object-contain"
             priority
           />
         </Link>
@@ -128,6 +116,12 @@ export const Header: React.FC = () => {
             </div>
           </div>
 
+          <Link href="/secure-document-upload" className="ulink focus-ring">
+            Secure Doc Upload
+          </Link>
+          <Link href="/about-us" className="ulink focus-ring">
+            About us
+          </Link>
           <Link href="/realtors" className="ulink focus-ring">
             Realtors
           </Link>
@@ -137,17 +131,8 @@ export const Header: React.FC = () => {
           <Link href="/calendar" className="ulink focus-ring">
             Our Calendar
           </Link>
-          <Link href="/#process" className="ulink focus-ring">
-            Process
-          </Link>
           <Link href="/#calculator" className="ulink focus-ring">
             Calculator
-          </Link>
-          <Link href="/#why" className="ulink focus-ring">
-            Why us
-          </Link>
-          <Link href="/#stories" className="ulink focus-ring">
-            Stories
           </Link>
           <Link href="/#faq" className="ulink focus-ring">
             FAQ
@@ -158,14 +143,7 @@ export const Header: React.FC = () => {
         </div>
 
         {/* Action Button Deck */}
-        <div className="flex items-center gap-3 flex-shrink-0 text-[13px] font-medium">
-          <a
-            href="#"
-            className="text-ink-2 hover:text-ink transition-colors focus-ring px-2 py-1"
-          >
-            Sign in
-          </a>
-
+        <div className="flex items-center gap-3 shrink-0 text-[13px] font-medium">
           <a
             href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
             target="_blank"
@@ -183,7 +161,7 @@ export const Header: React.FC = () => {
           {/* Menu Button */}
           <button
             onClick={toggleMobileMenu}
-            className="absolute left-4 w-11 h-11 flex items-center justify-center rounded-full border border-line text-ink-2 bg-cream/20 focus-ring"
+            className="absolute left-4 w-11 h-11 flex items-center justify-center rounded-full border border-line text-ink-2 bg-cream/40 focus-ring"
             aria-label="Toggle Menu"
             aria-expanded={isMobileMenuOpen}
           >
@@ -193,14 +171,14 @@ export const Header: React.FC = () => {
           {/* Centered Bigger Logo */}
           <Link
             href="/"
-            className="flex-shrink-0 flex items-center justify-center py-2"
+            className="shrink-0 flex items-center justify-center py-2"
           >
             <Image
               src={brandLogo}
               alt="My Loan Desk Logo"
               width={220}
               height={80}
-              className="w-auto h-34 object-contain"
+              className="w-auto h-32 object-contain"
               priority
             />
           </Link>
@@ -222,6 +200,21 @@ export const Header: React.FC = () => {
       {isMobileMenuOpen && (
         <div className="lg:hidden border-t border-line bg-primary-bg absolute top-full left-0 w-full shadow-2xl max-h-[calc(100vh-11rem)] overflow-y-auto z-50">
           <div className="px-5 py-5 flex flex-col gap-1.5 text-base font-medium text-ink">
+            <Link
+              href="/about-us"
+              className="p-3 rounded-xl hover:bg-cream/30 text-sm"
+              onClick={toggleMobileMenu}
+            >
+              About us
+            </Link>
+            <Link
+              href="/secure-document-upload"
+              className="p-3 rounded-xl hover:bg-cream/30 text-sm"
+              onClick={toggleMobileMenu}
+            >
+              Secure Doc Upload
+            </Link>
+
             <Link
               href="/realtors"
               className="p-3 rounded-xl hover:bg-cream/30 text-sm"
@@ -292,25 +285,11 @@ export const Header: React.FC = () => {
 
             <div className="grid grid-cols-2 gap-1 text-xs">
               <Link
-                href="/#process"
-                className="p-3 rounded-xl hover:bg-cream/30"
-                onClick={toggleMobileMenu}
-              >
-                Process
-              </Link>
-              <Link
                 href="/#calculator"
                 className="p-3 rounded-xl hover:bg-cream/30"
                 onClick={toggleMobileMenu}
               >
                 Calculator
-              </Link>
-              <Link
-                href="/#why"
-                className="p-3 rounded-xl hover:bg-cream/30"
-                onClick={toggleMobileMenu}
-              >
-                Why us
               </Link>
               <Link
                 href="/#stories"
@@ -327,16 +306,6 @@ export const Header: React.FC = () => {
                 FAQ
               </Link>
             </div>
-
-            <hr className="border-line my-2" />
-
-            <a
-              href="#"
-              className="p-3 text-center rounded-xl border border-line text-sm text-ink-2 mt-2"
-              onClick={toggleMobileMenu}
-            >
-              Sign In to Your Account
-            </a>
           </div>
         </div>
       )}

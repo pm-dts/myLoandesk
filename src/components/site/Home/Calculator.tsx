@@ -52,10 +52,7 @@ export default function Calculator() {
   };
 
   return (
-    <div
-      className="relative w-full max-w-[768px] mx-auto my-12"
-      id="calculator"
-    >
+    <div className="relative w-full max-w-[768px] mx-auto my-12">
       {/* Soft dark shadow/shape offset behind the card matching the design */}
       <div className="absolute inset-0 bg-[#E3DBCB] rounded-[40px] transform rotate-[2deg] scale-[1.03] translate-x-3 translate-y-3 z-0"></div>
 
