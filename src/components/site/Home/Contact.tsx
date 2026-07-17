@@ -226,7 +226,7 @@ export default function Contact() {
                 <form.Field
                   name="phone"
                   validators={{
-                    onChange: ({ value }) =>
+                    onSubmit: ({ value }) =>
                       !value || value.length < 8
                         ? "Valid phone required"
                         : undefined,
