@@ -5,8 +5,10 @@ import { useForm } from "@tanstack/react-form";
 import { Check, ChevronDown, AlertCircle } from "lucide-react";
 import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
+import toast, { Toaster } from "react-hot-toast";
 
-// 1. Explicitly define the form types to resolve all TS errors
+const INBOUND_WEBHOOK_URL =
+  "https://services.leadconnectorhq.com/hooks/Lv5oqPcJ6MZsszgssznB/webhook-trigger/faae2351-70ff-4eda-a8d0-ddcfbf29d6ee";
 interface FormValues {
   firstName: string;
   lastName: string;
@@ -30,8 +32,53 @@ export default function GetQuote() {
       important: "",
     },
     onSubmit: async ({ value }) => {
-      // Handle formal submission
-      console.log("Form submitted successfully:", value);
+      // Create a loading toast that we will update upon success or failure
+      const toastId = toast.loading("Submitting your request...");
+
+      try {
+        // Send the data to the GHL Inbound Webhook
+        const response = await fetch(INBOUND_WEBHOOK_URL, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            first_name: value.firstName,
+            last_name: value.lastName,
+            email: value.email,
+            phone: value.phone,
+            custom_loan_type: value.loanType,
+            custom_price: value.price,
+            custom_notes: value.important,
+            source: "Website Get Quote Form",
+          }),
+        });
+
+        if (!response.ok) {
+          throw new Error(`Webhook error: ${response.status}`);
+        }
+
+        console.log("Quote request successfully submitted to GHL:", value);
+
+        // Update the loading toast to a success message
+        toast.success("Thank you! Your quote request has been received.", {
+          id: toastId,
+          duration: 5000,
+        });
+
+        form.reset();
+      } catch (error) {
+        console.error("Error submitting to webhook:", error);
+
+        // Update the loading toast to an error message
+        toast.error(
+          "There was an issue submitting your request. Please try again.",
+          {
+            id: toastId,
+            duration: 5000,
+          },
+        );
+      }
     },
   });
 
@@ -47,6 +94,7 @@ export default function GetQuote() {
 
   return (
     <main className="min-h-screen bg-cream py-24 px-6 flex items-center justify-center">
+      <Toaster position="bottom-right" />
       <div className="max-w-3xl w-full mx-auto bg-primary-bg rounded-[32px] p-8 sm:p-12 lg:p-14 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-line">
         <div className="text-center max-w-2xl mx-auto mb-10">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-display font-semibold text-ink tracking-tight mb-4">
