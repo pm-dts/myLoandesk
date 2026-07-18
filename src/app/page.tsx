@@ -16,10 +16,10 @@ import Faq from "@/components/site/Home/FAQ";
 import StartApplication from "@/components/site/Home/ApplicationForm";
 import CalculatorSection from "@/components/site/Home/CalculatorSection";
 
-import homeLoansImg from "@/assets/home-loans.jpeg";
-import realEstateLoansImg from "@/assets/real-estate-loans.jpeg";
-import commercialLoansImg from "@/assets/commercial-loans.jpeg";
-import businessLoansImg from "@/assets/business-loans.jpeg";
+import homeLoansImg from "@/assets/home-loans.jpg";
+import realEstateLoansImg from "@/assets/real-estate-loans.jpg";
+import commercialLoansImg from "@/assets/commercial-loans.jpg";
+import businessLoansImg from "@/assets/business-loans.jpg";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -29,12 +29,12 @@ const fraunces = Fraunces({
 
 export default function Hero() {
   return (
-    <main className="min-h-screen bg-primary-bg pt-16 pb-16 lg:pt-16 lg:pb-24">
+    <main className="min-h-screen bg-primary-bg pt-16">
       <section className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-8 items-center">
           {/* Left Column: Copy & CTAs */}
           <div className="max-w-xl">
-            <div className="flex gap-2">
+            <div className="flex gap-3 sm:gap-6 md:gap-8">
               <Link href={"/loan-programs#home-equity"} className="">
                 <Image
                   src={homeLoansImg}
@@ -217,7 +217,6 @@ export default function Hero() {
           </div>
         </div>
       </section>
-      <LenderMarquee />
       <CalculatorSection />
       <section id="loans" className="py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
@@ -245,90 +244,35 @@ export default function Hero() {
           </div>
 
           {/* Cards Grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {/* Conventional */}
+          <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {/* Forward Mortgage */}
             <article className="bg-cream border border-line rounded-2xl p-7 transition-all duration-300 hover:border-moss-deep/30 hover:shadow-[0_20px_50px_-20px_rgba(15,61,46,0.25)] hover:-translate-y-1">
               <div className="w-12 h-12 rounded-xl bg-moss-deep/10 flex items-center justify-center mb-5">
                 <Home className="text-moss-deep" size={22} strokeWidth={1.8} />
               </div>
               <h3 className="font-display text-2xl mb-2 text-ink">
-                Conventional
+                Forward Mortgage
               </h3>
               <p className="text-sm text-ink-2 leading-relaxed mb-5">
-                Flexible terms for buyers with solid credit and a down payment
-                ready. The bread and butter.
+                Traditional financing structures including Conventional, FHA,
+                VA, and Jumbo loan programs. Built with flexible terms for
+                purchasing a new property or executing standard refinance
+                options.
               </p>
-              <div className="flex items-center justify-between text-xs">
-                <span className="text-ink-2">From 5% down</span>
-                <a href="#start" className="font-medium text-moss-deep ulink">
-                  Explore →
-                </a>
+              <div className="flex items-center justify-between text-xs pt-2 border-t border-line/40">
+                <span className="text-ink-2 font-medium">
+                  Purchase & Refinance
+                </span>
+                <Link
+                  href="#"
+                  className="font-semibold text-moss-deep ulink flex items-center gap-1"
+                >
+                  Explore Programs →
+                </Link>
               </div>
             </article>
 
-            {/* FHA */}
-            <article className="bg-cream border border-line rounded-2xl p-7 transition-all duration-300 hover:border-moss-deep/30 hover:shadow-[0_20px_50px_-20px_rgba(15,61,46,0.25)] hover:-translate-y-1">
-              <div className="w-12 h-12 rounded-xl bg-brand-orange/10 flex items-center justify-center mb-5">
-                <Shield
-                  className="text-brand-orange"
-                  size={22}
-                  strokeWidth={1.8}
-                />
-              </div>
-              <h3 className="font-display text-2xl mb-2 text-ink">FHA</h3>
-              <p className="text-sm text-ink-2 leading-relaxed mb-5">
-                Low down payments and forgiving credit requirements. Built for
-                first-time and restart buyers.
-              </p>
-              <div className="flex items-center justify-between text-xs">
-                <span className="text-ink-2">From 3.5% down</span>
-                <a href="#start" className="font-medium text-moss-deep ulink">
-                  Explore →
-                </a>
-              </div>
-            </article>
-
-            {/* VA */}
-            <article className="bg-cream border border-line rounded-2xl p-7 transition-all duration-300 hover:border-moss-deep/30 hover:shadow-[0_20px_50px_-20px_rgba(15,61,46,0.25)] hover:-translate-y-1">
-              <div className="w-12 h-12 rounded-xl bg-[#D4A373]/20 flex items-center justify-center mb-5">
-                <Star className="text-[#D4A373]" size={22} strokeWidth={1.8} />
-              </div>
-              <h3 className="font-display text-2xl mb-2 text-ink">VA</h3>
-              <p className="text-sm text-ink-2 leading-relaxed mb-5">
-                Zero-down loans for veterans, active service members, and
-                qualifying spouses. A thank-you, in loan form.
-              </p>
-              <div className="flex items-center justify-between text-xs">
-                <span className="text-ink-2">0% down</span>
-                <a href="#start" className="font-medium text-moss-deep ulink">
-                  Explore →
-                </a>
-              </div>
-            </article>
-
-            {/* Jumbo */}
-            <article className="bg-cream border border-line rounded-2xl p-7 transition-all duration-300 hover:border-moss-deep/30 hover:shadow-[0_20px_50px_-20px_rgba(15,61,46,0.25)] hover:-translate-y-1">
-              <div className="w-12 h-12 rounded-xl bg-moss-deep/10 flex items-center justify-center mb-5">
-                <Building
-                  className="text-moss-deep"
-                  size={22}
-                  strokeWidth={1.8}
-                />
-              </div>
-              <h3 className="font-display text-2xl mb-2 text-ink">Jumbo</h3>
-              <p className="text-sm text-ink-2 leading-relaxed mb-5">
-                Loans above the conforming limit, for the bigger picture. Higher
-                ceilings, hand-underwritten.
-              </p>
-              <div className="flex items-center justify-between text-xs">
-                <span className="text-ink-2">Up to $5M+</span>
-                <a href="#start" className="font-medium text-moss-deep ulink">
-                  Explore →
-                </a>
-              </div>
-            </article>
-
-            {/* Refinance */}
+            {/* Reverse Mortgage */}
             <article className="bg-cream border border-line rounded-2xl p-7 transition-all duration-300 hover:border-moss-deep/30 hover:shadow-[0_20px_50px_-20px_rgba(15,61,46,0.25)] hover:-translate-y-1">
               <div className="w-12 h-12 rounded-xl bg-brand-orange/10 flex items-center justify-center mb-5">
                 <RefreshCw
@@ -337,40 +281,24 @@ export default function Hero() {
                   strokeWidth={1.8}
                 />
               </div>
-              <h3 className="font-display text-2xl mb-2 text-ink">Refinance</h3>
-              <p className="text-sm text-ink-2 leading-relaxed mb-5">
-                Lower your rate, shorten your term, or pull cash from equity.
-                We'll show the break-even math.
-              </p>
-              <div className="flex items-center justify-between text-xs">
-                <span className="text-ink-2">Cash-out available</span>
-                <a href="#start" className="font-medium text-moss-deep ulink">
-                  Explore →
-                </a>
-              </div>
-            </article>
-
-            {/* Investment */}
-            <article className="bg-cream border border-line rounded-2xl p-7 transition-all duration-300 hover:border-moss-deep/30 hover:shadow-[0_20px_50px_-20px_rgba(15,61,46,0.25)] hover:-translate-y-1">
-              <div className="w-12 h-12 rounded-xl bg-[#D4A373]/20 flex items-center justify-center mb-5">
-                <Briefcase
-                  className="text-[#D4A373]"
-                  size={22}
-                  strokeWidth={1.8}
-                />
-              </div>
               <h3 className="font-display text-2xl mb-2 text-ink">
-                Investment
+                Reverse Mortgage
               </h3>
               <p className="text-sm text-ink-2 leading-relaxed mb-5">
-                Financing for rental properties and portfolios. DSCR and
-                conventional approaches, your call.
+                Tap into home equity without the burden of monthly mortgage
+                payments. Designed exclusively for older homeowners looking to
+                convert home equity into tax-free cash or dynamic credit lines.
               </p>
-              <div className="flex items-center justify-between text-xs">
-                <span className="text-ink-2">1–10 units</span>
-                <a href="#start" className="font-medium text-moss-deep ulink">
-                  Explore →
-                </a>
+              <div className="flex items-center justify-between text-xs pt-2 border-t border-line/40">
+                <span className="text-ink-2 font-medium">
+                  Equity Conversion
+                </span>
+                <Link
+                  href="#"
+                  className="font-semibold text-moss-deep ulink flex items-center gap-1"
+                >
+                  Explore Options →
+                </Link>
               </div>
             </article>
           </div>
@@ -421,8 +349,9 @@ export default function Hero() {
                 Get pre-qualified
               </h3>
               <p className="text-sm text-ink-2 leading-relaxed">
-                A short application, a soft credit pull, and a real number you
-                can shop with. No commitment, no hard inquiry.
+                Complete a quick application or talk with us by phone. We'll
+                compare multiple lenders and recommend the best mortgage options
+                for you—with no hard credit inquiry and no obligation.
               </p>
             </div>
 
@@ -440,8 +369,8 @@ export default function Hero() {
                 Compare offers
               </h3>
               <p className="text-sm text-ink-2 leading-relaxed">
-                We pull quotes from 20+ lenders and lay them out side by side —
-                rates, fees, monthly. In plain English.
+                We search 100+ lenders to find your best mortgage options and
+                present them in a simple side-by-side comparison.
               </p>
             </div>
 
@@ -456,11 +385,12 @@ export default function Hero() {
                 </span>
               </div>
               <h3 className="font-display text-xl mb-3 text-ink">
-                Lock your rate
+                Move Forward
               </h3>
               <p className="text-sm text-ink-2 leading-relaxed">
-                When you find the right fit, we lock it in writing. Then we
-                start the underwriting paperwork for you.
+                Choose your preferred loan option, lock your rate, and we'll
+                handle the paperwork while keeping you informed throughout the
+                process.
               </p>
             </div>
 
@@ -471,15 +401,15 @@ export default function Hero() {
                   04
                 </span>
                 <span className="text-[10px] uppercase tracking-widest text-ink-2 font-medium">
-                  ~23 days
+                  15-28 days
                 </span>
               </div>
               <h3 className="font-display text-xl mb-3 text-ink">
-                Close with confidence
+                Close with Confidence
               </h3>
               <p className="text-sm text-ink-2 leading-relaxed">
-                Sign, get keys, move in. We coordinate with title, escrow, and
-                your agent all the way to the final handshake.
+                We'll coordinate every detail with your lender, title company,
+                and all parties involved to ensure a smooth, on-time closing.
               </p>
             </div>
           </div>
@@ -711,6 +641,7 @@ export default function Hero() {
       <Faq />
       <StartApplication />
       <Contact />
+      <LenderMarquee />
     </main>
   );
 }

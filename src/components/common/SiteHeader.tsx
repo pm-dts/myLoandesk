@@ -5,7 +5,7 @@ import { Menu, X, ChevronDown, Calendar } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-import brandLogo from "@/assets/icon.jpeg";
+import brandLogo from "@/assets/icon-up.jpeg";
 
 const loanLinks = [
   { name: "Conventional Loans", href: "/loan-programs#conventional" },
