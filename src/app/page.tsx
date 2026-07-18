@@ -553,89 +553,23 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Testimonials Grid */}
-          <div className="grid md:grid-cols-3 gap-5">
-            {/* Story 1 */}
-            <figure className="bg-cream/50 border border-line rounded-2xl p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_-20px_rgba(15,61,46,0.2)] flex flex-col">
-              <div className="flex items-center gap-1 text-[#D4A574] mb-5">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={16} fill="currentColor" strokeWidth={0} />
-                ))}
-              </div>
-              <blockquote className="font-display text-xl text-ink leading-snug mb-6 flex-grow">
-                "I'd been turned down twice before. myloandesk found me a 5/1
-                ARM that fit my actual plan, not the bank's template. Closed in
-                19 days."
-              </blockquote>
-              <figcaption className="flex items-center gap-3 pt-5 border-t border-line">
-                <img
-                  className="w-11 h-11 rounded-full object-cover"
-                  src="https://picsum.photos/seed/mldtest1/100/100.jpg"
-                  alt="Devon R."
-                />
-                <div>
-                  <div className="text-sm text-ink font-semibold">Devon R.</div>
-                  <div className="text-xs text-ink-2">
-                    First-home purchase · Denver, CO
-                  </div>
-                </div>
-              </figcaption>
-            </figure>
+          {/* Testimonials Embed */}
+          <div className="w-full mx-auto relative mt-8">
+            {/* Background design elements to match your brand style */}
+            <div className="absolute inset-0 bg-[#E8E4D8] rounded-[24px] sm:rounded-[32px] transform -rotate-1 -translate-x-1.5 translate-y-1.5 sm:-translate-x-2 sm:translate-y-2 -z-10"></div>
 
-            {/* Story 2 */}
-            <figure className="bg-cream/50 border border-line rounded-2xl p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_-20px_rgba(15,61,46,0.2)] flex flex-col">
-              <div className="flex items-center gap-1 text-[#D4A574] mb-5">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={16} fill="currentColor" strokeWidth={0} />
-                ))}
-              </div>
-              <blockquote className="font-display text-xl text-ink leading-snug mb-6 flex-grow">
-                "Refinanced from 6.8% to 5.1% and pulled $40k for renovations.
-                The break-even math they showed me was sharper than my CPA's."
-              </blockquote>
-              <figcaption className="flex items-center gap-3 pt-5 border-t border-line">
-                <img
-                  className="w-11 h-11 rounded-full object-cover"
-                  src="https://picsum.photos/seed/mldtest2/100/100.jpg"
-                  alt="Marisol T."
-                />
-                <div>
-                  <div className="text-sm text-ink font-semibold">
-                    Marisol T.
-                  </div>
-                  <div className="text-xs text-ink-2">
-                    Cash-out refinance · Tacoma, WA
-                  </div>
-                </div>
-              </figcaption>
-            </figure>
-
-            {/* Story 3 */}
-            <figure className="bg-cream/50 border border-line rounded-2xl p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_-20px_rgba(15,61,46,0.2)] flex flex-col">
-              <div className="flex items-center gap-1 text-[#D4A574] mb-5">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={16} fill="currentColor" strokeWidth={0} />
-                ))}
-              </div>
-              <blockquote className="font-display text-xl text-ink leading-snug mb-6 flex-grow">
-                "Third investment property with them. The DSCR loan closed
-                faster than my last conventional. They actually know the rental
-                game."
-              </blockquote>
-              <figcaption className="flex items-center gap-3 pt-5 border-t border-line">
-                <img
-                  className="w-11 h-11 rounded-full object-cover"
-                  src="https://picsum.photos/seed/mldtest3/100/100.jpg"
-                  alt="Andre K."
-                />
-                <div>
-                  <div className="text-sm text-ink font-semibold">Andre K.</div>
-                  <div className="text-xs text-ink-2">
-                    Investment purchase · Atlanta, GA
-                  </div>
-                </div>
-              </figcaption>
-            </figure>
+            {/* Iframe Container */}
+            <div className="relative z-10 bg-primary-bg border border-line rounded-[24px] sm:rounded-[32px] overflow-hidden shadow-[0_20px_50px_-20px_rgba(15,61,46,0.2)]">
+              {/* Note: Iframe height is explicitly set to ensure enough vertical room for the widget to display the reviews without internal scrolling if possible */}
+              <iframe
+                className="w-full h-[700px]"
+                title="Google Review"
+                name="htmlComp-iframe"
+                allowFullScreen={true}
+                src="https://www-myloandesk-com.filesusr.com/html/d6795e_7eed3b5b6329633be8de74d6c024f51a.html"
+                style={{ border: "none", display: "block" }}
+              ></iframe>
+            </div>
           </div>
         </div>
       </section>
