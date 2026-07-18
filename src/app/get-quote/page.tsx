@@ -214,7 +214,7 @@ export default function GetQuote() {
             <form.Field
               name="phone"
               validators={{
-                onChange: ({ value }) =>
+                onSubmit: ({ value }) =>
                   !value || value.length < 8
                     ? "Valid phone number is required"
                     : undefined,

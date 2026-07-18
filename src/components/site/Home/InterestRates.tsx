@@ -15,6 +15,7 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
+import Link from "next/link";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -50,7 +51,7 @@ interface MergedChartData {
 // --- Constants ---
 const TABS = {
   INDICES: "Rate Indices",
-  CREDIT: "Credit and LTV",
+  // CREDIT: "Credit and LTV",
   TRENDS: "Rate Trends",
 };
 
@@ -286,13 +287,16 @@ export default function CurrentRates() {
   };
 
   return (
-    <div className="w-full max-w-5xl mx-auto bg-primary-bg rounded-3xl shadow-xl border border-line overflow-hidden flex flex-col">
+    <div
+      className="w-full max-w-5xl mx-auto bg-primary-bg rounded-3xl shadow-xl border border-line overflow-hidden flex flex-col"
+      id="live-interest-rates"
+    >
       {/* On-Page Title Header Area */}
       <div className="px-6 py-5 sm:px-8 sm:py-6 border-b border-line bg-cream/30">
         <h2
           className={`text-2xl sm:text-3xl font-display text-ink tracking-tight text-center ${fraunces.className}`}
         >
-          Live Interest Rates
+          Live U.S. Average Mortgage Rates*
         </h2>
       </div>
 
@@ -397,7 +401,7 @@ export default function CurrentRates() {
             )}
 
             {/* TAB 2: Credit and LTV Bar Chart */}
-            {activeTab === TABS.CREDIT && (
+            {/* {activeTab === TABS.CREDIT && (
               <div className="p-6 sm:p-10 animate-in fade-in duration-300">
                 <div className="mb-8">
                   <h3 className="text-2xl font-display text-ink mb-2">
@@ -479,7 +483,7 @@ export default function CurrentRates() {
                   </ResponsiveContainer>
                 </div>
               </div>
-            )}
+            )} */}
 
             {/* TAB 3: Rate Trends Line Chart */}
             {activeTab === TABS.TRENDS && (
@@ -569,6 +573,36 @@ export default function CurrentRates() {
             )}
           </>
         )}
+      </div>
+      <div className="bg-cream/40 rounded-2xl border border-line/50 p-6 sm:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        {/* Warning Disclaimer Box */}
+        <div className="flex gap-3 max-w-2xl">
+          <AlertCircle
+            className="text-brand-orange shrink-0 mt-0.5"
+            size={18}
+            strokeWidth={2.2}
+          />
+          <p className="text-xs text-ink-2 leading-relaxed">
+            Rates shown are national average market rates provided for
+            informational purposes only and are not a commitment to lend or a
+            loan offer. Your actual interest rate and APR will vary based on
+            credit score, loan amount, loan-to-value ratio, occupancy, property
+            type, loan program, discount points, and other underwriting factors.
+          </p>
+        </div>
+
+        {/* Action Callout Box */}
+        <div className="flex flex-col items-start md:items-end gap-2 shrink-0 w-full md:w-auto border-t md:border-t-0 border-line/40 pt-4 md:pt-0">
+          <span className="text-xs font-semibold uppercase tracking-wider text-ink-2/80">
+            Contact us for your personalized rate quote
+          </span>
+          <Link
+            href="/get-quote"
+            className="btn-shine w-full md:w-auto bg-brand-orange text-primary-bg px-6 py-3 rounded-full text-xs font-bold tracking-wide text-center hover:bg-orange-600 transition-colors focus-ring shadow-sm"
+          >
+            Get My Personalized Rate
+          </Link>
+        </div>
       </div>
     </div>
   );
