@@ -522,8 +522,7 @@ export default function Hero() {
                   Close in 10-28 days
                 </h3>
                 <p className="text-sm text-ink/65 leading-relaxed">
-                  Our average is 18 days — industry average is 47. We've closed
-                  in 14 when it counted.
+                  Our average is 18 days — industry average is 47.
                 </p>
               </div>
             </div>
