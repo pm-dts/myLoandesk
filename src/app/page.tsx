@@ -9,11 +9,11 @@ import Calculator from "@/components/site/Home/Calculator";
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
 import LenderMarquee from "@/components/site/Home/LenderMarquee";
 import CurrentRates from "@/components/site/Home/InterestRates";
-import Contact from "@/components/site/Home/Contact";
+// import Contact from "@/components/site/Home/Contact";
 
 import { Fraunces } from "next/font/google";
 import Faq from "@/components/site/Home/FAQ";
-import StartApplication from "@/components/site/Home/ApplicationForm";
+import PreQualified from "@/components/site/Home/ApplicationForm";
 import CalculatorSection from "@/components/site/Home/CalculatorSection";
 
 import homeLoansImg from "@/assets/home-loans.jpg";
@@ -316,7 +316,7 @@ export default function Hero() {
                 03 — How it works
               </div>
               <h2 className="font-display text-4xl lg:text-5xl xl:text-6xl leading-[1.02] tracking-tight font-light text-ink">
-                Four steps.{" "}
+                4 steps.{" "}
                 <em className="not-italic font-serif italic text-moss-deep">
                   No
                 </em>{" "}
@@ -518,9 +518,11 @@ export default function Hero() {
                     strokeWidth={2}
                   />
                 </div>
-                <h3 className="font-display text-xl mb-2">Close in 23 days</h3>
+                <h3 className="font-display text-xl mb-2">
+                  Close in 10-28 days
+                </h3>
                 <p className="text-sm text-ink/65 leading-relaxed">
-                  Our average is 23 days — industry average is 47. We've closed
+                  Our average is 18 days — industry average is 47. We've closed
                   in 14 when it counted.
                 </p>
               </div>
@@ -639,8 +641,8 @@ export default function Hero() {
         </div>
       </section>
       <Faq />
-      <StartApplication />
-      <Contact />
+      <PreQualified />
+      {/* <Contact /> */}
       <LenderMarquee />
     </main>
   );
