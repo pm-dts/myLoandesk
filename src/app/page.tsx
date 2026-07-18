@@ -244,7 +244,7 @@ export default function Hero() {
           </div>
 
           {/* Cards Grid */}
-          <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="grid sm:grid-cols-2 gap-6 max-w-7xl mx-auto">
             {/* Forward Mortgage */}
             <article className="bg-cream border border-line rounded-2xl p-7 transition-all duration-300 hover:border-moss-deep/30 hover:shadow-[0_20px_50px_-20px_rgba(15,61,46,0.25)] hover:-translate-y-1">
               <div className="w-12 h-12 rounded-xl bg-moss-deep/10 flex items-center justify-center mb-5">
