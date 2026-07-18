@@ -2,8 +2,7 @@
 
 import { ArrowRight } from "lucide-react";
 import { useForm } from "@tanstack/react-form";
-import { PhoneInput } from "react-international-phone";
-
+import toast from "react-hot-toast";
 import { useState, useRef, useEffect } from "react";
 import {
   defaultCountries,
@@ -13,6 +12,10 @@ import {
 } from "react-international-phone";
 import "react-international-phone/style.css";
 import { ChevronDown } from "lucide-react";
+import { Toaster } from "react-hot-toast";
+
+const INBOUND_WEBHOOK_URL =
+  "https://services.leadconnectorhq.com/hooks/Lv5oqPcJ6MZsszgssznB/webhook-trigger/10f86bfa-a0f8-4c4e-a551-46e909cb6ab6";
 
 export const TailwindPhoneInput = ({ value, onChange, error }: any) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -114,15 +117,58 @@ export default function PreQualified() {
       loanType: "",
     },
     onSubmit: async ({ value }) => {
-      // Add your API submission logic here
-      console.log("Application validated & submitted:", value);
-      alert("Application started successfully!");
-      form.reset();
+      // Create a loading toast that we will update upon success or failure
+      const toastId = toast.loading("Submitting your application...");
+
+      try {
+        // Send the data to the GHL Inbound Webhook
+        const response = await fetch(INBOUND_WEBHOOK_URL, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            first_name: value.firstName,
+            last_name: value.lastName,
+            email: value.email,
+            phone: value.phone,
+            postal_code: value.zipCode,
+            custom_loan_type: value.loanType,
+            source: "Website Pre-Qualified Form",
+          }),
+        });
+
+        if (!response.ok) {
+          throw new Error(`Webhook error: ${response.status}`);
+        }
+
+        console.log("Application successfully submitted to GHL:", value);
+
+        // Update the loading toast to a success message
+        toast.success("Thank you! A broker will contact you shortly.", {
+          id: toastId,
+          duration: 5000,
+        });
+
+        form.reset();
+      } catch (error) {
+        console.error("Error submitting to webhook:", error);
+
+        // Update the loading toast to an error message
+        toast.error(
+          "There was an issue submitting your request. Please try again.",
+          {
+            id: toastId,
+            duration: 5000,
+          },
+        );
+      }
     },
   });
 
   return (
     <section id="start" className="py-24 lg:py-32">
+      <Toaster position="bottom-right" />
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="relative bg-moss-deep text-cream rounded-[32px] overflow-hidden p-8 sm:p-12 lg:p-16">
           {/* Background Glow Gradients */}
@@ -351,15 +397,17 @@ export default function PreQualified() {
                           <option value="" disabled>
                             What do you need?
                           </option>
-                          <option value="buy">Buy a home</option>
-                          <option value="refinance">
+                          <option value="buy a home">Buy a home</option>
+                          <option value="refinance my mortgage">
                             Refinance my mortgage
                           </option>
-                          <option value="cash-out">Cash-out refinance</option>
-                          <option value="investment">
+                          <option value="cash-out refinance">
+                            Cash-out refinance
+                          </option>
+                          <option value="investment property">
                             Investment property
                           </option>
-                          <option value="exploring">
+                          <option value="just exploring rates">
                             Just exploring rates
                           </option>
                         </select>
