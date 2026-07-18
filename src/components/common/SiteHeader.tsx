@@ -1,7 +1,16 @@
 "use client";
 
 import React, { useState } from "react";
-import { Menu, X, ChevronDown, Calendar } from "lucide-react";
+import {
+  Menu,
+  X,
+  ChevronDown,
+  Calendar,
+  PlayCircle,
+  MessageCircle,
+  Phone,
+  HelpCircle,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -65,7 +74,7 @@ export const Header: React.FC = () => {
   return (
     <header className="sticky top-0 left-0 right-0 z-50 nav-blur border-b border-line bg-primary-bg w-full">
       {/* --- DESKTOP NAVIGATION --- */}
-      <nav className="hidden lg:flex max-w-7xl mx-auto px-6 lg:px-10 h-36 items-center justify-between gap-4">
+      <nav className="hidden lg:flex max-w-[1400px] mx-auto px-6 lg:px-8 h-36 items-center justify-between gap-4">
         {/* Desktop Logo Layout */}
         <Link href="/" className="shrink-0 flex items-center py-2">
           <Image
@@ -79,9 +88,9 @@ export const Header: React.FC = () => {
         </Link>
 
         {/* Center Links */}
-        <div className="flex items-center gap-5 xl:gap-7 text-[13px] font-medium text-ink-2 whitespace-nowrap">
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-[13px] font-medium text-ink-2 whitespace-nowrap">
           <div
-            className="relative group py-4"
+            className="relative group "
             onMouseEnter={() => setIsDropdownOpen(true)}
             onMouseLeave={() => setIsDropdownOpen(false)}
           >
@@ -142,15 +151,49 @@ export const Header: React.FC = () => {
           </Link>
         </div>
 
-        {/* Action Button Deck */}
-        <div className="flex items-center gap-3 shrink-0 text-[13px] font-medium">
-          <a
-            href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
-            target="_blank"
-            className="btn-shine bg-brand-orange text-primary-bg px-5 py-2 rounded-full font-medium hover:bg-orange-600 transition-colors focus-ring"
-          >
-            Start application
-          </a>
+        {/* --- Action Button Deck (Updated to match design) --- */}
+        <div className="flex items-center gap-6 shrink-0">
+          {/* Phone and Quote Column */}
+          <div className="flex flex-col items-center gap-2">
+            <a
+              href="tel:3058916500"
+              className="text-brand-orange font-bold text-sm underline underline-offset-2 hover:text-orange-600 transition-colors"
+            >
+              Call/Text (305) 891-6500
+            </a>
+            <Link
+              href="/get-quote"
+              className="btn-shine bg-brand-orange text-white px-5 py-2.5 rounded-full font-bold text-xs flex items-center gap-1.5 uppercase tracking-wider hover:bg-orange-600 transition-colors shadow-sm"
+            >
+              Get A Quote <PlayCircle size={16} />
+            </Link>
+          </div>
+
+          {/* Stacked Buttons Column */}
+          <div className="flex flex-col gap-1.5 w-[140px]">
+            <a
+              href="https://wa.me/13058916500"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border border-[#25D366] text-[#25D366] bg-white px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-wider flex items-center justify-between hover:bg-[#25D366]/10 transition-colors"
+            >
+              Whats App <MessageCircle size={14} />
+            </a>
+
+            <a
+              href="tel:3058916500"
+              className="border border-gray-300 text-brand-orange bg-white px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-wider flex items-center justify-between hover:bg-gray-50 transition-colors"
+            >
+              Call or Text <Phone size={14} />
+            </a>
+
+            <Link
+              href="/ask-broker"
+              className="border border-brand-orange bg-brand-orange text-white px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-wider flex items-center justify-between hover:bg-orange-600 transition-colors shadow-sm"
+            >
+              Ask A Broker <HelpCircle size={14} />
+            </Link>
+          </div>
         </div>
       </nav>
 
