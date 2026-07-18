@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 import { Fraunces } from "next/font/google";
 import {
   Calculator as CalcIcon,
@@ -598,6 +599,12 @@ const CalculatorModal = ({
   children: React.ReactNode;
 }) => {
   if (!isOpen) return null;
+  const navigate = useRouter();
+
+  const handleClick = () => {
+    onClose();
+    navigate.push("#start");
+  };
 
   return (
     <div
@@ -626,7 +633,10 @@ const CalculatorModal = ({
           <p className="text-gray-500 text-sm mb-4">
             Want to lock in this scenario?
           </p>
-          <button className="w-full bg-[#FF6B00] text-white py-3.5 rounded-lg font-bold text-lg hover:bg-[#e66000] transition-colors shadow-md">
+          <button
+            onClick={handleClick}
+            className="w-full bg-[#FF6B00] text-white py-3.5 rounded-lg font-bold text-lg hover:bg-[#e66000] transition-colors shadow-md"
+          >
             Speak With Us Now
           </button>
         </div>
