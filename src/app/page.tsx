@@ -15,6 +15,7 @@ import { Fraunces } from "next/font/google";
 import Faq from "@/components/site/Home/FAQ";
 import PreQualified from "@/components/site/Home/ApplicationForm";
 import CalculatorSection from "@/components/site/Home/CalculatorSection";
+import RateAlert from "@/components/site/Home/RateAlert";
 
 import homeLoansImg from "@/assets/home-loans.jpg";
 import realEstateLoansImg from "@/assets/real-estate-loans.jpg";
@@ -164,6 +165,9 @@ export default function Hero() {
         </div>
       </section>
 
+      <section className="py-10 px-2 sm:px-4">
+        <RateAlert />
+      </section>
       <section className="py-10 px-2 sm:px-4">
         <CurrentRates />
       </section>
