@@ -165,9 +165,7 @@ export default function Hero() {
         </div>
       </section>
 
-      <section className="py-10 px-2 sm:px-4">
-        <RateAlert />
-      </section>
+      
       <section className="py-10 px-2 sm:px-4">
         <CurrentRates />
       </section>
@@ -221,7 +219,13 @@ export default function Hero() {
           </div>
         </div>
       </section>
+
+      <section className="">
+        <RateAlert />
+      </section>
+
       <CalculatorSection />
+
       <section id="loans" className="py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           {/* Header Section */}
