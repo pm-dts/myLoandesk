@@ -14,7 +14,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 
-import brandLogo from "@/assets/icon-up.jpeg";
+import brandLogo from "@/assets/icon-up.png";
 
 const loanLinks = [
   { name: "Conventional Loans", href: "/loan-programs#conventional" },
@@ -74,7 +74,7 @@ export const Header: React.FC = () => {
   return (
     <header className="sticky top-0 left-0 right-0 z-50 nav-blur border-b border-line bg-primary-bg w-full">
       {/* --- DESKTOP NAVIGATION --- */}
-      <nav className="hidden lg:flex max-w-[1400px] mx-auto px-6 lg:px-8 h-36 items-center justify-between gap-4">
+      <nav className="hidden lg:flex max-w-[1500px] mx-auto px-6 lg:px-8 h-36 items-center justify-between gap-4">
         {/* Desktop Logo Layout */}
         <Link href="/" className="shrink-0 flex items-center py-2">
           <Image
