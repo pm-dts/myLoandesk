@@ -113,12 +113,12 @@ export default function LoanProgramsPage() {
                 debt-to-income ratio (DTI) should be under 43%.
               </p>
             </div>
-            <a
-              href="#application"
+            <Link
+              href="/#start"
               className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
             >
               Apply Now! <ArrowRight size={14} />
-            </a>
+            </Link>
           </div>
 
           {/* FHA Loans */}
@@ -172,12 +172,12 @@ export default function LoanProgramsPage() {
                 ))}
               </ul>
             </div>
-            <a
-              href="#application"
+            <Link
+              href="/#start"
               className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
             >
               Apply Now! <ArrowRight size={14} />
-            </a>
+            </Link>
           </div>
 
           {/* VA Loans */}
@@ -235,12 +235,12 @@ export default function LoanProgramsPage() {
                 ))}
               </ul>
             </div>
-            <a
-              href="#application"
+            <Link
+              href="/#start"
               className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
             >
               Apply Now! <ArrowRight size={14} />
-            </a>
+            </Link>
           </div>
 
           {/* Hybrid Loans */}
@@ -291,12 +291,12 @@ export default function LoanProgramsPage() {
                 </p>
               </div>
             </div>
-            <a
-              href="#application"
+            <Link
+              href="/#start"
               className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
             >
               Apply Now! <ArrowRight size={14} />
-            </a>
+            </Link>
           </div>
 
           {/* Private Bridge & Hard Money Loans */}
@@ -349,12 +349,12 @@ export default function LoanProgramsPage() {
                 </div>
               </div>
             </div>
-            <a
-              href="#application"
+            <Link
+              href="/#start"
               className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
             >
               Apply Now! <ArrowRight size={14} />
-            </a>
+            </Link>
           </div>
 
           {/* Bridge to Sale */}
@@ -395,12 +395,12 @@ export default function LoanProgramsPage() {
                 </ul>
               </div>
             </div>
-            <a
-              href="#application"
+            <Link
+              href="/#start"
               className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
             >
               Apply Now! <ArrowRight size={14} />
-            </a>
+            </Link>
           </div>
 
           {/* Jumbo Loans */}
@@ -427,9 +427,9 @@ export default function LoanProgramsPage() {
               </h3>
               <div className="text-sm text-ink-2 space-y-4 mb-6 leading-relaxed">
                 <p>
-                  Portfolio loans are made to fill the gap between conventional
+                  Jumbo loans are made to fill the gap between conventional
                   loans and private or hard money loans. These are made by a
-                  lender who keeps the debt on their portfolio to earn
+                  lender who keeps the debt on their Jumbo to earn
                   consistent interest, rather than selling it to secondary
                   markets.
                 </p>
@@ -438,19 +438,19 @@ export default function LoanProgramsPage() {
                   institution that will service the loan shortly after closing.
                 </p>
                 <p>
-                  Portfolio loan programs are built for clients who have
+                  Jumbo loan programs are built for clients who have
                   difficulty proving their income under standard conventional
                   guidelines, or who have navigated complex credit issues, past
                   bankruptcies, foreclosures, or tax liens.
                 </p>
               </div>
             </div>
-            <a
-              href="/#contact"
+            <Link
+              href="/#start"
               className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
             >
               Contact Us <ArrowRight size={14} />
-            </a>
+            </Link>
           </div>
 
           {/* International Buyers Section Loans */}
@@ -555,12 +555,12 @@ export default function LoanProgramsPage() {
               Contact MyLoanDesk today to discuss your financing options and get
               pre-qualified.
             </p>
-            <a
-              href="#application"
+            <Link
+              href="/#start"
               className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
             >
               Contact Now! <ArrowRight size={14} />
-            </a>
+            </Link>
           </div>
           {/*  ITIN Home Loans Loans */}
           <div
@@ -670,12 +670,12 @@ export default function LoanProgramsPage() {
               Contact MyLoanDesk today to explore your ITIN mortgage options and
               find out if you qualify.
             </p>
-            <a
-              href="#application"
+            <Link
+              href="/#start"
               className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
             >
               Contact Now! <ArrowRight size={14} />
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -758,12 +758,12 @@ export default function LoanProgramsPage() {
                 </div>
               </div>
             </div>
-            <a
-              href="#application"
+            <Link
+              href="/#start"
               className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
             >
               Apply Now! <ArrowRight size={14} />
-            </a>
+            </Link>
           </div>
 
           {/* Refinance Options */}
@@ -831,12 +831,12 @@ export default function LoanProgramsPage() {
                 </div>
               </div>
             </div>
-            <a
-              href="#application"
+            <Link
+              href="/#start"
               className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
             >
               Apply Now! <ArrowRight size={14} />
-            </a>
+            </Link>
           </div>
 
           {/* FHA Streamline Refinance */}
@@ -890,12 +890,12 @@ export default function LoanProgramsPage() {
                 ))}
               </ul>
             </div>
-            <a
-              href="#application"
+            <Link
+              href="/#start"
               className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
             >
               Apply Now! <ArrowRight size={14} />
-            </a>
+            </Link>
           </div>
 
           {/* HELOC (Home Equity Line of Credit) */}
@@ -1051,12 +1051,12 @@ export default function LoanProgramsPage() {
                 {/* fdgdg */}
               </div>
             </div>
-            <a
-              href="#application"
+            <Link
+              href="/#start"
               className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
             >
               Apply Now! <ArrowRight size={14} />
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -1178,12 +1178,12 @@ export default function LoanProgramsPage() {
               Contact MyLoanDesk today to explore your DSCR financing options
               and get pre-qualified.
             </p>
-            <a
-              href="#application"
+            <Link
+              href="/#start"
               className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
             >
               Contact Now! <ArrowRight size={14} />
-            </a>
+            </Link>
           </div>
 
           {/* Fix & Flip Loans */}
@@ -1285,12 +1285,12 @@ export default function LoanProgramsPage() {
               Contact MyLoanDesk today to discuss your investment goals and
               discover the Fix & Flip financing solution that's right for you.
             </p>
-            <a
-              href="#application"
+            <Link
+              href="/#start"
               className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
             >
               Contact Now! <ArrowRight size={14} />
-            </a>
+            </Link>
           </div>
 
           {/* Ground up  Loans */}
@@ -1392,12 +1392,12 @@ export default function LoanProgramsPage() {
               Contact MyLoanDesk today to discuss your construction project and
               explore the financing options available for your next build.
             </p>
-            <a
-              href="#application"
+            <Link
+              href="/#start"
               className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
             >
               Contact Now! <ArrowRight size={14} />
-            </a>
+            </Link>
           </div>
 
           {/* Bridge  Loans */}
@@ -1501,7 +1501,7 @@ export default function LoanProgramsPage() {
               move forward with confidence.
             </p>
             <Link
-              href="#application"
+              href="/#start"
               className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
             >
               Contact Now! <ArrowRight size={14} />
@@ -1521,56 +1521,98 @@ export default function LoanProgramsPage() {
           Commercial Financing Solutions
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-line border border-line rounded-3xl overflow-hidden shadow-sm">
-          {/* Equipment Financing */}
+          {/* commercial real estate Financing */}
           <div
-            id="equipment"
+            id="commercial-real-estate"
             className="scroll-mt-36 bg-primary-bg p-8 flex flex-col justify-between transition-colors duration-300 hover:bg-cream/40"
           >
             <div>
               <div className="flex items-center justify-between mb-6">
-                <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-[#D4A373]/20 text-[#D4A373]">
-                  <Briefcase size={22} strokeWidth={1.8} />
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-brand-orange/10 text-brand-orange">
+                  <Shield size={22} strokeWidth={1.8} />
                 </div>
                 <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2 py-1 rounded">
-                  Capital Growth
+                  Government Backed
                 </span>
               </div>
               <h3
                 className={cn(
-                  "text-2xl font-medium text-ink mb-4",
+                  "text-2xl font-medium text-ink mb-3",
                   fraunces.className,
                 )}
               >
-                Equipment Financing
+                Commercial Real Estate Loans
               </h3>
-              <p className="text-xs font-bold uppercase tracking-wider text-brand-orange mb-2">
-                Conserve primary cash flow lines while modernizing machinery
-                stacks.
+
+              <h4 className="font-medium text-ink mb-3">
+                Financing Solutions for Businesses, Investors & Developers
+              </h4>
+
+              <p className="text-sm text-ink-2 leading-relaxed mb-2">
+                Whether you're purchasing, refinancing, constructing, or
+                expanding commercial real estate, MyLoanDesk provides access to
+                a broad network of commercial lenders offering financing
+                tailored to your business and investment goals.
               </p>
-              <div className="text-sm text-ink-2 space-y-4 mb-6 leading-relaxed">
-                <p>
-                  Acquiring core equipment assets is vital to scalable
-                  operations. When your company is ready to scale throughput or
-                  update internal frameworks, our expert programs match your
-                  dynamic timeline requirements.
-                </p>
-                <div className="bg-line/30 p-3 rounded-lg text-xs space-y-1">
-                  <h4 className="font-semibold text-ink">
-                    Core Program Advantages:
-                  </h4>
-                  <p>· Preserves operational liquid capital</p>
-                  <p>· Modern tax incentive integration metrics</p>
-                  <p>· Accelerated equipment acquisition turnaround times</p>
-                  <p>· 100% financing frameworks for high-tier candidates</p>
-                </div>
-              </div>
+              <p className="text-sm text-ink-2 leading-relaxed mb-2">
+                From owner-occupied properties to large investment projects, we'll help you identify the right financing solution with competitive terms and a streamlined lending process.
+              </p>
+
+              <h4 className="font-medium text-ink mb-3">Commercial Financing Available For</h4>
+              <ul className="space-y-2 mb-4">
+                {[
+                  "Office Buildings",
+                  "Retail Centers",
+                  "Apartment & Multifamily Properties",
+                  "Mixed-Use Developments",
+                  "Industrial & Warehouse Facilities",
+                  "Hotels & Motels",
+                  "Medical & Professional Buildings",
+                  "Restaurants & Hospitality",
+                  "Self-Storage Facilities",
+                  "Land Acquisition & Development",
+                  "Ground-Up Construction Projects",
+                ].map((item, index) => (
+                  <li
+                    key={index}
+                    className="flex items-start gap-2 text-xs text-ink/90 leading-normal"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-1.5 shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <h4 className="font-medium text-ink mb-3">Loan Options</h4>
+              <ul className="space-y-2 mb-4">
+                {[
+                  "Property Purchase",
+                  "Commercial Refinancing",
+                  "Cash-Out Refinancing",
+                  "Ground-Up"
+                ].map((item, index) => (
+                  <li
+                    key={index}
+                    className="flex items-start gap-2 text-xs text-ink/90 leading-normal"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-1.5 shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <a
-              href="#contact"
+            <p className="text-xs mb-4 text-ink-2">
+              <span className="font-bold text-ink">Need financing fast?</span>
+              <br />
+              Contact MyLoanDesk today to learn how a Commercial Real Estate Loans can help you
+              move forward with confidence.
+            </p>
+            <Link
+              href="/#start"
               className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
             >
-              Contact Us <ArrowRight size={14} />
-            </a>
+              Contact Now! <ArrowRight size={14} />
+            </Link>
           </div>
 
           {/* Equipment Financing */}
@@ -1769,12 +1811,12 @@ export default function LoanProgramsPage() {
                 </div>
               </div>
             </div>
-            <a
-              href="#application"
+            <Link
+              href="/#start"
               className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
             >
               Apply Now! <ArrowRight size={14} />
-            </a>
+            </Link>
           </div>
 
           {/* Commercial Loans */}
@@ -1817,12 +1859,12 @@ export default function LoanProgramsPage() {
                 </div>
               </div>
             </div>
-            <a
-              href="#application"
+            <Link
+              href="/#start"
               className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
             >
               Apply Now! <ArrowRight size={14} />
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -1839,7 +1881,7 @@ export default function LoanProgramsPage() {
         </h2>
         <div className="grid md:grid-cols-2 gap-px bg-line border border-line rounded-3xl overflow-hidden shadow-sm">
           {/* Mexico Loans */}
-          <div
+          {/* <div
             id="mexico"
             className="scroll-mt-36 bg-primary-bg p-8 flex flex-col justify-between transition-colors duration-300 hover:bg-cream/40"
           >
@@ -1885,13 +1927,13 @@ export default function LoanProgramsPage() {
                 </li>
               </ul>
             </div>
-            <a
-              href="#application"
+            <Link
+              href="/#start"
               className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
             >
               Apply Now! <ArrowRight size={14} />
-            </a>
-          </div>
+            </Link>
+          </div> */}
 
           {/* Portugal Loans */}
           <div
@@ -1913,48 +1955,80 @@ export default function LoanProgramsPage() {
                   fraunces.className,
                 )}
               >
-                Portugal Loans
+                 Property Financing in Portugal
               </h3>
               <p className="text-xs font-bold text-ink mb-3">
-                Portugal Home Loans for All Property Classes
+                Residential, Commercial and Construction Loans
               </p>
               <p className="text-xs text-ink-2 leading-relaxed mb-4">
-                Navigating cross-border properties requires strict compliance
-                alignment. We coordinate financing vectors for primary or
-                secondary vacation assets seamlessly across international
-                banking lines.
+                Whether you are buying a home, investing in commercial real estate, or developing a new project, we help qualified borrowers explore financing options through our network of lenders in Portugal.
               </p>
 
-              <div className="space-y-3 text-xs text-ink-2 mb-6">
-                <p>
-                  <strong>Loan-to-Value (LTV) Ratios:</strong> Standard
-                  residential profiles mapped between 65% and 75% dependent on
-                  primary or investment classification status.
-                </p>
-                <p>
-                  <strong>Structural Terms:</strong> Amortization schedules
-                  reaching up to 30 years, subject to standard Eurobank age-cap
-                  boundaries (typically matching age 75 limits).
-                </p>
-                <div>
-                  <p>
-                    <strong>Rate Architectures:</strong> Choose between variable
-                    indexes tied securely to Euribor, fully-shielded fixed
-                    options, or hybrid mixed-term models.
-                  </p>
-                </div>
-                <p className="p-2.5 bg-line/30 border border-line rounded font-mono text-[11px] text-moss-deep">
-                  Program frameworks adapt to changing Euribor indices. Inquire
-                  directly for real-time market-spread updates.
-                </p>
-              </div>
+              <p className="text-xs font-bold text-ink mb-3">
+                Residential Loans
+              </p>
+
+              <p className="text-xs text-ink-2 leading-relaxed mb-4">
+                Mortgage solutions may be available for residents, non-residents, foreign nationals and international buyers purchasing:
+              </p>
+
+              <ul className="space-y-2 mb-4">
+                {[
+                  "Primary residences",
+                  "Second homes and vacation properties",
+                  "Apartments and villas",
+                  "Residential investment properties",
+                  "New-build homes"
+                ].map((item, index) => (
+                  <li
+                    key={index}
+                    className="flex items-start gap-2 text-xs text-ink/90 leading-normal"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-1.5 shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <p className="text-xs font-bold text-ink mb-3">
+                Commercial Loans
+              </p>
+
+              <p className="text-xs text-ink-2 leading-relaxed mb-4">
+                We assist investors, business owners and developers seeking financing for:
+              </p>
+
+              <ul className="space-y-2 mb-4">
+                {[
+                  "Apartment and multifamily buildings",
+                  "Hotels and hospitality properties",
+                  "Retail, office and mixed-use properties",
+                  "Warehouses and industrial facilities",
+                  "Property acquisitions and refinancing",
+                  "Commercial investment projects",
+                ].map((item, index) => (
+                  <li
+                    key={index}
+                    className="flex items-start gap-2 text-xs text-ink/90 leading-normal"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-1.5 shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="text-xs font-bold text-ink mb-3">
+                 Construction and Development Loans
+              </p>
+              <p className="text-xs text-ink-2 leading-relaxed mb-4">
+                Financing may also be available for ground-up construction, renovation
+              </p>
             </div>
-            <a
-              href="#application"
+            <Link
+              href="/#start"
               className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
             >
               Apply Now! <ArrowRight size={14} />
-            </a>
+            </Link>
           </div>
 
           {/* Dream Home Builder AKA Earned Equity Program (EEP) */}
@@ -2019,18 +2093,18 @@ export default function LoanProgramsPage() {
                 </div>
               </div>
             </div>
-            <a
-              href="#application"
+            <Link
+              href="/#start"
               className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
             >
               Apply Now! <ArrowRight size={14} />
-            </a>
+            </Link>
           </div>
 
           {/* Doctor Loan Program */}
           <div
             id="doctor"
-            className="scroll-mt-36 bg-primary-bg p-8 flex flex-col justify-between transition-colors duration-300 hover:bg-cream/40"
+            className="scroll-mt-36 col-span-2 bg-primary-bg p-8 flex flex-col justify-between transition-colors duration-300 hover:bg-cream/40"
           >
             <div>
               <div className="flex items-center justify-between mb-6">
@@ -2086,12 +2160,12 @@ export default function LoanProgramsPage() {
                 </div>
               </div>
             </div>
-            <a
-              href="#application"
+            <Link
+              href="/#start"
               className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
             >
               Apply Now! <ArrowRight size={14} />
-            </a>
+            </Link>
           </div>
         </div>
       </section>
