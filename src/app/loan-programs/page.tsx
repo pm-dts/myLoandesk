@@ -429,18 +429,17 @@ export default function LoanProgramsPage() {
                 <p>
                   Jumbo loans are made to fill the gap between conventional
                   loans and private or hard money loans. These are made by a
-                  lender who keeps the debt on their Jumbo to earn
-                  consistent interest, rather than selling it to secondary
-                  markets.
+                  lender who keeps the debt on their Jumbo to earn consistent
+                  interest, rather than selling it to secondary markets.
                 </p>
                 <p>
                   In contrast, conventional loans are typically sold to another
                   institution that will service the loan shortly after closing.
                 </p>
                 <p>
-                  Jumbo loan programs are built for clients who have
-                  difficulty proving their income under standard conventional
-                  guidelines, or who have navigated complex credit issues, past
+                  Jumbo loan programs are built for clients who have difficulty
+                  proving their income under standard conventional guidelines,
+                  or who have navigated complex credit issues, past
                   bankruptcies, foreclosures, or tax liens.
                 </p>
               </div>
@@ -1510,7 +1509,7 @@ export default function LoanProgramsPage() {
         </div>
       </section>
 
-      {/* Business & Commercial Financing Solutions */}
+      {/* Commercial  */}
       <section className="max-w-7xl mx-auto px-6 lg:px-10 mb-20">
         <h2
           className={cn(
@@ -1555,10 +1554,14 @@ export default function LoanProgramsPage() {
                 tailored to your business and investment goals.
               </p>
               <p className="text-sm text-ink-2 leading-relaxed mb-2">
-                From owner-occupied properties to large investment projects, we'll help you identify the right financing solution with competitive terms and a streamlined lending process.
+                From owner-occupied properties to large investment projects,
+                we'll help you identify the right financing solution with
+                competitive terms and a streamlined lending process.
               </p>
 
-              <h4 className="font-medium text-ink mb-3">Commercial Financing Available For</h4>
+              <h4 className="font-medium text-ink mb-3">
+                Commercial Financing Available For
+              </h4>
               <ul className="space-y-2 mb-4">
                 {[
                   "Office Buildings",
@@ -1589,7 +1592,7 @@ export default function LoanProgramsPage() {
                   "Property Purchase",
                   "Commercial Refinancing",
                   "Cash-Out Refinancing",
-                  "Ground-Up"
+                  "Ground-Up",
                 ].map((item, index) => (
                   <li
                     key={index}
@@ -1604,8 +1607,8 @@ export default function LoanProgramsPage() {
             <p className="text-xs mb-4 text-ink-2">
               <span className="font-bold text-ink">Need financing fast?</span>
               <br />
-              Contact MyLoanDesk today to learn how a Commercial Real Estate Loans can help you
-              move forward with confidence.
+              Contact MyLoanDesk today to learn how a Commercial Real Estate
+              Loans can help you move forward with confidence.
             </p>
             <Link
               href="/#start"
@@ -1869,6 +1872,155 @@ export default function LoanProgramsPage() {
         </div>
       </section>
 
+      {/*  SBA and business loans */}
+      <section className="max-w-7xl mx-auto px-6 lg:px-10 mb-20">
+        <h2
+          className={cn(
+            "text-3xl font-display text-ink mb-10 pb-4 border-b border-line",
+            fraunces.className,
+          )}
+        >
+          SBA and Business Loans
+        </h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-line border border-line rounded-3xl overflow-hidden shadow-sm">
+          {/*  SBA and business loans */}
+          <div
+            id="sba-business"
+            className="scroll-mt-36 col-span-3 bg-primary-bg p-8 flex flex-col justify-between transition-colors duration-300 hover:bg-cream/40"
+          >
+            <div>
+              <div className="flex items-center justify-between mb-6">
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-brand-orange/10 text-brand-orange">
+                  <Shield size={22} strokeWidth={1.8} />
+                </div>
+                <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2 py-1 rounded">
+                  Government Backed
+                </span>
+              </div>
+              <h3
+                className={cn(
+                  "text-2xl font-medium text-ink mb-3",
+                  fraunces.className,
+                )}
+              >
+                SBA Business Loans
+              </h3>
+
+              <h4 className="font-medium text-ink mb-3">
+                Affordable Financing to Help Your Business Grow
+              </h4>
+
+              <p className="text-sm text-ink-2 leading-relaxed mb-2">
+                Whether you're starting a new business, expanding operations,
+                purchasing commercial real estate, or acquiring an existing
+                company, <span className="font-bold"> SBA Loans</span> offer
+                flexible financing backed by the U.S. Small Business
+                Administration.
+              </p>
+              <p className="text-sm text-ink-2 leading-relaxed mb-2">
+                Designed to make capital more accessible, SBA loans often
+                provide lower down payments, longer repayment terms, and
+                competitive interest rates compared to many conventional
+                business loans.
+              </p>
+
+              <h4 className="font-medium text-ink mb-3">
+                SBA Loan Programs Can Be Used For
+              </h4>
+              <ul className="space-y-2 mb-4">
+                {[
+                  "Purchasing or expanding a business",
+                  "Buying owner-occupied commercial real estate",
+                  "Business acquisitions",
+                  "Equipment and machinery purchases",
+                  "Working capital",
+                  "Inventory financing",
+                  "Business renovations and improvements",
+                  "Debt refinancing",
+                  "Franchise financing",
+                ].map((item, index) => (
+                  <li
+                    key={index}
+                    className="flex items-start gap-2 text-xs text-ink/90 leading-normal"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-1.5 shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <h4 className="font-medium text-ink mb-3">
+                Why Choose an SBA Loan?
+              </h4>
+              <ul className="space-y-2 mb-4">
+                {[
+                  "Competitive interest rates",
+                  "Lower down payment requirements than many conventional loans",
+                  "Longer repayment terms to help improve cash flow",
+                  "Financing for startups, growing businesses, and established companies",
+                  "Loan amounts available for a wide range of business needs",
+                  "Flexible financing options tailored to your goals",
+                ].map((item, index) => (
+                  <li
+                    key={index}
+                    className="flex items-start gap-2 text-xs text-ink/90 leading-normal"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-1.5 shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <h4 className="font-medium text-ink mb-3">Ideal For</h4>
+              <ul className="space-y-2 mb-4">
+                {[
+                  "Small business owners",
+                  "Entrepreneurs",
+                  "Franchise owners",
+                  "Professional practices",
+                  "Retail and restaurant businesses",
+                  "Manufacturers",
+                  "Service companies",
+                  "Commercial property owner-occupants",
+                ].map((item, index) => (
+                  <li
+                    key={index}
+                    className="flex items-start gap-2 text-xs text-ink/90 leading-normal"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-1.5 shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <h4 className="font-medium text-ink mb-3">
+                Build Your Business With Confidence
+              </h4>
+              <p className="text-sm text-ink-2 leading-relaxed mb-2">
+                Whether you're purchasing your first commercial property,
+                expanding to a new location, or investing in your company's
+                future, MyLoanDesk can help you navigate the SBA loan process
+                from application through closing.
+              </p>
+            </div>
+            <p className="text-xs mb-4 text-ink-2">
+              <span className="font-bold text-ink">
+                Ready to grow your business?
+              </span>
+              <br />
+              Contact MyLoanDesk today to explore your SBA financing options and
+              find the loan that's right for your business.
+            </p>
+            <Link
+              href="/#start"
+              className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
+            >
+              Contact Now! <ArrowRight size={14} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Global Borders Cross-Section (Mexico, Portugal & Specialty EEP / Medical Channels) */}
       <section className="max-w-7xl mx-auto px-6 lg:px-10 mb-28">
         <h2
@@ -1955,13 +2107,16 @@ export default function LoanProgramsPage() {
                   fraunces.className,
                 )}
               >
-                 Property Financing in Portugal
+                Property Financing in Portugal
               </h3>
               <p className="text-xs font-bold text-ink mb-3">
                 Residential, Commercial and Construction Loans
               </p>
               <p className="text-xs text-ink-2 leading-relaxed mb-4">
-                Whether you are buying a home, investing in commercial real estate, or developing a new project, we help qualified borrowers explore financing options through our network of lenders in Portugal.
+                Whether you are buying a home, investing in commercial real
+                estate, or developing a new project, we help qualified borrowers
+                explore financing options through our network of lenders in
+                Portugal.
               </p>
 
               <p className="text-xs font-bold text-ink mb-3">
@@ -1969,7 +2124,9 @@ export default function LoanProgramsPage() {
               </p>
 
               <p className="text-xs text-ink-2 leading-relaxed mb-4">
-                Mortgage solutions may be available for residents, non-residents, foreign nationals and international buyers purchasing:
+                Mortgage solutions may be available for residents,
+                non-residents, foreign nationals and international buyers
+                purchasing:
               </p>
 
               <ul className="space-y-2 mb-4">
@@ -1978,7 +2135,7 @@ export default function LoanProgramsPage() {
                   "Second homes and vacation properties",
                   "Apartments and villas",
                   "Residential investment properties",
-                  "New-build homes"
+                  "New-build homes",
                 ].map((item, index) => (
                   <li
                     key={index}
@@ -1995,7 +2152,8 @@ export default function LoanProgramsPage() {
               </p>
 
               <p className="text-xs text-ink-2 leading-relaxed mb-4">
-                We assist investors, business owners and developers seeking financing for:
+                We assist investors, business owners and developers seeking
+                financing for:
               </p>
 
               <ul className="space-y-2 mb-4">
@@ -2017,10 +2175,11 @@ export default function LoanProgramsPage() {
                 ))}
               </ul>
               <p className="text-xs font-bold text-ink mb-3">
-                 Construction and Development Loans
+                Construction and Development Loans
               </p>
               <p className="text-xs text-ink-2 leading-relaxed mb-4">
-                Financing may also be available for ground-up construction, renovation
+                Financing may also be available for ground-up construction,
+                renovation
               </p>
             </div>
             <Link
