@@ -19,23 +19,38 @@ import brandLogo from "@/assets/icon-up.png";
 const loanLinks = [
   { name: "Conventional Loans", href: "/loan-programs#conventional" },
   { name: "FHA Loans", href: "/loan-programs#fha" },
-  { name: "Portfolio Loans", href: "/loan-programs#portfolio" },
+  { name: "Jumbo Loans", href: "/loan-programs#portfolio" },
   { name: "VA Loans", href: "/loan-programs#va" },
   { name: "Hybrid Loans", href: "/loan-programs#hybrid" },
   { name: "Private Bridge & Hard Money", href: "/loan-programs#bridge-money" },
+  { name: "Bridge to Sale", href: "/loan-programs#bridge-to-sale" },
+  {
+    name: "International Buyers Section",
+    href: "/loan-programs#international-buyer",
+  },
+  { name: "ITIN Home Loans", href: "/loan-programs#ITIN-home" },
   { name: "FHA 203(k) Rehab Loans", href: "/loan-programs#fha-203k" },
   { name: "Refinance Options", href: "/loan-programs#refinance" },
   { name: "FHA Streamline Refinance", href: "/loan-programs#fha-streamline" },
   { name: "HELOC / Equity Lines", href: "/loan-programs#heloc" },
-  { name: "Reverse Mortgage", href: "/loan-programs#reverse" },
+  { name: "DSCR Investment Property Loans", href: "/loan-programs#DSCR" },
+  { name: "Fix & Flip Loans", href: "/loan-programs#fix-flip" },
+  { name: "Ground-Up Construction Loans", href: "/loan-programs#ground-up" },
+  { name: "Bridge Loans", href: "/loan-programs#bridge-loans" },
+  // { name: "Reverse Mortgage", href: "/loan-programs#reverse" },
+  {
+    name: "Commercial Real Estate Loans",
+    href: "/loan-programs#commercial-real-estate",
+  },
   { name: "Equipment Financing", href: "/loan-programs#equipment" },
   { name: "Business Lines of Credit", href: "/loan-programs#business-lines" },
   { name: "Working Capital", href: "/loan-programs#working-capital" },
   { name: "Franchise Financing", href: "/loan-programs#franchise" },
   { name: "Commercial Loans", href: "/loan-programs#commercial" },
-  { name: "Bridge to Sale", href: "/loan-programs#bridge-sale" },
-  { name: "Mexico Loans", href: "/loan-programs#mexico" },
-  { name: "Portugal Loans", href: "/loan-programs#portugal" },
+  { name: "SBA Business Loans", href: "/loan-programs#sba-business" },
+  // { name: "Bridge to Sale", href: "/loan-programs#bridge-sale" },
+  // { name: "Mexico Loans", href: "/loan-programs#mexico" },
+  { name: "Property Financing in Portugal", href: "/loan-programs#portugal" },
   { name: "Dream Home Builder (EEP)", href: "/loan-programs#eep" },
   { name: "Doctor Loan Program", href: "/loan-programs#doctor" },
 ];
@@ -188,7 +203,8 @@ export const Header: React.FC = () => {
             </a>
 
             <Link
-              href="/ask-broker"
+              href="https://chatgpt.com/g/g-6989ac7406b08191ba66dc0aa143e1d6-ask-a-mortgage-broker-myloandesk"
+              target="_blank"
               className="border border-brand-orange bg-brand-orange text-white px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-wider flex items-center justify-between hover:bg-orange-600 transition-colors shadow-sm"
             >
               Ask A Broker <HelpCircle size={14} />

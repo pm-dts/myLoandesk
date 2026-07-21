@@ -5,7 +5,7 @@ import fundLoanImg from "@/assets/lenders/fund.svg";
 import axosImg from "@/assets/lenders/axos.png";
 import lendImg from "@/assets/lenders/LendSure-Logo-SVG.svg";
 import rocketImg from "@/assets/lenders/www.rocketpro.com_.png";
-import canterImg from "@/assets/lenders/center-street-lending-logo-dark-bg.svg";
+import canterImg from "@/assets/lenders/center-street.png";
 import stremImg from "@/assets/lenders/loanstream.png";
 import silverImg from "@/assets/lenders/silver-hill-funding-logo-3905714355.png";
 import nubridgeImg from "@/assets/lenders/NuBridge.jpg";

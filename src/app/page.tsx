@@ -43,21 +43,21 @@ export default function Hero() {
                   alt="home loans"
                 />
               </Link>
-              <Link href={"/loan-programs#bridge"} className="">
+              <Link href={"/loan-programs#real-estate"} className="">
                 <Image
                   src={realEstateLoansImg}
                   className="w-18 sm:w-25 aspect-auto"
                   alt="home loans"
                 />
               </Link>
-              <Link href={"/loan-programs#commercial"} className="">
+              <Link href={"/loan-programs#commercial-section"} className="">
                 <Image
                   src={commercialLoansImg}
                   className="w-18 sm:w-25 aspect-auto"
                   alt="home loans"
                 />
               </Link>
-              <Link href={"/loan-programs#business-lines"} className="">
+              <Link href={"/loan-programs#business-sba"} className="">
                 <Image
                   src={businessLoansImg}
                   className="w-18 sm:w-25 aspect-auto"
@@ -165,7 +165,6 @@ export default function Hero() {
         </div>
       </section>
 
-      
       <section className="py-10 px-2 sm:px-4">
         <CurrentRates />
       </section>

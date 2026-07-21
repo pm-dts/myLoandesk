@@ -66,7 +66,7 @@ export default function LoanProgramsPage() {
       </section>
 
       {/* Primary 1px Grid Architecture Layout (Residential & Dynamic Lending) */}
-      <section className="max-w-7xl mx-auto px-6 lg:px-10 mb-20">
+      <section className="max-w-7xl mx-auto px-6 lg:px-10 mb-20" id="resident">
         <h2
           className={cn(
             "text-3xl font-display text-ink mb-10 pb-4 border-b border-line",
@@ -1055,7 +1055,10 @@ export default function LoanProgramsPage() {
       </section>
 
       {/* Real Estate Investment Loans */}
-      <section className="max-w-7xl mx-auto px-6 lg:px-10 mb-20">
+      <section
+        className="max-w-7xl mx-auto px-6 lg:px-10 mb-20"
+        id="real-estate"
+      >
         <h2
           className={cn(
             "text-3xl font-display text-ink mb-10 pb-4 border-b border-line",
@@ -1492,7 +1495,10 @@ export default function LoanProgramsPage() {
       </section>
 
       {/* Commercial  */}
-      <section className="max-w-7xl mx-auto px-6 lg:px-10 mb-20">
+      <section
+        className="max-w-7xl mx-auto px-6 lg:px-10 mb-20"
+        id="commercial-section"
+      >
         <h2
           className={cn(
             "text-3xl font-display text-ink mb-10 pb-4 border-b border-line",
@@ -1852,7 +1858,10 @@ export default function LoanProgramsPage() {
       </section>
 
       {/*  SBA and business loans */}
-      <section className="max-w-7xl mx-auto px-6 lg:px-10 mb-20">
+      <section
+        className="max-w-7xl mx-auto px-6 lg:px-10 mb-20"
+        id="business-sba"
+      >
         <h2
           className={cn(
             "text-3xl font-display text-ink mb-10 pb-4 border-b border-line",
