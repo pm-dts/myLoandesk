@@ -462,9 +462,6 @@ export default function LoanProgramsPage() {
                 <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-brand-orange/10 text-brand-orange">
                   <Shield size={22} strokeWidth={1.8} />
                 </div>
-                <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2 py-1 rounded">
-                  Government Backed
-                </span>
               </div>
               <h3
                 className={cn(
@@ -571,9 +568,6 @@ export default function LoanProgramsPage() {
                 <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-brand-orange/10 text-brand-orange">
                   <Shield size={22} strokeWidth={1.8} />
                 </div>
-                <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2 py-1 rounded">
-                  Government Backed
-                </span>
               </div>
               <h3
                 className={cn(
@@ -1081,9 +1075,6 @@ export default function LoanProgramsPage() {
                 <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-brand-orange/10 text-brand-orange">
                   <Shield size={22} strokeWidth={1.8} />
                 </div>
-                <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2 py-1 rounded">
-                  Government Backed
-                </span>
               </div>
               <h3
                 className={cn(
@@ -1195,9 +1186,6 @@ export default function LoanProgramsPage() {
                 <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-brand-orange/10 text-brand-orange">
                   <Shield size={22} strokeWidth={1.8} />
                 </div>
-                <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2 py-1 rounded">
-                  Government Backed
-                </span>
               </div>
               <h3
                 className={cn(
@@ -1302,9 +1290,6 @@ export default function LoanProgramsPage() {
                 <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-brand-orange/10 text-brand-orange">
                   <Shield size={22} strokeWidth={1.8} />
                 </div>
-                <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2 py-1 rounded">
-                  Government Backed
-                </span>
               </div>
               <h3
                 className={cn(
@@ -1409,9 +1394,6 @@ export default function LoanProgramsPage() {
                 <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-brand-orange/10 text-brand-orange">
                   <Shield size={22} strokeWidth={1.8} />
                 </div>
-                <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2 py-1 rounded">
-                  Government Backed
-                </span>
               </div>
               <h3
                 className={cn(
@@ -1530,9 +1512,6 @@ export default function LoanProgramsPage() {
                 <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-brand-orange/10 text-brand-orange">
                   <Shield size={22} strokeWidth={1.8} />
                 </div>
-                <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2 py-1 rounded">
-                  Government Backed
-                </span>
               </div>
               <h3
                 className={cn(
@@ -1893,9 +1872,6 @@ export default function LoanProgramsPage() {
                 <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-brand-orange/10 text-brand-orange">
                   <Shield size={22} strokeWidth={1.8} />
                 </div>
-                <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2 py-1 rounded">
-                  Government Backed
-                </span>
               </div>
               <h3
                 className={cn(
