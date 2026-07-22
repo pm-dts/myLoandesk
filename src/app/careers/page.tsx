@@ -113,7 +113,7 @@ export default function CareersPage() {
 
             {/* Right Side: First Image Component (Team Workspace) */}
             <div className="lg:col-span-6 w-full">
-              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl sm:rounded-3xl border border-line bg-primary-bg group">
+              <div className="relative aspect-9/16 w-full overflow-hidden rounded-2xl sm:rounded-3xl border border-line bg-primary-bg group">
                 <Image
                   src={teamImg}
                   alt="MyLoanDesk collaborative team working at desk"
@@ -259,9 +259,9 @@ export default function CareersPage() {
                   </p>
                 </div>
 
-                {/* Image positioned organically below text matching container guidelines */}
-                <div className="mt-10 w-full hidden lg:block">
-                  <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl border border-primary-bg/10 group">
+                {/* TALLER IMAGE TREATMENT: Adjusted aspect ratio from 16/10 to 3/4 and added flex-1 */}
+                <div className="mt-10 w-full hidden lg:block flex-1">
+                  <div className="relative aspect-[3/4] xl:aspect-[4/5] w-full overflow-hidden rounded-2xl border border-primary-bg/10 group">
                     <Image
                       src={meetingImg}
                       alt="Loan originators sitting down having a corporate discussion"
