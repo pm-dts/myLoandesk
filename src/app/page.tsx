@@ -1,5 +1,5 @@
 import { ArrowRight, Star } from "lucide-react";
-import { Home, Shield, Building, RefreshCw, Briefcase } from "lucide-react";
+import { Home, RefreshCw, AlertCircle } from "lucide-react";
 import { Clock, FileText, Phone, FileCheck } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
@@ -8,7 +8,7 @@ import Image from "next/image";
 import Calculator from "@/components/site/Home/Calculator";
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
 import LenderMarquee from "@/components/site/Home/LenderMarquee";
-import CurrentRates from "@/components/site/Home/InterestRates";
+// import CurrentRates from "@/components/site/Home/InterestRates";
 // import Contact from "@/components/site/Home/Contact";
 
 import { Fraunces } from "next/font/google";
@@ -165,8 +165,48 @@ export default function Hero() {
         </div>
       </section>
 
-      <section className="py-10 px-2 sm:px-4">
-        <CurrentRates />
+      <section className="py-10 px-4 sm:px-6 flex flex-col items-center gap-6">
+        {/* 1. Optimal Blue Widget */}
+        <div className="p-4 rounded-2xl bg-cream w-full max-w-[782px] flex flex-col justify-center overflow-hidden border border-line/30 shadow-sm">
+          <iframe
+            src="https://www2.optimalblue.com/OBMMI/widgetConfig.php?actbg=2a3f38&inactbg=fdf9f2&inacttext=2a3f38&hoverBG=fdf9f2&hoverColor=2a3f38&rate=2a3f38&graph1=2a3f38&graph2=f57126"
+            width="750"
+            height="502"
+            frameBorder="0"
+            className="max-w-full"
+          ></iframe>
+          <div className="bg-cream/40 rounded-2xl border border-line/50 p-6 sm:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 w-full max-w-[782px]">
+            {/* Warning Disclaimer Box */}
+            <div className="flex gap-3 max-w-xl">
+              <AlertCircle
+                className="text-brand-orange shrink-0 mt-0.5"
+                size={18}
+                strokeWidth={2.2}
+              />
+              <p className="text-xs text-ink-2 leading-relaxed">
+                Rates shown are national average market rates provided for
+                informational purposes only and are not a commitment to lend or
+                a loan offer. Your actual interest rate and APR will vary based
+                on credit score, loan amount, loan-to-value ratio, occupancy,
+                property type, loan program, discount points, and other
+                underwriting factors.
+              </p>
+            </div>
+
+            {/* Action Callout Box */}
+            <div className="flex flex-col items-start md:items-end gap-2 shrink-0 w-full md:w-auto border-t md:border-t-0 border-line/40 pt-4 md:pt-0">
+              <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-ink-2/80">
+                Contact us for your personalized quote
+              </span>
+              <Link
+                href="/get-quote"
+                className="btn-shine w-full md:w-auto bg-brand-orange text-primary-bg px-6 py-3 rounded-full text-xs font-bold tracking-wide text-center hover:bg-orange-600 transition-colors focus-ring shadow-sm"
+              >
+                Get My Personalized Rate
+              </Link>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section className="px-6 lg:px-10 mt-16 lg:mt-24 border-t border-b border-line py-8">
