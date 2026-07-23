@@ -209,7 +209,11 @@ export default function Hero() {
         </div>
       </section>
 
-      <section className="px-6 lg:px-10 mt-16 lg:mt-24 border-t border-b border-line py-8">
+      <section className="">
+        <RateAlert />
+      </section>
+
+      <section className="px-6 lg:px-10 border-t border-b border-line py-8">
         <div className="max-w-7xl mx-auto flex flex-wrap gap-8 justify-between items-center">
           <div className="">
             <AnimatedCounter
@@ -257,10 +261,6 @@ export default function Hero() {
             </p>
           </div>
         </div>
-      </section>
-
-      <section className="">
-        <RateAlert />
       </section>
 
       <CalculatorSection />
