@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import brandLogo from "@/assets/icon-up.png";
+import brandLogo from "@/assets/new-logo.png";
 import youTubeIcon from "@/assets/youtube.png";
 import facebookIcon from "@/assets/communication.png";
 import instagramIcon from "@/assets/instagram.png";

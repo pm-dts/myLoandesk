@@ -17,10 +17,10 @@ import PreQualified from "@/components/site/Home/ApplicationForm";
 import CalculatorSection from "@/components/site/Home/CalculatorSection";
 import RateAlert from "@/components/site/Home/RateAlert";
 
-import homeLoansImg from "@/assets/home-loans.jpg";
-import realEstateLoansImg from "@/assets/real-estate-loans.jpg";
-import commercialLoansImg from "@/assets/commercial-loans.jpg";
-import businessLoansImg from "@/assets/business-loans.jpg";
+import homeLoansImg from "@/assets/home-loans.png";
+import realEstateLoansImg from "@/assets/real-estate-loans.png";
+import commercialLoansImg from "@/assets/commercial-loans.png";
+import businessLoansImg from "@/assets/business-loans.png";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",

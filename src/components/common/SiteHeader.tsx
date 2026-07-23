@@ -14,7 +14,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 
-import brandLogo from "@/assets/icon-up.png";
+import brandLogo from "@/assets/new-logo.png";
 
 const loanLinks = [
   { name: "Conventional Loans", href: "/loan-programs#conventional" },
