@@ -12,6 +12,7 @@ import {
   HandCoins,
   ArrowRight,
   X,
+  ClipboardCheck,
 } from "lucide-react";
 
 const fraunces = Fraunces({
@@ -197,8 +198,6 @@ const RefinanceCalculator = () => {
   const [balance, setBalance] = useState(300000);
   const [interestRate, setInterestRate] = useState("5.5");
 
-  // Calculate new payment assuming a standard 30-year (360 months) term
-  // to match the exact math in the reference image ($797 savings).
   const r = (Number(interestRate) || 0) / 100 / 12;
   const n = 360;
   const newPayment =
@@ -207,8 +206,6 @@ const RefinanceCalculator = () => {
       : (balance * (r * Math.pow(1 + r, n))) / (Math.pow(1 + r, n) - 1);
 
   const savings = Math.max(0, currentPI - newPayment);
-
-  // Estimate closing costs at ~2.125% to perfectly align with the 8-month break-even math in the design
   const closingCosts = balance * 0.02125;
   const breakEvenMonths = savings > 0 ? Math.round(closingCosts / savings) : 0;
 
@@ -223,7 +220,6 @@ const RefinanceCalculator = () => {
         onChange={setCurrentPI}
         valueDisplay={formatCurrency(currentPI)}
       />
-
       <CustomSlider
         label="Remaining Balance"
         value={balance}
@@ -233,8 +229,6 @@ const RefinanceCalculator = () => {
         onChange={setBalance}
         valueDisplay={formatCurrency(balance)}
       />
-
-      {/* Full width input since there is no Loan Term dropdown in this design */}
       <div className="mb-8 mt-6">
         <CustomInput
           label="New Estimated Rate (%)"
@@ -242,8 +236,6 @@ const RefinanceCalculator = () => {
           onChange={setInterestRate}
         />
       </div>
-
-      {/* Custom Result Box tailored for Refinance Calculator */}
       <div className="bg-[#FFF4ED] rounded-xl py-8 px-6 text-center border border-[#FFE4D6]">
         <p className="text-[#FF6B00] text-sm font-bold uppercase tracking-wider mb-2">
           Monthly Savings
@@ -270,8 +262,6 @@ const AffordabilityCalculator = () => {
 
   const monthlyIncome = income / 12;
   const maxPayment = Math.max(0, monthlyIncome * 0.36 - debt);
-
-  // Use interest rate to estimate loan capacity with a 30-year mortgage
   const monthlyRate = (Number(interestRate) || 0) / 100 / 12;
   const loanTermMonths = 30 * 12;
   const paymentFactor =
@@ -326,20 +316,82 @@ const AffordabilityCalculator = () => {
   );
 };
 
+const LoanEligibilityCalculator = () => {
+  const [income, setIncome] = useState(120000);
+  const [monthlyDebts, setMonthlyDebts] = useState(600);
+  const [targetMortgage, setTargetMortgage] = useState(2500);
+
+  const monthlyIncome = income / 12;
+  const totalMonthlyDebt = monthlyDebts + targetMortgage;
+  const dti = monthlyIncome > 0 ? (totalMonthlyDebt / monthlyIncome) * 100 : 0;
+
+  let statusText = "";
+  let statusColor = "";
+
+  if (dti <= 36) {
+    statusText = "Excellent (Highly Eligible)";
+    statusColor = "text-[#10B981]"; // Emerald green
+  } else if (dti <= 43) {
+    statusText = "Good (Eligible)";
+    statusColor = "text-[#3B82F6]"; // Blue
+  } else if (dti <= 50) {
+    statusText = "Borderline (May Require Review)";
+    statusColor = "text-[#F59E0B]"; // Yellow/Amber
+  } else {
+    statusText = "High DTI (Difficult to Qualify)";
+    statusColor = "text-[#EF4444]"; // Red
+  }
+
+  return (
+    <>
+      <CustomSlider
+        label="Gross Annual Income"
+        value={income}
+        min={30000}
+        max={500000}
+        step={1000}
+        onChange={setIncome}
+        valueDisplay={formatCurrency(income)}
+      />
+      <CustomSlider
+        label="Current Monthly Debts (Auto, Cards, etc.)"
+        value={monthlyDebts}
+        min={0}
+        max={5000}
+        step={50}
+        onChange={setMonthlyDebts}
+        valueDisplay={`${formatCurrency(monthlyDebts)}/mo`}
+      />
+      <CustomSlider
+        label="Target Monthly Mortgage Payment"
+        value={targetMortgage}
+        min={500}
+        max={10000}
+        step={50}
+        onChange={setTargetMortgage}
+        valueDisplay={`${formatCurrency(targetMortgage)}/mo`}
+      />
+
+      <div className="bg-[#FFF4ED] rounded-xl py-6 px-6 text-center border border-[#FFE4D6] mt-8">
+        <p className="text-[#FF6B00] text-sm font-bold uppercase tracking-wider mb-2">
+          Estimated Debt-To-Income (DTI)
+        </p>
+        <p className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-2">
+          {dti.toFixed(1)}%
+        </p>
+        <p className={`text-base font-semibold ${statusColor}`}>
+          Status: {statusText}
+        </p>
+      </div>
+    </>
+  );
+};
+
 const AmortizationCalculator = () => {
   const [loanAmount, setLoanAmount] = useState(350000);
   const [interestRate, setInterestRate] = useState("6.5");
   const [loanTerm, setLoanTerm] = useState(30);
 
-  // Helper for currency formatting
-  const formatCurrency = (val: number) =>
-    new Intl.NumberFormat("en-US", {
-      style: "currency",
-      currency: "USD",
-      maximumFractionDigits: 0,
-    }).format(val);
-
-  // Calculate Amortization Schedule
   const schedule = [];
   let balance = loanAmount;
   const r = (Number(interestRate) || 0) / 100 / 12;
@@ -377,7 +429,6 @@ const AmortizationCalculator = () => {
 
   return (
     <div className="flex flex-col gap-6">
-      {/* Inputs Row */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div className="w-full">
           <label className="block text-[15px] font-medium text-gray-900 mb-2">
@@ -418,7 +469,6 @@ const AmortizationCalculator = () => {
         </div>
       </div>
 
-      {/* Amortization Table */}
       <div className="border border-gray-200 rounded-lg overflow-hidden">
         <div className="max-h-[320px] overflow-y-auto">
           <table className="w-full text-sm text-left border-collapse">
@@ -464,16 +514,11 @@ const RentVsBuyCalculator = () => {
   const [homePrice, setHomePrice] = useState(450000);
   const [rentIncrease, setRentIncrease] = useState("3");
 
-  // Heuristic calculation for break-even year
   let breakEvenYear = "30+";
   let rentTotal = 0;
-  let buyTotal = homePrice * 0.03; // Base closing costs (approx 3%)
+  let buyTotal = homePrice * 0.03;
   let currentAnnualRent = rent * 12;
   const rentIncRate = (Number(rentIncrease) || 0) / 100;
-
-  // Assume ~8.1% of home price as unrecoverable annual buying costs
-  // (interest, taxes, maintenance, insurance, minus property appreciation).
-  // This cleanly aligns the math with the $2,500 / $450,000 / 3% -> Year 15 scenario.
   const annualBuyCost = homePrice * 0.081;
 
   for (let year = 1; year <= 30; year++) {
@@ -498,7 +543,6 @@ const RentVsBuyCalculator = () => {
         onChange={setRent}
         valueDisplay={formatCurrency(rent)}
       />
-
       <CustomSlider
         label="Targeted Home Price"
         value={homePrice}
@@ -508,8 +552,6 @@ const RentVsBuyCalculator = () => {
         onChange={setHomePrice}
         valueDisplay={formatCurrency(homePrice)}
       />
-
-      {/* Full width input for annual increase */}
       <div className="mb-8 mt-6">
         <CustomInput
           label="Annual Rent Increase (%)"
@@ -517,8 +559,6 @@ const RentVsBuyCalculator = () => {
           onChange={setRentIncrease}
         />
       </div>
-
-      {/* Custom Result Box tailored for Rent vs Buy */}
       <div className="bg-[#FFF4ED] rounded-xl py-8 px-6 text-center border border-[#FFE4D6]">
         <p className="text-[#FF6B00] text-sm font-bold uppercase tracking-wider mb-2">
           Buying Becomes Cheaper In
@@ -534,8 +574,6 @@ const RentVsBuyCalculator = () => {
 const HelocCalculator = () => {
   const [homeValue, setHomeValue] = useState(600000);
   const [mortgageBalance, setMortgageBalance] = useState(350000);
-
-  // Standard max LTV for HELOC is usually 80%
   const maxAvailableEquity = Math.max(0, homeValue * 0.8 - mortgageBalance);
 
   return (
@@ -574,7 +612,7 @@ const ResultBox = ({ label, value }: { label: string; value: string }) => (
       {label}
     </p>
     <p className="text-4xl font-bold text-gray-900 tracking-tight">
-      {value.split("/mo").map((part, i, arr) =>
+      {value.split("/mo").map((part, i) =>
         i === 0 ? (
           part
         ) : (
@@ -612,10 +650,10 @@ const CalculatorModal = ({
       onClick={onClose}
     >
       <div
-        className="w-full max-w-lg bg-white rounded-2xl shadow-2xl overflow-hidden animate-in zoom-in-95 duration-200"
+        className="w-full max-w-lg bg-white rounded-2xl shadow-2xl overflow-hidden animate-in zoom-in-95 duration-200 max-h-[95vh] flex flex-col"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex items-center justify-between px-8 py-6 border-b border-gray-100">
+        <div className="flex items-center justify-between px-8 py-6 border-b border-gray-100 shrink-0">
           <h2 className={`text-3xl text-gray-900 ${fraunces.className}`}>
             {title}
           </h2>
@@ -627,9 +665,9 @@ const CalculatorModal = ({
           </button>
         </div>
 
-        <div className="px-8 py-6">{children}</div>
+        <div className="px-8 py-6 overflow-y-auto">{children}</div>
 
-        <div className="px-8 py-6 border-t border-gray-100 text-center bg-gray-50">
+        <div className="px-8 py-6 border-t border-gray-100 text-center bg-gray-50 shrink-0">
           <p className="text-gray-500 text-sm mb-4">
             Want to lock in this scenario?
           </p>
@@ -668,6 +706,12 @@ export default function CalculatorsHub() {
       title: "Affordability Calculator",
       icon: DollarSign,
       component: <AffordabilityCalculator />,
+    },
+    {
+      id: "eligibility",
+      title: "Loan Eligibility Calculator",
+      icon: ClipboardCheck,
+      component: <LoanEligibilityCalculator />,
     },
     {
       id: "amortization",
