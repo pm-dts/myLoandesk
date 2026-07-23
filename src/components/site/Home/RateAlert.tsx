@@ -16,25 +16,26 @@ export default function RateAlert() {
   return (
     <section className="bg-[#F8F9FA] py-20 px-6">
       <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
-        
         {/* Main Title */}
-        <h2 className="text-3xl md:text-4xl font-bold text-ink uppercase tracking-wide mb-4">
-          Set up a rate alert
+        <h2 className="text-3xl md:text-4xl font-bold text-ink uppercase tracking-wide leading-12 mb-4">
+          Monitor Your Home Value & Mortgage Rates
         </h2>
-        
+
         {/* Subtitle Description */}
         <p className="text-sm md:text-base text-ink-2 leading-relaxed max-w-3xl mb-12">
-          Tired of constantly checking for lower rates? Create a rate alert to be notified the moment rates hit your target, so you never miss a chance to refinance.
+          Enter your address to know your estimated property's value and receive
+          alerts when mortgage rates drop.
         </p>
 
         {/* Interactive Form Section */}
         <div className="w-full max-w-2xl flex flex-col items-center">
           <h3 className="text-lg md:text-xl font-bold text-ink mb-6">
-            Set up a personalized rate alert and discover your home's current value
+            Set up a personalized rate alert and receive alerts when mortgage
+            rates drop
           </h3>
-          
-          <form 
-            onSubmit={handleSubmit} 
+
+          <form
+            onSubmit={handleSubmit}
             className="w-full flex flex-col items-center gap-6"
           >
             {/* Address Input */}
@@ -46,7 +47,7 @@ export default function RateAlert() {
               className="w-full px-5 py-3.5 bg-white border border-gray-200 rounded-lg text-ink text-sm md:text-base focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange transition-all shadow-sm"
               required
             />
-            
+
             {/* CTA Button */}
             <button
               type="submit"
@@ -56,7 +57,6 @@ export default function RateAlert() {
             </button>
           </form>
         </div>
-        
       </div>
     </section>
   );
