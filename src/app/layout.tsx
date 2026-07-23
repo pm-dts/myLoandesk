@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 import SiteHeader from "@/components/common/SiteHeader";
@@ -7,11 +8,6 @@ import SiteFooter from "@/components/common/SiteFooter";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
   subsets: ["latin"],
 });
 
@@ -29,8 +25,18 @@ export default function RootLayout({
     <html lang="en" className={`${geistSans.className}  h-full antialiased`}>
       <body className="min-h-full flex flex-col relative">
         <SiteHeader />
+
         <main className="flex-1">{children}</main>
+
         <SiteFooter />
+
+        {/* LeadConnector AI Chatbot Widget */}
+        <Script
+          src="https://widgets.leadconnectorhq.com/loader.js"
+          data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+          data-widget-id="6a61d448c6e06ac8e874dc65"
+          strategy="lazyOnload"
+        />
       </body>
     </html>
   );
