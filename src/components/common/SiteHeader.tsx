@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
   Menu,
   X,
@@ -37,6 +37,7 @@ const loanLinks = [
   { name: "Fix & Flip Loans", href: "/loan-programs#fix-flip" },
   { name: "Ground-Up Construction Loans", href: "/loan-programs#ground-up" },
   { name: "Bridge Loans", href: "/loan-programs#bridge-loans" },
+  { name: "Reverse Mortgage", href: "/loan-programs#reverse-mortgage" },
   {
     name: "Commercial Real Estate Loans",
     href: "/loan-programs#commercial-real-estate",
@@ -57,6 +58,7 @@ export const Header: React.FC = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileLoanOpen, setIsMobileLoanOpen] = useState(false);
   const [isFlashing, setIsFlashing] = useState(false);
+  const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     // Trigger the neon flash effect shortly after the component mounts
@@ -93,6 +95,19 @@ export const Header: React.FC = () => {
     }
   };
 
+  const handleMouseEnterDropdown = () => {
+    if (dropdownTimeoutRef.current) {
+      clearTimeout(dropdownTimeoutRef.current);
+    }
+    setIsDropdownOpen(true);
+  };
+
+  const handleMouseLeaveDropdown = () => {
+    dropdownTimeoutRef.current = setTimeout(() => {
+      setIsDropdownOpen(false);
+    }, 200); // 200ms delay to make it easier to move the mouse
+  };
+
   return (
     <header className="sticky top-0 left-0 right-0 z-50 nav-blur border-b border-line bg-primary-bg w-full">
       {/* Inline styles for the custom neon flash animation */}
@@ -126,11 +141,11 @@ export const Header: React.FC = () => {
         </Link>
 
         {/* Center Links */}
-        <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-[13px] font-medium text-ink-2 whitespace-nowrap">
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-[13px] font-medium text-ink-2 whitespace-nowrap relative">
           <div
-            className="relative group "
-            onMouseEnter={() => setIsDropdownOpen(true)}
-            onMouseLeave={() => setIsDropdownOpen(false)}
+            className="relative group py-2" // Added padding to increase hover target area
+            onMouseEnter={handleMouseEnterDropdown}
+            onMouseLeave={handleMouseLeaveDropdown}
           >
             <Link
               href="/loan-programs"
@@ -142,9 +157,12 @@ export const Header: React.FC = () => {
                 className={`transition-transform duration-300 ${isDropdownOpen ? "rotate-180" : ""}`}
               />
             </Link>
+            
+            {/* Added a transparent bridge area to keep hover active between the link and the dropdown */}
+            <div className={`absolute left-0 top-full h-4 w-full ${isDropdownOpen ? "block" : "hidden"}`}></div>
 
             <div
-              className={`absolute left-0 mt-2 w-[560px] bg-primary-bg border border-line rounded-2xl shadow-xl p-5 grid grid-cols-2 gap-x-4 gap-y-1.5 transition-all duration-200 origin-top z-[60] ${
+              className={`absolute left-0 top-[calc(100%+8px)] w-[560px] bg-primary-bg border border-line rounded-2xl shadow-xl p-5 grid grid-cols-2 gap-x-4 gap-y-1.5 transition-all duration-200 origin-top z-[60] ${
                 isDropdownOpen
                   ? "opacity-100 scale-100 pointer-events-auto"
                   : "opacity-0 scale-95 pointer-events-none"
