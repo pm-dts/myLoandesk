@@ -98,10 +98,10 @@ export default function ReverseMortgagePage() {
             <ArrowRight size={18} />
           </Link>
           <Link
-            href="#purchase"
+            href="/loan-programs#reverse-mortgage"
             className="px-8 py-4 text-ink font-semibold border border-line hover:bg-cream rounded-full transition-colors focus-ring"
           >
-            Learn About Purchase Options
+            Loan Programs
           </Link>
         </div>
       </section>
@@ -158,113 +158,6 @@ export default function ReverseMortgagePage() {
               >
                 Contact an Advisor <ArrowRight size={16} />
               </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* --- PURCHASE SECTION (HECM for Purchase) --- */}
-      <section id="purchase" className="py-20 lg:py-32 scroll-mt-20">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="bg-[#E8E4D8] rounded-[32px] p-8 md:p-12 lg:p-16 relative overflow-hidden">
-            {/* Background design element */}
-            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-moss-deep/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
-
-            <div className="grid lg:grid-cols-2 gap-12 items-center relative z-10">
-              <div>
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white text-moss-deep mb-6 shadow-sm">
-                  <Key size={24} />
-                </div>
-                <h2
-                  className={cn(
-                    "text-3xl sm:text-4xl lg:text-5xl text-ink font-light tracking-tight mb-6",
-                    fraunces.className,
-                  )}
-                >
-                  HECM for Purchase
-                </h2>
-                <h3 className="text-xl font-semibold text-ink mb-4">
-                  Buy a new home without taking on a monthly mortgage payment.
-                </h3>
-                <p className="text-ink-2 leading-relaxed mb-6">
-                  Did you know you can use a reverse mortgage to purchase a new
-                  primary residence? The HECM for Purchase program allows you to
-                  downsize, move closer to family, or transition to a home that
-                  better meets your physical needs.
-                </p>
-                <ul className="space-y-3 mb-8">
-                  {[
-                    "Combine the reverse mortgage proceeds with your down payment",
-                    "Complete the purchase in a single transaction",
-                    "Never make a required monthly mortgage payment (must pay taxes/insurance)",
-                    "Increase your purchasing power for the home you truly want",
-                  ].map((item, i) => (
-                    <li
-                      key={i}
-                      className="flex items-start gap-3 text-sm font-medium text-ink"
-                    >
-                      <div className="w-5 h-5 rounded-full bg-brand-orange/20 text-brand-orange flex items-center justify-center shrink-0 mt-0.5">
-                        <ShieldCheck size={12} strokeWidth={3} />
-                      </div>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-                <Link
-                  href="/get-quote"
-                  className="inline-flex bg-moss-deep text-white px-7 py-3.5 rounded-full font-bold text-sm tracking-wide hover:bg-moss-darker transition-colors shadow-sm focus-ring"
-                >
-                  Discuss Purchase Options
-                </Link>
-              </div>
-
-              {/* Right Side Visual Block */}
-              <div className="bg-primary-bg rounded-2xl p-8 border border-line shadow-xl">
-                <div className="text-[10px] uppercase tracking-widest text-brand-orange font-bold mb-4">
-                  How It Works Example
-                </div>
-
-                <div className="space-y-6">
-                  <div className="flex justify-between items-center border-b border-line pb-4">
-                    <span className="text-sm font-semibold text-ink-2">
-                      New Home Purchase Price
-                    </span>
-                    <span className="text-lg font-bold text-ink">$400,000</span>
-                  </div>
-                  <div className="flex justify-between items-center border-b border-line pb-4">
-                    <span className="text-sm font-semibold text-ink-2">
-                      Reverse Mortgage Provides
-                    </span>
-                    <span className="text-lg font-bold text-brand-orange">
-                      ~$200,000*
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-center border-b border-line pb-4">
-                    <span className="text-sm font-semibold text-ink-2">
-                      Your Required Down Payment
-                    </span>
-                    <span className="text-lg font-bold text-ink">
-                      ~$200,000*
-                    </span>
-                  </div>
-                  <div className="bg-cream p-4 rounded-xl">
-                    <span className="text-sm font-bold text-moss-deep">
-                      Result:{" "}
-                    </span>
-                    <span className="text-sm text-ink-2">
-                      You own the $400,000 home with zero required monthly
-                      mortgage payments.
-                    </span>
-                  </div>
-                  <p className="text-[10px] text-ink-2/70 italic leading-tight">
-                    *This is a simplified, hypothetical example. Actual loan
-                    amounts vary based on the age of the youngest borrower,
-                    current interest rates, and the home's appraised value. You
-                    are still responsible for property taxes, insurance, and
-                    maintenance.
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </div>

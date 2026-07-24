@@ -16,14 +16,14 @@ export default function Footer() {
         {/* Main Footer Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-10 gap-10 lg:gap-8 pb-14 border-b border-ink/10">
           {/* Brand & Socials Column */}
-          <div className="md:col-span-2 lg:col-span-4 space-y-6">
+          <div className="md:col-span-2 lg:col-span-4 space-y-3">
             <Link href="/" className="inline-block">
               <Image
                 src={brandLogo}
                 alt="My Loan Desk Logo"
                 width={220}
                 height={160}
-                className="w-56 h-auto object-contain"
+                className="w-76 h-auto object-contain"
                 priority
               />
             </Link>

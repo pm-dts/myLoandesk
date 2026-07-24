@@ -56,7 +56,7 @@ export default function Hero() {
               {/* Actions */}
               <div className="flex flex-wrap items-center gap-4">
                 <a
-                  href="#application"
+                  href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
                   className="btn-shine bg-brand-orange text-primary-bg px-7 py-3.5 rounded-full font-medium flex items-center justify-center gap-2 hover:bg-orange-600 transition-colors focus-ring"
                 >
                   Start your application
@@ -136,7 +136,7 @@ export default function Hero() {
 
       <section className="py-10 px-4 sm:px-6 flex flex-col items-center gap-6">
         {/* 1. Optimal Blue Widget */}
-        <div className="p-4 rounded-2xl bg-cream w-full max-w-[782px] flex flex-col justify-center overflow-hidden border border-line/30 shadow-sm">
+        <div className="p-4 rounded-2xl bg-cream w-full max-w-[782px] flex flex-col justify-center overflow-hidden border border-line/30 shadow-sm" id="live-rates-widget">
           <iframe
             src="https://www2.optimalblue.com/OBMMI/widgetConfig.php?actbg=2a3f38&inactbg=fdf9f2&inacttext=2a3f38&hoverBG=fdf9f2&hoverColor=2a3f38&rate=2a3f38&graph1=2a3f38&graph2=f57126"
             width="750"
