@@ -122,6 +122,9 @@ export const Header: React.FC = () => {
           .neon-flash-active {
             animation: neonOrangeFlash 2s ease-in-out forwards;
           }
+          .hover-neon-flash:hover {
+            animation: neonOrangeFlash 2s ease-in-out forwards;
+          }
         `,
         }}
       />
@@ -135,7 +138,7 @@ export const Header: React.FC = () => {
             alt="My Loan Desk Logo"
             width={270}
             height={100}
-            className={`w-auto h-46 object-contain transition-all duration-300 ${isFlashing ? "neon-flash-active" : ""}`}
+            className={`w-auto h-46 object-contain transition-all duration-300 hover-neon-flash ${isFlashing ? "neon-flash-active" : ""}`}
             priority
           />
         </Link>
@@ -278,7 +281,7 @@ export const Header: React.FC = () => {
               alt="My Loan Desk Logo"
               width={220}
               height={80}
-              className={`w-auto h-38 object-contain transition-all duration-300 ${isFlashing ? "neon-flash-active" : ""}`}
+              className={`w-auto h-38 object-contain transition-all duration-300 hover-neon-flash ${isFlashing ? "neon-flash-active" : ""}`}
               priority
             />
           </Link>

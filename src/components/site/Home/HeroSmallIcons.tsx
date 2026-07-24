@@ -68,10 +68,14 @@ export default function HeroSmallIcons() {
           __html: `
           @keyframes neonDynamicInteraction {
             0%, 100% { filter: drop-shadow(0 0 0px transparent); transform: scale(1); }
-            50% { filter: drop-shadow(0 0 10px var(--neon-color)); transform: scale(1.05); }
+            50% { filter: drop-shadow(0 0 12px var(--neon-color)); transform: scale(1.05); }
           }
           .neon-flash-dynamic {
             animation: neonDynamicInteraction 0.5s ease-in-out forwards;
+          }
+          /* Smoothly fade in the exact neon color glow on hover */
+          .group:hover .hover-neon-dynamic {
+            filter: drop-shadow(0 0 12px var(--neon-color));
           }
         `,
         }}
@@ -84,12 +88,12 @@ export default function HeroSmallIcons() {
           <button
             key={index}
             onClick={() => handleNavigation(item.href, index)}
-            className="focus:outline-none transition-transform hover:scale-105"
+            className="focus:outline-none transition-transform hover:scale-105 group"
             aria-label={item.alt}
           >
             <Image
               src={item.src}
-              className={`w-18 sm:w-25 aspect-auto rounded-xl transition-all ${
+              className={`w-18 sm:w-25 aspect-auto rounded-xl transition-all duration-300 hover-neon-dynamic ${
                 isFlashing ? "neon-flash-dynamic" : ""
               }`}
               style={{ "--neon-color": item.color } as React.CSSProperties}
