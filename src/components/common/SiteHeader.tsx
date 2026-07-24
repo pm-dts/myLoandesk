@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Menu,
   X,
@@ -37,7 +37,6 @@ const loanLinks = [
   { name: "Fix & Flip Loans", href: "/loan-programs#fix-flip" },
   { name: "Ground-Up Construction Loans", href: "/loan-programs#ground-up" },
   { name: "Bridge Loans", href: "/loan-programs#bridge-loans" },
-  // { name: "Reverse Mortgage", href: "/loan-programs#reverse" },
   {
     name: "Commercial Real Estate Loans",
     href: "/loan-programs#commercial-real-estate",
@@ -48,8 +47,6 @@ const loanLinks = [
   { name: "Franchise Financing", href: "/loan-programs#franchise" },
   { name: "Commercial Loans", href: "/loan-programs#commercial" },
   { name: "SBA Business Loans", href: "/loan-programs#sba-business" },
-  // { name: "Bridge to Sale", href: "/loan-programs#bridge-sale" },
-  // { name: "Mexico Loans", href: "/loan-programs#mexico" },
   { name: "Property Financing in Portugal", href: "/loan-programs#portugal" },
   { name: "Dream Home Builder (EEP)", href: "/loan-programs#eep" },
   { name: "Doctor Loan Program", href: "/loan-programs#doctor" },
@@ -59,8 +56,14 @@ export const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileLoanOpen, setIsMobileLoanOpen] = useState(false);
+  const [isFlashing, setIsFlashing] = useState(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
+    // Trigger the neon flash effect shortly after the component mounts
+    const startFlash = setTimeout(() => setIsFlashing(true), 500);
+    // Remove the class after the animation completes so it resets cleanly
+    const endFlash = setTimeout(() => setIsFlashing(false), 3000);
+
     const handleHashScroll = () => {
       const hash = window.location.hash;
       if (hash) {
@@ -76,7 +79,11 @@ export const Header: React.FC = () => {
     window.addEventListener("hashchange", handleHashScroll);
     handleHashScroll();
 
-    return () => window.removeEventListener("hashchange", handleHashScroll);
+    return () => {
+      window.removeEventListener("hashchange", handleHashScroll);
+      clearTimeout(startFlash);
+      clearTimeout(endFlash);
+    };
   }, []);
 
   const toggleMobileMenu = () => {
@@ -88,6 +95,22 @@ export const Header: React.FC = () => {
 
   return (
     <header className="sticky top-0 left-0 right-0 z-50 nav-blur border-b border-line bg-primary-bg w-full">
+      {/* Inline styles for the custom neon flash animation */}
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
+          @keyframes neonOrangeFlash {
+            0%, 100% { filter: drop-shadow(0 0 0px transparent); }
+            20%, 60% { filter: drop-shadow(0 0 8px rgba(255, 107, 0, 0.7)); }
+            40%, 80% { filter: drop-shadow(0 0 2px rgba(255, 107, 0, 0.4)); }
+          }
+          .neon-flash-active {
+            animation: neonOrangeFlash 2s ease-in-out forwards;
+          }
+        `,
+        }}
+      />
+
       {/* --- DESKTOP NAVIGATION --- */}
       <nav className="hidden lg:flex max-w-[1500px] mx-auto px-6 lg:px-8 h-36 items-center justify-between gap-4">
         {/* Desktop Logo Layout */}
@@ -95,9 +118,9 @@ export const Header: React.FC = () => {
           <Image
             src={brandLogo}
             alt="My Loan Desk Logo"
-            width={260}
-            height={96}
-            className="w-auto h-32 object-contain"
+            width={270}
+            height={100}
+            className={`w-auto h-46 object-contain transition-all duration-300 ${isFlashing ? "neon-flash-active" : ""}`}
             priority
           />
         </Link>
@@ -166,7 +189,7 @@ export const Header: React.FC = () => {
           </Link>
         </div>
 
-        {/* --- Action Button Deck (Updated to match design) --- */}
+        {/* --- Action Button Deck --- */}
         <div className="flex items-center gap-6 shrink-0">
           {/* Phone and Quote Column */}
           <div className="flex flex-col items-center gap-2">
@@ -237,7 +260,7 @@ export const Header: React.FC = () => {
               alt="My Loan Desk Logo"
               width={220}
               height={80}
-              className="w-auto h-32 object-contain"
+              className={`w-auto h-38 object-contain transition-all duration-300 ${isFlashing ? "neon-flash-active" : ""}`}
               priority
             />
           </Link>

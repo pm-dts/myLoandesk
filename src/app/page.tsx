@@ -17,10 +17,8 @@ import PreQualified from "@/components/site/Home/ApplicationForm";
 import CalculatorSection from "@/components/site/Home/CalculatorSection";
 import RateAlert from "@/components/site/Home/RateAlert";
 
-import homeLoansImg from "@/assets/home-loans.png";
-import realEstateLoansImg from "@/assets/real-estate-loans.png";
-import commercialLoansImg from "@/assets/commercial-loans.png";
-import businessLoansImg from "@/assets/business-loans.png";
+import deskImg from "@/assets/desk.png";
+import HeroSmallIcons from "@/components/site/Home/HeroSmallIcons";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -35,36 +33,7 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-8 items-center">
           {/* Left Column: Copy & CTAs */}
           <div className="max-w-xl">
-            <div className="flex gap-3 sm:gap-6 md:gap-8">
-              <Link href={"/loan-programs#home-equity"} className="">
-                <Image
-                  src={homeLoansImg}
-                  className="w-18 sm:w-25 aspect-auto"
-                  alt="home loans"
-                />
-              </Link>
-              <Link href={"/loan-programs#real-estate"} className="">
-                <Image
-                  src={realEstateLoansImg}
-                  className="w-18 sm:w-25 aspect-auto"
-                  alt="home loans"
-                />
-              </Link>
-              <Link href={"/loan-programs#commercial-section"} className="">
-                <Image
-                  src={commercialLoansImg}
-                  className="w-18 sm:w-25 aspect-auto"
-                  alt="home loans"
-                />
-              </Link>
-              <Link href={"/loan-programs#business-sba"} className="">
-                <Image
-                  src={businessLoansImg}
-                  className="w-18 sm:w-25 aspect-auto"
-                  alt="home loans"
-                />
-              </Link>
-            </div>
+            <HeroSmallIcons />
 
             {/* Headline */}
             <h1
@@ -234,7 +203,7 @@ export default function Hero() {
               next="+"
               className={cn("text-5xl text-ink", fraunces.className)}
             />
-            <p className="mt-2 text-ink-2">Loans closed, paperwork handled</p>
+            <p className="mt-2 text-ink-2">Loans completed</p>
           </div>
           <div className="">
             <AnimatedCounter
