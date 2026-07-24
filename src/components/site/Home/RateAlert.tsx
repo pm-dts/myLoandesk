@@ -38,6 +38,11 @@ export default function RateAlert() {
   const handleAddressSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (address.trim()) {
+      // For now, redirect to the provided link
+      window.location.href = "https://talktoabe.com/loan";
+
+      /* 
+      // KEEPING DIALOG LOGIC INTACT FOR LATER USE
       // 1. Open Dialog and set to Loading State
       setIsDialogOpen(true);
       setIsAlertSet(false);
@@ -48,6 +53,7 @@ export default function RateAlert() {
         // 3. Stop loading and reveal the valuation UI
         setIsLoading(false);
       }, 2500);
+      */
     }
   };
 
