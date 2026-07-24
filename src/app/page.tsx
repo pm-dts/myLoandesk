@@ -280,7 +280,7 @@ export default function Hero() {
                   Purchase & Refinance
                 </span>
                 <Link
-                  href="#"
+                  href="/loan-programs#resident"
                   className="font-semibold text-moss-deep ulink flex items-center gap-1"
                 >
                   Explore Programs →
@@ -307,10 +307,10 @@ export default function Hero() {
               </p>
               <div className="flex items-center justify-between text-xs pt-2 border-t border-line/40">
                 <span className="text-ink-2 font-medium">
-                  Equity Conversion
+                  Live in your home with no mortgage payments
                 </span>
                 <Link
-                  href="#"
+                  href="/reverse-mortgage"
                   className="font-semibold text-moss-deep ulink flex items-center gap-1"
                 >
                   Explore Options →
