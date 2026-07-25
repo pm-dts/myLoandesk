@@ -175,7 +175,7 @@ export default function ReverseMortgagePage() {
         >
           Reverse Mortgage Programs
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-line border border-line rounded-3xl overflow-hidden shadow-sm">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-line border border-line rounded-3xl overflow-hidden shadow-sm">
           {/* Reverse Mortgage */}
           <div
             id="reverse"
@@ -222,7 +222,7 @@ reverse mortgage can provide greater financial flexibility during retirement
            
             <Link
               href="/#start"
-              className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
+              className="w-full mt-6 py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
             >
               Contact Now! <ArrowRight size={14} />
             </Link>
@@ -260,7 +260,7 @@ required monthly mortgage payment.
               </p>
               
 
-              <h4 className="font-medium text-ink mb-3">
+              <h4 className="font-medium text-ink mb-3 mt-4">
                 You can receive your available funds as:
               </h4>
               <ul className="space-y-2 mb-4">
@@ -280,7 +280,7 @@ required monthly mortgage payment.
                 ))}
               </ul>
 
-              <h4 className="font-medium text-ink mb-3">Many homeowners use a reverse mortgage refinance to:</h4>
+              <h4 className="font-medium text-ink mb-3 mt-4">Many homeowners use a reverse mortgage refinance to:</h4>
               <ul className="space-y-2 mb-4">
                 {[
                   "Eliminate their monthly mortgage payment",
@@ -301,7 +301,7 @@ required monthly mortgage payment.
               </ul>
 
       
-              <p className="text-sm text-ink-2 leading-relaxed mb-2">
+              <p className="text-sm text-ink-2 leading-relaxed mb-2 mt-4">
                 Best of all, you continue to own your home and remain in control of how you
 use your equity.
               </p>
@@ -309,7 +309,7 @@ use your equity.
             
             <Link
               href="/#start"
-              className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
+              className="w-full mt-6 py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
             >
               Contact Now! <ArrowRight size={14} />
             </Link>
@@ -353,7 +353,7 @@ payments.</span>
               </p>
               
 
-              <h4 className="font-medium text-ink mb-3">
+              <h4 className="font-medium text-ink mb-3 mt-4">
                 This program is ideal for retirees who want to:
               </h4>
               <ul className="space-y-2 mb-4">
@@ -378,7 +378,7 @@ payments.</span>
               
 
       
-              <p className="text-sm text-ink-2 leading-relaxed mb-2">
+              <p className="text-sm text-ink-2 leading-relaxed mb-2 mt-4">
                 Instead of tying up hundreds of thousands of dollars in a home purchase, you
 can keep more of your money available for travel, investments, healthcare, or
 everyday living expenses.
@@ -387,7 +387,7 @@ everyday living expenses.
             
             <Link
               href="/#start"
-              className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
+              className="w-full mt-6 py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
             >
               Contact Now! <ArrowRight size={14} />
             </Link>
@@ -396,7 +396,7 @@ everyday living expenses.
           {/* Is a Reverse Mortgage Right for You? */}
           <div
             id="reverse"
-            className="scroll-mt-36 col-span-3 bg-primary-bg p-8 flex flex-col justify-between transition-colors duration-300 hover:bg-cream/40"
+            className="scroll-mt-36 col-span-1 md:col-span-2 lg:col-span-3 bg-primary-bg p-8 flex flex-col justify-between transition-colors duration-300 hover:bg-cream/40"
           >
             <div>
               <div className="flex items-center justify-between mb-6">
