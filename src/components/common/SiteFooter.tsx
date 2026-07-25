@@ -109,6 +109,12 @@ export default function Footer() {
                 { label: "Careers", href: "/careers" },
                 { label: "Blog", href: "/blog" },
                 { label: "Privacy Policy", href: "/privacy-policy" },
+                { label: "Terms & Conditions", href: "/terms-conditions" },
+                { label: "Cookies Policy", href: "/cookies-policy" },
+                {
+                  label: "Email & Communication Policy",
+                  href: "/email-communication",
+                },
               ].map((link, idx) => (
                 <li key={idx}>
                   <Link
@@ -131,9 +137,9 @@ export default function Footer() {
               {[
                 { label: "Calculator", href: "/#calculator" },
                 { label: "FAQ", href: "/#faq" },
-                { label: "Rate watch", href: "#" },
-                { label: "Buyer's guide", href: "#" },
-                { label: "Glossary", href: "#" },
+                { label: "Rate watch", href: "/#live-rates-widget" },
+                { label: "Google Reviews", href: "/#reviews" },
+                // { label: "Glossary", href: "#" },
               ].map((link, idx) => (
                 <li key={idx}>
                   <Link
@@ -195,7 +201,7 @@ export default function Footer() {
         <div className="pt-8 flex flex-col gap-6 justify-between items-start text-xs text-ink/50 leading-relaxed">
           <div className="w-full">
             <p className="font-medium text-ink/60">
-              © {new Date().getFullYear()} myloandesk LLC · NMLS #1846297 ·
+              © {new Date().getFullYear()} MyLoanDesk LLC · NMLS #1846297 ·
               Equal Housing Lender
             </p>
             <p className="mt-4">
@@ -211,6 +217,50 @@ export default function Footer() {
               | 1801 NE 123 St, Suite 314, North Miami, FL 33181. Regulated by
               FL Division of Real Estate.
             </p>
+
+            {/* ADA Accessibility Statement */}
+            <div className="mt-8 pt-8 border-t border-ink/10">
+              <h4 className="font-bold text-ink/70 mb-3 text-sm">
+                ADA Accessibility Statement
+              </h4>
+              <p className="mb-5">
+                MyLoanDesk is committed to providing a website that is
+                accessible to all its customers and compliant with the Web
+                Content Accessibility Guidelines (WCAG) put forth by the World
+                Wide Web Consortium (W3C). We are continually making
+                improvements to meet these guidelines, and our website has been
+                designed with accessibility guidelines in mind.
+              </p>
+
+              <h5 className="font-semibold text-ink/60 mb-2">
+                Need help or have feedback?
+              </h5>
+              <p className="mb-3">
+                If you have specific questions or feedback about this site's
+                accessibility or need assistance using specific features, please
+                contact us via email at{" "}
+                <a
+                  href="mailto:info@myloandesk.com"
+                  className="text-ink/75 hover:text-brand-orange underline transition-colors"
+                >
+                  info@myloandesk.com
+                </a>
+              </p>
+              <p className="mb-3">
+                If you have found an inaccessible area on the site, please
+                assist our team by informing us of the issue via email at{" "}
+                <a
+                  href="mailto:info@myloandesk.com"
+                  className="text-ink/75 hover:text-brand-orange underline transition-colors"
+                >
+                  info@myloandesk.com
+                </a>
+              </p>
+              <p>
+                In the event a page cannot be made accessible, we will work with
+                you to make a text version of the content available.
+              </p>
+            </div>
           </div>
         </div>
       </div>

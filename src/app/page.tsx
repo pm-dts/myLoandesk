@@ -576,7 +576,7 @@ export default function Hero() {
           </div>
 
           {/* Testimonials Embed */}
-          <div className="w-full mx-auto relative mt-8">
+          <div className="w-full mx-auto relative mt-8" id="reviews">
             {/* Background design elements to match your brand style */}
             <div className="absolute inset-0 bg-[#E8E4D8] rounded-[24px] sm:rounded-[32px] transform -rotate-1 -translate-x-1.5 translate-y-1.5 sm:-translate-x-2 sm:translate-y-2 -z-10"></div>
 
