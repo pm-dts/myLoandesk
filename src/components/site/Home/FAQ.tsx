@@ -188,7 +188,7 @@ export default function Faq() {
                 href="/get-quote"
                 className="btn-shine bg-brand-orange text-white text-center py-3.5 px-6 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-orange-600 transition-colors shadow-sm"
               >
-                Contact for personalized rates
+                Contact Us for personalized rates
               </Link>
               <Link
                 href="/#live-rates-widget"
