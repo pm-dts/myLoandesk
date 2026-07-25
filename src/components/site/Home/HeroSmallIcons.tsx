@@ -36,7 +36,7 @@ export default function HeroSmallIcons() {
   const icons = [
     {
       src: homeLoansImg,
-      href: "/loan-programs#home-equity",
+      href: "/loan-programs#conventional",
       alt: "Home Loans",
       color: "rgba(255, 107, 0, 0.8)", // Orange
     },
