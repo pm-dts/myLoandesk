@@ -9,9 +9,9 @@ import toast, { Toaster } from "react-hot-toast";
 
 const INBOUND_WEBHOOK_URL =
   "https://services.leadconnectorhq.com/hooks/Lv5oqPcJ6MZsszgssznB/webhook-trigger/faae2351-70ff-4eda-a8d0-ddcfbf29d6ee";
+
 interface FormValues {
-  firstName: string;
-  lastName: string;
+  fullName: string;
   email: string;
   phone: string;
   loanType: string;
@@ -20,11 +20,9 @@ interface FormValues {
 }
 
 export default function GetQuote() {
-  // 2. Initialize TanStack Form with typed default values
   const form = useForm({
     defaultValues: {
-      firstName: "",
-      lastName: "",
+      fullName: "",
       email: "",
       phone: "",
       loanType: "",
@@ -32,19 +30,23 @@ export default function GetQuote() {
       important: "",
     },
     onSubmit: async ({ value }) => {
-      // Create a loading toast that we will update upon success or failure
       const toastId = toast.loading("Submitting your request...");
 
       try {
-        // Send the data to the GHL Inbound Webhook
+        // Split full name back into first and last name for GHL compatibility
+        const nameParts = value.fullName.trim().split(" ");
+        const firstName = nameParts[0] || "";
+        const lastName =
+          nameParts.length > 1 ? nameParts.slice(1).join(" ") : "";
+
         const response = await fetch(INBOUND_WEBHOOK_URL, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            first_name: value.firstName,
-            last_name: value.lastName,
+            first_name: firstName,
+            last_name: lastName,
             email: value.email,
             phone: value.phone,
             custom_loan_type: value.loanType,
@@ -60,7 +62,6 @@ export default function GetQuote() {
 
         console.log("Quote request successfully submitted to GHL:", value);
 
-        // Update the loading toast to a success message
         toast.success("Thank you! Your quote request has been received.", {
           id: toastId,
           duration: 5000,
@@ -70,7 +71,6 @@ export default function GetQuote() {
       } catch (error) {
         console.error("Error submitting to webhook:", error);
 
-        // Update the loading toast to an error message
         toast.error(
           "There was an issue submitting your request. Please try again.",
           {
@@ -96,17 +96,18 @@ export default function GetQuote() {
     <main className="min-h-screen bg-cream py-24 px-6 flex items-center justify-center">
       <Toaster position="bottom-right" />
       <div className="max-w-3xl w-full mx-auto bg-primary-bg rounded-[32px] p-8 sm:p-12 lg:p-14 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-line">
-        <div className="text-center max-w-2xl mx-auto mb-10">
+        <div className="text-center max-w-2xl mx-auto mb-8">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-display font-semibold text-ink tracking-tight mb-4">
-            Get your custom mortgage quote.
+            Let's Find the Right Mortgage Option.
           </h1>
           <p className="text-base sm:text-lg text-ink-2 leading-relaxed">
-            Fast, simple, and built for real-world scenarios — even when the
-            loan is not straightforward.
+            Complete this short form and a MyLoanDesk mortgage specialist will
+            personally review your goals and contact you with the best available
+            options.
           </p>
         </div>
 
-        <div className="flex flex-col gap-3 mb-10 text-ink-2">
+        <div className="flex flex-col gap-3 mb-8 text-ink-2">
           <div className="flex items-start gap-2.5">
             <Check
               size={18}
@@ -114,8 +115,7 @@ export default function GetQuote() {
               strokeWidth={2.5}
             />
             <span>
-              Works for self-employed, foreign national, ITIN, and investor
-              loans
+              Purchase, Refinance, Investment & Specialty Loan Programs
             </span>
           </div>
           <div className="flex items-start gap-2.5">
@@ -132,7 +132,9 @@ export default function GetQuote() {
               className="text-moss-deep mt-0.5 shrink-0"
               strokeWidth={2.5}
             />
-            <span>Quick follow-up from a MyLoanDesk specialist</span>
+            <span>
+              Personal follow-up from a MyLoan Desk mortgage specialist
+            </span>
           </div>
         </div>
 
@@ -142,14 +144,14 @@ export default function GetQuote() {
             e.stopPropagation();
             form.handleSubmit();
           }}
-          className="space-y-6"
+          className="space-y-4"
         >
-          <div className="grid sm:grid-cols-2 gap-6">
+          <div className="grid sm:grid-cols-2 gap-4">
             <form.Field
-              name="firstName"
+              name="fullName"
               validators={{
                 onChange: ({ value }) =>
-                  !value ? "First name is required" : undefined,
+                  !value ? "Full name is required" : undefined,
               }}
               children={(field) => (
                 <div>
@@ -157,7 +159,7 @@ export default function GetQuote() {
                     htmlFor={field.name}
                     className="block text-sm font-medium text-ink mb-2"
                   >
-                    First name *
+                    Full Name *
                   </label>
                   <input
                     id={field.name}
@@ -165,43 +167,8 @@ export default function GetQuote() {
                     value={field.state.value}
                     onBlur={field.handleBlur}
                     onChange={(e) => field.handleChange(e.target.value)}
-                    className={`w-full px-5 py-3.5 bg-primary-bg border rounded-full text-sm text-ink focus:outline-none focus:border-moss-deep transition-colors focus-ring ${
-                      field.state.meta.errors.length
-                        ? "border-brand-orange"
-                        : "border-line"
-                    }`}
-                  />
-                  {field.state.meta.errors.length > 0 && (
-                    <p className="text-xs text-brand-orange mt-1.5 flex items-center gap-1">
-                      <AlertCircle size={12} />{" "}
-                      {field.state.meta.errors.join(", ")}
-                    </p>
-                  )}
-                </div>
-              )}
-            />
-
-            <form.Field
-              name="lastName"
-              validators={{
-                onChange: ({ value }) =>
-                  !value ? "Last name is required" : undefined,
-              }}
-              children={(field) => (
-                <div>
-                  <label
-                    htmlFor={field.name}
-                    className="block text-sm font-medium text-ink mb-2"
-                  >
-                    Last name *
-                  </label>
-                  <input
-                    id={field.name}
-                    name={field.name}
-                    value={field.state.value}
-                    onBlur={field.handleBlur}
-                    onChange={(e) => field.handleChange(e.target.value)}
-                    className={`w-full px-5 py-3.5 bg-primary-bg border rounded-full text-sm text-ink focus:outline-none focus:border-moss-deep transition-colors focus-ring ${
+                    placeholder="John Doe"
+                    className={`w-full px-5 h-12 bg-primary-bg border rounded-full text-sm text-ink focus:outline-none focus:border-moss-deep transition-colors focus-ring ${
                       field.state.meta.errors.length
                         ? "border-brand-orange"
                         : "border-line"
@@ -242,7 +209,8 @@ export default function GetQuote() {
                     value={field.state.value}
                     onBlur={field.handleBlur}
                     onChange={(e) => field.handleChange(e.target.value)}
-                    className={`w-full px-5 py-3.5 bg-primary-bg border rounded-full text-sm text-ink focus:outline-none focus:border-moss-deep transition-colors focus-ring ${
+                    placeholder="you@example.com"
+                    className={`w-full px-5 h-12 bg-primary-bg border rounded-full text-sm text-ink focus:outline-none focus:border-moss-deep transition-colors focus-ring ${
                       field.state.meta.errors.length
                         ? "border-brand-orange"
                         : "border-line"
@@ -258,7 +226,6 @@ export default function GetQuote() {
               )}
             />
 
-            {/* Integrated react-international-phone */}
             <form.Field
               name="phone"
               validators={{
@@ -276,7 +243,7 @@ export default function GetQuote() {
                     Phone *
                   </label>
                   <div
-                    className={`relative flex items-center w-full bg-primary-bg border rounded-full focus-within:border-moss-deep transition-colors focus-ring ${
+                    className={`relative flex items-center w-full h-12 bg-primary-bg border rounded-full focus-within:border-moss-deep transition-colors focus-ring ${
                       field.state.meta.errors.length
                         ? "border-brand-orange"
                         : "border-line"
@@ -286,16 +253,15 @@ export default function GetQuote() {
                       defaultCountry="us"
                       value={field.state.value}
                       onChange={(phone) => field.handleChange(phone)}
-                      // Utilize the library's class props to remove default padding/borders
-                      inputClassName="!w-full !bg-transparent !border-none !text-ink !text-sm !py-3.5 !px-3 !focus:outline-none !focus:ring-0"
+                      inputClassName="!w-full !bg-transparent !border-none !text-ink !text-sm !h-[46px] !px-3 !focus:outline-none !focus:ring-0"
                       countrySelectorStyleProps={{
                         buttonClassName:
-                          "!bg-transparent !border-none !pl-5 !pr-2 !py-3.5 !hover:bg-transparent",
+                          "!bg-transparent !border-none !pl-5 !pr-2 !h-[46px] !hover:bg-transparent",
                       }}
-                      // Override internal CSS variables to perfectly match our custom container
                       style={
                         {
                           width: "100%",
+                          height: "100%",
                           "--react-international-phone-border-color":
                             "transparent",
                           "--react-international-phone-border-radius": "9999px",
@@ -336,7 +302,7 @@ export default function GetQuote() {
                       value={field.state.value}
                       onBlur={field.handleBlur}
                       onChange={(e) => field.handleChange(e.target.value)}
-                      className={`w-full px-5 py-3.5 bg-primary-bg border rounded-full text-sm text-ink appearance-none focus:outline-none focus:border-moss-deep transition-colors focus-ring cursor-pointer ${
+                      className={`w-full px-5 h-12 bg-primary-bg border rounded-full text-sm text-ink appearance-none focus:outline-none focus:border-moss-deep transition-colors focus-ring cursor-pointer ${
                         field.state.meta.errors.length
                           ? "border-brand-orange"
                           : "border-line"
@@ -364,34 +330,47 @@ export default function GetQuote() {
                 </div>
               )}
             />
-
-            <form.Field
-              name="price"
-              children={(field) => (
-                <div>
-                  <label
-                    htmlFor={field.name}
-                    className="block text-sm font-medium text-ink mb-2"
-                  >
-                    Price/Value (optional)
-                  </label>
-                  <input
-                    type="text"
-                    id={field.name}
-                    name={field.name}
-                    placeholder="$0"
-                    value={field.state.value}
-                    onBlur={field.handleBlur}
-                    onChange={(e) => {
-                      const formatted = formatCurrency(e.target.value);
-                      field.handleChange(formatted);
-                    }}
-                    className="w-full px-5 py-3.5 bg-primary-bg border border-line rounded-full text-sm text-ink focus:outline-none focus:border-moss-deep transition-colors focus-ring"
-                  />
-                </div>
-              )}
-            />
           </div>
+
+          <form.Subscribe
+            selector={(state) => state.values.loanType}
+            children={(loanType) => {
+              // Dynamically set label based on loan type
+              let priceLabel = "Purchase Price or Estimated Property Value";
+              if (loanType === "purchase") priceLabel = "Purchase Price";
+              if (loanType === "refinance" || loanType === "cash-out")
+                priceLabel = "Estimated Property Value";
+
+              return (
+                <form.Field
+                  name="price"
+                  children={(field) => (
+                    <div>
+                      <label
+                        htmlFor={field.name}
+                        className="block text-sm font-medium text-ink mb-2"
+                      >
+                        {priceLabel} (optional)
+                      </label>
+                      <input
+                        type="text"
+                        id={field.name}
+                        name={field.name}
+                        placeholder="$0"
+                        value={field.state.value}
+                        onBlur={field.handleBlur}
+                        onChange={(e) => {
+                          const formatted = formatCurrency(e.target.value);
+                          field.handleChange(formatted);
+                        }}
+                        className="w-full px-5 h-12 bg-primary-bg border border-line rounded-full text-sm text-ink focus:outline-none focus:border-moss-deep transition-colors focus-ring"
+                      />
+                    </div>
+                  )}
+                />
+              );
+            }}
+          />
 
           <form.Field
             name="important"
@@ -401,26 +380,23 @@ export default function GetQuote() {
                   htmlFor={field.name}
                   className="block text-sm font-medium text-ink mb-2"
                 >
-                  Tell us anything important (self-employed, foreign income,
-                  declined before, etc.)
+                  Anything else we should know? (Optional)
                 </label>
                 <textarea
                   id={field.name}
                   name={field.name}
-                  rows={4}
+                  rows={2}
+                  placeholder="Self-employed, investment property, foreign income, previous credit challenges, or any other details that may help us better understand your situation."
                   value={field.state.value}
                   onBlur={field.handleBlur}
                   onChange={(e) => field.handleChange(e.target.value)}
-                  className="w-full px-5 py-4 bg-primary-bg border border-line rounded-[24px] text-sm text-ink focus:outline-none focus:border-moss-deep transition-colors focus-ring resize-none"
+                  className="w-full px-5 py-3 bg-primary-bg border border-line rounded-[24px] text-sm text-ink focus:outline-none focus:border-moss-deep transition-colors focus-ring resize-none placeholder:text-ink/40"
                 ></textarea>
               </div>
             )}
           />
 
           <div className="pt-2">
-            <p className="text-sm text-ink-2 mb-6 text-center sm:text-left">
-              No obligation. No credit pull required to start.
-            </p>
             <form.Subscribe
               selector={(state) => [state.canSubmit, state.isSubmitting]}
               children={([canSubmit, isSubmitting]) => (
@@ -429,10 +405,14 @@ export default function GetQuote() {
                   disabled={!canSubmit || isSubmitting}
                   className="btn-shine w-full sm:w-auto min-w-[240px] mx-auto block bg-brand-orange text-primary-bg py-4 px-8 rounded-full text-base font-semibold hover:bg-brand-orange/90 transition-colors focus-ring disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {isSubmitting ? "Processing..." : "Get My Quote"}
+                  {isSubmitting ? "Processing..." : "Review My Options"}
                 </button>
               )}
             />
+            <p className="text-xs text-ink-2 mt-4 text-center">
+              Your information is secure, confidential, and never shared. No
+              obligation and no credit pull to get started.
+            </p>
           </div>
         </form>
       </div>
