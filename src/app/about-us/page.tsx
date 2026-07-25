@@ -41,11 +41,12 @@ export default function AboutUs() {
           <h1
             className={`text-4xl sm:text-5xl md:text-6xl text-[#0B1221] font-medium tracking-tight mb-6 ${fraunces.className}`}
           >
-            Your #1 Source for Residential & Commercial Mortgage Programs
+            Residential & Commercial Mortgage Solutions
           </h1>
           <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            We bridge the gap between complex financing situations and
-            predictable homeownership through independent lending flexibility.
+            Access hundreds of lending options with personalized guidance for
+            purchases, refinancing, investment properties, construction, reverse
+            mortgages, and commercial financing.
           </p>
         </div>
         {/* Subtle decorative grid overlay background element */}
@@ -60,32 +61,27 @@ export default function AboutUs() {
             <h2
               className={`text-3xl text-[#0B1221] tracking-tight ${fraunces.className}`}
             >
-              Specializing in the Uncommon
+              Mortgage Solutions for Every Situation
             </h2>
             <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
-              We proudly provide a wide range of conventional, Jumbo, and
-              portfolio residential & commercial mortgage programs configured
-              precisely for the special type of borrowers that have unique
-              requirements.
-            </p>
-            <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
-              Whether it's an atypical financial setup or a highly unique
-              commercial property that does not fit neatly into a normal bank's
-              strict box criteria, our desk handles the architecture to make
-              formatting approval possible.
+              Whether you're buying, refinancing, investing, or financing a
+              commercial property, MyLoanDesk helps you find the right loan
+              through our extensive network of lending partners. From
+              conventional mortgages to specialized financing, we're committed
+              to delivering personalized solutions and exceptional service.
             </p>
           </div>
 
           {/* Right Column Core Values callout */}
           <div className="md:col-span-5 bg-white p-8 rounded-3xl shadow-sm border border-line/50 space-y-6 relative">
-            <div className="absolute top-0 right-0 w-24 h-24 bg-[#FFF4ED] rounded-bl-full flex items-center justify-center text-[#FF6B00]/10 pointer-events-none">
+            <div className="absolute top-0 right-0 w-24 h-24 bg-[#fff4edc4] rounded-bl-full flex items-center justify-center text-[#FF6B00]/10 pointer-events-none z-0">
               <ShieldCheck size={40} className="translate-x-3 -translate-y-3" />
             </div>
 
             <h3 className="text-xs font-bold uppercase tracking-wider text-gray-400">
               Our Pledge
             </h3>
-            <p className="text-[#0B1221] text-base leading-relaxed font-medium italic">
+            <p className="text-[#0B1221] text-base leading-relaxed font-medium italic z-50">
               "Whether you’re buying a new property or refinancing an existing
               mortgage, MyLoanDesk.com will be by your side from start to
               finish."
