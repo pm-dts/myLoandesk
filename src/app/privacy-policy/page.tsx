@@ -4,6 +4,13 @@ import React from "react";
 import {
   Shield,
   ArrowUpRight,
+  Database,
+  Users,
+  Smartphone,
+  Bot,
+  Clock,
+  Globe,
+  HelpCircle,
   FileText,
   Settings,
   Lock,
@@ -11,11 +18,18 @@ import {
   Link as LinkIcon,
   MapPin,
   Edit3,
-  MessageSquare,
 } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { Fraunces } from "next/font/google";
+
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+});
 
 export default function PrivacyPolicy() {
-  const effectiveDate = "01/01/2025";
+  const effectiveDate = "July 25, 2026";
 
   // Smooth scroll handler for the Table of Contents
   const handleSmoothScroll = (
@@ -38,44 +52,32 @@ export default function PrivacyPolicy() {
             <Shield size={14} strokeWidth={2.5} />
             Legal & Compliance
           </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display text-ink leading-[1.05] tracking-tight mb-6">
+          <h1
+            className={cn(
+              "text-4xl sm:text-5xl lg:text-6xl font-display text-ink leading-[1.05] tracking-tight mb-6",
+              fraunces.className,
+            )}
+          >
             Privacy Policy
           </h1>
-          <div className="text-lg text-ink-2 leading-relaxed space-y-4">
+          <div className="text-lg text-ink-2 leading-relaxed space-y-4 text-center">
             <p>
-              The Privacy Policy on myloandesk.com (“Website”, “Site” “we”,
-              “us”, “our”, “ours”,) is the formal document, which determines and
-              explains how the information of the user (“you”, “your”, “yours”,
-              “User”, “Users”) is collected, stored, shared, and used on the
-              Website.
+              MyLoanDesk ("MyLoanDesk," "we," "our," or "us") values your
+              privacy and is committed to protecting the personal information
+              you share with us. This Privacy Policy explains how we collect,
+              use, disclose, store, and protect your information when you visit
+              our website, communicate with us, request information, apply for
+              financing, or use any of our online services.
             </p>
             <p>
-              This Privacy Policy determines the implication of the information,
-              both personal and non-personal, used on the Website. If you have
-              already shared your information on the Website and want to
-              eliminate your details from any records associated with the
-              Website under our regulation and control, you can contact us
-              directly using the contact details we provide on the Website.
-            </p>
-            <p>
-              The services provided on the Website can be used only by the legal
-              residents of the United States over 18 years old. The operation of
-              the Website is aligned with federal, state, and local laws of the
-              USA. Thus, once you willingly register on the Website by
-              submitting your information via our online loan request form and
-              accepting this Privacy Policy and the Website Terms and Conditions
-              of Use, you confirm that You understand that the use of the
-              information you submit on the Site is governed by these documents.
-              We encourage you to study these documents carefully prior to
-              submitting your information on the Website.
+              This Privacy Policy applies to all websites, landing pages,
+              applications, forms, calculators, customer portals, and electronic
+              communications operated by MyLoanDesk and Secured Horizon
+              Financial Group.
             </p>
             <p className="font-medium text-ink">
-              If You disagree with or misunderstand the clauses of the Terms and
-              Conditions of Use and Privacy Policy of this Website and/or refuse
-              to accept the provisions of the documents stated above, you should
-              cease using the services of the Website and should not provide
-              your information on the Website via online form or in any other
-              way submit and share your information on the Website.
+              By accessing or using our website, you acknowledge that you have
+              read and understood this Privacy Policy.
             </p>
           </div>
           <div className="mt-8 flex items-center justify-center gap-2 text-sm text-ink-2 font-medium">
@@ -88,7 +90,8 @@ export default function PrivacyPolicy() {
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-start">
           {/* Left Column: Sticky Table of Contents */}
           <aside className="lg:col-span-4 sticky top-32 hidden lg:block">
-            <div className="bg-cream/50 border border-line rounded-2xl p-6">
+            {/* Added custom scrollbar styling using Tailwind arbitrary variants */}
+            <div className="bg-cream/50 border border-line rounded-2xl p-6 max-h-[70vh] overflow-y-auto [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-moss-deep/20 [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-moss-deep/40 transition-colors duration-300 pr-4">
               <div className="text-xs font-semibold text-ink uppercase tracking-wider mb-5">
                 Contents
               </div>
@@ -98,63 +101,112 @@ export default function PrivacyPolicy() {
                   onClick={(e) => handleSmoothScroll(e, "section-1")}
                   className="text-ink-2 hover:text-moss-deep transition-colors py-1"
                 >
-                  I. PII & NPII
+                  1. Information We Collect
                 </a>
                 <a
                   href="#section-2"
                   onClick={(e) => handleSmoothScroll(e, "section-2")}
                   className="text-ink-2 hover:text-moss-deep transition-colors py-1"
                 >
-                  II. Privacy Management
+                  2. How We Use Your Information
                 </a>
                 <a
                   href="#section-3"
                   onClick={(e) => handleSmoothScroll(e, "section-3")}
                   className="text-ink-2 hover:text-moss-deep transition-colors py-1"
                 >
-                  III. PII Security
+                  3. Information We Share
                 </a>
                 <a
                   href="#section-4"
                   onClick={(e) => handleSmoothScroll(e, "section-4")}
                   className="text-ink-2 hover:text-moss-deep transition-colors py-1"
                 >
-                  IV. Information from Children
+                  4. Credit Authorization
                 </a>
                 <a
                   href="#section-5"
                   onClick={(e) => handleSmoothScroll(e, "section-5")}
                   className="text-ink-2 hover:text-moss-deep transition-colors py-1"
                 >
-                  V. E-consent
+                  5. Cookies and Tracking Technologies
                 </a>
                 <a
                   href="#section-6"
                   onClick={(e) => handleSmoothScroll(e, "section-6")}
                   className="text-ink-2 hover:text-moss-deep transition-colors py-1"
                 >
-                  VI. Third Party Websites
+                  6. SMS Communications
                 </a>
                 <a
                   href="#section-7"
                   onClick={(e) => handleSmoothScroll(e, "section-7")}
                   className="text-ink-2 hover:text-moss-deep transition-colors py-1"
                 >
-                  VII. State Notifications
+                  7. AI-Assisted Communications
                 </a>
                 <a
                   href="#section-8"
                   onClick={(e) => handleSmoothScroll(e, "section-8")}
                   className="text-ink-2 hover:text-moss-deep transition-colors py-1"
                 >
-                  VIII. Modifications and Changes
+                  8. Data Security
                 </a>
                 <a
                   href="#section-9"
                   onClick={(e) => handleSmoothScroll(e, "section-9")}
                   className="text-ink-2 hover:text-moss-deep transition-colors py-1"
                 >
-                  IX. Inquiries and Complaints
+                  9. Data Retention
+                </a>
+                <a
+                  href="#section-10"
+                  onClick={(e) => handleSmoothScroll(e, "section-10")}
+                  className="text-ink-2 hover:text-moss-deep transition-colors py-1"
+                >
+                  10. Your Privacy Rights
+                </a>
+                <a
+                  href="#section-11"
+                  onClick={(e) => handleSmoothScroll(e, "section-11")}
+                  className="text-ink-2 hover:text-moss-deep transition-colors py-1"
+                >
+                  11. California Privacy Rights
+                </a>
+                <a
+                  href="#section-12"
+                  onClick={(e) => handleSmoothScroll(e, "section-12")}
+                  className="text-ink-2 hover:text-moss-deep transition-colors py-1"
+                >
+                  12. European Privacy Rights (GDPR)
+                </a>
+                <a
+                  href="#section-13"
+                  onClick={(e) => handleSmoothScroll(e, "section-13")}
+                  className="text-ink-2 hover:text-moss-deep transition-colors py-1"
+                >
+                  13. Children's Privacy
+                </a>
+                <a
+                  href="#section-14"
+                  onClick={(e) => handleSmoothScroll(e, "section-14")}
+                  className="text-ink-2 hover:text-moss-deep transition-colors py-1"
+                >
+                  14. Third-Party Websites
+                </a>
+                <a
+                  href="#section-15"
+                  onClick={(e) => handleSmoothScroll(e, "section-15")}
+                  className="text-ink-2 hover:text-moss-deep transition-colors py-1"
+                >
+                  15. Changes to This Privacy Policy
+                </a>
+                <a
+                  href="#section-16"
+                  onClick={(e) => handleSmoothScroll(e, "section-16")}
+                  className="text-ink-2 hover:text-moss-deep transition-colors py-1"
+                >
+                  16. Contact Us
                 </a>
               </nav>
             </div>
@@ -165,8 +217,8 @@ export default function PrivacyPolicy() {
                 Inquiries and Complaints
               </div>
               <p className="text-xs text-primary-bg/70 leading-relaxed mb-4">
-                Users are within their rights to modify, amend and withdraw
-                their PII. Reach out directly to our privacy desk.
+                If you have questions about this Privacy Policy or wish to
+                exercise applicable privacy rights, please contact us.
               </p>
               <a
                 href="mailto:privacy@myloandesk.com"
@@ -180,727 +232,678 @@ export default function PrivacyPolicy() {
 
           {/* Right Column: Legal Prose */}
           <div className="lg:col-span-8 space-y-16">
-            {/* SECTION I */}
+            {/* SECTION 1 */}
             <section id="section-1" className="scroll-mt-32">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 rounded-xl bg-moss-deep/10 flex items-center justify-center text-moss-deep shrink-0">
-                  <FileText size={20} strokeWidth={2} />
+                  <Database size={20} strokeWidth={2} />
                 </div>
-                <h2 className="font-display text-2xl lg:text-3xl text-ink">
-                  I. Personally and Non-Personally Identifiable Information
+                <h2
+                  className={cn(
+                    "font-display text-2xl lg:text-3xl text-ink",
+                    fraunces.className,
+                  )}
+                >
+                  1. Information We Collect
                 </h2>
               </div>
               <div className="prose prose-lg text-ink-2 leading-relaxed max-w-none space-y-4">
                 <p>
-                  To use the Website and its service, you need to provide your
-                  personally identifiable information (“PII”) via the online
-                  loan request form on the Website. The way this information is
-                  collected, stored, shared, and used is determined by the
-                  provisions of this Privacy Policy. This information is
-                  essential to provide you with the service you request by using
-                  the Website. If you do not need to use the service of the
-                  Website or for some reason decide to cease the use of the
-                  Website, you should not submit Your PII information on the
-                  Website. PII includes but is not limited to the following
-                  information: Your first and last names, address, email
-                  address, telephone number, date of birth, employment
-                  information, Social Security number, other ID information,
-                  banking information.
-                </p>
-                <p>
-                  Social Security number and banking information are used only
-                  to connect you with lenders in our network and never shared
-                  with any third-party marketers and other third parties unless
-                  the opposite is determined by the law or required according to
-                  special orders from the authorized parties (including but not
-                  limited national security issues or alike).
-                </p>
-                <p>
-                  In addition to your PII, we collect your non-personally
-                  identifiable information (“NPII”) available upon your using
-                  the Website regardless of submitting any personal information
-                  on the Website. NPII includes but is not limited to the user’s
-                  behavioral data, such as Internet Protocol (IP) data, browser
-                  details, geo position, user’s operating system, the pages of
-                  referral and exiting, date and time details, Internet service
-                  provider details etc. The NPII we collect from you can be
-                  transmitted to the third parties we contract with unless you
-                  exploit the means to hide Your NPII or express Your request to
-                  stop using Your NPII directly.
+                  Depending on the services you request, we may collect the
+                  following categories of information:
                 </p>
 
                 <h3 className="text-xl font-display text-ink mt-8 mb-3">
-                  i. The Use of Your PII
+                  Personal Information
+                </h3>
+                <ul className="list-disc pl-5 space-y-2 marker:text-moss-deep">
+                  <li>Full name</li>
+                  <li>Mailing address</li>
+                  <li>Email address</li>
+                  <li>Telephone number</li>
+                  <li>Date of birth</li>
+                  <li>Government-issued identification</li>
+                  <li>
+                    Social Security Number or Tax Identification Number (when
+                    required)
+                  </li>
+                  <li>Employment information</li>
+                  <li>Employer name</li>
+                  <li>Occupation</li>
+                </ul>
+
+                <h3 className="text-xl font-display text-ink mt-8 mb-3">
+                  Financial Information
                 </h3>
                 <p>
-                  We collect, store, share and use your PII information under
-                  the provisions of this Privacy Policy. All the information you
-                  provide is protected by our top security means and encryption
-                  methods. The information you submit on our loan request form
-                  is used to connect you with one or more lenders in our network
-                  with who can provide you with the loan product you expressed
-                  your interest in. Your submission of the information is
-                  considered as an expressed will to be connected with a lender
-                  or financial service provider.
-                </p>
-                <p>
-                  Additionally, the information we collect can be used to
-                  contact you in order to provide with the marketing information
-                  on the products you expressed your interest in. Moreover, we
-                  can use this information to provide protection from potential
-                  malicious activity and fraud in the Internet. We will collect,
-                  store, share and use your information only upon your expressed
-                  consent you give while clicking the respective button or
-                  ticking the box of consent, which authorizes us to use your
-                  information as set herein.
-                </p>
-                <p>
-                  Some of your PII (excluding Social Security number and other
-                  sensitive information such as banking information) can be
-                  shared with some third parties we contract with in case
-                  technical support is needed. These authorized third parties
-                  are liable for keeping your information secure and in no way
-                  can use it for any other purpose, but the purposes authorized
-                  according to the agreement we make, as well as are in no way
-                  authorized to share your information with other third parties.
-                  All the activity performed with your PII is bounded by the
-                  provisions of this Privacy Policy and respective formal
-                  documents on this Website, as well as the provisions of
-                  applicable international laws and the legislation of the USA.
-                  Additionally, PII can be shared for consumer reporting with
-                  credit bureaus upon your prior authorization. However, this
-                  procedure is performed by the lenders in a prerogative way,
-                  thus, regulated by the legal documents concerning your
-                  communication with your lender and other financial providers
-                  and has nothing to do with this agreement and the use of this
-                  Site and its services.
-                </p>
-                <p>
-                  Your PII can be shared with governmental entities, disclosed
-                  completely or partially upon request from any authority or
-                  authorized organization if such disclosure is lawful and
-                  considered necessary for these reasons:
+                  When you inquire about or apply for financing, we may collect:
                 </p>
                 <ul className="list-disc pl-5 space-y-2 marker:text-moss-deep">
-                  <li>
-                    It is ordered or required to comply with the legal
-                    processes;
-                  </li>
-                  <li>
-                    It is obligatory to protect the property of the owner of the
-                    Website or its affiliates and in no way contradicts
-                    applicable laws;
-                  </li>
-                  <li>
-                    It is necessary to prevent crime and/or protect national
-                    security;
-                  </li>
-                  <li>It is necessary to protect personal or public safety.</li>
-                </ul>
-                <p>
-                  In case of merging, acquisition, consolidation or purchase of
-                  the owning company and its assets, it is possible that your
-                  PII may be transferred and, thus, disclosed to the receiving
-                  party on the course of the stated actions. According to the
-                  court’s decision on insolvency proceeding, if it takes place,
-                  in case of liquidation of the owning company, the liquidating
-                  party or the authorized representatives of the company can
-                  transfer, sell, dispose, or license your PII within the
-                  provisions stated by this court’s decision. In this case, it
-                  is possible that the owners of the PII shared on the Website
-                  will be notified of the forthcoming procedures and
-                  modifications upfront or the notification will be published
-                  openly on the Website. It is possible that acquisition,
-                  merging and other stated modifications are associated with a
-                  non-US company.
-                </p>
-
-                <h3 className="text-xl font-display text-ink mt-8 mb-3">
-                  ii. Third Party Marketing
-                </h3>
-                <p>
-                  It is possible that your PII can partially (excluding such
-                  sensitive information as Social Security number and banking
-                  and financial data) be shared for the marketing purposes with
-                  some of third-party marketers, lenders, and advertisers, we
-                  contract with. In this case, the receiving parties, as third
-                  part marketers, may use this information and share it with
-                  other third-party marketers who may initiate marketing
-                  activity towards you in the way of presenting you the products
-                  you have expressed your interest previously while submitting
-                  your information.
-                </p>
-                <p>
-                  In case you decide to opt out from receiving such marketing
-                  messages and/or offers, you can easily unsubscribe and
-                  eliminate your information from the lists compiled by these
-                  third-party marketers to send you messages simply by using an
-                  unsubscribe option (button or link) in the respective message.
-                  The means for marketing activity include but are not limited
-                  to direct mail, short messages, online banner ads,
-                  telemarketing calls, emails etc.). Apart from that, your
-                  information can be used to track your online activity and
-                  collect your online behavioral and searching information. This
-                  activity is usually performed to improve the quality of the
-                  services presented to you online and adjust marketing activity
-                  to your requirements and needs.
-                </p>
-                <p>
-                  Keep in mind that the way third party marketers use your
-                  information is subject to the provisions of their legal
-                  documentation and regulations, including but not limited to
-                  the privacy policies and the terms of use of their websites
-                  and services. For this reason, since we take no obligations
-                  for the manner your information can be used by these parties,
-                  we encourage you to acknowledge how your information is to be
-                  used according to the provisions of the legal documentation of
-                  these third-party marketers. If you wish to eliminate your
-                  information from any of the lists or databases of these
-                  third-party marketers, you should contact them directly.
-                </p>
-                <p>
-                  By continuous use of the Website and attempt to use the
-                  service presented on the Website, you expressly agree that you
-                  have read and understand the provisions of the legal
-                  documents, which control the use of your information on the
-                  Website, and the terms of collecting, storing, sharing, and
-                  using of your PII and the way your shared PII can be used by
-                  third party lenders and third-party marketers.
-                </p>
-                <p>
-                  To discontinue contacting with us and receiving more
-                  information from us, you need to close this and all other
-                  Website pages. If you have already shared Your personal
-                  information with us and want to opt out from further
-                  communication and remove your information from our lists and
-                  database, you can contact us directly with respective request
-                  using the email address listed at the bottom of this document.
-                  Your request will be processed, and the information removed
-                  from our database. As soon as your information is removed from
-                  out database, you can be sure it will not be shared with any
-                  third party, used for any secondary purposes, or used for
-                  marketing activities. Still, since the information has already
-                  been shared with third party marketers, we cannot take any
-                  responsibility for the communication sent to you by these
-                  third parties. you should contact third party marketers
-                  directly to remove your information from their databases.
-                </p>
-
-                <h3 className="text-xl font-display text-ink mt-8 mb-3">
-                  iii. Credit Implication of the Use of PII
-                </h3>
-                <p>
-                  The information shared with our third-party lenders can be
-                  used to verify your identity (via Social Security number
-                  and/or driving license number, for example) and your
-                  information against national databases. Additionally, the
-                  lenders in our network may need to perform credit verification
-                  and use your PII to request a credit report from one or more
-                  credit organizations, including but not limited to the major
-                  credit bureaus, to determine your credibility and assess the
-                  risks associated with providing credit products to you. Credit
-                  report request may lower your credit score. If you continue
-                  using the Website and submit your information via the online
-                  form on the Website, you give your express consent to have
-                  your information verified and your credibility checked
-                  according to the provisions of these third-party lenders’
-                  legal documents used to govern and regulate their practices
-                  and communication with you.
-                </p>
-
-                <h3 className="text-xl font-display text-ink mt-8 mb-3">
-                  iv. Email and Telemarketing
-                </h3>
-                <p>
-                  By agreeing to the Terms and Conditions of Use and this
-                  Privacy Policy, you confirm that we and third-party lenders
-                  and marketers with whom your information is shared according
-                  to the provisions of this Privacy Policy can use your PII for
-                  advertising purposes, including but not limited to email and
-                  telemarketing advertising.
-                </p>
-                <p>
-                  Your PII can be used for direct and indirect communication,
-                  including but not limited to telemarketing calls, assistance
-                  calls and credit product and service offers via the telephone
-                  number you have provided in the online form. Either we or
-                  third-party lenders and marketers can use this number even
-                  though it is listed in any corporate, state, or federal
-                  Do-Not-Contact registry, suppression lists or the like. Since
-                  your submitting of the information via online form is
-                  determined as an attempt to make a purchase or receive a
-                  service, the processing and application of your request is
-                  performed according to the provisions of Amended Telemarketing
-                  Sales Rule, 16 CFR §310 et seq. (the “ATSR”). According to
-                  ATSR, even if Your telephone number is listed in FTC
-                  Do-Not-Call List, we are authorized to contact you upon your
-                  given consent using telemarketing. Since your inquiry to third
-                  party marketers and request for the service on the Website are
-                  also considered as an attempt to make a purchase, according to
-                  ATSR these third-party marketers are also authorized to
-                  contact you using telemarketing.
-                </p>
-                <p>
-                  By giving your consent to use the Website and provide your
-                  information to use our service, you confirm that you are at
-                  least 18 years old and legally authorized to own and use a
-                  mobile device. you also confirm that you realize and
-                  understand the liabilities and possible charges associated
-                  with your participation in telemarketing campaigns. Your
-                  service provider may also collect your information. These
-                  procedures and interaction with your service provider are
-                  regulated by the policies and terms stated by these
-                  organizations and have nothing to do with this Privacy Policy
-                  and other regulating documents on this Website.
-                </p>
-
-                <h3 className="text-xl font-display text-ink mt-8 mb-3">
-                  v. The Means to Collect Non-Personally Identifiable
-                  Information
-                </h3>
-                <p>
-                  If you opt to use the Website or the Websites of third-party
-                  lenders and marketers, you may encounter the use of cookies,
-                  web beacons, pixel tags, browser analysis tools and web server
-                  logs. These are small files or parts of code, used to monitor
-                  and record the features of your online activity, such as your
-                  geographical position, IP address, language preferences, click
-                  history, browsing history, online behavior, your operating
-                  system, and browser specifications set. All this data is
-                  considered as your non-personally identifiable information
-                  (NPII) and collected and stored to provide the customization
-                  of your online activity.
-                </p>
-
-                <h3 className="text-xl font-display text-ink mt-8 mb-3">
-                  vi. SMS Communications Consent
-                </h3>
-                <p>
-                  The information Phone Numbers obtained as part of the SMS
-                  consent process will not be shared with third parties for
-                  marketing purposes.
-                </p>
-
-                <h4 className="font-semibold text-ink mt-4">
-                  Types of SMS Communications:
-                </h4>
-                <p>
-                  If you have consented to receive text messages from
-                  myloandesk, you may receive messages related to the following:
-                </p>
-                <ul className="list-disc pl-5 space-y-1 marker:text-line">
-                  <li>Appointment reminders</li>
-                  <li>Follow-up messages</li>
-                  <li>Billing inquiries</li>
-                  <li>Updates</li>
+                  <li>Income</li>
+                  <li>Assets</li>
+                  <li>Bank account information</li>
+                  <li>Existing debts</li>
+                  <li>Credit obligations</li>
+                  <li>Property ownership information</li>
+                  <li>Mortgage balances</li>
+                  <li>Down payment information</li>
+                  <li>Financial documentation you voluntarily provide</li>
                 </ul>
 
-                <h4 className="font-semibold text-ink mt-4">
-                  Message Frequency:
-                </h4>
-                <p>
-                  Message frequency may vary depending on the type of
-                  communication. For example, you may receive up to [X] SMS
-                  messages per week related to your appointments/billing, etc.
-                </p>
-
-                <h4 className="font-semibold text-ink mt-4">
-                  Potential Fees for SMS Messaging:
-                </h4>
-                <p>
-                  Please note that standard message and data rates may apply,
-                  depending on your carrier’s pricing plan. These fees may vary
-                  if the message is sent domestically or internationally.
-                </p>
-
-                <h4 className="font-semibold text-ink mt-4">Opt-In Method:</h4>
-                <p>
-                  You may opt-in to receive SMS messages from myloandesk in the
-                  following ways:
-                </p>
-                <ul className="list-disc pl-5 space-y-1 marker:text-line">
-                  <li>By submitting an online form</li>
+                <h3 className="text-xl font-display text-ink mt-8 mb-3">
+                  Property Information
+                </h3>
+                <ul className="list-disc pl-5 space-y-2 marker:text-moss-deep">
+                  <li>Property address</li>
+                  <li>Property type</li>
+                  <li>Estimated property value</li>
+                  <li>Occupancy status</li>
+                  <li>Purchase price</li>
+                  <li>Loan amount requested</li>
                 </ul>
 
-                <h4 className="font-semibold text-ink mt-4">Opt-Out Method:</h4>
-                <p>
-                  You can opt out of receiving SMS messages at any time. To do
-                  so, simply reply "STOP" to any SMS message you receive.
-                  Alternatively, you can contact us directly to request removal
-                  from our messaging list.
-                </p>
-
-                <h4 className="font-semibold text-ink mt-4">Help:</h4>
-                <p>
-                  If you are experiencing any issues, you can reply with the
-                  keyword HELP. Or, you can get help directly from us at{" "}
-                  <a
-                    href="mailto:privacy@myloandesk.com"
-                    className="text-moss-deep ulink"
-                  >
-                    privacy@myloandesk.com
-                  </a>
-                  .
-                </p>
-
-                <h4 className="font-semibold text-ink mt-4">
-                  Standard Messaging Disclosures:
-                </h4>
-                <ul className="list-disc pl-5 space-y-1 marker:text-line mb-6">
-                  <li>Message and data rates may apply.</li>
-                  <li>You can opt-out at any time by texting "STOP."</li>
-                  <li>
-                    For assistance, text "HELP" or visit our Privacy Policy and
-                    Terms and Conditions pages.
-                  </li>
-                  <li>Message frequency may vary.</li>
+                <h3 className="text-xl font-display text-ink mt-8 mb-3">
+                  Technical Information
+                </h3>
+                <p>When you visit our website, we may automatically collect:</p>
+                <ul className="list-disc pl-5 space-y-2 marker:text-moss-deep">
+                  <li>IP address</li>
+                  <li>Browser type</li>
+                  <li>Device type</li>
+                  <li>Operating system</li>
+                  <li>Language settings</li>
+                  <li>Time zone</li>
+                  <li>Website usage information</li>
+                  <li>Pages visited</li>
+                  <li>Referral source</li>
+                  <li>Session information</li>
                 </ul>
 
-                <h4 className="font-semibold text-ink mt-6">Cookies</h4>
-                <p>
-                  These are small unique files assigned by a Website server to
-                  the users of this Website when these users make visit and
-                  perform activity on the Website (such as linking and
-                  clicking). Once installed on the user’s computer, these
-                  cookies collect the information about the user’s online
-                  behavior, browsing and user experience details, and send it to
-                  us or third parties authorized to collect this information
-                  from you. Cookies are used to enable user’s recognition, to
-                  analyze user’s preferences and adjust the services provided
-                  online according to the collected information. Additionally,
-                  these small files are able to detect fraudulent activity and
-                  prevent security breach.
-                </p>
-                <p>
-                  Cookies are of different size and length (temporary or
-                  permanent ones). Session or temporary cookies are used for a
-                  single operation on the Website and erased shortly after the
-                  user exits browser or website. Permanent or persistent cookies
-                  are stored longer and survive the exit from webpage or
-                  browser. You can manually manage your cookies preference in
-                  your browser’s options and delete these small files if you
-                  consider it is necessary.
-                </p>
-
-                <h4 className="font-semibold text-ink mt-6">
-                  Pixel tags and web beacons
-                </h4>
-                <p>
-                  These small images are placed on webpages and emails to
-                  monitor the activity of users. These features record the
-                  activity of the user during the session, thus, enabling
-                  further adjustment and improvement of marketing campaigns and
-                  promotions.
-                </p>
-                <p>
-                  Log files are collected files, which store the information on
-                  IP address, browser type, Internet service provider, platform
-                  type, date/time stamp, click records, referring and exiting
-                  pages etc. These files are also used to provide adjustment and
-                  improve user experience online and on websites.
-                </p>
+                <h3 className="text-xl font-display text-ink mt-8 mb-3">
+                  Communication Information
+                </h3>
+                <p>We maintain records of communications including:</p>
+                <ul className="list-disc pl-5 space-y-2 marker:text-moss-deep">
+                  <li>Emails</li>
+                  <li>Phone calls (where permitted by law)</li>
+                  <li>Text messages</li>
+                  <li>Chat conversations</li>
+                  <li>AI assistant conversations</li>
+                  <li>Contact forms</li>
+                  <li>Appointment scheduling</li>
+                </ul>
               </div>
             </section>
 
             <div className="w-full h-px bg-line"></div>
 
-            {/* SECTION II */}
+            {/* SECTION 2 */}
             <section id="section-2" className="scroll-mt-32">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 rounded-xl bg-brand-orange/10 flex items-center justify-center text-brand-orange shrink-0">
                   <Settings size={20} strokeWidth={2} />
                 </div>
-                <h2 className="font-display text-2xl lg:text-3xl text-ink">
-                  II. Privacy Management
+                <h2
+                  className={cn(
+                    "font-display text-2xl lg:text-3xl text-ink",
+                    fraunces.className,
+                  )}
+                >
+                  2. How We Use Your Information
                 </h2>
               </div>
               <div className="prose prose-lg text-ink-2 leading-relaxed max-w-none space-y-4">
-                <p>
-                  To perform effective privacy management, we establish
-                  different practices on how we use your information. Apart from
-                  the techniques to upgrade the level of your online experience
-                  and the use of our service and the Website, we provide the
-                  options to limit the volume of information you share or
-                  eliminate your information from our records upon your request.
-                </p>
-                <p>
-                  If you do not want your NPII information to be collected,
-                  stored, shared, or used, you should exit the Website
-                  immediately. Still, it is possible that cookies, beacons, and
-                  other tracing files are automatically installed. In this case,
-                  you can use your browser preferences to delete the existing
-                  cookies manually, to adjust the default settings and request
-                  notification for cookies, accept or reject cookies, remove
-                  cookies from Your computer.
-                </p>
-                <p>
-                  Since the Do-Not-Track protocol has not been established yet,
-                  information security and privacy management are aligned with
-                  the provisions of this Privacy Policy and related documents
-                  governing the use of this Website despite any Do-Not-Track
-                  signals. You can opt out from tracking your online behavior by
-                  third party marketers by unsubscribing from their email lists
-                  via corresponding links.
-                </p>
+                <p>We use your information to:</p>
+                <ul className="list-disc pl-5 space-y-2 marker:text-brand-orange">
+                  <li>Respond to inquiries</li>
+                  <li>Evaluate financing opportunities</li>
+                  <li>Process mortgage applications</li>
+                  <li>Match borrowers with appropriate lending programs</li>
+                  <li>Verify identity</li>
+                  <li>Prevent fraud</li>
+                  <li>Perform underwriting activities</li>
+                  <li>Obtain credit reports (when authorized)</li>
+                  <li>Order appraisals</li>
+                  <li>Coordinate with title companies</li>
+                  <li>Communicate loan status</li>
+                  <li>Improve customer service</li>
+                  <li>Improve our website</li>
+                  <li>Analyze website performance</li>
+                  <li>Meet legal and regulatory requirements</li>
+                  <li>Protect against fraud and cybersecurity threats</li>
+                </ul>
               </div>
             </section>
 
             <div className="w-full h-px bg-line"></div>
 
-            {/* SECTION III */}
+            {/* SECTION 3 */}
             <section id="section-3" className="scroll-mt-32">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-xl bg-[#D4A574]/20 flex items-center justify-center text-[#D4A574] shrink-0">
-                  <Lock size={20} strokeWidth={2} />
+                <div className="w-10 h-10 rounded-xl bg-moss-deep/10 flex items-center justify-center text-moss-deep shrink-0">
+                  <Users size={20} strokeWidth={2} />
                 </div>
-                <h2 className="font-display text-2xl lg:text-3xl text-ink">
-                  III. PII Security
+                <h2
+                  className={cn(
+                    "font-display text-2xl lg:text-3xl text-ink",
+                    fraunces.className,
+                  )}
+                >
+                  3. Information We Share
                 </h2>
               </div>
               <div className="prose prose-lg text-ink-2 leading-relaxed max-w-none space-y-4">
+                <p>We do not sell your personal information.</p>
                 <p>
-                  Your PII is collected, stored, shared and used under strict
-                  compliance with security and privacy protection regulations
-                  and practices. We shield your PII, and all the activity
-                  performed on the Website from any attempt of malicious
-                  activity, fraud, unauthorized use and other jeopardizing
-                  online practices. We exploit electronic, physical and
-                  managerial security measures to provide overall protection for
-                  the users of the Website and Website assets to avoid loss,
-                  misuse, unauthorized modification or deformation of any
-                  information.
+                  We may share your information with trusted service providers
+                  as necessary to process your request, including:
                 </p>
+                <ul className="list-disc pl-5 space-y-2 marker:text-moss-deep">
+                  <li>Wholesale lenders</li>
+                  <li>Investors</li>
+                  <li>Mortgage brokers</li>
+                  <li>Loan processing companies</li>
+                  <li>Underwriters</li>
+                  <li>Title companies</li>
+                  <li>Settlement agents</li>
+                  <li>Appraisal management companies</li>
+                  <li>Credit reporting agencies</li>
+                  <li>Flood certification providers</li>
+                  <li>Fraud prevention providers</li>
+                  <li>Identity verification providers</li>
+                  <li>CRM providers</li>
+                  <li>Document management providers</li>
+                  <li>Electronic signature providers</li>
+                  <li>Payment processors</li>
+                  <li>Cloud hosting providers</li>
+                  <li>Legal counsel</li>
+                  <li>Government agencies when required by law</li>
+                </ul>
                 <p>
-                  We limit access to the information and share your PII strictly
-                  to the limit set by your consent on the provisions of this
-                  Privacy Policy and other regulative means of the Website, as
-                  well as applicable laws. Within the company, your PII can be
-                  accessed only by the authorized users and is never used
-                  publically. All the employees and other parties who have
-                  access to your PII are obliged and liable to provide its
-                  protection and security to the extent reasonably possible.
-                  Non-compliance is subject to the disciplinary actions.
-                </p>
-                <p>
-                  Nevertheless, no entity can unconditionally guarantee that
-                  your online experience will be 100% secured and no violation
-                  and/or illegal intervention can take place. The owner of the
-                  Website cannot take responsibility for any illegal activity,
-                  security breach, stolen or modified information, which happen
-                  beyond the owner’s control. To guarantee protection from any
-                  malicious activity from the outside, you can request to erase
-                  your data from any listing or database you consider insecure.
-                  At the same time, third party marketers who receive your PII
-                  are contractually responsible for protecting your information
-                  to the extent reasonably possible. We provide verification on
-                  the diligence of our partners via multiple means and
-                  regulatory contracts and check their information security
-                  policies. In case any violation takes place, applicable laws
-                  and regulations are applied to manage the situation and
-                  eliminate possible negative consequences.
+                  Each recipient is expected to protect your information
+                  consistent with applicable laws.
                 </p>
               </div>
             </section>
 
             <div className="w-full h-px bg-line"></div>
 
-            {/* SECTION IV */}
+            {/* SECTION 4 */}
             <section id="section-4" className="scroll-mt-32">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 rounded-xl bg-brand-orange/10 flex items-center justify-center text-brand-orange shrink-0">
+                  <FileText size={20} strokeWidth={2} />
+                </div>
+                <h2
+                  className={cn(
+                    "font-display text-2xl lg:text-3xl text-ink",
+                    fraunces.className,
+                  )}
+                >
+                  4. Credit Authorization
+                </h2>
+              </div>
+              <div className="prose prose-lg text-ink-2 leading-relaxed max-w-none space-y-4">
+                <p>
+                  When you request mortgage financing, you may authorize us to
+                  obtain information necessary to evaluate your request,
+                  including:
+                </p>
+                <ul className="list-disc pl-5 space-y-2 marker:text-brand-orange">
+                  <li>Consumer credit reports</li>
+                  <li>Employment verification</li>
+                  <li>Income verification</li>
+                  <li>Asset verification</li>
+                  <li>Public records</li>
+                  <li>Fraud prevention reports</li>
+                </ul>
+                <p>
+                  Additional written authorization may be required before
+                  obtaining certain reports.
+                </p>
+              </div>
+            </section>
+
+            <div className="w-full h-px bg-line"></div>
+
+            {/* SECTION 5 */}
+            <section id="section-5" className="scroll-mt-32">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 rounded-xl bg-moss-deep/10 flex items-center justify-center text-moss-deep shrink-0">
+                  <Globe size={20} strokeWidth={2} />
+                </div>
+                <h2
+                  className={cn(
+                    "font-display text-2xl lg:text-3xl text-ink",
+                    fraunces.className,
+                  )}
+                >
+                  5. Cookies and Tracking Technologies
+                </h2>
+              </div>
+              <div className="prose prose-lg text-ink-2 leading-relaxed max-w-none space-y-4">
+                <p>Our website uses cookies and similar technologies to:</p>
+                <ul className="list-disc pl-5 space-y-2 marker:text-moss-deep">
+                  <li>Remember preferences</li>
+                  <li>Improve website functionality</li>
+                  <li>Analyze website traffic</li>
+                  <li>Measure advertising effectiveness</li>
+                  <li>Detect fraud</li>
+                  <li>Improve user experience</li>
+                </ul>
+                <p>We may use services including:</p>
+                <ul className="list-disc pl-5 space-y-2 marker:text-moss-deep">
+                  <li>Google Analytics</li>
+                  <li>Google Tag Manager</li>
+                  <li>Google Ads</li>
+                  <li>Microsoft Clarity</li>
+                  <li>Meta Pixel</li>
+                  <li>LinkedIn Insight Tag</li>
+                  <li>CRM tracking technologies</li>
+                  <li>Marketing automation platforms</li>
+                </ul>
+                <p>
+                  Visitors may adjust cookie preferences through their browser
+                  settings or our Cookie Preferences tool where available[cite:
+                  3].
+                </p>
+              </div>
+            </section>
+
+            <div className="w-full h-px bg-line"></div>
+
+            {/* SECTION 6 */}
+            <section id="section-6" className="scroll-mt-32">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 rounded-xl bg-brand-orange/10 flex items-center justify-center text-brand-orange shrink-0">
+                  <Smartphone size={20} strokeWidth={2} />
+                </div>
+                <h2
+                  className={cn(
+                    "font-display text-2xl lg:text-3xl text-ink",
+                    fraunces.className,
+                  )}
+                >
+                  6. SMS Communications
+                </h2>
+              </div>
+              <div className="prose prose-lg text-ink-2 leading-relaxed max-w-none space-y-4">
+                <p>
+                  If you provide consent, we may send text messages regarding:
+                </p>
+                <ul className="list-disc pl-5 space-y-2 marker:text-brand-orange">
+                  <li>Appointment reminders</li>
+                  <li>Loan updates</li>
+                  <li>Requested documentation</li>
+                  <li>Customer support</li>
+                  <li>Follow-up communications</li>
+                </ul>
+                <p>
+                  Message frequency varies. Message and data rates may apply.
+                </p>
+                <p>Reply STOP to unsubscribe. Reply HELP for assistance.</p>
+                <p>
+                  Consent to receive text messages is not a condition of
+                  obtaining financing.
+                </p>
+              </div>
+            </section>
+
+            <div className="w-full h-px bg-line"></div>
+
+            {/* SECTION 7 */}
+            <section id="section-7" className="scroll-mt-32">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 rounded-xl bg-moss-deep/10 flex items-center justify-center text-moss-deep shrink-0">
+                  <Bot size={20} strokeWidth={2} />
+                </div>
+                <h2
+                  className={cn(
+                    "font-display text-2xl lg:text-3xl text-ink",
+                    fraunces.className,
+                  )}
+                >
+                  7. AI-Assisted Communications
+                </h2>
+              </div>
+              <div className="prose prose-lg text-ink-2 leading-relaxed max-w-none space-y-4">
+                <p>
+                  MyLoanDesk may use artificial intelligence technologies to:
+                </p>
+                <ul className="list-disc pl-5 space-y-2 marker:text-moss-deep">
+                  <li>Answer general questions</li>
+                  <li>Schedule appointments</li>
+                  <li>Route inquiries</li>
+                  <li>Assist with document collection</li>
+                  <li>Improve customer service</li>
+                </ul>
+                <p>
+                  AI-generated responses are informational only and do not
+                  constitute underwriting decisions, legal advice, financial
+                  advice, or loan approval.
+                </p>
+                <p>
+                  Whenever appropriate, a licensed mortgage professional will
+                  review your request.
+                </p>
+              </div>
+            </section>
+
+            <div className="w-full h-px bg-line"></div>
+
+            {/* SECTION 8 */}
+            <section id="section-8" className="scroll-mt-32">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 rounded-xl bg-brand-orange/10 flex items-center justify-center text-brand-orange shrink-0">
+                  <Lock size={20} strokeWidth={2} />
+                </div>
+                <h2
+                  className={cn(
+                    "font-display text-2xl lg:text-3xl text-ink",
+                    fraunces.className,
+                  )}
+                >
+                  8. Data Security
+                </h2>
+              </div>
+              <div className="prose prose-lg text-ink-2 leading-relaxed max-w-none space-y-4">
+                <p>
+                  We maintain administrative, technical, and physical safeguards
+                  designed to protect your information, including:
+                </p>
+                <ul className="list-disc pl-5 space-y-2 marker:text-brand-orange">
+                  <li>
+                    Encryption of sensitive data in transit where supported
+                  </li>
+                  <li>Access controls</li>
+                  <li>
+                    Multi-factor authentication for administrative systems[cite:
+                    3]
+                  </li>
+                  <li>Security monitoring</li>
+                  <li>Regular software updates</li>
+                  <li>Employee training</li>
+                  <li>Vendor security assessments where appropriate</li>
+                </ul>
+                <p>
+                  While we use commercially reasonable safeguards, no method of
+                  transmission over the Internet or electronic storage is
+                  completely secure.
+                </p>
+              </div>
+            </section>
+
+            <div className="w-full h-px bg-line"></div>
+
+            {/* SECTION 9 */}
+            <section id="section-9" className="scroll-mt-32">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 rounded-xl bg-moss-deep/10 flex items-center justify-center text-moss-deep shrink-0">
+                  <Clock size={20} strokeWidth={2} />
+                </div>
+                <h2
+                  className={cn(
+                    "font-display text-2xl lg:text-3xl text-ink",
+                    fraunces.className,
+                  )}
+                >
+                  9. Data Retention
+                </h2>
+              </div>
+              <div className="prose prose-lg text-ink-2 leading-relaxed max-w-none space-y-4">
+                <p>We retain information only as long as necessary to:</p>
+                <ul className="list-disc pl-5 space-y-2 marker:text-moss-deep">
+                  <li>Provide requested services</li>
+                  <li>Complete mortgage transactions</li>
+                  <li>Meet legal and regulatory obligations</li>
+                  <li>Resolve disputes</li>
+                  <li>Enforce agreements</li>
+                  <li>Maintain business records</li>
+                </ul>
+                <p>
+                  Retention periods may vary depending on applicable federal and
+                  state laws.
+                </p>
+              </div>
+            </section>
+
+            <div className="w-full h-px bg-line"></div>
+
+            {/* SECTION 10 */}
+            <section id="section-10" className="scroll-mt-32">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 rounded-xl bg-brand-orange/10 flex items-center justify-center text-brand-orange shrink-0">
+                  <Shield size={20} strokeWidth={2} />
+                </div>
+                <h2
+                  className={cn(
+                    "font-display text-2xl lg:text-3xl text-ink",
+                    fraunces.className,
+                  )}
+                >
+                  10. Your Privacy Rights
+                </h2>
+              </div>
+              <div className="prose prose-lg text-ink-2 leading-relaxed max-w-none space-y-4">
+                <p>
+                  Depending on where you live, you may have the right to:[cite:
+                  3]
+                </p>
+                <ul className="list-disc pl-5 space-y-2 marker:text-brand-orange">
+                  <li>Access your personal information</li>
+                  <li>Correct inaccurate information</li>
+                  <li>Request deletion of certain information</li>
+                  <li>Obtain a copy of your information</li>
+                  <li>Object to certain processing activities</li>
+                  <li>
+                    Withdraw consent where processing is based on consent[cite:
+                    3]
+                  </li>
+                </ul>
+                <p>
+                  Some rights are subject to legal exceptions, including
+                  record-retention obligations applicable to mortgage
+                  transactions.
+                </p>
+              </div>
+            </section>
+
+            <div className="w-full h-px bg-line"></div>
+
+            {/* SECTION 11 */}
+            <section id="section-11" className="scroll-mt-32">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 rounded-xl bg-moss-deep/10 flex items-center justify-center text-moss-deep shrink-0">
+                  <MapPin size={20} strokeWidth={2} />
+                </div>
+                <h2
+                  className={cn(
+                    "font-display text-2xl lg:text-3xl text-ink",
+                    fraunces.className,
+                  )}
+                >
+                  11. California Privacy Rights
+                </h2>
+              </div>
+              <div className="prose prose-lg text-ink-2 leading-relaxed max-w-none space-y-4">
+                <p>
+                  Residents of California may have additional rights under the
+                  California Consumer Privacy Act (CCPA), as amended by the
+                  California Privacy Rights Act (CPRA), including the right to
+                  know, access, correct, delete, and limit the use of certain
+                  personal information, subject to applicable exceptions[cite:
+                  3].
+                </p>
+                <p>
+                  Requests may be submitted using the contact information below.
+                </p>
+              </div>
+            </section>
+
+            <div className="w-full h-px bg-line"></div>
+
+            {/* SECTION 12 */}
+            <section id="section-12" className="scroll-mt-32">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 rounded-xl bg-brand-orange/10 flex items-center justify-center text-brand-orange shrink-0">
+                  <MapPin size={20} strokeWidth={2} />
+                </div>
+                <h2
+                  className={cn(
+                    "font-display text-2xl lg:text-3xl text-ink",
+                    fraunces.className,
+                  )}
+                >
+                  12. European Privacy Rights (GDPR)
+                </h2>
+              </div>
+              <div className="prose prose-lg text-ink-2 leading-relaxed max-w-none space-y-4">
+                <p>
+                  Visitors located in the European Economic Area, the United
+                  Kingdom, or Switzerland may have additional rights under
+                  applicable data protection laws, including the General Data
+                  Protection Regulation (GDPR).
+                </p>
+                <p>
+                  Where applicable, we process personal information based on one
+                  or more lawful bases, including consent, contractual
+                  necessity, compliance with legal obligations, or our
+                  legitimate interests.
+                </p>
+              </div>
+            </section>
+
+            <div className="w-full h-px bg-line"></div>
+
+            {/* SECTION 13 */}
+            <section id="section-13" className="scroll-mt-32">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 rounded-xl bg-moss-deep/10 flex items-center justify-center text-moss-deep shrink-0">
                   <AlertCircle size={20} strokeWidth={2} />
                 </div>
-                <h2 className="font-display text-2xl lg:text-3xl text-ink">
-                  IV. Information Collection from Children
+                <h2
+                  className={cn(
+                    "font-display text-2xl lg:text-3xl text-ink",
+                    fraunces.className,
+                  )}
+                >
+                  13. Children's Privacy
                 </h2>
               </div>
-              <div className="prose prose-lg text-ink-2 leading-relaxed max-w-none">
-                <p>
-                  The information from children under 18 years old is strictly
-                  banned and will not be performed on the Website. We provide
-                  filters, which enable anyone of illegal age to provide
-                  information on the Website. In case we detect any PII received
-                  from a user under 18 years old, we will immediately delete
-                  this information. According to the fact that we do not
-                  voluntarily collect, store, share or use any PII from the
-                  users under 18 years old, we follow and comply with the
-                  Children’s Privacy Protection Act (“COPPA”) and this Privacy
-                  Policy is built in consideration with the provisions of this
-                  Act.
-                </p>
-              </div>
-            </section>
-
-            <div className="w-full h-px bg-line"></div>
-
-            {/* SECTION V */}
-            <section id="section-5" className="scroll-mt-32">
-              <h2 className="font-display text-2xl lg:text-3xl text-ink mb-6">
-                V. E-consent
-              </h2>
               <div className="prose prose-lg text-ink-2 leading-relaxed max-w-none space-y-4">
                 <p>
-                  According to Federal Electronic Signatures in Global and
-                  national Commerce Act, the users who give their consent and
-                  e-sign electronic documents thus agree to receive documents,
-                  disclosures, and notification in electronic format, provide
-                  the information via electronic means and allow sharing of this
-                  information according to the provisions of privacy policies,
-                  terms of use and other applicable laws and regulations and
-                  conduct business electronically. Once a user submits
-                  information through the Website, one gives consent to receive
-                  electronic notifications, documents, and disclosures as well
-                  as the information provided directly on the Website and
-                  electronic communications with third party marketers and
-                  lenders we contract with. Any of such electronic communication
-                  received after providing your e-consent should be considered
-                  “in writing” and have the same force and effect. The copy
-                  should be printed for records.
+                  Our services are intended for adults seeking financial
+                  services and are not directed to children under the age of 18.
                 </p>
                 <p>
-                  We and third-party marketers we contract with reserve the
-                  right to discontinue the provisions of electronic
-                  documentation, notifications, and other forms of
-                  e-communication. In this case, the concerning users may be
-                  provided with prior notification of the case of termination in
-                  accordance with the provisions state in the policies and
-                  terms, regulating business relationship between the parts, as
-                  well as other applicable laws and regulations. The hard copies
-                  of the documents and records originated in the electronic form
-                  are not necessary to be produced and/or stored for the purpose
-                  of facilitation and expense reduction. All electronic records,
-                  disclosures and documents are to be destroyed according to the
-                  routine schedule and procedural practices as it is determined
-                  by regulatory requirements. Any of such electronic records can
-                  be considered and recognized as legitimate evidence to
-                  validate rights, agreements, and obligations, related to the
-                  parties bounded by the provisions of these e-documents or
-                  pursuant to these records. The time for validation, legal
-                  force and providing of such e-communication may differ.
+                  We do not knowingly collect personal information from
+                  children.
                 </p>
               </div>
             </section>
 
             <div className="w-full h-px bg-line"></div>
 
-            {/* SECTION VI */}
-            <section id="section-6" className="scroll-mt-32">
+            {/* SECTION 14 */}
+            <section id="section-14" className="scroll-mt-32">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 rounded-xl bg-brand-orange/10 flex items-center justify-center text-brand-orange shrink-0">
                   <LinkIcon size={20} strokeWidth={2} />
                 </div>
-                <h2 className="font-display text-2xl lg:text-3xl text-ink">
-                  VI. Links to Third Party Websites
+                <h2
+                  className={cn(
+                    "font-display text-2xl lg:text-3xl text-ink",
+                    fraunces.className,
+                  )}
+                >
+                  14. Third-Party Websites
                 </h2>
               </div>
-              <div className="prose prose-lg text-ink-2 leading-relaxed max-w-none">
+              <div className="prose prose-lg text-ink-2 leading-relaxed max-w-none space-y-4">
                 <p>
-                  The Website may contain links to third-party websites and may
-                  connect the users of the Website to third party lenders via
-                  links. The privacy of the information provided by the users on
-                  external websites are subject to the regulations stated on
-                  these sites and has nothing to do with this Website.
-                  Additionally, these third parties have their own privacy
-                  policies and regulative documents on their websites, and it is
-                  highly recommended to review these legal documents and
-                  disclosures individually prior to sharing any PII on their
-                  websites.
+                  Our website may contain links to third-party websites[cite:
+                  3]. We are not responsible for the privacy practices, content,
+                  or security of those websites. We encourage you to review
+                  their privacy policies before providing personal information.
                 </p>
               </div>
             </section>
 
             <div className="w-full h-px bg-line"></div>
 
-            {/* SECTION VII */}
-            <section id="section-7" className="scroll-mt-32">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-xl bg-[#D4A574]/20 flex items-center justify-center text-[#D4A574] shrink-0">
-                  <MapPin size={20} strokeWidth={2} />
-                </div>
-                <h2 className="font-display text-2xl lg:text-3xl text-ink">
-                  VII. Notifications for the Residents of Different States
-                </h2>
-              </div>
-              <div className="prose prose-lg text-ink-2 leading-relaxed max-w-none">
-                <p>
-                  We strictly follow the regulations and codes, both federal and
-                  state. The way PII can be used is regulated in states
-                  differently. Some state regulations require the party, which
-                  collects personal information, to disclose the complete
-                  information on how and in what periods the collected
-                  information will be shared and what other parties it will be
-                  transmitted to (individually and exclusively). Additionally,
-                  it may be required to disclose what types of personal
-                  information will be shared and in what manner it is supposed
-                  to be used by these third parties. In case the user of the
-                  Website is the resident of the state, where specific
-                  regulations are in force, we recommend contacting us directly
-                  using the contacts we provide on the Website to get all the
-                  necessary information in details. In this case, each request
-                  will be processed individually. We reserve the right to deny
-                  the processing of such request if the enquiry was sent from
-                  the user who legally reside in the state where such specific
-                  regulations are not in force.
-                </p>
-              </div>
-            </section>
-
-            <div className="w-full h-px bg-line"></div>
-
-            {/* SECTION VIII */}
-            <section id="section-8" className="scroll-mt-32">
+            {/* SECTION 15 */}
+            <section id="section-15" className="scroll-mt-32">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 rounded-xl bg-moss-deep/10 flex items-center justify-center text-moss-deep shrink-0">
                   <Edit3 size={20} strokeWidth={2} />
                 </div>
-                <h2 className="font-display text-2xl lg:text-3xl text-ink">
-                  VIII. Modifications and Changes
+                <h2
+                  className={cn(
+                    "font-display text-2xl lg:text-3xl text-ink",
+                    fraunces.className,
+                  )}
+                >
+                  15. Changes to This Privacy Policy
                 </h2>
               </div>
-              <div className="prose prose-lg text-ink-2 leading-relaxed max-w-none">
+              <div className="prose prose-lg text-ink-2 leading-relaxed max-w-none space-y-4">
                 <p>
-                  The owner of the Website reserves the right to apply changes
-                  to this Privacy Policy at own discretion and without prior
-                  notice. In case changes or modifications take place, the
-                  renewed information will be posted on the Website and the
-                  effective date of the document will be changed to the date of
-                  the most recent update of the Privacy Policy. By default, all
-                  the information is to be used according to the version of the
-                  Privacy Policy enforced at the time this information was
-                  collected. The user has right to determine individually if
-                  this rule is acceptable or not. Nevertheless, we encourage all
-                  the users of the Website to revise the Privacy Policy
-                  information and follow the dates of modifications to keep up
-                  to date and react in case it is deemed reasonable.
+                  We may update this Privacy Policy from time to time to reflect
+                  changes in our practices, technology, legal requirements, or
+                  business operations.
+                </p>
+                <p>
+                  The updated version will be posted on this page with a revised
+                  Effective Date.
                 </p>
               </div>
             </section>
 
             <div className="w-full h-px bg-line"></div>
 
-            {/* SECTION IX */}
-            <section id="section-9" className="scroll-mt-32">
+            {/* SECTION 16 */}
+            <section id="section-16" className="scroll-mt-32">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 rounded-xl bg-brand-orange/10 flex items-center justify-center text-brand-orange shrink-0">
-                  <MessageSquare size={20} strokeWidth={2} />
+                  <HelpCircle size={20} strokeWidth={2} />
                 </div>
-                <h2 className="font-display text-2xl lg:text-3xl text-ink">
-                  IX. Inquiries and Complaints
+                <h2
+                  className={cn(
+                    "font-display text-2xl lg:text-3xl text-ink",
+                    fraunces.className,
+                  )}
+                >
+                  16. Contact Us
                 </h2>
               </div>
-              <div className="prose prose-lg text-ink-2 leading-relaxed max-w-none">
+              <div className="prose prose-lg text-ink-2 leading-relaxed max-w-none space-y-4">
                 <p>
-                  The users of the Website are within their rights to modify,
-                  amend and withdraw their PII collected on the Website. In case
-                  it is necessary, the user who decides to make changes to their
-                  own information should contact us via the email address listed
-                  at the bottom of this document and provide inquiry regarding
-                  the modifications to be made. Similarly, if any user of the
-                  Website has any complaint regarding the operation on the
-                  Website and/or any of its service, this user should use the
-                  stated email address and provide the details of complaint. We
-                  will review all requests and complaints in the shortest time
-                  possible and reply as soon as we can.
+                  If you have questions about this Privacy Policy or wish to
+                  exercise applicable privacy rights, please contact us:[cite:
+                  3]
+                </p>
+                <p>
+                  <strong>MyLoanDesk</strong>
+                </p>
+                <ul className="list-none space-y-2">
+                  <li>
+                    <strong>Website:</strong> https://www.myloandesk.com
+                  </li>
+                  <li>
+                    <strong>Email:</strong> privacy@myloandesk.com
+                  </li>
+                  <li>
+                    <strong>Phone:</strong> 3058916500
+                  </li>
+                  <li>
+                    <strong>Mailing Address:</strong> 1801 NE 123 St, Ste 314
+                    North Miami, FL 33181
+                  </li>
+                </ul>
+                <p className="mt-6 font-medium text-ink">
+                  By using the MyLoanDesk website or submitting information to
+                  us, you acknowledge that you have read and understood this
+                  Privacy Policy.
                 </p>
               </div>
             </section>
