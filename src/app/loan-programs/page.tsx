@@ -113,12 +113,22 @@ export default function LoanProgramsPage() {
                 debt-to-income ratio (DTI) should be under 43%.
               </p>
             </div>
-            <Link
-              href="/#start"
-              className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
-            >
-              Apply Now! <ArrowRight size={14} />
-            </Link>
+            <div className="flex flex-col gap-3 mt-6">
+              <a
+                href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-3.5 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2 transition-all shadow-sm"
+              >
+                Apply Now <ArrowRight size={14} />
+              </a>
+              <Link
+                href="/#start"
+                className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
+              >
+                Contact Us Now
+              </Link>
+            </div>
           </div>
 
           {/* FHA Loans */}
@@ -172,12 +182,22 @@ export default function LoanProgramsPage() {
                 ))}
               </ul>
             </div>
-            <Link
-              href="/#start"
-              className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
-            >
-              Apply Now! <ArrowRight size={14} />
-            </Link>
+            <div className="flex flex-col gap-3 mt-6">
+              <a
+                href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-3.5 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2 transition-all shadow-sm"
+              >
+                Apply Now <ArrowRight size={14} />
+              </a>
+              <Link
+                href="/#start"
+                className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
+              >
+                Contact Us Now
+              </Link>
+            </div>
           </div>
 
           {/* VA Loans */}
@@ -235,12 +255,22 @@ export default function LoanProgramsPage() {
                 ))}
               </ul>
             </div>
-            <Link
-              href="/#start"
-              className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
-            >
-              Apply Now! <ArrowRight size={14} />
-            </Link>
+            <div className="flex flex-col gap-3 mt-6">
+              <a
+                href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-3.5 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2 transition-all shadow-sm"
+              >
+                Apply Now <ArrowRight size={14} />
+              </a>
+              <Link
+                href="/#start"
+                className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
+              >
+                Contact Us Now
+              </Link>
+            </div>
           </div>
 
           {/* Hybrid Loans */}
@@ -291,12 +321,22 @@ export default function LoanProgramsPage() {
                 </p>
               </div>
             </div>
-            <Link
-              href="/#start"
-              className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
-            >
-              Apply Now! <ArrowRight size={14} />
-            </Link>
+            <div className="flex flex-col gap-3 mt-6">
+              <a
+                href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-3.5 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2 transition-all shadow-sm"
+              >
+                Apply Now <ArrowRight size={14} />
+              </a>
+              <Link
+                href="/#start"
+                className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
+              >
+                Contact Us Now
+              </Link>
+            </div>
           </div>
 
           {/* Private Bridge & Hard Money Loans */}
@@ -349,12 +389,22 @@ export default function LoanProgramsPage() {
                 </div>
               </div>
             </div>
-            <Link
-              href="/#start"
-              className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
-            >
-              Apply Now! <ArrowRight size={14} />
-            </Link>
+            <div className="flex flex-col gap-3 mt-6">
+              <a
+                href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-3.5 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2 transition-all shadow-sm"
+              >
+                Apply Now <ArrowRight size={14} />
+              </a>
+              <Link
+                href="/#start"
+                className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
+              >
+                Contact Us Now
+              </Link>
+            </div>
           </div>
 
           {/* Bridge to Sale */}
@@ -395,12 +445,22 @@ export default function LoanProgramsPage() {
                 </ul>
               </div>
             </div>
-            <Link
-              href="/#start"
-              className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
-            >
-              Apply Now! <ArrowRight size={14} />
-            </Link>
+            <div className="flex flex-col gap-3 mt-6">
+              <a
+                href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-3.5 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2 transition-all shadow-sm"
+              >
+                Apply Now <ArrowRight size={14} />
+              </a>
+              <Link
+                href="/#start"
+                className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
+              >
+                Contact Us Now
+              </Link>
+            </div>
           </div>
 
           {/* Jumbo Loans */}
@@ -444,12 +504,22 @@ export default function LoanProgramsPage() {
                 </p>
               </div>
             </div>
-            <Link
-              href="/#start"
-              className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
-            >
-              Contact Us <ArrowRight size={14} />
-            </Link>
+            <div className="flex flex-col gap-3 mt-6">
+              <a
+                href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-3.5 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2 transition-all shadow-sm"
+              >
+                Apply Now <ArrowRight size={14} />
+              </a>
+              <Link
+                href="/#start"
+                className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
+              >
+                Contact Us Now
+              </Link>
+            </div>
           </div>
 
           {/* International Buyers Section Loans */}
@@ -551,14 +621,25 @@ export default function LoanProgramsPage() {
               Contact MyLoanDesk today to discuss your financing options and get
               pre-qualified.
             </p>
-            <Link
-              href="/#start"
-              className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
-            >
-              Contact Now! <ArrowRight size={14} />
-            </Link>
+            <div className="flex flex-col gap-3 mt-6">
+              <a
+                href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-3.5 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2 transition-all shadow-sm"
+              >
+                Apply Now <ArrowRight size={14} />
+              </a>
+              <Link
+                href="/#start"
+                className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
+              >
+                Contact Us Now
+              </Link>
+            </div>
           </div>
-          {/*  ITIN Home Loans Loans */}
+
+          {/* ITIN Home Loans */}
           <div
             id="ITIN-home"
             className="scroll-mt-36 bg-primary-bg p-8 flex flex-col justify-between transition-colors duration-300 hover:bg-cream/40"
@@ -663,12 +744,22 @@ export default function LoanProgramsPage() {
               Contact MyLoanDesk today to explore your ITIN mortgage options and
               find out if you qualify.
             </p>
-            <Link
-              href="/#start"
-              className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
-            >
-              Contact Now! <ArrowRight size={14} />
-            </Link>
+            <div className="flex flex-col gap-3 mt-6">
+              <a
+                href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-3.5 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2 transition-all shadow-sm"
+              >
+                Apply Now <ArrowRight size={14} />
+              </a>
+              <Link
+                href="/#start"
+                className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
+              >
+                Contact Us Now
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -686,7 +777,8 @@ export default function LoanProgramsPage() {
         >
           Rehab, Refinances & Home Equity Lines
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-line border border-line rounded-3xl overflow-hidden shadow-sm">
+        {/* Added grid-cols-1 for explicit mobile baseline */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-line border border-line rounded-3xl overflow-hidden shadow-sm">
           {/* FHA 203(k) Rehab Loans */}
           <div
             id="rehab"
@@ -751,12 +843,22 @@ export default function LoanProgramsPage() {
                 </div>
               </div>
             </div>
-            <Link
-              href="/#start"
-              className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
-            >
-              Apply Now! <ArrowRight size={14} />
-            </Link>
+            <div className="flex flex-col gap-3 mt-6">
+              <a
+                href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-3.5 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2 transition-all shadow-sm"
+              >
+                Apply Now <ArrowRight size={14} />
+              </a>
+              <Link
+                href="/#start"
+                className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
+              >
+                Contact Us Now
+              </Link>
+            </div>
           </div>
 
           {/* Refinance Options */}
@@ -824,12 +926,22 @@ export default function LoanProgramsPage() {
                 </div>
               </div>
             </div>
-            <Link
-              href="/#start"
-              className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
-            >
-              Apply Now! <ArrowRight size={14} />
-            </Link>
+            <div className="flex flex-col gap-3 mt-6">
+              <a
+                href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-3.5 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2 transition-all shadow-sm"
+              >
+                Apply Now <ArrowRight size={14} />
+              </a>
+              <Link
+                href="/#start"
+                className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
+              >
+                Contact Us Now
+              </Link>
+            </div>
           </div>
 
           {/* FHA Streamline Refinance */}
@@ -883,18 +995,28 @@ export default function LoanProgramsPage() {
                 ))}
               </ul>
             </div>
-            <Link
-              href="/#start"
-              className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
-            >
-              Apply Now! <ArrowRight size={14} />
-            </Link>
+            <div className="flex flex-col gap-3 mt-6">
+              <a
+                href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-3.5 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2 transition-all shadow-sm"
+              >
+                Apply Now <ArrowRight size={14} />
+              </a>
+              <Link
+                href="/#start"
+                className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
+              >
+                Contact Us Now
+              </Link>
+            </div>
           </div>
 
-          {/* HELOC (Home Equity Line of Credit) */}
+          {/* HELOC (Home Equity Line of Credit) - Added col-span-1 for mobile responsiveness */}
           <div
             id="heloc"
-            className="scroll-mt-36 bg-primary-bg p-8 flex flex-col justify-between transition-colors duration-300 hover:bg-cream/40 md:col-span-2 lg:col-span-3"
+            className="scroll-mt-36 col-span-1 md:col-span-2 lg:col-span-3 bg-primary-bg p-8 flex flex-col justify-between transition-colors duration-300 hover:bg-cream/40"
           >
             <div>
               <div className="flex items-center justify-between mb-6">
@@ -1040,16 +1162,25 @@ export default function LoanProgramsPage() {
                     goals.
                   </p>
                 </div>
-
-                {/* fdgdg */}
               </div>
             </div>
-            <Link
-              href="/#start"
-              className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
-            >
-              Apply Now! <ArrowRight size={14} />
-            </Link>
+            {/* Added container to restrict button width so it matches card styling */}
+            <div className="flex flex-col md:flex-row gap-4 mt-6">
+              <a
+                href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-3.5 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2 transition-all shadow-sm"
+              >
+                Apply Now <ArrowRight size={14} />
+              </a>
+              <Link
+                href="/#start"
+                className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
+              >
+                Contact Us Now
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -1112,12 +1243,22 @@ export default function LoanProgramsPage() {
               </p>
             </div>
 
-            <Link
-              href="/#start"
-              className="w-full mt-6 py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
-            >
-              Contact Now! <ArrowRight size={14} />
-            </Link>
+            <div className="flex flex-col gap-3 mt-6">
+              <a
+                href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-3.5 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2 transition-all shadow-sm"
+              >
+                Apply Now <ArrowRight size={14} />
+              </a>
+              <Link
+                href="/#start"
+                className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
+              >
+                Contact Us Now
+              </Link>
+            </div>
           </div>
 
           {/* Reverse Mortgage Refinance */}
@@ -1200,12 +1341,22 @@ export default function LoanProgramsPage() {
               </p>
             </div>
 
-            <Link
-              href="/#start"
-              className="w-full mt-6 py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
-            >
-              Contact Now! <ArrowRight size={14} />
-            </Link>
+            <div className="flex flex-col gap-3 mt-6">
+              <a
+                href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-3.5 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2 transition-all shadow-sm"
+              >
+                Apply Now <ArrowRight size={14} />
+              </a>
+              <Link
+                href="/#start"
+                className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
+              >
+                Contact Us Now
+              </Link>
+            </div>
           </div>
 
           {/* Reverse Mortgage for purchase */}
@@ -1277,12 +1428,22 @@ export default function LoanProgramsPage() {
               </p>
             </div>
 
-            <Link
-              href="/#start"
-              className="w-full mt-6 py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
-            >
-              Contact Now! <ArrowRight size={14} />
-            </Link>
+            <div className="flex flex-col gap-3 mt-6">
+              <a
+                href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-3.5 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2 transition-all shadow-sm"
+              >
+                Apply Now <ArrowRight size={14} />
+              </a>
+              <Link
+                href="/#start"
+                className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
+              >
+                Contact Us Now
+              </Link>
+            </div>
           </div>
 
           {/* Is a Reverse Mortgage Right for You? */}
@@ -1359,12 +1520,22 @@ export default function LoanProgramsPage() {
             </div>
 
             <div className="flex flex-col gap-5 mt-auto">
-              <Link
-                href="/#start"
-                className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
-              >
-                Contact Now! <ArrowRight size={14} />
-              </Link>
+              <div className="flex flex-col gap-3">
+                <a
+                  href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-3.5 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2 transition-all shadow-sm"
+                >
+                  Apply Now <ArrowRight size={14} />
+                </a>
+                <Link
+                  href="/#start"
+                  className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
+                >
+                  Contact Us Now
+                </Link>
+              </div>
 
               {/* Disclosure UI */}
               <div className="p-4 bg-ink/5 rounded-xl border border-line/60">
@@ -1496,20 +1667,32 @@ export default function LoanProgramsPage() {
                 investment strategy.
               </p>
             </div>
-            <p className="text-xs mb-4 text-ink-2">
-              <span className="font-bold text-ink">
-                Ready to expand your portfolio?
-              </span>
-              <br />
-              Contact MyLoanDesk today to explore your DSCR financing options
-              and get pre-qualified.
-            </p>
-            <Link
-              href="/#start"
-              className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
-            >
-              Contact Now! <ArrowRight size={14} />
-            </Link>
+            <div>
+              <p className="text-xs mb-4 text-ink-2">
+                <span className="font-bold text-ink">
+                  Ready to expand your portfolio?
+                </span>
+                <br />
+                Contact MyLoanDesk today to explore your DSCR financing options
+                and get pre-qualified.
+              </p>
+              <div className="flex flex-col gap-3">
+                <a
+                  href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-3.5 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2 transition-all shadow-sm"
+                >
+                  Apply Now <ArrowRight size={14} />
+                </a>
+                <Link
+                  href="/#start"
+                  className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
+                >
+                  Contact Us Now
+                </Link>
+              </div>
+            </div>
           </div>
 
           {/* Fix & Flip Loans */}
@@ -1600,23 +1783,35 @@ export default function LoanProgramsPage() {
                 renovation and resale.
               </p>
             </div>
-            <p className="text-xs mb-4 text-ink-2">
-              <span className="font-bold text-ink">
-                Ready to fund your next project?
-              </span>
-              <br />
-              Contact MyLoanDesk today to discuss your investment goals and
-              discover the Fix & Flip financing solution that's right for you.
-            </p>
-            <Link
-              href="/#start"
-              className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
-            >
-              Contact Now! <ArrowRight size={14} />
-            </Link>
+            <div>
+              <p className="text-xs mb-4 text-ink-2">
+                <span className="font-bold text-ink">
+                  Ready to fund your next project?
+                </span>
+                <br />
+                Contact MyLoanDesk today to discuss your investment goals and
+                discover the Fix & Flip financing solution that's right for you.
+              </p>
+              <div className="flex flex-col gap-3">
+                <a
+                  href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-3.5 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2 transition-all shadow-sm"
+                >
+                  Apply Now <ArrowRight size={14} />
+                </a>
+                <Link
+                  href="/#start"
+                  className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
+                >
+                  Contact Us Now
+                </Link>
+              </div>
+            </div>
           </div>
 
-          {/* Ground up  Loans */}
+          {/* Ground up Loans */}
           <div
             id="ground-up"
             className="scroll-mt-36 bg-primary-bg p-8 flex flex-col justify-between transition-colors duration-300 hover:bg-cream/40"
@@ -1706,21 +1901,35 @@ export default function LoanProgramsPage() {
                 planning and approval to construction and permanent financing.
               </p>
             </div>
-            <p className="text-xs mb-4 text-ink-2">
-              <span className="font-bold text-ink">Ready to break ground?</span>
-              <br />
-              Contact MyLoanDesk today to discuss your construction project and
-              explore the financing options available for your next build.
-            </p>
-            <Link
-              href="/#start"
-              className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
-            >
-              Contact Now! <ArrowRight size={14} />
-            </Link>
+            <div>
+              <p className="text-xs mb-4 text-ink-2">
+                <span className="font-bold text-ink">
+                  Ready to break ground?
+                </span>
+                <br />
+                Contact MyLoanDesk today to discuss your construction project
+                and explore the financing options available for your next build.
+              </p>
+              <div className="flex flex-col gap-3">
+                <a
+                  href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-3.5 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2 transition-all shadow-sm"
+                >
+                  Apply Now <ArrowRight size={14} />
+                </a>
+                <Link
+                  href="/#start"
+                  className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
+                >
+                  Contact Us Now
+                </Link>
+              </div>
+            </div>
           </div>
 
-          {/* Bridge  Loans - Responsive col-span added */}
+          {/* Bridge Loans - Responsive col-span added */}
           <div
             id="bridge-loans"
             className="scroll-mt-36 col-span-1 md:col-span-2 lg:col-span-3 bg-primary-bg p-8 flex flex-col justify-between transition-colors duration-300 hover:bg-cream/40"
@@ -1811,18 +2020,30 @@ export default function LoanProgramsPage() {
                 financing strategy.
               </p>
             </div>
-            <p className="text-xs mb-4 text-ink-2">
-              <span className="font-bold text-ink">Need financing fast?</span>
-              <br />
-              Contact MyLoanDesk today to learn how a bridge loan can help you
-              move forward with confidence.
-            </p>
-            <Link
-              href="/#start"
-              className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
-            >
-              Contact Now! <ArrowRight size={14} />
-            </Link>
+            <div>
+              <p className="text-xs mb-4 text-ink-2">
+                <span className="font-bold text-ink">Need financing fast?</span>
+                <br />
+                Contact MyLoanDesk today to learn how a bridge loan can help you
+                move forward with confidence.
+              </p>
+              <div className="flex flex-col gap-3">
+                <a
+                  href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-3.5 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2 transition-all shadow-sm"
+                >
+                  Apply Now <ArrowRight size={14} />
+                </a>
+                <Link
+                  href="/#start"
+                  className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
+                >
+                  Contact Us Now
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -1840,7 +2061,8 @@ export default function LoanProgramsPage() {
         >
           Commercial Financing Solutions
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-line border border-line rounded-3xl overflow-hidden shadow-sm">
+        {/* Explicitly added grid-cols-1 for mobile baseline */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-line border border-line rounded-3xl overflow-hidden shadow-sm">
           {/* commercial real estate Financing */}
           <div
             id="commercial-real-estate"
@@ -1922,18 +2144,30 @@ export default function LoanProgramsPage() {
                 ))}
               </ul>
             </div>
-            <p className="text-xs mb-4 text-ink-2">
-              <span className="font-bold text-ink">Need financing fast?</span>
-              <br />
-              Contact MyLoanDesk today to learn how a Commercial Real Estate
-              Loans can help you move forward with confidence.
-            </p>
-            <Link
-              href="/#start"
-              className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
-            >
-              Contact Now! <ArrowRight size={14} />
-            </Link>
+            <div>
+              <p className="text-xs mb-4 text-ink-2">
+                <span className="font-bold text-ink">Need financing fast?</span>
+                <br />
+                Contact MyLoanDesk today to learn how a Commercial Real Estate
+                Loans can help you move forward with confidence.
+              </p>
+              <div className="flex flex-col gap-3">
+                <a
+                  href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-3.5 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2 transition-all shadow-sm"
+                >
+                  Apply Now <ArrowRight size={14} />
+                </a>
+                <Link
+                  href="/#start"
+                  className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
+                >
+                  Contact Us Now
+                </Link>
+              </div>
+            </div>
           </div>
 
           {/* Equipment Financing */}
@@ -1980,12 +2214,22 @@ export default function LoanProgramsPage() {
                 </div>
               </div>
             </div>
-            <a
-              href="#contact"
-              className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
-            >
-              Contact Us <ArrowRight size={14} />
-            </a>
+            <div className="flex flex-col gap-3 mt-6">
+              <a
+                href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-3.5 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2 transition-all shadow-sm"
+              >
+                Apply Now <ArrowRight size={14} />
+              </a>
+              <Link
+                href="/#start"
+                className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
+              >
+                Contact Us Now
+              </Link>
+            </div>
           </div>
 
           {/* Business Lines of Credit */}
@@ -2031,12 +2275,22 @@ export default function LoanProgramsPage() {
                 </div>
               </div>
             </div>
-            <a
-              href="#contact"
-              className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
-            >
-              Contact Us <ArrowRight size={14} />
-            </a>
+            <div className="flex flex-col gap-3 mt-6">
+              <a
+                href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-3.5 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2 transition-all shadow-sm"
+              >
+                Apply Now <ArrowRight size={14} />
+              </a>
+              <Link
+                href="/#start"
+                className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
+              >
+                Contact Us Now
+              </Link>
+            </div>
           </div>
 
           {/* Working Capital */}
@@ -2082,12 +2336,22 @@ export default function LoanProgramsPage() {
                 </div>
               </div>
             </div>
-            <a
-              href="#contact"
-              className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
-            >
-              Contact Us <ArrowRight size={14} />
-            </a>
+            <div className="flex flex-col gap-3 mt-6">
+              <a
+                href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-3.5 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2 transition-all shadow-sm"
+              >
+                Apply Now <ArrowRight size={14} />
+              </a>
+              <Link
+                href="/#start"
+                className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
+              >
+                Contact Us Now
+              </Link>
+            </div>
           </div>
 
           {/* Franchise Financing Solutions */}
@@ -2132,12 +2396,22 @@ export default function LoanProgramsPage() {
                 </div>
               </div>
             </div>
-            <Link
-              href="/#start"
-              className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
-            >
-              Apply Now! <ArrowRight size={14} />
-            </Link>
+            <div className="flex flex-col gap-3 mt-6">
+              <a
+                href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-3.5 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2 transition-all shadow-sm"
+              >
+                Apply Now <ArrowRight size={14} />
+              </a>
+              <Link
+                href="/#start"
+                className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
+              >
+                Contact Us Now
+              </Link>
+            </div>
           </div>
 
           {/* Commercial Loans */}
@@ -2180,12 +2454,22 @@ export default function LoanProgramsPage() {
                 </div>
               </div>
             </div>
-            <Link
-              href="/#start"
-              className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
-            >
-              Apply Now! <ArrowRight size={14} />
-            </Link>
+            <div className="flex flex-col gap-3 mt-6">
+              <a
+                href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-3.5 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2 transition-all shadow-sm"
+              >
+                Apply Now <ArrowRight size={14} />
+              </a>
+              <Link
+                href="/#start"
+                className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
+              >
+                Contact Us Now
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -2203,11 +2487,11 @@ export default function LoanProgramsPage() {
         >
           SBA and Business Loans
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-line border border-line rounded-3xl overflow-hidden shadow-sm">
-          {/*  SBA and business loans */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-line border border-line rounded-3xl overflow-hidden shadow-sm">
+          {/* SBA and business loans */}
           <div
             id="sba-business"
-            className="scroll-mt-36 col-span-3 bg-primary-bg p-8 flex flex-col justify-between transition-colors duration-300 hover:bg-cream/40"
+            className="scroll-mt-36 col-span-1 md:col-span-2 lg:col-span-3 bg-primary-bg p-8 flex flex-col justify-between transition-colors duration-300 hover:bg-cream/40"
           >
             <div>
               <div className="flex items-center justify-between mb-6">
@@ -2321,20 +2605,32 @@ export default function LoanProgramsPage() {
                 from application through closing.
               </p>
             </div>
-            <p className="text-xs mb-4 text-ink-2">
-              <span className="font-bold text-ink">
-                Ready to grow your business?
-              </span>
-              <br />
-              Contact MyLoanDesk today to explore your SBA financing options and
-              find the loan that's right for your business.
-            </p>
-            <Link
-              href="/#start"
-              className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
-            >
-              Contact Now! <ArrowRight size={14} />
-            </Link>
+            <div>
+              <p className="text-xs mb-4 text-ink-2">
+                <span className="font-bold text-ink">
+                  Ready to grow your business?
+                </span>
+                <br />
+                Contact MyLoanDesk today to explore your SBA financing options
+                and find the loan that's right for your business.
+              </p>
+              <div className="flex flex-col gap-3">
+                <a
+                  href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-3.5 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2 transition-all shadow-sm"
+                >
+                  Apply Now <ArrowRight size={14} />
+                </a>
+                <Link
+                  href="/#start"
+                  className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
+                >
+                  Contact Us Now
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -2398,12 +2694,22 @@ export default function LoanProgramsPage() {
                 </li>
               </ul>
             </div>
-            <Link
-              href="/#start"
-              className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
-            >
-              Apply Now! <ArrowRight size={14} />
-            </Link>
+            <div className="flex flex-col gap-3 mt-6">
+              <a
+                href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-3.5 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2 transition-all shadow-sm"
+              >
+                Apply Now <ArrowRight size={14} />
+              </a>
+              <Link
+                href="/#start"
+                className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
+              >
+                Contact Us Now
+              </Link>
+            </div>
           </div> */}
 
           {/* Portugal Loans */}
@@ -2501,12 +2807,22 @@ export default function LoanProgramsPage() {
                 renovation
               </p>
             </div>
-            <Link
-              href="/#start"
-              className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
-            >
-              Apply Now! <ArrowRight size={14} />
-            </Link>
+            <div className="flex flex-col gap-3 mt-6">
+              <a
+                href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-3.5 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2 transition-all shadow-sm"
+              >
+                Apply Now <ArrowRight size={14} />
+              </a>
+              <Link
+                href="/#start"
+                className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
+              >
+                Contact Us Now
+              </Link>
+            </div>
           </div>
 
           {/* Dream Home Builder AKA Earned Equity Program (EEP) */}
@@ -2571,12 +2887,22 @@ export default function LoanProgramsPage() {
                 </div>
               </div>
             </div>
-            <Link
-              href="/#start"
-              className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
-            >
-              Apply Now! <ArrowRight size={14} />
-            </Link>
+            <div className="flex flex-col gap-3 mt-6">
+              <a
+                href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-3.5 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2 transition-all shadow-sm"
+              >
+                Apply Now <ArrowRight size={14} />
+              </a>
+              <Link
+                href="/#start"
+                className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
+              >
+                Contact Us Now
+              </Link>
+            </div>
           </div>
 
           {/* Doctor Loan Program - Made responsive with md:col-span-2 */}
@@ -2638,12 +2964,22 @@ export default function LoanProgramsPage() {
                 </div>
               </div>
             </div>
-            <Link
-              href="/#start"
-              className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
-            >
-              Apply Now! <ArrowRight size={14} />
-            </Link>
+            <div className="flex flex-col gap-3 mt-6">
+              <a
+                href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-3.5 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2 transition-all shadow-sm"
+              >
+                Apply Now <ArrowRight size={14} />
+              </a>
+              <Link
+                href="/#start"
+                className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
+              >
+                Contact Us Now
+              </Link>
+            </div>
           </div>
         </div>
       </section>

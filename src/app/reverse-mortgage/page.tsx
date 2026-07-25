@@ -162,7 +162,7 @@ export default function ReverseMortgagePage() {
           </div>
         </div>
       </section>
-       {/* Reverse Mortgage */}
+      {/* Reverse Mortgage */}
       <section
         className="max-w-7xl mx-auto px-6 mt-10 lg:px-10 mb-20"
         id="reverse-mortgage"
@@ -214,18 +214,28 @@ export default function ReverseMortgagePage() {
                 and any applicable HOA dues current
               </p>
               <p className="text-sm text-ink-2 leading-relaxed mb-2">
-                Whether you already own a home or are looking to purchase your next one, a
-reverse mortgage can provide greater financial flexibility during retirement
+                Whether you already own a home or are looking to purchase your
+                next one, a reverse mortgage can provide greater financial
+                flexibility during retirement
               </p>
-
             </div>
-           
-            <Link
-              href="/#start"
-              className="w-full mt-6 py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
-            >
-              Contact Now! <ArrowRight size={14} />
-            </Link>
+
+            <div className="flex flex-col gap-3 mt-6">
+              <a
+                href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-3.5 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2 transition-all shadow-sm"
+              >
+                Apply Now <ArrowRight size={14} />
+              </a>
+              <Link
+                href="/#start"
+                className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
+              >
+                Contact Us Now
+              </Link>
+            </div>
           </div>
 
           {/* Reverse Mortgage Refinance */}
@@ -253,12 +263,12 @@ reverse mortgage can provide greater financial flexibility during retirement
               </h4>
 
               <p className="text-sm text-ink-2 leading-relaxed mb-2">
-                A Reverse Mortgage Refinance allows you to replace your existing mortgage
-with a reverse mortgage. Any remaining equity can then be accessed as tax
-free proceeds, giving you additional financial flexibility while eliminating your
-required monthly mortgage payment.
+                A Reverse Mortgage Refinance allows you to replace your existing
+                mortgage with a reverse mortgage. Any remaining equity can then
+                be accessed as tax free proceeds, giving you additional
+                financial flexibility while eliminating your required monthly
+                mortgage payment.
               </p>
-              
 
               <h4 className="font-medium text-ink mb-3 mt-4">
                 You can receive your available funds as:
@@ -280,7 +290,9 @@ required monthly mortgage payment.
                 ))}
               </ul>
 
-              <h4 className="font-medium text-ink mb-3 mt-4">Many homeowners use a reverse mortgage refinance to:</h4>
+              <h4 className="font-medium text-ink mb-3 mt-4">
+                Many homeowners use a reverse mortgage refinance to:
+              </h4>
               <ul className="space-y-2 mb-4">
                 {[
                   "Eliminate their monthly mortgage payment",
@@ -300,22 +312,31 @@ required monthly mortgage payment.
                 ))}
               </ul>
 
-      
               <p className="text-sm text-ink-2 leading-relaxed mb-2 mt-4">
-                Best of all, you continue to own your home and remain in control of how you
-use your equity.
+                Best of all, you continue to own your home and remain in control
+                of how you use your equity.
               </p>
             </div>
-            
-            <Link
-              href="/#start"
-              className="w-full mt-6 py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
-            >
-              Contact Now! <ArrowRight size={14} />
-            </Link>
+
+            <div className="flex flex-col gap-3 mt-6">
+              <a
+                href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-3.5 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2 transition-all shadow-sm"
+              >
+                Apply Now <ArrowRight size={14} />
+              </a>
+              <Link
+                href="/#start"
+                className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
+              >
+                Contact Us Now
+              </Link>
+            </div>
           </div>
 
-           {/* Reverse Mortgage for purchase */}
+          {/* Reverse Mortgage for purchase */}
           <div
             id="reverse"
             className="scroll-mt-36 bg-primary-bg p-8 flex flex-col justify-between transition-colors duration-300 hover:bg-cream/40"
@@ -336,22 +357,24 @@ use your equity.
               </h3>
 
               <h4 className="font-medium text-ink mb-3">
-Buy Your Next Home With No Required Monthly
-Mortgage Payment
+                Buy Your Next Home With No Required Monthly Mortgage Payment
               </h4>
 
               <p className="text-sm text-ink-2 leading-relaxed mb-2">
-                A reverse mortgage isn't just for homeowners—it can also help you purchase
-your next primary residence.
+                A reverse mortgage isn't just for homeowners—it can also help
+                you purchase your next primary residence.
               </p>
               <p className="text-sm text-ink-2 leading-relaxed mb-2">
-                With a Reverse Mortgage for Purchase, you make a substantial down payment
-using the proceeds from the sale of your current home, savings, or other
-eligible funds. The reverse mortgage finances the remaining balance, allowing
-you to purchase your new home <span className="font-bold"> without required monthly mortgage
-payments.</span>
+                With a Reverse Mortgage for Purchase, you make a substantial
+                down payment using the proceeds from the sale of your current
+                home, savings, or other eligible funds. The reverse mortgage
+                finances the remaining balance, allowing you to purchase your
+                new home{" "}
+                <span className="font-bold">
+                  {" "}
+                  without required monthly mortgage payments.
+                </span>
               </p>
-              
 
               <h4 className="font-medium text-ink mb-3 mt-4">
                 This program is ideal for retirees who want to:
@@ -375,22 +398,29 @@ payments.</span>
                 ))}
               </ul>
 
-              
-
-      
               <p className="text-sm text-ink-2 leading-relaxed mb-2 mt-4">
-                Instead of tying up hundreds of thousands of dollars in a home purchase, you
-can keep more of your money available for travel, investments, healthcare, or
-everyday living expenses.
+                Instead of tying up hundreds of thousands of dollars in a home
+                purchase, you can keep more of your money available for travel,
+                investments, healthcare, or everyday living expenses.
               </p>
             </div>
-            
-            <Link
-              href="/#start"
-              className="w-full mt-6 py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
-            >
-              Contact Now! <ArrowRight size={14} />
-            </Link>
+
+            <div className="flex flex-col gap-3 mt-6">
+              <a
+                href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-3.5 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2 transition-all shadow-sm"
+              >
+                Apply Now <ArrowRight size={14} />
+              </a>
+              <Link
+                href="/#start"
+                className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
+              >
+                Contact Us Now
+              </Link>
+            </div>
           </div>
 
           {/* Is a Reverse Mortgage Right for You? */}
@@ -414,14 +444,14 @@ everyday living expenses.
               </h3>
 
               <p className="text-sm text-ink-2 leading-relaxed mb-2">
-                Every homeowner's situation is unique. That's why we take the time to
-                understand your goals and explain every available option before you make a
-                decision.
+                Every homeowner's situation is unique. That's why we take the
+                time to understand your goals and explain every available option
+                before you make a decision.
               </p>
               <p className="text-sm text-ink-2 leading-relaxed mb-2">
-                Whether you're interested in refinancing your current home or purchasing your
-                next one, we'll help you determine if a reverse mortgage is the right solution
-                for your retirement plans.
+                Whether you're interested in refinancing your current home or
+                purchasing your next one, we'll help you determine if a reverse
+                mortgage is the right solution for your retirement plans.
               </p>
 
               <h4 className="font-medium text-ink mb-3 mt-6">
@@ -455,33 +485,48 @@ everyday living expenses.
               </h3>
 
               <p className="text-sm text-ink-2 leading-relaxed mb-2">
-                Discover how much equity you may be able to access—or learn how you can
-                purchase your next home with no required monthly mortgage payments.
+                Discover how much equity you may be able to access—or learn how
+                you can purchase your next home with no required monthly
+                mortgage payments.
               </p>
-              <br/>
+              <br />
               <p className="text-sm text-ink-2 leading-relaxed mb-8 font-bold">
-                Schedule your free consultation today and explore your options with
-                confidence.
+                Schedule your free consultation today and explore your options
+                with confidence.
               </p>
             </div>
-            
+
             <div className="flex flex-col gap-5 mt-auto">
-              <Link
-                href="/#start"
-                className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center gap-2 transition-all"
-              >
-                Contact Now! <ArrowRight size={14} />
-              </Link>
+              <div className="flex flex-col gap-3">
+                <a
+                  href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-3.5 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2 transition-all shadow-sm"
+                >
+                  Apply Now <ArrowRight size={14} />
+                </a>
+                <Link
+                  href="/#start"
+                  className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
+                >
+                  Contact Us Now
+                </Link>
+              </div>
 
               {/* Disclosure UI */}
               <div className="p-4 bg-ink/5 rounded-xl border border-line/60">
                 <p className="text-[11px] text-ink-2 leading-relaxed text-justify">
-                  <span className="font-bold text-ink">Important Disclosure:</span> Borrowers remain responsible for property taxes,
-                  homeowners insurance, applicable HOA dues, and maintaining the home. The
-                  loan becomes due when the last eligible borrower permanently leaves the
-                  home, sells the property, or no longer meets the loan obligations. Eligibility,
-                  available proceeds, and loan terms depend on age, property value, current
-                  interest rates, and program guidelines.
+                  <span className="font-bold text-ink">
+                    Important Disclosure:
+                  </span>{" "}
+                  Borrowers remain responsible for property taxes, homeowners
+                  insurance, applicable HOA dues, and maintaining the home. The
+                  loan becomes due when the last eligible borrower permanently
+                  leaves the home, sells the property, or no longer meets the
+                  loan obligations. Eligibility, available proceeds, and loan
+                  terms depend on age, property value, current interest rates,
+                  and program guidelines.
                 </p>
               </div>
             </div>
