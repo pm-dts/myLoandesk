@@ -94,7 +94,8 @@ export default function Footer() {
             <div className="text-[10px] uppercase tracking-[0.2em] text-ink/40 font-bold mb-5">
               Links
             </div>
-            <ul className="space-y-3 text-sm font-medium">
+            {/* Display as a 2-column grid on small screens, falling back to block layout on sm+ */}
+            <ul className="grid grid-cols-2 gap-y-3 gap-x-4 sm:block sm:space-y-3 text-sm font-medium">
               {[
                 { label: "Get a quote", href: "/get-quote" },
                 {
@@ -211,24 +212,6 @@ export default function Footer() {
               FL Division of Real Estate.
             </p>
           </div>
-
-          {/* <div className="flex flex-wrap gap-x-6 gap-y-2 font-medium border-t border-ink/5 pt-4 w-full">
-            {[
-              "Privacy",
-              "Terms",
-              "Licensing",
-              "Accessibility",
-              "Disclosures",
-            ].map((legal) => (
-              <Link
-                key={legal}
-                href="#"
-                className="hover:text-brand-orange transition-colors duration-200"
-              >
-                {legal}
-              </Link>
-            ))}
-          </div> */}
         </div>
       </div>
     </footer>
