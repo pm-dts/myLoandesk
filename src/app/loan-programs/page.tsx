@@ -123,7 +123,66 @@ export default function LoanProgramsPage() {
                 Apply Now <ArrowRight size={14} />
               </a>
               <Link
-                href="/#start"
+                href="/get-quote"
+                className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
+              >
+                Contact Us Now
+              </Link>
+            </div>
+          </div>
+
+          {/* Jumbo Loans */}
+          <div
+            id="portfolio"
+            className="scroll-mt-36 bg-primary-bg p-8 flex flex-col justify-between transition-colors duration-300 hover:bg-cream/40"
+          >
+            <div>
+              <div className="flex items-center justify-between mb-6">
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-[#D4A373]/20 text-[#D4A373]">
+                  <Briefcase size={22} strokeWidth={1.8} />
+                </div>
+                <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2 py-1 rounded">
+                  Custom Desk Spec
+                </span>
+              </div>
+              <h3
+                className={cn(
+                  "text-2xl font-medium text-ink mb-4",
+                  fraunces.className,
+                )}
+              >
+                Jumbo Loans
+              </h3>
+              <div className="text-sm text-ink-2 space-y-4 mb-6 leading-relaxed">
+                <p>
+                  Jumbo loans are made to fill the gap between conventional
+                  loans and private or hard money loans. These are made by a
+                  lender who keeps the debt on their Jumbo to earn consistent
+                  interest, rather than selling it to secondary markets.
+                </p>
+                <p>
+                  In contrast, conventional loans are typically sold to another
+                  institution that will service the loan shortly after closing.
+                </p>
+                <p>
+                  Jumbo loan programs are built for clients who have difficulty
+                  proving their income under standard conventional guidelines,
+                  or who have navigated complex credit issues, past
+                  bankruptcies, foreclosures, or tax liens.
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-col gap-3 mt-6">
+              <a
+                href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-3.5 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2 transition-all shadow-sm"
+              >
+                Apply Now <ArrowRight size={14} />
+              </a>
+              <Link
+                href="/get-quote"
                 className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
               >
                 Contact Us Now
@@ -192,7 +251,73 @@ export default function LoanProgramsPage() {
                 Apply Now <ArrowRight size={14} />
               </a>
               <Link
-                href="/#start"
+                href="/get-quote"
+                className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
+              >
+                Contact Us Now
+              </Link>
+            </div>
+          </div>
+
+          {/* Hybrid Loans */}
+          <div
+            id="hybrid"
+            className="scroll-mt-36 bg-primary-bg p-8 flex flex-col justify-between transition-colors duration-300 hover:bg-cream/40"
+          >
+            <div>
+              <div className="flex items-center justify-between mb-6">
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-brand-orange/10 text-brand-orange">
+                  <RefreshCw size={22} strokeWidth={1.8} />
+                </div>
+                <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2 py-1 rounded">
+                  ARM Adjustables
+                </span>
+              </div>
+              <h3
+                className={cn(
+                  "text-2xl font-medium text-ink mb-4",
+                  fraunces.className,
+                )}
+              >
+                Hybrid Loans
+              </h3>
+              <div className="text-sm text-ink-2 space-y-4 mb-6 leading-relaxed">
+                <p>
+                  Combine the upfront stability of a fixed-rate mortgage with
+                  the initial savings opportunities of an adjustable-rate
+                  mortgage (ARM) using a fixed-period hybrid loan.
+                </p>
+                <p>
+                  A hybrid loan provides a fixed-rate term (usually 3, 5, 7, or
+                  10 years) with adjustable rates thereafter—typically expressed
+                  as a 3/1, 5/1, 7/1, or 10/1 ARM. The first number represents
+                  the fixed-rate years, while the second indicates how often the
+                  interest rate will adjust annually afterward.
+                </p>
+                <p>
+                  The primary advantage is securing a lower interest rate
+                  upfront than standard 30-year fixed options, making it a
+                  powerful vehicle if you plan to transition or sell within the
+                  first decade.
+                </p>
+                <p className="text-xs italic bg-line/20 p-2.5 rounded border border-line">
+                  Hybrid loans are ideal choices for borrowers seeking ARM
+                  pricing combined with essential, multi-year protection at the
+                  start of their homeownership lifecycle.
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-col gap-3 mt-6">
+              <a
+                href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-3.5 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2 transition-all shadow-sm"
+              >
+                Apply Now <ArrowRight size={14} />
+              </a>
+              <Link
+                href="/get-quote"
                 className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
               >
                 Contact Us Now
@@ -265,73 +390,7 @@ export default function LoanProgramsPage() {
                 Apply Now <ArrowRight size={14} />
               </a>
               <Link
-                href="/#start"
-                className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
-              >
-                Contact Us Now
-              </Link>
-            </div>
-          </div>
-
-          {/* Hybrid Loans */}
-          <div
-            id="hybrid"
-            className="scroll-mt-36 bg-primary-bg p-8 flex flex-col justify-between transition-colors duration-300 hover:bg-cream/40"
-          >
-            <div>
-              <div className="flex items-center justify-between mb-6">
-                <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-brand-orange/10 text-brand-orange">
-                  <RefreshCw size={22} strokeWidth={1.8} />
-                </div>
-                <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2 py-1 rounded">
-                  ARM Adjustables
-                </span>
-              </div>
-              <h3
-                className={cn(
-                  "text-2xl font-medium text-ink mb-4",
-                  fraunces.className,
-                )}
-              >
-                Hybrid Loans
-              </h3>
-              <div className="text-sm text-ink-2 space-y-4 mb-6 leading-relaxed">
-                <p>
-                  Combine the upfront stability of a fixed-rate mortgage with
-                  the initial savings opportunities of an adjustable-rate
-                  mortgage (ARM) using a fixed-period hybrid loan.
-                </p>
-                <p>
-                  A hybrid loan provides a fixed-rate term (usually 3, 5, 7, or
-                  10 years) with adjustable rates thereafter—typically expressed
-                  as a 3/1, 5/1, 7/1, or 10/1 ARM. The first number represents
-                  the fixed-rate years, while the second indicates how often the
-                  interest rate will adjust annually afterward.
-                </p>
-                <p>
-                  The primary advantage is securing a lower interest rate
-                  upfront than standard 30-year fixed options, making it a
-                  powerful vehicle if you plan to transition or sell within the
-                  first decade.
-                </p>
-                <p className="text-xs italic bg-line/20 p-2.5 rounded border border-line">
-                  Hybrid loans are ideal choices for borrowers seeking ARM
-                  pricing combined with essential, multi-year protection at the
-                  start of their homeownership lifecycle.
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-col gap-3 mt-6">
-              <a
-                href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full py-3.5 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2 transition-all shadow-sm"
-              >
-                Apply Now <ArrowRight size={14} />
-              </a>
-              <Link
-                href="/#start"
+                href="/get-quote"
                 className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
               >
                 Contact Us Now
@@ -359,34 +418,38 @@ export default function LoanProgramsPage() {
                   fraunces.className,
                 )}
               >
-                Private Bridge & Hard Money Loans
+                Private Bridge Loans
               </h3>
               <div className="text-sm text-ink-2 space-y-4 mb-6 leading-relaxed">
                 <p>
-                  Bridge financing is deployed for fast closings, navigating
-                  unique situational underwriting, recovering property assets
-                  from distressed situations, or capturing time-sensitive
-                  short-term real estate plays.
+                  Private bridge loans provide fast, flexible financing when
+                  traditional mortgage options aren't the right fit. Whether
+                  you're buying before selling, investing, renovating, or need
+                  to close quickly, we can help you secure short-term financing
+                  tailored to your situation.
                 </p>
-                <p>
-                  These properties are paid back when the asset is sold, fully
-                  refinanced with a traditional permanent lender, or when
-                  structural modifications allow subsequent standard matrix
-                  funding.
-                </p>
-                <p>
-                  While hard money refers strictly to the private source asset
-                  pool (individuals or specialized private companies), bridge
-                  deployment speaks directly to the targeted, nimble duration of
-                  the temporary capital architecture.
-                </p>
-                <div className="bg-[#f0ece1]/60 p-3.5 rounded-xl text-xs font-mono border border-dashed border-line space-y-1">
-                  <p>· Rates: Usually 10-15%</p>
-                  <p>· Typical terms: Up to 12 months (2-10 points)</p>
-                  <p>· LTV: Generally max 65% for commercial/residential</p>
-                  <p>· Architecture: Closed or Open configuration matrix</p>
-                  <p>· First charge structure provides higher LTV thresholds</p>
-                </div>
+
+                <h4 className="font-medium text-ink mb-3">Ideal For:</h4>
+                <ul className="space-y-2 mb-6">
+                  {[
+                    "Buy before you sell",
+                    "Investment properties",
+                    "Renovation projects",
+                    "Commercial real estate",
+                    "Fast closings",
+                  ].map((item, index) => (
+                    <li
+                      key={index}
+                      className="flex items-start gap-2 text-xs text-ink/90 leading-normal"
+                    >
+                      <CheckCircle2
+                        size={13}
+                        className="text-moss-deep mt-0.5 shrink-0"
+                      />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
             <div className="flex flex-col gap-3 mt-6">
@@ -399,7 +462,7 @@ export default function LoanProgramsPage() {
                 Apply Now <ArrowRight size={14} />
               </a>
               <Link
-                href="/#start"
+                href="/get-quote"
                 className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
               >
                 Contact Us Now
@@ -455,66 +518,7 @@ export default function LoanProgramsPage() {
                 Apply Now <ArrowRight size={14} />
               </a>
               <Link
-                href="/#start"
-                className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
-              >
-                Contact Us Now
-              </Link>
-            </div>
-          </div>
-
-          {/* Jumbo Loans */}
-          <div
-            id="portfolio"
-            className="scroll-mt-36 bg-primary-bg p-8 flex flex-col justify-between transition-colors duration-300 hover:bg-cream/40"
-          >
-            <div>
-              <div className="flex items-center justify-between mb-6">
-                <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-[#D4A373]/20 text-[#D4A373]">
-                  <Briefcase size={22} strokeWidth={1.8} />
-                </div>
-                <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2 py-1 rounded">
-                  Custom Desk Spec
-                </span>
-              </div>
-              <h3
-                className={cn(
-                  "text-2xl font-medium text-ink mb-4",
-                  fraunces.className,
-                )}
-              >
-                Jumbo Loans
-              </h3>
-              <div className="text-sm text-ink-2 space-y-4 mb-6 leading-relaxed">
-                <p>
-                  Jumbo loans are made to fill the gap between conventional
-                  loans and private or hard money loans. These are made by a
-                  lender who keeps the debt on their Jumbo to earn consistent
-                  interest, rather than selling it to secondary markets.
-                </p>
-                <p>
-                  In contrast, conventional loans are typically sold to another
-                  institution that will service the loan shortly after closing.
-                </p>
-                <p>
-                  Jumbo loan programs are built for clients who have difficulty
-                  proving their income under standard conventional guidelines,
-                  or who have navigated complex credit issues, past
-                  bankruptcies, foreclosures, or tax liens.
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-col gap-3 mt-6">
-              <a
-                href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full py-3.5 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2 transition-all shadow-sm"
-              >
-                Apply Now <ArrowRight size={14} />
-              </a>
-              <Link
-                href="/#start"
+                href="/get-quote"
                 className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
               >
                 Contact Us Now
@@ -631,7 +635,7 @@ export default function LoanProgramsPage() {
                 Apply Now <ArrowRight size={14} />
               </a>
               <Link
-                href="/#start"
+                href="/get-quote"
                 className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
               >
                 Contact Us Now
@@ -754,7 +758,7 @@ export default function LoanProgramsPage() {
                 Apply Now <ArrowRight size={14} />
               </a>
               <Link
-                href="/#start"
+                href="/get-quote"
                 className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
               >
                 Contact Us Now
@@ -853,7 +857,7 @@ export default function LoanProgramsPage() {
                 Apply Now <ArrowRight size={14} />
               </a>
               <Link
-                href="/#start"
+                href="/get-quote"
                 className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
               >
                 Contact Us Now
@@ -936,7 +940,7 @@ export default function LoanProgramsPage() {
                 Apply Now <ArrowRight size={14} />
               </a>
               <Link
-                href="/#start"
+                href="/get-quote"
                 className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
               >
                 Contact Us Now
@@ -1005,7 +1009,7 @@ export default function LoanProgramsPage() {
                 Apply Now <ArrowRight size={14} />
               </a>
               <Link
-                href="/#start"
+                href="/get-quote"
                 className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
               >
                 Contact Us Now
@@ -1175,7 +1179,7 @@ export default function LoanProgramsPage() {
                 Apply Now <ArrowRight size={14} />
               </a>
               <Link
-                href="/#start"
+                href="/get-quote"
                 className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
               >
                 Contact Us Now
@@ -1253,7 +1257,7 @@ export default function LoanProgramsPage() {
                 Apply Now <ArrowRight size={14} />
               </a>
               <Link
-                href="/#start"
+                href="/get-quote"
                 className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
               >
                 Contact Us Now
@@ -1351,7 +1355,7 @@ export default function LoanProgramsPage() {
                 Apply Now <ArrowRight size={14} />
               </a>
               <Link
-                href="/#start"
+                href="/get-quote"
                 className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
               >
                 Contact Us Now
@@ -1438,7 +1442,7 @@ export default function LoanProgramsPage() {
                 Apply Now <ArrowRight size={14} />
               </a>
               <Link
-                href="/#start"
+                href="/get-quote"
                 className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
               >
                 Contact Us Now
@@ -1530,7 +1534,7 @@ export default function LoanProgramsPage() {
                   Apply Now <ArrowRight size={14} />
                 </a>
                 <Link
-                  href="/#start"
+                  href="/get-quote"
                   className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
                 >
                   Contact Us Now
@@ -1686,7 +1690,7 @@ export default function LoanProgramsPage() {
                   Apply Now <ArrowRight size={14} />
                 </a>
                 <Link
-                  href="/#start"
+                  href="/get-quote"
                   className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
                 >
                   Contact Us Now
@@ -1802,7 +1806,7 @@ export default function LoanProgramsPage() {
                   Apply Now <ArrowRight size={14} />
                 </a>
                 <Link
-                  href="/#start"
+                  href="/get-quote"
                   className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
                 >
                   Contact Us Now
@@ -1920,7 +1924,7 @@ export default function LoanProgramsPage() {
                   Apply Now <ArrowRight size={14} />
                 </a>
                 <Link
-                  href="/#start"
+                  href="/get-quote"
                   className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
                 >
                   Contact Us Now
@@ -2037,7 +2041,7 @@ export default function LoanProgramsPage() {
                   Apply Now <ArrowRight size={14} />
                 </a>
                 <Link
-                  href="/#start"
+                  href="/get-quote"
                   className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
                 >
                   Contact Us Now
@@ -2161,7 +2165,7 @@ export default function LoanProgramsPage() {
                   Apply Now <ArrowRight size={14} />
                 </a>
                 <Link
-                  href="/#start"
+                  href="/get-quote"
                   className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
                 >
                   Contact Us Now
@@ -2224,7 +2228,7 @@ export default function LoanProgramsPage() {
                 Apply Now <ArrowRight size={14} />
               </a>
               <Link
-                href="/#start"
+                href="/get-quote"
                 className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
               >
                 Contact Us Now
@@ -2285,7 +2289,7 @@ export default function LoanProgramsPage() {
                 Apply Now <ArrowRight size={14} />
               </a>
               <Link
-                href="/#start"
+                href="/get-quote"
                 className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
               >
                 Contact Us Now
@@ -2346,7 +2350,7 @@ export default function LoanProgramsPage() {
                 Apply Now <ArrowRight size={14} />
               </a>
               <Link
-                href="/#start"
+                href="/get-quote"
                 className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
               >
                 Contact Us Now
@@ -2406,7 +2410,7 @@ export default function LoanProgramsPage() {
                 Apply Now <ArrowRight size={14} />
               </a>
               <Link
-                href="/#start"
+                href="/get-quote"
                 className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
               >
                 Contact Us Now
@@ -2464,7 +2468,7 @@ export default function LoanProgramsPage() {
                 Apply Now <ArrowRight size={14} />
               </a>
               <Link
-                href="/#start"
+                href="/get-quote"
                 className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
               >
                 Contact Us Now
@@ -2624,7 +2628,7 @@ export default function LoanProgramsPage() {
                   Apply Now <ArrowRight size={14} />
                 </a>
                 <Link
-                  href="/#start"
+                  href="/get-quote"
                   className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
                 >
                   Contact Us Now
@@ -2704,7 +2708,7 @@ export default function LoanProgramsPage() {
                 Apply Now <ArrowRight size={14} />
               </a>
               <Link
-                href="/#start"
+                href="/get-quote"
                 className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
               >
                 Contact Us Now
@@ -2817,7 +2821,7 @@ export default function LoanProgramsPage() {
                 Apply Now <ArrowRight size={14} />
               </a>
               <Link
-                href="/#start"
+                href="/get-quote"
                 className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
               >
                 Contact Us Now
@@ -2897,7 +2901,7 @@ export default function LoanProgramsPage() {
                 Apply Now <ArrowRight size={14} />
               </a>
               <Link
-                href="/#start"
+                href="/get-quote"
                 className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
               >
                 Contact Us Now
@@ -2974,7 +2978,7 @@ export default function LoanProgramsPage() {
                 Apply Now <ArrowRight size={14} />
               </a>
               <Link
-                href="/#start"
+                href="/get-quote"
                 className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
               >
                 Contact Us Now
