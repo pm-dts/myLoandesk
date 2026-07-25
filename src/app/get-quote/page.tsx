@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "@tanstack/react-form";
 import { Check, ChevronDown, AlertCircle } from "lucide-react";
 import { PhoneInput } from "react-international-phone";
@@ -20,6 +20,8 @@ interface FormValues {
 }
 
 export default function GetQuote() {
+  const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false);
+
   const form = useForm({
     defaultValues: {
       fullName: "",
@@ -62,11 +64,12 @@ export default function GetQuote() {
 
         console.log("Quote request successfully submitted to GHL:", value);
 
-        toast.success("Thank you! Your quote request has been received.", {
+        toast.success("Request submitted successfully.", {
           id: toastId,
-          duration: 5000,
+          duration: 3000,
         });
 
+        setIsSuccessModalOpen(true);
         form.reset();
       } catch (error) {
         console.error("Error submitting to webhook:", error);
@@ -93,8 +96,40 @@ export default function GetQuote() {
   };
 
   return (
-    <main className="min-h-screen bg-cream py-24 px-6 flex items-center justify-center">
+    <main className="min-h-screen bg-cream py-24 px-6 flex items-center justify-center relative">
       <Toaster position="bottom-right" />
+
+      {/* Success Modal */}
+      {isSuccessModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/40 backdrop-blur-sm p-4">
+          <div className="bg-primary-bg rounded-3xl p-8 sm:p-10 max-w-md w-full shadow-2xl relative border border-line animate-in fade-in zoom-in duration-300">
+            <h3 className="text-2xl sm:text-3xl font-display font-semibold text-ink mb-4 text-center">
+              Thank You!
+            </h3>
+            <p className="text-ink-2 mb-4 text-center leading-relaxed">
+              Thank you for your inquiry. A MyLoanDesk loan specialist will
+              contact you shortly.
+            </p>
+            <p className="text-ink-2 mb-8 text-center leading-relaxed">
+              If you need immediate assistance, you can also call or text us at{" "}
+              <a
+                href="tel:3058916500"
+                className="font-semibold text-brand-orange hover:underline"
+              >
+                (305) 891-6500
+              </a>
+              .
+            </p>
+            <button
+              onClick={() => setIsSuccessModalOpen(false)}
+              className="w-full bg-brand-orange text-primary-bg py-3.5 px-6 rounded-full font-semibold hover:bg-orange-600 transition-colors focus-ring"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+
       <div className="max-w-3xl w-full mx-auto bg-primary-bg rounded-[32px] p-8 sm:p-12 lg:p-14 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-line">
         <div className="text-center max-w-2xl mx-auto mb-8">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-display font-semibold text-ink tracking-tight mb-4">
@@ -380,7 +415,7 @@ export default function GetQuote() {
                   htmlFor={field.name}
                   className="block text-sm font-medium text-ink mb-2"
                 >
-                  Anything else we should know? (Optional)
+                  Tell Us How We Can Help?
                 </label>
                 <textarea
                   id={field.name}
@@ -405,7 +440,7 @@ export default function GetQuote() {
                   disabled={!canSubmit || isSubmitting}
                   className="btn-shine w-full sm:w-auto min-w-[240px] mx-auto block bg-brand-orange text-primary-bg py-4 px-8 rounded-full text-base font-semibold hover:bg-brand-orange/90 transition-colors focus-ring disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {isSubmitting ? "Processing..." : "Review My Options"}
+                  {isSubmitting ? "Processing..." : "Get My Loan Options"}
                 </button>
               )}
             />
