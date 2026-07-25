@@ -144,13 +144,13 @@ export default function AboutUs() {
           </p>
           <div className="pt-4 flex flex-wrap justify-center gap-4">
             <Link
-              href="/#contact"
+              href="/#start"
               className="bg-[#FF6B00] text-white px-8 py-3.5 rounded-full font-semibold hover:bg-[#e66000] transition-colors shadow-md outline-none focus:ring-4 focus:ring-[#FF6B00]/30 text-sm"
             >
               Speak With Us Now
             </Link>
             <Link
-              href="/#rates"
+              href="/#live-rates-widget"
               className="bg-white/10 text-white border border-white/20 px-8 py-3.5 rounded-full font-semibold hover:bg-white/20 transition-colors text-sm"
             >
               Explore Live Rates

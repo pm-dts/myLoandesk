@@ -395,7 +395,7 @@ export default function PreQualified() {
                           } focus-ring`}
                         >
                           <option value="" disabled>
-                            What do you need?
+                            How can we help?
                           </option>
                           <option value="buy a home">Buy a home</option>
                           <option value="refinance my mortgage">

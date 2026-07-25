@@ -136,7 +136,10 @@ export default function Hero() {
 
       <section className="py-10 px-4 sm:px-6 flex flex-col items-center gap-6">
         {/* 1. Optimal Blue Widget */}
-        <div className="p-4 rounded-2xl bg-cream w-full max-w-[782px] flex flex-col justify-center overflow-hidden border border-line/30 shadow-sm" id="live-rates-widget">
+        <div
+          className="p-4 rounded-2xl bg-cream w-full max-w-[782px] flex flex-col justify-center overflow-hidden border border-line/30 shadow-sm"
+          id="live-rates-widget"
+        >
           <iframe
             src="https://www2.optimalblue.com/OBMMI/widgetConfig.php?actbg=2a3f38&inactbg=fdf9f2&inacttext=2a3f38&hoverBG=fdf9f2&hoverColor=2a3f38&rate=2a3f38&graph1=2a3f38&graph2=f57126"
             width="750"
@@ -262,61 +265,64 @@ export default function Hero() {
           {/* Cards Grid */}
           <div className="grid sm:grid-cols-2 gap-6 max-w-7xl mx-auto">
             {/* Forward Mortgage */}
-            <article className="bg-cream border border-line rounded-2xl p-7 transition-all duration-300 hover:border-moss-deep/30 hover:shadow-[0_20px_50px_-20px_rgba(15,61,46,0.25)] hover:-translate-y-1">
-              <div className="w-12 h-12 rounded-xl bg-moss-deep/10 flex items-center justify-center mb-5">
-                <Home className="text-moss-deep" size={22} strokeWidth={1.8} />
-              </div>
-              <h3 className="font-display text-2xl mb-2 text-ink">
-                Forward Mortgage
-              </h3>
-              <p className="text-sm text-ink-2 leading-relaxed mb-5">
-                Traditional financing structures including Conventional, FHA,
-                VA, and Jumbo loan programs. Built with flexible terms for
-                purchasing a new property or executing standard refinance
-                options.
-              </p>
-              <div className="flex items-center justify-between text-xs pt-2 border-t border-line/40">
-                <span className="text-ink-2 font-medium">
-                  Purchase & Refinance
-                </span>
-                <Link
-                  href="/loan-programs#resident"
-                  className="font-semibold text-moss-deep ulink flex items-center gap-1"
-                >
-                  Explore Programs →
-                </Link>
-              </div>
-            </article>
+            <Link href={"/loan-programs#resident"}>
+              <article className="bg-cream border border-line rounded-2xl p-7 transition-all duration-300 hover:border-moss-deep/30 hover:shadow-[0_20px_50px_-20px_rgba(15,61,46,0.25)] hover:-translate-y-1">
+                <div className="w-12 h-12 rounded-xl bg-moss-deep/10 flex items-center justify-center mb-5">
+                  <Home
+                    className="text-moss-deep"
+                    size={22}
+                    strokeWidth={1.8}
+                  />
+                </div>
+                <h3 className="font-display text-2xl mb-2 text-ink">
+                  Forward Mortgage
+                </h3>
+                <p className="text-sm text-ink-2 leading-relaxed mb-5">
+                  Traditional financing structures including Conventional, FHA,
+                  VA, and Jumbo loan programs. Built with flexible terms for
+                  purchasing a new property or executing standard refinance
+                  options.
+                </p>
+                <div className="flex items-center justify-between text-xs pt-2 border-t border-line/40">
+                  <span className="text-ink-2 font-medium">
+                    Purchase & Refinance
+                  </span>
+                  <span className="font-semibold text-moss-deep ulink flex items-center gap-1">
+                    Explore Programs →
+                  </span>
+                </div>
+              </article>
+            </Link>
 
             {/* Reverse Mortgage */}
-            <article className="bg-cream border border-line rounded-2xl p-7 transition-all duration-300 hover:border-moss-deep/30 hover:shadow-[0_20px_50px_-20px_rgba(15,61,46,0.25)] hover:-translate-y-1">
-              <div className="w-12 h-12 rounded-xl bg-brand-orange/10 flex items-center justify-center mb-5">
-                <RefreshCw
-                  className="text-brand-orange"
-                  size={22}
-                  strokeWidth={1.8}
-                />
-              </div>
-              <h3 className="font-display text-2xl mb-2 text-ink">
-                Reverse Mortgage
-              </h3>
-              <p className="text-sm text-ink-2 leading-relaxed mb-5">
-                Tap into home equity without the burden of monthly mortgage
-                payments. Designed exclusively for older homeowners looking to
-                convert home equity into tax-free cash or dynamic credit lines.
-              </p>
-              <div className="flex items-center justify-between text-xs pt-2 border-t border-line/40">
-                <span className="text-ink-2 font-medium">
-                  Live in your home with no mortgage payments
-                </span>
-                <Link
-                  href="/reverse-mortgage"
-                  className="font-semibold text-moss-deep ulink flex items-center gap-1"
-                >
-                  Explore Options →
-                </Link>
-              </div>
-            </article>
+            <Link href={"/reverse-mortgage"}>
+              <article className="bg-cream border border-line rounded-2xl p-7 transition-all duration-300 hover:border-moss-deep/30 hover:shadow-[0_20px_50px_-20px_rgba(15,61,46,0.25)] hover:-translate-y-1">
+                <div className="w-12 h-12 rounded-xl bg-brand-orange/10 flex items-center justify-center mb-5">
+                  <RefreshCw
+                    className="text-brand-orange"
+                    size={22}
+                    strokeWidth={1.8}
+                  />
+                </div>
+                <h3 className="font-display text-2xl mb-2 text-ink">
+                  Reverse Mortgage
+                </h3>
+                <p className="text-sm text-ink-2 leading-relaxed mb-5">
+                  Tap into home equity without the burden of monthly mortgage
+                  payments. Designed exclusively for older homeowners looking to
+                  convert home equity into tax-free cash or dynamic credit
+                  lines.
+                </p>
+                <div className="flex items-center justify-between text-xs pt-2 border-t border-line/40">
+                  <span className="text-ink-2 font-medium">
+                    Live in your home with no mortgage payments
+                  </span>
+                  <span className="font-semibold text-moss-deep ulink flex items-center gap-1">
+                    Explore Options →
+                  </span>
+                </div>
+              </article>
+            </Link>
           </div>
         </div>
       </section>
