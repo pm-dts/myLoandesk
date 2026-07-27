@@ -130,7 +130,7 @@ export const Header: React.FC = () => {
       />
 
       {/* --- DESKTOP NAVIGATION --- */}
-      <nav className="hidden lg:flex max-w-[1500px] mx-auto px-6 lg:px-8 h-36 items-center justify-between gap-4">
+      <nav className="hidden lg:flex max-w-[1600px] mx-auto px-6 lg:px-8 h-36 items-center justify-between gap-4">
         {/* Desktop Logo Layout */}
         <Link href="/" className="shrink-0 flex items-center py-2">
           <Image
@@ -152,7 +152,7 @@ export const Header: React.FC = () => {
           >
             <Link
               href="/loan-programs"
-              className="ulink focus-ring flex items-center gap-1 cursor-pointer"
+              className="ulink focus-ring flex items-center text-[14px] font-medium gap-1 cursor-pointer"
             >
               Loan types
               <ChevronDown
@@ -160,9 +160,11 @@ export const Header: React.FC = () => {
                 className={`transition-transform duration-300 ${isDropdownOpen ? "rotate-180" : ""}`}
               />
             </Link>
-            
+
             {/* Added a transparent bridge area to keep hover active between the link and the dropdown */}
-            <div className={`absolute left-0 top-full h-4 w-full ${isDropdownOpen ? "block" : "hidden"}`}></div>
+            <div
+              className={`absolute left-0 top-full h-4 w-full ${isDropdownOpen ? "block" : "hidden"}`}
+            ></div>
 
             <div
               className={`absolute left-0 top-[calc(100%+8px)] w-[560px] bg-primary-bg border border-line rounded-2xl shadow-xl p-5 grid grid-cols-2 gap-x-4 gap-y-1.5 transition-all duration-200 origin-top z-[60] ${
@@ -184,28 +186,52 @@ export const Header: React.FC = () => {
             </div>
           </div>
 
-          <Link href="/secure-document-upload" className="ulink focus-ring">
+          <Link
+            href="/secure-document-upload"
+            className="ulink focus-ring text-[14px] font-medium"
+          >
             Secure Doc Upload
           </Link>
-          <Link href="/about-us" className="ulink focus-ring">
+          <Link
+            href="/about-us"
+            className="ulink focus-ring text-[14px] font-medium"
+          >
             About us
           </Link>
-          <Link href="/realtors" className="ulink focus-ring">
+          <Link
+            href="/realtors"
+            className="ulink focus-ring text-[14px] font-medium"
+          >
             Realtors
           </Link>
-          <Link href="/careers" className="ulink focus-ring">
+          <Link
+            href="/careers"
+            className="ulink focus-ring text-[14px] font-medium"
+          >
             Careers
           </Link>
-          <Link href="/calendar" className="ulink focus-ring">
+          <Link
+            href="/calendar"
+            className="ulink focus-ring text-[14px] font-medium"
+          >
             Our Calendar
           </Link>
-          <Link href="/#calculator" className="ulink focus-ring">
+          <Link
+            href="/#calculator"
+            className="ulink focus-ring text-[14px] font-medium"
+          >
             Calculator
           </Link>
-          <Link href="/#faq" className="ulink focus-ring">
+          <Link
+            href="/#faq"
+            className="ulink focus-ring text-[14px] font-medium"
+          >
             FAQ
           </Link>
-          <Link href="/blog" className="ulink focus-ring">
+          <Link
+            href="/blog"
+            className="ulink focus-ring text-[14px] font-medium"
+          >
             Blog
           </Link>
         </div>

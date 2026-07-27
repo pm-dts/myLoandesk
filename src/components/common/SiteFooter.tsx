@@ -137,7 +137,7 @@ export default function Footer() {
               {[
                 { label: "Calculator", href: "/#calculator" },
                 { label: "FAQ", href: "/#faq" },
-                { label: "Rate watch", href: "/#live-rates-widget" },
+                { label: "Watch Live Rates", href: "/#live-rates-widget" },
                 { label: "Google Reviews", href: "/#reviews" },
                 // { label: "Glossary", href: "#" },
               ].map((link, idx) => (
