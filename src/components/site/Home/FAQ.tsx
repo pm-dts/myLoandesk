@@ -129,7 +129,7 @@ export default function Faq() {
             <div className="p-5 bg-primary-bg border border-line rounded-xl shadow-sm">
               <div className="flex items-center justify-between mb-3">
                 <div className="text-xs font-semibold text-ink-2 uppercase tracking-wider">
-                  Today's Live Rates
+                  Today Average US Mortgage Rates
                 </div>
                 {ratesLoading && (
                   <Loader2 className="w-4 h-4 text-brand-orange animate-spin" />
