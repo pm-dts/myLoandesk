@@ -811,7 +811,7 @@ export default function LoanProgramsPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-line border border-line rounded-3xl overflow-hidden shadow-sm">
           {/* FHA 203(k) Rehab Loans */}
           <div
-            id="rehab"
+            id="fha-203k"
             className="scroll-mt-36 bg-primary-bg p-8 flex flex-col justify-between transition-colors duration-300 hover:bg-cream/40"
           >
             <div>

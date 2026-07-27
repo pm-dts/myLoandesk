@@ -22,7 +22,7 @@ const loanLinks = [
   { name: "Jumbo Loans", href: "/loan-programs#portfolio" },
   { name: "VA Loans", href: "/loan-programs#va" },
   { name: "Hybrid Loans", href: "/loan-programs#hybrid" },
-  { name: "Private Bridge & Hard Money", href: "/loan-programs#bridge-money" },
+  { name: "Private Bridge Loans", href: "/loan-programs#bridge" },
   { name: "Bridge to Sale", href: "/loan-programs#bridge-to-sale" },
   {
     name: "International Buyers Section",
@@ -31,12 +31,12 @@ const loanLinks = [
   { name: "ITIN Home Loans", href: "/loan-programs#ITIN-home" },
   { name: "FHA 203(k) Rehab Loans", href: "/loan-programs#fha-203k" },
   { name: "Refinance Options", href: "/loan-programs#refinance" },
-  { name: "FHA Streamline Refinance", href: "/loan-programs#fha-streamline" },
+  { name: "FHA Streamline Refinance", href: "/loan-programs#streamline" },
   { name: "HELOC / Equity Lines", href: "/loan-programs#heloc" },
   { name: "DSCR Investment Property Loans", href: "/loan-programs#DSCR" },
   { name: "Fix & Flip Loans", href: "/loan-programs#fix-flip" },
   { name: "Ground-Up Construction Loans", href: "/loan-programs#ground-up" },
-  { name: "Bridge Loans", href: "/loan-programs#bridge-loans" },
+  // { name: "Bridge Loans", href: "/loan-programs#bridge-loans" },
   { name: "Reverse Mortgage", href: "/loan-programs#reverse-mortgage" },
   {
     name: "Commercial Real Estate Loans",
