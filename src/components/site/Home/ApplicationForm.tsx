@@ -66,7 +66,7 @@ export const TailwindPhoneInput = ({ value, onChange, error }: any) => {
           type="tel"
           value={inputValue}
           onChange={handlePhoneValueChange}
-          placeholder="Phone number"
+          placeholder="Phone number (optional)"
           className="w-full bg-transparent border-none outline-none text-sm px-4 py-3 placeholder:text-ink-2/40"
         />
       </div>
@@ -311,16 +311,8 @@ export default function PreQualified() {
                     )}
                   </form.Field>
 
-                  {/* International Phone Field */}
-                  <form.Field
-                    name="phone"
-                    validators={{
-                      onSubmit: ({ value }) =>
-                        !value || value.length < 7
-                          ? "Valid phone is required"
-                          : undefined,
-                    }}
-                  >
+                  {/* Optional International Phone Field */}
+                  <form.Field name="phone">
                     {(field) => (
                       <div>
                         <TailwindPhoneInput
@@ -328,11 +320,6 @@ export default function PreQualified() {
                           onChange={(val: string) => field.handleChange(val)}
                           error={field.state.meta.errors.length > 0}
                         />
-                        {field.state.meta.errors.length > 0 && (
-                          <span className="text-red-500 text-[10px] mt-1 block">
-                            {field.state.meta.errors[0]}
-                          </span>
-                        )}
                       </div>
                     )}
                   </form.Field>

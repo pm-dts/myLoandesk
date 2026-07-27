@@ -1,10 +1,18 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useForm } from "@tanstack/react-form";
 import toast from "react-hot-toast";
 import { Fraunces } from "next/font/google";
 import { cn } from "@/lib/utils";
+import {
+  defaultCountries,
+  FlagImage,
+  parseCountry,
+  usePhoneInput,
+} from "react-international-phone";
+import "react-international-phone/style.css";
+import { ChevronDown } from "lucide-react";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -14,6 +22,94 @@ const fraunces = Fraunces({
 
 const REFERRAL_WEBHOOK_URL =
   "https://services.leadconnectorhq.com/hooks/Lv5oqPcJ6MZsszgssznB/webhook-trigger/14048627-1ba4-4c85-8a57-fc99e211650a";
+
+export const TailwindPhoneInput = ({ value, onChange, error }: any) => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  const { inputValue, handlePhoneValueChange, inputRef, country, setCountry } =
+    usePhoneInput({
+      defaultCountry: "us",
+      value,
+      countries: defaultCountries,
+      onChange: (data) => onChange(data.phone),
+    });
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setIsDropdownOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  return (
+    <div className="relative w-full">
+      <div
+        className={`flex w-full bg-cream/10 border ${
+          error ? "border-brand-orange" : "border-line"
+        } rounded-xl focus-within:border-moss-deep focus-within:ring-1 focus-within:ring-moss-deep transition-colors overflow-hidden`}
+      >
+        {/* Country Selector Button */}
+        <button
+          type="button"
+          onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+          className="flex items-center gap-1 px-3 border-r border-line bg-cream/20 hover:bg-cream/40 transition-colors"
+        >
+          <FlagImage iso2={country.iso2} size={20} />
+          <ChevronDown size={14} className="text-ink-2" />
+        </button>
+
+        {/* Input Field */}
+        <input
+          ref={inputRef}
+          type="tel"
+          value={inputValue}
+          onChange={handlePhoneValueChange}
+          placeholder="Phone number"
+          className="w-full bg-transparent border-none outline-none text-sm px-4 py-3 text-ink placeholder:text-ink-2/40"
+        />
+      </div>
+
+      {/* Country Dropdown */}
+      {isDropdownOpen && (
+        <div
+          ref={dropdownRef}
+          className="absolute left-0 top-full mt-2 w-72 h-64 overflow-y-auto bg-white border border-line rounded-xl shadow-2xl z-50 p-2"
+        >
+          {defaultCountries.map((c) => {
+            const countryData = parseCountry(c);
+            return (
+              <button
+                key={countryData.iso2}
+                type="button"
+                className="w-full flex items-center gap-3 p-2 hover:bg-cream rounded-lg text-sm transition-colors"
+                onClick={() => {
+                  setCountry(countryData.iso2);
+                  setIsDropdownOpen(false);
+                }}
+              >
+                <FlagImage iso2={countryData.iso2} size={20} />
+                <span className="flex-1 text-left text-ink-2">
+                  {countryData.name}
+                </span>
+                <span className="text-ink-2/60 font-mono text-xs">
+                  +{countryData.dialCode}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+      )}
+    </div>
+  );
+};
 
 export default function ReferralFormSection() {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -160,33 +256,18 @@ export default function ReferralFormSection() {
                 )}
               </form.Field>
 
-              <form.Field
-                name="realtorPhone"
-                validators={{
-                  onChange: ({ value }) => (!value ? "Required" : undefined),
-                }}
-              >
+              {/* Optional Realtor International Phone */}
+              <form.Field name="realtorPhone">
                 {(field) => (
                   <div>
                     <label className="block text-xs font-medium text-ink-2 uppercase tracking-wider mb-2">
-                      Realtor Phone Number *
+                      Realtor Phone Number (Optional)
                     </label>
-                    <input
-                      type="tel"
+                    <TailwindPhoneInput
                       value={field.state.value}
-                      onBlur={field.handleBlur}
-                      onChange={(e) => field.handleChange(e.target.value)}
-                      className={`w-full border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-moss-deep transition ${
-                        field.state.meta.errors.length
-                          ? "border-brand-orange"
-                          : "border-line"
-                      }`}
+                      onChange={(val: string) => field.handleChange(val)}
+                      error={field.state.meta.errors.length > 0}
                     />
-                    {field.state.meta.errors.length > 0 && (
-                      <span className="text-brand-orange text-[10px] mt-1 block">
-                        {field.state.meta.errors[0]}
-                      </span>
-                    )}
                   </div>
                 )}
               </form.Field>
@@ -295,33 +376,18 @@ export default function ReferralFormSection() {
                 )}
               </form.Field>
 
-              <form.Field
-                name="borrowerPhone"
-                validators={{
-                  onChange: ({ value }) => (!value ? "Required" : undefined),
-                }}
-              >
+              {/* Optional Borrower International Phone */}
+              <form.Field name="borrowerPhone">
                 {(field) => (
                   <div>
                     <label className="block text-xs font-medium text-ink-2 uppercase tracking-wider mb-2">
-                      Borrower Phone Number *
+                      Borrower Phone Number (Optional)
                     </label>
-                    <input
-                      type="tel"
+                    <TailwindPhoneInput
                       value={field.state.value}
-                      onBlur={field.handleBlur}
-                      onChange={(e) => field.handleChange(e.target.value)}
-                      className={`w-full border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-moss-deep transition ${
-                        field.state.meta.errors.length
-                          ? "border-brand-orange"
-                          : "border-line"
-                      }`}
+                      onChange={(val: string) => field.handleChange(val)}
+                      error={field.state.meta.errors.length > 0}
                     />
-                    {field.state.meta.errors.length > 0 && (
-                      <span className="text-brand-orange text-[10px] mt-1 block">
-                        {field.state.meta.errors[0]}
-                      </span>
-                    )}
                   </div>
                 )}
               </form.Field>

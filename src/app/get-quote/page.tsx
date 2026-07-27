@@ -261,29 +261,18 @@ export default function GetQuote() {
               )}
             />
 
+            {/* Optional Phone Field */}
             <form.Field
               name="phone"
-              validators={{
-                onSubmit: ({ value }) =>
-                  !value || value.length < 8
-                    ? "Valid phone number is required"
-                    : undefined,
-              }}
               children={(field) => (
                 <div>
                   <label
                     htmlFor={field.name}
                     className="block text-sm font-medium text-ink mb-2"
                   >
-                    Phone *
+                    Phone (optional)
                   </label>
-                  <div
-                    className={`relative flex items-center w-full h-12 bg-primary-bg border rounded-full focus-within:border-moss-deep transition-colors focus-ring ${
-                      field.state.meta.errors.length
-                        ? "border-brand-orange"
-                        : "border-line"
-                    }`}
-                  >
+                  <div className="relative flex items-center w-full h-12 bg-primary-bg border border-line rounded-full focus-within:border-moss-deep transition-colors focus-ring">
                     <PhoneInput
                       defaultCountry="us"
                       value={field.state.value}
@@ -306,12 +295,6 @@ export default function GetQuote() {
                       }
                     />
                   </div>
-                  {field.state.meta.errors.length > 0 && (
-                    <p className="text-xs text-brand-orange mt-1.5 flex items-center gap-1">
-                      <AlertCircle size={12} />{" "}
-                      {field.state.meta.errors.join(", ")}
-                    </p>
-                  )}
                 </div>
               )}
             />
