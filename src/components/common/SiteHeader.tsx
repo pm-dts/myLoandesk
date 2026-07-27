@@ -361,6 +361,22 @@ export const Header: React.FC = () => {
             </Link>
 
             <Link
+              href="/get-quote"
+              className="p-3 rounded-xl hover:bg-cream/30 text-sm"
+              onClick={toggleMobileMenu}
+            >
+              Get A Quote
+            </Link>
+
+            <Link
+              href="/blog"
+              className="p-3 rounded-xl hover:bg-cream/30 text-sm"
+              onClick={toggleMobileMenu}
+            >
+              Blog
+            </Link>
+
+            <Link
               href="/calendar"
               className="p-3 rounded-xl hover:bg-cream/30 text-sm flex items-center gap-2 text-brand-orange"
               onClick={toggleMobileMenu}
@@ -419,13 +435,6 @@ export const Header: React.FC = () => {
                 onClick={toggleMobileMenu}
               >
                 Calculator
-              </Link>
-              <Link
-                href="/#stories"
-                className="p-3 rounded-xl hover:bg-cream/30"
-                onClick={toggleMobileMenu}
-              >
-                Stories
               </Link>
               <Link
                 href="/#faq"
