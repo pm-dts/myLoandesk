@@ -154,23 +154,49 @@ export default function LoanProgramsPage() {
                 Jumbo Loans
               </h3>
               <div className="text-sm text-ink-2 space-y-4 mb-6 leading-relaxed">
+                <p>Exceptional homes deserve exceptional financing.</p>
                 <p>
-                  Jumbo loans are made to fill the gap between conventional
-                  loans and private or hard money loans. These are made by a
-                  lender who keeps the debt on their Jumbo to earn consistent
-                  interest, rather than selling it to secondary markets.
+                  Our Jumbo Loan programs are designed for luxury homes,
+                  high-value properties, and discerning borrowers who expect
+                  personalized, white-glove service from start to finish.
+                  Whether you're purchasing a primary residence, second home, or
+                  investment property, we provide access to some of the
+                  industry's most competitive rates, flexible underwriting, and
+                  customized financing solutions.
                 </p>
                 <p>
-                  In contrast, conventional loans are typically sold to another
-                  institution that will service the loan shortly after closing.
-                </p>
-                <p>
-                  Jumbo loan programs are built for clients who have difficulty
-                  proving their income under standard conventional guidelines,
-                  or who have navigated complex credit issues, past
-                  bankruptcies, foreclosures, or tax liens.
+                  At MyLoanDesk, we understand that affluent borrowers often
+                  have complex financial profiles. From self-employed
+                  professionals and business owners to executives, investors,
+                  and foreign nationals, our experienced team works with a broad
+                  network of premier jumbo lenders to structure financing
+                  tailored to your unique needs.
                 </p>
               </div>
+              <h4 className="font-medium text-ink mb-3">Ideal For:</h4>
+
+              <ul className="space-y-2 mb-6">
+                {[
+                  "Luxury and high-value homes",
+                  "Loan amounts above conventional limit",
+                  "Self-employed and high-net-worth borrowers",
+                  "Complex income or asset structures",
+                  "Primary, vacation, and investment properties",
+                ].map((item, index) => (
+                  <li
+                    key={index}
+                    className="flex items-start gap-2 text-xs text-ink/90 leading-normal"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-1.5 shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="font-bold text-sm text-ink-2 space-y-4 mb-6 leading-relaxed">
+                Experience the difference of personalized, concierge-level
+                service with competitive rates, exceptional terms, and a lending
+                experience designed around you.
+              </p>
             </div>
             <div className="flex flex-col gap-3 mt-6">
               <a
@@ -1020,11 +1046,11 @@ export default function LoanProgramsPage() {
           {/* HELOC (Home Equity Line of Credit) - Added col-span-1 for mobile responsiveness */}
           <div
             id="heloc"
-            className="scroll-mt-36 col-span-1 md:col-span-2 lg:col-span-3 bg-primary-bg p-8 flex flex-col justify-between transition-colors duration-300 hover:bg-cream/40"
+            className="scroll-mt-36 col-span-1 md:col-span-2 lg:col-span-3 bg-primary-bg p-6 sm:p-8 flex flex-col justify-between transition-colors duration-300 hover:bg-cream/40"
           >
             <div>
               <div className="flex items-center justify-between mb-6">
-                <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-moss-deep/10 text-moss-deep">
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-moss-deep/10 text-moss-deep shrink-0">
                   <Landmark size={22} strokeWidth={1.8} />
                 </div>
                 <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2 py-1 rounded">
@@ -1033,143 +1059,199 @@ export default function LoanProgramsPage() {
               </div>
               <h3
                 className={cn(
-                  "text-2xl font-medium text-ink mb-4",
+                  "text-2xl sm:text-3xl font-medium text-ink mb-2",
                   fraunces.className,
                 )}
               >
-                Home Equity Line of Credit (HELOC)
+                Home Equity Solutions
               </h3>
-              <p className="text-sm text-ink mb-4 font-semibold">
-                How do HELOCs work?
+              <p className="text-sm font-semibold text-brand-orange mb-4">
+                Unlock the Value in Your Home Without Selling It
+              </p>
+              <p className="text-sm text-ink-2 leading-relaxed mb-8 max-w-3xl">
+                Whether you need ongoing access to funds or a one-time lump sum,
+                MyLoanDesk offers competitive home equity financing designed
+                around your goals.
               </p>
 
-              <div className="grid md:grid-cols-2 gap-6 text-xs text-ink-2 mb-6">
-                {/* Variant 1 */}
-                <div className="bg-primary-bg border border-line p-4 rounded-xl">
-                  <h4 className="font-bold text-ink mb-2 text-[16px]">
+              {/* Stacked Long-Column Content */}
+              <div className="space-y-8 text-xs text-ink-2 mb-8">
+                {/* HELOC Section */}
+                <div className="border-b border-line pb-8">
+                  <h4 className="font-bold text-ink mb-2 text-base sm:text-lg">
                     Home Equity Line of Credit (HELOC)
                   </h4>
-                  <h6 className="font-semibold text-ink mb-2 text-sm">
-                    Turn Your Home's Equity Into Financial Flexibility
-                  </h6>
-                  <p className="text-sm text-ink-2 mb-4 ">
-                    Your home is more than where you live—it's one of your
-                    greatest financial assets. A Home Equity Line of Credit
-                    (HELOC) lets you access your available equity when you need
-                    it, giving you the freedom to finance home improvements,
-                    consolidate higher-interest debt, invest in real estate,
-                    cover education expenses, or handle life's unexpected
-                    opportunities.
-                  </p>
-                  <p className="text-sm text-ink-2 mb-4 ">
-                    Whether you're looking for a little extra flexibility or a
-                    substantial line of credit, MyLoanDesk offers competitive
-                    HELOC solutions tailored to your financial goals.
-                  </p>
-                  <h6 className="font-semibold text-ink mb-2 text-sm">
-                    Why Choose Our HELOC Program?
-                  </h6>
-                  <ul className="space-y-3 mb-6 list-disc">
-                    {[
-                      "Borrow up to $1,000,000 with flexible repayment terms from 5 to 30 years",
-                      "Available on primary residences, second homes, and investment properties",
-                      "First, second, and third lien position HELOC options available",
-                      "No impact to your credit score during the initial pre-qualification process",
-                      "100% online application with a simple, secure, and convenient experience",
-                      "No appraisal required* for many qualified borrowers",
-                      "Competitive interest rates that are often lower than unsecured personal loans or credit cards",
-                      "Fast approvals and expedited funding* for eligible applicants",
-                    ].map((benefit, idx) => (
-                      <li
-                        key={idx}
-                        className="flex items-center gap-2.5 text-xs text-ink-2"
-                      >
-                        <span className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-1.5 shrink-0" />
-
-                        <span>{benefit}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <h6 className="font-semibold text-ink mb-2 text-sm">
-                    Smart Financing on Your Terms
-                  </h6>
-                  <p className="text-sm text-ink-2 mb-4 ">
-                    Unlike a traditional loan, a HELOC provides access to a
-                    revolving line of credit, allowing you to borrow only what
-                    you need and, in many cases, pay interest only on the amount
-                    you use. It's a flexible financing solution designed to
-                    adapt to your changing needs.
+                  <p className="text-xs sm:text-sm text-ink-2 mb-4 leading-relaxed max-w-3xl">
+                    A HELOC gives you a revolving line of credit that lets you
+                    borrow only what you need, when you need it.
                   </p>
 
-                  <p className="text-sm text-ink-2 mb-4">
-                    <span className="font-bold text-ink">
-                      Ready to put your home's equity to work?
-                    </span>{" "}
-                    Contact MyLoanDesk today to explore your options and
-                    discover how a HELOC can help you achieve your financial
-                    goals.
-                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 bg-cream/30 p-5 rounded-2xl border border-line/60">
+                    <div>
+                      <h5 className="font-semibold text-ink mb-2.5 text-xs sm:text-sm">
+                        Best For:
+                      </h5>
+                      <ul className="space-y-2">
+                        {[
+                          "Home improvements",
+                          "Debt consolidation",
+                          "Education expenses",
+                          "Investment opportunities",
+                          "Emergency funds",
+                        ].map((item, idx) => (
+                          <li
+                            key={idx}
+                            className="flex items-start gap-2 leading-tight"
+                          >
+                            <span className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-1 shrink-0" />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h5 className="font-semibold text-ink mb-2.5 text-xs sm:text-sm">
+                        Benefits:
+                      </h5>
+                      <ul className="space-y-2">
+                        {[
+                          "Borrow up to $1,000,000*",
+                          "Interest paid only on funds used",
+                          "Flexible repayment options",
+                          "Fast approvals",
+                          "No appraisal in many cases",
+                        ].map((item, idx) => (
+                          <li
+                            key={idx}
+                            className="flex items-start gap-2 leading-tight"
+                          >
+                            <span className="w-1.5 h-1.5 rounded-full bg-moss-deep mt-1 shrink-0" />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
                 </div>
 
-                {/* Variant 2 */}
-                <div className="bg-primary-bg border border-line p-4 rounded-xl">
-                  <h4 className="font-bold text-ink mb-2 text-[16px]">
-                    Fixed-Rate Home Equity Loan (Second Mortgage)
+                {/* Home Equity Loan Section */}
+                <div className="border-b border-line pb-8">
+                  <h4 className="font-bold text-ink mb-2 text-base sm:text-lg">
+                    Home Equity Loan (Second Mortgage)
                   </h4>
-                  <h6 className="font-semibold text-ink mb-2 text-sm">
-                    Access Your Home's Equity Without Refinancing Your First
-                    Mortgage
-                  </h6>
-                  <p className="text-sm text-ink-2 mb-4 ">
-                    If you've locked in a low interest rate on your current
-                    mortgage, there's no need to refinance to access your home's
-                    equity. A Fixed-Rate Home Equity Loan lets you borrow a lump
-                    sum while keeping your existing first mortgage exactly as it
-                    is.
+                  <p className="text-xs sm:text-sm text-ink-2 mb-4 leading-relaxed max-w-3xl">
+                    Receive a one-time lump sum while keeping your existing
+                    first mortgage and interest rate.
                   </p>
-                  <p className="text-sm text-ink-2 mb-4 ">
-                    Whether you're renovating your home, consolidating debt,
-                    funding a major purchase, or investing in new opportunities,
-                    this program provides predictable monthly payments and the
-                    security of a fixed interest rate.
-                  </p>
-                  <h6 className="font-semibold text-ink mb-2 text-sm">
-                    Program Highlights
-                  </h6>
-                  <ul className="space-y-3 mb-6 list-disc">
-                    {[
-                      "Keep your existing low-rate first mortgage intact",
-                      "Borrow up to $750,000*, subject to qualification",
-                      "Fixed interest rate with predictable monthly payments",
-                      "Fast approval and funding* for qualified borrowers",
-                      "Minimum credit score of 660",
-                      "Automated property valuation* available in many cases, reducing the need for a traditional appraisal",
-                      "Ideal for home",
-                    ].map((benefit, idx) => (
-                      <li
-                        key={idx}
-                        className="flex items-center gap-2.5 text-xs text-ink-2"
-                      >
-                        <span className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-1.5 shrink-0" />
 
-                        <span>{benefit}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 bg-cream/30 p-5 rounded-2xl border border-line/60">
+                    <div>
+                      <h5 className="font-semibold text-ink mb-2.5 text-xs sm:text-sm">
+                        Best For:
+                      </h5>
+                      <ul className="space-y-2">
+                        {[
+                          "Large renovations",
+                          "Major purchases",
+                          "Debt consolidation",
+                          "Real estate investing",
+                        ].map((item, idx) => (
+                          <li
+                            key={idx}
+                            className="flex items-start gap-2 leading-tight"
+                          >
+                            <span className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-1 shrink-0" />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
 
-                  <p className="text-sm text-ink-2 mb-4">
-                    <span className="font-bold text-ink">
-                      Ready to put your home's equity to work?
-                    </span>{" "}
-                    Contact MyLoanDesk today to explore your options and
-                    discover how a HELOC can help you achieve your financial
-                    goals.
-                  </p>
+                    <div>
+                      <h5 className="font-semibold text-ink mb-2.5 text-xs sm:text-sm">
+                        Benefits:
+                      </h5>
+                      <ul className="space-y-2">
+                        {[
+                          "Fixed interest rate",
+                          "Predictable monthly payments",
+                          "Keep your current first mortgage",
+                          "Fast approvals",
+                          "Borrow substantial equity",
+                        ].map((item, idx) => (
+                          <li
+                            key={idx}
+                            className="flex items-start gap-2 leading-tight"
+                          >
+                            <span className="w-1.5 h-1.5 rounded-full bg-moss-deep mt-1 shrink-0" />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
+
+              {/* Responsive Comparison Section */}
+              <div className="bg-cream/50 border border-line rounded-2xl p-5 sm:p-6 mb-8">
+                <h4 className="font-bold text-ink text-sm sm:text-base mb-4 text-center">
+                  Which Option Is Right For You?
+                </h4>
+                <div className="overflow-x-auto min-w-full">
+                  <table className="w-full text-xs text-left border-collapse">
+                    <thead>
+                      <tr className="border-b border-line text-ink">
+                        <th className="py-2.5 px-3 font-bold w-1/2">HELOC</th>
+                        <th className="py-2.5 px-3 font-bold w-1/2">
+                          Home Equity Loan
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-line/60 text-ink-2">
+                      <tr>
+                        <td className="py-2.5 px-3">Revolving credit line</td>
+                        <td className="py-2.5 px-3">One-time lump sum</td>
+                      </tr>
+                      <tr>
+                        <td className="py-2.5 px-3">Borrow as needed</td>
+                        <td className="py-2.5 px-3">
+                          Receive all funds at closing
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="py-2.5 px-3">Variable rate</td>
+                        <td className="py-2.5 px-3">Fixed rate</td>
+                      </tr>
+                      <tr>
+                        <td className="py-2.5 px-3">
+                          Great for ongoing projects
+                        </td>
+                        <td className="py-2.5 px-3">
+                          Great for one-time expenses
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              {/* Get Expert Advice Section */}
+              <div className="mb-6">
+                <h4 className="font-bold text-ink text-sm mb-1">
+                  Get Expert Advice
+                </h4>
+                <p className="text-xs sm:text-sm text-ink-2 leading-relaxed max-w-3xl">
+                  Not sure which option fits your needs? Our mortgage
+                  specialists will help you compare your options and recommend
+                  the financing solution that's right for you.
+                </p>
+              </div>
             </div>
-            {/* Added container to restrict button width so it matches card styling */}
-            <div className="flex flex-col md:flex-row gap-4 mt-6">
+
+            {/* Responsive Action Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 mt-6 max-w-xl">
               <a
                 href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
                 target="_blank"
@@ -1597,24 +1679,22 @@ export default function LoanProgramsPage() {
               </h3>
 
               <h4 className="font-medium text-ink mb-3">
-                Grow Your Real Estate Portfolio Without Using Personal Income
+                Grow Your Real Estate Portfolio Without Personal Income
+                Verification
               </h4>
 
               <p className="text-sm text-ink-2 leading-relaxed mb-2">
-                A{" "}
-                <span className="font-bold">
-                  {" "}
-                  Debt Service Coverage Ratio (DSCR) Loan{" "}
-                </span>{" "}
-                is designed for real estate investors who want to qualify based
-                on the property's rental income—not their personal income, tax
-                returns, or employment history.
+                A Debt Service Coverage Ratio (DSCR) Loan is designed
+                specifically for real estate investors. Instead of qualifying
+                based on your personal income, employment, or tax returns, the
+                loan is primarily based on the property's ability to generate
+                rental income.
               </p>
               <p className="text-sm text-ink-2 leading-relaxed mb-2">
-                Whether you're purchasing your first investment property or
-                expanding an established portfolio, a DSCR loan offers a fast,
-                flexible financing solution that focuses on the property's
-                ability to generate cash flow.
+                Whether you're purchasing your first investment property,
+                expanding your portfolio, or refinancing an existing rental, a
+                DSCR loan offers a flexible financing solution that keeps the
+                focus on your investment-not your personal finances.
               </p>
 
               <h4 className="font-medium text-ink mb-3">
@@ -1622,34 +1702,15 @@ export default function LoanProgramsPage() {
               </h4>
               <ul className="space-y-2 mb-4">
                 {[
-                  "No personal income verification* required for qualifying",
-                  "No tax returns, W-2s, or pay stubs* in most cases",
-                  "Qualification based primarily on the property's rental income",
-                  "Finance single-family homes, condos, townhomes, and 2–4 unit investment properties",
+                  "Qualify primarily based on the property's rental income",
+                  "No personal income verification required for qualifying*",
+                  "No tax returns, W-2s, or pay stubs required in many cases*",
                   "Purchase, refinance, or cash-out refinance options available",
-                  "Fixed and adjustable-rate loan options",
-                  "Available to both first-time and experienced real estate investors",
-                  "LLC and business entity ownership options available with many programs",
-                  "Competitive loan amounts and flexible terms",
-                ].map((item, index) => (
-                  <li
-                    key={index}
-                    className="flex items-start gap-2 text-xs text-ink/90 leading-normal"
-                  >
-                    <span className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-1.5 shrink-0" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <h4 className="font-medium text-ink mb-3">Ideal For</h4>
-              <ul className="space-y-2 mb-4">
-                {[
-                  "Real estate investors",
-                  "Self-employed borrowers",
-                  "Portfolio builders",
-                  "Short-term and long-term rental investors",
-                  "Foreign national investors (available through select programs)",
+                  "Fixed and adjustable-rate loan programs",
+                  "Finance single-family homes, condos, townhomes, and 2-4 unit investment properties",
+                  "Available to both new and experienced real estate investors",
+                  "Many programs allow financing in an LLC or other business entity",
+                  "Competitive loan amounts with flexible underwriting",
                 ].map((item, index) => (
                   <li
                     key={index}
@@ -1662,24 +1723,63 @@ export default function LoanProgramsPage() {
               </ul>
 
               <h4 className="font-medium text-ink mb-3">
-                Build Wealth Through Real Estate
+                Who Is a DSCR Loan For?
               </h4>
               <p className="text-sm text-ink-2 leading-relaxed mb-2">
-                Whether you're buying your next rental property or refinancing
-                an existing investment, MyLoanDesk can help you find the right
-                DSCR loan from a wide range of lending programs tailored to your
-                investment strategy.
+                A DSCR loan may be an excellent option if you are:
+              </p>
+              <ul className="space-y-2 mb-4">
+                {[
+                  "A real estate investor building long-term wealth",
+                  "Self-employed and prefer not to document personal income",
+                  "Expanding your rental property portfolio",
+                  "Investing in short-term or long-term rental properties",
+                  "A foreign national purchasing U.S. investment property through eligible programs",
+                ].map((item, index) => (
+                  <li
+                    key={index}
+                    className="flex items-start gap-2 text-xs text-ink/90 leading-normal"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-1.5 shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <h4 className="font-medium text-ink mb-3">
+                Invest Smarter. Grow Faster.
+              </h4>
+              <p className="text-sm text-ink-2 leading-relaxed mb-2">
+                With access to a broad network of DSCR lenders, MyLoanDesk can
+                help you compare loan options designed to fit your investment
+                strategy. We'll guide you through the process and help you
+                secure financing that supports your long-term real estate goals.
               </p>
             </div>
             <div>
               <p className="text-xs mb-4 text-ink-2">
                 <span className="font-bold text-ink">
-                  Ready to expand your portfolio?
+                  Ready to finance your next investment property?
                 </span>
                 <br />
-                Contact MyLoanDesk today to explore your DSCR financing options
-                and get pre-qualified.
+                Contact MyLoanDesk today to explore your DSCR loan options and
+                get pre-qualified.
               </p>
+
+              {/* Disclaimer */}
+              <div className="p-3 bg-line/20 rounded-xl border border-line mb-4">
+                <h4 className="font-bold text-ink text-xs mb-1">
+                  Program Disclaimer
+                </h4>
+                <p className="text-[10px] text-ink-2">
+                  Program guidelines, property eligibility, loan amounts,
+                  reserve requirements, and documentation requirements vary by
+                  lender. Not all applicants or properties will qualify. Rental
+                  income and property cash flow requirements apply. Terms and
+                  availability are subject to change without notice.
+                </p>
+              </div>
+
               <div className="flex flex-col gap-3">
                 <a
                   href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
@@ -1720,32 +1820,34 @@ export default function LoanProgramsPage() {
               </h3>
 
               <h4 className="font-medium text-ink mb-3">
-                Fast Financing for Real Estate Investors
+                Fast, Flexible Financing for Real Estate Investors
               </h4>
 
               <p className="text-sm text-ink-2 leading-relaxed mb-2">
-                Whether you're purchasing your first renovation project or
-                flipping multiple properties each year, a{" "}
-                <span className="font-bold"> Fix & Flip Loan</span> provides the
-                capital you need to acquire, renovate, and sell residential
-                investment properties quickly and efficiently.
+                Whether you're renovating your first investment property or
+                managing multiple projects each year, a Fix & Flip Loan provides
+                the financing you need to purchase, renovate, and resell
+                residential properties with confidence.
               </p>
               <p className="text-sm text-ink-2 leading-relaxed mb-2">
-                Designed specifically for investors, these short-term loans
-                offer fast approvals, flexible financing, and funding for both
-                the purchase price and eligible renovation costs.
+                These short-term loans are designed specifically for real estate
+                investors, offering fast approvals and financing for both the
+                property acquisition and eligible renovation costs-so you can
+                focus on maximizing your return on investment.
               </p>
 
-              <h4 className="font-medium text-ink mb-3">Program Highlights</h4>
+              <h4 className="font-medium text-ink mb-3">
+                Why Choose a Fix & Flip Loan?
+              </h4>
               <ul className="space-y-2 mb-4">
                 {[
-                  "Finance both the *property purchase and renovation expenses",
+                  "Finance both the property purchase and eligible renovation costs",
                   "Fast approvals and quick closings to help you compete with cash buyers",
-                  "Short-term financing designed for renovation projects",
-                  "Available for single-family homes, condos, townhomes, and small multi-family properties",
-                  "Flexible loan amounts based on the property's projected after-repair value (ARV)",
-                  "Ideal for experienced investors and first-time flippers",
-                  "Multiple project financing available for qualified investors",
+                  "Short-term financing tailored for renovation and resale projects",
+                  "Loan amounts based on the property's projected After-Repair Value (ARV)",
+                  "Finance single-family homes, condos, townhomes, and 2-4 unit properties",
+                  "Available for both first-time and experienced real estate investors",
+                  "Multiple simultaneous projects available for qualified borrowers",
                   "Streamlined application process with dedicated lending support",
                 ].map((item, index) => (
                   <li
@@ -1758,14 +1860,19 @@ export default function LoanProgramsPage() {
                 ))}
               </ul>
 
-              <h4 className="font-medium text-ink mb-3">Ideal For</h4>
+              <h4 className="font-medium text-ink mb-3">
+                Who Is a Fix & Flip Loan For?
+              </h4>
+              <p className="text-sm text-ink-2 leading-relaxed mb-2">
+                A Fix & Flip Loan may be an excellent choice if you are:
+              </p>
               <ul className="space-y-2 mb-4">
                 {[
-                  "House flippers",
-                  "Real estate investors ",
-                  "Property renovations",
-                  "Value-add investment opportunities",
-                  "Investors looking to build or expand their portfolios",
+                  "Purchasing properties to renovate and resell",
+                  "Expanding your real estate investment business",
+                  "Looking for fast financing to secure competitive opportunities",
+                  "Renovating distressed or value-add properties",
+                  "Building a long-term real estate investment portfolio",
                 ].map((item, index) => (
                   <li
                     key={index}
@@ -1778,13 +1885,14 @@ export default function LoanProgramsPage() {
               </ul>
 
               <h4 className="font-medium text-ink mb-3">
-                Turn Opportunity Into Profit
+                Move Quickly. Renovate. Profit.
               </h4>
               <p className="text-sm text-ink-2 leading-relaxed mb-2">
-                The right financing can make all the difference. MyLoanDesk
-                works with a network of lenders offering competitive Fix & Flip
-                loan programs, helping you move quickly from purchase to
-                renovation and resale.
+                Successful real estate investing depends on speed and reliable
+                financing. At MyLoanDesk, we work with a network of experienced
+                investment property lenders to help you secure competitive Fix &
+                Flip financing with the flexibility to match your investment
+                strategy.
               </p>
             </div>
             <div>
@@ -1793,9 +1901,24 @@ export default function LoanProgramsPage() {
                   Ready to fund your next project?
                 </span>
                 <br />
-                Contact MyLoanDesk today to discuss your investment goals and
-                discover the Fix & Flip financing solution that's right for you.
+                Contact MyLoanDesk today to explore your Fix & Flip loan options
+                and get pre-qualified.
               </p>
+
+              {/* Disclaimer */}
+              <div className="p-3 bg-line/20 rounded-xl border border-line mb-4">
+                <h4 className="font-bold text-ink text-xs mb-1">
+                  Program Disclaimer
+                </h4>
+                <p className="text-[10px] text-ink-2">
+                  Program guidelines, loan amounts, loan-to-value limits,
+                  After-Repair Value (ARV) requirements, renovation funding, and
+                  borrower qualifications vary by lender. Not all applicants or
+                  properties will qualify. Terms and availability are subject to
+                  change without notice.
+                </p>
+              </div>
+
               <div className="flex flex-col gap-3">
                 <a
                   href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
@@ -1836,53 +1959,34 @@ export default function LoanProgramsPage() {
               </h3>
 
               <h4 className="font-medium text-ink mb-3">
-                Build From the Ground Up With Confidence
+                Finance Your Dream Home or Next Development Project
               </h4>
 
               <p className="text-sm text-ink-2 leading-relaxed mb-2">
-                Whether you're building your dream home, developing a custom
-                residence, or constructing multiple investment properties,
-                MyLoanDesk offers flexible{" "}
-                <span className="font-bold"> Ground-Up Construction Loans</span>{" "}
-                designed to bring your vision to life.
+                Whether you're building a custom home, developing a residential
+                community, or constructing investment properties, MyLoanDesk
+                offers flexible Ground-Up Construction Loans designed to help
+                bring your vision to life.
               </p>
               <p className="text-sm text-ink-2 leading-relaxed mb-2">
-                From purchasing the land to the final stages of construction, we
-                help builders, developers, and individual borrowers secure the
-                financing needed to complete projects on time and on budget.
+                From purchasing the land to the final certificate of occupancy,
+                we'll help you secure financing tailored to your project's size,
+                scope, and timeline.
               </p>
 
-              <h4 className="font-medium text-ink mb-3">Program Highlights</h4>
+              <h4 className="font-medium text-ink mb-3">
+                Why Choose a Ground-Up Construction Loan?
+              </h4>
               <ul className="space-y-2 mb-4">
                 {[
-                  "Financing for *single-family homes, custom homes, and multi-property developments*",
-                  "Construction loans for owner-occupied homes, second homes, and investment properties",
                   "Finance land acquisition, construction costs, and approved project expenses",
-                  "Flexible loan options for individuals, builders, and real estate developers",
-                  "Interest-only payments during the construction phase on many programs",
-                  "Construction-to-permanent loan options available, allowing one seamless transition to long-term financing",
-                  "Funding released in stages as construction progresses through scheduled draw requests",
-                  "Competitive loan amounts and flexible terms based on project qualifications",
-                ].map((item, index) => (
-                  <li
-                    key={index}
-                    className="flex items-start gap-2 text-xs text-ink/90 leading-normal"
-                  >
-                    <span className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-1.5 shrink-0" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <h4 className="font-medium text-ink mb-3">Ideal For</h4>
-              <ul className="space-y-2 mb-4">
-                {[
-                  "Custom home construction",
-                  "Spec home builders",
-                  "Residential developers",
-                  "Investment property construction",
-                  "Multiple home developments and subdivisions",
-                  "Experienced builders and qualified first-time owner-builders",
+                  "Available for owner-occupied homes, second homes, and investment properties",
+                  "Construction-to-permanent financing available with many programs, eliminating the need for a second closing",
+                  "Interest-only payments during the construction phase on many loan programs",
+                  "Funds released in scheduled draws as construction milestones are completed",
+                  "Flexible loan options for individual borrowers, custom home builders, and residential developers",
+                  "Competitive loan amounts and underwriting tailored to your project",
+                  "Financing available for single-family homes, custom residences, and residential developments",
                 ].map((item, index) => (
                   <li
                     key={index}
@@ -1895,14 +1999,41 @@ export default function LoanProgramsPage() {
               </ul>
 
               <h4 className="font-medium text-ink mb-3">
-                Build Your Vision From the Ground Up
+                Who Is a Ground-Up Construction Loan For?
               </h4>
               <p className="text-sm text-ink-2 leading-relaxed mb-2">
-                Whether you're constructing one home or an entire residential
-                development, MyLoanDesk works with a wide network of lenders to
-                provide financing solutions tailored to your project. Our
-                experienced team will guide you through every phase—from
-                planning and approval to construction and permanent financing.
+                A Ground-Up Construction Loan may be the right solution if you
+                are:
+              </p>
+              <ul className="space-y-2 mb-4">
+                {[
+                  "Building a custom primary residence",
+                  "Constructing a vacation or second home",
+                  "Developing spec homes for resale",
+                  "Building investment properties",
+                  "Developing multiple homes or residential subdivisions",
+                  "An experienced builder or a qualified owner-builder",
+                ].map((item, index) => (
+                  <li
+                    key={index}
+                    className="flex items-start gap-2 text-xs text-ink/90 leading-normal"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-1.5 shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <h4 className="font-medium text-ink mb-3">
+                Build With Confidence
+              </h4>
+              <p className="text-sm text-ink-2 leading-relaxed mb-2">
+                Construction financing requires experience and the right lending
+                partner. At MyLoanDesk, we work with a broad network of
+                construction lenders to help you secure financing that matches
+                your project's goals. From the initial planning stages through
+                final completion—and, when available, permanent financing—we're
+                here to guide you every step of the way.
               </p>
             </div>
             <div>
@@ -1914,6 +2045,23 @@ export default function LoanProgramsPage() {
                 Contact MyLoanDesk today to discuss your construction project
                 and explore the financing options available for your next build.
               </p>
+
+              {/* Disclaimer */}
+              <div className="p-3 bg-line/20 rounded-xl border border-line mb-4">
+                <h4 className="font-bold text-ink text-xs mb-1">
+                  Program Disclaimer
+                </h4>
+                <p className="text-[10px] text-ink-2">
+                  Program guidelines, land eligibility, borrower qualifications,
+                  loan amounts, draw schedules, interest reserves, loan-to-value
+                  limits, and documentation requirements vary by lender. Not all
+                  applicants or construction projects will qualify.
+                  Construction-to-permanent financing is available through
+                  select programs. Terms and availability are subject to change
+                  without notice.
+                </p>
+              </div>
+
               <div className="flex flex-col gap-3">
                 <a
                   href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
@@ -1934,7 +2082,7 @@ export default function LoanProgramsPage() {
           </div>
 
           {/* Bridge Loans - Responsive col-span added */}
-          <div
+          {/* <div
             id="bridge-loans"
             className="scroll-mt-36 col-span-1 md:col-span-2 lg:col-span-3 bg-primary-bg p-8 flex flex-col justify-between transition-colors duration-300 hover:bg-cream/40"
           >
@@ -2048,7 +2196,7 @@ export default function LoanProgramsPage() {
                 </Link>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -2098,13 +2246,14 @@ export default function LoanProgramsPage() {
                 tailored to your business and investment goals.
               </p>
               <p className="text-sm text-ink-2 leading-relaxed mb-2">
-                From owner-occupied properties to large investment projects,
-                we'll help you identify the right financing solution with
-                competitive terms and a streamlined lending process.
+                From owner-occupied properties to large-scale investment and
+                development projects, we'll help you secure the right financing
+                with competitive rates, flexible loan structures, and
+                personalized guidance every step of the way.
               </p>
 
               <h4 className="font-medium text-ink mb-3">
-                Commercial Financing Available For
+                Commercial Properties We Finance
               </h4>
               <ul className="space-y-2 mb-4">
                 {[
@@ -2115,7 +2264,7 @@ export default function LoanProgramsPage() {
                   "Industrial & Warehouse Facilities",
                   "Hotels & Motels",
                   "Medical & Professional Buildings",
-                  "Restaurants & Hospitality",
+                  "Restaurants & Hospitality Properties",
                   "Self-Storage Facilities",
                   "Land Acquisition & Development",
                   "Ground-Up Construction Projects",
@@ -2130,13 +2279,18 @@ export default function LoanProgramsPage() {
                 ))}
               </ul>
 
-              <h4 className="font-medium text-ink mb-3">Loan Options</h4>
+              <h4 className="font-medium text-ink mb-3">
+                Commercial Loan Solutions
+              </h4>
               <ul className="space-y-2 mb-4">
                 {[
                   "Property Purchase",
                   "Commercial Refinancing",
                   "Cash-Out Refinancing",
-                  "Ground-Up",
+                  "Ground-Up Construction Financing",
+                  "Bridge Loans",
+                  "SBA Loans",
+                  "Portfolio Loans",
                 ].map((item, index) => (
                   <li
                     key={index}
@@ -2147,23 +2301,49 @@ export default function LoanProgramsPage() {
                   </li>
                 ))}
               </ul>
+
+              <h4 className="font-medium text-ink mb-3">
+                Why Choose MyLoanDesk?
+              </h4>
+              <ul className="space-y-2 mb-4">
+                {[
+                  "Access to a broad network of commercial lenders",
+                  "Financing for owner-occupied and investment properties",
+                  "Competitive rates and flexible loan structures",
+                  "Solutions for acquisitions, refinancing, development, and expansion",
+                  "Experienced guidance from application through closing",
+                ].map((item, index) => (
+                  <li
+                    key={index}
+                    className="flex items-start gap-2 text-xs text-ink/90 leading-normal"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-1.5 shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <h4 className="font-medium text-ink mb-3">
+                Ready to finance your next commercial project?
+              </h4>
+              <p className="text-sm text-ink-2 leading-relaxed mb-2">
+                Whether you're acquiring your first commercial property or
+                expanding an established real estate portfolio, MyLoanDesk can
+                help you find the financing solution that fits your goals.
+              </p>
             </div>
             <div>
               <p className="text-xs mb-4 text-ink-2">
-                <span className="font-bold text-ink">Need financing fast?</span>
-                <br />
-                Contact MyLoanDesk today to learn how a Commercial Real Estate
-                Loans can help you move forward with confidence.
+                Contact MyLoanDesk today to explore your commercial financing
+                options and get started.
               </p>
               <div className="flex flex-col gap-3">
-                <a
-                  href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/get-quote"
                   className="w-full py-3.5 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2 transition-all shadow-sm"
                 >
-                  Apply Now <ArrowRight size={14} />
-                </a>
+                  Get My Loan Options <ArrowRight size={14} />
+                </Link>
                 <Link
                   href="/get-quote"
                   className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
@@ -2196,43 +2376,117 @@ export default function LoanProgramsPage() {
               >
                 Equipment Financing
               </h3>
-              <p className="text-xs font-bold uppercase tracking-wider text-brand-orange mb-2">
-                Conserve primary cash flow lines while modernizing machinery
-                stacks.
+              <h4 className="font-medium text-ink mb-3">
+                Finance the Equipment Your Business Needs to Grow
+              </h4>
+              <p className="text-sm text-ink-2 leading-relaxed mb-2">
+                Whether you're purchasing new equipment, replacing outdated
+                machinery, or expanding your operations, MyLoanDesk offers
+                flexible equipment financing solutions designed to help your
+                business grow while preserving valuable working capital[cite:
+                10].
               </p>
-              <div className="text-sm text-ink-2 space-y-4 mb-6 leading-relaxed">
-                <p>
-                  Acquiring core equipment assets is vital to scalable
-                  operations. When your company is ready to scale throughput or
-                  update internal frameworks, our expert programs match your
-                  dynamic timeline requirements.
-                </p>
-                <div className="bg-line/30 p-3 rounded-lg text-xs space-y-1">
-                  <h4 className="font-semibold text-ink">
-                    Core Program Advantages:
-                  </h4>
-                  <p>· Preserves operational liquid capital</p>
-                  <p>· Modern tax incentive integration metrics</p>
-                  <p>· Accelerated equipment acquisition turnaround times</p>
-                  <p>· 100% financing frameworks for high-tier candidates</p>
-                </div>
-              </div>
+              <p className="text-sm text-ink-2 leading-relaxed mb-4">
+                With competitive financing options and fast approvals, you can
+                acquire the equipment you need without tying up your cash
+                reserves.
+              </p>
+
+              <h4 className="font-semibold text-ink text-xs mb-2">
+                Why Choose Equipment Financing?
+              </h4>
+              <ul className="space-y-1.5 mb-4 text-xs text-ink/90">
+                <li className="flex items-start gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-1.5 shrink-0" />
+                  <span>Finance new or used equipment</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-1.5 shrink-0" />
+                  <span>
+                    Preserve working capital for day-to-day operations
+                  </span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-1.5 shrink-0" />
+                  <span>Competitive rates and flexible repayment terms</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-1.5 shrink-0" />
+                  <span>
+                    Fast approvals and funding for qualified borrowers
+                  </span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-1.5 shrink-0" />
+                  <span>
+                    Up to 100% financing available for eligible equipment[cite:
+                    10]
+                  </span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-1.5 shrink-0" />
+                  <span>
+                    Available for a wide range of industries and business types
+                  </span>
+                </li>
+              </ul>
+
+              <h4 className="font-semibold text-ink text-xs mb-2">
+                Equipment We Can Help Finance
+              </h4>
+              <ul className="space-y-1.5 mb-4 text-xs text-ink/90">
+                {[
+                  "Construction Equipment",
+                  "Manufacturing Machinery",
+                  "Medical & Dental Equipment",
+                  "Restaurant Equipment",
+                  "Commercial Vehicles",
+                  "Office Furniture & Technology",
+                  "Agricultural Equipment",
+                  "Warehouse & Industrial Equipment",
+                ].map((item, index) => (
+                  <li key={index} className="flex items-start gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-1.5 shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <h4 className="font-semibold text-ink text-xs mb-2">
+                Keep Your Business Moving Forward
+              </h4>
+              <p className="text-xs text-ink-2 leading-relaxed mb-4">
+                The right equipment can improve productivity, increase
+                efficiency, and support long-term growth. MyLoanDesk works with
+                a network of equipment financing specialists to help you secure
+                a financing solution that fits your business needs.
+              </p>
             </div>
-            <div className="flex flex-col gap-3 mt-6">
-              <a
-                href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full py-3.5 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2 transition-all shadow-sm"
-              >
-                Apply Now <ArrowRight size={14} />
-              </a>
-              <Link
-                href="/get-quote"
-                className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
-              >
-                Contact Us Now
-              </Link>
+            <div>
+              <p className="text-xs mb-4 text-ink-2">
+                <span className="font-bold text-ink">
+                  Ready to finance your next equipment purchase?
+                </span>
+                <br />
+                Contact MyLoanDesk today to explore your equipment financing
+                options.
+              </p>
+              <div className="flex flex-col gap-3">
+                <a
+                  href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-3.5 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2 transition-all shadow-sm"
+                >
+                  Get My Loan Options <ArrowRight size={14} />
+                </a>
+                <Link
+                  href="/get-quote"
+                  className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
+                >
+                  Contact Us Now
+                </Link>
+              </div>
             </div>
           </div>
 
