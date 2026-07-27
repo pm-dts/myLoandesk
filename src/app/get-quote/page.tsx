@@ -415,12 +415,13 @@ export default function GetQuote() {
                   htmlFor={field.name}
                   className="block text-sm font-medium text-ink mb-2"
                 >
-                  Tell Us How We Can Help?
+                  Complete this short form and a MyLoanDesk specialist will
+                  contact you with your best financing options..
                 </label>
                 <textarea
                   id={field.name}
                   name={field.name}
-                  rows={2}
+                  rows={5}
                   placeholder="Self-employed, investment property, foreign income, previous credit challenges, or any other details that may help us better understand your situation."
                   value={field.state.value}
                   onBlur={field.handleBlur}
