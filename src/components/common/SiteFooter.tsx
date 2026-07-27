@@ -23,7 +23,7 @@ export default function Footer() {
                 alt="My Loan Desk Logo"
                 width={220}
                 height={160}
-                className="w-76 h-auto object-contain"
+                className="w-78 h-auto object-contain"
                 priority
               />
             </Link>

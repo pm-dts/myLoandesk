@@ -152,7 +152,7 @@ export const Header: React.FC = () => {
           >
             <Link
               href="/loan-programs"
-              className="ulink focus-ring flex items-center text-[14px] font-medium gap-1 cursor-pointer"
+              className="ulink focus-ring flex items-center text-[14px] font-semibold gap-1 cursor-pointer"
             >
               Loan types
               <ChevronDown
@@ -188,49 +188,49 @@ export const Header: React.FC = () => {
 
           <Link
             href="/secure-document-upload"
-            className="ulink focus-ring text-[14px] font-medium"
+            className="ulink focus-ring text-[14px] font-semibold"
           >
             Secure Doc Upload
           </Link>
           <Link
             href="/about-us"
-            className="ulink focus-ring text-[14px] font-medium"
+            className="ulink focus-ring text-[14px] font-semibold"
           >
             About us
           </Link>
           <Link
             href="/realtors"
-            className="ulink focus-ring text-[14px] font-medium"
+            className="ulink focus-ring text-[14px] font-semibold"
           >
             Realtors
           </Link>
           <Link
             href="/careers"
-            className="ulink focus-ring text-[14px] font-medium"
+            className="ulink focus-ring text-[14px] font-semibold"
           >
             Careers
           </Link>
           <Link
             href="/calendar"
-            className="ulink focus-ring text-[14px] font-medium"
+            className="ulink focus-ring text-[14px] font-semibold"
           >
             Our Calendar
           </Link>
           <Link
             href="/#calculator"
-            className="ulink focus-ring text-[14px] font-medium"
+            className="ulink focus-ring text-[14px] font-semibold"
           >
             Calculator
           </Link>
           <Link
             href="/#faq"
-            className="ulink focus-ring text-[14px] font-medium"
+            className="ulink focus-ring text-[14px] font-semibold"
           >
             FAQ
           </Link>
           <Link
             href="/blog"
-            className="ulink focus-ring text-[14px] font-medium"
+            className="ulink focus-ring text-[14px] font-semibold"
           >
             Blog
           </Link>
