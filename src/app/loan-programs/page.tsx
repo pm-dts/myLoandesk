@@ -29,10 +29,10 @@ export default function LoanProgramsPage() {
       {/* Editorial Page Introduction Section */}
       <section className="max-w-7xl mx-auto px-6 lg:px-10 mb-20">
         <div className="max-w-4xl">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-line text-xs font-medium text-ink-2 mb-6">
+          {/* <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-line text-xs font-medium text-ink-2 mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-brand-orange"></span>
             Call/Text (305) 891-6500 · Professional Lending Spectrum
-          </div>
+          </div> */}
           <h1
             className={cn(
               "text-5xl sm:text-6xl lg:text-7xl text-ink leading-[1.08] tracking-tight mb-8",
