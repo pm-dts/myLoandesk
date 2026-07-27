@@ -78,15 +78,15 @@ export default function ReverseMortgagePage() {
             fraunces.className,
           )}
         >
-          Unlock Your Home Equity Without Selling Your Home
+          Turn Your Home Equity Into Financial Freedom.
         </h1>
 
         <p className="text-lg md:text-xl text-ink-2 leading-relaxed max-w-3xl">
-          A reverse mortgage allows homeowners age 55 and older to access part
-          of their home equity while continuing to live in and own their home.
-          There are no required monthly mortgage payments, provided the
-          homeowner continues to pay property taxes, homeowners insurance,
-          applicable HOA dues, and maintains the property.
+          A reverse mortgage allows eligible homeowners age 55+* and older to
+          convert a portion of their home equity into tax-free proceeds while
+          continuing to live in and own their home. No monthly mortgage payments
+          are required, provided you continue to pay property taxes, homeowners
+          insurance, applicable HOA dues, and maintain the property.
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row gap-4">
@@ -94,15 +94,15 @@ export default function ReverseMortgagePage() {
             href="/get-quote"
             className="btn-shine bg-brand-orange text-white px-8 py-4 rounded-full font-bold text-sm tracking-wide flex items-center justify-center gap-2 hover:bg-orange-600 transition-colors shadow-sm focus-ring"
           >
-            See If You Qualify
+            Let's Find your Options
             <ArrowRight size={18} />
           </Link>
-          <Link
+          {/* <Link
             href="/loan-programs#reverse-mortgage"
             className="px-8 py-4 text-ink font-semibold border border-line hover:bg-cream rounded-full transition-colors focus-ring"
           >
             Loan Programs
-          </Link>
+          </Link> */}
         </div>
       </section>
 
@@ -153,7 +153,7 @@ export default function ReverseMortgagePage() {
                 today.
               </p>
               <Link
-                href="/#start"
+                href="/get-quote"
                 className="text-brand-orange font-bold text-sm flex items-center gap-2 hover:text-white transition-colors"
               >
                 Contact Us <ArrowRight size={16} />
@@ -230,7 +230,7 @@ export default function ReverseMortgagePage() {
                 Apply Now <ArrowRight size={14} />
               </a>
               <Link
-                href="/#start"
+                href="/get-quote"
                 className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
               >
                 Contact Us Now
@@ -328,7 +328,7 @@ export default function ReverseMortgagePage() {
                 Apply Now <ArrowRight size={14} />
               </a>
               <Link
-                href="/#start"
+                href="/get-quote"
                 className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
               >
                 Contact Us Now
@@ -415,7 +415,7 @@ export default function ReverseMortgagePage() {
                 Apply Now <ArrowRight size={14} />
               </a>
               <Link
-                href="/#start"
+                href="/get-quote"
                 className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
               >
                 Contact Us Now
@@ -507,7 +507,7 @@ export default function ReverseMortgagePage() {
                   Apply Now <ArrowRight size={14} />
                 </a>
                 <Link
-                  href="/#start"
+                  href="/get-quote"
                   className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
                 >
                   Contact Us Now
