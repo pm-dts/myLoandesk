@@ -225,6 +225,15 @@ export default function Hero() {
       </section>
 
       <section className="py-10 px-4 sm:px-6 flex flex-col items-center gap-6">
+        {/* Section Header */}
+        <div className="text-center max-w-2xl mx-auto mb-2">
+          <h2
+            className={` ${fraunces.className} text-3xl sm:text-3xl lg:text-4xl font-display font-semibold text-ink tracking-tight`}
+          >
+            National US Mortgage Rates
+          </h2>
+        </div>
+
         {/* 1. Optimal Blue Widget */}
         <div
           className="p-4 rounded-2xl bg-cream w-full max-w-[782px] flex flex-col justify-center overflow-hidden border border-line/30 shadow-sm"
@@ -286,7 +295,7 @@ export default function Hero() {
               next="B+"
               className={cn("text-5xl text-ink", fraunces.className)}
             />
-            <p className="mt-2 text-ink-2">Funded for families since 2014</p>
+            <p className="mt-2 text-ink-2">Funded for families since 1995</p>
           </div>
           <div className="">
             <AnimatedCounter

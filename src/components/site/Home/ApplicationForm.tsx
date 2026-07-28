@@ -115,6 +115,7 @@ export default function PreQualified() {
       phone: "",
       zipCode: "",
       loanType: "",
+      objective: "",
     },
     onSubmit: async ({ value }) => {
       // Create a loading toast that we will update upon success or failure
@@ -134,6 +135,7 @@ export default function PreQualified() {
             phone: value.phone,
             postal_code: value.zipCode,
             custom_loan_type: value.loanType,
+            custom_notes: value.objective,
             source: "Website Pre-Qualified Form",
           }),
         });
@@ -403,6 +405,25 @@ export default function PreQualified() {
                             {field.state.meta.errors[0]}
                           </span>
                         )}
+                      </div>
+                    )}
+                  </form.Field>
+
+                  {/* Objective Field with Label */}
+                  <form.Field name="objective">
+                    {(field) => (
+                      <div>
+                        <label className="block text-xs font-medium text-ink-2 uppercase tracking-wider mb-1.5">
+                          Tell us your objective
+                        </label>
+                        <input
+                          type="text"
+                          placeholder="Briefly describe your goals, timeline, or any questions you'd like us to know."
+                          value={field.state.value}
+                          onChange={(e) => field.handleChange(e.target.value)}
+                          onBlur={field.handleBlur}
+                          className="w-full px-4 py-3 bg-cream border border-line rounded-lg text-sm text-ink focus:outline-none focus:border-moss-deep transition-colors focus-ring placeholder:text-ink-2/40"
+                        />
                       </div>
                     )}
                   </form.Field>
