@@ -230,7 +230,7 @@ export default function Hero() {
           <h2
             className={` ${fraunces.className} text-3xl sm:text-3xl lg:text-4xl font-display font-semibold text-ink tracking-tight`}
           >
-            National US Mortgage Rates
+            Average US Mortgage Rates
           </h2>
         </div>
 

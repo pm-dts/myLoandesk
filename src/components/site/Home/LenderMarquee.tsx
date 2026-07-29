@@ -27,7 +27,7 @@ const fraunces = Fraunces({
 export default function LenderMarquee() {
   // Map imported images to an array for clean iteration
   const lenderLogos = [
-    { src: fundLoanImg, alt: "Fund Loan" },
+    // { src: fundLoanImg, alt: "Fund Loan" },
     { src: axosImg, alt: "Axos" },
     { src: lendImg, alt: "LendSure" },
     { src: rocketImg, alt: "Rocket Pro" },

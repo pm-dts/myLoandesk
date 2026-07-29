@@ -43,7 +43,7 @@ export default function Footer() {
             </p>
 
             {/* Social Links */}
-            <div className="flex items-center gap-3 pt-2">
+            {/* <div className="flex items-center gap-3 pt-2">
               {[
                 {
                   icon: tikTokIcon,
@@ -86,7 +86,7 @@ export default function Footer() {
                   />
                 </a>
               ))}
-            </div>
+            </div> */}
           </div>
 
           {/* Links Section */}

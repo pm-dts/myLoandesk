@@ -46,9 +46,8 @@ export const TailwindPhoneInput = ({ value, onChange, error }: any) => {
   return (
     <div className="relative w-full">
       <div
-        className={`flex w-full bg-cream border ${
-          error ? "border-red-500" : "border-line"
-        } rounded-lg focus-within:border-moss-deep transition-colors overflow-hidden`}
+        className={`flex w-full bg-cream border ${error ? "border-red-500" : "border-line"
+          } rounded-lg focus-within:border-moss-deep transition-colors overflow-hidden`}
       >
         {/* Country Selector Button */}
         <button
@@ -114,6 +113,7 @@ export default function PreQualified() {
       email: "",
       phone: "",
       zipCode: "",
+      estimatedCreditScore: "",
       loanType: "",
       objective: "",
     },
@@ -134,6 +134,7 @@ export default function PreQualified() {
             email: value.email,
             phone: value.phone,
             postal_code: value.zipCode,
+            custom_credit_score: value.estimatedCreditScore,
             custom_loan_type: value.loanType,
             custom_notes: value.objective,
             source: "Website Pre-Qualified Form",
@@ -180,9 +181,9 @@ export default function PreQualified() {
           <div className="relative grid lg:grid-cols-12 gap-10 items-center">
             {/* Left Column: Copy */}
             <div className="lg:col-span-7">
-              <div className="text-[10px] uppercase tracking-[0.25em] text-[#D4A574] font-semibold mb-5">
+              {/* <div className="text-[10px] uppercase tracking-[0.25em] text-[#D4A574] font-semibold mb-5">
                 07 — Sit down at the desk
-              </div>
+              </div> */}
               <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.04] tracking-tight font-light text-primary-bg">
                 Your mortgage,{" "}
                 <em className="not-italic font-serif italic text-primary-bg">
@@ -190,9 +191,7 @@ export default function PreQualified() {
                 </em>
               </h2>
               <p className="mt-6 text-lg text-primary-bg/75 max-w-xl leading-relaxed">
-                Five-minute application. A real broker on the line within one
-                business day. No commitment, no hard credit pull, no call
-                centers.
+                Five-minute pre-qualification. Personalized mortgage solutions. Your dedicated mortgage expert from application to closing.
               </p>
             </div>
 
@@ -231,11 +230,10 @@ export default function PreQualified() {
                             value={field.state.value}
                             onChange={(e) => field.handleChange(e.target.value)}
                             onBlur={field.handleBlur}
-                            className={`w-full px-4 py-3 bg-cream border ${
-                              field.state.meta.errors.length
-                                ? "border-red-500"
-                                : "border-line"
-                            } rounded-lg text-sm focus:outline-none focus:border-moss-deep transition-colors focus-ring`}
+                            className={`w-full px-4 py-3 bg-cream border ${field.state.meta.errors.length
+                              ? "border-red-500"
+                              : "border-line"
+                              } rounded-lg text-sm focus:outline-none focus:border-moss-deep transition-colors focus-ring`}
                           />
                           {field.state.meta.errors.length > 0 && (
                             <span className="text-red-500 text-[10px] mt-1 block">
@@ -262,11 +260,10 @@ export default function PreQualified() {
                             value={field.state.value}
                             onChange={(e) => field.handleChange(e.target.value)}
                             onBlur={field.handleBlur}
-                            className={`w-full px-4 py-3 bg-cream border ${
-                              field.state.meta.errors.length
-                                ? "border-red-500"
-                                : "border-line"
-                            } rounded-lg text-sm focus:outline-none focus:border-moss-deep transition-colors focus-ring`}
+                            className={`w-full px-4 py-3 bg-cream border ${field.state.meta.errors.length
+                              ? "border-red-500"
+                              : "border-line"
+                              } rounded-lg text-sm focus:outline-none focus:border-moss-deep transition-colors focus-ring`}
                           />
                           {field.state.meta.errors.length > 0 && (
                             <span className="text-red-500 text-[10px] mt-1 block">
@@ -298,11 +295,10 @@ export default function PreQualified() {
                           value={field.state.value}
                           onChange={(e) => field.handleChange(e.target.value)}
                           onBlur={field.handleBlur}
-                          className={`w-full px-4 py-3 bg-cream border ${
-                            field.state.meta.errors.length
-                              ? "border-red-500"
-                              : "border-line"
-                          } rounded-lg text-sm focus:outline-none focus:border-moss-deep transition-colors focus-ring`}
+                          className={`w-full px-4 py-3 bg-cream border ${field.state.meta.errors.length
+                            ? "border-red-500"
+                            : "border-line"
+                            } rounded-lg text-sm focus:outline-none focus:border-moss-deep transition-colors focus-ring`}
                         />
                         {field.state.meta.errors.length > 0 && (
                           <span className="text-red-500 text-[10px] mt-1 block">
@@ -342,21 +338,48 @@ export default function PreQualified() {
                       <div>
                         <input
                           type="text"
-                          placeholder="ZIP code"
+                          placeholder="Property Zip Code"
                           value={field.state.value}
                           onChange={(e) => field.handleChange(e.target.value)}
                           onBlur={field.handleBlur}
-                          className={`w-full px-4 py-3 bg-cream border ${
-                            field.state.meta.errors.length
-                              ? "border-red-500"
-                              : "border-line"
-                          } rounded-lg text-sm focus:outline-none focus:border-moss-deep transition-colors focus-ring`}
+                          className={`w-full px-4 py-3 bg-cream border ${field.state.meta.errors.length
+                            ? "border-red-500"
+                            : "border-line"
+                            } rounded-lg text-sm focus:outline-none focus:border-moss-deep transition-colors focus-ring`}
                         />
                         {field.state.meta.errors.length > 0 && (
                           <span className="text-red-500 text-[10px] mt-1 block">
                             {field.state.meta.errors[0]}
                           </span>
                         )}
+                      </div>
+                    )}
+                  </form.Field>
+
+                  {/* Estimated Credit Score Field */}
+                  <form.Field name="estimatedCreditScore">
+                    {(field) => (
+                      <div>
+                        <select
+                          value={field.state.value}
+                          onChange={(e) => field.handleChange(e.target.value)}
+                          onBlur={field.handleBlur}
+                          className={`w-full px-4 py-3 bg-cream border ${field.state.meta.errors.length
+                            ? "border-red-500"
+                            : "border-line"
+                            } rounded-lg text-sm focus:outline-none focus:border-moss-deep transition-colors ${field.state.value ? "text-ink" : "text-ink-2"
+                            } focus-ring`}
+                        >
+                          <option value="" disabled>
+                            Select your estimated credit score
+                          </option>
+                          <option value="760+">760+</option>
+                          <option value="720–759">720–759</option>
+                          <option value="680–719">680–719</option>
+                          <option value="620–679">620–679</option>
+                          <option value="Below 620">Below 620</option>
+                          <option value="Not Sure">Not Sure</option>
+                        </select>
                       </div>
                     )}
                   </form.Field>
@@ -375,16 +398,14 @@ export default function PreQualified() {
                           value={field.state.value}
                           onChange={(e) => field.handleChange(e.target.value)}
                           onBlur={field.handleBlur}
-                          className={`w-full px-4 py-3 bg-cream border ${
-                            field.state.meta.errors.length
-                              ? "border-red-500"
-                              : "border-line"
-                          } rounded-lg text-sm focus:outline-none focus:border-moss-deep transition-colors ${
-                            field.state.value ? "text-ink" : "text-ink-2"
-                          } focus-ring`}
+                          className={`w-full px-4 py-3 bg-cream border ${field.state.meta.errors.length
+                            ? "border-red-500"
+                            : "border-line"
+                            } rounded-lg text-sm focus:outline-none focus:border-moss-deep transition-colors ${field.state.value ? "text-ink" : "text-ink-2"
+                            } focus-ring`}
                         >
                           <option value="" disabled>
-                            How can we help?
+                            Loan Purpose
                           </option>
                           <option value="buy a home">Buy a home</option>
                           <option value="refinance my mortgage">
@@ -414,7 +435,7 @@ export default function PreQualified() {
                     {(field) => (
                       <div>
                         <label className="block text-xs font-medium text-ink-2 uppercase tracking-wider mb-1.5">
-                          Tell us your objective
+                          Tell us you Goals
                         </label>
                         <input
                           type="text"
@@ -439,7 +460,7 @@ export default function PreQualified() {
                       disabled={!canSubmit}
                       className="btn-shine mt-5 w-full bg-moss-deep text-primary-bg py-3.5 rounded-xl text-sm font-medium hover:bg-moss-darker transition-colors flex items-center justify-center gap-2 focus-ring disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                      {isSubmitting ? "Submitting..." : "Start my application"}
+                      {isSubmitting ? "Submitting..." : "Get my Loan Options"}
                       {!isSubmitting && (
                         <ArrowRight size={14} strokeWidth={2} />
                       )}
@@ -448,7 +469,7 @@ export default function PreQualified() {
                 </form.Subscribe>
 
                 <div className="text-[10px] text-ink-2 text-center mt-3">
-                  By submitting, you agree to our terms. Soft credit pull only.
+                  Your information is secure and never sold.
                 </div>
               </form>
             </div>

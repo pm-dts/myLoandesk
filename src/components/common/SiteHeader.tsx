@@ -167,11 +167,10 @@ export const Header: React.FC = () => {
             ></div>
 
             <div
-              className={`absolute left-0 top-[calc(100%+8px)] w-[560px] bg-primary-bg border border-line rounded-2xl shadow-xl p-5 grid grid-cols-2 gap-x-4 gap-y-1.5 transition-all duration-200 origin-top z-[60] ${
-                isDropdownOpen
+              className={`absolute left-0 top-[calc(100%+8px)] w-[560px] bg-primary-bg border border-line rounded-2xl shadow-xl p-5 grid grid-cols-2 gap-x-4 gap-y-1.5 transition-all duration-200 origin-top z-[60] ${isDropdownOpen
                   ? "opacity-100 scale-100 pointer-events-auto"
                   : "opacity-0 scale-95 pointer-events-none"
-              }`}
+                }`}
             >
               {loanLinks.map((link) => (
                 <Link
@@ -277,7 +276,7 @@ export const Header: React.FC = () => {
               target="_blank"
               className="border border-brand-orange bg-brand-orange text-white px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-wider flex items-center justify-between hover:bg-orange-600 transition-colors shadow-sm"
             >
-              Ask A Broker <HelpCircle size={14} />
+              Ask AI Broker <HelpCircle size={14} />
             </Link>
           </div>
         </div>
