@@ -170,6 +170,16 @@ export default function Footer() {
                 </a>
               </li>
               <li>
+                <span className="">Fax: </span>
+
+                <a
+                  href="tel:(855)794-7611"
+                  className="text-ink/70 hover:text-brand-orange transition-colors duration-200 font-mono"
+                >
+                  (855)794-7611
+                </a>
+              </li>
+              <li>
                 <span className="">Email: </span>
                 <a
                   href="mailto:info@myloandesk.com"
