@@ -46,9 +46,7 @@ export default function Hero() {
 
             {/* Subheadline */}
             <p className="text-lg text-ink-2 leading-relaxed mb-10">
-              We compare offers from 20+ lenders, negotiate your rate, and own
-              the paperwork — so the path to your front door feels less like a
-              maze, more like a meeting.
+              Access hundreds of mortgage solutions through our nationwide lending network. We compare your options, negotiate competitive rates, and handle every detail from application to closing.
             </p>
 
             {/* Actions & Social Proof Container */}
@@ -490,7 +488,7 @@ export default function Hero() {
                   opened Monday. That's the kind of desk you want."
                 </p>
                 <div className="mt-4 text-sm text-ink/60">
-                  — Marisol T., closed on her first home in Tacoma
+                  — Marisol T., closed on her first home in Miami
                 </div>
               </div>
             </div>
