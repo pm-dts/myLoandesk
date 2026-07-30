@@ -168,8 +168,8 @@ export const Header: React.FC = () => {
 
             <div
               className={`absolute left-0 top-[calc(100%+8px)] w-[560px] bg-primary-bg border border-line rounded-2xl shadow-xl p-5 grid grid-cols-2 gap-x-4 gap-y-1.5 transition-all duration-200 origin-top z-[60] ${isDropdownOpen
-                  ? "opacity-100 scale-100 pointer-events-auto"
-                  : "opacity-0 scale-95 pointer-events-none"
+                ? "opacity-100 scale-100 pointer-events-auto"
+                : "opacity-0 scale-95 pointer-events-none"
                 }`}
             >
               {loanLinks.map((link) => (
@@ -313,7 +313,13 @@ export const Header: React.FC = () => {
         </div>
 
         {/* Row 2: Secondary Action Button Line */}
-        <div className="px-4 py-3 border-b border-line/50 bg-cream/10">
+        <div className="px-4 py-3 flex flex-col gap-2 border-b border-line/50 bg-cream/10">
+          <a
+            href="tel:3058916500"
+            className="text-brand-orange text-center font-bold underline underline-offset-2 hover:text-orange-600 transition-colors"
+          >
+            Call/Text (305) 891-6500
+          </a>
           <a
             href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
             target="_blank"
