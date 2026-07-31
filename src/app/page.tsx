@@ -244,7 +244,7 @@ export default function Hero() {
             frameBorder="0"
             className="max-w-full"
           ></iframe>
-          <div className="bg-cream/40 rounded-2xl border border-line/50 p-6 sm:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 w-full max-w-[782px]">
+          <div className="bg-cream/40 rounded-2xl border border-line/50 p-6 sm:p-8 flex flex-col items-start md:items-center justify-between gap-6 w-full max-w-[782px]">
             {/* Warning Disclaimer Box */}
             <div className="flex gap-3 max-w-xl">
               <AlertCircle
@@ -263,17 +263,21 @@ export default function Hero() {
             </div>
 
             {/* Action Callout Box */}
-            <div className="flex flex-col items-start md:items-end gap-2 shrink-0 w-full md:w-auto border-t md:border-t-0 border-line/40 pt-4 md:pt-0">
-              <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-ink-2/80">
+            <div className="flex flex-col  gap-2 shrink-0 w-full md:w-auto border-t md:border-t-0 border-line/40 pt-4 md:pt-0">
+              <span className="text-[10px] text-center sm:text-xs font-semibold uppercase tracking-wider text-ink-2/80">
                 Contact us for your personalized quote
               </span>
               <Link
                 href="/get-quote"
-                className="btn-shine w-full md:w-auto bg-brand-orange text-primary-bg px-6 py-3 rounded-full text-xs font-bold tracking-wide text-center hover:bg-orange-600 transition-colors focus-ring shadow-sm"
+                className="btn-shine w-full md:w-auto bg-brand-orange text-primary-bg px-6 py-3 rounded-full text-sm mt-2 font-bold tracking-wide text-center hover:bg-orange-600 transition-colors focus-ring shadow-sm"
               >
-                Get My Personalized Rate
+                Get Your Personalized Mortgage Rate
               </Link>
+              <p className="text-xs text-ink-2 text-center mt-2">
+                Complete this short form and a MyLoanDesk mortgage specialist will compare loan options from our nationwide lending network and contact you with personalized rates and financing solutions tailored to your goals.
+              </p>
             </div>
+
           </div>
         </div>
       </section>
