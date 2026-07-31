@@ -221,10 +221,10 @@ export default function PrivacyPolicy() {
                 exercise applicable privacy rights, please contact us.
               </p>
               <a
-                href="mailto:privacy@myloandesk.com"
+                href="mailto:info@myloandesk.com"
                 className="inline-flex items-center gap-1.5 text-sm font-medium hover:text-brand-orange transition-colors focus-ring"
               >
-                privacy@myloandesk.com
+                info@myloandesk.com
                 <ArrowUpRight size={16} />
               </a>
             </div>
@@ -890,7 +890,7 @@ export default function PrivacyPolicy() {
                     <strong>Website:</strong> https://www.myloandesk.com
                   </li>
                   <li>
-                    <strong>Email:</strong> privacy@myloandesk.com
+                    <strong>Email:</strong> info@myloandesk.com
                   </li>
                   <li>
                     <strong>Phone:</strong> 3058916500

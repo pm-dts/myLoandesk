@@ -267,19 +267,24 @@ export default function RateAlert() {
               <X size={20} />
             </button>
 
-            {isSubmitted ? (
+            {!isSubmitted ? (
               <div className="py-12 flex flex-col items-center justify-center text-center animate-in zoom-in-95 duration-300">
                 <div className="w-16 h-16 bg-brand-orange/10 text-brand-orange rounded-full flex items-center justify-center mb-6">
                   <Percent size={32} />
                 </div>
                 <h3 className="text-2xl sm:text-3xl font-bold text-black mb-3">
-                  Rate Alert Activated!
+                  Property Value Request Received!
                 </h3>
                 <p className="text-sm text-gray-600 max-w-md leading-relaxed mb-6">
-                  Thank you! We have logged your property at{" "}
-                  <span className="font-semibold text-black">{address}</span>.
-                  Our team will monitor prevailing market conditions and alert
-                  you when optimal refinance opportunities arise.
+                  Thank you! We're preparing your personalized property value
+                  estimate for{" "}
+                  <span className="font-semibold text-black">{address}</span>
+                  .
+                  <br />
+                  A
+                  MyLoanDesk specialist will review your property and send you
+                  an estimated market value along with recent comparable sales
+                  as soon as it's ready.
                 </p>
                 <button
                   onClick={closeDialog}
@@ -330,7 +335,9 @@ export default function RateAlert() {
                               type="text"
                               value={field.state.value}
                               onBlur={field.handleBlur}
-                              onChange={(e) => field.handleChange(e.target.value)}
+                              onChange={(e) =>
+                                field.handleChange(e.target.value)
+                              }
                               placeholder="John Doe"
                               className={`w-full pl-12 pr-4 py-3.5 bg-white border ${field.state.meta.errors.length
                                 ? "border-brand-orange"
@@ -373,7 +380,9 @@ export default function RateAlert() {
                               type="email"
                               value={field.state.value}
                               onBlur={field.handleBlur}
-                              onChange={(e) => field.handleChange(e.target.value)}
+                              onChange={(e) =>
+                                field.handleChange(e.target.value)
+                              }
                               placeholder="you@example.com"
                               className={`w-full pl-12 pr-4 py-3.5 bg-white border ${field.state.meta.errors.length
                                 ? "border-brand-orange"
@@ -425,7 +434,9 @@ export default function RateAlert() {
                               step="0.125"
                               value={field.state.value}
                               onBlur={field.handleBlur}
-                              onChange={(e) => field.handleChange(e.target.value)}
+                              onChange={(e) =>
+                                field.handleChange(e.target.value)
+                              }
                               placeholder="6.5"
                               className="w-full pl-4 pr-10 py-3.5 bg-white border border-gray-200 rounded-xl text-black text-sm focus:outline-none focus:border-brand-orange transition-colors placeholder:text-gray-400"
                             />
@@ -451,7 +462,9 @@ export default function RateAlert() {
                               value={field.state.value}
                               onBlur={field.handleBlur}
                               onChange={(e) => {
-                                const formatted = formatCurrency(e.target.value);
+                                const formatted = formatCurrency(
+                                  e.target.value,
+                                );
                                 field.handleChange(formatted);
                               }}
                               placeholder="$350,000"
@@ -485,7 +498,10 @@ export default function RateAlert() {
                   {/* Submit Button */}
                   <div className="pt-2">
                     <form.Subscribe
-                      selector={(state) => [state.canSubmit, state.isSubmitting]}
+                      selector={(state) => [
+                        state.canSubmit,
+                        state.isSubmitting,
+                      ]}
                     >
                       {([canSubmit, isSubmitting]) => (
                         <button
@@ -493,7 +509,9 @@ export default function RateAlert() {
                           disabled={!canSubmit || isSubmitting}
                           className="w-full bg-brand-orange text-white py-4 rounded-xl font-bold text-base hover:bg-orange-600 transition-colors shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
                         >
-                          {isSubmitting ? "Loading..." : "Get My Property Value"}
+                          {isSubmitting
+                            ? "Loading..."
+                            : "Get My Property Value"}
                         </button>
                       )}
                     </form.Subscribe>
