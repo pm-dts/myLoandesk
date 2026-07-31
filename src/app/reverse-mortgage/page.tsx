@@ -13,6 +13,7 @@ import {
   ArrowRight,
   Key,
 } from "lucide-react";
+import ReverseMortgageForm from "@/components/site/ReverseMortgage/InquiryForm";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -91,7 +92,7 @@ export default function ReverseMortgagePage() {
 
         <div className="mt-10 flex flex-col sm:flex-row gap-4">
           <Link
-            href="/get-quote"
+            href="#reverse-mortgage-inquiry"
             className="btn-shine bg-brand-orange text-white px-8 py-4 rounded-full font-bold text-sm tracking-wide flex items-center justify-center gap-2 hover:bg-orange-600 transition-colors shadow-sm focus-ring"
           >
             Let's Find your Options
@@ -153,7 +154,7 @@ export default function ReverseMortgagePage() {
                 today.
               </p>
               <Link
-                href="/get-quote"
+                href="#reverse-mortgage-inquiry"
                 className="text-brand-orange font-bold text-sm flex items-center gap-2 hover:text-white transition-colors"
               >
                 Contact Us <ArrowRight size={16} />
@@ -230,7 +231,7 @@ export default function ReverseMortgagePage() {
                 Apply Now <ArrowRight size={14} />
               </a>
               <Link
-                href="/get-quote"
+                href="#reverse-mortgage-inquiry"
                 className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
               >
                 Contact Us Now
@@ -328,7 +329,7 @@ export default function ReverseMortgagePage() {
                 Apply Now <ArrowRight size={14} />
               </a>
               <Link
-                href="/get-quote"
+                href="#reverse-mortgage-inquiry"
                 className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
               >
                 Contact Us Now
@@ -415,7 +416,7 @@ export default function ReverseMortgagePage() {
                 Apply Now <ArrowRight size={14} />
               </a>
               <Link
-                href="/get-quote"
+                href="#reverse-mortgage-inquiry"
                 className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
               >
                 Contact Us Now
@@ -507,7 +508,7 @@ export default function ReverseMortgagePage() {
                   Apply Now <ArrowRight size={14} />
                 </a>
                 <Link
-                  href="/get-quote"
+                  href="#reverse-mortgage-inquiry"
                   className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
                 >
                   Contact Us Now
@@ -532,6 +533,9 @@ export default function ReverseMortgagePage() {
             </div>
           </div>
         </div>
+      </section>
+      <section id="reverse-mortgage-inquiry">
+        <ReverseMortgageForm />
       </section>
     </main>
   );
