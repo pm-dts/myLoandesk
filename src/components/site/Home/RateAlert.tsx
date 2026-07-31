@@ -493,7 +493,7 @@ export default function RateAlert() {
                           disabled={!canSubmit || isSubmitting}
                           className="w-full bg-brand-orange text-white py-4 rounded-xl font-bold text-base hover:bg-orange-600 transition-colors shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
                         >
-                          {isSubmitting ? "Setting Alert..." : "Activate Rate Alert"}
+                          {isSubmitting ? "Loading..." : "Get My Property Value"}
                         </button>
                       )}
                     </form.Subscribe>
