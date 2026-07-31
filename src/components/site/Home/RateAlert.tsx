@@ -133,7 +133,7 @@ export default function RateAlert() {
       goals: "",
     },
     onSubmit: async ({ value }) => {
-      const toastId = toast.loading("Setting up your rate alert...");
+      const toastId = toast.loading("Submitting your property value request...");
 
       try {
         const response = await fetch(DUMMY_GHL_WEBHOOK_URL, {
@@ -158,7 +158,7 @@ export default function RateAlert() {
           throw new Error(`Webhook error: ${response.status}`);
         }
 
-        toast.success("Rate alert successfully created!", {
+        toast.success("Home valuation request submitted successfully!", {
           id: toastId,
           duration: 4000,
         });
@@ -166,7 +166,7 @@ export default function RateAlert() {
         setIsSubmitted(true);
       } catch (error) {
         console.error("Error submitting to webhook:", error);
-        toast.error("Issue creating your alert. Please try again.", {
+        toast.error("Issue submitting your request. Please try again.", {
           id: toastId,
           duration: 5000,
         });
@@ -267,7 +267,7 @@ export default function RateAlert() {
               <X size={20} />
             </button>
 
-            {!isSubmitted ? (
+            {isSubmitted ? (
               <div className="py-12 flex flex-col items-center justify-center text-center animate-in zoom-in-95 duration-300">
                 <div className="w-16 h-16 bg-brand-orange/10 text-brand-orange rounded-full flex items-center justify-center mb-6">
                   <Percent size={32} />
@@ -281,8 +281,7 @@ export default function RateAlert() {
                   <span className="font-semibold text-black">{address}</span>
                   .
                   <br />
-                  A
-                  MyLoanDesk specialist will review your property and send you
+                  A MyLoanDesk specialist will review your property and send you
                   an estimated market value along with recent comparable sales
                   as soon as it's ready.
                 </p>
