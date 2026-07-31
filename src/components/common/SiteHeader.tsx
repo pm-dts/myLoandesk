@@ -323,7 +323,7 @@ export const Header: React.FC = () => {
           <Link
             href="/get-quote"
             target="_blank"
-            className="btn-shine w-full bg-brand-orange text-primary-bg py-3 rounded-full text-xs font-semibold tracking-wide flex items-center justify-center transition-colors focus-ring"
+            className="btn-shine w-full bg-brand-orange text-primary-bg py-3 rounded-full text-md font-semibold tracking-wide flex items-center justify-center  transition-colors focus-ring"
           >
             Get a Quote
           </Link>
