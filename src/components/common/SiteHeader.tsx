@@ -320,13 +320,13 @@ export const Header: React.FC = () => {
           >
             Call/Text (305) 891-6500
           </a>
-          <a
-            href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
+          <Link
+            href="/get-quote"
             target="_blank"
             className="btn-shine w-full bg-brand-orange text-primary-bg py-3 rounded-full text-xs font-semibold tracking-wide flex items-center justify-center transition-colors focus-ring"
           >
-            Start application
-          </a>
+            Get a Quote
+          </Link>
         </div>
       </div>
 
