@@ -1354,7 +1354,7 @@ export default function LoanProgramsPage() {
                 Apply Now <ArrowRight size={14} />
               </a>
               <Link
-                href="/get-quote"
+                href="/reverse-mortgage/#reverse-mortgage-inquiry"
                 className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
               >
                 Contact Us Now
@@ -1452,7 +1452,7 @@ export default function LoanProgramsPage() {
                 Apply Now <ArrowRight size={14} />
               </a>
               <Link
-                href="/get-quote"
+                href="/reverse-mortgage/#reverse-mortgage-inquiry"
                 className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
               >
                 Contact Us Now
@@ -1539,7 +1539,7 @@ export default function LoanProgramsPage() {
                 Apply Now <ArrowRight size={14} />
               </a>
               <Link
-                href="/get-quote"
+                href="/reverse-mortgage/#reverse-mortgage-inquiry"
                 className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
               >
                 Contact Us Now
@@ -1631,7 +1631,7 @@ export default function LoanProgramsPage() {
                   Apply Now <ArrowRight size={14} />
                 </a>
                 <Link
-                  href="/get-quote"
+                  href="/reverse-mortgage/#reverse-mortgage-inquiry"
                   className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
                 >
                   Contact Us Now
