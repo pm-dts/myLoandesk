@@ -188,7 +188,7 @@ export default function Faq() {
                 href="/get-quote"
                 className="btn-shine bg-brand-orange text-white text-center py-3.5 px-6 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-orange-600 transition-colors shadow-sm"
               >
-                Contact Us for personalized rates
+                Get Your Personalized Mortgage Options
               </Link>
               <Link
                 href="/#live-rates-widget"
@@ -219,11 +219,10 @@ export default function Faq() {
                         {faq.question}
                       </span>
                       <span
-                        className={`shrink-0 w-8 h-8 rounded-full border flex items-center justify-center transition-colors duration-300 ${
-                          isOpen
-                            ? "bg-brand-orange border-brand-orange text-primary-bg"
-                            : "border-line text-moss-deep group-hover:border-moss-deep"
-                        }`}
+                        className={`shrink-0 w-8 h-8 rounded-full border flex items-center justify-center transition-colors duration-300 ${isOpen
+                          ? "bg-brand-orange border-brand-orange text-primary-bg"
+                          : "border-line text-moss-deep group-hover:border-moss-deep"
+                          }`}
                       >
                         {isOpen ? (
                           <Minus size={14} strokeWidth={2} />
@@ -235,11 +234,10 @@ export default function Faq() {
 
                     {/* Animated Content Wrapper */}
                     <div
-                      className={`grid transition-all duration-300 ease-in-out ${
-                        isOpen
-                          ? "grid-rows-[1fr] opacity-100"
-                          : "grid-rows-[0fr] opacity-0"
-                      }`}
+                      className={`grid transition-all duration-300 ease-in-out ${isOpen
+                        ? "grid-rows-[1fr] opacity-100"
+                        : "grid-rows-[0fr] opacity-0"
+                        }`}
                     >
                       <div className="overflow-hidden">
                         <div className="pb-6 text-ink-2 leading-relaxed pr-12">
