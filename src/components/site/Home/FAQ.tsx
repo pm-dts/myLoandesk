@@ -68,37 +68,37 @@ export default function Faq() {
     {
       question: "How are you different from a bank's loan officer?",
       answer:
-        "A bank can only offer the mortgage products available through that bank[cite: 1]. At MyLoan Desk, we work with multiple lenders, giving you access to a wider range of loan programs, competitive interest rates, and flexible underwriting options[cite: 1]. We compare offers on your behalf to help you find the mortgage that best fits your financial goals-not just the one a single bank has available[cite: 1].",
+        "A bank can only offer the mortgage products available through that bank. At MyLoan Desk, we work with multiple lenders, giving you access to a wider range of loan programs, competitive interest rates, and flexible underwriting options. We compare offers on your behalf to help you find the mortgage that best fits your financial goals-not just the one a single bank has available.",
     },
     {
       question: "How much do I need for a down payment?",
       answer:
-        "Down payment requirements vary by loan program[cite: 1]. Some loans require as little as 3% down, while eligible veterans may qualify for 0% down through VA loans[cite: 1]. There are also down payment assistance programs available for many first-time homebuyers[cite: 1]. We'll help you explore the options that best fit your financial situation[cite: 1].",
+        "Down payment requirements vary by loan program. Some loans require as little as 3% down, while eligible veterans may qualify for 0% down through VA loans. There are also down payment assistance programs available for many first-time homebuyers. We'll help you explore the options that best fit your financial situation.",
     },
     {
       question: "How much can I qualify for?",
       answer:
-        "The amount you qualify for depends on several factors, including your income, assets, credit history, existing debts, down payment, and the type of loan you're applying for[cite: 1]. The fastest way to find out is through a free pre-approval[cite: 1]. We'll review your financial situation and provide a personalized estimate so you can shop for a home with confidence[cite: 1].",
+        "The amount you qualify for depends on several factors, including your income, assets, credit history, existing debts, down payment, and the type of loan you're applying for. The fastest way to find out is through a free pre-approval. We'll review your financial situation and provide a personalized estimate so you can shop for a home with confidence.",
     },
     {
       question: "What are the closing costs on a mortgage?",
       answer:
-        "Closing costs vary based on the loan program, property, loan amount, and your individual qualifications[cite: 1]. They may include lender fees, appraisal, title services, government recording fees, prepaid taxes and insurance, and other third-party costs[cite: 1]. Before you commit to a loan, you'll receive a detailed Loan Estimate that clearly outlines every fee, so you'll know exactly what to expect[cite: 1]. In many cases, lender credits or seller concessions can help reduce your out-of-pocket costs[cite: 1].",
+        "Closing costs vary based on the loan program, property, loan amount, and your individual qualifications. They may include lender fees, appraisal, title services, government recording fees, prepaid taxes and insurance, and other third-party costs. Before you commit to a loan, you'll receive a detailed Loan Estimate that clearly outlines every fee, so you'll know exactly what to expect. In many cases, lender credits or seller concessions can help reduce your out-of-pocket costs.",
     },
     {
       question: "How fast can you close?",
       answer:
-        "Every loan is different, but many mortgages can close in as little as 14 to 30 days, depending on the loan program, appraisal timing, and how quickly required documents are provided[cite: 1]. Our team works proactively with borrowers, real estate agents, and lenders to keep your loan moving efficiently from application to closing[cite: 1].",
+        "Every loan is different, but many mortgages can close in as little as 14 to 30 days, depending on the loan program, appraisal timing, and how quickly required documents are provided. Our team works proactively with borrowers, real estate agents, and lenders to keep your loan moving efficiently from application to closing.",
     },
     {
       question: "Will shopping around hurt my credit score?",
       answer:
-        "No[cite: 1]. Credit scoring models recognize that borrowers often compare mortgage offers before choosing a lender[cite: 1]. Multiple mortgage-related credit inquiries made within a short shopping period are generally treated as a single inquiry for scoring purposes[cite: 1]. Comparing loan options can help you find a better rate and potentially save thousands over the life of your mortgage[cite: 1].",
+        "No. Credit scoring models recognize that borrowers often compare mortgage offers before choosing a lender. Multiple mortgage-related credit inquiries made within a short shopping period are generally treated as a single inquiry for scoring purposes. Comparing loan options can help you find a better rate and potentially save thousands over the life of your mortgage.",
     },
     {
       question: "What if my credit isn't great?",
       answer:
-        "Don't assume you won't qualify[cite: 1]. We work with a variety of lenders offering programs for borrowers with different credit profiles[cite: 1]. Depending on your situation, there may be options available even if your credit score isn't perfect[cite: 1]. If you're not ready today, we'll help you understand what steps could improve your chances of qualifying in the future[cite: 1].",
+        "Don't assume you won't qualify. We work with a variety of lenders offering programs for borrowers with different credit profiles. Depending on your situation, there may be options available even if your credit score isn't perfect. If you're not ready today, we'll help you understand what steps could improve your chances of qualifying in the future.",
     },
   ];
 

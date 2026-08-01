@@ -596,7 +596,7 @@ export default function Hero() {
             <div className="relative z-10 bg-primary-bg border border-line rounded-[24px] sm:rounded-[32px] overflow-hidden shadow-[0_20px_50px_-20px_rgba(15,61,46,0.2)]">
               {/* Note: Iframe height is explicitly set to ensure enough vertical room for the widget to display the reviews without internal scrolling if possible */}
               <iframe
-                className="w-full h-[700px]"
+                className="w-full h-[900px] sm:h-[700px]"
                 title="Google Review"
                 name="htmlComp-iframe"
                 allowFullScreen={true}
