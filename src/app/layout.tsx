@@ -22,8 +22,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.className} h-full antialiased`}>
-      <body className="min-h-full flex flex-col relative">
+    <html lang="en" className={`${geistSans.className} h-full antialiased bg-cream`}>
+      <body className="min-h-full flex flex-col relative bg-cream">
         <SiteHeader />
 
         <main className="flex-1">{children}</main>
