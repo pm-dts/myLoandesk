@@ -24,17 +24,7 @@ export default function Blog() {
       readTime: "3 min read",
       image:
         "https://static.wixstatic.com/media/ba713e_08a689363acb4318a8d3aa67edf3101b~mv2.png/v1/fill/w_1678,h_1260,fp_0.50_0.50,q_95,enc_avif,quality_auto/ba713e_08a689363acb4318a8d3aa67edf3101b~mv2.png",
-    },
-    // {
-    //   id: 3,
-    //   title: "Closing in 20 Days: A Buyer's Blueprint",
-    //   excerpt:
-    //     "Speed wins deals. Here is exactly what documents you need to prepare, organize, and have ready before you even start looking at houses to ensure you can close faster than the competition.",
-    //   date: "May 20",
-    //   readTime: "4 min read",
-    //   image:
-    //     "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    // },
+    }
   ];
 
   return (
