@@ -98,7 +98,7 @@ export default function VideoGreetingWidget() {
                 <button
                     onClick={handleManualOpen}
                     aria-label="Watch Video"
-                    className={`transition-all duration-500 bg-brand-orange hover:bg-orange-600 text-white w-12 h-12 md:w-14 md:h-14 rounded-full shadow-[0_8px_30px_rgb(255,107,0,0.35)] flex items-center justify-center p-0 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-orange ${!isOpen
+                    className={`transition-all duration-500 bg-brand-orange hover:bg-orange-600 text-white w-14 h-14 rounded-full shadow-[0_8px_30px_rgb(255,107,0,0.35)] flex items-center justify-center p-0 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-orange ${!isOpen
                         ? "opacity-100 scale-100 pointer-events-auto"
                         : "opacity-0 scale-50 pointer-events-none"
                         }`}
