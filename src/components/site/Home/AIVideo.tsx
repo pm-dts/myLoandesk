@@ -1,12 +1,15 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import { PlayCircle, Minimize2, X } from "lucide-react";
+import { useState, useEffect } from "react";
+import { PlayCircle, Minimize2, X, Loader2 } from "lucide-react";
 
 export default function VideoGreetingWidget() {
     const [isOpen, setIsOpen] = useState(false);
     const [isMounted, setIsMounted] = useState(false);
+    const [shouldRenderIframe, setShouldRenderIframe] = useState(false);
+    const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
+    // Initial Auto-Open on page load
     useEffect(() => {
         setIsMounted(true);
 
@@ -17,24 +20,40 @@ export default function VideoGreetingWidget() {
         return () => clearTimeout(openTimer);
     }, []);
 
+    // Sync iframe mounting/unmounting with isOpen state
     useEffect(() => {
         let closeTimer: NodeJS.Timeout;
+        let unmountTimer: NodeJS.Timeout;
 
         if (isOpen) {
+            setIsVideoLoaded(false);
+            setShouldRenderIframe(true);
+
+            // Auto-close after 15 seconds
             closeTimer = setTimeout(() => {
                 setIsOpen(false);
-            }, 14000); // 14 seconds
+            }, 15000);
+        } else {
+            // Wait 500ms for the close animation to finish BEFORE unmounting the iframe
+            // This prevents a black flash/cutout while the pop-up scales down
+            unmountTimer = setTimeout(() => {
+                setShouldRenderIframe(false);
+                setIsVideoLoaded(false);
+            }, 500);
         }
 
         return () => {
-            if (closeTimer) {
-                clearTimeout(closeTimer);
-            }
+            if (closeTimer) clearTimeout(closeTimer);
+            if (unmountTimer) clearTimeout(unmountTimer);
         };
     }, [isOpen]);
 
     const handleManualOpen = () => {
         setIsOpen(true);
+    };
+
+    const handleClose = () => {
+        setIsOpen(false);
     };
 
     // Prevent rendering until hydration is complete
@@ -43,9 +62,7 @@ export default function VideoGreetingWidget() {
     return (
         <>
             {/* --- Centered Pop-up Video State --- */}
-            <div
-                className="fixed inset-0 z-[70] flex items-center justify-center pointer-events-none"
-            >
+            <div className="fixed inset-0 z-[70] flex items-center justify-center pointer-events-none">
                 <div
                     className={`transition-all duration-500 ease-out bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-2xl w-[240px] sm:w-[280px] md:w-[320px] ${isOpen
                         ? "opacity-100 scale-100 translate-y-0 pointer-events-auto"
@@ -63,14 +80,14 @@ export default function VideoGreetingWidget() {
                         </span>
                         <div className="flex items-center gap-1 shrink-0">
                             <button
-                                onClick={() => setIsOpen(false)}
+                                onClick={handleClose}
                                 className="hover:bg-white/20 p-1.5 rounded-lg transition-colors"
                                 aria-label="Minimize video"
                             >
                                 <Minimize2 size={18} />
                             </button>
                             <button
-                                onClick={() => setIsOpen(false)}
+                                onClick={handleClose}
                                 className="hover:bg-white/20 p-1.5 rounded-lg transition-colors"
                                 aria-label="Close video"
                             >
@@ -79,16 +96,28 @@ export default function VideoGreetingWidget() {
                         </div>
                     </div>
 
-                    {/* 9:16 Vertical Video Container using aspect ratio */}
-                    <div className="relative w-full aspect-[9/16] bg-black">
-                        <iframe
-                            className="absolute top-0 left-0 w-full h-full"
-                            src="https://app.heygen.com/embeds/4a68a9770c0947f4bd9af59281c19dc3?autoplay=1"
-                            title="Check out a new AI Video I just made!"
-                            frameBorder="0"
-                            allow="encrypted-media; fullscreen; autoplay;"
-                            allowFullScreen
-                        ></iframe>
+                    {/* 9:16 Vertical Video Container */}
+                    <div className="relative w-full aspect-[9/16] bg-cream/70">
+                        {/* Loading Overlay — covers black screen until iframe triggers onLoad */}
+                        {shouldRenderIframe && !isVideoLoaded && (
+                            <div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-cream/70 text-ink/80 gap-2">
+                                <Loader2 size={24} className="animate-spin text-brand-orange" />
+                                <span className="text-xs font-medium">Loading Video...</span>
+                            </div>
+                        )}
+
+                        {shouldRenderIframe && (
+                            <iframe
+                                className={`absolute top-0 left-0 w-full h-full transition-opacity duration-300 ${isVideoLoaded ? "opacity-100" : "opacity-0"
+                                    }`}
+                                src="https://app.heygen.com/embeds/4a68a9770c0947f4bd9af59281c19dc3?autoplay=1"
+                                title="Check out a new AI Video I just made!"
+                                frameBorder="0"
+                                allow="encrypted-media; fullscreen; autoplay;"
+                                allowFullScreen
+                                onLoad={() => setIsVideoLoaded(true)}
+                            />
+                        )}
                     </div>
                 </div>
             </div>
