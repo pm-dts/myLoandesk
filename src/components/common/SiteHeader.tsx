@@ -20,6 +20,7 @@ const loanLinks = [
   { name: "Conventional Loans", href: "/loan-programs#conventional" },
   { name: "FHA Loans", href: "/loan-programs#fha" },
   { name: "Jumbo Loans", href: "/loan-programs#portfolio" },
+  { name: "Bank Statement Loans", href: "/loan-programs#bank-statement" },
   { name: "VA Loans", href: "/loan-programs#va" },
   { name: "Hybrid Loans", href: "/loan-programs#hybrid" },
   { name: "Private Bridge Loans", href: "/loan-programs#bridge" },

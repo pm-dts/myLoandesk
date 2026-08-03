@@ -216,6 +216,142 @@ export default function LoanProgramsPage() {
             </div>
           </div>
 
+          {/* Bank Statement Loans */}
+          <div
+            id="bank-statement"
+            className="scroll-mt-36 bg-primary-bg p-8 flex flex-col justify-between transition-colors duration-300 hover:bg-cream/40"
+          >
+            <div>
+              <div className="flex items-center justify-between mb-6">
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-brand-orange/10 text-brand-orange">
+                  <FileText size={22} strokeWidth={1.8} />
+                </div>
+                <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2 py-1 rounded">
+                  Self-Employed
+                </span>
+              </div>
+
+              <h3
+                className={cn(
+                  "text-2xl font-medium text-ink mb-3",
+                  fraunces.className,
+                )}
+              >
+                Bank Statement Loans for Self-Employed Borrowers
+              </h3>
+
+              <p className="text-xs font-bold text-brand-orange uppercase tracking-wide mb-3">
+                Qualify Using Your Bank Statements Instead of Tax Returns
+              </p>
+
+              <div className="text-xs text-ink-2 leading-relaxed space-y-2 mb-4">
+                <p>
+                  Traditional mortgage programs often rely on tax returns to determine
+                  income. For many self-employed borrowers, business deductions can
+                  significantly reduce taxable income, making it difficult to qualify for
+                  a conventional loan.
+                </p>
+                <p>
+                  A Bank Statement Loan offers an alternative by allowing eligible
+                  borrowers to qualify using their personal or business bank statements
+                  instead of tax returns.
+                </p>
+                <p>
+                  Whether you’re a business owner, independent contractor, consultant,
+                  freelancer, or entrepreneur, this program is designed to provide
+                  flexible financing that better reflects your actual cash flow.
+                </p>
+              </div>
+
+              <h4 className="font-semibold text-ink text-xs uppercase tracking-wider mb-2">
+                Program Highlights:
+              </h4>
+              <ul className="space-y-2 mb-6">
+                {[
+                  "No tax returns required",
+                  "Qualify using 12 or 24 months of personal or business bank statements",
+                  "Available for self-employed borrowers with at least 2 years of self-employment",
+                  "Purchase, refinance, or cash-out refinance options",
+                  "Primary residences, second homes, and investment properties",
+                  "Loan amounts available from conforming to jumbo financing",
+                  "Flexible credit guidelines",
+                  "Competitive fixed and adjustable-rate options",
+                ].map((item, index) => (
+                  <li
+                    key={index}
+                    className="flex items-start gap-2 text-xs text-ink/90 leading-normal"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-1.5 shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <h4 className="font-semibold text-ink text-xs uppercase tracking-wider mb-2">
+                Who Can Benefit?
+              </h4>
+              <p className="text-xs text-ink-2 mb-2">This program may be ideal for:</p>
+              <ul className="space-y-2 mb-6">
+                {[
+                  "Small business owners",
+                  "Independent contractors",
+                  "Consultants",
+                  "Freelancers",
+                  "Real estate professionals",
+                  "Medical professionals in private practice",
+                  "Commission-based sales professionals",
+                  "Any self-employed borrower whose tax returns do not accurately reflect their income",
+                ].map((item, index) => (
+                  <li
+                    key={index}
+                    className="flex items-start gap-2 text-xs text-ink/90 leading-normal"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-1.5 shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="bg-cream/50 border border-line/60 rounded-2xl p-4 mb-4">
+                <h4 className="font-semibold text-ink text-xs uppercase tracking-wider mb-1.5">
+                  Why Choose MyLoanDesk?
+                </h4>
+                <p className="text-xs text-ink-2 leading-relaxed">
+                  At MyLoanDesk, we understand that self-employed borrowers have unique
+                  financial situations. Our experienced mortgage specialists work with a
+                  wide network of lenders to help find financing solutions tailored to
+                  your business and income structure.
+                </p>
+              </div>
+
+              <p className="text-xs text-ink-2 italic mb-2">
+                If you’ve been told you don’t qualify through traditional lending, a Bank
+                Statement Loan may be the solution you’ve been looking for.
+              </p>
+              <p className="text-xs text-ink-2 font-medium mb-4">
+                Contact MyLoanDesk today for a personalized review and discover the
+                mortgage options available to you.
+              </p>
+            </div>
+
+            <div className="flex flex-col gap-3 mt-6">
+              <a
+                href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-3.5 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2 transition-all shadow-sm"
+              >
+                Apply Now <ArrowRight size={14} />
+              </a>
+              <Link
+                href="/get-quote"
+                className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
+              >
+                Contact Us Now
+              </Link>
+            </div>
+          </div>
+
           {/* FHA Loans */}
           <div
             id="fha"
@@ -499,7 +635,7 @@ export default function LoanProgramsPage() {
           {/* Bridge to Sale */}
           <div
             id="bridge-to-sale"
-            className="scroll-mt-36 bg-primary-bg p-8 flex flex-col justify-between transition-colors duration-300 hover:bg-cream/40 rounded-3xl border border-line"
+            className="scroll-mt-36 bg-primary-bg p-8 flex flex-col justify-between transition-colors duration-300 hover:bg-cream/40  border border-line"
           >
             <div>
               {/* Header Icon & Tag */}
@@ -687,7 +823,7 @@ export default function LoanProgramsPage() {
           {/* ITIN Home Loans */}
           <div
             id="ITIN-home"
-            className="scroll-mt-36 bg-primary-bg p-8 flex flex-col justify-between transition-colors duration-300 hover:bg-cream/40"
+            className="scroll-mt-36 md:col-span-3 bg-primary-bg p-8 flex flex-col justify-between transition-colors duration-300 hover:bg-cream/40"
           >
             <div>
               <div className="flex items-center justify-between mb-6">
@@ -1656,6 +1792,8 @@ export default function LoanProgramsPage() {
             </div>
           </div>
         </div>
+
+
       </section>
 
       {/* Real Estate Investment Loans */}
