@@ -285,7 +285,7 @@ export const Header: React.FC = () => {
       {/* --- MOBILE NAVIGATION --- */}
       <div className="lg:hidden flex flex-col w-full bg-primary-bg">
         {/* Row 1: Top branding bar */}
-        <div className="relative h-28 px-4 flex items-center justify-center border-b border-line/30">
+        <div className="relative h-24 px-4 flex items-center justify-center border-b border-line/30">
           {/* Menu Button */}
           <button
             onClick={toggleMobileMenu}
@@ -299,21 +299,21 @@ export const Header: React.FC = () => {
           {/* Centered Bigger Logo */}
           <Link
             href="/"
-            className="shrink-0 flex items-center justify-center py-2"
+            className="shrink-0 flex items-center justify-center "
           >
             <Image
               src={brandLogo}
               alt="My Loan Desk Logo"
               width={220}
               height={80}
-              className={`w-auto h-38 object-contain transition-all duration-300 hover-neon-flash ${isFlashing ? "neon-flash-active" : ""}`}
+              className={`w-auto h-34 object-contain transition-all duration-300 hover-neon-flash ${isFlashing ? "neon-flash-active" : ""}`}
               priority
             />
           </Link>
         </div>
 
         {/* Row 2: Secondary Action Button Line */}
-        <div className="px-4 py-3 flex flex-col gap-2 border-b border-line/50 bg-cream/10">
+        <div className="px-4 pb-2 flex flex-col gap-2 border-b border-line/50 bg-cream/10">
           <a
             href="tel:3058916500"
             className="text-brand-orange text-center font-bold underline underline-offset-2 hover:text-orange-600 transition-colors"
@@ -322,8 +322,7 @@ export const Header: React.FC = () => {
           </a>
           <Link
             href="/get-quote"
-            target="_blank"
-            className="btn-shine w-full bg-brand-orange text-primary-bg py-3 rounded-full text-md font-semibold tracking-wide flex items-center justify-center  transition-colors focus-ring"
+            className="btn-shine w-full bg-brand-orange text-primary-bg py-1.5 rounded-full text-md font-semibold tracking-wide flex items-center justify-center  transition-colors focus-ring"
           >
             Get a Quote
           </Link>
