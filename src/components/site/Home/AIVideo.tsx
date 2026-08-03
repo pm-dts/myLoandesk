@@ -65,9 +65,9 @@ export default function VideoGreetingWidget() {
     return (
         <>
             {/* --- Centered Pop-up Video State --- */}
-            <div className="fixed inset-0 z-[70] flex items-center justify-center pointer-events-none">
+            <div className="fixed inset-0 z-[70] flex items-center justify-center pointer-events-none p-4 sm:p-6">
                 <div
-                    className={`transition-all duration-500 ease-out bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-2xl w-[240px] sm:w-[280px] md:w-[320px] ${isOpen
+                    className={`transition-all duration-500 ease-out bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-2xl w-[340px] sm:w-[500px] md:w-[680px] lg:w-[760px] max-h-[85vh] ${isOpen
                         ? "opacity-100 scale-100 translate-y-0 pointer-events-auto"
                         : "opacity-0 scale-75 translate-y-8 pointer-events-none"
                         }`}
@@ -99,13 +99,13 @@ export default function VideoGreetingWidget() {
                         </div>
                     </div>
 
-                    {/* 9:16 Vertical Video Container */}
-                    <div className="relative w-full aspect-[9/16] bg-cream/70">
+                    {/* 16:9 Landscape Video Container */}
+                    <div className="relative w-full aspect-[16/9] bg-cream/70">
                         {/* Loading Overlay — covers screen until iframe triggers onLoad */}
                         {shouldRenderIframe && !isVideoLoaded && (
                             <div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-cream/70 text-ink/80 gap-2">
-                                <Loader2 size={24} className="animate-spin text-brand-orange" />
-                                <span className="text-xs font-medium">Loading Video...</span>
+                                <Loader2 size={28} className="animate-spin text-brand-orange" />
+                                <span className="text-xs sm:text-sm font-medium">Loading Video...</span>
                             </div>
                         )}
 
@@ -113,7 +113,7 @@ export default function VideoGreetingWidget() {
                             <iframe
                                 className={`absolute top-0 left-0 w-full h-full transition-opacity duration-300 ${isVideoLoaded ? "opacity-100" : "opacity-0"
                                     }`}
-                                src="https://app.heygen.com/embeds/4a68a9770c0947f4bd9af59281c19dc3?autoplay=1"
+                                src="https://app.heygen.com/embeds/c2b68ae410034aa3bc7a9fe3fc8bb127?autoplay=1"
                                 title="Check out a new AI Video I just made!"
                                 frameBorder="0"
                                 allow="encrypted-media; fullscreen; autoplay;"
