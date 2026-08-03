@@ -30,9 +30,9 @@ export default function VideoGreetingWidget() {
             setShouldRenderIframe(true);
 
             // Determine auto-close duration based on viewport width:
-            // 22 seconds for mobile (< 768px), 18 seconds for desktop (>= 768px)
+            // 25 seconds for mobile (< 768px), 18 seconds for desktop (>= 768px)
             const isMobile = window.innerWidth < 768;
-            const autoCloseDuration = isMobile ? 22000 : 18000;
+            const autoCloseDuration = isMobile ? 25000 : 18000;
 
             closeTimer = setTimeout(() => {
                 setIsOpen(false);
