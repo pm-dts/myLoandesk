@@ -29,13 +29,16 @@ export default function VideoGreetingWidget() {
             setIsVideoLoaded(false);
             setShouldRenderIframe(true);
 
-            // Auto-close after 15 seconds
+            // Determine auto-close duration based on viewport width:
+            // 22 seconds for mobile (< 768px), 18 seconds for desktop (>= 768px)
+            const isMobile = window.innerWidth < 768;
+            const autoCloseDuration = isMobile ? 22000 : 18000;
+
             closeTimer = setTimeout(() => {
                 setIsOpen(false);
-            }, 15000);
+            }, autoCloseDuration);
         } else {
             // Wait 500ms for the close animation to finish BEFORE unmounting the iframe
-            // This prevents a black flash/cutout while the pop-up scales down
             unmountTimer = setTimeout(() => {
                 setShouldRenderIframe(false);
                 setIsVideoLoaded(false);
@@ -98,7 +101,7 @@ export default function VideoGreetingWidget() {
 
                     {/* 9:16 Vertical Video Container */}
                     <div className="relative w-full aspect-[9/16] bg-cream/70">
-                        {/* Loading Overlay — covers black screen until iframe triggers onLoad */}
+                        {/* Loading Overlay — covers screen until iframe triggers onLoad */}
                         {shouldRenderIframe && !isVideoLoaded && (
                             <div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-cream/70 text-ink/80 gap-2">
                                 <Loader2 size={24} className="animate-spin text-brand-orange" />
