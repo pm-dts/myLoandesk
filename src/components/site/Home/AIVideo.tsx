@@ -1,13 +1,15 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { PlayCircle, Minimize2, X, Loader2 } from "lucide-react";
+import { PlayCircle, Minimize2, X } from "lucide-react";
 
 export default function VideoGreetingWidget() {
     const [isOpen, setIsOpen] = useState(false);
     const [isMounted, setIsMounted] = useState(false);
-    const [shouldRenderIframe, setShouldRenderIframe] = useState(false);
-    const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+
+    // Controls whether the video element is in the DOM to prevent audio playing while closed
+    // and allows the close animation to finish smoothly before unmounting.
+    const [showVideo, setShowVideo] = useState(false);
 
     // Initial Auto-Open on page load
     useEffect(() => {
@@ -20,33 +22,20 @@ export default function VideoGreetingWidget() {
         return () => clearTimeout(openTimer);
     }, []);
 
-    // Sync iframe mounting/unmounting with isOpen state
+    // Sync video rendering with isOpen state for smooth animations
     useEffect(() => {
-        let closeTimer: NodeJS.Timeout;
         let unmountTimer: NodeJS.Timeout;
 
         if (isOpen) {
-            setIsVideoLoaded(false);
-            setShouldRenderIframe(true);
-
-            // Determine auto-close duration based on viewport width:
-            // 25 seconds for mobile (< 768px), 18 seconds for desktop (>= 768px)
-            const isMobile = window.innerWidth < 768;
-            const autoCloseDuration = isMobile ? 25000 : 18000;
-
-            closeTimer = setTimeout(() => {
-                setIsOpen(false);
-            }, autoCloseDuration);
+            setShowVideo(true);
         } else {
-            // Wait 500ms for the close animation to finish BEFORE unmounting the iframe
+            // Wait 500ms for the close animation to finish BEFORE unmounting the video
             unmountTimer = setTimeout(() => {
-                setShouldRenderIframe(false);
-                setIsVideoLoaded(false);
+                setShowVideo(false);
             }, 500);
         }
 
         return () => {
-            if (closeTimer) clearTimeout(closeTimer);
             if (unmountTimer) clearTimeout(unmountTimer);
         };
     }, [isOpen]);
@@ -100,25 +89,16 @@ export default function VideoGreetingWidget() {
                     </div>
 
                     {/* 16:9 Landscape Video Container */}
-                    <div className="relative w-full aspect-[16/9] bg-cream/70">
-                        {/* Loading Overlay — covers screen until iframe triggers onLoad */}
-                        {shouldRenderIframe && !isVideoLoaded && (
-                            <div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-cream/70 text-ink/80 gap-2">
-                                <Loader2 size={28} className="animate-spin text-brand-orange" />
-                                <span className="text-xs sm:text-sm font-medium">Loading Video...</span>
-                            </div>
-                        )}
-
-                        {shouldRenderIframe && (
-                            <iframe
-                                className={`absolute top-0 left-0 w-full h-full transition-opacity duration-300 ${isVideoLoaded ? "opacity-100" : "opacity-0"
-                                    }`}
-                                src="https://app.heygen.com/embeds/c452ca37f2654610849634af6b8155ab?autoplay=1"
-                                title="Check out a new AI Video I just made!"
-                                frameBorder="0"
-                                allow="encrypted-media; fullscreen; autoplay;"
-                                allowFullScreen
-                                onLoad={() => setIsVideoLoaded(true)}
+                    <div className="relative w-full aspect-[16/9] bg-black">
+                        {showVideo && (
+                            <video
+                                className="absolute top-0 left-0 w-full h-full outline-none"
+                                src="/abe-intro-vid.mp4"
+                                autoPlay
+                                playsInline
+                                controls
+                                muted
+                                onEnded={handleClose} // Closes the pop-up when the video finishes
                             />
                         )}
                     </div>
