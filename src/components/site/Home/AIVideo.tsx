@@ -113,7 +113,7 @@ export default function VideoGreetingWidget() {
                             <iframe
                                 className={`absolute top-0 left-0 w-full h-full transition-opacity duration-300 ${isVideoLoaded ? "opacity-100" : "opacity-0"
                                     }`}
-                                src="https://app.heygen.com/embeds/c2b68ae410034aa3bc7a9fe3fc8bb127?autoplay=1"
+                                src="https://app.heygen.com/embeds/c452ca37f2654610849634af6b8155ab?autoplay=1"
                                 title="Check out a new AI Video I just made!"
                                 frameBorder="0"
                                 allow="encrypted-media; fullscreen; autoplay;"
