@@ -342,7 +342,7 @@ export default function LoanProgramsPage() {
           {/* 2/1 */}
           <div
             id="buydown-2-1"
-            className="scroll-mt-36 bg-primary-bg p-8 flex flex-col justify-between transition-colors duration-300 hover:bg-cream/40"
+            className="scroll-mt-36 md:col-span-2 bg-primary-bg p-8 flex flex-col justify-between transition-colors duration-300 hover:bg-cream/40"
           >
             <div>
               <div className="flex items-center justify-between mb-6">
@@ -369,6 +369,22 @@ export default function LoanProgramsPage() {
                 calculated at 4.50% in Year 1, 5.50% in Year 2, and returns to
                 6.50% from Year 3 onward.
               </p>
+
+              {/* Video Section */}
+              <div className="mb-6 max-w-2xl">
+                <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden border border-line shadow-md bg-black">
+                  <video
+                    src="/2-1.mp4"
+                    controls
+                    playsInline
+                    muted
+                    autoPlay
+                    preload="metadata"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
               <p className="text-xs text-ink-2 bg-[#f0ece1]/50 p-4 rounded-xl border border-line/50 leading-relaxed mb-6">
                 This is a fixed-rate mortgage—not an adjustable-rate loan. It is
                 ideal for first-time buyers, buyers purchasing new construction,
@@ -851,7 +867,7 @@ export default function LoanProgramsPage() {
           {/* ITIN Home Loans */}
           <div
             id="ITIN-home"
-            className="scroll-mt-36 md:col-span-2 bg-primary-bg p-8 flex flex-col justify-between transition-colors duration-300 hover:bg-cream/40"
+            className="scroll-mt-36 bg-primary-bg p-8 flex flex-col justify-between transition-colors duration-300 hover:bg-cream/40"
           >
             <div>
               <div className="flex items-center justify-between mb-6">
@@ -1260,6 +1276,8 @@ export default function LoanProgramsPage() {
                     src="/heloc.mp4"
                     controls
                     playsInline
+                    autoPlay
+                    muted
                     preload="metadata"
                     className="w-full h-full object-cover"
                   />
