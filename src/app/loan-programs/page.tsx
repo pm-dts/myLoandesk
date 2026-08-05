@@ -345,6 +345,7 @@ export default function LoanProgramsPage() {
             className="scroll-mt-36 md:col-span-2 bg-primary-bg p-8 flex flex-col justify-between transition-colors duration-300 hover:bg-cream/40"
           >
             <div>
+              {/* Header & Tag */}
               <div className="flex items-center justify-between mb-6">
                 <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-moss-deep/10 text-moss-deep">
                   <TrendingDown size={22} strokeWidth={1.8} />
@@ -353,21 +354,27 @@ export default function LoanProgramsPage() {
                   Residential
                 </span>
               </div>
+
+              {/* Main Title & Subtitle */}
               <h3
                 className={cn(
-                  "text-2xl font-medium text-ink mb-4",
-                  fraunces.className,
+                  "text-2xl font-medium text-ink mb-2",
+                  fraunces.className
                 )}
               >
                 2/1 Buydown Mortgage
               </h3>
+              <p className="text-base font-medium text-moss-deep mb-4">
+                Lower Your Mortgage Payment During Your First Two Years of Homeownership
+              </p>
+
+              {/* Introduction */}
               <p className="text-sm text-ink-2 leading-relaxed mb-6">
-                A 2/1 Buydown Mortgage reduces your monthly payment during the
-                first two years of your loan, funded through a temporary subsidy
-                often paid by the seller or builder as part of the transaction.
-                For example, if your permanent rate is 6.50%, your payment is
-                calculated at 4.50% in Year 1, 5.50% in Year 2, and returns to
-                6.50% from Year 3 onward.
+                Buying a home is exciting—but the first couple of years can also bring new expenses like moving costs,
+                furniture, home improvements, and growing family needs. A 2/1 Buydown Mortgage is designed to make
+                that transition easier by reducing your monthly mortgage payment during the first two years of your loan.
+                The reduced payment is funded through a temporary subsidy, often paid by the seller or builder as part of
+                the transaction.
               </p>
 
               {/* Video Section */}
@@ -385,14 +392,78 @@ export default function LoanProgramsPage() {
                 </div>
               </div>
 
-              <p className="text-xs text-ink-2 bg-[#f0ece1]/50 p-4 rounded-xl border border-line/50 leading-relaxed mb-6">
-                This is a fixed-rate mortgage—not an adjustable-rate loan. It is
-                ideal for first-time buyers, buyers purchasing new construction,
-                families expecting income growth, or anyone negotiating seller
-                concessions to reduce initial housing costs while settling into
-                their new home.
-              </p>
+              {/* How It Works */}
+              <div className="mb-6">
+                <h4 className={cn("text-lg font-medium text-ink mb-2", fraunces.className)}>
+                  How It Works
+                </h4>
+                <p className="text-sm text-ink-2 mb-3">
+                  Let's say your permanent mortgage interest rate is 6.50%:
+                </p>
+                <ul className="list-disc list-inside text-sm text-ink-2 space-y-1.5 pl-2 mb-3">
+                  <li><strong className="text-ink font-semibold">Year 1:</strong> Your payment is calculated using 4.50%</li>
+                  <li><strong className="text-ink font-semibold">Year 2:</strong> Your payment is calculated using 5.50%</li>
+                  <li><strong className="text-ink font-semibold">Year 3 and Beyond:</strong> Your payment returns to the permanent 6.50% fixed rate</li>
+                </ul>
+                <p className="text-sm text-ink-2 leading-relaxed">
+                  This gives you valuable payment relief during the first two years while keeping the security of a fixed-rate mortgage.
+                </p>
+              </div>
+
+              {/* Benefits */}
+              <div className="mb-6">
+                <h4 className={cn("text-lg font-medium text-ink mb-2", fraunces.className)}>
+                  Benefits
+                </h4>
+                <ul className="list-disc list-inside text-sm text-ink-2 space-y-1.5 pl-2">
+                  <li>Lower monthly payments during the first two years</li>
+                  <li>Keep a fixed-rate mortgage—this is not an adjustable-rate loan</li>
+                  <li>More financial flexibility while settling into your new home</li>
+                  <li>Seller or builder concessions can often be used to fund the temporary payment reduction</li>
+                  <li>Ideal for buyers who expect their income to increase or who may refinance if market conditions improve in the future</li>
+                </ul>
+              </div>
+
+              {/* Who Should Consider a 2/1 Buydown? */}
+              <div className="mb-6">
+                <h4 className={cn("text-lg font-medium text-ink mb-2", fraunces.className)}>
+                  Who Should Consider a 2/1 Buydown?
+                </h4>
+                <p className="text-sm text-ink-2 mb-2">This program may be a great fit for:</p>
+                <ul className="list-disc list-inside text-sm text-ink-2 space-y-1.5 pl-2">
+                  <li>First-time homebuyers</li>
+                  <li>Buyers purchasing a newly constructed home</li>
+                  <li>Buyers negotiating seller concessions</li>
+                  <li>Families expecting increased income in the next few years</li>
+                  <li>Anyone looking to reduce their initial monthly housing costs</li>
+                </ul>
+              </div>
+
+              {/* Things to Know Callout */}
+              <div className="text-xs text-ink-2 bg-[#f0ece1]/50 p-4 rounded-xl border border-line/50 leading-relaxed mb-6">
+                <strong className="font-semibold text-ink block mb-1">Things to Know:</strong>
+                A 2/1 Buydown temporarily lowers your monthly payment, not your permanent mortgage rate. You still
+                qualify based on the full note rate, and after the first two years your payment adjusts to the regular fixed
+                payment established at closing.
+              </div>
+
+              {/* Let MyLoanDesk Help Section */}
+              <div className="mb-6 border-t border-line/50 pt-6">
+                <h4 className={cn("text-lg font-medium text-ink mb-2", fraunces.className)}>
+                  Let MyLoanDesk Help
+                </h4>
+                <p className="text-sm text-ink-2 leading-relaxed mb-3">
+                  At MyLoanDesk, we'll review your financial goals, explain all available financing options, and determine
+                  whether a 2/1 Buydown is the right strategy for your situation. If seller concessions are available, we'll help
+                  structure the loan to maximize your savings while keeping your long-term goals in focus.
+                </p>
+                <p className="text-sm font-medium text-moss-deep italic">
+                  Lower your payments today. Build your future with confidence.
+                </p>
+              </div>
             </div>
+
+            {/* CTA Button */}
             <LoanProgramButton />
           </div>
 
