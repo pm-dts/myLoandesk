@@ -29,6 +29,7 @@ const loanLinks = [
     name: "International Buyers Section",
     href: "/loan-programs#international-buyer",
   },
+  { name: "2/1 Buydown Mortgage", href: "/loan-programs#buydown-2-1" },
   { name: "ITIN Home Loans", href: "/loan-programs#ITIN-home" },
   { name: "FHA 203(k) Rehab Loans", href: "/loan-programs#fha-203k" },
   { name: "Refinance Options", href: "/loan-programs#refinance" },

@@ -17,6 +17,7 @@ import {
 import { cn } from "@/lib/utils";
 import { Fraunces } from "next/font/google";
 import Link from "next/link";
+import LoanProgramButton from "@/components/site/utils/LoanProgramButton";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -662,7 +663,7 @@ export default function LoanProgramsPage() {
           {/* Bridge to Sale */}
           <div
             id="bridge-to-sale"
-            className="scroll-mt-36 bg-primary-bg p-8 flex flex-col justify-between transition-colors duration-300 hover:bg-cream/40  border border-line"
+            className="scroll-mt-36 bg-primary-bg p-8 flex flex-col justify-between transition-colors duration-300 hover:bg-cream/40"
           >
             <div>
               {/* Header Icon & Tag */}
@@ -850,7 +851,7 @@ export default function LoanProgramsPage() {
           {/* ITIN Home Loans */}
           <div
             id="ITIN-home"
-            className="scroll-mt-36 md:col-span-3 bg-primary-bg p-8 flex flex-col justify-between transition-colors duration-300 hover:bg-cream/40"
+            className="scroll-mt-36 md:col-span-2 bg-primary-bg p-8 flex flex-col justify-between transition-colors duration-300 hover:bg-cream/40"
           >
             <div>
               <div className="flex items-center justify-between mb-6">
