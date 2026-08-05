@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@next/third-parties": "^16.3.0",
     "@tanstack/react-form": "^1.33.2",
     "clsx": "^2.1.1",
     "lucide-react": "^1.24.0",
