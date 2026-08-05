@@ -1225,6 +1225,19 @@ export default function LoanProgramsPage() {
                 around your goals.
               </p>
 
+              {/* Video Section */}
+              <div className="mb-8 max-w-2xl">
+                <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden border border-line shadow-md bg-black">
+                  <video
+                    src="/heloc.mp4"
+                    controls
+                    playsInline
+                    preload="metadata"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
               {/* Stacked Long-Column Content */}
               <div className="space-y-8 text-xs text-ink-2 mb-8">
                 {/* HELOC Section */}

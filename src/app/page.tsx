@@ -219,6 +219,19 @@ export default function Hero() {
               </article>
             </Link>
           </div>
+
+          {/* Video Section (Constrained Width) */}
+          <div className="mt-10 max-w-4xl mx-auto">
+            <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden border border-line shadow-md bg-black">
+              <video
+                src="/reverse-mortgage.mp4"
+                controls
+                playsInline
+                preload="metadata"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
