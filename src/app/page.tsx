@@ -226,6 +226,8 @@ export default function Hero() {
               <video
                 src="/reverse-mortgage.mp4"
                 controls
+                autoPlay
+                muted
                 playsInline
                 preload="metadata"
                 className="w-full h-full object-cover"

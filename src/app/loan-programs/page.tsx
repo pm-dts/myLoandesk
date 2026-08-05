@@ -3449,7 +3449,7 @@ export default function LoanProgramsPage() {
           {/* Doctor Loan Program - Made responsive with md:col-span-2 */}
           <div
             id="doctor"
-            className="scroll-mt-36 col-span-1 md:col-span-2 bg-primary-bg p-8 sm:p-10 flex flex-col justify-between transition-colors duration-300 hover:bg-cream/40 rounded-3xl border border-line"
+            className="scroll-mt-36 col-span-1 md:col-span-2 bg-primary-bg p-8 sm:p-10 flex flex-col justify-between transition-colors duration-300 hover:bg-cream/40 "
           >
             <div>
               {/* Header & Tag */}
