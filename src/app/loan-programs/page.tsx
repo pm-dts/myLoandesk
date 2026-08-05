@@ -12,6 +12,7 @@ import {
   Landmark,
   Key,
   Stethoscope,
+  TrendingDown,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Fraunces } from "next/font/google";
@@ -334,22 +335,48 @@ export default function LoanProgramsPage() {
               </p>
             </div>
 
-            <div className="flex flex-col gap-3 mt-6">
-              <a
-                href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full py-3.5 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2 transition-all shadow-sm"
+            <LoanProgramButton />
+          </div>
+
+          {/* 2/1 */}
+          <div
+            id="buydown-2-1"
+            className="scroll-mt-36 bg-primary-bg p-8 flex flex-col justify-between transition-colors duration-300 hover:bg-cream/40"
+          >
+            <div>
+              <div className="flex items-center justify-between mb-6">
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-moss-deep/10 text-moss-deep">
+                  <TrendingDown size={22} strokeWidth={1.8} />
+                </div>
+                <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2 py-1 rounded">
+                  Residential
+                </span>
+              </div>
+              <h3
+                className={cn(
+                  "text-2xl font-medium text-ink mb-4",
+                  fraunces.className,
+                )}
               >
-                Apply Now <ArrowRight size={14} />
-              </a>
-              <Link
-                href="/get-quote"
-                className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
-              >
-                Contact Us Now
-              </Link>
+                2/1 Buydown Mortgage
+              </h3>
+              <p className="text-sm text-ink-2 leading-relaxed mb-6">
+                A 2/1 Buydown Mortgage reduces your monthly payment during the
+                first two years of your loan, funded through a temporary subsidy
+                often paid by the seller or builder as part of the transaction.
+                For example, if your permanent rate is 6.50%, your payment is
+                calculated at 4.50% in Year 1, 5.50% in Year 2, and returns to
+                6.50% from Year 3 onward.
+              </p>
+              <p className="text-xs text-ink-2 bg-[#f0ece1]/50 p-4 rounded-xl border border-line/50 leading-relaxed mb-6">
+                This is a fixed-rate mortgage—not an adjustable-rate loan. It is
+                ideal for first-time buyers, buyers purchasing new construction,
+                families expecting income growth, or anyone negotiating seller
+                concessions to reduce initial housing costs while settling into
+                their new home.
+              </p>
             </div>
+            <LoanProgramButton />
           </div>
 
           {/* FHA Loans */}
