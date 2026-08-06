@@ -1,8 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import Image from "next/image";
+import { sendGTMEvent } from "@next/third-parties/google";
 
 import homeLoansImg from "@/assets/home-loans.png";
 import realEstateLoansImg from "@/assets/real-estate-loans.png";
@@ -11,6 +12,7 @@ import businessLoansImg from "@/assets/business-loans.png";
 
 export default function HeroSmallIcons() {
   const router = useRouter();
+  const pathname = usePathname();
 
   // State to manage the initial load flash and the on-click flash
   const [initialFlash, setInitialFlash] = useState(true);
@@ -22,7 +24,16 @@ export default function HeroSmallIcons() {
     return () => clearTimeout(timer);
   }, []);
 
-  const handleNavigation = (href: string, index: number) => {
+  const handleNavigation = (href: string, index: number, alt: string) => {
+    // Fire GTM event for hero icon click
+    sendGTMEvent({
+      event: "hero_icon_clicked",
+      category: "navigation",
+      label: `Hero Icon - ${alt}`,
+      destination_url: href,
+      page_path: pathname || "/",
+    });
+
     // Trigger the flash on the specific clicked item
     setClickedIndex(index);
 
@@ -87,15 +98,14 @@ export default function HeroSmallIcons() {
         return (
           <button
             key={index}
-            onClick={() => handleNavigation(item.href, index)}
+            onClick={() => handleNavigation(item.href, index, item.alt)}
             className="focus:outline-none transition-transform hover:scale-105 group"
             aria-label={item.alt}
           >
             <Image
               src={item.src}
-              className={`w-18 sm:w-25 aspect-auto rounded-xl transition-all duration-300 hover-neon-dynamic ${
-                isFlashing ? "neon-flash-dynamic" : ""
-              }`}
+              className={`w-18 sm:w-25 aspect-auto rounded-xl transition-all duration-300 hover-neon-dynamic ${isFlashing ? "neon-flash-dynamic" : ""
+                }`}
               style={{ "--neon-color": item.color } as React.CSSProperties}
               alt={item.alt}
             />

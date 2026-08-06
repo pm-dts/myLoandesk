@@ -20,6 +20,8 @@ import {
   usePhoneInput,
 } from "react-international-phone";
 import "react-international-phone/style.css";
+import { sendGTMEvent } from "@next/third-parties/google";
+import { usePathname } from "next/navigation";
 
 const DUMMY_GHL_WEBHOOK_URL =
   "https://services.leadconnectorhq.com/hooks/Lv5oqPcJ6MZsszgssznB/webhook-trigger/f80b575c-8a88-4baa-b7c3-4c04f086e090";
@@ -112,6 +114,8 @@ export default function RateAlert() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
+  const pathname = usePathname();
+
   useEffect(() => {
     if (isDialogOpen) {
       document.body.style.overflow = "hidden";
@@ -163,12 +167,34 @@ export default function RateAlert() {
           duration: 4000,
         });
 
+        // Fire GTM Lead Generation Event on Success
+        sendGTMEvent({
+          event: "generate_lead",
+          category: "conversion",
+          label: "Rate Alert & Home Valuation Submitted",
+          currency: "USD",
+          value: 1,
+          form_name: "Rate Alert & Property Monitor Form",
+          page_path: pathname || "/",
+        });
+
         setIsSubmitted(true);
       } catch (error) {
         console.error("Error submitting to webhook:", error);
+
         toast.error("Issue submitting your request. Please try again.", {
           id: toastId,
           duration: 5000,
+        });
+
+        // Fire GTM Error Event on Failure
+        sendGTMEvent({
+          event: "form_submit_error",
+          category: "error",
+          label: "Rate Alert & Property Monitor Submission Failed",
+          form_name: "Rate Alert & Property Monitor Form",
+          page_path: pathname || "/",
+          error_message: error instanceof Error ? error.message : "Unknown Error",
         });
       }
     },
@@ -177,12 +203,26 @@ export default function RateAlert() {
   const handleAddressSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (address.trim()) {
+      sendGTMEvent({
+        event: "rate_alert_address_entered",
+        category: "engagement",
+        label: "Address Entered for Rate Alert",
+        page_path: pathname || "/",
+      });
+
       setIsSubmitted(false);
       setIsDialogOpen(true);
     }
   };
 
   const closeDialog = () => {
+    sendGTMEvent({
+      event: "rate_alert_modal_closed",
+      category: "engagement",
+      label: "Rate Alert Modal Closed",
+      page_path: pathname || "/",
+    });
+
     setIsDialogOpen(false);
   };
 
