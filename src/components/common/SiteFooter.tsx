@@ -1,15 +1,51 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { sendGTMEvent } from "@next/third-parties/google";
+import { usePathname } from "next/navigation";
 
 import brandLogo from "@/assets/new-logo.png";
-import youTubeIcon from "@/assets/youtube.png";
-import facebookIcon from "@/assets/communication.png";
-import instagramIcon from "@/assets/instagram.png";
-import tikTokIcon from "@/assets/tik-tok.png";
-import whatsappIcon from "@/assets/whatsapp.png";
+// import youTubeIcon from "@/assets/youtube.png";
+// import facebookIcon from "@/assets/communication.png";
+// import instagramIcon from "@/assets/instagram.png";
+// import tikTokIcon from "@/assets/tik-tok.png";
+// import whatsappIcon from "@/assets/whatsapp.png";
 import qrImg from "@/assets/qr.avif";
 
 export default function Footer() {
+  const pathname = usePathname();
+
+  // Tracking Handlers
+  const trackFooterNavigation = (linkName: string, destination: string) => {
+    sendGTMEvent({
+      event: "footer_link_clicked",
+      category: "navigation",
+      label: `Footer Link - ${linkName}`,
+      destination_url: destination,
+      page_path: pathname || "/",
+    });
+  };
+
+  const trackFooterContact = (contactType: string, detail: string) => {
+    sendGTMEvent({
+      event: "footer_contact_clicked",
+      category: "contact",
+      label: `Footer Contact - ${contactType}`,
+      contact_detail: detail,
+      page_path: pathname || "/",
+    });
+  };
+
+  const trackStartApplication = () => {
+    sendGTMEvent({
+      event: "start_application_clicked",
+      category: "engagement",
+      label: "Footer Start Application Button",
+      page_path: pathname || "/",
+    });
+  };
+
   return (
     <footer className="text-ink bg-cream pt-20 pb-10 select-none">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
@@ -17,7 +53,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-10 gap-10 lg:gap-8 pb-14 border-b border-ink/10">
           {/* Brand & Socials Column */}
           <div className="md:col-span-2 lg:col-span-4 space-y-3">
-            <Link href="/" className="inline-block">
+            <Link
+              href="/"
+              onClick={() => trackFooterNavigation("Brand Logo Home", "/")}
+              className="inline-block"
+            >
               <Image
                 src={brandLogo}
                 alt="My Loan Desk Logo"
@@ -36,57 +76,14 @@ export default function Footer() {
                 href="http://www.nmlsconsumeraccess.org/"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() =>
+                  trackFooterContact("NMLS Consumer Access", "http://www.nmlsconsumeraccess.org/")
+                }
                 className="text-ink/75 hover:text-brand-orange underline inline-block mt-1 transition-colors break-all"
               >
                 http://www.nmlsconsumeraccess.org/
               </a>
             </p>
-
-            {/* Social Links */}
-            {/* <div className="flex items-center gap-3 pt-2">
-              {[
-                {
-                  icon: tikTokIcon,
-                  label: "TikTok",
-                  href: "https://www.tiktok.com/@talk2abe",
-                },
-                {
-                  icon: youTubeIcon,
-                  label: "YouTube",
-                  href: "https://www.tiktok.com/@talk2abe",
-                },
-                {
-                  icon: instagramIcon,
-                  label: "Instagram",
-                  href: "https://www.instagram.com/myloandesk/",
-                },
-                {
-                  icon: facebookIcon,
-                  label: "Facebook",
-                  href: "https://www.facebook.com/profile.php?id=100084628975766",
-                },
-                {
-                  icon: whatsappIcon,
-                  label: "WhatsApp",
-                  href: "tel:+1-305-8916500",
-                },
-              ].map((social, idx) => (
-                <a
-                  key={idx}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-full border border-ink/15 bg-white/40 flex items-center justify-center hover:bg-brand-orange/10 hover:border-brand-orange/30 transition-all duration-200 group shrink-0"
-                  aria-label={social.label}
-                >
-                  <Image
-                    src={social.icon}
-                    className="w-5 h-5 object-contain"
-                    alt={social.label}
-                  />
-                </a>
-              ))}
-            </div> */}
           </div>
 
           {/* Links Section */}
@@ -119,6 +116,7 @@ export default function Footer() {
                 <li key={idx}>
                   <Link
                     href={link.href}
+                    onClick={() => trackFooterNavigation(link.label, link.href)}
                     className="text-ink/70 hover:text-brand-orange transition-colors duration-200"
                   >
                     {link.label}
@@ -139,11 +137,11 @@ export default function Footer() {
                 { label: "FAQ", href: "/#faq" },
                 { label: "Watch Live Rates", href: "/#live-rates-widget" },
                 { label: "Google Reviews", href: "/#reviews" },
-                // { label: "Glossary", href: "#" },
               ].map((link, idx) => (
                 <li key={idx}>
                   <Link
                     href={link.href}
+                    onClick={() => trackFooterNavigation(link.label, link.href)}
                     className="text-ink/70 hover:text-brand-orange transition-colors duration-200"
                   >
                     {link.label}
@@ -160,29 +158,30 @@ export default function Footer() {
             </div>
             <ul className="space-y-3 text-sm font-medium">
               <li>
-                <span className="">Call: </span>
-
+                <span>Call: </span>
                 <a
                   href="tel:+13058916500"
+                  onClick={() => trackFooterContact("Phone Call", "+1-305-8916500")}
                   className="text-ink/70 hover:text-brand-orange transition-colors duration-200 font-mono"
                 >
                   +1-305-8916500
                 </a>
               </li>
               <li>
-                <span className="">Fax: </span>
-
+                <span>Fax: </span>
                 <a
                   href="tel:(855)794-7611"
+                  onClick={() => trackFooterContact("Fax", "(855)794-7611")}
                   className="text-ink/70 hover:text-brand-orange transition-colors duration-200 font-mono"
                 >
                   (855)794-7611
                 </a>
               </li>
               <li>
-                <span className="">Email: </span>
+                <span>Email: </span>
                 <a
                   href="mailto:info@myloandesk.com"
+                  onClick={() => trackFooterContact("Email", "info@myloandesk.com")}
                   className="text-ink/70 hover:text-brand-orange transition-colors duration-200 break-all"
                 >
                   info@myloandesk.com
@@ -192,12 +191,13 @@ export default function Footer() {
                 <p className="text-sm font-medium text-ink-2 mb-2">
                   Let's connect on whatsapp:
                 </p>
-                <Image src={qrImg} className="" alt="qr" />
+                <Image src={qrImg} alt="qr" />
               </li>
               <li className="pt-2">
                 <Link
                   href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
                   target="_blank"
+                  onClick={trackStartApplication}
                   className="inline-block bg-brand-orange text-primary-bg px-5 py-2.5 rounded-full text-xs font-semibold hover:bg-orange-600 shadow-sm transition-colors duration-200"
                 >
                   Start application
@@ -251,6 +251,7 @@ export default function Footer() {
                 contact us via email at{" "}
                 <a
                   href="mailto:info@myloandesk.com"
+                  onClick={() => trackFooterContact("ADA Support Email", "info@myloandesk.com")}
                   className="text-ink/75 hover:text-brand-orange underline transition-colors"
                 >
                   info@myloandesk.com
@@ -261,6 +262,7 @@ export default function Footer() {
                 assist our team by informing us of the issue via email at{" "}
                 <a
                   href="mailto:info@myloandesk.com"
+                  onClick={() => trackFooterContact("ADA Feedback Email", "info@myloandesk.com")}
                   className="text-ink/75 hover:text-brand-orange underline transition-colors"
                 >
                   info@myloandesk.com
