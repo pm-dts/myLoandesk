@@ -3,6 +3,8 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Plus, Minus, Loader2 } from "lucide-react";
+import { sendGTMEvent } from "@next/third-parties/google";
+import { usePathname } from "next/navigation";
 
 const EXTREMES_API_URL =
   "https://prd-nc-obmmi-frontdoor-endpoint-cddkegaabwhpa6aa.a01.azurefd.net/api/blob/extremes.json";
@@ -19,6 +21,8 @@ export default function Faq() {
     arm51: null,
   });
   const [ratesLoading, setRatesLoading] = useState(true);
+
+  const pathname = usePathname();
 
   // Fetch live interest rates
   useEffect(() => {
@@ -62,6 +66,17 @@ export default function Faq() {
 
   const toggleFaq = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
+  };
+
+  // Tracking CTA Clicks
+  const trackCtaClick = (buttonName: string, destination: string) => {
+    sendGTMEvent({
+      event: "faq_cta_clicked",
+      category: "engagement",
+      label: buttonName,
+      destination_url: destination,
+      page_path: pathname || "/",
+    });
   };
 
   const faqs = [
@@ -186,12 +201,18 @@ export default function Faq() {
             <div className="mt-6 flex flex-col gap-3">
               <Link
                 href="/get-quote"
+                onClick={() =>
+                  trackCtaClick("Get Your Personalized Mortgage Options", "/get-quote")
+                }
                 className="btn-shine bg-brand-orange text-white text-center py-3.5 px-6 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-orange-600 transition-colors shadow-sm"
               >
                 Get Your Personalized Mortgage Options
               </Link>
               <Link
                 href="/#live-rates-widget"
+                onClick={() =>
+                  trackCtaClick("View Live Rates Indices", "/#live-rates-widget")
+                }
                 className="text-center py-3.5 px-6 rounded-full text-xs font-bold uppercase tracking-wider border border-line text-ink hover:bg-white hover:border-moss-deep/30 transition-colors"
               >
                 View Live Rates Indices

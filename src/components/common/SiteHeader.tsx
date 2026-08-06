@@ -13,6 +13,8 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { sendGTMEvent } from "@next/third-parties/google";
+import { usePathname } from "next/navigation";
 
 import brandLogo from "@/assets/new-logo.png";
 
@@ -61,6 +63,7 @@ export const Header: React.FC = () => {
   const [isMobileLoanOpen, setIsMobileLoanOpen] = useState(false);
   const [isFlashing, setIsFlashing] = useState(false);
   const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const pathname = usePathname();
 
   useEffect(() => {
     // Trigger the neon flash effect shortly after the component mounts
@@ -110,6 +113,53 @@ export const Header: React.FC = () => {
     }, 200); // 200ms delay to make it easier to move the mouse
   };
 
+  // Tracking Handlers
+  const trackPhoneClick = (label: string) => {
+    sendGTMEvent({
+      event: "phone_call_clicked",
+      category: "contact",
+      label: label,
+      page_path: pathname || "/",
+    });
+  };
+
+  const trackWhatsAppClick = () => {
+    sendGTMEvent({
+      event: "whatsapp_clicked",
+      category: "contact",
+      label: "Header WhatsApp Button",
+      page_path: pathname || "/",
+    });
+  };
+
+  const trackAskAIBroker = () => {
+    sendGTMEvent({
+      event: "ask_ai_broker_clicked",
+      category: "engagement",
+      label: "Header ChatGPT AI Broker",
+      page_path: pathname || "/",
+    });
+  };
+
+  const trackQuoteClick = (source: string) => {
+    sendGTMEvent({
+      event: "get_quote_button_clicked",
+      category: "engagement",
+      label: `Get Quote (${source})`,
+      page_path: pathname || "/",
+    });
+  };
+
+  const trackNavigation = (linkName: string, destination: string) => {
+    sendGTMEvent({
+      event: "header_navigation_clicked",
+      category: "navigation",
+      label: linkName,
+      destination_url: destination,
+      page_path: pathname || "/",
+    });
+  };
+
   return (
     <header className="sticky top-0 left-0 right-0 z-50 nav-blur border-b border-line bg-primary-bg w-full">
       {/* Inline styles for the custom neon flash animation */}
@@ -154,6 +204,7 @@ export const Header: React.FC = () => {
           >
             <Link
               href="/loan-programs"
+              onClick={() => trackNavigation("Loan types", "/loan-programs")}
               className="ulink focus-ring flex items-center text-[14px] font-semibold gap-1 cursor-pointer"
             >
               Loan types
@@ -179,7 +230,10 @@ export const Header: React.FC = () => {
                   key={link.href}
                   href={link.href}
                   className="text-xs text-ink-2 hover:text-brand-orange hover:bg-cream/40 px-2.5 py-1.5 rounded-lg transition-all"
-                  onClick={() => setIsDropdownOpen(false)}
+                  onClick={() => {
+                    trackNavigation(`Loan Program - ${link.name}`, link.href);
+                    setIsDropdownOpen(false);
+                  }}
                 >
                   {link.name}
                 </Link>
@@ -189,48 +243,56 @@ export const Header: React.FC = () => {
 
           <Link
             href="/secure-document-upload"
+            onClick={() => trackNavigation("Secure Doc Upload", "/secure-document-upload")}
             className="ulink focus-ring text-[14px] font-semibold"
           >
             Secure Doc Upload
           </Link>
           <Link
             href="/about-us"
+            onClick={() => trackNavigation("About us", "/about-us")}
             className="ulink focus-ring text-[14px] font-semibold"
           >
             About us
           </Link>
           <Link
             href="/realtors"
+            onClick={() => trackNavigation("Realtors", "/realtors")}
             className="ulink focus-ring text-[14px] font-semibold"
           >
             Realtors
           </Link>
           <Link
             href="/careers"
+            onClick={() => trackNavigation("Careers", "/careers")}
             className="ulink focus-ring text-[14px] font-semibold"
           >
             Careers
           </Link>
           <Link
             href="/calendar"
+            onClick={() => trackNavigation("Our Calendar", "/calendar")}
             className="ulink focus-ring text-[14px] font-semibold"
           >
             Our Calendar
           </Link>
           <Link
             href="/#calculator"
+            onClick={() => trackNavigation("Calculator", "/#calculator")}
             className="ulink focus-ring text-[14px] font-semibold"
           >
             Calculator
           </Link>
           <Link
             href="/#faq"
+            onClick={() => trackNavigation("FAQ", "/#faq")}
             className="ulink focus-ring text-[14px] font-semibold"
           >
             FAQ
           </Link>
           <Link
             href="/blog"
+            onClick={() => trackNavigation("Blog", "/blog")}
             className="ulink focus-ring text-[14px] font-semibold"
           >
             Blog
@@ -243,12 +305,14 @@ export const Header: React.FC = () => {
           <div className="flex flex-col items-center gap-2">
             <a
               href="tel:3058916500"
+              onClick={() => trackPhoneClick("Desktop Header Phone Link")}
               className="text-brand-orange font-bold text-sm underline underline-offset-2 hover:text-orange-600 transition-colors"
             >
               Call/Text (305) 891-6500
             </a>
             <Link
               href="/get-quote"
+              onClick={() => trackQuoteClick("Desktop Header")}
               className="btn-shine bg-brand-orange text-white px-5 py-2.5 rounded-full font-bold text-xs flex items-center gap-1.5 uppercase tracking-wider hover:bg-orange-600 transition-colors shadow-sm"
             >
               Get A Quote <PlayCircle size={16} />
@@ -261,6 +325,7 @@ export const Header: React.FC = () => {
               href="https://wa.me/13058916500"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={trackWhatsAppClick}
               className="border border-[#25D366] text-[#25D366] bg-white px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-wider flex items-center justify-between hover:bg-[#25D366]/10 transition-colors"
             >
               Whats App <MessageCircle size={14} />
@@ -268,6 +333,7 @@ export const Header: React.FC = () => {
 
             <a
               href="tel:3058916500"
+              onClick={() => trackPhoneClick("Desktop Header Call/Text Button")}
               className="border border-gray-300 text-brand-orange bg-white px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-wider flex items-center justify-between hover:bg-gray-50 transition-colors"
             >
               Call or Text <Phone size={14} />
@@ -276,6 +342,7 @@ export const Header: React.FC = () => {
             <Link
               href="https://chatgpt.com/g/g-6989ac7406b08191ba66dc0aa143e1d6-ask-a-mortgage-broker-myloandesk"
               target="_blank"
+              onClick={trackAskAIBroker}
               className="border border-brand-orange bg-brand-orange text-white px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-wider flex items-center justify-between hover:bg-orange-600 transition-colors shadow-sm"
             >
               Ask AI Broker <HelpCircle size={14} />
@@ -318,13 +385,15 @@ export const Header: React.FC = () => {
         <div className="px-4 pb-2 flex flex-col gap-2 border-b border-line/50 bg-cream/10">
           <a
             href="tel:3058916500"
+            onClick={() => trackPhoneClick("Mobile Subheader Phone Link")}
             className="text-brand-orange text-center font-bold underline underline-offset-2 hover:text-orange-600 transition-colors"
           >
             Call/Text (305) 891-6500
           </a>
           <Link
             href="/get-quote"
-            className="btn-shine w-full bg-brand-orange text-primary-bg py-1.5 rounded-full text-md font-semibold tracking-wide flex items-center justify-center  transition-colors focus-ring"
+            onClick={() => trackQuoteClick("Mobile Subheader")}
+            className="btn-shine w-full bg-brand-orange text-primary-bg py-1.5 rounded-full text-md font-semibold tracking-wide flex items-center justify-center transition-colors focus-ring"
           >
             Get a Quote
           </Link>
@@ -338,14 +407,20 @@ export const Header: React.FC = () => {
             <Link
               href="/about-us"
               className="p-3 rounded-xl hover:bg-cream/30 text-sm"
-              onClick={toggleMobileMenu}
+              onClick={() => {
+                trackNavigation("Mobile About Us", "/about-us");
+                toggleMobileMenu();
+              }}
             >
               About us
             </Link>
             <Link
               href="/secure-document-upload"
               className="p-3 rounded-xl hover:bg-cream/30 text-sm"
-              onClick={toggleMobileMenu}
+              onClick={() => {
+                trackNavigation("Mobile Secure Doc Upload", "/secure-document-upload");
+                toggleMobileMenu();
+              }}
             >
               Secure Doc Upload
             </Link>
@@ -353,7 +428,10 @@ export const Header: React.FC = () => {
             <Link
               href="/realtors"
               className="p-3 rounded-xl hover:bg-cream/30 text-sm"
-              onClick={toggleMobileMenu}
+              onClick={() => {
+                trackNavigation("Mobile Realtors", "/realtors");
+                toggleMobileMenu();
+              }}
             >
               Realtors
             </Link>
@@ -361,7 +439,10 @@ export const Header: React.FC = () => {
             <Link
               href="/careers"
               className="p-3 rounded-xl hover:bg-cream/30 text-sm"
-              onClick={toggleMobileMenu}
+              onClick={() => {
+                trackNavigation("Mobile Careers", "/careers");
+                toggleMobileMenu();
+              }}
             >
               Careers
             </Link>
@@ -369,7 +450,10 @@ export const Header: React.FC = () => {
             <Link
               href="/get-quote"
               className="p-3 rounded-xl hover:bg-cream/30 text-sm"
-              onClick={toggleMobileMenu}
+              onClick={() => {
+                trackQuoteClick("Mobile Menu Drawer");
+                toggleMobileMenu();
+              }}
             >
               Get A Quote
             </Link>
@@ -377,7 +461,10 @@ export const Header: React.FC = () => {
             <Link
               href="/blog"
               className="p-3 rounded-xl hover:bg-cream/30 text-sm"
-              onClick={toggleMobileMenu}
+              onClick={() => {
+                trackNavigation("Mobile Blog", "/blog");
+                toggleMobileMenu();
+              }}
             >
               Blog
             </Link>
@@ -385,7 +472,10 @@ export const Header: React.FC = () => {
             <Link
               href="/calendar"
               className="p-3 rounded-xl hover:bg-cream/30 text-sm flex items-center gap-2 text-brand-orange"
-              onClick={toggleMobileMenu}
+              onClick={() => {
+                trackNavigation("Mobile Calendar", "/calendar");
+                toggleMobileMenu();
+              }}
             >
               <Calendar size={16} />
               Our Calendar
@@ -412,7 +502,10 @@ export const Header: React.FC = () => {
                       key={link.href}
                       href={link.href}
                       className="text-xs text-ink-2 hover:text-brand-orange py-2 px-2 rounded-md hover:bg-cream/40 transition-all"
-                      onClick={toggleMobileMenu}
+                      onClick={() => {
+                        trackNavigation(`Mobile Loan Program - ${link.name}`, link.href);
+                        toggleMobileMenu();
+                      }}
                     >
                       {link.name}
                     </Link>
@@ -420,7 +513,10 @@ export const Header: React.FC = () => {
                   <Link
                     href="/loan-programs"
                     className="text-xs text-brand-orange font-semibold p-2 border-t border-line/40 mt-1 flex items-center gap-1"
-                    onClick={toggleMobileMenu}
+                    onClick={() => {
+                      trackNavigation("Mobile View All Program Classifications", "/loan-programs");
+                      toggleMobileMenu();
+                    }}
                   >
                     View All Program Classifications →
                   </Link>
@@ -438,14 +534,20 @@ export const Header: React.FC = () => {
               <Link
                 href="/#calculator"
                 className="p-3 rounded-xl hover:bg-cream/30"
-                onClick={toggleMobileMenu}
+                onClick={() => {
+                  trackNavigation("Mobile Calculator Jump", "/#calculator");
+                  toggleMobileMenu();
+                }}
               >
                 Calculator
               </Link>
               <Link
                 href="/#faq"
                 className="p-3 rounded-xl hover:bg-cream/30"
-                onClick={toggleMobileMenu}
+                onClick={() => {
+                  trackNavigation("Mobile FAQ Jump", "/#faq");
+                  toggleMobileMenu();
+                }}
               >
                 FAQ
               </Link>
