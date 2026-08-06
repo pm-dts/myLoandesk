@@ -1,12 +1,13 @@
 "use client";
 
-import { sendGAEvent } from "@next/third-parties/google";
+import { sendGTMEvent } from "@next/third-parties/google";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
-export default function LoanProgramButton() {
+export default function LoanProgramButton({ loan_type }: { loan_type: string }) {
     const handleApplyNowClick = (loan_type: string) => {
-        sendGAEvent("event", "apply_now_button_clicked", {
+        sendGTMEvent({
+            event: "apply_now_button_clicked",
             category: "engagement",
             label: "Apply Now Clicked",
             page_path: "/loan-programs",
@@ -15,17 +16,19 @@ export default function LoanProgramButton() {
     };
 
     const handleContactUsClick = (loan_type: string) => {
-        sendGAEvent("event", "contact_us_button_clicked", {
+        sendGTMEvent({
+            event: "contact_us_button_clicked",
             category: "engagement",
             label: "Contact Us Clicked",
             page_path: "/loan-programs",
             loan_type: loan_type,
         });
     };
+
     return (
         <div className="flex flex-col gap-3 mt-6">
             <a
-                onClick={() => handleApplyNowClick("Conventional")}
+                onClick={() => handleApplyNowClick(loan_type)}
                 href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -34,12 +37,12 @@ export default function LoanProgramButton() {
                 Apply Now <ArrowRight size={14} />
             </a>
             <Link
-                onClick={() => handleContactUsClick("Conventional")}
+                onClick={() => handleContactUsClick(loan_type)}
                 href="/get-quote"
                 className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
             >
                 Contact Us Now
             </Link>
         </div>
-    )
+    );
 }
