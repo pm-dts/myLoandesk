@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { Fraunces } from "next/font/google";
 import {
   Calculator as CalcIcon,
@@ -14,6 +14,7 @@ import {
   X,
   ClipboardCheck,
 } from "lucide-react";
+import { sendGTMEvent } from "@next/third-parties/google";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -268,7 +269,7 @@ const AffordabilityCalculator = () => {
     monthlyRate === 0
       ? 1 / loanTermMonths
       : (monthlyRate * Math.pow(1 + monthlyRate, loanTermMonths)) /
-        (Math.pow(1 + monthlyRate, loanTermMonths) - 1);
+      (Math.pow(1 + monthlyRate, loanTermMonths) - 1);
   const maxLoanAmount = maxPayment / paymentFactor;
   const estimatedHomePrice = Math.max(0, maxLoanAmount + downPayment);
 
@@ -330,16 +331,16 @@ const LoanEligibilityCalculator = () => {
 
   if (dti <= 36) {
     statusText = "Excellent (Highly Eligible)";
-    statusColor = "text-[#10B981]"; // Emerald green
+    statusColor = "text-[#10B981]";
   } else if (dti <= 43) {
     statusText = "Good (Eligible)";
-    statusColor = "text-[#3B82F6]"; // Blue
+    statusColor = "text-[#3B82F6]";
   } else if (dti <= 50) {
     statusText = "Borderline (May Require Review)";
-    statusColor = "text-[#F59E0B]"; // Yellow/Amber
+    statusColor = "text-[#F59E0B]";
   } else {
     statusText = "High DTI (Difficult to Qualify)";
-    statusColor = "text-[#EF4444]"; // Red
+    statusColor = "text-[#EF4444]";
   }
 
   return (
@@ -638,8 +639,17 @@ const CalculatorModal = ({
 }) => {
   if (!isOpen) return null;
   const navigate = useRouter();
+  const pathname = usePathname();
 
   const handleClick = () => {
+    sendGTMEvent({
+      event: "calculator_cta_clicked",
+      category: "engagement",
+      label: `Speak With Us Now - ${title}`,
+      calculator_name: title,
+      page_path: pathname || "/",
+    });
+
     onClose();
     navigate.push("#start");
   };
@@ -687,6 +697,7 @@ const CalculatorModal = ({
 
 export default function CalculatorsHub() {
   const [activeCalc, setActiveCalc] = useState<string | null>(null);
+  const pathname = usePathname();
 
   const calculators = [
     {
@@ -733,6 +744,18 @@ export default function CalculatorsHub() {
     },
   ];
 
+  const handleOpenCalculator = (calc: typeof calculators[number]) => {
+    sendGTMEvent({
+      event: "calculator_opened",
+      category: "engagement",
+      label: calc.title,
+      calculator_id: calc.id,
+      page_path: pathname || "/",
+    });
+
+    setActiveCalc(calc.id);
+  };
+
   const currentCalc = calculators.find((c) => c.id === activeCalc);
 
   return (
@@ -758,7 +781,7 @@ export default function CalculatorsHub() {
           {calculators.map((calc) => (
             <button
               key={calc.id}
-              onClick={() => setActiveCalc(calc.id)}
+              onClick={() => handleOpenCalculator(calc)}
               className="flex items-center justify-between bg-white p-6 md:p-8 rounded-[24px] shadow-sm hover:shadow-md hover:scale-[1.01] transition-all duration-200 group text-left border border-white hover:border-gray-100"
             >
               <div className="flex items-center gap-5">

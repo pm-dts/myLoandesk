@@ -1,8 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { Calculator as CalcIcon, ArrowUp } from "lucide-react";
+import { Calculator as CalcIcon } from "lucide-react";
 import { Fraunces } from "next/font/google";
+import { sendGTMEvent } from "@next/third-parties/google";
+import { usePathname } from "next/navigation";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -11,11 +13,28 @@ const fraunces = Fraunces({
 });
 
 export default function Calculator() {
+  const pathname = usePathname();
+
   // State for inputs
   const [homePrice, setHomePrice] = useState<number>(400000);
   const [downPayment, setDownPayment] = useState<number>(80000);
   const [loanTerm, setLoanTerm] = useState<number>(30);
   const [interestRate, setInterestRate] = useState<number>(6.5);
+
+  // Helper to log user interaction with the estimator
+  const trackCalculatorInteraction = (
+    inputName: string,
+    value: string | number
+  ) => {
+    sendGTMEvent({
+      event: "payment_estimator_interacted",
+      category: "engagement",
+      label: `Payment Estimator - Changed ${inputName}`,
+      input_changed: inputName,
+      input_value: value,
+      page_path: pathname || "/",
+    });
+  };
 
   // Derived calculations
   const loanAmount = homePrice - downPayment;
@@ -29,8 +48,8 @@ export default function Calculator() {
     monthlyRate === 0
       ? loanAmount / numberOfPayments
       : loanAmount *
-        ((monthlyRate * Math.pow(1 + monthlyRate, numberOfPayments)) /
-          (Math.pow(1 + monthlyRate, numberOfPayments) - 1));
+      ((monthlyRate * Math.pow(1 + monthlyRate, numberOfPayments)) /
+        (Math.pow(1 + monthlyRate, numberOfPayments) - 1));
 
   const totalPaid = monthlyPayment * numberOfPayments;
   const totalInterest = totalPaid - loanAmount;
@@ -124,6 +143,7 @@ export default function Calculator() {
                 const newPrice = Number(e.target.value);
                 setHomePrice(newPrice);
                 setDownPayment(newPrice * (downPaymentPercent / 100));
+                trackCalculatorInteraction("Home Price", newPrice);
               }}
               className="w-full h-3 rounded-full appearance-none cursor-pointer focus:outline-none focus:ring-4 focus:ring-[#FF6B00]/20 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:bg-[#FF6B00] [&::-webkit-slider-thumb]:rounded-full"
               style={getSliderStyle(homePrice, 50000, 2000000)}
@@ -148,7 +168,11 @@ export default function Calculator() {
               max={homePrice}
               step={1000}
               value={downPayment}
-              onChange={(e) => setDownPayment(Number(e.target.value))}
+              onChange={(e) => {
+                const newDownPayment = Number(e.target.value);
+                setDownPayment(newDownPayment);
+                trackCalculatorInteraction("Down Payment", newDownPayment);
+              }}
               className="w-full h-3 rounded-full appearance-none cursor-pointer focus:outline-none focus:ring-4 focus:ring-[#FF6B00]/20 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:bg-[#FF6B00] [&::-webkit-slider-thumb]:rounded-full"
               style={getSliderStyle(downPayment, 0, homePrice)}
             />
@@ -172,7 +196,11 @@ export default function Calculator() {
               max={12}
               step={0.1}
               value={interestRate}
-              onChange={(e) => setInterestRate(Number(e.target.value))}
+              onChange={(e) => {
+                const newRate = Number(e.target.value);
+                setInterestRate(newRate);
+                trackCalculatorInteraction("Interest Rate", `${newRate}%`);
+              }}
               className="w-full h-3 rounded-full appearance-none cursor-pointer focus:outline-none focus:ring-4 focus:ring-[#FF6B00]/20 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:bg-[#FF6B00] [&::-webkit-slider-thumb]:rounded-full"
               style={getSliderStyle(interestRate, 1, 12)}
             />
@@ -187,12 +215,14 @@ export default function Calculator() {
               {[15, 20, 30].map((term) => (
                 <button
                   key={term}
-                  onClick={() => setLoanTerm(term)}
-                  className={`flex-1 py-2.5 text-base font-semibold rounded-full transition-all duration-300 outline-none focus-visible:ring-2 focus-visible:ring-[#FF6B00] ${
-                    loanTerm === term
-                      ? "bg-white text-[#FF6B00] shadow-sm"
-                      : "bg-transparent text-gray-500 hover:text-gray-800"
-                  }`}
+                  onClick={() => {
+                    setLoanTerm(term);
+                    trackCalculatorInteraction("Loan Term", `${term} years`);
+                  }}
+                  className={`flex-1 py-2.5 text-base font-semibold rounded-full transition-all duration-300 outline-none focus-visible:ring-2 focus-visible:ring-[#FF6B00] ${loanTerm === term
+                    ? "bg-white text-[#FF6B00] shadow-sm"
+                    : "bg-transparent text-gray-500 hover:text-gray-800"
+                    }`}
                 >
                   {term} yr
                 </button>
