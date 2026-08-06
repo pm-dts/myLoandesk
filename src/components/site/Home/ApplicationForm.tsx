@@ -13,6 +13,7 @@ import {
 import "react-international-phone/style.css";
 import { ChevronDown } from "lucide-react";
 import { Toaster } from "react-hot-toast";
+import { sendGTMEvent } from "@next/third-parties/google";
 
 const INBOUND_WEBHOOK_URL =
   "https://services.leadconnectorhq.com/hooks/Lv5oqPcJ6MZsszgssznB/webhook-trigger/10f86bfa-a0f8-4c4e-a551-46e909cb6ab6";
@@ -153,6 +154,18 @@ export default function PreQualified() {
           duration: 5000,
         });
 
+        // Fire GTM Lead Generation event on Success with Label
+        sendGTMEvent({
+          event: "generate_lead",
+          category: "conversion",
+          label: "Pre-Qualified Form Submitted",
+          currency: "USD",
+          value: 1,
+          loan_type: value.loanType,
+          credit_score: value.estimatedCreditScore,
+          form_name: "Pre-Qualified Form",
+        });
+
         form.reset();
       } catch (error) {
         console.error("Error submitting to webhook:", error);
@@ -163,8 +176,17 @@ export default function PreQualified() {
           {
             id: toastId,
             duration: 5000,
-          },
+          }
         );
+
+        // Fire GTM Error event on Failure with Label
+        sendGTMEvent({
+          event: "form_submit_error",
+          category: "error",
+          label: "Pre-Qualified Form Submission Failed",
+          form_name: "Pre-Qualified Form",
+          error_message: error instanceof Error ? error.message : "Unknown Error",
+        });
       }
     },
   });
@@ -181,9 +203,6 @@ export default function PreQualified() {
           <div className="relative grid lg:grid-cols-12 gap-10 items-center">
             {/* Left Column: Copy */}
             <div className="lg:col-span-7">
-              {/* <div className="text-[10px] uppercase tracking-[0.25em] text-[#D4A574] font-semibold mb-5">
-                07 — Sit down at the desk
-              </div> */}
               <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.04] tracking-tight font-light text-primary-bg">
                 Your mortgage,{" "}
                 <em className="not-italic font-serif italic text-primary-bg">

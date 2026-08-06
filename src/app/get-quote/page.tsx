@@ -7,6 +7,9 @@ import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
 import toast, { Toaster } from "react-hot-toast";
 
+import { sendGTMEvent } from "@next/third-parties/google";
+import { usePathname } from "next/navigation";
+
 const INBOUND_WEBHOOK_URL =
   "https://services.leadconnectorhq.com/hooks/Lv5oqPcJ6MZsszgssznB/webhook-trigger/faae2351-70ff-4eda-a8d0-ddcfbf29d6ee";
 
@@ -21,6 +24,9 @@ interface FormValues {
 
 export default function GetQuote() {
   const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false);
+
+  // Get the current page path
+  const pathname = usePathname();
 
   const form = useForm({
     defaultValues: {
@@ -69,6 +75,18 @@ export default function GetQuote() {
           duration: 3000,
         });
 
+        // Fire GTM Lead Generation event on Success with Label
+        sendGTMEvent({
+          event: "generate_lead",
+          category: "conversion",
+          label: "Get Quote Form Submitted",
+          currency: "USD",
+          value: 1,
+          loan_type: value.loanType,
+          form_name: "Get Quote Form",
+          page_path: pathname || "/get-quote",
+        });
+
         setIsSuccessModalOpen(true);
         form.reset();
       } catch (error) {
@@ -79,8 +97,18 @@ export default function GetQuote() {
           {
             id: toastId,
             duration: 5000,
-          },
+          }
         );
+
+        // Fire GTM Error event on Failure with Label
+        sendGTMEvent({
+          event: "form_submit_error",
+          category: "error",
+          label: "Get Quote Form Submission Failed",
+          form_name: "Get Quote Form",
+          page_path: pathname || "/get-quote",
+          error_message: error instanceof Error ? error.message : "Unknown Error",
+        });
       }
     },
   });
@@ -203,11 +231,10 @@ export default function GetQuote() {
                     onBlur={field.handleBlur}
                     onChange={(e) => field.handleChange(e.target.value)}
                     placeholder="John Doe"
-                    className={`w-full px-5 h-12 bg-primary-bg border rounded-full text-sm text-ink focus:outline-none focus:border-moss-deep transition-colors focus-ring ${
-                      field.state.meta.errors.length
-                        ? "border-brand-orange"
-                        : "border-line"
-                    }`}
+                    className={`w-full px-5 h-12 bg-primary-bg border rounded-full text-sm text-ink focus:outline-none focus:border-moss-deep transition-colors focus-ring ${field.state.meta.errors.length
+                      ? "border-brand-orange"
+                      : "border-line"
+                      }`}
                   />
                   {field.state.meta.errors.length > 0 && (
                     <p className="text-xs text-brand-orange mt-1.5 flex items-center gap-1">
@@ -245,11 +272,10 @@ export default function GetQuote() {
                     onBlur={field.handleBlur}
                     onChange={(e) => field.handleChange(e.target.value)}
                     placeholder="you@example.com"
-                    className={`w-full px-5 h-12 bg-primary-bg border rounded-full text-sm text-ink focus:outline-none focus:border-moss-deep transition-colors focus-ring ${
-                      field.state.meta.errors.length
-                        ? "border-brand-orange"
-                        : "border-line"
-                    }`}
+                    className={`w-full px-5 h-12 bg-primary-bg border rounded-full text-sm text-ink focus:outline-none focus:border-moss-deep transition-colors focus-ring ${field.state.meta.errors.length
+                      ? "border-brand-orange"
+                      : "border-line"
+                      }`}
                   />
                   {field.state.meta.errors.length > 0 && (
                     <p className="text-xs text-brand-orange mt-1.5 flex items-center gap-1">
@@ -320,11 +346,10 @@ export default function GetQuote() {
                       value={field.state.value}
                       onBlur={field.handleBlur}
                       onChange={(e) => field.handleChange(e.target.value)}
-                      className={`w-full px-5 h-12 bg-primary-bg border rounded-full text-sm text-ink appearance-none focus:outline-none focus:border-moss-deep transition-colors focus-ring cursor-pointer ${
-                        field.state.meta.errors.length
-                          ? "border-brand-orange"
-                          : "border-line"
-                      }`}
+                      className={`w-full px-5 h-12 bg-primary-bg border rounded-full text-sm text-ink appearance-none focus:outline-none focus:border-moss-deep transition-colors focus-ring cursor-pointer ${field.state.meta.errors.length
+                        ? "border-brand-orange"
+                        : "border-line"
+                        }`}
                     >
                       <option value="" disabled hidden>
                         Select option
