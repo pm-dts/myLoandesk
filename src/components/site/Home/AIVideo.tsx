@@ -2,34 +2,26 @@
 
 import { useState, useEffect } from "react";
 import { PlayCircle, Minimize2, X } from "lucide-react";
+import { sendGTMEvent } from "@next/third-parties/google";
+import { usePathname } from "next/navigation";
 
 export default function VideoGreetingWidget() {
     const [isOpen, setIsOpen] = useState(false);
     const [isMounted, setIsMounted] = useState(false);
-
-    // Controls whether the video element is in the DOM to prevent audio playing while closed
-    // and allows the close animation to finish smoothly before unmounting.
     const [showVideo, setShowVideo] = useState(false);
 
-    // Initial Auto-Open on page load
+    const pathname = usePathname();
+
     useEffect(() => {
         setIsMounted(true);
-
-        const openTimer = setTimeout(() => {
-            setIsOpen(true);
-        }, 1500);
-
-        return () => clearTimeout(openTimer);
     }, []);
 
-    // Sync video rendering with isOpen state for smooth animations
     useEffect(() => {
         let unmountTimer: NodeJS.Timeout;
 
         if (isOpen) {
             setShowVideo(true);
         } else {
-            // Wait 500ms for the close animation to finish BEFORE unmounting the video
             unmountTimer = setTimeout(() => {
                 setShowVideo(false);
             }, 500);
@@ -42,13 +34,19 @@ export default function VideoGreetingWidget() {
 
     const handleManualOpen = () => {
         setIsOpen(true);
+
+        sendGTMEvent({
+            event: "video_play",
+            video_title: "A Message For You",
+            video_provider: "local",
+            page_path: pathname || "/",
+        });
     };
 
     const handleClose = () => {
         setIsOpen(false);
     };
 
-    // Prevent rendering until hydration is complete
     if (!isMounted) return null;
 
     return (
@@ -98,7 +96,7 @@ export default function VideoGreetingWidget() {
                                 playsInline
                                 controls
                                 muted
-                                onEnded={handleClose} // Closes the pop-up when the video finishes
+                                onEnded={handleClose}
                             />
                         )}
                     </div>
