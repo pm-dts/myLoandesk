@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import { useForm } from "@tanstack/react-form";
 import {
     User,
@@ -14,11 +14,16 @@ import {
 } from "lucide-react";
 import toast, { Toaster } from "react-hot-toast";
 
+import { sendGTMEvent } from "@next/third-parties/google";
+import { usePathname } from "next/navigation";
+
 const GHL_REVERSE_MORTGAGE_WEBHOOK_URL =
     "https://services.leadconnectorhq.com/hooks/Lv5oqPcJ6MZsszgssznB/webhook-trigger/0845541f-8c13-4fd2-b311-da2080beade4";
 
 export default function ReverseMortgageForm() {
     const [isSubmitted, setIsSubmitted] = useState(false);
+
+    const pathname = usePathname();
 
     const form = useForm({
         defaultValues: {
@@ -65,10 +70,23 @@ export default function ReverseMortgageForm() {
                     },
                 );
 
+                // Fire GTM standard Lead Generation event on Success
+                sendGTMEvent({
+                    event: "generate_lead",
+                    category: "conversion",
+                    label: "Reverse Mortgage Form Submitted",
+                    currency: "USD",
+                    value: 1,
+                    form_name: "Reverse Mortgage Form",
+                    page_path: pathname || "/reverse-mortgage",
+                    borrower_age: value.borrowerAge || "not_provided",
+                });
+
                 setIsSubmitted(true);
                 form.reset();
             } catch (error) {
                 console.error("Error submitting to webhook:", error);
+
                 toast.error(
                     "There was an issue submitting your request. Please try again.",
                     {
@@ -76,6 +94,16 @@ export default function ReverseMortgageForm() {
                         duration: 5000,
                     },
                 );
+
+                // Fire GTM Error event on Failure
+                sendGTMEvent({
+                    event: "form_submit_error",
+                    category: "error",
+                    label: "Reverse Mortgage Form Submission Failed",
+                    form_name: "Reverse Mortgage Form",
+                    page_path: pathname || "/reverse-mortgage",
+                    error_message: error instanceof Error ? error.message : "Unknown Error",
+                });
             }
         },
     });
@@ -219,7 +247,7 @@ export default function ReverseMortgageForm() {
                             </form.Field>
                         </div>
 
-                        {/* Optional Details Grid - Fixed Alignment & Responsive Layout */}
+                        {/* Optional Details Grid */}
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                             {/* Property ZIP Code (Optional) */}
                             <form.Field name="propertyZip">
