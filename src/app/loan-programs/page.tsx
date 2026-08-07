@@ -100,19 +100,32 @@ export default function LoanProgramsPage() {
                 Conventional Loans
               </h3>
               <p className="text-sm text-ink-2 leading-relaxed mb-6">
-                A conventional loan is any mortgage loan that is not insured or
-                guaranteed by the government (such as under Federal Housing
-                Administration, Department of Veterans Affairs, or Department of
-                Agriculture loan programs). Conventional loans can be conforming
-                or non-conforming.
+                Conventional loans are one of the most popular financing options
+                for purchasing or refinancing a home. Unlike FHA, VA, or USDA
+                loans, conventional mortgages are not insured or guaranteed by a
+                government agency and can provide flexible financing for
+                qualified borrowers.
               </p>
-              <p className="text-xs text-ink-2 bg-[#f0ece1]/50 p-4 rounded-xl border border-line/50 leading-relaxed mb-6">
-                Conventional loans are ideal for borrowers with a strong credit
-                history, typically a credit score between 620 and 740, and a sum
-                of money for about 20% of the down payment. Down payments less
-                than 20% require private mortgage insurance (PMI). Your
-                debt-to-income ratio (DTI) should be under 43%.
-              </p>
+              <div className="text-xs text-ink-2 bg-[#f0ece1]/50 p-4 rounded-xl border border-line/50 leading-relaxed mb-6 space-y-3">
+                <p className="font-semibold text-ink">
+                  Flexible Financing Options
+                </p>
+                <p>
+                  Conventional loans may be available with down payments as low
+                  as 3% for eligible borrowers. A 20% down payment is not always
+                  required, although private mortgage insurance (PMI) may apply
+                  when putting less than 20% down.
+                </p>
+                <p>
+                  Qualification depends on factors including credit history,
+                  income, assets, debt-to-income ratio, property type, and the
+                  overall loan profile.
+                </p>
+                <p>
+                  Conventional financing may be available for primary
+                  residences, second homes, and investment properties.
+                </p>
+              </div>
             </div>
             <LoanProgramButton loan_type="Conventional" />
           </div>
@@ -217,20 +230,21 @@ export default function LoanProgramsPage() {
 
               <div className="text-xs text-ink-2 leading-relaxed space-y-2 mb-4">
                 <p>
-                  Traditional mortgage programs often rely on tax returns to determine
-                  income. For many self-employed borrowers, business deductions can
-                  significantly reduce taxable income, making it difficult to qualify for
-                  a conventional loan.
+                  Traditional mortgage programs often rely on tax returns to
+                  determine income. For many self-employed borrowers, business
+                  deductions can significantly reduce taxable income, making it
+                  difficult to qualify for a conventional loan.
                 </p>
                 <p>
-                  A Bank Statement Loan offers an alternative by allowing eligible
-                  borrowers to qualify using their personal or business bank statements
-                  instead of tax returns.
+                  A Bank Statement Loan offers an alternative by allowing
+                  eligible borrowers to qualify using their personal or business
+                  bank statements instead of tax returns.
                 </p>
                 <p>
-                  Whether you’re a business owner, independent contractor, consultant,
-                  freelancer, or entrepreneur, this program is designed to provide
-                  flexible financing that better reflects your actual cash flow.
+                  Whether you’re a business owner, independent contractor,
+                  consultant, freelancer, or entrepreneur, this program is
+                  designed to provide flexible financing that better reflects
+                  your actual cash flow.
                 </p>
               </div>
 
@@ -261,7 +275,9 @@ export default function LoanProgramsPage() {
               <h4 className="font-semibold text-ink text-xs uppercase tracking-wider mb-2">
                 Who Can Benefit?
               </h4>
-              <p className="text-xs text-ink-2 mb-2">This program may be ideal for:</p>
+              <p className="text-xs text-ink-2 mb-2">
+                This program may be ideal for:
+              </p>
               <ul className="space-y-2 mb-6">
                 {[
                   "Small business owners",
@@ -288,20 +304,22 @@ export default function LoanProgramsPage() {
                   Why Choose MyLoanDesk?
                 </h4>
                 <p className="text-xs text-ink-2 leading-relaxed">
-                  At MyLoanDesk, we understand that self-employed borrowers have unique
-                  financial situations. Our experienced mortgage specialists work with a
-                  wide network of lenders to help find financing solutions tailored to
-                  your business and income structure.
+                  At MyLoanDesk, we understand that self-employed borrowers have
+                  unique financial situations. Our experienced mortgage
+                  specialists work with a wide network of lenders to help find
+                  financing solutions tailored to your business and income
+                  structure.
                 </p>
               </div>
 
               <p className="text-xs text-ink-2 italic mb-2">
-                If you’ve been told you don’t qualify through traditional lending, a Bank
-                Statement Loan may be the solution you’ve been looking for.
+                If you’ve been told you don’t qualify through traditional
+                lending, a Bank Statement Loan may be the solution you’ve been
+                looking for.
               </p>
               <p className="text-xs text-ink-2 font-medium mb-4">
-                Contact MyLoanDesk today for a personalized review and discover the
-                mortgage options available to you.
+                Contact MyLoanDesk today for a personalized review and discover
+                the mortgage options available to you.
               </p>
             </div>
 
@@ -328,22 +346,25 @@ export default function LoanProgramsPage() {
               <h3
                 className={cn(
                   "text-2xl font-medium text-ink mb-2",
-                  fraunces.className
+                  fraunces.className,
                 )}
               >
                 2/1 Buydown Mortgage
               </h3>
               <p className="text-base font-medium text-moss-deep mb-4">
-                Lower Your Mortgage Payment During Your First Two Years of Homeownership
+                Lower Your Mortgage Payment During Your First Two Years of
+                Homeownership
               </p>
 
               {/* Introduction */}
               <p className="text-sm text-ink-2 leading-relaxed mb-6">
-                Buying a home is exciting—but the first couple of years can also bring new expenses like moving costs,
-                furniture, home improvements, and growing family needs. A 2/1 Buydown Mortgage is designed to make
-                that transition easier by reducing your monthly mortgage payment during the first two years of your loan.
-                The reduced payment is funded through a temporary subsidy, often paid by the seller or builder as part of
-                the transaction.
+                Buying a home is exciting—but the first couple of years can also
+                bring new expenses like moving costs, furniture, home
+                improvements, and growing family needs. A 2/1 Buydown Mortgage
+                is designed to make that transition easier by reducing your
+                monthly mortgage payment during the first two years of your
+                loan. The reduced payment is funded through a temporary subsidy,
+                often paid by the seller or builder as part of the transaction.
               </p>
 
               {/* Video Section */}
@@ -354,7 +375,6 @@ export default function LoanProgramsPage() {
                     controls
                     playsInline
                     muted
-                    autoPlay
                     preload="metadata"
                     className="w-full h-full object-cover"
                   />
@@ -363,68 +383,123 @@ export default function LoanProgramsPage() {
 
               {/* How It Works */}
               <div className="mb-6">
-                <h4 className={cn("text-lg font-medium text-ink mb-2", fraunces.className)}>
+                <h4
+                  className={cn(
+                    "text-lg font-medium text-ink mb-2",
+                    fraunces.className,
+                  )}
+                >
                   How It Works
                 </h4>
                 <p className="text-sm text-ink-2 mb-3">
                   Let's say your permanent mortgage interest rate is 6.50%:
                 </p>
                 <ul className="list-disc list-inside text-sm text-ink-2 space-y-1.5 pl-2 mb-3">
-                  <li><strong className="text-ink font-semibold">Year 1:</strong> Your payment is calculated using 4.50%</li>
-                  <li><strong className="text-ink font-semibold">Year 2:</strong> Your payment is calculated using 5.50%</li>
-                  <li><strong className="text-ink font-semibold">Year 3 and Beyond:</strong> Your payment returns to the permanent 6.50% fixed rate</li>
+                  <li>
+                    <strong className="text-ink font-semibold">Year 1:</strong>{" "}
+                    Your payment is calculated using 4.50%
+                  </li>
+                  <li>
+                    <strong className="text-ink font-semibold">Year 2:</strong>{" "}
+                    Your payment is calculated using 5.50%
+                  </li>
+                  <li>
+                    <strong className="text-ink font-semibold">
+                      Year 3 and Beyond:
+                    </strong>{" "}
+                    Your payment returns to the permanent 6.50% fixed rate
+                  </li>
                 </ul>
                 <p className="text-sm text-ink-2 leading-relaxed">
-                  This gives you valuable payment relief during the first two years while keeping the security of a fixed-rate mortgage.
+                  This gives you valuable payment relief during the first two
+                  years while keeping the security of a fixed-rate mortgage.
                 </p>
               </div>
 
               {/* Benefits */}
               <div className="mb-6">
-                <h4 className={cn("text-lg font-medium text-ink mb-2", fraunces.className)}>
+                <h4
+                  className={cn(
+                    "text-lg font-medium text-ink mb-2",
+                    fraunces.className,
+                  )}
+                >
                   Benefits
                 </h4>
                 <ul className="list-disc list-inside text-sm text-ink-2 space-y-1.5 pl-2">
                   <li>Lower monthly payments during the first two years</li>
-                  <li>Keep a fixed-rate mortgage—this is not an adjustable-rate loan</li>
-                  <li>More financial flexibility while settling into your new home</li>
-                  <li>Seller or builder concessions can often be used to fund the temporary payment reduction</li>
-                  <li>Ideal for buyers who expect their income to increase or who may refinance if market conditions improve in the future</li>
+                  <li>
+                    Keep a fixed-rate mortgage—this is not an adjustable-rate
+                    loan
+                  </li>
+                  <li>
+                    More financial flexibility while settling into your new home
+                  </li>
+                  <li>
+                    Seller or builder concessions can often be used to fund the
+                    temporary payment reduction
+                  </li>
+                  <li>
+                    Ideal for buyers who expect their income to increase or who
+                    may refinance if market conditions improve in the future
+                  </li>
                 </ul>
               </div>
 
               {/* Who Should Consider a 2/1 Buydown? */}
               <div className="mb-6">
-                <h4 className={cn("text-lg font-medium text-ink mb-2", fraunces.className)}>
+                <h4
+                  className={cn(
+                    "text-lg font-medium text-ink mb-2",
+                    fraunces.className,
+                  )}
+                >
                   Who Should Consider a 2/1 Buydown?
                 </h4>
-                <p className="text-sm text-ink-2 mb-2">This program may be a great fit for:</p>
+                <p className="text-sm text-ink-2 mb-2">
+                  This program may be a great fit for:
+                </p>
                 <ul className="list-disc list-inside text-sm text-ink-2 space-y-1.5 pl-2">
                   <li>First-time homebuyers</li>
                   <li>Buyers purchasing a newly constructed home</li>
                   <li>Buyers negotiating seller concessions</li>
-                  <li>Families expecting increased income in the next few years</li>
-                  <li>Anyone looking to reduce their initial monthly housing costs</li>
+                  <li>
+                    Families expecting increased income in the next few years
+                  </li>
+                  <li>
+                    Anyone looking to reduce their initial monthly housing costs
+                  </li>
                 </ul>
               </div>
 
               {/* Things to Know Callout */}
               <div className="text-xs text-ink-2 bg-[#f0ece1]/50 p-4 rounded-xl border border-line/50 leading-relaxed mb-6">
-                <strong className="font-semibold text-ink block mb-1">Things to Know:</strong>
-                A 2/1 Buydown temporarily lowers your monthly payment, not your permanent mortgage rate. You still
-                qualify based on the full note rate, and after the first two years your payment adjusts to the regular fixed
-                payment established at closing.
+                <strong className="font-semibold text-ink block mb-1">
+                  Things to Know:
+                </strong>
+                A 2/1 Buydown temporarily lowers your monthly payment, not your
+                permanent mortgage rate. You still qualify based on the full
+                note rate, and after the first two years your payment adjusts to
+                the regular fixed payment established at closing.
               </div>
 
               {/* Let MyLoanDesk Help Section */}
               <div className="mb-6 border-t border-line/50 pt-6">
-                <h4 className={cn("text-lg font-medium text-ink mb-2", fraunces.className)}>
+                <h4
+                  className={cn(
+                    "text-lg font-medium text-ink mb-2",
+                    fraunces.className,
+                  )}
+                >
                   Let MyLoanDesk Help
                 </h4>
                 <p className="text-sm text-ink-2 leading-relaxed mb-3">
-                  At MyLoanDesk, we'll review your financial goals, explain all available financing options, and determine
-                  whether a 2/1 Buydown is the right strategy for your situation. If seller concessions are available, we'll help
-                  structure the loan to maximize your savings while keeping your long-term goals in focus.
+                  At MyLoanDesk, we'll review your financial goals, explain all
+                  available financing options, and determine whether a 2/1
+                  Buydown is the right strategy for your situation. If seller
+                  concessions are available, we'll help structure the loan to
+                  maximize your savings while keeping your long-term goals in
+                  focus.
                 </p>
                 <p className="text-sm font-medium text-moss-deep italic">
                   Lower your payments today. Build your future with confidence.
@@ -687,10 +762,10 @@ export default function LoanProgramsPage() {
 
               {/* Description */}
               <p className="text-xs text-ink-2 leading-relaxed mb-6">
-                A Bridge to Sale loan gives you access to your home's equity, allowing you
-                to purchase your next property without waiting for your current home to
-                sell. Move on your timeline while avoiding the stress of coordinating
-                two transactions.
+                A Bridge to Sale loan gives you access to your home's equity,
+                allowing you to purchase your next property without waiting for
+                your current home to sell. Move on your timeline while avoiding
+                the stress of coordinating two transactions.
               </p>
 
               {/* Program Highlights */}
@@ -702,7 +777,9 @@ export default function LoanProgramsPage() {
                   <li>Up to 12-month interest-only financing</li>
                   <li>Access equity before your home is sold</li>
                   <li>Flexible income qualification options</li>
-                  <li>No monthly payment options available for qualified borrowers</li>
+                  <li>
+                    No monthly payment options available for qualified borrowers
+                  </li>
                   <li>Fast approvals and streamlined closings</li>
                 </ul>
               </div>
@@ -1166,7 +1243,6 @@ export default function LoanProgramsPage() {
                     src="/heloc.mp4"
                     controls
                     playsInline
-                    autoPlay
                     muted
                     preload="metadata"
                     className="w-full h-full object-cover"
@@ -1349,7 +1425,6 @@ export default function LoanProgramsPage() {
                 </p>
               </div>
             </div>
-
 
             <LoanProgramButton loan_type="Home Equity" />
           </div>
@@ -1666,8 +1741,6 @@ export default function LoanProgramsPage() {
             </div>
           </div>
         </div>
-
-
       </section>
 
       {/* Real Estate Investment Loans */}
@@ -3117,10 +3190,11 @@ export default function LoanProgramsPage() {
 
               {/* Body Copy */}
               <p className="text-xs text-ink-2 leading-relaxed mb-6">
-                Your years of education and earning potential deserve a mortgage program
-                designed specifically for your profession. Our Doctor Loan Program offers
-                flexible underwriting, low down payment options, and financing that
-                recognizes your future income—not just your current financial profile.
+                Your years of education and earning potential deserve a mortgage
+                program designed specifically for your profession. Our Doctor
+                Loan Program offers flexible underwriting, low down payment
+                options, and financing that recognizes your future income—not
+                just your current financial profile.
               </p>
 
               {/* Highlights & Eligible Professionals Grid */}
@@ -3132,11 +3206,18 @@ export default function LoanProgramsPage() {
                   </h4>
                   <ul className="list-disc list-inside space-y-1 text-[11px] leading-relaxed">
                     <li>Up to 100% financing for qualified borrowers</li>
-                    <li>No private mortgage insurance (PMI) on eligible loans</li>
+                    <li>
+                      No private mortgage insurance (PMI) on eligible loans
+                    </li>
                     <li>Loan amounts up to $2 million</li>
                     <li>Flexible treatment of student loan debt</li>
-                    <li>Fixed-rate and Adjustable-Rate Mortgage (ARM) options</li>
-                    <li>Available for purchasing or refinancing a primary residence</li>
+                    <li>
+                      Fixed-rate and Adjustable-Rate Mortgage (ARM) options
+                    </li>
+                    <li>
+                      Available for purchasing or refinancing a primary
+                      residence
+                    </li>
                   </ul>
                 </div>
 
@@ -3156,8 +3237,8 @@ export default function LoanProgramsPage() {
                       <li>• Certified Registered Nurse Anesthetists (CRNA)</li>
                     </ul>
                     <span className="italic text-ink-2 text-[10px] block mt-2 pt-2 border-t border-line/40">
-                      Additional medical professions may qualify. Contact us to learn
-                      more.
+                      Additional medical professions may qualify. Contact us to
+                      learn more.
                     </span>
                   </div>
                 </div>
@@ -3169,10 +3250,10 @@ export default function LoanProgramsPage() {
                   Why Choose MyLoanDesk?
                 </h4>
                 <p className="text-xs text-ink-2 leading-relaxed">
-                  Our experienced mortgage advisors understand the unique financial needs
-                  of healthcare professionals. We'll help you compare lending options from
-                  multiple providers to find the program that best fits your career stage
-                  and financial goals.
+                  Our experienced mortgage advisors understand the unique
+                  financial needs of healthcare professionals. We'll help you
+                  compare lending options from multiple providers to find the
+                  program that best fits your career stage and financial goals.
                 </p>
               </div>
             </div>
