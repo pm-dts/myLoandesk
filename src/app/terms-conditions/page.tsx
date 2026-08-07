@@ -272,10 +272,7 @@ export default function TermsAndConditions() {
                 </h2>
               </div>
               <div className="prose prose-lg text-ink-2 leading-relaxed max-w-none space-y-4">
-                <p>
-                  Welcome to MyLoanDesk ("Company," "we," "our," or "us")[cite:
-                  5].
-                </p>
+                <p>Welcome to MyLoanDesk ("Company," "we," "our," or "us").</p>
                 <p>
                   These Terms & Conditions ("Terms") govern your access to and
                   use of our website, services, tools, mortgage calculators, CRM
@@ -569,10 +566,7 @@ export default function TermsAndConditions() {
                 </h2>
               </div>
               <div className="prose prose-lg text-ink-2 leading-relaxed max-w-none space-y-4">
-                <p>
-                  All content is owned by MyLoanDesk and protected by law[cite:
-                  5].
-                </p>
+                <p>All content is owned by MyLoanDesk and protected by law.</p>
                 <p>No copying or redistribution without permission.</p>
               </div>
             </section>
@@ -652,10 +646,7 @@ export default function TermsAndConditions() {
                 </h2>
               </div>
               <div className="prose prose-lg text-ink-2 leading-relaxed max-w-none space-y-4">
-                <p>
-                  Use is governed by our Privacy Policy and Cookie Policy[cite:
-                  5].
-                </p>
+                <p>Use is governed by our Privacy Policy and Cookie Policy.</p>
               </div>
             </section>
 
@@ -773,10 +764,7 @@ export default function TermsAndConditions() {
                 </h2>
               </div>
               <div className="prose prose-lg text-ink-2 leading-relaxed max-w-none space-y-4">
-                <p>
-                  We comply with fair lending laws and do not discriminate[cite:
-                  5].
-                </p>
+                <p>We comply with fair lending laws and do not discriminate.</p>
               </div>
             </section>
 

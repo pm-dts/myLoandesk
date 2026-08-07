@@ -504,8 +504,7 @@ export default function PrivacyPolicy() {
                 </ul>
                 <p>
                   Visitors may adjust cookie preferences through their browser
-                  settings or our Cookie Preferences tool where available[cite:
-                  3].
+                  settings or our Cookie Preferences tool where available.
                 </p>
               </div>
             </section>
@@ -617,8 +616,7 @@ export default function PrivacyPolicy() {
                   </li>
                   <li>Access controls</li>
                   <li>
-                    Multi-factor authentication for administrative systems[cite:
-                    3]
+                    Multi-factor authentication for administrative systems
                   </li>
                   <li>Security monitoring</li>
                   <li>Regular software updates</li>
@@ -685,20 +683,14 @@ export default function PrivacyPolicy() {
                 </h2>
               </div>
               <div className="prose prose-lg text-ink-2 leading-relaxed max-w-none space-y-4">
-                <p>
-                  Depending on where you live, you may have the right to:[cite:
-                  3]
-                </p>
+                <p>Depending on where you live, you may have the right to:</p>
                 <ul className="list-disc pl-5 space-y-2 marker:text-brand-orange">
                   <li>Access your personal information</li>
                   <li>Correct inaccurate information</li>
                   <li>Request deletion of certain information</li>
                   <li>Obtain a copy of your information</li>
                   <li>Object to certain processing activities</li>
-                  <li>
-                    Withdraw consent where processing is based on consent[cite:
-                    3]
-                  </li>
+                  <li>Withdraw consent where processing is based on consent</li>
                 </ul>
                 <p>
                   Some rights are subject to legal exceptions, including
@@ -731,8 +723,7 @@ export default function PrivacyPolicy() {
                   California Consumer Privacy Act (CCPA), as amended by the
                   California Privacy Rights Act (CPRA), including the right to
                   know, access, correct, delete, and limit the use of certain
-                  personal information, subject to applicable exceptions[cite:
-                  3].
+                  personal information, subject to applicable exceptions.
                 </p>
                 <p>
                   Requests may be submitted using the contact information below.
@@ -821,10 +812,10 @@ export default function PrivacyPolicy() {
               </div>
               <div className="prose prose-lg text-ink-2 leading-relaxed max-w-none space-y-4">
                 <p>
-                  Our website may contain links to third-party websites[cite:
-                  3]. We are not responsible for the privacy practices, content,
-                  or security of those websites. We encourage you to review
-                  their privacy policies before providing personal information.
+                  Our website may contain links to third-party websites. We are
+                  not responsible for the privacy practices, content, or
+                  security of those websites. We encourage you to review their
+                  privacy policies before providing personal information.
                 </p>
               </div>
             </section>
@@ -879,8 +870,7 @@ export default function PrivacyPolicy() {
               <div className="prose prose-lg text-ink-2 leading-relaxed max-w-none space-y-4">
                 <p>
                   If you have questions about this Privacy Policy or wish to
-                  exercise applicable privacy rights, please contact us:[cite:
-                  3]
+                  exercise applicable privacy rights, please contact us:
                 </p>
                 <p>
                   <strong>MyLoanDesk</strong>

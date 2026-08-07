@@ -403,10 +403,7 @@ export default function CookiePolicy() {
                   <li>Browser compatibility</li>
                   <li>Device performance</li>
                 </ul>
-                <p>
-                  These cookies help improve reliability and performance[cite:
-                  4].
-                </p>
+                <p>These cookies help improve reliability and performance.</p>
               </div>
             </section>
 
@@ -616,10 +613,7 @@ export default function CookiePolicy() {
                 </h2>
               </div>
               <div className="prose prose-lg text-ink-2 leading-relaxed max-w-none space-y-4">
-                <p>
-                  Some web browsers offer a "Do Not Track" (DNT) setting[cite:
-                  4].
-                </p>
+                <p>Some web browsers offer a "Do Not Track" (DNT) setting.</p>
                 <p>
                   Because there is no universally accepted standard for
                   responding to DNT signals, our website may not respond to all
