@@ -73,7 +73,7 @@ export default function LoansSection() {
                   onClick={(e) => e.stopPropagation()}
                 >
                   <video
-                    src="/reverse-mortgage.mp4"
+                    src="/forward-mortgage.mp4"
                     controls
                     playsInline
                     preload="metadata"
