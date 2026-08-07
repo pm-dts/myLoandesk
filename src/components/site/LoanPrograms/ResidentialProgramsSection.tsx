@@ -14,9 +14,12 @@ import {
   X,
   ArrowRight,
   PlayCircle,
+  Stethoscope,
+  Key,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Fraunces } from "next/font/google";
+import Link from "next/link";
 import LoanProgramButton from "@/components/site/utils/LoanProgramButton";
 
 const fraunces = Fraunces({
@@ -1317,6 +1320,358 @@ export default function ResidentialProgramsSection() {
               find out if you qualify.
             </p>
             <LoanProgramButton loan_type="ITIN Home Loans" />
+          </LoanDetailModal>
+        </div>
+
+        {/* 12. Dream Home Builder AKA Earned Equity Program (EEP) */}
+        <div
+          id="eep"
+          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col justify-between h-[360px] transition-colors duration-300 hover:bg-cream/40"
+        >
+          <div>
+            <div className="flex items-center justify-between mb-6">
+              <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-brand-orange/10 text-brand-orange shrink-0">
+                <Key size={22} strokeWidth={1.8} />
+              </div>
+              <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2 py-1 rounded">
+                Earned Equity EEP
+              </span>
+            </div>
+            <h3
+              className={cn(
+                "text-2xl font-medium text-ink mb-2",
+                fraunces.className,
+              )}
+            >
+              Dream Home Builder (EEP)
+            </h3>
+            <p className="text-xs font-serif italic text-brand-orange mb-3 line-clamp-2">
+              A Smarter Path from Renting to Homeownership
+            </p>
+            <p className="text-xs text-ink-2 leading-relaxed line-clamp-3">
+              Not quite ready for a traditional mortgage? The Dream Home Builder
+              Earned Equity Program (EEP) provides qualified buyers with an
+              alternative path toward owning a home.
+            </p>
+          </div>
+          <div className="mt-auto pt-4">
+            <button
+              onClick={() => setActiveModal("eep")}
+              className="w-full py-3 bg-cream hover:bg-brand-orange hover:border-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-2 transition-all"
+            >
+              Read More <ArrowRight size={14} />
+            </button>
+          </div>
+
+          <LoanDetailModal
+            isOpen={activeModal === "eep"}
+            onClose={closeModal}
+            title="Dream Home Builder (EEP)"
+          >
+            <div>
+              <p className="text-xs font-serif italic text-brand-orange mb-4">
+                A Smarter Path from Renting to Homeownership
+              </p>
+
+              <div className="text-xs text-ink-2 space-y-4 mb-6 leading-relaxed">
+                <p>
+                  Not quite ready for a traditional mortgage? The Dream Home
+                  Builder Earned Equity Program (EEP) provides qualified buyers
+                  with an alternative path toward owning a home.
+                </p>
+                <p>
+                  Instead of remaining in a traditional rental situation, the
+                  program allows eligible participants to occupy a single-family
+                  home while building earned equity and preparing to transition
+                  into permanent mortgage financing.
+                </p>
+
+                {/* How It Works Section */}
+                <div className="mt-6 border-t border-line/60 pt-4">
+                  <h4 className="font-semibold text-ink text-xs uppercase tracking-wider mb-3">
+                    How It Works
+                  </h4>
+                  <ol className="space-y-3 font-mono text-[11px] leading-relaxed">
+                    <li className="bg-cream/40 p-3 rounded-xl border border-line/50">
+                      <strong className="text-ink font-bold block mb-0.5">
+                        1. Get Qualified
+                      </strong>
+                      We review your income, credit and overall financial
+                      profile to determine program eligibility.
+                    </li>
+                    <li className="bg-cream/40 p-3 rounded-xl border border-line/50">
+                      <strong className="text-ink font-bold block mb-0.5">
+                        2. Find an Eligible Home
+                      </strong>
+                      Qualified participants can identify a single-family home
+                      that meets program requirements.
+                    </li>
+                    <li className="bg-cream/40 p-3 rounded-xl border border-line/50">
+                      <strong className="text-ink font-bold block mb-0.5">
+                        3. Move In & Build Earned Equity
+                      </strong>
+                      Occupy the home under the EEP structure while accumulating
+                      earned equity according to the program terms.
+                    </li>
+                    <li className="bg-cream/40 p-3 rounded-xl border border-line/50">
+                      <strong className="text-ink font-bold block mb-0.5">
+                        4. Prepare for Homeownership
+                      </strong>
+                      Use the program period to strengthen your mortgage profile
+                      and prepare for permanent financing.
+                    </li>
+                    <li className="bg-cream/40 p-3 rounded-xl border border-line/50">
+                      <strong className="text-ink font-bold block mb-0.5">
+                        5. Purchase the Home
+                      </strong>
+                      When you're eligible for financing, the goal is to
+                      transition from the EEP into homeownership.
+                    </li>
+                  </ol>
+                </div>
+
+                {/* Program Highlights */}
+                <div className="mt-6 border-t border-line/60 pt-4">
+                  <h4 className="font-semibold text-ink text-xs uppercase tracking-wider mb-3">
+                    Program Highlights
+                  </h4>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 font-mono text-[11px]">
+                    <div className="bg-[#f0ece1]/60 p-3 rounded-xl border border-line">
+                      <strong className="text-ink block font-bold mb-1">
+                        Up to 96.5% LTV
+                      </strong>
+                      Financing parameters designed to align with FHA-style
+                      guidelines.
+                    </div>
+                    <div className="bg-[#f0ece1]/60 p-3 rounded-xl border border-line">
+                      <strong className="text-ink block font-bold mb-1">
+                        FHA-Aligned Loan Limits
+                      </strong>
+                      Program limits generally follow applicable FHA county loan
+                      limits.
+                    </div>
+                    <div className="bg-[#f0ece1]/60 p-3 rounded-xl border border-line">
+                      <strong className="text-ink block font-bold mb-1">
+                        Credit Scores Starting at 580
+                      </strong>
+                      Applicants below 580 may be considered on a case-by-case
+                      basis.
+                    </div>
+                    <div className="bg-[#f0ece1]/60 p-3 rounded-xl border border-line">
+                      <strong className="text-ink block font-bold mb-1">
+                        Flexible Income Documentation
+                      </strong>
+                      Options may include Full Documentation, Bank Statements
+                      and 1099 income.
+                    </div>
+                    <div className="bg-[#f0ece1]/60 p-3 rounded-xl border border-line">
+                      <strong className="text-ink block font-bold mb-1">
+                        Self-Employed Friendly
+                      </strong>
+                      Alternative income documentation may provide additional
+                      opportunities for business owners and independent
+                      contractors.
+                    </div>
+                    <div className="bg-[#f0ece1]/60 p-3 rounded-xl border border-line">
+                      <strong className="text-ink block font-bold mb-1">
+                        ITIN & DACA Options
+                      </strong>
+                      Additional pathways may be available for eligible ITIN and
+                      DACA applicants.
+                    </div>
+                  </div>
+                </div>
+
+                {/* Who Is This Program For */}
+                <div className="mt-6 border-t border-line/60 pt-4">
+                  <h4 className="font-semibold text-ink text-xs uppercase tracking-wider mb-2">
+                    Who Is This Program For?
+                  </h4>
+                  <p className="mb-2">
+                    Dream Home Builder may be a solution if you're ready to own
+                    but need additional time or flexibility before qualifying
+                    for a traditional mortgage.
+                  </p>
+                  <p>
+                    It may be particularly helpful for renters, self-employed
+                    borrowers, 1099 earners, buyers rebuilding credit, ITIN
+                    borrowers and other applicants who don't fit traditional
+                    mortgage guidelines today.
+                  </p>
+                </div>
+
+                {/* Call to Action Statement */}
+                <div className="mt-6 bg-brand-orange/10 p-4 rounded-xl border border-brand-orange/30">
+                  <h4 className="font-bold text-ink text-xs uppercase tracking-wider mb-1">
+                    Stop Just Renting. Start Building Toward Ownership.
+                  </h4>
+                  <p className="text-[11px]">
+                    You may not have to wait until everything is perfect to
+                    begin your journey toward homeownership. At MyLoanDesk,
+                    we'll review your situation and determine whether Dream Home
+                    Builder or another mortgage program may provide the right
+                    path forward.
+                  </p>
+                </div>
+              </div>
+
+              {/* Program Disclaimer */}
+              <div className="p-3 bg-line/20 rounded-xl border border-line mb-4">
+                <p className="text-[10px] text-ink-2 leading-relaxed">
+                  <span className="font-bold text-ink">
+                    Program Disclaimer:
+                  </span>{" "}
+                  Program availability and eligibility are subject to applicable
+                  guidelines, underwriting, property requirements and program
+                  terms. Participation does not guarantee future mortgage
+                  approval or property ownership. Earned-equity treatment is
+                  subject to the applicable program agreement and financing
+                  requirements.
+                </p>
+              </div>
+            </div>
+            <div className="pt-4 border-t border-line">
+              <LoanProgramButton loan_type="Earned Equity EEP" />
+            </div>
+          </LoanDetailModal>
+        </div>
+
+        {/* 13. Doctor Loan Program */}
+        <div
+          id="doctor"
+          className="scroll-mt-36 col-span-1 md:col-span-2 lg:col-span-1 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col justify-between h-[360px] transition-colors duration-300 hover:bg-cream/40"
+        >
+          <div>
+            <div className="flex items-center justify-between mb-6">
+              <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-moss-deep/10 text-moss-deep shrink-0">
+                <Stethoscope size={22} strokeWidth={1.8} />
+              </div>
+              <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2.5 py-1 rounded-md">
+                Medical Professional
+              </span>
+            </div>
+            <h3
+              className={cn(
+                "text-2xl font-medium text-ink mb-2",
+                fraunces.className,
+              )}
+            >
+              Doctor Loan Program
+            </h3>
+            <p className="text-xs font-bold text-moss-deep uppercase tracking-wide mb-3 line-clamp-2">
+              Exclusive Mortgage Solutions for Medical Professionals
+            </p>
+            <p className="text-xs text-ink-2 leading-relaxed line-clamp-3">
+              Your years of education and earning potential deserve a mortgage
+              program designed specifically for your profession. Our Doctor Loan
+              Program offers flexible underwriting, low down payment...
+            </p>
+          </div>
+          <div className="mt-auto pt-4">
+            <button
+              onClick={() => setActiveModal("doctor")}
+              className="w-full py-3 bg-cream hover:bg-brand-orange hover:border-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-2 transition-all"
+            >
+              Read More <ArrowRight size={14} />
+            </button>
+          </div>
+
+          <LoanDetailModal
+            isOpen={activeModal === "doctor"}
+            onClose={closeModal}
+            title="Doctor Loan Program"
+          >
+            <div>
+              <p className="text-xs font-bold text-moss-deep uppercase tracking-wide mb-4">
+                Exclusive Mortgage Solutions for Medical Professionals
+              </p>
+
+              <p className="text-xs text-ink-2 leading-relaxed mb-6">
+                Your years of education and earning potential deserve a mortgage
+                program designed specifically for your profession. Our Doctor
+                Loan Program offers flexible underwriting, low down payment
+                options, and financing that recognizes your future income—not
+                just your current financial profile.
+              </p>
+
+              {/* Highlights & Eligible Professionals Grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-xs text-ink-2 mb-6">
+                {/* Program Highlights */}
+                <div>
+                  <h4 className="font-semibold text-ink text-xs uppercase tracking-wider mb-2">
+                    Program Highlights:
+                  </h4>
+                  <ul className="list-disc list-inside space-y-1 text-[11px] leading-relaxed">
+                    <li>Up to 100% financing for qualified borrowers</li>
+                    <li>
+                      No private mortgage insurance (PMI) on eligible loans
+                    </li>
+                    <li>Loan amounts up to $2 million</li>
+                    <li>Flexible treatment of student loan debt</li>
+                    <li>
+                      Fixed-rate and Adjustable-Rate Mortgage (ARM) options
+                    </li>
+                    <li>
+                      Available for purchasing or refinancing a primary
+                      residence
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Eligible Professionals */}
+                <div>
+                  <h4 className="font-semibold text-ink text-xs uppercase tracking-wider mb-2">
+                    Eligible Professionals:
+                  </h4>
+                  <div className="bg-line/20 p-4 rounded-xl border border-line/40">
+                    <ul className="grid grid-cols-1 gap-1 font-mono text-[11px] tracking-wide text-ink">
+                      <li>• Medical Doctors (MD)</li>
+                      <li>• Doctors of Osteopathic Medicine (DO)</li>
+                      <li>• Dentists (DDS, DMD)</li>
+                      <li>• Pharmacists (PharmD)</li>
+                      <li>• Veterinarians (DVM/VMD)</li>
+                      <li>• Podiatrists (DPM)</li>
+                      <li>• Certified Registered Nurse Anesthetists (CRNA)</li>
+                    </ul>
+                    <span className="italic text-ink-2 text-[10px] block mt-3 pt-3 border-t border-line/40">
+                      Additional medical professions may qualify. Contact us to
+                      learn more.
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Why Choose MyLoanDesk Section */}
+              <div className="bg-cream/50 border border-line/60 rounded-2xl p-5 mb-6">
+                <h4 className="font-semibold text-ink text-xs uppercase tracking-wider mb-2">
+                  Why Choose MyLoanDesk?
+                </h4>
+                <p className="text-xs text-ink-2 leading-relaxed">
+                  Our experienced mortgage advisors understand the unique
+                  financial needs of healthcare professionals. We'll help you
+                  compare lending options from multiple providers to find the
+                  program that best fits your career stage and financial goals.
+                </p>
+              </div>
+            </div>
+
+            {/* Custom Doctor Actions placed securely in Modal bottom */}
+            <div className="flex flex-col sm:flex-row items-center gap-3 mt-4 pt-4 border-t border-line">
+              <Link
+                href="/get-quote"
+                className="w-full sm:w-1/2 py-3.5 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2 transition-all shadow-sm text-center"
+              >
+                Explore Your Doctor Loan Options <ArrowRight size={14} />
+              </Link>
+              <a
+                href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-1/2 py-3.5 bg-cream hover:bg-moss-deep hover:text-white border border-line hover:border-moss-deep rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all text-center"
+              >
+                Apply Now
+              </a>
+            </div>
           </LoanDetailModal>
         </div>
       </div>
