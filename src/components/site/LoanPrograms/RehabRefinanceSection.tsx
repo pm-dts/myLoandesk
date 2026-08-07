@@ -174,7 +174,7 @@ export default function HomeEquitySection() {
           <div className="mt-auto pt-4">
             <button
               onClick={() => setActiveModal("fha-203k")}
-              className="w-full py-3 bg-cream hover:bg-moss-deep hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-2 transition-all"
+              className="w-full py-3 bg-cream hover:bg-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-2 transition-all"
             >
               Read More <ArrowRight size={14} />
             </button>
@@ -263,7 +263,7 @@ export default function HomeEquitySection() {
           <div className="mt-auto pt-4">
             <button
               onClick={() => setActiveModal("refinance")}
-              className="w-full py-3 bg-cream hover:bg-moss-deep hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-2 transition-all"
+              className="w-full py-3 bg-cream hover:bg-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-2 transition-all"
             >
               Read More <ArrowRight size={14} />
             </button>
@@ -353,7 +353,7 @@ export default function HomeEquitySection() {
           <div className="mt-auto pt-4">
             <button
               onClick={() => setActiveModal("streamline")}
-              className="w-full py-3 bg-cream hover:bg-moss-deep hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-2 transition-all"
+              className="w-full py-3 bg-cream hover:bg-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-2 transition-all"
             >
               Read More <ArrowRight size={14} />
             </button>
