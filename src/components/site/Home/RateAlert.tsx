@@ -54,8 +54,9 @@ export const TailwindPhoneInput = ({ value, onChange, error }: any) => {
   return (
     <div className="relative w-full">
       <div
-        className={`flex w-full bg-white border ${error ? "border-brand-orange" : "border-gray-200"
-          } rounded-xl focus-within:border-brand-orange transition-colors overflow-hidden`}
+        className={`flex w-full bg-white border ${
+          error ? "border-brand-orange" : "border-gray-200"
+        } rounded-xl focus-within:border-brand-orange transition-colors overflow-hidden`}
       >
         <button
           type="button"
@@ -137,7 +138,9 @@ export default function RateAlert() {
       goals: "",
     },
     onSubmit: async ({ value }) => {
-      const toastId = toast.loading("Submitting your property value request...");
+      const toastId = toast.loading(
+        "Submitting your property value request...",
+      );
 
       try {
         const response = await fetch(DUMMY_GHL_WEBHOOK_URL, {
@@ -167,9 +170,9 @@ export default function RateAlert() {
           duration: 4000,
         });
 
-        // Fire GTM Lead Generation Event on Success
+        // Fire unique GTM Event for Rate Alert & Property Monitor Success
         sendGTMEvent({
-          event: "generate_lead",
+          event: "home_valuation_lead_submitted",
           category: "conversion",
           label: "Rate Alert & Home Valuation Submitted",
           currency: "USD",
@@ -187,14 +190,15 @@ export default function RateAlert() {
           duration: 5000,
         });
 
-        // Fire GTM Error Event on Failure
+        // Fire unique GTM Error Event for Rate Alert & Property Monitor Failure
         sendGTMEvent({
-          event: "form_submit_error",
+          event: "home_valuation_form_error",
           category: "error",
           label: "Rate Alert & Property Monitor Submission Failed",
           form_name: "Rate Alert & Property Monitor Form",
           page_path: pathname || "/",
-          error_message: error instanceof Error ? error.message : "Unknown Error",
+          error_message:
+            error instanceof Error ? error.message : "Unknown Error",
         });
       }
     },
@@ -204,9 +208,9 @@ export default function RateAlert() {
     e.preventDefault();
     if (address.trim()) {
       sendGTMEvent({
-        event: "rate_alert_address_entered",
+        event: "home_valuation_address_entered",
         category: "engagement",
-        label: "Address Entered for Rate Alert",
+        label: "Address Entered for Home Valuation",
         page_path: pathname || "/",
       });
 
@@ -217,9 +221,9 @@ export default function RateAlert() {
 
   const closeDialog = () => {
     sendGTMEvent({
-      event: "rate_alert_modal_closed",
+      event: "home_valuation_modal_closed",
       category: "engagement",
-      label: "Rate Alert Modal Closed",
+      label: "Home Valuation Modal Closed",
       page_path: pathname || "/",
     });
 
@@ -320,10 +324,9 @@ export default function RateAlert() {
                   estimate for{" "}
                   <span className="font-semibold text-black">{address}</span>
                   .
-                  <br />
-                  A MyLoanDesk specialist will review your property and send you
-                  an estimated market value along with recent comparable sales
-                  as soon as it's ready.
+                  <br />A MyLoanDesk specialist will review your property and
+                  send you an estimated market value along with recent
+                  comparable sales as soon as it's ready.
                 </p>
                 <button
                   onClick={closeDialog}
@@ -378,10 +381,11 @@ export default function RateAlert() {
                                 field.handleChange(e.target.value)
                               }
                               placeholder="John Doe"
-                              className={`w-full pl-12 pr-4 py-3.5 bg-white border ${field.state.meta.errors.length
-                                ? "border-brand-orange"
-                                : "border-gray-200"
-                                } rounded-xl text-black text-sm focus:outline-none focus:border-brand-orange transition-colors placeholder:text-gray-400`}
+                              className={`w-full pl-12 pr-4 py-3.5 bg-white border ${
+                                field.state.meta.errors.length
+                                  ? "border-brand-orange"
+                                  : "border-gray-200"
+                              } rounded-xl text-black text-sm focus:outline-none focus:border-brand-orange transition-colors placeholder:text-gray-400`}
                             />
                           </div>
                           {field.state.meta.errors.length > 0 && (
@@ -423,10 +427,11 @@ export default function RateAlert() {
                                 field.handleChange(e.target.value)
                               }
                               placeholder="you@example.com"
-                              className={`w-full pl-12 pr-4 py-3.5 bg-white border ${field.state.meta.errors.length
-                                ? "border-brand-orange"
-                                : "border-gray-200"
-                                } rounded-xl text-black text-sm focus:outline-none focus:border-brand-orange transition-colors placeholder:text-gray-400`}
+                              className={`w-full pl-12 pr-4 py-3.5 bg-white border ${
+                                field.state.meta.errors.length
+                                  ? "border-brand-orange"
+                                  : "border-gray-200"
+                              } rounded-xl text-black text-sm focus:outline-none focus:border-brand-orange transition-colors placeholder:text-gray-400`}
                             />
                           </div>
                           {field.state.meta.errors.length > 0 && (

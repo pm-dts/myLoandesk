@@ -53,8 +53,9 @@ export const TailwindPhoneInput = ({ value, onChange, error }: any) => {
   return (
     <div className="relative w-full">
       <div
-        className={`flex w-full bg-cream/10 border ${error ? "border-brand-orange" : "border-line"
-          } rounded-xl focus-within:border-moss-deep focus-within:ring-1 focus-within:ring-moss-deep transition-colors overflow-hidden`}
+        className={`flex w-full bg-cream/10 border ${
+          error ? "border-brand-orange" : "border-line"
+        } rounded-xl focus-within:border-moss-deep focus-within:ring-1 focus-within:ring-moss-deep transition-colors overflow-hidden`}
       >
         <button
           type="button"
@@ -156,8 +157,9 @@ export default function ReferralFormSection() {
           },
         );
 
+        // Fire unique GTM event for Referral Form Success
         sendGTMEvent({
-          event: "generate_lead",
+          event: "referral_lead_submitted",
           category: "conversion",
           label: "Referral Form Submitted",
           currency: "USD",
@@ -178,13 +180,15 @@ export default function ReferralFormSection() {
           },
         );
 
+        // Fire unique GTM Error event for Referral Form Failure
         sendGTMEvent({
-          event: "form_submit_error",
+          event: "referral_form_error",
           category: "error",
           label: "Referral Form Submission Failed",
           form_name: "Referral Form",
           page_path: pathname || "/referral",
-          error_message: error instanceof Error ? error.message : "Unknown Error",
+          error_message:
+            error instanceof Error ? error.message : "Unknown Error",
         });
       }
     },
@@ -257,10 +261,11 @@ export default function ReferralFormSection() {
                       value={field.state.value}
                       onBlur={field.handleBlur}
                       onChange={(e) => field.handleChange(e.target.value)}
-                      className={`w-full border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-moss-deep transition ${field.state.meta.errors.length
-                        ? "border-brand-orange"
-                        : "border-line"
-                        }`}
+                      className={`w-full border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-moss-deep transition ${
+                        field.state.meta.errors.length
+                          ? "border-brand-orange"
+                          : "border-line"
+                      }`}
                     />
                     {field.state.meta.errors.length > 0 && (
                       <span className="text-brand-orange text-[10px] mt-1 block">
@@ -307,10 +312,11 @@ export default function ReferralFormSection() {
                       value={field.state.value}
                       onBlur={field.handleBlur}
                       onChange={(e) => field.handleChange(e.target.value)}
-                      className={`w-full border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-moss-deep transition ${field.state.meta.errors.length
-                        ? "border-brand-orange"
-                        : "border-line"
-                        }`}
+                      className={`w-full border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-moss-deep transition ${
+                        field.state.meta.errors.length
+                          ? "border-brand-orange"
+                          : "border-line"
+                      }`}
                     />
                     {field.state.meta.errors.length > 0 && (
                       <span className="text-brand-orange text-[10px] mt-1 block">
@@ -336,10 +342,11 @@ export default function ReferralFormSection() {
                       value={field.state.value}
                       onBlur={field.handleBlur}
                       onChange={(e) => field.handleChange(e.target.value)}
-                      className={`w-full border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-moss-deep transition ${field.state.meta.errors.length
-                        ? "border-brand-orange"
-                        : "border-line"
-                        }`}
+                      className={`w-full border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-moss-deep transition ${
+                        field.state.meta.errors.length
+                          ? "border-brand-orange"
+                          : "border-line"
+                      }`}
                     />
                     {field.state.meta.errors.length > 0 && (
                       <span className="text-brand-orange text-[10px] mt-1 block">
@@ -371,10 +378,11 @@ export default function ReferralFormSection() {
                       value={field.state.value}
                       onBlur={field.handleBlur}
                       onChange={(e) => field.handleChange(e.target.value)}
-                      className={`w-full border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-moss-deep transition ${field.state.meta.errors.length
-                        ? "border-brand-orange"
-                        : "border-line"
-                        }`}
+                      className={`w-full border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-moss-deep transition ${
+                        field.state.meta.errors.length
+                          ? "border-brand-orange"
+                          : "border-line"
+                      }`}
                     />
                     {field.state.meta.errors.length > 0 && (
                       <span className="text-brand-orange text-[10px] mt-1 block">

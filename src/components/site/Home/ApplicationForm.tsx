@@ -14,6 +14,7 @@ import "react-international-phone/style.css";
 import { ChevronDown } from "lucide-react";
 import { Toaster } from "react-hot-toast";
 import { sendGTMEvent } from "@next/third-parties/google";
+import { usePathname } from "next/navigation";
 
 const INBOUND_WEBHOOK_URL =
   "https://services.leadconnectorhq.com/hooks/Lv5oqPcJ6MZsszgssznB/webhook-trigger/10f86bfa-a0f8-4c4e-a551-46e909cb6ab6";
@@ -47,8 +48,9 @@ export const TailwindPhoneInput = ({ value, onChange, error }: any) => {
   return (
     <div className="relative w-full">
       <div
-        className={`flex w-full bg-cream border ${error ? "border-red-500" : "border-line"
-          } rounded-lg focus-within:border-moss-deep transition-colors overflow-hidden`}
+        className={`flex w-full bg-cream border ${
+          error ? "border-red-500" : "border-line"
+        } rounded-lg focus-within:border-moss-deep transition-colors overflow-hidden`}
       >
         {/* Country Selector Button */}
         <button
@@ -106,6 +108,8 @@ export const TailwindPhoneInput = ({ value, onChange, error }: any) => {
 };
 
 export default function PreQualified() {
+  const pathname = usePathname();
+
   // Initialize TanStack Form
   const form = useForm({
     defaultValues: {
@@ -154,9 +158,9 @@ export default function PreQualified() {
           duration: 5000,
         });
 
-        // Fire GTM Lead Generation event on Success with Label
+        // Fire unique GTM event for Pre-Qualified Form Success
         sendGTMEvent({
-          event: "generate_lead",
+          event: "pre_qualified_lead_submitted",
           category: "conversion",
           label: "Pre-Qualified Form Submitted",
           currency: "USD",
@@ -164,6 +168,7 @@ export default function PreQualified() {
           loan_type: value.loanType,
           credit_score: value.estimatedCreditScore,
           form_name: "Pre-Qualified Form",
+          page_path: pathname || "/",
         });
 
         form.reset();
@@ -176,16 +181,18 @@ export default function PreQualified() {
           {
             id: toastId,
             duration: 5000,
-          }
+          },
         );
 
-        // Fire GTM Error event on Failure with Label
+        // Fire unique GTM Error event for Pre-Qualified Form Failure
         sendGTMEvent({
-          event: "form_submit_error",
+          event: "pre_qualified_form_error",
           category: "error",
           label: "Pre-Qualified Form Submission Failed",
           form_name: "Pre-Qualified Form",
-          error_message: error instanceof Error ? error.message : "Unknown Error",
+          page_path: pathname || "/",
+          error_message:
+            error instanceof Error ? error.message : "Unknown Error",
         });
       }
     },
@@ -210,7 +217,8 @@ export default function PreQualified() {
                 </em>
               </h2>
               <p className="mt-6 text-lg text-primary-bg/75 max-w-xl leading-relaxed">
-                Five-minute pre-qualification. Personalized mortgage solutions. Your dedicated mortgage expert from application to closing.
+                Five-minute pre-qualification. Personalized mortgage solutions.
+                Your dedicated mortgage expert from application to closing.
               </p>
             </div>
 
@@ -249,10 +257,11 @@ export default function PreQualified() {
                             value={field.state.value}
                             onChange={(e) => field.handleChange(e.target.value)}
                             onBlur={field.handleBlur}
-                            className={`w-full px-4 py-3 bg-cream border ${field.state.meta.errors.length
-                              ? "border-red-500"
-                              : "border-line"
-                              } rounded-lg text-sm focus:outline-none focus:border-moss-deep transition-colors focus-ring`}
+                            className={`w-full px-4 py-3 bg-cream border ${
+                              field.state.meta.errors.length
+                                ? "border-red-500"
+                                : "border-line"
+                            } rounded-lg text-sm focus:outline-none focus:border-moss-deep transition-colors focus-ring`}
                           />
                           {field.state.meta.errors.length > 0 && (
                             <span className="text-red-500 text-[10px] mt-1 block">
@@ -279,10 +288,11 @@ export default function PreQualified() {
                             value={field.state.value}
                             onChange={(e) => field.handleChange(e.target.value)}
                             onBlur={field.handleBlur}
-                            className={`w-full px-4 py-3 bg-cream border ${field.state.meta.errors.length
-                              ? "border-red-500"
-                              : "border-line"
-                              } rounded-lg text-sm focus:outline-none focus:border-moss-deep transition-colors focus-ring`}
+                            className={`w-full px-4 py-3 bg-cream border ${
+                              field.state.meta.errors.length
+                                ? "border-red-500"
+                                : "border-line"
+                            } rounded-lg text-sm focus:outline-none focus:border-moss-deep transition-colors focus-ring`}
                           />
                           {field.state.meta.errors.length > 0 && (
                             <span className="text-red-500 text-[10px] mt-1 block">
@@ -314,10 +324,11 @@ export default function PreQualified() {
                           value={field.state.value}
                           onChange={(e) => field.handleChange(e.target.value)}
                           onBlur={field.handleBlur}
-                          className={`w-full px-4 py-3 bg-cream border ${field.state.meta.errors.length
-                            ? "border-red-500"
-                            : "border-line"
-                            } rounded-lg text-sm focus:outline-none focus:border-moss-deep transition-colors focus-ring`}
+                          className={`w-full px-4 py-3 bg-cream border ${
+                            field.state.meta.errors.length
+                              ? "border-red-500"
+                              : "border-line"
+                          } rounded-lg text-sm focus:outline-none focus:border-moss-deep transition-colors focus-ring`}
                         />
                         {field.state.meta.errors.length > 0 && (
                           <span className="text-red-500 text-[10px] mt-1 block">
@@ -361,10 +372,11 @@ export default function PreQualified() {
                           value={field.state.value}
                           onChange={(e) => field.handleChange(e.target.value)}
                           onBlur={field.handleBlur}
-                          className={`w-full px-4 py-3 bg-cream border ${field.state.meta.errors.length
-                            ? "border-red-500"
-                            : "border-line"
-                            } rounded-lg text-sm focus:outline-none focus:border-moss-deep transition-colors focus-ring`}
+                          className={`w-full px-4 py-3 bg-cream border ${
+                            field.state.meta.errors.length
+                              ? "border-red-500"
+                              : "border-line"
+                          } rounded-lg text-sm focus:outline-none focus:border-moss-deep transition-colors focus-ring`}
                         />
                         {field.state.meta.errors.length > 0 && (
                           <span className="text-red-500 text-[10px] mt-1 block">
@@ -383,11 +395,13 @@ export default function PreQualified() {
                           value={field.state.value}
                           onChange={(e) => field.handleChange(e.target.value)}
                           onBlur={field.handleBlur}
-                          className={`w-full px-4 py-3 bg-cream border ${field.state.meta.errors.length
-                            ? "border-red-500"
-                            : "border-line"
-                            } rounded-lg text-sm focus:outline-none focus:border-moss-deep transition-colors ${field.state.value ? "text-ink" : "text-ink-2"
-                            } focus-ring`}
+                          className={`w-full px-4 py-3 bg-cream border ${
+                            field.state.meta.errors.length
+                              ? "border-red-500"
+                              : "border-line"
+                          } rounded-lg text-sm focus:outline-none focus:border-moss-deep transition-colors ${
+                            field.state.value ? "text-ink" : "text-ink-2"
+                          } focus-ring`}
                         >
                           <option value="" disabled>
                             Select your estimated credit score
@@ -417,11 +431,13 @@ export default function PreQualified() {
                           value={field.state.value}
                           onChange={(e) => field.handleChange(e.target.value)}
                           onBlur={field.handleBlur}
-                          className={`w-full px-4 py-3 bg-cream border ${field.state.meta.errors.length
-                            ? "border-red-500"
-                            : "border-line"
-                            } rounded-lg text-sm focus:outline-none focus:border-moss-deep transition-colors ${field.state.value ? "text-ink" : "text-ink-2"
-                            } focus-ring`}
+                          className={`w-full px-4 py-3 bg-cream border ${
+                            field.state.meta.errors.length
+                              ? "border-red-500"
+                              : "border-line"
+                          } rounded-lg text-sm focus:outline-none focus:border-moss-deep transition-colors ${
+                            field.state.value ? "text-ink" : "text-ink-2"
+                          } focus-ring`}
                         >
                           <option value="" disabled>
                             Loan Purpose

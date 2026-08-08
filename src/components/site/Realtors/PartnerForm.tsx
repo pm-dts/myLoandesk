@@ -53,8 +53,9 @@ export const TailwindPhoneInput = ({ value, onChange, error }: any) => {
   return (
     <div className="relative w-full">
       <div
-        className={`flex w-full bg-cream/10 border ${error ? "border-brand-orange" : "border-line"
-          } rounded-xl focus-within:border-moss-deep focus-within:ring-1 focus-within:ring-moss-deep transition-colors overflow-hidden`}
+        className={`flex w-full bg-cream/10 border ${
+          error ? "border-brand-orange" : "border-line"
+        } rounded-xl focus-within:border-moss-deep focus-within:ring-1 focus-within:ring-moss-deep transition-colors overflow-hidden`}
       >
         <button
           type="button"
@@ -149,8 +150,9 @@ export default function PartnerFormSection() {
           duration: 5000,
         });
 
+        // Fire unique GTM event for Partner Form Success
         sendGTMEvent({
-          event: "generate_lead",
+          event: "partner_form_lead_submitted",
           category: "conversion",
           label: "Partner Form Submitted",
           currency: "USD",
@@ -171,13 +173,15 @@ export default function PartnerFormSection() {
           },
         );
 
+        // Fire unique GTM Error event for Partner Form Failure
         sendGTMEvent({
-          event: "form_submit_error",
+          event: "partner_form_error",
           category: "error",
           label: "Partner Form Submission Failed",
           form_name: "Partner Form",
           page_path: pathname || "/partner",
-          error_message: error instanceof Error ? error.message : "Unknown Error",
+          error_message:
+            error instanceof Error ? error.message : "Unknown Error",
         });
       }
     },
@@ -248,10 +252,11 @@ export default function PartnerFormSection() {
                       value={field.state.value}
                       onBlur={field.handleBlur}
                       onChange={(e) => field.handleChange(e.target.value)}
-                      className={`w-full border bg-cream/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-moss-deep focus:ring-1 focus:ring-moss-deep transition ${field.state.meta.errors.length
-                        ? "border-brand-orange"
-                        : "border-line"
-                        }`}
+                      className={`w-full border bg-cream/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-moss-deep focus:ring-1 focus:ring-moss-deep transition ${
+                        field.state.meta.errors.length
+                          ? "border-brand-orange"
+                          : "border-line"
+                      }`}
                     />
                     {field.state.meta.errors.length > 0 && (
                       <span className="text-brand-orange text-[10px] mt-1 block">
@@ -279,10 +284,11 @@ export default function PartnerFormSection() {
                       value={field.state.value}
                       onBlur={field.handleBlur}
                       onChange={(e) => field.handleChange(e.target.value)}
-                      className={`w-full border bg-cream/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-moss-deep focus:ring-1 focus:ring-moss-deep transition ${field.state.meta.errors.length
-                        ? "border-brand-orange"
-                        : "border-line"
-                        }`}
+                      className={`w-full border bg-cream/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-moss-deep focus:ring-1 focus:ring-moss-deep transition ${
+                        field.state.meta.errors.length
+                          ? "border-brand-orange"
+                          : "border-line"
+                      }`}
                     />
                     {field.state.meta.errors.length > 0 && (
                       <span className="text-brand-orange text-[10px] mt-1 block">
@@ -316,10 +322,11 @@ export default function PartnerFormSection() {
                       value={field.state.value}
                       onBlur={field.handleBlur}
                       onChange={(e) => field.handleChange(e.target.value)}
-                      className={`w-full border bg-cream/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-moss-deep focus:ring-1 focus:ring-moss-deep transition ${field.state.meta.errors.length
-                        ? "border-brand-orange"
-                        : "border-line"
-                        }`}
+                      className={`w-full border bg-cream/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-moss-deep focus:ring-1 focus:ring-moss-deep transition ${
+                        field.state.meta.errors.length
+                          ? "border-brand-orange"
+                          : "border-line"
+                      }`}
                     />
                     {field.state.meta.errors.length > 0 && (
                       <span className="text-brand-orange text-[10px] mt-1 block">
