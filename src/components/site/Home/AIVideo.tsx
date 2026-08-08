@@ -36,7 +36,7 @@ export default function VideoGreetingWidget() {
     setIsOpen(true);
 
     sendGTMEvent({
-      event: "video_play",
+      event: "floating_video_greeting_opened",
       video_title: "A Message For You",
       video_provider: "local",
       category: "engagement",

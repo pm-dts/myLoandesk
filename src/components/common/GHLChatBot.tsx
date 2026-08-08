@@ -38,7 +38,7 @@ export default function ChatbotWidget() {
 
         if (isChatSubmitted) {
           sendGTMEvent({
-            event: "generate_lead",
+            event: "chat_widget_lead_submitted",
             form_name: "ai_chat_widget",
             category: "lead_generation",
             label: "LeadConnector AI Chatbot Lead",
