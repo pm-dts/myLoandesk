@@ -1354,10 +1354,21 @@ export default function ResidentialProgramsSection() {
               alternative path toward owning a home.
             </p>
           </div>
-          <div className="mt-auto pt-4">
+          <div className="mt-auto pt-4 flex flex-col sm:flex-row gap-2">
+            <button
+              onClick={() =>
+                setActiveVideo({
+                  src: "https://myloandesk-assets.s3.eu-north-1.amazonaws.com/Dream+Home+Builder+Earned+Equity+Program+(EEP)_1080p_caption.mp4",
+                  title: "Dream Home Builder (EEP)",
+                })
+              }
+              className="flex-1 py-3 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-semibold flex items-center justify-center gap-2 transition-all"
+            >
+              <PlayCircle size={14} /> See how it works
+            </button>
             <button
               onClick={() => setActiveModal("eep")}
-              className="w-full py-3 bg-cream hover:bg-brand-orange hover:border-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-2 transition-all"
+              className="flex-1 py-3 bg-cream hover:bg-moss-deep hover:border-moss-deep hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-2 transition-all"
             >
               Read More <ArrowRight size={14} />
             </button>
@@ -1377,13 +1388,13 @@ export default function ResidentialProgramsSection() {
                 <p>
                   Not quite ready for a traditional mortgage? The Dream Home
                   Builder Earned Equity Program (EEP) provides qualified buyers
-                  with an alternative path toward owning a home.
+                  with an alternative path toward owning a home[cite: 2].
                 </p>
                 <p>
                   Instead of remaining in a traditional rental situation, the
                   program allows eligible participants to occupy a single-family
                   home while building earned equity and preparing to transition
-                  into permanent mortgage financing.
+                  into permanent mortgage financing[cite: 2].
                 </p>
 
                 {/* How It Works Section */}
@@ -1397,35 +1408,35 @@ export default function ResidentialProgramsSection() {
                         1. Get Qualified
                       </strong>
                       We review your income, credit and overall financial
-                      profile to determine program eligibility.
+                      profile to determine program eligibility[cite: 2].
                     </li>
                     <li className="bg-cream/40 p-3 rounded-xl border border-line/50">
                       <strong className="text-ink font-bold block mb-0.5">
                         2. Find an Eligible Home
                       </strong>
                       Qualified participants can identify a single-family home
-                      that meets program requirements.
+                      that meets program requirements[cite: 2].
                     </li>
                     <li className="bg-cream/40 p-3 rounded-xl border border-line/50">
                       <strong className="text-ink font-bold block mb-0.5">
                         3. Move In & Build Earned Equity
                       </strong>
                       Occupy the home under the EEP structure while accumulating
-                      earned equity according to the program terms.
+                      earned equity according to the program terms[cite: 2].
                     </li>
                     <li className="bg-cream/40 p-3 rounded-xl border border-line/50">
                       <strong className="text-ink font-bold block mb-0.5">
                         4. Prepare for Homeownership
                       </strong>
                       Use the program period to strengthen your mortgage profile
-                      and prepare for permanent financing.
+                      and prepare for permanent financing[cite: 2].
                     </li>
                     <li className="bg-cream/40 p-3 rounded-xl border border-line/50">
                       <strong className="text-ink font-bold block mb-0.5">
                         5. Purchase the Home
                       </strong>
                       When you're eligible for financing, the goal is to
-                      transition from the EEP into homeownership.
+                      transition from the EEP into homeownership[cite: 2].
                     </li>
                   </ol>
                 </div>
@@ -1441,28 +1452,28 @@ export default function ResidentialProgramsSection() {
                         Up to 96.5% LTV
                       </strong>
                       Financing parameters designed to align with FHA-style
-                      guidelines.
+                      guidelines[cite: 2].
                     </div>
                     <div className="bg-[#f0ece1]/60 p-3 rounded-xl border border-line">
                       <strong className="text-ink block font-bold mb-1">
                         FHA-Aligned Loan Limits
                       </strong>
                       Program limits generally follow applicable FHA county loan
-                      limits.
+                      limits[cite: 2].
                     </div>
                     <div className="bg-[#f0ece1]/60 p-3 rounded-xl border border-line">
                       <strong className="text-ink block font-bold mb-1">
                         Credit Scores Starting at 580
                       </strong>
                       Applicants below 580 may be considered on a case-by-case
-                      basis.
+                      basis[cite: 2].
                     </div>
                     <div className="bg-[#f0ece1]/60 p-3 rounded-xl border border-line">
                       <strong className="text-ink block font-bold mb-1">
                         Flexible Income Documentation
                       </strong>
                       Options may include Full Documentation, Bank Statements
-                      and 1099 income.
+                      and 1099 income[cite: 2].
                     </div>
                     <div className="bg-[#f0ece1]/60 p-3 rounded-xl border border-line">
                       <strong className="text-ink block font-bold mb-1">
@@ -1470,14 +1481,14 @@ export default function ResidentialProgramsSection() {
                       </strong>
                       Alternative income documentation may provide additional
                       opportunities for business owners and independent
-                      contractors.
+                      contractors[cite: 2].
                     </div>
                     <div className="bg-[#f0ece1]/60 p-3 rounded-xl border border-line">
                       <strong className="text-ink block font-bold mb-1">
                         ITIN & DACA Options
                       </strong>
                       Additional pathways may be available for eligible ITIN and
-                      DACA applicants.
+                      DACA applicants[cite: 2].
                     </div>
                   </div>
                 </div>
@@ -1490,13 +1501,13 @@ export default function ResidentialProgramsSection() {
                   <p className="mb-2">
                     Dream Home Builder may be a solution if you're ready to own
                     but need additional time or flexibility before qualifying
-                    for a traditional mortgage.
+                    for a traditional mortgage[cite: 2].
                   </p>
                   <p>
                     It may be particularly helpful for renters, self-employed
                     borrowers, 1099 earners, buyers rebuilding credit, ITIN
                     borrowers and other applicants who don't fit traditional
-                    mortgage guidelines today.
+                    mortgage guidelines today[cite: 2].
                   </p>
                 </div>
 
@@ -1507,10 +1518,10 @@ export default function ResidentialProgramsSection() {
                   </h4>
                   <p className="text-[11px]">
                     You may not have to wait until everything is perfect to
-                    begin your journey toward homeownership. At MyLoanDesk,
-                    we'll review your situation and determine whether Dream Home
-                    Builder or another mortgage program may provide the right
-                    path forward.
+                    begin your journey toward homeownership[cite: 2]. At
+                    MyLoanDesk, we'll review your situation and determine
+                    whether Dream Home Builder or another mortgage program may
+                    provide the right path forward[cite: 2].
                   </p>
                 </div>
               </div>
@@ -1523,10 +1534,10 @@ export default function ResidentialProgramsSection() {
                   </span>{" "}
                   Program availability and eligibility are subject to applicable
                   guidelines, underwriting, property requirements and program
-                  terms. Participation does not guarantee future mortgage
-                  approval or property ownership. Earned-equity treatment is
-                  subject to the applicable program agreement and financing
-                  requirements.
+                  terms[cite: 2]. Participation does not guarantee future
+                  mortgage approval or property ownership[cite: 2].
+                  Earned-equity treatment is subject to the applicable program
+                  agreement and financing requirements[cite: 2].
                 </p>
               </div>
             </div>
@@ -1567,10 +1578,21 @@ export default function ResidentialProgramsSection() {
               Program offers flexible underwriting, low down payment...
             </p>
           </div>
-          <div className="mt-auto pt-4">
+          <div className="mt-auto pt-4 flex flex-col sm:flex-row gap-2">
+            <button
+              onClick={() =>
+                setActiveVideo({
+                  src: "https://myloandesk-assets.s3.eu-north-1.amazonaws.com/Medical+Professional+Loan+Program_1080p_caption.mp4",
+                  title: "Doctor Loan Program",
+                })
+              }
+              className="flex-1 py-3 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-semibold flex items-center justify-center gap-2 transition-all"
+            >
+              <PlayCircle size={14} /> See how it works
+            </button>
             <button
               onClick={() => setActiveModal("doctor")}
-              className="w-full py-3 bg-cream hover:bg-brand-orange hover:border-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-2 transition-all"
+              className="flex-1 py-3 bg-cream hover:bg-moss-deep hover:border-moss-deep hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-2 transition-all"
             >
               Read More <ArrowRight size={14} />
             </button>
