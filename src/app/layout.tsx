@@ -8,6 +8,7 @@ import SiteHeader from "@/components/common/SiteHeader";
 import SiteFooter from "@/components/common/SiteFooter";
 import VideoGreetingWidget from "@/components/site/Home/AIVideo";
 import WhatsappWidgetButton from "@/components/site/utils/WhatsappWidgetButton";
+import ChatbotWidget from "@/components/common/GHLChatBot";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,7 +26,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.className} h-full antialiased bg-cream`}>
+    <html
+      lang="en"
+      className={`${geistSans.className} h-full antialiased bg-cream`}
+    >
       <body className="min-h-full flex flex-col relative bg-cream">
         <SiteHeader />
 
@@ -38,12 +42,7 @@ export default function RootLayout({
         <WhatsappWidgetButton />
 
         {/* LeadConnector AI Chatbot Widget */}
-        <Script
-          src="https://widgets.leadconnectorhq.com/loader.js"
-          data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
-          data-widget-id="6a70d6eaf84104f943ccc5a4"
-          strategy="lazyOnload"
-        />
+        <ChatbotWidget />
 
         {/* Microsoft Clarity */}
         {/* <Script
@@ -60,7 +59,9 @@ export default function RootLayout({
           }}
         /> */}
 
-        <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID || "GTM-KQ5H354K"} />
+        <GoogleTagManager
+          gtmId={process.env.NEXT_PUBLIC_GTM_ID || "GTM-KQ5H354K"}
+        />
       </body>
     </html>
   );

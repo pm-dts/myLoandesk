@@ -39,6 +39,8 @@ export default function VideoGreetingWidget() {
       event: "video_play",
       video_title: "A Message For You",
       video_provider: "local",
+      category: "engagement",
+      label: "Floating Video Greeting Widget",
       page_path: pathname || "/",
     });
   };

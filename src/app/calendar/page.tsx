@@ -1,9 +1,11 @@
 "use client";
 
+import { useEffect } from "react";
 import Script from "next/script";
 import { Calendar } from "lucide-react";
 import { Fraunces } from "next/font/google";
 import { cn } from "@/lib/utils";
+import { sendGTMEvent } from "@next/third-parties/google";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -12,6 +14,40 @@ const fraunces = Fraunces({
 });
 
 export default function CalendarPage() {
+  // Listen for LeadConnector iframe success messages
+  useEffect(() => {
+    const handleMessage = (event: MessageEvent) => {
+      if (
+        !event.origin.includes("leadconnectorhq.com") &&
+        !event.origin.includes("msgsndr.com")
+      ) {
+        return;
+      }
+
+      try {
+        const data = event.data;
+        const isBookingComplete =
+          (Array.isArray(data) && data[0] === "msgsndr-booking-complete") ||
+          data?.event === "booking_submitted" ||
+          data?.type === "booking_complete";
+
+        if (isBookingComplete) {
+          sendGTMEvent({
+            event: "appointment_booked",
+            category: "lead_generation",
+            label: "LeadConnector Booking Widget",
+            calendar_id: Array.isArray(data) ? data[1]?.calendarId : undefined,
+          });
+        }
+      } catch (err) {
+        // Ignore unparseable postMessages from browser extensions
+      }
+    };
+
+    window.addEventListener("message", handleMessage);
+    return () => window.removeEventListener("message", handleMessage);
+  }, []);
+
   return (
     <main className="min-h-screen bg-primary-bg pt-6 pb-12 sm:pt-8 sm:pb-16 lg:pt-10 lg:pb-24 text-ink">
       {/* External Script Loader for LeadConnector Embed */}
