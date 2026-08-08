@@ -1654,10 +1654,7 @@ export default function ResidentialProgramsSection() {
                       <li>• Pharmacists (PharmD)</li>
                       <li>• Veterinarians (DVM/VMD)</li>
                       <li>• Podiatrists (DPM)</li>
-                      <li>
-                        • Certified Registered Nurse Anesthetists (CRNA)[cite:
-                        4]
-                      </li>
+                      <li>• Certified Registered Nurse Anesthetists (CRNA)</li>
                     </ul>
                     <span className="italic text-ink-2 text-[10px] block mt-3 pt-3 border-t border-line/40">
                       Additional medical professionals may qualify. Eligibility
