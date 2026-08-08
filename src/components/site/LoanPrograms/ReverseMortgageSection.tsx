@@ -140,7 +140,7 @@ export default function ReverseMortgageSection() {
                 Based on the HomeSafe Second Description.pdf, HomeSafe Second is
                 a second-lien reverse mortgage designed for eligible homeowners
                 who want to access their home equity while keeping their
-                existing first mortgage in place[cite: 1].
+                existing first mortgage in place.
               </p>
 
               <h4 className="font-medium text-ink mb-3">Program Highlights:</h4>
@@ -152,9 +152,9 @@ export default function ReverseMortgageSection() {
                       Keep Your Existing Mortgage:
                     </span>{" "}
                     If you already have a low interest rate on your first
-                    mortgage, there may be no need to refinance it[cite: 1].
-                    HomeSafe Second allows you to tap into your available equity
-                    while leaving your current mortgage intact[cite: 1].
+                    mortgage, there may be no need to refinance it. HomeSafe
+                    Second allows you to tap into your available equity while
+                    leaving your current mortgage intact.
                   </div>
                 </li>
                 <li className="flex items-start gap-2 text-xs text-ink/90 leading-normal">
@@ -165,9 +165,9 @@ export default function ReverseMortgageSection() {
                     </span>{" "}
                     Unlike a traditional HELOC or home equity loan, HomeSafe
                     Second does not require a monthly mortgage payment* on the
-                    new loan[cite: 1]. This can provide additional financial
-                    flexibility without adding another required monthly mortgage
-                    payment to your budget[cite: 1].
+                    new loan. This can provide additional financial flexibility
+                    without adding another required monthly mortgage payment to
+                    your budget.
                   </div>
                 </li>
                 <li className="flex items-start gap-2 text-xs text-ink/90 leading-normal">
@@ -178,7 +178,7 @@ export default function ReverseMortgageSection() {
                     </span>{" "}
                     Depending on eligibility, property value, and available
                     equity, qualified homeowners may be able to access $50,000
-                    to $1 million of their home equity[cite: 1].
+                    to $1 million of their home equity.
                   </div>
                 </li>
                 <li className="flex items-start gap-2 text-xs text-ink/90 leading-normal">
@@ -187,10 +187,10 @@ export default function ReverseMortgageSection() {
                     <span className="font-bold text-ink">
                       Non-Recourse Protection:
                     </span>{" "}
-                    HomeSafe Second includes non-recourse protection[cite: 1].
-                    Generally, the borrower or estate will not owe more than the
-                    value of the home when the loan becomes due and payable,
-                    subject to the terms of the loan[cite: 1].
+                    HomeSafe Second includes non-recourse protection. Generally,
+                    the borrower or estate will not owe more than the value of
+                    the home when the loan becomes due and payable, subject to
+                    the terms of the loan.
                   </div>
                 </li>
                 <li className="flex items-start gap-2 text-xs text-ink/90 leading-normal">
@@ -202,7 +202,7 @@ export default function ReverseMortgageSection() {
                     HomeSafe Second may be worth considering if you want to
                     access equity for home improvements, unexpected expenses,
                     financial planning, or other needs while preserving your
-                    existing first mortgage[cite: 1].
+                    existing first mortgage.
                   </div>
                 </li>
               </ul>
@@ -210,7 +210,7 @@ export default function ReverseMortgageSection() {
               <p className="text-sm text-ink-2 leading-relaxed mb-6 font-medium">
                 Want to see if HomeSafe Second fits your situation? Contact
                 MyLoanDesk to review your options and compare HomeSafe Second
-                with a traditional HELOC or home equity loan[cite: 1].
+                with a traditional HELOC or home equity loan.
               </p>
             </div>
 
@@ -225,11 +225,10 @@ export default function ReverseMortgageSection() {
                   *No monthly mortgage payments are required; however, borrowers
                   must continue to meet the loan obligations, including paying
                   property taxes, homeowners insurance, applicable HOA charges,
-                  and maintaining the property[cite: 1]. The loan balance
-                  becomes due and payable upon a maturity event as defined by
-                  the loan terms[cite: 1]. Eligibility, loan amounts, rates,
-                  fees, and terms are subject to program guidelines and may
-                  vary[cite: 1].
+                  and maintaining the property. The loan balance becomes due and
+                  payable upon a maturity event as defined by the loan terms.
+                  Eligibility, loan amounts, rates, fees, and terms are subject
+                  to program guidelines and may vary.
                 </p>
               </div>
             </div>

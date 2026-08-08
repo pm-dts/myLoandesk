@@ -1388,13 +1388,13 @@ export default function ResidentialProgramsSection() {
                 <p>
                   Not quite ready for a traditional mortgage? The Dream Home
                   Builder Earned Equity Program (EEP) provides qualified buyers
-                  with an alternative path toward owning a home[cite: 2].
+                  with an alternative path toward owning a home.
                 </p>
                 <p>
                   Instead of remaining in a traditional rental situation, the
                   program allows eligible participants to occupy a single-family
                   home while building earned equity and preparing to transition
-                  into permanent mortgage financing[cite: 2].
+                  into permanent mortgage financing.
                 </p>
 
                 {/* How It Works Section */}
@@ -1408,35 +1408,35 @@ export default function ResidentialProgramsSection() {
                         1. Get Qualified
                       </strong>
                       We review your income, credit and overall financial
-                      profile to determine program eligibility[cite: 2].
+                      profile to determine program eligibility.
                     </li>
                     <li className="bg-cream/40 p-3 rounded-xl border border-line/50">
                       <strong className="text-ink font-bold block mb-0.5">
                         2. Find an Eligible Home
                       </strong>
                       Qualified participants can identify a single-family home
-                      that meets program requirements[cite: 2].
+                      that meets program requirements.
                     </li>
                     <li className="bg-cream/40 p-3 rounded-xl border border-line/50">
                       <strong className="text-ink font-bold block mb-0.5">
                         3. Move In & Build Earned Equity
                       </strong>
                       Occupy the home under the EEP structure while accumulating
-                      earned equity according to the program terms[cite: 2].
+                      earned equity according to the program terms.
                     </li>
                     <li className="bg-cream/40 p-3 rounded-xl border border-line/50">
                       <strong className="text-ink font-bold block mb-0.5">
                         4. Prepare for Homeownership
                       </strong>
                       Use the program period to strengthen your mortgage profile
-                      and prepare for permanent financing[cite: 2].
+                      and prepare for permanent financing.
                     </li>
                     <li className="bg-cream/40 p-3 rounded-xl border border-line/50">
                       <strong className="text-ink font-bold block mb-0.5">
                         5. Purchase the Home
                       </strong>
                       When you're eligible for financing, the goal is to
-                      transition from the EEP into homeownership[cite: 2].
+                      transition from the EEP into homeownership.
                     </li>
                   </ol>
                 </div>
@@ -1452,28 +1452,28 @@ export default function ResidentialProgramsSection() {
                         Up to 96.5% LTV
                       </strong>
                       Financing parameters designed to align with FHA-style
-                      guidelines[cite: 2].
+                      guidelines.
                     </div>
                     <div className="bg-[#f0ece1]/60 p-3 rounded-xl border border-line">
                       <strong className="text-ink block font-bold mb-1">
                         FHA-Aligned Loan Limits
                       </strong>
                       Program limits generally follow applicable FHA county loan
-                      limits[cite: 2].
+                      limits.
                     </div>
                     <div className="bg-[#f0ece1]/60 p-3 rounded-xl border border-line">
                       <strong className="text-ink block font-bold mb-1">
                         Credit Scores Starting at 580
                       </strong>
                       Applicants below 580 may be considered on a case-by-case
-                      basis[cite: 2].
+                      basis.
                     </div>
                     <div className="bg-[#f0ece1]/60 p-3 rounded-xl border border-line">
                       <strong className="text-ink block font-bold mb-1">
                         Flexible Income Documentation
                       </strong>
                       Options may include Full Documentation, Bank Statements
-                      and 1099 income[cite: 2].
+                      and 1099 income.
                     </div>
                     <div className="bg-[#f0ece1]/60 p-3 rounded-xl border border-line">
                       <strong className="text-ink block font-bold mb-1">
@@ -1481,14 +1481,14 @@ export default function ResidentialProgramsSection() {
                       </strong>
                       Alternative income documentation may provide additional
                       opportunities for business owners and independent
-                      contractors[cite: 2].
+                      contractors.
                     </div>
                     <div className="bg-[#f0ece1]/60 p-3 rounded-xl border border-line">
                       <strong className="text-ink block font-bold mb-1">
                         ITIN & DACA Options
                       </strong>
                       Additional pathways may be available for eligible ITIN and
-                      DACA applicants[cite: 2].
+                      DACA applicants.
                     </div>
                   </div>
                 </div>
@@ -1501,13 +1501,13 @@ export default function ResidentialProgramsSection() {
                   <p className="mb-2">
                     Dream Home Builder may be a solution if you're ready to own
                     but need additional time or flexibility before qualifying
-                    for a traditional mortgage[cite: 2].
+                    for a traditional mortgage.
                   </p>
                   <p>
                     It may be particularly helpful for renters, self-employed
                     borrowers, 1099 earners, buyers rebuilding credit, ITIN
                     borrowers and other applicants who don't fit traditional
-                    mortgage guidelines today[cite: 2].
+                    mortgage guidelines today.
                   </p>
                 </div>
 
@@ -1518,10 +1518,10 @@ export default function ResidentialProgramsSection() {
                   </h4>
                   <p className="text-[11px]">
                     You may not have to wait until everything is perfect to
-                    begin your journey toward homeownership[cite: 2]. At
-                    MyLoanDesk, we'll review your situation and determine
-                    whether Dream Home Builder or another mortgage program may
-                    provide the right path forward[cite: 2].
+                    begin your journey toward homeownership. At MyLoanDesk,
+                    we'll review your situation and determine whether Dream Home
+                    Builder or another mortgage program may provide the right
+                    path forward.
                   </p>
                 </div>
               </div>
@@ -1534,10 +1534,10 @@ export default function ResidentialProgramsSection() {
                   </span>{" "}
                   Program availability and eligibility are subject to applicable
                   guidelines, underwriting, property requirements and program
-                  terms[cite: 2]. Participation does not guarantee future
-                  mortgage approval or property ownership[cite: 2].
-                  Earned-equity treatment is subject to the applicable program
-                  agreement and financing requirements[cite: 2].
+                  terms. Participation does not guarantee future mortgage
+                  approval or property ownership. Earned-equity treatment is
+                  subject to the applicable program agreement and financing
+                  requirements.
                 </p>
               </div>
             </div>
@@ -1567,15 +1567,16 @@ export default function ResidentialProgramsSection() {
                 fraunces.className,
               )}
             >
-              Doctor Loan Program
+              Medical Professional Loan Program
             </h3>
             <p className="text-xs font-bold text-moss-deep uppercase tracking-wide mb-3 line-clamp-2">
-              Exclusive Mortgage Solutions for Medical Professionals
+              SPECIALIZED MORTGAGE SOLUTIONS FOR MEDICAL PROFESSIONALS
             </p>
             <p className="text-xs text-ink-2 leading-relaxed line-clamp-3">
-              Your years of education and earning potential deserve a mortgage
-              program designed specifically for your profession. Our Doctor Loan
-              Program offers flexible underwriting, low down payment...
+              You've invested years building your career. Your mortgage should
+              recognize that. Our Medical Professional Loan Program offers
+              specialized financing designed around the unique financial needs
+              of healthcare professionals...
             </p>
           </div>
           <div className="mt-auto pt-4 flex flex-col sm:flex-row gap-2">
@@ -1583,7 +1584,7 @@ export default function ResidentialProgramsSection() {
               onClick={() =>
                 setActiveVideo({
                   src: "https://myloandesk-assets.s3.eu-north-1.amazonaws.com/Medical+Professional+Loan+Program_1080p_caption.mp4",
-                  title: "Doctor Loan Program",
+                  title: "Medical Professional Loan Program",
                 })
               }
               className="flex-1 py-3 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-semibold flex items-center justify-center gap-2 transition-all"
@@ -1601,19 +1602,19 @@ export default function ResidentialProgramsSection() {
           <LoanDetailModal
             isOpen={activeModal === "doctor"}
             onClose={closeModal}
-            title="Doctor Loan Program"
+            title="Medical Professional Loan Program"
           >
             <div>
               <p className="text-xs font-bold text-moss-deep uppercase tracking-wide mb-4">
-                Exclusive Mortgage Solutions for Medical Professionals
+                SPECIALIZED MORTGAGE SOLUTIONS FOR MEDICAL PROFESSIONALS
               </p>
 
               <p className="text-xs text-ink-2 leading-relaxed mb-6">
-                Your years of education and earning potential deserve a mortgage
-                program designed specifically for your profession. Our Doctor
-                Loan Program offers flexible underwriting, low down payment
-                options, and financing that recognizes your future income—not
-                just your current financial profile.
+                You've invested years building your career. Your mortgage should
+                recognize that. Our Medical Professional Loan Program offers
+                specialized financing designed around the unique financial needs
+                of healthcare professionals, including high financing options,
+                no PMI on eligible loans, and flexible underwriting.
               </p>
 
               {/* Highlights & Eligible Professionals Grid */}
@@ -1621,12 +1622,12 @@ export default function ResidentialProgramsSection() {
                 {/* Program Highlights */}
                 <div>
                   <h4 className="font-semibold text-ink text-xs uppercase tracking-wider mb-2">
-                    Program Highlights:
+                    PROGRAM HIGHLIGHTS:
                   </h4>
                   <ul className="list-disc list-inside space-y-1 text-[11px] leading-relaxed">
                     <li>Up to 100% financing for qualified borrowers</li>
                     <li>
-                      No private mortgage insurance (PMI) on eligible loans
+                      No Private Mortgage Insurance (PMI) on eligible loans
                     </li>
                     <li>Loan amounts up to $2 million</li>
                     <li>Flexible treatment of student loan debt</li>
@@ -1634,8 +1635,8 @@ export default function ResidentialProgramsSection() {
                       Fixed-rate and Adjustable-Rate Mortgage (ARM) options
                     </li>
                     <li>
-                      Available for purchasing or refinancing a primary
-                      residence
+                      Available for eligible primary residence purchases and
+                      refinances
                     </li>
                   </ul>
                 </div>
@@ -1643,7 +1644,7 @@ export default function ResidentialProgramsSection() {
                 {/* Eligible Professionals */}
                 <div>
                   <h4 className="font-semibold text-ink text-xs uppercase tracking-wider mb-2">
-                    Eligible Professionals:
+                    ELIGIBLE PROFESSIONALS:
                   </h4>
                   <div className="bg-line/20 p-4 rounded-xl border border-line/40">
                     <ul className="grid grid-cols-1 gap-1 font-mono text-[11px] tracking-wide text-ink">
@@ -1653,11 +1654,14 @@ export default function ResidentialProgramsSection() {
                       <li>• Pharmacists (PharmD)</li>
                       <li>• Veterinarians (DVM/VMD)</li>
                       <li>• Podiatrists (DPM)</li>
-                      <li>• Certified Registered Nurse Anesthetists (CRNA)</li>
+                      <li>
+                        • Certified Registered Nurse Anesthetists (CRNA)[cite:
+                        4]
+                      </li>
                     </ul>
                     <span className="italic text-ink-2 text-[10px] block mt-3 pt-3 border-t border-line/40">
-                      Additional medical professions may qualify. Contact us to
-                      learn more.
+                      Additional medical professionals may qualify. Eligibility
+                      and program terms vary by lender.
                     </span>
                   </div>
                 </div>
@@ -1666,13 +1670,27 @@ export default function ResidentialProgramsSection() {
               {/* Why Choose MyLoanDesk Section */}
               <div className="bg-cream/50 border border-line/60 rounded-2xl p-5 mb-6">
                 <h4 className="font-semibold text-ink text-xs uppercase tracking-wider mb-2">
-                  Why Choose MyLoanDesk?
+                  WHY CHOOSE MYLOANDESK?
                 </h4>
                 <p className="text-xs text-ink-2 leading-relaxed">
-                  Our experienced mortgage advisors understand the unique
-                  financial needs of healthcare professionals. We'll help you
-                  compare lending options from multiple providers to find the
-                  program that best fits your career stage and financial goals.
+                  Medical professionals can have unique financial profiles—from
+                  significant student loan debt to rapidly increasing income
+                  early in their careers. MyLoanDesk helps you compare
+                  specialized mortgage programs from multiple lending sources to
+                  find financing that fits your profession, financial profile,
+                  and homeownership goals.
+                </p>
+              </div>
+
+              {/* Program Disclaimer */}
+              <div className="p-3 bg-line/20 rounded-xl border border-line mb-4">
+                <p className="text-[10px] text-ink-2 leading-relaxed">
+                  <span className="font-bold text-ink">
+                    Program Disclaimer:
+                  </span>{" "}
+                  Program availability, financing limits, eligible professions,
+                  credit requirements and underwriting guidelines vary by lender
+                  and borrower qualifications. Not all applicants will qualify.
                 </p>
               </div>
             </div>
@@ -1683,7 +1701,8 @@ export default function ResidentialProgramsSection() {
                 href="/get-quote"
                 className="w-full sm:w-1/2 py-3.5 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2 transition-all shadow-sm text-center"
               >
-                Explore Your Doctor Loan Options <ArrowRight size={14} />
+                Explore Your Medical Professional Loan Options{" "}
+                <ArrowRight size={14} />
               </Link>
               <a
                 href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
