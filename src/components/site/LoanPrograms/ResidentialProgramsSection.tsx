@@ -433,7 +433,7 @@ export default function ResidentialProgramsSection() {
             <button
               onClick={() =>
                 setActiveVideo({
-                  src: "/2-1.mp4",
+                  src: "https://myloandesk-assets.s3.eu-north-1.amazonaws.com/Lower+Your+Mortgage+Payment+During+Your+First+Two+Years+of+Homeownership_1080p_caption.mp4",
                   title: "2/1 Buydown Mortgage",
                 })
               }

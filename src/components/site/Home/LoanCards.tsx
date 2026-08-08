@@ -111,7 +111,7 @@ export default function LoansSection() {
               <button
                 onClick={() =>
                   setActiveVideo({
-                    src: "/forward-mortgage.mp4",
+                    src: "https://myloandesk-assets.s3.eu-north-1.amazonaws.com/Forward+Mortgage_1080p_caption.mp4",
                     title: "Forward Mortgage",
                   })
                 }
@@ -152,7 +152,7 @@ export default function LoansSection() {
               <button
                 onClick={() =>
                   setActiveVideo({
-                    src: "/reverse-mortgage.mp4",
+                    src: "https://myloandesk-assets.s3.eu-north-1.amazonaws.com/Reverse+Mortgage+%E2%80%93+Turn+Your+Home+Equity+Into+Financial+Freedom_1080p_caption.mp4",
                     title: "Reverse Mortgage",
                   })
                 }

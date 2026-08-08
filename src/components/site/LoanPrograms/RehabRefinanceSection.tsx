@@ -433,7 +433,7 @@ export default function HomeEquitySection() {
             <button
               onClick={() =>
                 setActiveVideo({
-                  src: "/heloc.mp4",
+                  src: "https://myloandesk-assets.s3.eu-north-1.amazonaws.com/HELOC+%E2%80%93+Access+the+Equity+in+Your+Home+Without+Refinancing_1080p_caption.mp4",
                   title: "Home Equity Solutions",
                 })
               }
