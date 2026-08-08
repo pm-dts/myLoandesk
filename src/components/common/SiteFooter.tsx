@@ -6,7 +6,7 @@ import { sendGTMEvent } from "@next/third-parties/google";
 import { usePathname } from "next/navigation";
 
 import brandLogo from "@/assets/new-logo.png";
-// import youTubeIcon from "@/assets/youtube.png";
+import youTubeIcon from "@/assets/youtube.png";
 // import facebookIcon from "@/assets/communication.png";
 // import instagramIcon from "@/assets/instagram.png";
 // import tikTokIcon from "@/assets/tik-tok.png";
@@ -52,7 +52,7 @@ export default function Footer() {
         {/* Main Footer Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-10 gap-10 lg:gap-8 pb-14 border-b border-ink/10">
           {/* Brand & Socials Column */}
-          <div className="md:col-span-2 lg:col-span-4 space-y-3">
+          <div className="md:col-span-2 lg:col-span-4 space-y-4">
             <Link
               href="/"
               onClick={() => trackFooterNavigation("Brand Logo Home", "/")}
@@ -77,13 +77,46 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() =>
-                  trackFooterContact("NMLS Consumer Access", "http://www.nmlsconsumeraccess.org/")
+                  trackFooterContact(
+                    "NMLS Consumer Access",
+                    "http://www.nmlsconsumeraccess.org/",
+                  )
                 }
                 className="text-ink/75 hover:text-brand-orange underline inline-block mt-1 transition-colors break-all"
               >
                 http://www.nmlsconsumeraccess.org/
               </a>
             </p>
+
+            {/* Social Media Links */}
+            <div className="pt-2">
+              <div className="text-[10px] uppercase tracking-[0.2em] text-ink/40 font-bold mb-3">
+                Follow Us
+              </div>
+              <div className="flex items-center gap-3">
+                <a
+                  href="https://youtube.com/@MyLoanDeskMortgage"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() =>
+                    trackFooterContact(
+                      "YouTube",
+                      "https://youtube.com/@MyLoanDeskMortgage",
+                    )
+                  }
+                  aria-label="YouTube Channel"
+                  className="w-10 h-10 rounded-full bg-ink/5 hover:bg-brand-orange/10 flex items-center justify-center transition-all duration-200 p-2"
+                >
+                  <Image
+                    src={youTubeIcon}
+                    alt="YouTube"
+                    width={24}
+                    height={24}
+                    className="w-5 h-5 object-contain"
+                  />
+                </a>
+              </div>
+            </div>
           </div>
 
           {/* Links Section */}
@@ -161,7 +194,9 @@ export default function Footer() {
                 <span>Call: </span>
                 <a
                   href="tel:+13058916500"
-                  onClick={() => trackFooterContact("Phone Call", "+1-305-8916500")}
+                  onClick={() =>
+                    trackFooterContact("Phone Call", "+1-305-8916500")
+                  }
                   className="text-ink/70 hover:text-brand-orange transition-colors duration-200 font-mono"
                 >
                   +1-305-8916500
@@ -181,7 +216,9 @@ export default function Footer() {
                 <span>Email: </span>
                 <a
                   href="mailto:info@myloandesk.com"
-                  onClick={() => trackFooterContact("Email", "info@myloandesk.com")}
+                  onClick={() =>
+                    trackFooterContact("Email", "info@myloandesk.com")
+                  }
                   className="text-ink/70 hover:text-brand-orange transition-colors duration-200 break-all"
                 >
                   info@myloandesk.com
@@ -251,7 +288,12 @@ export default function Footer() {
                 contact us via email at{" "}
                 <a
                   href="mailto:info@myloandesk.com"
-                  onClick={() => trackFooterContact("ADA Support Email", "info@myloandesk.com")}
+                  onClick={() =>
+                    trackFooterContact(
+                      "ADA Support Email",
+                      "info@myloandesk.com",
+                    )
+                  }
                   className="text-ink/75 hover:text-brand-orange underline transition-colors"
                 >
                   info@myloandesk.com
@@ -262,7 +304,12 @@ export default function Footer() {
                 assist our team by informing us of the issue via email at{" "}
                 <a
                   href="mailto:info@myloandesk.com"
-                  onClick={() => trackFooterContact("ADA Feedback Email", "info@myloandesk.com")}
+                  onClick={() =>
+                    trackFooterContact(
+                      "ADA Feedback Email",
+                      "info@myloandesk.com",
+                    )
+                  }
                   className="text-ink/75 hover:text-brand-orange underline transition-colors"
                 >
                   info@myloandesk.com
