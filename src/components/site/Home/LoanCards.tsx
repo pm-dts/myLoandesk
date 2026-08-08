@@ -1,19 +1,66 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { Home, RefreshCw } from "lucide-react";
+import { Home, RefreshCw, X, PlayCircle, ArrowRight } from "lucide-react";
+
+// Modal Component for Video Popup
+function VideoModal({
+  videoInfo,
+  onClose,
+}: {
+  videoInfo: { src: string; title: string } | null;
+  onClose: () => void;
+}) {
+  useEffect(() => {
+    if (videoInfo) document.body.style.overflow = "hidden";
+    else document.body.style.overflow = "unset";
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [videoInfo]);
+
+  if (!videoInfo) return null;
+
+  return (
+    <div
+      className="fixed inset-0 z-[60] flex items-center justify-center p-4 sm:p-6 bg-black/90 backdrop-blur-sm animate-in fade-in duration-200"
+      onClick={onClose}
+    >
+      <div
+        className="relative w-full max-w-4xl bg-black rounded-2xl shadow-2xl overflow-hidden animate-in zoom-in-95 duration-300 border border-white/10"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="absolute top-4 right-4 z-10">
+          <button
+            onClick={onClose}
+            className="bg-black/50 hover:bg-black/80 text-white p-2 rounded-full transition-colors"
+            aria-label="Close video"
+          >
+            <X size={20} />
+          </button>
+        </div>
+        <video
+          key={videoInfo.src}
+          src={videoInfo.src}
+          controls
+          autoPlay
+          playsInline
+          className="w-full h-full object-contain max-h-[80vh]"
+        />
+      </div>
+    </div>
+  );
+}
 
 export default function LoansSection() {
   const router = useRouter();
+  const [activeVideo, setActiveVideo] = useState<{
+    src: string;
+    title: string;
+  } | null>(null);
 
-  const handleCardClick = (href: string, e: React.MouseEvent) => {
-    // If the click happened on or inside the video container, don't navigate
-    const target = e.target as HTMLElement;
-    if (target.closest("video") || target.closest(".video-container")) {
-      return;
-    }
-    router.push(href);
-  };
+  const closeVideo = () => setActiveVideo(null);
 
   return (
     <section id="loans" className="py-24 lg:py-32">
@@ -44,106 +91,88 @@ export default function LoansSection() {
         {/* Cards Grid */}
         <div className="grid sm:grid-cols-2 gap-6 max-w-7xl mx-auto items-stretch">
           {/* Forward Mortgage Card */}
-          <div className="block h-full">
-            <article
-              onClick={(e) => handleCardClick("/loan-programs#resident", e)}
-              className="bg-cream border border-line rounded-2xl p-7 transition-all duration-300 hover:border-moss-deep/30 hover:shadow-[0_20px_50px_-20px_rgba(15,61,46,0.25)] hover:-translate-y-1 h-full flex flex-col justify-between cursor-pointer"
-            >
-              <div>
-                <div className="w-12 h-12 rounded-xl bg-moss-deep/10 flex items-center justify-center mb-5">
-                  <Home
-                    className="text-moss-deep"
-                    size={22}
-                    strokeWidth={1.8}
-                  />
-                </div>
-                <h3 className="font-display text-2xl mb-2 text-ink">
-                  Forward Mortgage
-                </h3>
-                <p className="text-sm text-ink-2 leading-relaxed mb-5">
-                  Traditional financing structures including Conventional, FHA,
-                  VA, and Jumbo loan programs. Built with flexible terms for
-                  purchasing a new property or executing standard refinance
-                  options.
-                </p>
-
-                {/* Embedded Video */}
-                <div
-                  className="video-container mb-6 rounded-xl overflow-hidden border border-line/60 bg-black aspect-video w-full shadow-sm cursor-default"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  <video
-                    src="/forward-mortgage.mp4"
-                    controls
-                    playsInline
-                    preload="metadata"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+          <article className="bg-cream border border-line rounded-2xl p-7 transition-all duration-300 hover:border-moss-deep/30 hover:shadow-[0_20px_50px_-20px_rgba(15,61,46,0.25)] flex flex-col justify-between">
+            <div>
+              <div className="w-12 h-12 rounded-xl bg-moss-deep/10 flex items-center justify-center mb-5 shrink-0">
+                <Home className="text-moss-deep" size={22} strokeWidth={1.8} />
               </div>
+              <h3 className="font-display text-2xl mb-2 text-ink">
+                Forward Mortgage
+              </h3>
+              <p className="text-sm text-ink-2 leading-relaxed mb-6">
+                Traditional financing structures including Conventional, FHA,
+                VA, and Jumbo loan programs. Built with flexible terms for
+                purchasing a new property or executing standard refinance
+                options.
+              </p>
+            </div>
 
-              <div className="flex items-center justify-between text-xs pt-2 border-t border-line/40 mt-auto">
-                <span className="text-ink-2 font-medium">
-                  Purchase & Refinance
-                </span>
-                <span className="font-semibold text-moss-deep ulink flex items-center gap-1">
-                  Explore Programs →
-                </span>
-              </div>
-            </article>
-          </div>
+            <div className="mt-auto space-y-3 pt-4 border-t border-line/40">
+              <button
+                onClick={() =>
+                  setActiveVideo({
+                    src: "/forward-mortgage.mp4",
+                    title: "Forward Mortgage",
+                  })
+                }
+                className="w-full py-3 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-semibold flex items-center justify-center gap-2 transition-all shadow-sm"
+              >
+                <PlayCircle size={16} /> See how it's done
+              </button>
+              <button
+                onClick={() => router.push("/loan-programs#resident")}
+                className="w-full py-3 bg-cream hover:bg-moss-deep hover:text-white border border-line hover:border-moss-deep rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-2 transition-all"
+              >
+                Explore Options <ArrowRight size={14} />
+              </button>
+            </div>
+          </article>
 
           {/* Reverse Mortgage Card */}
-          <div className="block h-full">
-            <article
-              onClick={(e) => handleCardClick("/reverse-mortgage", e)}
-              className="bg-cream border border-line rounded-2xl p-7 transition-all duration-300 hover:border-moss-deep/30 hover:shadow-[0_20px_50px_-20px_rgba(15,61,46,0.25)] hover:-translate-y-1 h-full flex flex-col justify-between cursor-pointer"
-            >
-              <div>
-                <div className="w-12 h-12 rounded-xl bg-brand-orange/10 flex items-center justify-center mb-5">
-                  <RefreshCw
-                    className="text-brand-orange"
-                    size={22}
-                    strokeWidth={1.8}
-                  />
-                </div>
-                <h3 className="font-display text-2xl mb-2 text-ink">
-                  Reverse Mortgage
-                </h3>
-                <p className="text-sm text-ink-2 leading-relaxed mb-5">
-                  Tap into home equity without the burden of monthly mortgage
-                  payments. Designed exclusively for older homeowners looking to
-                  convert home equity into tax-free cash or dynamic credit
-                  lines.
-                </p>
-
-                {/* Embedded Video */}
-                <div
-                  className="video-container mb-6 rounded-xl overflow-hidden border border-line/60 bg-black aspect-video w-full shadow-sm cursor-default"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  <video
-                    src="/reverse-mortgage.mp4"
-                    controls
-                    playsInline
-                    preload="metadata"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+          <article className="bg-cream border border-line rounded-2xl p-7 transition-all duration-300 hover:border-moss-deep/30 hover:shadow-[0_20px_50px_-20px_rgba(15,61,46,0.25)] flex flex-col justify-between">
+            <div>
+              <div className="w-12 h-12 rounded-xl bg-brand-orange/10 flex items-center justify-center mb-5 shrink-0">
+                <RefreshCw
+                  className="text-brand-orange"
+                  size={22}
+                  strokeWidth={1.8}
+                />
               </div>
+              <h3 className="font-display text-2xl mb-2 text-ink">
+                Reverse Mortgage
+              </h3>
+              <p className="text-sm text-ink-2 leading-relaxed mb-6">
+                Tap into home equity without the burden of monthly mortgage
+                payments. Designed exclusively for older homeowners looking to
+                convert home equity into tax-free cash or dynamic credit lines.
+              </p>
+            </div>
 
-              <div className="flex items-center justify-between text-xs pt-2 border-t border-line/40 mt-auto">
-                <span className="text-ink-2 font-medium">
-                  No monthly mortgage payments
-                </span>
-                <span className="font-semibold text-moss-deep ulink flex items-center gap-1">
-                  Explore Options →
-                </span>
-              </div>
-            </article>
-          </div>
+            <div className="mt-auto space-y-3 pt-4 border-t border-line/40">
+              <button
+                onClick={() =>
+                  setActiveVideo({
+                    src: "/reverse-mortgage.mp4",
+                    title: "Reverse Mortgage",
+                  })
+                }
+                className="w-full py-3 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-semibold flex items-center justify-center gap-2 transition-all shadow-sm"
+              >
+                <PlayCircle size={16} /> See how it's done
+              </button>
+              <button
+                onClick={() => router.push("/reverse-mortgage")}
+                className="w-full py-3 bg-cream hover:bg-moss-deep hover:text-white border border-line hover:border-moss-deep rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-2 transition-all"
+              >
+                Explore Options <ArrowRight size={14} />
+              </button>
+            </div>
+          </article>
         </div>
       </div>
+
+      {/* Video Modal Player Overlay */}
+      <VideoModal videoInfo={activeVideo} onClose={closeVideo} />
     </section>
   );
 }
