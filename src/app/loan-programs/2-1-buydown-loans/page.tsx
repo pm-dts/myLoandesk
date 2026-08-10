@@ -62,9 +62,9 @@ export default function TwoOneBuydownPage() {
             </h1>
 
             <p className="text-base sm:text-lg text-primary-bg/80 leading-relaxed mb-8 max-w-2xl">
-              Ease into your mortgage payment[cite: 3]. Start at a reduced rate,
-              step up gradually, and give your budget room to breathe while your
-              income (or the rate environment) catches up[cite: 3].
+              Ease into your mortgage payment. Start at a reduced rate, step up
+              gradually, and give your budget room to breathe while your income
+              (or the rate environment) catches up.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -106,29 +106,27 @@ export default function TwoOneBuydownPage() {
               A 2/1 buydown is a temporary rate reduction on your mortgage that
               lowers your interest rate and your monthly payment — for the first
               two years of the loan, before stepping up to the permanent note
-              rate in year three[cite: 3].
+              rate in year three.
             </p>
 
             <ul className="space-y-3 text-sm text-ink mb-6">
               <li className="flex items-start gap-2.5">
                 <div className="w-2 h-2 rounded-full bg-moss-deep mt-2 shrink-0" />
                 <span>
-                  <strong>Year 1:</strong> Rate is 2% below your note rate[cite:
-                  3].
+                  <strong>Year 1:</strong> Rate is 2% below your note rate.
                 </span>
               </li>
               <li className="flex items-start gap-2.5">
                 <div className="w-2 h-2 rounded-full bg-moss-deep mt-2 shrink-0" />
                 <span>
-                  <strong>Year 2:</strong> Rate is 1% below your note rate[cite:
-                  3].
+                  <strong>Year 2:</strong> Rate is 1% below your note rate.
                 </span>
               </li>
               <li className="flex items-start gap-2.5">
                 <div className="w-2 h-2 rounded-full bg-brand-orange mt-2 shrink-0" />
                 <span>
                   <strong>Year 3 onward:</strong> Rate returns to the permanent,
-                  fixed note rate for the remaining life of the loan[cite: 3].
+                  fixed note rate for the remaining life of the loan.
                 </span>
               </li>
             </ul>
@@ -136,18 +134,18 @@ export default function TwoOneBuydownPage() {
             <p className="text-sm sm:text-base text-ink-2 leading-relaxed">
               The buydown is funded upfront — usually by the seller, builder, or
               lender as a credit held in an escrow-style account that subsidizes
-              your payment during years one and two[cite: 3]. Your loan itself
-              is a standard fixed-rate mortgage; only the effective payment in
-              the first two years is reduced[cite: 3].
+              your payment during years one and two. Your loan itself is a
+              standard fixed-rate mortgage; only the effective payment in the
+              first two years is reduced.
             </p>
           </div>
 
           <div className="lg:col-span-5 bg-cream/40 border border-line p-6 sm:p-8 rounded-3xl">
             <div className="text-xs font-semibold uppercase tracking-wider text-ink-2 mb-4">
-              How It Works — Example[cite: 3]
+              How It Works — Example
             </div>
             <p className="text-xs text-ink-2 mb-4">
-              On a $500,000 loan at a 7% note rate[cite: 3]:
+              On a $500,000 loan at a 7% note rate:
             </p>
 
             <div className="overflow-hidden border border-line rounded-xl bg-primary-bg mb-4">
@@ -182,9 +180,9 @@ export default function TwoOneBuydownPage() {
             <p className="text-[11px] text-ink-2/70 italic leading-normal">
               * Figures are illustrative only and will vary based on loan
               amount, term, and actual rate used for concept purposes, not a
-              quote[cite: 3]. The difference between the reduced payments and
-              the full note-rate payment during years 1 and 2 is covered by the
-              buydown funds, not by you[cite: 3].
+              quote. The difference between the reduced payments and the full
+              note-rate payment during years 1 and 2 is covered by the buydown
+              funds, not by you.
             </p>
           </div>
         </div>
@@ -287,22 +285,22 @@ export default function TwoOneBuydownPage() {
           {[
             {
               source: "Seller",
-              desc: "Common in a buyer's market — seller offers the buydown as a concession instead of a price reduction[cite: 3].",
+              desc: "Common in a buyer's market — seller offers the buydown as a concession instead of a price reduction.",
               icon: Building,
             },
             {
               source: "Builder",
-              desc: "New construction builders often offer buydowns as a purchase incentive[cite: 3].",
+              desc: "New construction builders often offer buydowns as a purchase incentive.",
               icon: Sparkles,
             },
             {
               source: "Lender",
-              desc: "Some lenders offer lender-paid buydowns as a promotional incentive[cite: 3].",
+              desc: "Some lenders offer lender-paid buydowns as a promotional incentive.",
               icon: ShieldCheck,
             },
             {
               source: "Buyer",
-              desc: "Buyers can also fund their own buydown out of pocket if desired[cite: 3].",
+              desc: "Buyers can also fund their own buydown out of pocket if desired.",
               icon: UserCheck,
             },
           ].map((item, idx) => (
@@ -451,7 +449,7 @@ export default function TwoOneBuydownPage() {
         </div>
         <p className="text-[11px] text-ink-2/70 mt-3 italic">
           * Exact requirements vary by lender and loan program; these are
-          general industry ranges[cite: 3].
+          general industry ranges.
         </p>
       </section>
 
@@ -478,23 +476,23 @@ export default function TwoOneBuydownPage() {
           {[
             {
               q: "Do I need to qualify at the reduced rate or the full note rate?",
-              a: "Most programs require you to qualify at the full note rate, since that's the rate you'll eventually pay[cite: 3]. This ensures the payment is sustainable once the buydown period ends[cite: 3].",
+              a: "Most programs require you to qualify at the full note rate, since that's the rate you'll eventually pay. This ensures the payment is sustainable once the buydown period ends.",
             },
             {
               q: "What happens if I refinance or sell before the two years are up?",
-              a: "Any unused buydown funds are typically applied to your loan balance or, depending on the program, may be forfeited — ask your loan officer how your specific program handles this[cite: 3].",
+              a: "Any unused buydown funds are typically applied to your loan balance or, depending on the program, may be forfeited — ask your loan officer how your specific program handles this.",
             },
             {
               q: "Is a 2/1 buydown the same as an adjustable-rate mortgage (ARM)?",
-              a: "No[cite: 3]. Your loan remains fixed-rate for its entire term[cite: 3]. Only the effective payment in years 1 and 2 is temporarily reduced through subsidized funds — the rate isn't adjusting based on the market[cite: 3].",
+              a: "No. Your loan remains fixed-rate for its entire term. Only the effective payment in years 1 and 2 is temporarily reduced through subsidized funds — the rate isn't adjusting based on the market.",
             },
             {
               q: "Can I combine a 2/1 buydown with other rate programs?",
-              a: "This depends on the lender and loan program — your loan officer can review what can be layered together[cite: 3].",
+              a: "This depends on the lender and loan program — your loan officer can review what can be layered together.",
             },
             {
               q: "Who pays for the buydown?",
-              a: "It's most commonly negotiated as a seller or builder concession, but lenders and buyers can also fund it depending on the situation[cite: 3].",
+              a: "It's most commonly negotiated as a seller or builder concession, but lenders and buyers can also fund it depending on the situation.",
             },
           ].map((faq, idx) => (
             <div
@@ -530,7 +528,7 @@ export default function TwoOneBuydownPage() {
           <p className="text-sm sm:text-base text-ink-2 leading-relaxed mb-8 max-w-xl mx-auto">
             Talk to a MyLoanDesk loan officer to see if a 2/1 buydown makes
             sense for your purchase, and what it could save you in the first two
-            years[cite: 3].
+            years.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

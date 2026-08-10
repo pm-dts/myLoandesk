@@ -104,18 +104,18 @@ export default function BankStatementLoansPage() {
             </h2>
             <p className="text-sm sm:text-base text-ink-2 leading-relaxed mb-6">
               A bank statement loan is a mortgage option for self-employed
-              borrowers who don&apos;t fit the traditional W-2/tax-return
-              mold[cite: 2]. Instead of using your tax returns to verify income
-              — which often understate what self-employed borrowers actually
-              earn after write-offs and deductions — lenders look at 12 or 24
-              months of personal or business bank statements to calculate
-              qualifying income based on real cash flow[cite: 2].
+              borrowers who don&apos;t fit the traditional W-2/tax-return mold.
+              Instead of using your tax returns to verify income — which often
+              understate what self-employed borrowers actually earn after
+              write-offs and deductions — lenders look at 12 or 24 months of
+              personal or business bank statements to calculate qualifying
+              income based on real cash flow.
             </p>
 
             <p className="text-sm sm:text-base text-ink-2 leading-relaxed">
               If you write off a lot of expenses to lower your tax liability,
               your tax returns may show far less income than you actually bring
-              in[cite: 2]. Bank statement loans solve that mismatch[cite: 2].
+              in. Bank statement loans solve that mismatch.
             </p>
           </div>
 
@@ -131,8 +131,7 @@ export default function BankStatementLoansPage() {
                 />
                 <span>
                   <strong>Cash-Flow Focused:</strong> Uses 12–24 months of
-                  consistent bank deposits to calculate true earning power[cite:
-                  2].
+                  consistent bank deposits to calculate true earning power.
                 </span>
               </li>
               <li className="flex items-start gap-3">
@@ -142,7 +141,7 @@ export default function BankStatementLoansPage() {
                 />
                 <span>
                   <strong>No Tax Returns:</strong> Tax write-offs will no longer
-                  limit your mortgage purchasing power[cite: 2].
+                  limit your mortgage purchasing power.
                 </span>
               </li>
               <li className="flex items-start gap-3">
@@ -152,7 +151,7 @@ export default function BankStatementLoansPage() {
                 />
                 <span>
                   <strong>Flexible Account Types:</strong> Personal or business
-                  bank statement options available[cite: 2].
+                  bank statement options available.
                 </span>
               </li>
             </ul>
@@ -260,22 +259,22 @@ export default function BankStatementLoansPage() {
             {
               step: "1",
               title: "Choose Statement Type",
-              desc: "Personal bank statements or business bank statements — each is calculated differently[cite: 2].",
+              desc: "Personal bank statements or business bank statements — each is calculated differently.",
             },
             {
               step: "2",
               title: "Provide 12 or 24 Months",
-              desc: "Provide 12 or 24 months of statements[cite: 2]. Consistency matters more than a single strong month[cite: 2].",
+              desc: "Provide 12 or 24 months of statements. Consistency matters more than a single strong month.",
             },
             {
               step: "3",
               title: "Income Calculated from Deposits",
-              desc: "Personal accounts count most deposits[cite: 2]. Business accounts apply an expense factor (commonly ~50%)[cite: 2].",
+              desc: "Personal accounts count most deposits. Business accounts apply an expense factor (commonly ~50%).",
             },
             {
               step: "4",
               title: "Average Monthly Income Set",
-              desc: "Determined income is used just like traditional income to calculate your DTI[cite: 2].",
+              desc: "Determined income is used just like traditional income to calculate your DTI.",
             },
           ].map((item, idx) => (
             <div
@@ -435,7 +434,7 @@ export default function BankStatementLoansPage() {
         </div>
         <p className="text-[11px] text-ink-2/70 mt-3 italic">
           * Exact requirements vary by lender and loan program; these are
-          general industry ranges[cite: 2].
+          general industry ranges.
         </p>
       </section>
 
@@ -536,27 +535,27 @@ export default function BankStatementLoansPage() {
           {[
             {
               q: "Do I need to be self-employed to qualify?",
-              a: "Generally yes — bank statement loans are designed for self-employed borrowers and business owners, not traditional W-2 employees[cite: 2].",
+              a: "Generally yes — bank statement loans are designed for self-employed borrowers and business owners, not traditional W-2 employees.",
             },
             {
               q: "What if my income fluctuates month to month?",
-              a: "That's expected[cite: 2]. Lenders average your deposits over the full 12 or 24-month period, so occasional slow months won't disqualify you[cite: 2].",
+              a: "That's expected. Lenders average your deposits over the full 12 or 24-month period, so occasional slow months won't disqualify you.",
             },
             {
               q: "Can I use both personal and business statements?",
-              a: "Some lenders allow a blend depending on how you receive income[cite: 2]. Your loan officer can help determine the best fit[cite: 2].",
+              a: "Some lenders allow a blend depending on how you receive income. Your loan officer can help determine the best fit.",
             },
             {
               q: "Will large one-time deposits count as income?",
-              a: "Typically no — lenders generally look for consistent, recurring deposits and may exclude transfers or one-time windfalls[cite: 2].",
+              a: "Typically no — lenders generally look for consistent, recurring deposits and may exclude transfers or one-time windfalls.",
             },
             {
               q: "Is 24 months of statements always required?",
-              a: "No — many lenders offer 12-month programs, though 24 months can sometimes result in better pricing[cite: 2].",
+              a: "No — many lenders offer 12-month programs, though 24 months can sometimes result in better pricing.",
             },
             {
               q: "How long do I need to have been self-employed?",
-              a: "Most programs require 2 years, though some allow as little as 1 year with additional documentation[cite: 2].",
+              a: "Most programs require 2 years, though some allow as little as 1 year with additional documentation.",
             },
           ].map((faq, idx) => (
             <div
@@ -591,8 +590,7 @@ export default function BankStatementLoansPage() {
           </h2>
           <p className="text-sm sm:text-base text-ink-2 leading-relaxed mb-8 max-w-xl mx-auto">
             Talk to a MyLoanDesk loan officer to find out which bank statement
-            program fits your income, and how much you could qualify for[cite:
-            2].
+            program fits your income, and how much you could qualify for.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
