@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Shield, X, ArrowRight } from "lucide-react";
+import Link from "next/link";
+import { Shield, X, ArrowRight, ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
 import LoanProgramButton from "@/components/site/utils/LoanProgramButton";
 import { Fraunces } from "next/font/google";
@@ -89,7 +90,7 @@ export default function ReverseMortgageSection() {
 
       {/* Grid updated to gap-6 matching the fixed card layout */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {/* 1. HomeSafe Second (Replaced original Reverse Mortgages card) */}
+        {/* 1. HomeSafe Second (HELOC Alternative) */}
         <div
           id="homesafe-second"
           className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col justify-between h-[400px] transition-colors duration-300 hover:bg-cream/40"
@@ -99,6 +100,9 @@ export default function ReverseMortgageSection() {
               <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-brand-orange/10 text-brand-orange shrink-0">
                 <Shield size={22} strokeWidth={1.8} />
               </div>
+              <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2 py-1 rounded">
+                Reverse Mortgage
+              </span>
             </div>
             <h3
               className={cn(
@@ -111,19 +115,26 @@ export default function ReverseMortgageSection() {
             <h4 className="font-medium text-ink text-sm mb-2 line-clamp-2">
               Access Your Equity Without Replacing Your First Mortgage
             </h4>
-            <p className="text-sm text-ink-2 leading-relaxed line-clamp-4">
+            <p className="text-sm text-ink-2 leading-relaxed line-clamp-3">
               HomeSafe Second is a second-lien reverse mortgage designed for
               eligible homeowners who want to access their home equity while
               keeping their existing first mortgage in place.
             </p>
           </div>
-          <div className="mt-auto pt-4">
+          <div className="mt-auto pt-4 flex flex-col sm:flex-row gap-2">
             <button
               onClick={() => setActiveModal("homesafe-second")}
-              className="w-full py-3 bg-cream hover:bg-brand-orange hover:border-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-2 transition-all"
+              className="flex-1 py-3 bg-cream hover:bg-brand-orange hover:border-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
             >
               Read More <ArrowRight size={14} />
             </button>
+            <Link
+              href="/reverse-mortgage"
+              className="flex-1 py-3 bg-primary-bg hover:bg-cream border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
+            >
+              Program Page{" "}
+              <ExternalLink size={14} className="text-brand-orange" />
+            </Link>
           </div>
 
           <LoanDetailModal
@@ -212,6 +223,26 @@ export default function ReverseMortgageSection() {
                 MyLoanDesk to review your options and compare HomeSafe Second
                 with a traditional HELOC or home equity loan.
               </p>
+
+              {/* Direct Program Page Link Box inside Modal */}
+              <div className="mb-6 p-4 bg-cream/40 border border-line rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-3">
+                <div>
+                  <div className="text-xs font-semibold text-ink uppercase tracking-wider">
+                    Looking for full reverse mortgage program details?
+                  </div>
+                  <p className="text-xs text-ink-2">
+                    Explore complete reverse mortgage guidelines and request
+                    specialized consultation.
+                  </p>
+                </div>
+                <Link
+                  href="/reverse-mortgage"
+                  onClick={closeModal}
+                  className="btn-shine bg-brand-orange text-white px-5 py-2.5 rounded-full text-xs font-semibold flex items-center gap-1.5 shrink-0 hover:bg-orange-600 transition-colors"
+                >
+                  Visit Full Program Page <ArrowRight size={14} />
+                </Link>
+              </div>
             </div>
 
             <div className="flex flex-col gap-5 mt-auto">
@@ -245,6 +276,9 @@ export default function ReverseMortgageSection() {
               <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-brand-orange/10 text-brand-orange shrink-0">
                 <Shield size={22} strokeWidth={1.8} />
               </div>
+              <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2 py-1 rounded">
+                Refinance
+              </span>
             </div>
             <h3
               className={cn(
@@ -257,7 +291,7 @@ export default function ReverseMortgageSection() {
             <h4 className="font-medium text-ink text-sm mb-2">
               Convert Your Home Equity Into Cash
             </h4>
-            <p className="text-sm text-ink-2 leading-relaxed line-clamp-4">
+            <p className="text-sm text-ink-2 leading-relaxed line-clamp-3">
               A Reverse Mortgage Refinance allows you to replace your existing
               mortgage with a reverse mortgage. Any remaining equity can then be
               accessed as tax free proceeds, giving you additional financial
@@ -265,13 +299,20 @@ export default function ReverseMortgageSection() {
               payment.
             </p>
           </div>
-          <div className="mt-auto pt-4">
+          <div className="mt-auto pt-4 flex flex-col sm:flex-row gap-2">
             <button
               onClick={() => setActiveModal("reverse-refinance")}
-              className="w-full py-3 bg-cream hover:bg-brand-orange hover:border-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-2 transition-all"
+              className="flex-1 py-3 bg-cream hover:bg-brand-orange hover:border-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
             >
               Read More <ArrowRight size={14} />
             </button>
+            <Link
+              href="/reverse-mortgage"
+              className="flex-1 py-3 bg-primary-bg hover:bg-cream border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
+            >
+              Program Page{" "}
+              <ExternalLink size={14} className="text-brand-orange" />
+            </Link>
           </div>
 
           <LoanDetailModal
@@ -338,6 +379,26 @@ export default function ReverseMortgageSection() {
                 Best of all, you continue to own your home and remain in control
                 of how you use your equity.
               </p>
+
+              {/* Direct Program Page Link Box inside Modal */}
+              <div className="mb-6 p-4 bg-cream/40 border border-line rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-3">
+                <div>
+                  <div className="text-xs font-semibold text-ink uppercase tracking-wider">
+                    Looking for complete reverse mortgage information?
+                  </div>
+                  <p className="text-xs text-ink-2">
+                    Explore full program details and submit your reverse
+                    mortgage inquiry.
+                  </p>
+                </div>
+                <Link
+                  href="/reverse-mortgage"
+                  onClick={closeModal}
+                  className="btn-shine bg-brand-orange text-white px-5 py-2.5 rounded-full text-xs font-semibold flex items-center gap-1.5 shrink-0 hover:bg-orange-600 transition-colors"
+                >
+                  Visit Full Program Page <ArrowRight size={14} />
+                </Link>
+              </div>
             </div>
             <LoanProgramButton loan_type="Reverse Mortgage Refinance" />
           </LoanDetailModal>
@@ -353,6 +414,9 @@ export default function ReverseMortgageSection() {
               <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-brand-orange/10 text-brand-orange shrink-0">
                 <Shield size={22} strokeWidth={1.8} />
               </div>
+              <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2 py-1 rounded">
+                Home Purchase
+              </span>
             </div>
             <h3
               className={cn(
@@ -370,13 +434,20 @@ export default function ReverseMortgageSection() {
               purchase your next primary residence.
             </p>
           </div>
-          <div className="mt-auto pt-4">
+          <div className="mt-auto pt-4 flex flex-col sm:flex-row gap-2">
             <button
               onClick={() => setActiveModal("reverse-purchase")}
-              className="w-full py-3 bg-cream hover:bg-brand-orange hover:border-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-2 transition-all"
+              className="flex-1 py-3 bg-cream hover:bg-brand-orange hover:border-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
             >
               Read More <ArrowRight size={14} />
             </button>
+            <Link
+              href="/reverse-mortgage"
+              className="flex-1 py-3 bg-primary-bg hover:bg-cream border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
+            >
+              Program Page{" "}
+              <ExternalLink size={14} className="text-brand-orange" />
+            </Link>
           </div>
 
           <LoanDetailModal
@@ -432,6 +503,26 @@ export default function ReverseMortgageSection() {
                 purchase, you can keep more of your money available for travel,
                 investments, healthcare, or everyday living expenses.
               </p>
+
+              {/* Direct Program Page Link Box inside Modal */}
+              <div className="mb-6 p-4 bg-cream/40 border border-line rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-3">
+                <div>
+                  <div className="text-xs font-semibold text-ink uppercase tracking-wider">
+                    Interested in buying with a reverse mortgage?
+                  </div>
+                  <p className="text-xs text-ink-2">
+                    Visit our dedicated Reverse Mortgage page to learn more and
+                    submit an inquiry.
+                  </p>
+                </div>
+                <Link
+                  href="/reverse-mortgage"
+                  onClick={closeModal}
+                  className="btn-shine bg-brand-orange text-white px-5 py-2.5 rounded-full text-xs font-semibold flex items-center gap-1.5 shrink-0 hover:bg-orange-600 transition-colors"
+                >
+                  Visit Full Program Page <ArrowRight size={14} />
+                </Link>
+              </div>
             </div>
             <LoanProgramButton loan_type="Reverse Mortgage for Purchase" />
           </LoanDetailModal>
@@ -447,6 +538,9 @@ export default function ReverseMortgageSection() {
               <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-brand-orange/10 text-brand-orange shrink-0">
                 <Shield size={22} strokeWidth={1.8} />
               </div>
+              <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2 py-1 rounded">
+                Retirement Planning
+              </span>
             </div>
             <h3
               className={cn(
@@ -456,20 +550,27 @@ export default function ReverseMortgageSection() {
             >
               Is a Reverse Mortgage Right for You?
             </h3>
-            <p className="text-sm text-ink-2 leading-relaxed line-clamp-4">
+            <p className="text-sm text-ink-2 leading-relaxed line-clamp-3">
               Every homeowner's situation is unique. That's why we take the time
               to understand your goals and explain every available option before
               you make a decision. Whether you're interested in refinancing your
               current home or purchasing your next one...
             </p>
           </div>
-          <div className="mt-auto pt-4 max-w-sm">
+          <div className="mt-auto pt-4 flex flex-col sm:flex-row gap-2 max-w-md">
             <button
               onClick={() => setActiveModal("reverse-right-for-you")}
-              className="w-full py-3 bg-cream hover:bg-brand-orange hover:border-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-2 transition-all"
+              className="flex-1 py-3 bg-cream hover:bg-brand-orange hover:border-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
             >
               Read More <ArrowRight size={14} />
             </button>
+            <Link
+              href="/reverse-mortgage"
+              className="flex-1 py-3 bg-primary-bg hover:bg-cream border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
+            >
+              Program Page{" "}
+              <ExternalLink size={14} className="text-brand-orange" />
+            </Link>
           </div>
 
           <LoanDetailModal
@@ -524,10 +625,30 @@ export default function ReverseMortgageSection() {
                 you can purchase your next home with no required monthly
                 mortgage payments.
               </p>
-              <p className="text-sm text-ink-2 leading-relaxed mb-8 font-bold mt-4">
+              <p className="text-sm text-ink-2 leading-relaxed mb-6 font-bold mt-4">
                 Schedule your free consultation today and explore your options
                 with confidence.
               </p>
+
+              {/* Direct Program Page Link Box inside Modal */}
+              <div className="mb-6 p-4 bg-cream/40 border border-line rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-3">
+                <div>
+                  <div className="text-xs font-semibold text-ink uppercase tracking-wider">
+                    Ready to learn more on our main Reverse Mortgage page?
+                  </div>
+                  <p className="text-xs text-ink-2">
+                    View detailed eligibility guidelines and fill out our
+                    tailored inquiry form.
+                  </p>
+                </div>
+                <Link
+                  href="/reverse-mortgage"
+                  onClick={closeModal}
+                  className="btn-shine bg-brand-orange text-white px-5 py-2.5 rounded-full text-xs font-semibold flex items-center gap-1.5 shrink-0 hover:bg-orange-600 transition-colors"
+                >
+                  Visit Full Program Page <ArrowRight size={14} />
+                </Link>
+              </div>
             </div>
 
             <div className="flex flex-col gap-5 mt-auto">

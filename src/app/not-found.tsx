@@ -1,14 +1,21 @@
+"use client";
 import Link from "next/link";
 import { Home, FileText, PhoneCall, HelpCircle } from "lucide-react";
-import { redirect } from "next/navigation";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
-export const metadata = {
-  title: "404 - Page Not Found | MyLoanDesk",
-  description: "The page you are looking for does not exist.",
-};
+// export const metadata = {
+//   title: "404 - Page Not Found | MyLoanDesk",
+//   description: "The page you are looking for does not exist.",
+// };
 
 export default function NotFound() {
-  redirect("/"); // Redirect to the homepage
+  const router = useRouter();
+
+  useEffect(() => {
+    router.replace("/");
+  }, [router]);
+
   return (
     <main className="min-h-screen bg-cream py-24 px-6 flex items-center justify-center relative overflow-hidden">
       {/* Background Glow Gradients */}

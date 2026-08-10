@@ -442,7 +442,7 @@ export default function ResidentialProgramsSection() {
               }
               className="flex-1 py-3 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5 transition-all"
             >
-              <PlayCircle size={14} /> Video
+              <PlayCircle size={14} /> See How It Works
             </button>
 
             <button

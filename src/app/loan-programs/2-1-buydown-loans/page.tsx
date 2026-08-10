@@ -91,7 +91,7 @@ export default function TwoOneBuydownPage() {
         </div>
       </section>
 
-      {/* --- WHAT IS A 2/1 BUYDOWN? --- */}
+      {/* --- WHAT IS A 2/1 BUYDOWN? (EXPLANATION + EXAMPLE) --- */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 mb-16 sm:mb-24">
         <div className="grid lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-7">
@@ -192,7 +192,7 @@ export default function TwoOneBuydownPage() {
         </div>
       </section>
 
-      {/* --- VIDEO EXPLAINER SECTION --- */}
+      {/* --- SEE HOW A 2/1 BUYDOWN WORKS (EMBEDDED VIDEO) --- */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 mb-16 sm:mb-24">
         <div className="bg-cream/30 border border-line rounded-[32px] p-6 sm:p-10 lg:p-12">
           <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
