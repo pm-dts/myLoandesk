@@ -12,6 +12,7 @@ import {
   Building,
   UserCheck,
   ShieldCheck,
+  PlayCircle,
 } from "lucide-react";
 
 import BuydownCalculator from "@/components/site/LoanPrograms/2-1-BuydownLoans/2-1-BuydownCalculator";
@@ -33,6 +34,9 @@ export const metadata: Metadata = {
     type: "website",
   },
 };
+
+const VIDEO_URL =
+  "https://myloandesk-assets.s3.eu-north-1.amazonaws.com/Lower+Your+Mortgage+Payment+During+Your+First+Two+Years+of+Homeownership_1080p_caption.mp4";
 
 export default function TwoOneBuydownPage() {
   return (
@@ -184,6 +188,44 @@ export default function TwoOneBuydownPage() {
               note-rate payment during years 1 and 2 is covered by the buydown
               funds, not by you.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* --- VIDEO EXPLAINER SECTION --- */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 mb-16 sm:mb-24">
+        <div className="bg-cream/30 border border-line rounded-[32px] p-6 sm:p-10 lg:p-12">
+          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
+            <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-orange uppercase tracking-wider mb-2">
+              <PlayCircle size={16} /> Video Breakdown
+            </div>
+            <h2
+              className={cn(
+                "text-3xl sm:text-4xl font-light text-ink mb-3",
+                fraunces.className,
+              )}
+            >
+              See How a 2/1 Buydown Works
+            </h2>
+            <p className="text-sm text-ink-2 leading-relaxed">
+              Lower your mortgage payment during your first two years of
+              homeownership with this simple, step-by-step breakdown.
+            </p>
+          </div>
+
+          {/* Embedded HTML5 Video Container */}
+          <div className="relative max-w-4xl mx-auto">
+            <div className="absolute inset-0 bg-[#E8E4D8] rounded-[24px] sm:rounded-[32px] transform -rotate-1 -translate-x-1.5 translate-y-1.5 sm:-translate-x-2 sm:translate-y-2 -z-10" />
+            <div className="relative z-10 bg-black rounded-[24px] sm:rounded-[32px] overflow-hidden shadow-2xl border border-line aspect-video">
+              <video
+                src={VIDEO_URL}
+                controls
+                preload="metadata"
+                className="w-full h-full object-cover"
+              >
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </div>
         </div>
       </section>
