@@ -1,6 +1,19 @@
-import React from "react";
 import { MoreVertical, BookOpen, ArrowRight } from "lucide-react";
+import { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "MyLoanDesk Blog | Mortgage Insights & Market Updates",
+  description:
+    "Stay informed with MyLoanDesk's blog. Explore market updates, negotiation strategies, and mortgage insights to navigate the housing market with confidence.",
+  openGraph: {
+    title: "MyLoanDesk Blog | Mortgage Insights & Market Updates",
+    description:
+      "Stay informed with MyLoanDesk's blog. Explore market updates, negotiation strategies, and mortgage insights to navigate the housing market with confidence.",
+    type: "website",
+    url: "https://www.myloandesk.com/blog",
+  },
+};
 
 export default function Blog() {
   // Mock data based on the provided image and mortgage theme
@@ -24,7 +37,7 @@ export default function Blog() {
       readTime: "3 min read",
       image:
         "https://static.wixstatic.com/media/ba713e_08a689363acb4318a8d3aa67edf3101b~mv2.png/v1/fill/w_1678,h_1260,fp_0.50_0.50,q_95,enc_avif,quality_auto/ba713e_08a689363acb4318a8d3aa67edf3101b~mv2.png",
-    }
+    },
   ];
 
   return (

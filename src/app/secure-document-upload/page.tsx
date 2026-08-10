@@ -1,6 +1,3 @@
-"use client";
-
-import React, { useState, useCallback } from "react";
 import {
   Upload,
   FileText,
@@ -11,6 +8,19 @@ import {
 } from "lucide-react";
 import { Fraunces } from "next/font/google";
 
+export const metadata = {
+  title: "Secure Document Upload | MyLoanDesk",
+  description:
+    "Upload your financial documents securely through MyLoanDesk's encrypted document portal. Ensure your sensitive information is protected while we assist you with your mortgage needs.",
+  openGraph: {
+    title: "Secure Document Upload | MyLoanDesk",
+    description:
+      "Upload your financial documents securely through MyLoanDesk's encrypted document portal. Ensure your sensitive information is protected while we assist you with your mortgage needs.",
+    type: "website",
+    url: "https://www.myloandesk.com/secure-document-upload",
+  },
+};
+
 const fraunces = Fraunces({
   variable: "--font-fraunces",
   subsets: ["latin"],
@@ -18,21 +28,6 @@ const fraunces = Fraunces({
 });
 
 export default function DocumentUpload() {
-  const [files, setFiles] = useState<File[]>([]);
-  const [isDragging, setIsDragging] = useState(false);
-
-  const handleDrop = useCallback((e: React.DragEvent) => {
-    e.preventDefault();
-    setIsDragging(false);
-    if (e.dataTransfer.files) {
-      setFiles((prev) => [...prev, ...Array.from(e.dataTransfer.files)]);
-    }
-  }, []);
-
-  const removeFile = (index: number) => {
-    setFiles((prev) => prev.filter((_, i) => i !== index));
-  };
-
   return (
     <div className="bg-[#F8F6F1] min-h-screen py-16 px-6">
       <div className="max-w-4xl mx-auto">

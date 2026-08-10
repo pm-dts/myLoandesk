@@ -1,6 +1,19 @@
 import { Fraunces } from "next/font/google";
 import { cn } from "@/lib/utils";
 
+export const metadata = {
+  title: "Email & Communication Policy | MyLoanDesk",
+  description:
+    "This Email & Communication Policy outlines how MyLoanDesk uses email to communicate with clients and business partners, including security, limitations, and best practices.",
+  openGraph: {
+    title: "Email & Communication Policy | MyLoanDesk",
+    description:
+      "This Email & Communication Policy outlines how MyLoanDesk uses email to communicate with clients and business partners, including security, limitations, and best practices.",
+    type: "website",
+    url: "https://www.myloandesk.com/email-communication",
+  },
+};
+
 const fraunces = Fraunces({
   variable: "--font-fraunces",
   subsets: ["latin"],

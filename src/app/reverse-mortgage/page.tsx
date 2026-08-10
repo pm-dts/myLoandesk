@@ -14,6 +14,19 @@ import {
 import ReverseMortgageForm from "@/components/site/ReverseMortgage/InquiryForm";
 import ReverseMortgageSection from "@/components/site/LoanPrograms/ReverseMortgageSection";
 
+export const metadata = {
+  title: "Reverse Mortgage | MyLoanDesk",
+  description:
+    "Explore Reverse Mortgage options with MyLoanDesk. Learn how to convert your home equity into financial freedom, with no monthly payments and flexible access to funds.",
+  openGraph: {
+    title: "Reverse Mortgage | MyLoanDesk",
+    description:
+      "Explore Reverse Mortgage options with MyLoanDesk. Learn how to convert your home equity into financial freedom, with no monthly payments and flexible access to funds.",
+    type: "website",
+    url: "https://www.myloandesk.com/reverse-mortgage",
+  },
+};
+
 const fraunces = Fraunces({
   variable: "--font-fraunces",
   subsets: ["latin"],

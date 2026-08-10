@@ -1,6 +1,20 @@
 import { CheckCircle2, Home, Landmark, ShieldCheck } from "lucide-react";
+import { Metadata } from "next";
 import { Fraunces } from "next/font/google";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "About Us | MyLoanDesk",
+  description:
+    "Discover MyLoanDesk, your trusted mortgage partner. Learn about our mission, values, and commitment to providing personalized mortgage solutions for every client.",
+  openGraph: {
+    title: "About Us | MyLoanDesk",
+    description:
+      "Discover MyLoanDesk, your trusted mortgage partner. Learn about our mission, values, and commitment to providing personalized mortgage solutions for every client.",
+    type: "website",
+    url: "https://www.myloandesk.com/about-us",
+  },
+};
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",

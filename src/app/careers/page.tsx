@@ -1,9 +1,23 @@
 import { ArrowRight, Briefcase, Target, Eye, CheckCircle2 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Metadata } from "next";
 import { Fraunces } from "next/font/google";
 import Image from "next/image";
 import teamImg from "@/assets/Team_Meeting.jpeg";
 import meetingImg from "@/assets/Meeting_At_The_Office.jpeg";
+
+export const metadata: Metadata = {
+  title: "Careers at MyLoanDesk | Join Our Team",
+  description:
+    "Explore career opportunities at MyLoanDesk. Join our team of dedicated professionals and help clients achieve their homeownership dreams.",
+  openGraph: {
+    title: "Careers at MyLoanDesk | Join Our Team",
+    description:
+      "Explore career opportunities at MyLoanDesk. Join our team of dedicated professionals and help clients achieve their homeownership dreams.",
+    type: "website",
+    url: "https://www.myloandesk.com/careers",
+  },
+};
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",

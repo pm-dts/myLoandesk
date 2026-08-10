@@ -15,8 +15,7 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Fraunces } from "next/font/google";
-import Link from "next/link";
-import LoanProgramButton from "@/components/site/utils/LoanProgramButton";
+// import LoanProgramButton from "@/components/site/utils/LoanProgramButton";
 import ResidentialProgramsSection from "@/components/site/LoanPrograms/ResidentialProgramsSection";
 import HomeEquitySection from "@/components/site/LoanPrograms/RehabRefinanceSection";
 import ReverseMortgageSection from "@/components/site/LoanPrograms/ReverseMortgageSection";
@@ -24,6 +23,19 @@ import RealEstateInvestmentSection from "@/components/site/LoanPrograms/RealEsta
 import CommercialFinancingSection from "@/components/site/LoanPrograms/CommercialSection";
 import SBABusinessSection from "@/components/site/LoanPrograms/SBABusinessSection";
 import InternationalCustomSection from "@/components/site/LoanPrograms/InternationalSection";
+
+export const metadata = {
+  title: "Loan Programs | MyLoanDesk",
+  description:
+    "Explore our diverse loan programs at MyLoanDesk. We specialize in Residential, Commercial, Rehab, Refinance, Reverse Mortgages, SBA Business Loans, and International Financing options.",
+  openGraph: {
+    title: "Loan Programs | MyLoanDesk",
+    description:
+      "Explore our diverse loan programs at MyLoanDesk. We specialize in Residential, Commercial, Rehab, Refinance, Reverse Mortgages, SBA Business Loans, and International Financing options.",
+    type: "website",
+    url: "https://www.myloandesk.com/loan-programs",
+  },
+};
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",

@@ -5,6 +5,19 @@ import PartnerFormSection from "@/components/site/Realtors/PartnerForm";
 import ReferralFormSection from "@/components/site/Realtors/PreApprovalRefferal";
 import { Toaster } from "react-hot-toast";
 
+export const metadata = {
+  title: "Realtor Partnership Program | MyLoanDesk",
+  description:
+    "Join MyLoanDesk's Realtor Partnership Program to close loans faster and provide a seamless experience for your clients. Partner with us for networking, marketing support, and more.",
+  openGraph: {
+    title: "Realtor Partnership Program | MyLoanDesk",
+    description:
+      "Join MyLoanDesk's Realtor Partnership Program to close loans faster and provide a seamless experience for your clients. Partner with us for networking, marketing support, and more.",
+    type: "website",
+    url: "https://www.myloandesk.com/realtors",
+  },
+};
+
 const fraunces = Fraunces({
   variable: "--font-fraunces",
   subsets: ["latin"],
