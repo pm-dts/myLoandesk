@@ -16,6 +16,7 @@ import {
   PlayCircle,
   Stethoscope,
   Key,
+  ExternalLink,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Fraunces } from "next/font/google";
@@ -158,7 +159,7 @@ export default function ResidentialProgramsSection() {
         {/* 1. Conventional Loans */}
         <div
           id="conventional"
-          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col h-[360px] transition-colors duration-300 hover:bg-cream/40"
+          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col h-[380px] transition-colors duration-300 hover:bg-cream/40"
         >
           <div>
             <div className="flex items-center justify-between mb-6">
@@ -235,7 +236,7 @@ export default function ResidentialProgramsSection() {
         {/* 2. Jumbo Loans */}
         <div
           id="portfolio"
-          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col h-[360px] transition-colors duration-300 hover:bg-cream/40"
+          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col h-[380px] transition-colors duration-300 hover:bg-cream/40"
         >
           <div>
             <div className="flex items-center justify-between mb-6">
@@ -328,7 +329,7 @@ export default function ResidentialProgramsSection() {
         {/* 3. FHA Loans */}
         <div
           id="fha"
-          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col h-[360px] transition-colors duration-300 hover:bg-cream/40"
+          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col h-[380px] transition-colors duration-300 hover:bg-cream/40"
         >
           <div>
             <div className="flex items-center justify-between mb-6">
@@ -404,7 +405,7 @@ export default function ResidentialProgramsSection() {
         {/* 4. 2/1 Buydown */}
         <div
           id="buydown-2-1"
-          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col h-[360px] transition-colors duration-300 hover:bg-cream/40"
+          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col h-[380px] transition-colors duration-300 hover:bg-cream/40"
         >
           <div>
             <div className="flex items-center justify-between mb-6">
@@ -429,7 +430,9 @@ export default function ResidentialProgramsSection() {
               improvements, and growing family needs.
             </p>
           </div>
-          <div className="mt-auto pt-4 flex flex-col sm:flex-row gap-2">
+
+          {/* Card Action Buttons with Link to Dedicated Page */}
+          <div className="mt-auto pt-4 flex flex-col gap-2">
             <button
               onClick={() =>
                 setActiveVideo({
@@ -437,18 +440,29 @@ export default function ResidentialProgramsSection() {
                   title: "2/1 Buydown Mortgage",
                 })
               }
-              className="flex-1 py-3 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-semibold flex items-center justify-center gap-2 transition-all"
+              className="flex-1 py-3 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5 transition-all"
             >
-              <PlayCircle size={14} /> See how it works
+              <PlayCircle size={14} /> Video
             </button>
+
             <button
               onClick={() => setActiveModal("buydown")}
-              className="flex-1 py-3 bg-cream hover:bg-moss-deep hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-2 transition-all"
+              className="flex-1 py-3 bg-cream hover:bg-moss-deep hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
             >
               Read More <ArrowRight size={14} />
             </button>
+
+            {/* Direct Page Link in Card */}
+            <Link
+              href="/loan-programs/2-1-buydown-loans"
+              className="flex-1 py-3 bg-primary-bg hover:bg-cream border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
+            >
+              Program Page{" "}
+              <ExternalLink size={14} className="text-brand-orange" />
+            </Link>
           </div>
 
+          {/* Modal Dialog with Embedded Program Link */}
           <LoanDetailModal
             isOpen={activeModal === "buydown"}
             onClose={closeModal}
@@ -589,7 +603,28 @@ export default function ResidentialProgramsSection() {
                   Lower your payments today. Build your future with confidence.
                 </p>
               </div>
+
+              {/* Direct Program Page Link Box inside Modal */}
+              <div className="mb-6 p-4 bg-cream/40 border border-line rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-3">
+                <div>
+                  <div className="text-xs font-semibold text-ink uppercase tracking-wider">
+                    Want detailed rate comparisons & calculator?
+                  </div>
+                  <p className="text-xs text-ink-2">
+                    Explore complete 2/1 Buydown guidelines and run exact
+                    savings numbers.
+                  </p>
+                </div>
+                <Link
+                  href="/loan-programs/2-1-buydown-loans"
+                  onClick={closeModal}
+                  className="btn-shine bg-brand-orange text-white px-5 py-2.5 rounded-full text-xs font-semibold flex items-center gap-1.5 shrink-0 hover:bg-orange-600 transition-colors"
+                >
+                  Visit Full Program Page <ArrowRight size={14} />
+                </Link>
+              </div>
             </div>
+
             <LoanProgramButton loan_type="2/1 Buydown" />
           </LoanDetailModal>
         </div>
@@ -597,7 +632,7 @@ export default function ResidentialProgramsSection() {
         {/* 5. Bank Statement Loans */}
         <div
           id="bank-statement"
-          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col h-[360px] transition-colors duration-300 hover:bg-cream/40"
+          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col h-[380px] transition-colors duration-300 hover:bg-cream/40"
         >
           <div>
             <div className="flex items-center justify-between mb-6">
@@ -626,15 +661,26 @@ export default function ResidentialProgramsSection() {
               difficult to qualify for a conventional loan.
             </p>
           </div>
-          <div className="mt-auto pt-4">
+
+          {/* Card Action Buttons with Direct Link to Dedicated Page */}
+          <div className="mt-auto pt-4 flex flex-col gap-2">
             <button
               onClick={() => setActiveModal("bank-statement")}
-              className="w-full py-3 bg-cream hover:bg-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-2 transition-all"
+              className="flex-1 py-3 bg-cream hover:bg-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
             >
               Read More <ArrowRight size={14} />
             </button>
+
+            <Link
+              href="/loan-programs/bank-statement-loans"
+              className="flex-1 py-3 bg-primary-bg hover:bg-cream border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
+            >
+              Program Page{" "}
+              <ExternalLink size={14} className="text-brand-orange" />
+            </Link>
           </div>
 
+          {/* Loan Detail Modal with Direct Page Callout */}
           <LoanDetailModal
             isOpen={activeModal === "bank-statement"}
             onClose={closeModal}
@@ -734,11 +780,32 @@ export default function ResidentialProgramsSection() {
                 lending, a Bank Statement Loan may be the solution you’ve been
                 looking for.
               </p>
-              <p className="text-xs text-ink-2 font-medium mb-4">
+              <p className="text-xs text-ink-2 font-medium mb-6">
                 Contact MyLoanDesk today for a personalized review and discover
                 the mortgage options available to you.
               </p>
+
+              {/* Direct Program Page Link Box inside Modal */}
+              <div className="mb-6 p-4 bg-cream/40 border border-line rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-3">
+                <div>
+                  <div className="text-xs font-semibold text-ink uppercase tracking-wider">
+                    Want to estimate your qualifying income?
+                  </div>
+                  <p className="text-xs text-ink-2">
+                    Explore complete 12/24 month bank statement guidelines and
+                    use our income calculator.
+                  </p>
+                </div>
+                <Link
+                  href="/loan-programs/bank-statement-loans"
+                  onClick={closeModal}
+                  className="btn-shine bg-brand-orange text-white px-5 py-2.5 rounded-full text-xs font-semibold flex items-center gap-1.5 shrink-0 hover:bg-orange-600 transition-colors"
+                >
+                  Visit Full Program Page <ArrowRight size={14} />
+                </Link>
+              </div>
             </div>
+
             <LoanProgramButton loan_type="Bank Statement" />
           </LoanDetailModal>
         </div>
@@ -746,7 +813,7 @@ export default function ResidentialProgramsSection() {
         {/* 6. Hybrid Loans */}
         <div
           id="hybrid"
-          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col h-[360px] transition-colors duration-300 hover:bg-cream/40"
+          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col h-[380px] transition-colors duration-300 hover:bg-cream/40"
         >
           <div>
             <div className="flex items-center justify-between mb-6">
@@ -819,7 +886,7 @@ export default function ResidentialProgramsSection() {
         {/* 7. VA Loans */}
         <div
           id="va"
-          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col h-[360px] transition-colors duration-300 hover:bg-cream/40"
+          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col h-[380px] transition-colors duration-300 hover:bg-cream/40"
         >
           <div>
             <div className="flex items-center justify-between mb-6">
@@ -900,7 +967,7 @@ export default function ResidentialProgramsSection() {
         {/* 8. Private Bridge Loans */}
         <div
           id="bridge"
-          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col h-[360px] transition-colors duration-300 hover:bg-cream/40"
+          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col h-[380px] transition-colors duration-300 hover:bg-cream/40"
         >
           <div>
             <div className="flex items-center justify-between mb-6">
@@ -979,7 +1046,7 @@ export default function ResidentialProgramsSection() {
         {/* 9. Bridge to Sale */}
         <div
           id="bridge-to-sale"
-          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col h-[360px] transition-colors duration-300 hover:bg-cream/40"
+          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col h-[380px] transition-colors duration-300 hover:bg-cream/40"
         >
           <div>
             <div className="flex items-center justify-between mb-6">
@@ -1074,7 +1141,7 @@ export default function ResidentialProgramsSection() {
         {/* 10. International Buyers Section */}
         <div
           id="international-buyer"
-          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col h-[360px] transition-colors duration-300 hover:bg-cream/40"
+          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col h-[380px] transition-colors duration-300 hover:bg-cream/40"
         >
           <div>
             <div className="flex items-center justify-between mb-6">
@@ -1197,7 +1264,7 @@ export default function ResidentialProgramsSection() {
         {/* 11. ITIN Home Loans */}
         <div
           id="ITIN-home"
-          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col h-[360px] transition-colors duration-300 hover:bg-cream/40"
+          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col h-[380px] transition-colors duration-300 hover:bg-cream/40"
         >
           <div>
             <div className="flex items-center justify-between mb-6">
@@ -1326,7 +1393,7 @@ export default function ResidentialProgramsSection() {
         {/* 12. Dream Home Builder AKA Earned Equity Program (EEP) */}
         <div
           id="eep"
-          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col justify-between h-[360px] transition-colors duration-300 hover:bg-cream/40"
+          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col justify-between h-[380px] transition-colors duration-300 hover:bg-cream/40"
         >
           <div>
             <div className="flex items-center justify-between mb-6">
@@ -1550,7 +1617,7 @@ export default function ResidentialProgramsSection() {
         {/* 13. Doctor Loan Program */}
         <div
           id="doctor"
-          className="scroll-mt-36 col-span-1 md:col-span-2 lg:col-span-1 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col justify-between h-[360px] transition-colors duration-300 hover:bg-cream/40"
+          className="scroll-mt-36 col-span-1 md:col-span-2 lg:col-span-1 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col justify-between h-[380px] transition-colors duration-300 hover:bg-cream/40"
         >
           <div>
             <div className="flex items-center justify-between mb-6">

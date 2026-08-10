@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Shield, X, ArrowRight } from "lucide-react";
+import { Shield, X, ArrowRight, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import LoanProgramButton from "@/components/site/utils/LoanProgramButton";
@@ -93,13 +93,16 @@ export default function RealEstateInvestmentSection() {
         {/* 1. DSCR Financing */}
         <div
           id="DSCR"
-          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col justify-between h-[400px] transition-colors duration-300 hover:bg-cream/40"
+          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col justify-between h-[420px] transition-colors duration-300 hover:bg-cream/40"
         >
           <div>
             <div className="flex items-center justify-between mb-6">
               <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-brand-orange/10 text-brand-orange shrink-0">
                 <Shield size={22} strokeWidth={1.8} />
               </div>
+              <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2 py-1 rounded">
+                Investor
+              </span>
             </div>
             <h3
               className={cn(
@@ -119,15 +122,26 @@ export default function RealEstateInvestmentSection() {
               personal income, employment, or tax returns...
             </p>
           </div>
-          <div className="mt-auto pt-4">
+
+          {/* Card Action Buttons with Direct Link to Dedicated Page */}
+          <div className="mt-auto pt-4 flex flex-col gap-2">
             <button
               onClick={() => setActiveModal("dscr")}
-              className="w-full py-3 bg-cream hover:bg-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-2 transition-all"
+              className="flex-1 py-3 bg-cream hover:bg-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
             >
               Read More <ArrowRight size={14} />
             </button>
+
+            <Link
+              href="/loan-programs/dscr-loans"
+              className="flex-1 py-3 bg-primary-bg hover:bg-cream border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
+            >
+              Program Page{" "}
+              <ExternalLink size={14} className="text-brand-orange" />
+            </Link>
           </div>
 
+          {/* Loan Detail Modal with Direct Page Callout */}
           <LoanDetailModal
             isOpen={activeModal === "dscr"}
             onClose={closeModal}
@@ -221,6 +235,26 @@ export default function RealEstateInvestmentSection() {
                 get pre-qualified.
               </p>
 
+              {/* Direct Program Page Link Box inside Modal */}
+              <div className="mb-6 p-4 bg-cream/40 border border-line rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-3">
+                <div>
+                  <div className="text-xs font-semibold text-ink uppercase tracking-wider">
+                    Want to calculate your exact DSCR ratio?
+                  </div>
+                  <p className="text-xs text-ink-2">
+                    Use our interactive cash-flow estimator and view full
+                    qualification requirements.
+                  </p>
+                </div>
+                <Link
+                  href="/loan-programs/dscr-loans"
+                  onClick={closeModal}
+                  className="btn-shine bg-brand-orange text-white px-5 py-2.5 rounded-full text-xs font-semibold flex items-center gap-1.5 shrink-0 hover:bg-orange-600 transition-colors"
+                >
+                  Visit Full Program Page <ArrowRight size={14} />
+                </Link>
+              </div>
+
               {/* Disclaimer */}
               <div className="p-3 bg-line/20 rounded-xl border border-line mb-4">
                 <h4 className="font-bold text-ink text-xs mb-1">
@@ -243,7 +277,7 @@ export default function RealEstateInvestmentSection() {
         {/* 2. Fix & Flip Loans */}
         <div
           id="fix-flip"
-          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col justify-between h-[400px] transition-colors duration-300 hover:bg-cream/40"
+          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col justify-between h-[420px] transition-colors duration-300 hover:bg-cream/40"
         >
           <div>
             <div className="flex items-center justify-between mb-6">
@@ -390,7 +424,7 @@ export default function RealEstateInvestmentSection() {
         {/* 3. Ground-Up Construction Loans */}
         <div
           id="ground-up"
-          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col justify-between h-[400px] transition-colors duration-300 hover:bg-cream/40"
+          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col justify-between h-[420px] transition-colors duration-300 hover:bg-cream/40"
         >
           <div>
             <div className="flex items-center justify-between mb-6">
@@ -541,7 +575,7 @@ export default function RealEstateInvestmentSection() {
         {/* 4. Bridge Loans (Commented out in original prompt, formatted identically) */}
         {/* <div
           id="bridge-loans"
-          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col justify-between h-[400px] transition-colors duration-300 hover:bg-cream/40"
+          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col justify-between h-[420px] transition-colors duration-300 hover:bg-cream/40"
         >
           <div>
             <div className="flex items-center justify-between mb-6">
