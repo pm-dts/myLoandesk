@@ -149,7 +149,7 @@ export default function TwoOneBuydownPage() {
               How It Works — Example
             </div>
             <p className="text-xs text-ink-2 mb-4">
-              On a $500,000 loan at a 7% note rate:
+              On a $500,000 loan at a 6% note rate:
             </p>
 
             <div className="overflow-hidden border border-line rounded-xl bg-primary-bg mb-4">
@@ -158,24 +158,26 @@ export default function TwoOneBuydownPage() {
                   <tr>
                     <th className="p-2.5 font-semibold">Year</th>
                     <th className="p-2.5 font-semibold">Effective Rate</th>
-                    <th className="p-2.5 font-semibold">Approx. Monthly P&I</th>
+                    <th className="p-2.5 font-semibold">
+                      Approx. Monthly P&amp;I
+                    </th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-line/60 text-ink">
                   <tr>
                     <td className="p-2.5 font-semibold">Year 1</td>
-                    <td className="p-2.5 text-moss-deep font-medium">5%</td>
-                    <td className="p-2.5 font-medium">~$2,684</td>
+                    <td className="p-2.5 text-moss-deep font-medium">4.00%</td>
+                    <td className="p-2.5 font-medium">~$2,387</td>
                   </tr>
                   <tr>
                     <td className="p-2.5 font-semibold">Year 2</td>
-                    <td className="p-2.5 text-moss-deep font-medium">6%</td>
-                    <td className="p-2.5 font-medium">~$2,998</td>
+                    <td className="p-2.5 text-moss-deep font-medium">5.00%</td>
+                    <td className="p-2.5 font-medium">~$2,684</td>
                   </tr>
                   <tr>
                     <td className="p-2.5 font-semibold">Year 3+</td>
-                    <td className="p-2.5 text-ink-2">7% (note rate)</td>
-                    <td className="p-2.5 font-medium">~$3,327</td>
+                    <td className="p-2.5 text-ink-2">6.00% (note rate)</td>
+                    <td className="p-2.5 font-medium">~$2,998</td>
                   </tr>
                 </tbody>
               </table>
