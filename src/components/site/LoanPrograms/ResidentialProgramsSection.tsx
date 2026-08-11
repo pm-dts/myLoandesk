@@ -1458,7 +1458,7 @@ export default function ResidentialProgramsSection() {
                   </div>
                   <p className="text-xs text-ink-2">
                     Explore complete ITIN requirements and use our interactive
-                    mortgage calculator[cite: 6].
+                    mortgage calculator.
                   </p>
                 </div>
                 <Link

@@ -425,7 +425,7 @@ export default function RealEstateInvestmentSection() {
                   </div>
                   <p className="text-xs text-ink-2">
                     Explore complete fix &amp; flip guidelines and use our
-                    interactive deal estimator[cite: 5].
+                    interactive deal estimator.
                   </p>
                 </div>
                 <Link
@@ -445,9 +445,9 @@ export default function RealEstateInvestmentSection() {
                 <p className="text-[10px] text-ink-2">
                   Program guidelines, loan amounts, loan-to-value limits,
                   After-Repair Value (ARV) requirements, renovation funding, and
-                  borrower qualifications vary by lender[cite: 5]. Not all
-                  applicants or properties will qualify[cite: 5]. Terms and
-                  availability are subject to change without notice[cite: 5].
+                  borrower qualifications vary by lender. Not all applicants or
+                  properties will qualify. Terms and availability are subject to
+                  change without notice.
                 </p>
               </div>
 
@@ -609,7 +609,7 @@ export default function RealEstateInvestmentSection() {
                   </div>
                   <p className="text-xs text-ink-2">
                     Explore complete construction loan guidelines and use our
-                    interactive budget estimator[cite: 9].
+                    interactive budget estimator.
                   </p>
                 </div>
                 <Link
@@ -630,10 +630,10 @@ export default function RealEstateInvestmentSection() {
                   Program guidelines, land eligibility, borrower qualifications,
                   loan amounts, draw schedules, interest reserves, loan-to-value
                   limits, and documentation requirements vary by lender[cite:
-                  9]. Not all applicants or construction projects will
-                  qualify[cite: 9]. Construction-to-permanent financing is
-                  available through select programs[cite: 9]. Terms and
-                  availability are subject to change without notice[cite: 9].
+                  9]. Not all applicants or construction projects will qualify.
+                  Construction-to-permanent financing is available through
+                  select programs. Terms and availability are subject to change
+                  without notice.
                 </p>
               </div>
 
