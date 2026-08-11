@@ -39,7 +39,7 @@ const loanLinks = [
   { name: "HELOC / Equity Lines", href: "/loan-programs#heloc" },
   { name: "DSCR Investment Property Loans", href: "/loan-programs#DSCR" },
   { name: "Fix & Flip Loans", href: "/loan-programs#fix-flip" },
-  { name: "Ground-Up Construction Loans", href: "/loan-programs#ground-up" },
+  { name: "Construction Loans", href: "/loan-programs#ground-up" },
   // { name: "Bridge Loans", href: "/loan-programs#bridge-loans" },
   { name: "Reverse Mortgage", href: "/loan-programs#reverse-mortgage" },
   {
@@ -54,7 +54,7 @@ const loanLinks = [
   { name: "SBA Business Loans", href: "/loan-programs#sba-business" },
   { name: "Property Financing in Portugal", href: "/loan-programs#portugal" },
   { name: "Dream Home Builder (EEP)", href: "/loan-programs#eep" },
-  { name: "Doctor Loan Program", href: "/loan-programs#doctor" },
+  { name: "Medical Professional Loans", href: "/loan-programs#doctor" },
 ];
 
 export const Header: React.FC = () => {
@@ -220,10 +220,11 @@ export const Header: React.FC = () => {
             ></div>
 
             <div
-              className={`absolute left-0 top-[calc(100%+8px)] w-[560px] bg-primary-bg border border-line rounded-2xl shadow-xl p-5 grid grid-cols-2 gap-x-4 gap-y-1.5 transition-all duration-200 origin-top z-[60] ${isDropdownOpen
-                ? "opacity-100 scale-100 pointer-events-auto"
-                : "opacity-0 scale-95 pointer-events-none"
-                }`}
+              className={`absolute left-0 top-[calc(100%+8px)] w-[560px] bg-primary-bg border border-line rounded-2xl shadow-xl p-5 grid grid-cols-2 gap-x-4 gap-y-1.5 transition-all duration-200 origin-top z-[60] ${
+                isDropdownOpen
+                  ? "opacity-100 scale-100 pointer-events-auto"
+                  : "opacity-0 scale-95 pointer-events-none"
+              }`}
             >
               {loanLinks.map((link) => (
                 <Link
@@ -243,7 +244,9 @@ export const Header: React.FC = () => {
 
           <Link
             href="/secure-document-upload"
-            onClick={() => trackNavigation("Secure Doc Upload", "/secure-document-upload")}
+            onClick={() =>
+              trackNavigation("Secure Doc Upload", "/secure-document-upload")
+            }
             className="ulink focus-ring text-[14px] font-semibold"
           >
             Secure Doc Upload
@@ -366,10 +369,7 @@ export const Header: React.FC = () => {
           </button>
 
           {/* Centered Bigger Logo */}
-          <Link
-            href="/"
-            className="shrink-0 flex items-center justify-center "
-          >
+          <Link href="/" className="shrink-0 flex items-center justify-center ">
             <Image
               src={brandLogo}
               alt="My Loan Desk Logo"
@@ -418,7 +418,10 @@ export const Header: React.FC = () => {
               href="/secure-document-upload"
               className="p-3 rounded-xl hover:bg-cream/30 text-sm"
               onClick={() => {
-                trackNavigation("Mobile Secure Doc Upload", "/secure-document-upload");
+                trackNavigation(
+                  "Mobile Secure Doc Upload",
+                  "/secure-document-upload",
+                );
                 toggleMobileMenu();
               }}
             >
@@ -503,7 +506,10 @@ export const Header: React.FC = () => {
                       href={link.href}
                       className="text-xs text-ink-2 hover:text-brand-orange py-2 px-2 rounded-md hover:bg-cream/40 transition-all"
                       onClick={() => {
-                        trackNavigation(`Mobile Loan Program - ${link.name}`, link.href);
+                        trackNavigation(
+                          `Mobile Loan Program - ${link.name}`,
+                          link.href,
+                        );
                         toggleMobileMenu();
                       }}
                     >
@@ -514,7 +520,10 @@ export const Header: React.FC = () => {
                     href="/loan-programs"
                     className="text-xs text-brand-orange font-semibold p-2 border-t border-line/40 mt-1 flex items-center gap-1"
                     onClick={() => {
-                      trackNavigation("Mobile View All Program Classifications", "/loan-programs");
+                      trackNavigation(
+                        "Mobile View All Program Classifications",
+                        "/loan-programs",
+                      );
                       toggleMobileMenu();
                     }}
                   >

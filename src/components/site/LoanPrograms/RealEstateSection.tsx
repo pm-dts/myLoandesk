@@ -476,7 +476,7 @@ export default function RealEstateInvestmentSection() {
                 fraunces.className,
               )}
             >
-              Ground-Up Construction Loans
+              Construction Loans
             </h3>
             <h4 className="font-medium text-ink text-sm mb-2 line-clamp-2">
               Finance Your Dream Home or Next Development Project
