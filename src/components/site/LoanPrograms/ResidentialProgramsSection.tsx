@@ -405,7 +405,7 @@ export default function ResidentialProgramsSection() {
         {/* 4. 2/1 Buydown */}
         <div
           id="buydown-2-1"
-          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col h-[380px] transition-colors duration-300 hover:bg-cream/40"
+          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col h-[435px] transition-colors duration-300 hover:bg-cream/40"
         >
           <div>
             <div className="flex items-center justify-between mb-6">
@@ -632,7 +632,7 @@ export default function ResidentialProgramsSection() {
         {/* 5. Bank Statement Loans */}
         <div
           id="bank-statement"
-          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col h-[380px] transition-colors duration-300 hover:bg-cream/40"
+          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col h-[435px] transition-colors duration-300 hover:bg-cream/40"
         >
           <div>
             <div className="flex items-center justify-between mb-6">
@@ -662,15 +662,28 @@ export default function ResidentialProgramsSection() {
             </p>
           </div>
 
-          {/* Card Action Buttons with Direct Link to Dedicated Page */}
+          {/* Card Action Buttons with Link to Dedicated Page & Video Modal */}
           <div className="mt-auto pt-4 flex flex-col gap-2">
             <button
+              onClick={() =>
+                setActiveVideo({
+                  src: "https://myloandesk-assets.s3.eu-north-1.amazonaws.com/Bank+Statment_1080p_caption.mp4",
+                  title: "Bank Statement Loans",
+                })
+              }
+              className="flex-1 py-3 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5 transition-all"
+            >
+              <PlayCircle size={14} /> See How It Works
+            </button>
+
+            <button
               onClick={() => setActiveModal("bank-statement")}
-              className="flex-1 py-3 bg-cream hover:bg-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
+              className="flex-1 py-3 bg-cream hover:bg-moss-deep hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
             >
               Read More <ArrowRight size={14} />
             </button>
 
+            {/* Direct Page Link in Card */}
             <Link
               href="/loan-programs/bank-statement-loans"
               className="flex-1 py-3 bg-primary-bg hover:bg-cream border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
@@ -813,7 +826,7 @@ export default function ResidentialProgramsSection() {
         {/* 6. Hybrid Loans */}
         <div
           id="hybrid"
-          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col h-[380px] transition-colors duration-300 hover:bg-cream/40"
+          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col h-[435px] transition-colors duration-300 hover:bg-cream/40"
         >
           <div>
             <div className="flex items-center justify-between mb-6">
