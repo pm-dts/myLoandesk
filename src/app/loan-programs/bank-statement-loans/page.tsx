@@ -12,6 +12,7 @@ import {
   FileCheck,
   TrendingUp,
   ShieldCheck,
+  PlayCircle,
 } from "lucide-react";
 
 import BankStatementCalculator from "@/components/site/LoanPrograms/BankStatementLoans/BankStatementCalculator";
@@ -33,6 +34,9 @@ export const metadata: Metadata = {
     type: "website",
   },
 };
+
+const VIDEO_URL =
+  "https://myloandesk-assets.s3.eu-north-1.amazonaws.com/Bank+Statment_1080p_caption.mp4";
 
 export default function BankStatementLoansPage() {
   return (
@@ -155,6 +159,44 @@ export default function BankStatementLoansPage() {
                 </span>
               </li>
             </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* --- SEE HOW BANK STATEMENT LOANS WORK (EMBEDDED VIDEO) --- */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 mb-16 sm:mb-24">
+        <div className="bg-cream/30 border border-line rounded-[32px] p-6 sm:p-10 lg:p-12">
+          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
+            <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-orange uppercase tracking-wider mb-2">
+              <PlayCircle size={16} /> Video Breakdown
+            </div>
+            <h2
+              className={cn(
+                "text-3xl sm:text-4xl font-light text-ink mb-3",
+                fraunces.className,
+              )}
+            >
+              See How Bank Statement Loans Work
+            </h2>
+            <p className="text-sm text-ink-2 leading-relaxed">
+              Discover how self-employed borrowers and business owners can
+              qualify for a mortgage using bank deposits instead of tax returns.
+            </p>
+          </div>
+
+          {/* Embedded HTML5 Video Container */}
+          <div className="relative max-w-4xl mx-auto">
+            <div className="absolute inset-0 bg-[#E8E4D8] rounded-[24px] sm:rounded-[32px] transform -rotate-1 -translate-x-1.5 translate-y-1.5 sm:-translate-x-2 sm:translate-y-2 -z-10" />
+            <div className="relative z-10 bg-black rounded-[24px] sm:rounded-[32px] overflow-hidden shadow-2xl border border-line aspect-video">
+              <video
+                src={VIDEO_URL}
+                controls
+                preload="metadata"
+                className="w-full h-full object-cover"
+              >
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </div>
         </div>
       </section>
