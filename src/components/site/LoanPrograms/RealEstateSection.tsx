@@ -629,8 +629,8 @@ export default function RealEstateInvestmentSection() {
                 <p className="text-[10px] text-ink-2">
                   Program guidelines, land eligibility, borrower qualifications,
                   loan amounts, draw schedules, interest reserves, loan-to-value
-                  limits, and documentation requirements vary by lender[cite:
-                  9]. Not all applicants or construction projects will qualify.
+                  limits, and documentation requirements vary by lender. Not all
+                  applicants or construction projects will qualify.
                   Construction-to-permanent financing is available through
                   select programs. Terms and availability are subject to change
                   without notice.
