@@ -1161,6 +1161,9 @@ export default function ResidentialProgramsSection() {
               <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-brand-orange/10 text-brand-orange shrink-0">
                 <Shield size={22} strokeWidth={1.8} />
               </div>
+              <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2 py-1 rounded">
+                International
+              </span>
             </div>
             <h3
               className={cn(
@@ -1176,15 +1179,26 @@ export default function ResidentialProgramsSection() {
               planning a future move.
             </p>
           </div>
-          <div className="mt-auto pt-4">
+
+          {/* Card Action Buttons with Direct Link to Dedicated Page */}
+          <div className="mt-auto pt-4 flex flex-col sm:flex-row gap-2">
             <button
               onClick={() => setActiveModal("international-buyer")}
-              className="w-full py-3 bg-cream hover:bg-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-2 transition-all"
+              className="flex-1 py-3 bg-cream hover:bg-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
             >
               Read More <ArrowRight size={14} />
             </button>
+
+            <Link
+              href="/loan-programs/foreign-national-loans"
+              className="flex-1 py-3 bg-primary-bg hover:bg-cream border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
+            >
+              Program Page{" "}
+              <ExternalLink size={14} className="text-brand-orange" />
+            </Link>
           </div>
 
+          {/* Loan Detail Modal with Direct Page Callout */}
           <LoanDetailModal
             isOpen={activeModal === "international-buyer"}
             onClose={closeModal}
@@ -1261,16 +1275,38 @@ export default function ResidentialProgramsSection() {
                   </li>
                 ))}
               </ul>
+
+              <p className="text-xs mb-4 text-ink-2">
+                <span className="font-bold text-ink">
+                  Ready to buy property in the United States?
+                </span>
+                <br />
+                Contact MyLoanDesk today to discuss your financing options and
+                get pre-qualified.
+              </p>
+
+              {/* Direct Program Page Link Box inside Modal */}
+              <div className="mb-6 p-4 bg-cream/40 border border-line rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-3">
+                <div>
+                  <div className="text-xs font-semibold text-ink uppercase tracking-wider">
+                    Want to calculate your U.S. property down payment?
+                  </div>
+                  <p className="text-xs text-ink-2">
+                    Explore complete foreign national guidelines and use our
+                    interactive loan calculator.
+                  </p>
+                </div>
+                <Link
+                  href="/loan-programs/foreign-national-loans"
+                  onClick={closeModal}
+                  className="btn-shine bg-brand-orange text-white px-5 py-2.5 rounded-full text-xs font-semibold flex items-center gap-1.5 shrink-0 hover:bg-orange-600 transition-colors"
+                >
+                  Visit Full Program Page <ArrowRight size={14} />
+                </Link>
+              </div>
+
+              <LoanProgramButton loan_type="International Buyers" />
             </div>
-            <p className="text-xs mb-4 text-ink-2">
-              <span className="font-bold text-ink">
-                Ready to buy property in the United States?
-              </span>
-              <br />
-              Contact MyLoanDesk today to discuss your financing options and get
-              pre-qualified.
-            </p>
-            <LoanProgramButton loan_type="International Buyers" />
           </LoanDetailModal>
         </div>
 
@@ -1284,6 +1320,9 @@ export default function ResidentialProgramsSection() {
               <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-brand-orange/10 text-brand-orange shrink-0">
                 <Shield size={22} strokeWidth={1.8} />
               </div>
+              <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2 py-1 rounded">
+                Non-SSN
+              </span>
             </div>
             <h3
               className={cn(
@@ -1299,15 +1338,26 @@ export default function ResidentialProgramsSection() {
               mortgage.
             </p>
           </div>
-          <div className="mt-auto pt-4">
+
+          {/* Card Action Buttons with Direct Link to Dedicated Page */}
+          <div className="mt-auto pt-4 flex flex-col sm:flex-row gap-2">
             <button
               onClick={() => setActiveModal("itin")}
-              className="w-full py-3 bg-cream hover:bg-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-2 transition-all"
+              className="flex-1 py-3 bg-cream hover:bg-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
             >
               Read More <ArrowRight size={14} />
             </button>
+
+            <Link
+              href="/loan-programs/itin-loans"
+              className="flex-1 py-3 bg-primary-bg hover:bg-cream border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
+            >
+              Program Page{" "}
+              <ExternalLink size={14} className="text-brand-orange" />
+            </Link>
           </div>
 
+          {/* Loan Detail Modal with Direct Page Callout */}
           <LoanDetailModal
             isOpen={activeModal === "itin"}
             onClose={closeModal}
@@ -1390,16 +1440,38 @@ export default function ResidentialProgramsSection() {
                   </li>
                 ))}
               </ul>
+
+              <p className="text-xs mb-4 text-ink-2">
+                <span className="font-bold text-ink">
+                  Ready to become a homeowner?
+                </span>
+                <br />
+                Contact MyLoanDesk today to explore your ITIN mortgage options
+                and find out if you qualify.
+              </p>
+
+              {/* Direct Program Page Link Box inside Modal */}
+              <div className="mb-6 p-4 bg-cream/40 border border-line rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-3">
+                <div>
+                  <div className="text-xs font-semibold text-ink uppercase tracking-wider">
+                    Want to estimate your ITIN down payment?
+                  </div>
+                  <p className="text-xs text-ink-2">
+                    Explore complete ITIN requirements and use our interactive
+                    mortgage calculator[cite: 6].
+                  </p>
+                </div>
+                <Link
+                  href="/loan-programs/itin-loans"
+                  onClick={closeModal}
+                  className="btn-shine bg-brand-orange text-white px-5 py-2.5 rounded-full text-xs font-semibold flex items-center gap-1.5 shrink-0 hover:bg-orange-600 transition-colors"
+                >
+                  Visit Full Program Page <ArrowRight size={14} />
+                </Link>
+              </div>
+
+              <LoanProgramButton loan_type="ITIN Home Loans" />
             </div>
-            <p className="text-xs mb-4 text-ink-2">
-              <span className="font-bold text-ink">
-                Ready to become a homeowner?
-              </span>
-              <br />
-              Contact MyLoanDesk today to explore your ITIN mortgage options and
-              find out if you qualify.
-            </p>
-            <LoanProgramButton loan_type="ITIN Home Loans" />
           </LoanDetailModal>
         </div>
 
@@ -1630,7 +1702,7 @@ export default function ResidentialProgramsSection() {
         {/* 13. Doctor Loan Program */}
         <div
           id="doctor"
-          className="scroll-mt-36 col-span-1 md:col-span-2 lg:col-span-1 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col justify-between h-[380px] transition-colors duration-300 hover:bg-cream/40"
+          className="scroll-mt-36 col-span-1 md:col-span-2 lg:col-span-1 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col justify-between h-[450px] transition-colors duration-300 hover:bg-cream/40"
         >
           <div>
             <div className="flex items-center justify-between mb-6">
@@ -1659,7 +1731,9 @@ export default function ResidentialProgramsSection() {
               of healthcare professionals...
             </p>
           </div>
-          <div className="mt-auto pt-4 flex flex-col sm:flex-row gap-2">
+
+          {/* Card Action Buttons with Link to Dedicated Page & Video Modal */}
+          <div className="mt-auto pt-4 flex flex-col gap-2">
             <button
               onClick={() =>
                 setActiveVideo({
@@ -1667,18 +1741,29 @@ export default function ResidentialProgramsSection() {
                   title: "Medical Professional Loan Program",
                 })
               }
-              className="flex-1 py-3 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-semibold flex items-center justify-center gap-2 transition-all"
+              className="flex-1 py-3 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5 transition-all"
             >
               <PlayCircle size={14} /> See how it works
             </button>
+
             <button
               onClick={() => setActiveModal("doctor")}
-              className="flex-1 py-3 bg-cream hover:bg-moss-deep hover:border-moss-deep hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-2 transition-all"
+              className="flex-1 py-3 bg-cream hover:bg-moss-deep hover:border-moss-deep hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
             >
               Read More <ArrowRight size={14} />
             </button>
+
+            {/* Direct Page Link in Card */}
+            <Link
+              href="/loan-programs/medical-professional-loans"
+              className="flex-1 py-3 bg-primary-bg hover:bg-cream border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
+            >
+              Program Page{" "}
+              <ExternalLink size={14} className="text-brand-orange" />
+            </Link>
           </div>
 
+          {/* Loan Detail Modal with Direct Page Callout */}
           <LoanDetailModal
             isOpen={activeModal === "doctor"}
             onClose={closeModal}
@@ -1757,6 +1842,26 @@ export default function ResidentialProgramsSection() {
                   find financing that fits your profession, financial profile,
                   and homeownership goals.
                 </p>
+              </div>
+
+              {/* Direct Program Page Link Box inside Modal */}
+              <div className="mb-6 p-4 bg-cream/40 border border-line rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-3">
+                <div>
+                  <div className="text-xs font-semibold text-ink uppercase tracking-wider">
+                    Want to calculate your student loan DTI impact?
+                  </div>
+                  <p className="text-xs text-ink-2">
+                    Explore complete doctor loan guidelines and use our
+                    specialized DTI calculator.
+                  </p>
+                </div>
+                <Link
+                  href="/loan-programs/medical-professional-loans"
+                  onClick={closeModal}
+                  className="btn-shine bg-brand-orange text-white px-5 py-2.5 rounded-full text-xs font-semibold flex items-center gap-1.5 shrink-0 hover:bg-orange-600 transition-colors"
+                >
+                  Visit Full Program Page <ArrowRight size={14} />
+                </Link>
               </div>
 
               {/* Program Disclaimer */}

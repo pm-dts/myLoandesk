@@ -284,6 +284,9 @@ export default function RealEstateInvestmentSection() {
               <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-brand-orange/10 text-brand-orange shrink-0">
                 <Shield size={22} strokeWidth={1.8} />
               </div>
+              <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2 py-1 rounded">
+                Investor
+              </span>
             </div>
             <h3
               className={cn(
@@ -291,26 +294,38 @@ export default function RealEstateInvestmentSection() {
                 fraunces.className,
               )}
             >
-              Fix & Flip Loans
+              Fix &amp; Flip Loans
             </h3>
             <h4 className="font-medium text-ink text-sm mb-2 line-clamp-2">
               Fast, Flexible Financing for Real Estate Investors
             </h4>
             <p className="text-sm text-ink-2 leading-relaxed line-clamp-3">
-              Whether you're renovating your first investment property or
-              managing multiple projects each year, a Fix & Flip Loan provides
-              the financing you need to purchase, renovate, and resell...
+              Whether you&apos;re renovating your first investment property or
+              managing multiple projects each year, a Fix &amp; Flip Loan
+              provides the financing you need to purchase, renovate, and
+              resell...
             </p>
           </div>
-          <div className="mt-auto pt-4">
+
+          {/* Card Action Buttons with Direct Link to Dedicated Page */}
+          <div className="mt-auto pt-4 flex flex-col gap-2">
             <button
               onClick={() => setActiveModal("fix-flip")}
-              className="w-full py-3 bg-cream hover:bg-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-2 transition-all"
+              className="flex-1 py-3 bg-cream hover:bg-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
             >
               Read More <ArrowRight size={14} />
             </button>
+
+            <Link
+              href="/loan-programs/fix-and-flip-loans"
+              className="flex-1 py-3 bg-primary-bg hover:bg-cream border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
+            >
+              Program Page{" "}
+              <ExternalLink size={14} className="text-brand-orange" />
+            </Link>
           </div>
 
+          {/* Loan Detail Modal with Direct Page Callout */}
           <LoanDetailModal
             isOpen={activeModal === "fix-flip"}
             onClose={closeModal}
@@ -322,20 +337,20 @@ export default function RealEstateInvestmentSection() {
               </h4>
 
               <p className="text-sm text-ink-2 leading-relaxed mb-2">
-                Whether you're renovating your first investment property or
-                managing multiple projects each year, a Fix & Flip Loan provides
-                the financing you need to purchase, renovate, and resell
-                residential properties with confidence.
+                Whether you&apos;re renovating your first investment property or
+                managing multiple projects each year, a Fix &amp; Flip Loan
+                provides the financing you need to purchase, renovate, and
+                resell residential properties with confidence.
               </p>
               <p className="text-sm text-ink-2 leading-relaxed mb-6">
                 These short-term loans are designed specifically for real estate
                 investors, offering fast approvals and financing for both the
-                property acquisition and eligible renovation costs-so you can
+                property acquisition and eligible renovation costs—so you can
                 focus on maximizing your return on investment.
               </p>
 
               <h4 className="font-medium text-ink mb-3">
-                Why Choose a Fix & Flip Loan?
+                Why Choose a Fix &amp; Flip Loan?
               </h4>
               <ul className="space-y-2 mb-6">
                 {[
@@ -359,10 +374,10 @@ export default function RealEstateInvestmentSection() {
               </ul>
 
               <h4 className="font-medium text-ink mb-3">
-                Who Is a Fix & Flip Loan For?
+                Who Is a Fix &amp; Flip Loan For?
               </h4>
               <p className="text-sm text-ink-2 leading-relaxed mb-2">
-                A Fix & Flip Loan may be an excellent choice if you are:
+                A Fix &amp; Flip Loan may be an excellent choice if you are:
               </p>
               <ul className="space-y-2 mb-6">
                 {[
@@ -388,9 +403,9 @@ export default function RealEstateInvestmentSection() {
               <p className="text-sm text-ink-2 leading-relaxed mb-6">
                 Successful real estate investing depends on speed and reliable
                 financing. At MyLoanDesk, we work with a network of experienced
-                investment property lenders to help you secure competitive Fix &
-                Flip financing with the flexibility to match your investment
-                strategy.
+                investment property lenders to help you secure competitive Fix
+                &amp; Flip financing with the flexibility to match your
+                investment strategy.
               </p>
 
               <p className="text-xs mb-4 text-ink-2">
@@ -398,9 +413,29 @@ export default function RealEstateInvestmentSection() {
                   Ready to fund your next project?
                 </span>
                 <br />
-                Contact MyLoanDesk today to explore your Fix & Flip loan options
-                and get pre-qualified.
+                Contact MyLoanDesk today to explore your Fix &amp; Flip loan
+                options and get pre-qualified.
               </p>
+
+              {/* Direct Program Page Link Box inside Modal */}
+              <div className="mb-6 p-4 bg-cream/40 border border-line rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-3">
+                <div>
+                  <div className="text-xs font-semibold text-ink uppercase tracking-wider">
+                    Want to calculate your deal margin &amp; ARV ratio?
+                  </div>
+                  <p className="text-xs text-ink-2">
+                    Explore complete fix &amp; flip guidelines and use our
+                    interactive deal estimator[cite: 5].
+                  </p>
+                </div>
+                <Link
+                  href="/loan-programs/fix-and-flip-loans"
+                  onClick={closeModal}
+                  className="btn-shine bg-brand-orange text-white px-5 py-2.5 rounded-full text-xs font-semibold flex items-center gap-1.5 shrink-0 hover:bg-orange-600 transition-colors"
+                >
+                  Visit Full Program Page <ArrowRight size={14} />
+                </Link>
+              </div>
 
               {/* Disclaimer */}
               <div className="p-3 bg-line/20 rounded-xl border border-line mb-4">
@@ -410,9 +445,9 @@ export default function RealEstateInvestmentSection() {
                 <p className="text-[10px] text-ink-2">
                   Program guidelines, loan amounts, loan-to-value limits,
                   After-Repair Value (ARV) requirements, renovation funding, and
-                  borrower qualifications vary by lender. Not all applicants or
-                  properties will qualify. Terms and availability are subject to
-                  change without notice.
+                  borrower qualifications vary by lender[cite: 5]. Not all
+                  applicants or properties will qualify[cite: 5]. Terms and
+                  availability are subject to change without notice[cite: 5].
                 </p>
               </div>
 
@@ -431,6 +466,9 @@ export default function RealEstateInvestmentSection() {
               <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-brand-orange/10 text-brand-orange shrink-0">
                 <Shield size={22} strokeWidth={1.8} />
               </div>
+              <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2 py-1 rounded">
+                Construction
+              </span>
             </div>
             <h3
               className={cn(
@@ -444,20 +482,31 @@ export default function RealEstateInvestmentSection() {
               Finance Your Dream Home or Next Development Project
             </h4>
             <p className="text-sm text-ink-2 leading-relaxed line-clamp-3">
-              Whether you're building a custom home, developing a residential
-              community, or constructing investment properties, MyLoanDesk
-              offers flexible Ground-Up Construction Loans...
+              Whether you&apos;re building a custom home, developing a
+              residential community, or constructing investment properties,
+              MyLoanDesk offers flexible Ground-Up Construction Loans...
             </p>
           </div>
-          <div className="mt-auto pt-4">
+
+          {/* Card Action Buttons with Direct Link to Dedicated Page */}
+          <div className="mt-auto pt-4 flex flex-col gap-2">
             <button
               onClick={() => setActiveModal("ground-up")}
-              className="w-full py-3 bg-cream hover:bg-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-2 transition-all"
+              className="flex-1 py-3 bg-cream hover:bg-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
             >
               Read More <ArrowRight size={14} />
             </button>
+
+            <Link
+              href="/loan-programs/construction-loans"
+              className="flex-1 py-3 bg-primary-bg hover:bg-cream border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
+            >
+              Program Page{" "}
+              <ExternalLink size={14} className="text-brand-orange" />
+            </Link>
           </div>
 
+          {/* Loan Detail Modal with Direct Page Callout */}
           <LoanDetailModal
             isOpen={activeModal === "ground-up"}
             onClose={closeModal}
@@ -469,15 +518,15 @@ export default function RealEstateInvestmentSection() {
               </h4>
 
               <p className="text-sm text-ink-2 leading-relaxed mb-2">
-                Whether you're building a custom home, developing a residential
-                community, or constructing investment properties, MyLoanDesk
-                offers flexible Ground-Up Construction Loans designed to help
-                bring your vision to life.
+                Whether you&apos;re building a custom home, developing a
+                residential community, or constructing investment properties,
+                MyLoanDesk offers flexible Ground-Up Construction Loans designed
+                to help bring your vision to life.
               </p>
               <p className="text-sm text-ink-2 leading-relaxed mb-6">
                 From purchasing the land to the final certificate of occupancy,
-                we'll help you secure financing tailored to your project's size,
-                scope, and timeline.
+                we&apos;ll help you secure financing tailored to your
+                project&apos;s size, scope, and timeline.
               </p>
 
               <h4 className="font-medium text-ink mb-3">
@@ -537,9 +586,9 @@ export default function RealEstateInvestmentSection() {
                 Construction financing requires experience and the right lending
                 partner. At MyLoanDesk, we work with a broad network of
                 construction lenders to help you secure financing that matches
-                your project's goals. From the initial planning stages through
-                final completion—and, when available, permanent financing—we're
-                here to guide you every step of the way.
+                your project&apos;s goals. From the initial planning stages
+                through final completion—and, when available, permanent
+                financing—we&apos;re here to guide you every step of the way.
               </p>
 
               <p className="text-xs mb-4 text-ink-2">
@@ -551,6 +600,27 @@ export default function RealEstateInvestmentSection() {
                 and explore the financing options available for your next build.
               </p>
 
+              {/* Direct Program Page Link Box inside Modal */}
+              <div className="mb-6 p-4 bg-cream/40 border border-line rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-3">
+                <div>
+                  <div className="text-xs font-semibold text-ink uppercase tracking-wider">
+                    Want to calculate your construction budget &amp; draw
+                    schedule?
+                  </div>
+                  <p className="text-xs text-ink-2">
+                    Explore complete construction loan guidelines and use our
+                    interactive budget estimator[cite: 9].
+                  </p>
+                </div>
+                <Link
+                  href="/loan-programs/construction-loans"
+                  onClick={closeModal}
+                  className="btn-shine bg-brand-orange text-white px-5 py-2.5 rounded-full text-xs font-semibold flex items-center gap-1.5 shrink-0 hover:bg-orange-600 transition-colors"
+                >
+                  Visit Full Program Page <ArrowRight size={14} />
+                </Link>
+              </div>
+
               {/* Disclaimer */}
               <div className="p-3 bg-line/20 rounded-xl border border-line mb-4">
                 <h4 className="font-bold text-ink text-xs mb-1">
@@ -559,11 +629,11 @@ export default function RealEstateInvestmentSection() {
                 <p className="text-[10px] text-ink-2">
                   Program guidelines, land eligibility, borrower qualifications,
                   loan amounts, draw schedules, interest reserves, loan-to-value
-                  limits, and documentation requirements vary by lender. Not all
-                  applicants or construction projects will qualify.
-                  Construction-to-permanent financing is available through
-                  select programs. Terms and availability are subject to change
-                  without notice.
+                  limits, and documentation requirements vary by lender[cite:
+                  9]. Not all applicants or construction projects will
+                  qualify[cite: 9]. Construction-to-permanent financing is
+                  available through select programs[cite: 9]. Terms and
+                  availability are subject to change without notice[cite: 9].
                 </p>
               </div>
 
