@@ -16,6 +16,7 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.myloandesk.com"),
   title: "MyLoanDesk - Your Trusted Mortgage Partner",
   description:
     "MyLoanDesk is your trusted partner for all your mortgage needs, providing expert guidance and seamless online services.",
