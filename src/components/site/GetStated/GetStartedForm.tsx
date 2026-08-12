@@ -44,13 +44,16 @@ export default function GetStartedForm() {
   // Track GA4: Questionnaire Started
   useEffect(() => {
     if (currentStep === 2 && !answers._startedTracked) {
-      sendGTMEvent({ event: "questionnaire_started", category: "engagement" });
+      sendGTMEvent({
+        event: "get_started_questionnaire_started",
+        category: "engagement",
+      });
       setAnswers((prev) => ({ ...prev, _startedTracked: "true" }));
     }
     // Track GA4: Questionnaire Completed (Reached final step)
     if (currentStep === TOTAL_STEPS && !answers._completedTracked) {
       sendGTMEvent({
-        event: "questionnaire_completed",
+        event: "get_started_questionnaire_completed",
         category: "engagement",
       });
       setAnswers((prev) => ({ ...prev, _completedTracked: "true" }));
@@ -101,7 +104,7 @@ export default function GetStartedForm() {
       });
 
       sendGTMEvent({
-        event: "lead_submitted",
+        event: "get_started_survey_lead_submitted",
         category: "conversion",
         label: "Get Started Form",
       });
