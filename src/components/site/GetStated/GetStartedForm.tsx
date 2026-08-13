@@ -406,36 +406,70 @@ export default function GetStartedForm() {
                     fraunces.className,
                   )}
                 >
-                  Approximately how much financing do you need?
+                  What is your estimated down payment?
                 </h2>
                 <p className="text-center text-sm text-ink-2 mb-8">
-                  Enter your best estimate.
+                  Use the slider to select your target down payment percentage.
                 </p>
+
                 <div className="max-w-[500px] mx-auto mb-6">
-                  <label className="block text-xs font-semibold uppercase tracking-wider text-ink-2 mb-2">
-                    Loan amount
-                  </label>
-                  <div className="relative">
-                    <span className="absolute left-5 top-1/2 -translate-y-1/2 text-ink-2 font-semibold text-lg">
-                      $
-                    </span>
+                  <div className="bg-primary-bg border border-line rounded-[24px] p-6 sm:p-8 shadow-sm mb-6">
+                    <div className="flex justify-between items-end mb-8">
+                      <div>
+                        <label className="block text-xs font-semibold uppercase tracking-wider text-ink-2 mb-1">
+                          Down Payment
+                        </label>
+                        <div className="text-4xl font-light text-brand-orange">
+                          {answers.downPaymentPercent || "20"}%
+                        </div>
+                      </div>
+
+                      {/* Show calculated dollar amount if property value is a valid number */}
+                      {answers.propertyValue &&
+                        !isNaN(Number(answers.propertyValue)) && (
+                          <div className="text-right">
+                            <label className="block text-xs font-semibold uppercase tracking-wider text-ink-2 mb-1">
+                              Est. Amount
+                            </label>
+                            <div className="text-xl font-medium text-ink">
+                              $
+                              {(
+                                (Number(answers.propertyValue) *
+                                  (Number(answers.downPaymentPercent) || 20)) /
+                                100
+                              ).toLocaleString()}
+                            </div>
+                          </div>
+                        )}
+                    </div>
+
                     <input
-                      type="number"
-                      name="loanAmount"
-                      value={answers.loanAmount || ""}
+                      type="range"
+                      name="downPaymentPercent"
+                      min="0"
+                      max="100"
+                      step="1"
+                      value={answers.downPaymentPercent || "20"}
                       onChange={handleInputChange}
-                      placeholder="400000"
-                      className="w-full h-[64px] pl-12 pr-6 rounded-2xl border border-line bg-primary-bg focus:border-brand-orange focus:ring-1 focus:ring-brand-orange text-lg font-medium outline-none transition-all shadow-sm"
+                      className="w-full h-2 bg-line rounded-lg appearance-none cursor-pointer accent-brand-orange"
                     />
+                    <div className="flex justify-between text-xs text-ink-2 mt-3 font-medium">
+                      <span>0%</span>
+                      <span className="pl-3">50%</span>
+                      <span>100%</span>
+                    </div>
                   </div>
+
+                  <button
+                    type="button"
+                    onClick={() =>
+                      handleSelect("downPaymentPercent", "Not Sure")
+                    }
+                    className="block mx-auto text-brand-orange font-semibold text-sm hover:underline"
+                  >
+                    I'm not sure
+                  </button>
                 </div>
-                <button
-                  type="button"
-                  onClick={() => handleSelect("loanAmount", "Not Sure")}
-                  className="block mx-auto text-brand-orange font-semibold text-sm hover:underline"
-                >
-                  I'm not sure
-                </button>
               </div>
             )}
 
@@ -504,9 +538,9 @@ export default function GetStartedForm() {
                 </p>
                 <div className="grid gap-3 max-w-2xl mx-auto">
                   {[
-                    "Excellent — 740+",
-                    "Good — 700–739",
-                    "Fair — 660–699",
+                    "740+",
+                    "700–739",
+                    "660–699",
                     "Below 660",
                     "I'm Not Sure",
                   ].map((label) => (

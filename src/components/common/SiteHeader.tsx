@@ -284,7 +284,7 @@ export const Header: React.FC = () => {
             onClick={() => trackNavigation("Calculator", "/#calculator")}
             className="ulink focus-ring text-[14px] font-semibold"
           >
-            Calculator
+            Mortgage Calculator
           </Link>
           <Link
             href="/#faq"
@@ -548,7 +548,7 @@ export const Header: React.FC = () => {
                   toggleMobileMenu();
                 }}
               >
-                Calculator
+                Mortgage Calculator
               </Link>
               <Link
                 href="/#faq"
