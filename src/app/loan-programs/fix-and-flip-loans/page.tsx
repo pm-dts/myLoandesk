@@ -1,477 +1,531 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Fraunces } from "next/font/google";
-import { cn } from "@/lib/utils";
-import {
-  Hammer,
-  CheckCircle2,
-  HelpCircle,
-  ArrowRight,
-  TrendingUp,
-  FileText,
-  DollarSign,
-  Briefcase,
-  ShieldCheck,
-  RefreshCw,
-  Zap,
-  Home,
-} from "lucide-react";
-
-import FixAndFlipCalculator from "@/components/site/LoanPrograms/FixFlipLoans/FixFlipCalculator";
-
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
-});
+import FixFlipCalculator from "@/components/site/LoanPrograms/FixFlipLoans/FixFlipCalculator";
 
 export const metadata: Metadata = {
-  title: "Fix & Flip Loans - Short-Term Investor Financing | MyLoanDesk",
+  title: "Fix and Flip Loans for Real Estate Investors | MyLoanDesk",
   description:
-    "Short-term financing for real estate investors purchasing properties that need renovation. Finance acquisition, rehab, and eligible rehabilitation projects.",
-  openGraph: {
-    title: "Fix & Flip Loans for Real Estate Investors | MyLoanDesk",
-    description:
-      "Fast, flexible short-term financing for acquisition and renovation projects. Explore your investor exit strategies with MyLoanDesk.",
-    type: "website",
+    "Fix and flip loans with fast closings, rehab budget financing, and interest-only payments. Use our free deal calculator to check your numbers against the 70% rule before you apply.",
+  alternates: {
+    canonical: "https://www.myloandesk.com/loan-programs/fix-and-flip-loans/",
   },
+  openGraph: {
+    title: "Fix and Flip Loans for Real Estate Investors | MyLoanDesk",
+    description:
+      "Fast, flexible financing for house flippers — purchase, rehab, and resell without tying up your own cash. Run your numbers with our free fix and flip deal calculator.",
+    type: "website",
+    url: "https://www.myloandesk.com/loan-programs/fix-and-flip-loans/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What credit score do I need for a fix and flip loan?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Most fix and flip lenders look for a credit score of 620 or higher, though some programs accept lower scores if the deal itself — the purchase price, rehab budget, and after-repair value — is strong. Because these loans are asset-based, your credit score typically matters less than it would for a conventional mortgage.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How much of the rehab budget can be financed?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Many fix and flip programs finance 100% of the rehab budget in addition to a portion of the purchase price, released in draws as work is completed and inspected. The exact amount depends on the deal's loan-to-cost and loan-to-ARV ratios.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is the 70% rule in house flipping?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The 70% rule is a rule of thumb many investors use to evaluate a flip: your purchase price plus rehab costs should generally not exceed 70% of the property's after-repair value (ARV). Deals within that range tend to leave enough margin for financing costs, holding costs, selling costs, and profit.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How fast can a fix and flip loan close?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Because fix and flip loans are underwritten primarily around the property and the deal rather than extensive personal income documentation, many close in as little as 7 to 14 days — significantly faster than a conventional 30 to 45 day mortgage timeline.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do I need real estate investing experience to qualify?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No — many fix and flip lenders work with first-time flippers, though your experience level can affect your available leverage, rate, and terms. Investors with a track record of completed flips often qualify for higher loan-to-cost ratios.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are fix and flip loan payments interest-only?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Most fix and flip loans are structured as interest-only for the duration of the loan term, which keeps monthly holding costs lower while you complete the renovation and prepare the property for resale.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is there a penalty for paying off a fix and flip loan early?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Most fix and flip loans carry no prepayment penalty, since the entire model is built around a short holding period — lenders expect and plan for an early payoff once the property sells.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can I use a fix and flip loan for a rental property instead?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Fix and flip loans are designed for short-term rehab-and-resell projects. If your plan is to renovate and hold the property as a rental, a DSCR loan or a fix-to-rent refinance is typically a better long-term fit once the renovation is complete.",
+      },
+    },
+  ],
 };
 
 export default function FixAndFlipLoansPage() {
   return (
-    <main className="min-h-screen bg-primary-bg pt-6 pb-12 sm:pt-8 sm:pb-16 lg:pt-10 lg:pb-24 text-ink">
-      {/* --- HERO SECTION --- */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 mb-16 sm:mb-24">
-        <div className="relative bg-moss-deep text-cream rounded-[32px] overflow-hidden p-8 sm:p-12 lg:p-16">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-[#D4A574]/15 rounded-full blur-3xl -translate-y-1/3 translate-x-1/3 pointer-events-none" />
-          <div className="absolute bottom-0 left-0 w-80 h-80 bg-brand-orange/15 rounded-full blur-3xl translate-y-1/3 -translate-x-1/3 pointer-events-none" />
+    <main
+      className="min-h-screen font-sans"
+      style={{
+        backgroundColor: "#EDEAE2",
+        color: "#55524C",
+        WebkitFontSmoothing: "antialiased",
+      }}
+    >
+      {/* JSON-LD Structured Data for FAQs */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
 
-          <div className="relative max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cream/10 border border-cream/20 text-xs font-semibold uppercase tracking-wider text-[#D4A574] mb-6">
-              <Hammer size={14} />
-              Real Estate Investor Financing
-            </div>
+      <section className="block">
+        <div className="max-w-[900px] mx-auto bg-[#FBF8F2] px-6 sm:px-14 py-[44px] pb-[60px]">
+          <Link
+            href="/loan-programs"
+            className="text-[13px] text-[#55524C] font-semibold inline-flex items-center gap-1.5 mb-[18px] hover:text-[#B85A1C] transition-colors"
+          >
+            &larr; Back to Loan Programs
+          </Link>
 
-            <h1
-              className={cn(
-                "text-4xl sm:text-5xl lg:text-6xl leading-[1.1] tracking-tight font-light text-primary-bg mb-6",
-                fraunces.className,
-              )}
-            >
-              Fix &amp; Flip Loans{" "}
-              <span className="block text-[#D4A574] font-serif italic text-3xl sm:text-4xl lg:text-5xl mt-1">
-                Short-Term Financing for Real Estate Investors
-              </span>
-            </h1>
+          <h1 className="font-serif font-bold text-3xl sm:text-[38px] text-[#1C1C1C] mb-[18px] leading-[1.15]">
+            Fix and Flip Loans
+          </h1>
 
-            <p className="text-base sm:text-lg text-primary-bg/80 leading-relaxed mb-6 max-w-2xl">
-              When an investment opportunity appears, speed and financing
-              flexibility can matter. Fix &amp; flip loans are designed for real
-              estate investors purchasing properties that need renovation before
-              resale or refinancing.
-            </p>
+          <hr className="border-0 border-t border-[#E6E0D3] mb-[26px]" />
 
-            <p className="text-xs sm:text-sm text-primary-bg/70 leading-relaxed mb-8 max-w-2xl">
-              MyLoanDesk provides access to investor-focused financing for
-              acquisition, renovation, and eligible rehabilitation projects.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/get-quote"
-                className="btn-shine bg-brand-orange text-primary-bg px-8 py-4 rounded-full font-semibold text-sm sm:text-base hover:bg-orange-600 transition-colors shadow-sm flex items-center justify-center gap-2 text-center"
-              >
-                Explore Fix &amp; Flip Financing
-                <ArrowRight size={18} />
-              </Link>
-              <a
-                href="#calculator"
-                className="bg-cream/10 border border-cream/20 text-primary-bg px-8 py-4 rounded-full font-semibold text-sm sm:text-base hover:bg-cream/20 transition-colors flex items-center justify-center gap-2 text-center"
-              >
-                Calculate Deal Margin
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* --- WHAT IS A FIX & FLIP LOAN? --- */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 mb-16 sm:mb-24">
-        <div className="grid lg:grid-cols-12 gap-10 items-center">
-          <div className="lg:col-span-7">
-            <div className="text-[10px] uppercase tracking-[0.25em] text-brand-orange font-semibold mb-3">
-              01 — Overview
-            </div>
-            <h2
-              className={cn(
-                "text-3xl sm:text-4xl lg:text-5xl tracking-tight text-ink font-light leading-tight mb-6",
-                fraunces.className,
-              )}
-            >
-              What Is a Fix &amp; Flip Loan?
-            </h2>
-            <p className="text-sm sm:text-base text-ink-2 leading-relaxed mb-6">
-              A fix &amp; flip loan is generally short-term financing used to
-              purchase and renovate an investment property.
-            </p>
-
-            <p className="text-sm sm:text-base text-ink-2 leading-relaxed">
-              Unlike a traditional owner-occupied mortgage, the lender may place
-              significant emphasis on the property, project, investor
-              experience, renovation budget, and expected value after
-              improvements are completed.
-            </p>
-          </div>
-
-          <div className="lg:col-span-5 bg-cream/40 border border-line p-6 sm:p-8 rounded-3xl">
-            <div className="text-xs font-semibold uppercase tracking-wider text-ink-2 mb-4">
-              What Can a Fix &amp; Flip Loan Finance?
-            </div>
-            <p className="text-xs text-ink-2 mb-4">
-              Depending on the lender and project, financing may be available
-              for:
-            </p>
-            <ul className="space-y-3 text-xs sm:text-sm text-ink">
-              {[
-                "Property acquisition",
-                "Renovation costs",
-                "Rehabilitation projects",
-                "Single-family investment properties",
-                "Certain multifamily properties",
-                "Experienced and qualifying newer investors",
-                "Properties intended for resale",
-                "Properties intended to be refinanced and held as rentals",
-              ].map((item, idx) => (
-                <li key={idx} className="flex items-start gap-2.5">
-                  <CheckCircle2
-                    size={16}
-                    className="text-moss-deep shrink-0 mt-0.5"
-                  />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* --- HOW FIX & FLIP FINANCING WORKS --- */}
-      <section className="py-16 sm:py-24 border-t border-b border-line bg-cream/20 mb-16 sm:mb-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <div className="text-[10px] uppercase tracking-[0.25em] text-brand-orange font-semibold mb-3">
-              02 — Process
-            </div>
-            <h2
-              className={cn(
-                "text-3xl sm:text-4xl font-light text-ink",
-                fraunces.className,
-              )}
-            >
-              How Fix &amp; Flip Financing Works
-            </h2>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
-            {[
-              {
-                step: "1",
-                title: "Find the Property",
-                desc: "Identify an investment opportunity and estimate acquisition and renovation costs.",
-              },
-              {
-                step: "2",
-                title: "Determine Renovation Scope",
-                desc: "Prepare a realistic scope of work and construction budget.",
-              },
-              {
-                step: "3",
-                title: "Evaluate the ARV",
-                desc: "The property's projected value after renovation — After-Repair Value (ARV) — is a key part of analysis.",
-              },
-              {
-                step: "4",
-                title: "Close and Renovate",
-                desc: "After approval and closing, renovation funds are released according to the lender's draw process.",
-              },
-              {
-                step: "5",
-                title: "Execute Exit Strategy",
-                desc: "Once complete, investors typically sell the property or refinance into longer-term rental financing.",
-              },
-            ].map((item, idx) => (
-              <div
-                key={idx}
-                className="bg-primary-bg border border-line rounded-2xl p-6 flex flex-col justify-between shadow-sm"
-              >
-                <div>
-                  <div className="w-10 h-10 rounded-xl bg-moss-deep/10 text-moss-deep flex items-center justify-center font-bold text-sm mb-4">
-                    0{item.step}
-                  </div>
-                  <h3 className="font-semibold text-sm text-ink mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-xs text-ink-2 leading-relaxed">
-                    {item.desc}
-                  </p>
+          <div className="grid grid-cols-1 md:grid-cols-[1.05fr_0.95fr] gap-10 items-start mb-[6px]">
+            <div>
+              <div className="font-sans font-bold text-xs sm:text-[14px] tracking-[0.02em] text-[#B85A1C] uppercase mb-[16px]">
+                Fast, flexible financing for real estate investors.
+              </div>
+              <p className="text-[15.5px] leading-[1.7] text-[#55524C] mb-[24px] max-w-[680px]">
+                Whether you&apos;re renovating your first investment property or
+                managing multiple projects each year, a Fix and Flip Loan from
+                MyLoanDesk provides the financing you need to purchase, rehab,
+                and resell quickly — without tying up your own cash for months
+                at a time. Loans are underwritten around the property and the
+                deal, not a lengthy personal income file, so approvals and
+                closings move at investor speed.
+              </p>
+              <div className="flex flex-col gap-2.5 mt-[18px]">
+                <div className="text-[13.5px] text-[#55524C] flex items-center gap-2">
+                  <svg
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    className="shrink-0"
+                  >
+                    <path
+                      d="M20 6L9 17l-5-5"
+                      stroke="#D9722C"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                  Close in as little as 7–14 days
+                </div>
+                <div className="text-[13.5px] text-[#55524C] flex items-center gap-2">
+                  <svg
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    className="shrink-0"
+                  >
+                    <path
+                      d="M20 6L9 17l-5-5"
+                      stroke="#D9722C"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                  Up to 100% of rehab costs financed
+                </div>
+                <div className="text-[13.5px] text-[#55524C] flex items-center gap-2">
+                  <svg
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    className="shrink-0"
+                  >
+                    <path
+                      d="M20 6L9 17l-5-5"
+                      stroke="#D9722C"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                  No prepayment penalty
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+            </div>
 
-      {/* --- WHAT DO FIX & FLIP LENDERS LOOK AT? --- */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 mb-16 sm:mb-24">
-        <div className="mb-8">
-          <div className="text-[10px] uppercase tracking-[0.25em] text-brand-orange font-semibold mb-2">
-            03 — Underwriting Variables
+            {/* Interactive Calculator Client Component */}
+            <FixFlipCalculator />
           </div>
-          <h2
-            className={cn(
-              "text-3xl sm:text-4xl font-light text-ink",
-              fraunces.className,
-            )}
-          >
-            What Do Fix &amp; Flip Lenders Look At?
-          </h2>
-          <p className="text-xs sm:text-sm text-ink-2 mt-2 max-w-xl">
-            Depending on the program, lenders evaluate multiple facets of the
-            property, project, and borrower profile:
+
+          <p className="text-[11.5px] text-[#9A9585] max-w-[680px] mt-[6px] mb-0">
+            Estimate only, based on common industry guidelines (up to 90% of
+            purchase price, 100% of rehab costs, capped at roughly 70–75% of
+            ARV). Actual loan amount, rate, and terms depend on underwriting,
+            your experience, and the specific property.
           </p>
-        </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          {/* WHAT IS A FIX AND FLIP LOAN */}
+          <h2 className="font-serif font-bold text-[24px] text-[#1C1C1C] mt-[42px] mb-[14px] leading-[1.25]">
+            What Is a Fix and Flip Loan?
+          </h2>
+          <p className="text-[15px] leading-[1.75] text-[#55524C] mb-[14px] max-w-[700px]">
+            A fix and flip loan is a short-term, asset-based loan designed for
+            real estate investors who buy distressed or undervalued properties,
+            renovate them, and resell them for a profit — often within six to
+            eighteen months. Unlike a conventional mortgage, which is
+            underwritten around your personal income, tax returns, and long-term
+            ability to repay over 15 or 30 years, a fix and flip loan is
+            evaluated primarily around the deal itself: the purchase price, the
+            rehab budget, and the property&apos;s projected after-repair value
+            (ARV).
+          </p>
+          <p className="text-[15px] leading-[1.75] text-[#55524C] mb-[14px] max-w-[700px]">
+            This structure is what makes fix and flip financing — sometimes
+            called hard money financing or rehab loans — a fundamentally
+            different tool than a traditional mortgage. It&apos;s built for
+            speed and flexibility, not for holding a property for decades.
+          </p>
+
+          {/* HOW IT WORKS */}
+          <h2 className="font-serif font-bold text-[24px] text-[#1C1C1C] mt-[42px] mb-[14px] leading-[1.25]">
+            How Fix and Flip Financing Works
+          </h2>
           {[
-            { title: "Purchase Price", icon: DollarSign },
-            { title: "Current Property Value", icon: Home },
-            { title: "After-Repair Value (ARV)", icon: TrendingUp },
-            { title: "Renovation Budget", icon: Hammer },
-            { title: "Investor Experience", icon: Briefcase },
-            { title: "Credit Profile", icon: ShieldCheck },
-            { title: "Liquidity & Reserves", icon: Zap },
-            { title: "Project Scope", icon: FileText },
-            { title: "Contractor Information", icon: CheckCircle2 },
-            { title: "Exit Strategy", icon: RefreshCw },
-          ].map((varItem, idx) => (
+            {
+              step: "1",
+              title: "Submit your deal.",
+              text: "Share the purchase price, your rehab scope and budget, and your estimated after-repair value.",
+            },
+            {
+              step: "2",
+              title: "Get approved fast.",
+              text: "Underwriting focuses on the property and the numbers, so approvals often happen in days, not weeks.",
+            },
+            {
+              step: "3",
+              title: "Close and fund.",
+              text: "Purchase funds are disbursed at closing; rehab funds are typically held in reserve.",
+            },
+            {
+              step: "4",
+              title: "Draw as you renovate.",
+              text: "Rehab funds are released in draws as work is completed and inspected, keeping your own cash free.",
+            },
+            {
+              step: "5",
+              title: "Sell and payoff.",
+              text: "Once the property sells, the loan is paid off in full — with no prepayment penalty for paying it off early.",
+            },
+          ].map((item) => (
             <div
-              key={idx}
-              className="bg-primary-bg border border-line rounded-xl p-4 flex items-center gap-3 shadow-xs"
+              key={item.step}
+              className="flex gap-[14px] mb-[16px] max-w-[700px]"
             >
-              <div className="w-8 h-8 rounded-lg bg-moss-deep/10 text-moss-deep flex items-center justify-center shrink-0">
-                <varItem.icon size={16} />
+              <div className="shrink-0 w-[28px] h-[28px] rounded-full bg-[#D9722C] text-white font-sans font-bold text-[13px] flex items-center justify-center">
+                {item.step}
               </div>
-              <span className="text-xs font-semibold text-ink">
-                {varItem.title}
-              </span>
+              <div className="text-[14.5px] leading-[1.6] text-[#55524C] pt-[3px]">
+                <strong className="text-[#1C1C1C]">{item.title}</strong>{" "}
+                {item.text}
+              </div>
             </div>
           ))}
-        </div>
-      </section>
 
-      {/* --- FLIP IT OR KEEP IT? --- */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 mb-16 sm:mb-24">
-        <div className="bg-cream/30 border border-line rounded-3xl p-8 sm:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
-          <div className="max-w-xl">
-            <div className="text-[10px] uppercase tracking-[0.25em] text-brand-orange font-semibold mb-2">
-              04 — Exit Versatility
-            </div>
-            <h2
-              className={cn(
-                "text-3xl sm:text-4xl font-light text-ink mb-4",
-                fraunces.className,
-              )}
-            >
-              Flip It or Keep It?
-            </h2>
-            <p className="text-xs sm:text-sm text-ink-2 leading-relaxed mb-4">
-              Plans change. Maybe you originally intended to renovate and sell
-              but decide the completed property makes sense as a rental.
-            </p>
-            <p className="text-xs sm:text-sm text-ink-2 leading-relaxed mb-6">
-              MyLoanDesk can also explore longer-term investor financing,
-              including DSCR loans, when appropriate. That gives investors the
-              ability to consider both exit strategies:
-            </p>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="p-4 bg-primary-bg border border-line rounded-2xl text-center">
-                <span className="text-xs font-bold text-moss-deep uppercase tracking-wider block mb-1">
-                  Strategy A
-                </span>
-                <span className="text-sm font-semibold text-ink">
-                  Renovate → Sell
-                </span>
-              </div>
-              <div className="p-4 bg-primary-bg border border-line rounded-2xl text-center">
-                <span className="text-xs font-bold text-brand-orange uppercase tracking-wider block mb-1">
-                  Strategy B
-                </span>
-                <span className="text-sm font-semibold text-ink">
-                  Renovate → Refinance → Rent
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <div className="w-full md:w-auto shrink-0 text-center">
-            <Link
-              href="/dscr-loans"
-              className="btn-shine bg-brand-orange text-primary-bg px-8 py-4 rounded-full font-semibold text-sm sm:text-base hover:bg-orange-600 transition-colors shadow-sm inline-flex items-center justify-center gap-2"
-            >
-              Explore DSCR Refinance
-              <ArrowRight size={18} />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* --- WHY MYLOANDESK? --- */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 mb-16 sm:mb-24">
-        <div className="grid lg:grid-cols-12 gap-10 items-center">
-          <div className="lg:col-span-7">
-            <div className="text-[10px] uppercase tracking-[0.25em] text-brand-orange font-semibold mb-3">
-              05 — Value Proposition
-            </div>
-            <h2
-              className={cn(
-                "text-3xl sm:text-4xl lg:text-5xl tracking-tight text-ink font-light leading-tight mb-6",
-                fraunces.className,
-              )}
-            >
-              Why MyLoanDesk?
-            </h2>
-            <p className="text-sm sm:text-base text-ink-2 leading-relaxed mb-6">
-              Investment-property financing is about more than finding money.
-              The loan needs to fit the acquisition price, rehab budget,
-              timeline, projected value, and exit strategy.
-            </p>
-
-            <p className="text-sm sm:text-base text-ink-2 leading-relaxed">
-              We help investors explore financing options from acquisition
-              through renovation and, when appropriate, into longer-term rental
-              financing.
-            </p>
-          </div>
-
-          <div className="lg:col-span-5 bg-moss-deep text-cream p-8 rounded-3xl relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-[#D4A574]/10 rounded-full blur-2xl pointer-events-none" />
-            <h3
-              className={cn(
-                "text-2xl font-light text-primary-bg mb-4",
-                fraunces.className,
-              )}
-            >
-              Found your next investment property?
-            </h3>
-            <p className="text-xs text-primary-bg/80 leading-relaxed mb-6">
-              Get custom loan options tailored to your specific acquisition
-              scope and rehab schedule.
-            </p>
-            <Link
-              href="/get-quote"
-              className="btn-shine bg-brand-orange text-primary-bg px-6 py-3.5 rounded-full font-semibold text-xs sm:text-sm inline-flex items-center gap-2 hover:bg-orange-600 transition-colors shadow-sm"
-            >
-              Review My Fix &amp; Flip Deal
-              <ArrowRight size={16} />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* --- FIX & FLIP CALCULATOR (CLIENT COMPONENT) --- */}
-      <FixAndFlipCalculator pagePath="/fix-and-flip-loans" />
-
-      {/* --- FREQUENTLY ASKED QUESTIONS --- */}
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 sm:mb-24">
-        <div className="text-center mb-12">
-          <div className="text-[10px] uppercase tracking-[0.25em] text-brand-orange font-semibold mb-2">
-            06 — Clarity
-          </div>
-          <h2
-            className={cn(
-              "text-3xl sm:text-4xl font-light text-ink",
-              fraunces.className,
-            )}
-          >
-            Fix &amp; Flip Loan FAQs
+          {/* PROGRAM HIGHLIGHTS */}
+          <h2 className="font-serif font-bold text-[24px] text-[#1C1C1C] mt-[42px] mb-[14px] leading-[1.25]">
+            Program Highlights
           </h2>
-        </div>
+          <div className="font-sans font-bold text-[13.5px] tracking-[0.03em] text-[#1C1C1C] uppercase mb-[14px]">
+            What&apos;s included:
+          </div>
+          <ul className="list-none m-0 p-0 mb-[12px] max-w-[700px]">
+            {[
+              "Short-term financing, typically 6–18 months",
+              "Rehab budget financed alongside the purchase price",
+              "Interest-only payments during the loan term",
+              "Fast closings, often within 7–14 days",
+              "No prepayment penalty when you sell or refinance early",
+              "Financing available for single-family, multifamily, and small mixed-use properties",
+              "Programs available for both new and experienced investors",
+            ].map((highlight, i) => (
+              <li
+                key={i}
+                className="relative pl-[20px] text-[15px] text-[#55524C] leading-[1.6] mb-[11px] before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-[6px] before:h-[6px] before:rounded-full before:bg-[#55524C]"
+              >
+                {highlight}
+              </li>
+            ))}
+          </ul>
 
-        <div className="space-y-4">
+          {/* STRATEGIC ADVANTAGES */}
+          <div className="bg-[#F3EFE6] border border-[#E6E0D3] rounded-[12px] p-[26px_28px] mt-[18px] mb-[30px]">
+            <div className="font-sans font-bold text-[13.5px] tracking-[0.03em] text-[#1C1C1C] uppercase mb-[12px]">
+              Strategic Advantages:
+            </div>
+            <p className="text-[14.5px] leading-[1.7] text-[#55524C] mb-[12px]">
+              Speed is often the deciding factor in a competitive investment
+              market. Fast approvals and streamlined underwriting mean you can
+              move on a property before another investor does, without waiting
+              on a 30–45 day conventional close.
+            </p>
+            <p className="text-[14.5px] leading-[1.7] text-[#55524C] mb-[12px]">
+              Because the rehab budget is financed as part of the loan,
+              you&apos;re not forced to pull from personal reserves mid-project
+              — draws are released as work is completed, keeping your cash
+              available for your next deal.
+            </p>
+            <p className="text-[14.5px] leading-[1.7] text-[#55524C] m-0">
+              Interest-only payments during the loan term also keep monthly
+              holding costs predictable and low, which protects your margin if a
+              renovation or sale takes a little longer than planned.
+            </p>
+          </div>
+
+          {/* WHO THIS IS FOR */}
+          <h2 className="font-serif font-bold text-[24px] text-[#1C1C1C] mt-[42px] mb-[14px] leading-[1.25]">
+            Who Fix and Flip Loans Are For
+          </h2>
+          <ul className="list-none m-0 p-0 mb-[12px] max-w-[700px]">
+            {[
+              "Investors purchasing a distressed or outdated property below market value",
+              "Experienced flippers managing multiple simultaneous projects",
+              "First-time investors with a solid rehab plan and realistic ARV estimate",
+              "Buyers who need to close quickly to win a competitive off-market or auction deal",
+              "Investors who don't want a renovation project tying up a conventional mortgage",
+            ].map((item, i) => (
+              <li
+                key={i}
+                className="relative pl-[20px] text-[15px] text-[#55524C] leading-[1.6] mb-[11px] before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-[6px] before:h-[6px] before:rounded-full before:bg-[#55524C]"
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
+
+          {/* COMPARISON TABLE */}
+          <h2 className="font-serif font-bold text-[24px] text-[#1C1C1C] mt-[42px] mb-[14px] leading-[1.25]">
+            Fix and Flip Loans vs. Other Financing Options
+          </h2>
+          <div className="overflow-x-auto mb-[30px]">
+            <table className="w-full border-collapse font-sans text-[13.5px]">
+              <thead>
+                <tr className="bg-[#1C1C1C] text-white">
+                  <th className="p-[11px_14px] text-left font-bold"></th>
+                  <th className="p-[11px_14px] text-left font-bold">
+                    Fix and Flip Loan
+                  </th>
+                  <th className="p-[11px_14px] text-left font-bold">
+                    Conventional Mortgage
+                  </th>
+                  <th className="p-[11px_14px] text-left font-bold">
+                    HELOC / Cash-Out Refi
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-[#E6E0D3]">
+                  <td className="p-[11px_14px] font-bold text-[#1C1C1C]">
+                    Underwriting focus
+                  </td>
+                  <td className="p-[11px_14px] text-[#55524C]">
+                    The property and the deal
+                  </td>
+                  <td className="p-[11px_14px] text-[#55524C]">
+                    Personal income and credit
+                  </td>
+                  <td className="p-[11px_14px] text-[#55524C]">
+                    Existing home equity
+                  </td>
+                </tr>
+                <tr className="bg-[#F3EFE6] border-b border-[#E6E0D3]">
+                  <td className="p-[11px_14px] font-bold text-[#1C1C1C]">
+                    Typical closing time
+                  </td>
+                  <td className="p-[11px_14px] text-[#55524C]">7–14 days</td>
+                  <td className="p-[11px_14px] text-[#55524C]">30–45 days</td>
+                  <td className="p-[11px_14px] text-[#55524C]">2–4 weeks</td>
+                </tr>
+                <tr className="border-b border-[#E6E0D3]">
+                  <td className="p-[11px_14px] font-bold text-[#1C1C1C]">
+                    Rehab budget financed
+                  </td>
+                  <td className="p-[11px_14px] text-[#55524C]">
+                    Often up to 100%
+                  </td>
+                  <td className="p-[11px_14px] text-[#55524C]">
+                    Not typically included
+                  </td>
+                  <td className="p-[11px_14px] text-[#55524C]">
+                    Depends on available equity
+                  </td>
+                </tr>
+                <tr className="bg-[#F3EFE6] border-b border-[#E6E0D3]">
+                  <td className="p-[11px_14px] font-bold text-[#1C1C1C]">
+                    Payment structure
+                  </td>
+                  <td className="p-[11px_14px] text-[#55524C]">
+                    Interest-only
+                  </td>
+                  <td className="p-[11px_14px] text-[#55524C]">
+                    Fully amortizing
+                  </td>
+                  <td className="p-[11px_14px] text-[#55524C]">
+                    Varies by product
+                  </td>
+                </tr>
+                <tr className="border-b border-[#E6E0D3]">
+                  <td className="p-[11px_14px] font-bold text-[#1C1C1C]">
+                    Best for
+                  </td>
+                  <td className="p-[11px_14px] text-[#55524C]">
+                    Short-term rehab and resell
+                  </td>
+                  <td className="p-[11px_14px] text-[#55524C]">
+                    Long-term ownership
+                  </td>
+                  <td className="p-[11px_14px] text-[#55524C]">
+                    Investors with substantial existing equity
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          {/* ELIGIBILITY */}
+          <h2 className="font-serif font-bold text-[24px] text-[#1C1C1C] mt-[42px] mb-[14px] leading-[1.25]">
+            Eligibility Requirements
+          </h2>
+          <ul className="list-none m-0 p-0 mb-[12px] max-w-[700px]">
+            {[
+              "Credit score of approximately 620+ (deal strength can offset a lower score)",
+              "A clear rehab budget and scope of work",
+              "A realistic, supportable after-repair value (ARV) estimate",
+              "Sufficient reserves to cover holding costs during the project",
+              "No minimum flipping experience required, though experience can improve your leverage and terms",
+            ].map((req, i) => (
+              <li
+                key={i}
+                className="relative pl-[20px] text-[15px] text-[#55524C] leading-[1.6] mb-[11px] before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-[6px] before:h-[6px] before:rounded-full before:bg-[#55524C]"
+              >
+                {req}
+              </li>
+            ))}
+          </ul>
+
+          {/* FAQ */}
+          <h2 className="font-serif font-bold text-[24px] text-[#1C1C1C] mt-[42px] mb-[14px] leading-[1.25]">
+            Frequently Asked Questions
+          </h2>
+
           {[
             {
-              q: "Are fix & flip loans only for experienced investors?",
-              a: "Not necessarily. Some lenders work with newer investors, although experience may affect available terms and qualification.",
+              q: "What credit score do I need for a fix and flip loan?",
+              a: "Most fix and flip lenders look for a credit score of 620 or higher, though some programs accept lower scores if the deal itself — the purchase price, rehab budget, and after-repair value — is strong. Because these loans are asset-based, your credit score typically matters less than it would for a conventional mortgage.",
             },
             {
-              q: "Can renovation costs be financed?",
-              a: "Many fix & flip programs provide financing toward eligible renovation costs, subject to lender guidelines.",
+              q: "How much of the rehab budget can be financed?",
+              a: "Many fix and flip programs finance 100% of the rehab budget in addition to a portion of the purchase price, released in draws as work is completed and inspected. The exact amount depends on the deal's loan-to-cost and loan-to-ARV ratios.",
             },
             {
-              q: "What is ARV?",
-              a: "ARV stands for After-Repair Value — the estimated value of the property after planned renovations are completed.",
+              q: "What is the 70% rule in house flipping?",
+              a: "The 70% rule is a rule of thumb many investors use to evaluate a flip: your purchase price plus rehab costs should generally not exceed 70% of the property's after-repair value (ARV). Deals within that range tend to leave enough margin for financing costs, holding costs, selling costs, and profit.",
             },
             {
-              q: "How are renovation funds released?",
-              a: "They are commonly released through a draw process as renovation work progresses.",
+              q: "How fast can a fix and flip loan close?",
+              a: "Because fix and flip loans are underwritten primarily around the property and the deal rather than extensive personal income documentation, many close in as little as 7 to 14 days — significantly faster than a conventional 30 to 45 day mortgage timeline.",
             },
             {
-              q: "Can I refinance instead of selling?",
-              a: "Potentially. Investors who decide to retain the property may be able to refinance into longer-term rental financing, such as a DSCR loan, subject to qualification.",
+              q: "Do I need real estate investing experience to qualify?",
+              a: "No — many fix and flip lenders work with first-time flippers, though your experience level can affect your available leverage, rate, and terms. Investors with a track record of completed flips often qualify for higher loan-to-cost ratios.",
             },
             {
-              q: "How quickly can a fix & flip loan close?",
-              a: "Timing varies by lender, borrower, property, appraisal or valuation requirements, and how complete the file is.",
+              q: "Are fix and flip loan payments interest-only?",
+              a: "Most fix and flip loans are structured as interest-only for the duration of the loan term, which keeps monthly holding costs lower while you complete the renovation and prepare the property for resale.",
             },
-          ].map((faq, idx) => (
+            {
+              q: "Is there a penalty for paying off a fix and flip loan early?",
+              a: "Most fix and flip loans carry no prepayment penalty, since the entire model is built around a short holding period — lenders expect and plan for an early payoff once the property sells.",
+            },
+            {
+              q: "Can I use a fix and flip loan for a rental property instead?",
+              a: "Fix and flip loans are designed for short-term rehab-and-resell projects. If your plan is to renovate and hold the property as a rental, a DSCR loan or a fix-to-rent refinance is typically a better long-term fit once the renovation is complete.",
+              border: false,
+            },
+          ].map((faq, i) => (
             <div
-              key={idx}
-              className="bg-primary-bg border border-line rounded-2xl p-6 shadow-sm"
+              key={i}
+              className={`py-[16px] ${
+                faq.border !== false ? "border-b border-[#E6E0D3]" : ""
+              }`}
             >
-              <h3 className="font-semibold text-base text-ink mb-2 flex items-start gap-2">
-                <HelpCircle
-                  size={18}
-                  className="text-brand-orange shrink-0 mt-0.5"
-                />
-                <span>{faq.q}</span>
-              </h3>
-              <p className="text-xs sm:text-sm text-ink-2 leading-relaxed pl-6">
+              <p className="font-sans font-bold text-[15px] text-[#1C1C1C] m-0 mb-[6px]">
+                {faq.q}
+              </p>
+              <p className="text-[14.5px] leading-[1.7] text-[#55524C] m-0">
                 {faq.a}
               </p>
             </div>
           ))}
-        </div>
-      </section>
 
-      {/* --- BOTTOM CTA --- */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
-        <div className="bg-cream/40 border border-line rounded-[32px] p-8 sm:p-12 text-center max-w-3xl mx-auto">
-          <h2
-            className={cn(
-              "text-3xl sm:text-4xl font-light text-ink mb-4",
-              fraunces.className,
-            )}
-          >
-            Your Next Deal Starts With the Right Financing.
-          </h2>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-6">
+          {/* CTA BUTTONS */}
+          <div className="mt-[36px]">
             <Link
-              href="/get-quote"
-              className="btn-shine bg-brand-orange text-primary-bg px-8 py-4 rounded-full font-semibold text-sm sm:text-base hover:bg-orange-600 transition-colors shadow-sm flex items-center justify-center gap-2 w-full sm:w-auto"
+              href="/get-started"
+              className="flex items-center justify-center gap-[8px] w-full bg-[#D9722C] text-white font-sans font-bold text-[15px] p-[16px] border-0 rounded-[10px] cursor-pointer mb-[10px] no-underline hover:bg-[#B85A1C] transition-colors"
             >
-              Get My Loan Options
-              <ArrowRight size={18} />
+              Apply Now &rarr;
             </Link>
+            <Link
+              href="/contact"
+              className="flex items-center justify-center w-full bg-[#F5EFDF] text-[#1C1C1C] font-sans font-bold text-[15px] p-[16px] border border-[#E7DEC7] rounded-[10px] cursor-pointer no-underline hover:bg-[#EFE7D3] transition-colors"
+            >
+              Contact Us Now
+            </Link>
+            <div className="text-center text-[12.5px] text-[#8F8A7C] mt-[14px]">
+              Have a deal you&apos;re evaluating right now? Send us the numbers
+              — a loan officer will run them with you the same day.
+            </div>
           </div>
-
-          <p className="text-[11px] text-ink-2/70 mt-6 leading-relaxed italic max-w-2xl mx-auto">
-            Fix &amp; flip financing is subject to underwriting, property and
-            project approval, valuation, borrower experience, liquidity, credit,
-            loan-to-cost and loan-to-value requirements. Terms and availability
-            vary by lender.
-          </p>
         </div>
       </section>
     </main>

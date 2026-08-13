@@ -1,183 +1,176 @@
 "use client";
 
 import { useState } from "react";
-import { Calculator, DollarSign, Percent } from "lucide-react";
-import { sendGTMEvent } from "@next/third-parties/google";
 
-export default function FixAndFlipCalculator({
-  pagePath,
-}: {
-  pagePath: string;
-}) {
-  const [purchasePrice, setPurchasePrice] = useState<string>("250000");
-  const [rehabBudget, setRehabBudget] = useState<string>("60000");
-  const [projectedArv, setProjectedArv] = useState<string>("380000");
-  const [calcResult, setCalcResult] = useState<{
-    totalCost: number;
-    arvMargin: number;
-    ltcPercentage: number;
-  } | null>(null);
+export default function FixFlipCalculator() {
+  const [purchase, setPurchase] = useState<string>("");
+  const [rehab, setRehab] = useState<string>("");
+  const [arv, setArv] = useState<string>("");
 
-  const handleCalculateDeal = (e: React.FormEvent) => {
-    e.preventDefault();
-    const purchase = parseFloat(purchasePrice.replace(/[^0-9.]/g, ""));
-    const rehab = parseFloat(rehabBudget.replace(/[^0-9.]/g, ""));
-    const arv = parseFloat(projectedArv.replace(/[^0-9.]/g, ""));
+  const purchaseNum = parseFloat(purchase.replace(/[^0-9.]/g, "")) || 0;
+  const rehabNum = parseFloat(rehab.replace(/[^0-9.]/g, "")) || 0;
+  const arvNum = parseFloat(arv.replace(/[^0-9.]/g, "")) || 0;
 
-    if (purchase > 0 && arv > 0) {
-      const totalCost = purchase + rehab;
-      const arvMargin = arv - totalCost;
-      const ltcPercentage = (totalCost / arv) * 100;
+  const hasValidInputs = purchaseNum > 0 && rehabNum > 0 && arvNum > 0;
 
-      setCalcResult({
-        totalCost,
-        arvMargin,
-        ltcPercentage,
-      });
+  const totalCost = purchaseNum + rehabNum;
+  const maxLoanByCost = purchaseNum * 0.9 + rehabNum * 1.0;
+  const maxLoanByArv = arvNum * 0.75;
+  const maxLoan = Math.min(maxLoanByCost, maxLoanByArv);
+  const cashNeeded = Math.max(totalCost - maxLoan, 0);
 
-      sendGTMEvent({
-        event: "fix_flip_calculator_used",
-        category: "engagement",
-        label: "Fix & Flip Estimator Run",
-        projected_arv: arv,
-        estimated_margin: arvMargin,
-        page_path: pagePath || "/fix-and-flip-loans",
-      });
+  const rulePct = arvNum > 0 ? (totalCost / arvNum) * 100 : 0;
+  const barPct = Math.min(rulePct, 100);
+
+  let barBg = "#C9C4B8";
+  let verdictColor = "#C9C4B8";
+  let verdictText = "Enter all three numbers to run your deal";
+
+  if (hasValidInputs) {
+    if (rulePct <= 70) {
+      barBg = "#4CA85C";
+      verdictColor = "#8FD69B";
+      verdictText = "Within the 70% rule — a healthy margin for a typical flip";
+    } else if (rulePct <= 80) {
+      barBg = "#D9722C";
+      verdictColor = "#EFB988";
+      verdictText =
+        "Slightly above 70% — still workable, but margin is tighter";
+    } else {
+      barBg = "#C4453A";
+      verdictColor = "#F0A69E";
+      verdictText =
+        "Above 80% of ARV — talk to a loan officer before moving forward";
     }
-  };
+  }
+
+  const fmt = (n: number) => "$" + Math.round(n).toLocaleString();
 
   return (
-    <section
-      id="calculator"
-      className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 sm:mb-24 scroll-mt-24"
-    >
-      <div className="bg-primary-bg border border-line rounded-3xl p-6 sm:p-10 shadow-lg">
-        <div className="text-center max-w-xl mx-auto mb-8">
-          <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-orange uppercase tracking-wider mb-2">
-            <Calculator size={16} /> Deal Margin Estimator
-          </div>
-          <h3 className="text-2xl sm:text-3xl font-display font-light text-ink">
-            Estimate Your Flip Profit &amp; ARV Margin
-          </h3>
-          <p className="text-xs sm:text-sm text-ink-2 mt-2">
-            Quickly analyze purchase price, renovation budget, and projected
-            After-Repair Value (ARV).
-          </p>
-        </div>
+    <div className="bg-[#1C1C1C] rounded-[16px] p-[30px] text-white relative overflow-hidden">
+      <div
+        className="absolute -top-[60px] -right-[60px] w-[200px] h-[200px] rounded-full pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(217,114,44,0.35), transparent 70%)",
+        }}
+      />
 
-        <form onSubmit={handleCalculateDeal} className="space-y-6">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            {/* Purchase Price */}
-            <div>
-              <label className="block text-xs font-semibold uppercase tracking-wider text-ink-2 mb-2">
-                Purchase Price ($)
-              </label>
-              <div className="relative">
-                <DollarSign
-                  className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
-                  size={18}
-                />
-                <input
-                  type="number"
-                  value={purchasePrice}
-                  onChange={(e) => setPurchasePrice(e.target.value)}
-                  placeholder="250000"
-                  className="w-full pl-12 pr-4 py-3.5 bg-cream/20 border border-line rounded-xl text-ink text-sm focus:outline-none focus:border-brand-orange transition-colors"
-                  required
-                />
-              </div>
-            </div>
-
-            {/* Renovation Budget */}
-            <div>
-              <label className="block text-xs font-semibold uppercase tracking-wider text-ink-2 mb-2">
-                Renovation Scope ($)
-              </label>
-              <div className="relative">
-                <DollarSign
-                  className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
-                  size={18}
-                />
-                <input
-                  type="number"
-                  value={rehabBudget}
-                  onChange={(e) => setRehabBudget(e.target.value)}
-                  placeholder="60000"
-                  className="w-full pl-12 pr-4 py-3.5 bg-cream/20 border border-line rounded-xl text-ink text-sm focus:outline-none focus:border-brand-orange transition-colors"
-                  required
-                />
-              </div>
-            </div>
-
-            {/* Projected ARV */}
-            <div>
-              <label className="block text-xs font-semibold uppercase tracking-wider text-ink-2 mb-2">
-                Projected ARV ($)
-              </label>
-              <div className="relative">
-                <DollarSign
-                  className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
-                  size={18}
-                />
-                <input
-                  type="number"
-                  value={projectedArv}
-                  onChange={(e) => setProjectedArv(e.target.value)}
-                  placeholder="380000"
-                  className="w-full pl-12 pr-4 py-3.5 bg-cream/20 border border-line rounded-xl text-ink text-sm focus:outline-none focus:border-brand-orange transition-colors"
-                  required
-                />
-              </div>
-            </div>
-          </div>
-
-          <button
-            type="submit"
-            className="w-full bg-moss-deep text-primary-bg py-3.5 rounded-full font-semibold text-sm sm:text-base hover:bg-moss-darker transition-colors flex items-center justify-center gap-2"
-          >
-            Analyze Fix &amp; Flip Deal
-          </button>
-        </form>
-
-        {calcResult !== null && (
-          <div className="mt-8 p-6 bg-cream/30 border border-line rounded-2xl animate-in fade-in duration-300">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
-              <div className="p-3 bg-primary-bg rounded-xl border border-line/50">
-                <div className="text-[11px] uppercase tracking-wider text-ink-2 font-semibold">
-                  Total Cost Basis
-                </div>
-                <div className="text-xl font-bold text-ink mt-1">
-                  ${calcResult.totalCost.toLocaleString()}
-                </div>
-              </div>
-
-              <div className="p-3 bg-primary-bg rounded-xl border border-line/50">
-                <div className="text-[11px] uppercase tracking-wider text-brand-orange font-semibold">
-                  Estimated Gross Margin
-                </div>
-                <div className="text-2xl font-bold text-moss-deep mt-1">
-                  ${calcResult.arvMargin.toLocaleString()}
-                </div>
-              </div>
-
-              <div className="p-3 bg-primary-bg rounded-xl border border-line/50">
-                <div className="text-[11px] uppercase tracking-wider text-ink-2 font-semibold">
-                  Cost-to-ARV Ratio
-                </div>
-                <div className="text-xl font-bold text-ink mt-1 flex items-center justify-center gap-0.5">
-                  {calcResult.ltcPercentage.toFixed(1)} <Percent size={16} />
-                </div>
-              </div>
-            </div>
-
-            <p className="text-xs text-ink-2 mt-4 text-center max-w-lg mx-auto">
-              {calcResult.ltcPercentage <= 75
-                ? "Solid margin! A Total Cost-to-ARV ratio under 75% aligns well with standard hard money and investor underwriting guidelines."
-                : "Your cost basis exceeds 75% of projected ARV. Ensure your exit strategy and contractor scopes are tightly verified."}
-            </p>
-          </div>
-        )}
+      <div className="font-sans text-[12px] tracking-[0.08em] uppercase text-[#D9B896] mb-[4px] relative z-10 font-bold">
+        Fix &amp; Flip Deal Calculator
       </div>
-    </section>
+      <div className="text-[13px] text-[#C9C4B8] mb-[20px] relative z-10">
+        Check your numbers against the 70% rule.
+      </div>
+
+      {/* Purchase Price Input */}
+      <div className="mb-[14px] relative z-10">
+        <label className="block text-[12.5px] text-[#C9C4B8] mb-[6px] font-semibold">
+          Purchase price
+        </label>
+        <div className="relative">
+          <span className="absolute left-[14px] top-1/2 -translate-y-1/2 text-[#8F8A7C] font-sans text-[15px]">
+            $
+          </span>
+          <input
+            type="number"
+            value={purchase}
+            onChange={(e) => setPurchase(e.target.value)}
+            placeholder="220,000"
+            inputMode="numeric"
+            className="w-full bg-white/[0.07] border border-white/20 rounded-[10px] py-[12px] pr-[14px] pl-[30px] text-white font-sans text-[15px] font-semibold outline-none focus:border-[#D9722C] focus:bg-white/10 transition-all"
+          />
+        </div>
+      </div>
+
+      {/* Rehab Budget Input */}
+      <div className="mb-[14px] relative z-10">
+        <label className="block text-[12.5px] text-[#C9C4B8] mb-[6px] font-semibold">
+          Estimated rehab budget
+        </label>
+        <div className="relative">
+          <span className="absolute left-[14px] top-1/2 -translate-y-1/2 text-[#8F8A7C] font-sans text-[15px]">
+            $
+          </span>
+          <input
+            type="number"
+            value={rehab}
+            onChange={(e) => setRehab(e.target.value)}
+            placeholder="60,000"
+            inputMode="numeric"
+            className="w-full bg-white/[0.07] border border-white/20 rounded-[10px] py-[12px] pr-[14px] pl-[30px] text-white font-sans text-[15px] font-semibold outline-none focus:border-[#D9722C] focus:bg-white/10 transition-all"
+          />
+        </div>
+      </div>
+
+      {/* ARV Input */}
+      <div className="mb-[14px] relative z-10">
+        <label className="block text-[12.5px] text-[#C9C4B8] mb-[6px] font-semibold">
+          After-repair value (ARV)
+        </label>
+        <div className="relative">
+          <span className="absolute left-[14px] top-1/2 -translate-y-1/2 text-[#8F8A7C] font-sans text-[15px]">
+            $
+          </span>
+          <input
+            type="number"
+            value={arv}
+            onChange={(e) => setArv(e.target.value)}
+            placeholder="410,000"
+            inputMode="numeric"
+            className="w-full bg-white/[0.07] border border-white/20 rounded-[10px] py-[12px] pr-[14px] pl-[30px] text-white font-sans text-[15px] font-semibold outline-none focus:border-[#D9722C] focus:bg-white/10 transition-all"
+          />
+        </div>
+      </div>
+
+      {/* Calculations Summary */}
+      {hasValidInputs && (
+        <div className="mt-[20px] pt-[20px] border-t border-white/15 relative z-10">
+          <div className="flex justify-between items-baseline text-[13.5px] text-[#C9C4B8] py-[6px]">
+            <span>Total project cost</span>
+            <strong className="font-sans text-white text-[15px] font-bold">
+              {fmt(totalCost)}
+            </strong>
+          </div>
+          <div className="flex justify-between items-baseline text-[13.5px] text-[#C9C4B8] py-[6px]">
+            <span>Est. max loan amount</span>
+            <strong className="font-sans text-white text-[15px] font-bold">
+              {fmt(maxLoan)}
+            </strong>
+          </div>
+          <div className="flex justify-between items-baseline text-[13.5px] text-[#C9C4B8] py-[6px]">
+            <span>Est. cash needed at closing</span>
+            <strong className="font-sans text-white text-[15px] font-bold">
+              {fmt(cashNeeded)}
+            </strong>
+          </div>
+        </div>
+      )}
+
+      {/* Rule Progress Display */}
+      <div className="mt-[16px] relative z-10">
+        <div className="font-sans text-[38px] font-bold text-white leading-none mb-[4px]">
+          {hasValidInputs ? `${rulePct.toFixed(0)}%` : "—"}
+        </div>
+        <div className="text-[12.5px] text-[#C9C4B8] mb-[10px]">
+          Purchase + rehab as % of ARV
+        </div>
+        <div className="h-[8px] bg-white/12 rounded-full overflow-hidden mb-[8px]">
+          <div
+            className="h-full rounded-full transition-all duration-300 ease-out"
+            style={{
+              width: hasValidInputs ? `${barPct}%` : "0%",
+              backgroundColor: barBg,
+            }}
+          />
+        </div>
+        <div
+          className="text-[13px] font-semibold leading-[1.5]"
+          style={{ color: verdictColor }}
+        >
+          {verdictText}
+        </div>
+      </div>
+    </div>
   );
 }
