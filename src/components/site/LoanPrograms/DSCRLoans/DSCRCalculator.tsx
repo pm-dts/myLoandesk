@@ -1,115 +1,284 @@
 "use client";
 
 import { useState } from "react";
-import { Calculator, DollarSign } from "lucide-react";
-import { sendGTMEvent } from "@next/third-parties/google";
 
-export default function DscrCalculator({ pagePath }: { pagePath: string }) {
+export default function DscrCalculator() {
   const [rentInput, setRentInput] = useState<string>("");
-  const [pitiaInput, setPitiaInput] = useState<string>("");
-  const [calculatedRatio, setCalculatedRatio] = useState<number | null>(null);
+  const [pitiMode, setPitiMode] = useState<"know" | "estimate">("know");
 
-  const handleCalculateDSCR = (e: React.FormEvent) => {
-    e.preventDefault();
-    const rent = parseFloat(rentInput.replace(/[^0-9.]/g, ""));
-    const pitia = parseFloat(pitiaInput.replace(/[^0-9.]/g, ""));
+  // "Know" mode state
+  const [pitiInput, setPitiInput] = useState<string>("");
 
-    if (rent > 0 && pitia > 0) {
-      const ratio = rent / pitia;
-      setCalculatedRatio(ratio);
+  // "Estimate" mode states
+  const [priceInput, setPriceInput] = useState<string>("");
+  const [downInput, setDownInput] = useState<string>("");
+  const [rateInput, setRateInput] = useState<string>("");
+  const [taxInsInput, setTaxInsInput] = useState<string>("");
 
-      sendGTMEvent({
-        event: "dscr_calculator_used",
-        category: "engagement",
-        label: "DSCR Calculator Run",
-        calculated_ratio: ratio.toFixed(2),
-        page_path: pagePath || "/dscr-loans",
-      });
+  // ---- Helper Calculations ----
+  const rent = parseFloat(rentInput.replace(/[^0-9.]/g, "")) || 0;
+  let computedPiti = 0;
+  let estimatedPI = 0;
+  const taxIns = parseFloat(taxInsInput.replace(/[^0-9.]/g, "")) || 0;
+
+  if (pitiMode === "know") {
+    computedPiti = parseFloat(pitiInput.replace(/[^0-9.]/g, "")) || 0;
+  } else {
+    const price = parseFloat(priceInput.replace(/[^0-9.]/g, "")) || 0;
+    const downPct = parseFloat(downInput.replace(/[^0-9.]/g, "")) || 0;
+    const rate = parseFloat(rateInput.replace(/[^0-9.]/g, "")) || 0;
+
+    if (price > 0 && rate > 0) {
+      const loanAmount = price * (1 - downPct / 100);
+      const monthlyRate = rate / 100 / 12;
+      const numPayments = 30 * 12;
+      estimatedPI =
+        monthlyRate === 0
+          ? loanAmount / numPayments
+          : (loanAmount *
+              (monthlyRate * Math.pow(1 + monthlyRate, numPayments))) /
+            (Math.pow(1 + monthlyRate, numPayments) - 1);
+
+      computedPiti = estimatedPI + taxIns;
     }
-  };
+  }
+
+  const ratio = rent > 0 && computedPiti > 0 ? rent / computedPiti : null;
+
+  // Determine bar fill & status text
+  let barWidth = "0%";
+  let barBg = "#D9722C";
+  let verdictColor = "#C9C4B8";
+  let verdictText = "Enter both numbers to calculate";
+
+  if (ratio !== null) {
+    const pct = Math.min((ratio / 1.5) * 100, 100);
+    barWidth = `${pct}%`;
+
+    if (ratio >= 1.2) {
+      barBg = "#4CA85C";
+      verdictColor = "#8FD69B";
+      verdictText = "Strong — likely to qualify with standard terms";
+    } else if (ratio >= 1.0) {
+      barBg = "#D9722C";
+      verdictColor = "#EFB988";
+      verdictText = "Qualifies — may affect rate or reserves";
+    } else {
+      barBg = "#C4453A";
+      verdictColor = "#F0A69E";
+      verdictText = "Below 1.0 — still possible with more reserves";
+    }
+  }
 
   return (
-    <section
-      id="calculator"
-      className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 sm:mb-24 scroll-mt-24"
-    >
-      <div className="bg-primary-bg border border-line rounded-3xl p-6 sm:p-10 shadow-lg">
-        <div className="text-center max-w-xl mx-auto mb-8">
-          <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-orange uppercase tracking-wider mb-2">
-            <Calculator size={16} /> Interactive DSCR Estimator
-          </div>
-          <h3 className="text-2xl sm:text-3xl font-display font-light text-ink">
-            Calculate Your Property DSCR
-          </h3>
-        </div>
+    <div className="bg-[#1C1C1C] rounded-[16px] p-[30px] text-white relative overflow-hidden">
+      <div
+        className="absolute -top-[60px] -right-[60px] w-[200px] h-[200px] rounded-full pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(217,114,44,0.35), transparent 70%)",
+        }}
+      />
 
-        <form onSubmit={handleCalculateDSCR} className="space-y-6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div>
-              <label className="block text-xs font-semibold uppercase tracking-wider text-ink-2 mb-2">
-                Estimated Monthly Rental Income ($)
-              </label>
-              <div className="relative">
-                <DollarSign
-                  className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
-                  size={18}
-                />
-                <input
-                  type="number"
-                  value={rentInput}
-                  onChange={(e) => setRentInput(e.target.value)}
-                  placeholder="e.g. 2800"
-                  className="w-full pl-12 pr-4 py-3.5 bg-cream/20 border border-line rounded-xl text-ink text-sm focus:outline-none focus:border-brand-orange transition-colors"
-                  required
-                />
-              </div>
-            </div>
-
-            <div>
-              <label className="block text-xs font-semibold uppercase tracking-wider text-ink-2 mb-2">
-                Total Monthly Debt (PITIA) ($)
-              </label>
-              <div className="relative">
-                <DollarSign
-                  className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
-                  size={18}
-                />
-                <input
-                  type="number"
-                  value={pitiaInput}
-                  onChange={(e) => setPitiaInput(e.target.value)}
-                  placeholder="e.g. 2200"
-                  className="w-full pl-12 pr-4 py-3.5 bg-cream/20 border border-line rounded-xl text-ink text-sm focus:outline-none focus:border-brand-orange transition-colors"
-                  required
-                />
-              </div>
-            </div>
-          </div>
-
-          <button
-            type="submit"
-            className="w-full bg-moss-deep text-primary-bg py-3.5 rounded-full font-semibold text-sm sm:text-base hover:bg-moss-darker transition-colors flex items-center justify-center gap-2"
-          >
-            Calculate Ratio
-          </button>
-        </form>
-
-        {calculatedRatio !== null && (
-          <div className="mt-8 p-6 bg-cream/30 border border-line rounded-2xl text-center animate-in fade-in duration-300">
-            <div className="text-xs uppercase tracking-wider text-ink-2 mb-1">
-              Your Estimated DSCR
-            </div>
-            <div className="text-4xl font-display font-bold text-moss-deep mb-2">
-              {calculatedRatio.toFixed(2)}
-            </div>
-            <p className="text-xs sm:text-sm text-ink-2 max-w-md mx-auto">
-              {calculatedRatio >= 1.0
-                ? "Great news! Your rental income fully covers your projected mortgage payment with positive cash flow potential."
-                : "Your DSCR is below 1.0. Financing is still achievable with select specialized DSCR programs."}
-            </p>
-          </div>
-        )}
+      <div className="font-sans text-[12px] tracking-[0.08em] uppercase text-[#D9B896] mb-[4px] relative z-10 font-bold">
+        Live DSCR Calculator
       </div>
-    </section>
+      <div className="text-[13px] text-[#C9C4B8] mb-[22px] relative z-10">
+        Enter your numbers — see if this loan fits.
+      </div>
+
+      <div className="mb-[16px] relative z-10">
+        <label className="block text-[12.5px] text-[#C9C4B8] mb-[6px] font-semibold">
+          Monthly rental income
+        </label>
+        <div className="relative">
+          <span className="absolute left-[14px] top-1/2 -translate-y-1/2 text-[#8F8A7C] font-sans text-[15px]">
+            $
+          </span>
+          <input
+            type="number"
+            value={rentInput}
+            onChange={(e) => setRentInput(e.target.value)}
+            placeholder="2,800"
+            inputMode="numeric"
+            className="w-full bg-white/[0.07] border border-white/20 rounded-[10px] py-[12px] pr-[14px] pl-[30px] text-white font-sans text-[15px] font-semibold outline-none focus:border-[#D9722C] focus:bg-white/10 transition-all"
+          />
+        </div>
+      </div>
+
+      <div className="flex bg-white/[0.07] border border-white/20 rounded-[10px] p-[3px] mb-[16px] relative z-10">
+        <button
+          type="button"
+          onClick={() => setPitiMode("know")}
+          className={`flex-1 border-0 font-sans font-bold text-[12.5px] py-[9px] px-[6px] rounded-[8px] cursor-pointer transition-all ${
+            pitiMode === "know"
+              ? "bg-[#D9722C] text-white"
+              : "bg-transparent text-[#C9C4B8] hover:text-white"
+          }`}
+        >
+          I know my payment
+        </button>
+        <button
+          type="button"
+          onClick={() => setPitiMode("estimate")}
+          className={`flex-1 border-0 font-sans font-bold text-[12.5px] py-[9px] px-[6px] rounded-[8px] cursor-pointer transition-all ${
+            pitiMode === "estimate"
+              ? "bg-[#D9722C] text-white"
+              : "bg-transparent text-[#C9C4B8] hover:text-white"
+          }`}
+        >
+          Estimate it for me
+        </button>
+      </div>
+
+      {pitiMode === "know" ? (
+        <div>
+          <div className="mb-[16px] relative z-10">
+            <label className="block text-[12.5px] text-[#C9C4B8] mb-[6px] font-semibold">
+              Monthly mortgage payment (PITIA est.)
+            </label>
+            <div className="relative">
+              <span className="absolute left-[14px] top-1/2 -translate-y-1/2 text-[#8F8A7C] font-sans text-[15px]">
+                $
+              </span>
+              <input
+                type="number"
+                value={pitiInput}
+                onChange={(e) => setPitiInput(e.target.value)}
+                placeholder="2,200"
+                inputMode="numeric"
+                className="w-full bg-white/[0.07] border border-white/20 rounded-[10px] py-[12px] pr-[14px] pl-[30px] text-white font-sans text-[15px] font-semibold outline-none focus:border-[#D9722C] focus:bg-white/10 transition-all"
+              />
+            </div>
+          </div>
+        </div>
+      ) : (
+        <div className="space-y-[12px]">
+          <div className="relative z-10">
+            <label className="block text-[12.5px] text-[#C9C4B8] mb-[6px] font-semibold">
+              Purchase price
+            </label>
+            <div className="relative">
+              <span className="absolute left-[14px] top-1/2 -translate-y-1/2 text-[#8F8A7C] font-sans text-[15px]">
+                $
+              </span>
+              <input
+                type="number"
+                value={priceInput}
+                onChange={(e) => setPriceInput(e.target.value)}
+                placeholder="450,000"
+                inputMode="numeric"
+                className="w-full bg-white/[0.07] border border-white/20 rounded-[10px] py-[12px] pr-[14px] pl-[30px] text-white font-sans text-[15px] font-semibold outline-none focus:border-[#D9722C] focus:bg-white/10 transition-all"
+              />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 gap-[12px]">
+            <div className="relative z-10">
+              <label className="block text-[12.5px] text-[#C9C4B8] mb-[6px] font-semibold">
+                Down payment
+              </label>
+              <div className="relative">
+                <span className="absolute left-[14px] top-1/2 -translate-y-1/2 text-[#8F8A7C] font-sans text-[15px]">
+                  %
+                </span>
+                <input
+                  type="number"
+                  value={downInput}
+                  onChange={(e) => setDownInput(e.target.value)}
+                  placeholder="25"
+                  inputMode="numeric"
+                  className="w-full bg-white/[0.07] border border-white/20 rounded-[10px] py-[12px] pr-[14px] pl-[26px] text-white font-sans text-[15px] font-semibold outline-none focus:border-[#D9722C] focus:bg-white/10 transition-all"
+                />
+              </div>
+            </div>
+            <div className="relative z-10">
+              <label className="block text-[12.5px] text-[#C9C4B8] mb-[6px] font-semibold">
+                Est. rate
+              </label>
+              <div className="relative">
+                <span className="absolute left-[14px] top-1/2 -translate-y-1/2 text-[#8F8A7C] font-sans text-[15px]">
+                  %
+                </span>
+                <input
+                  type="number"
+                  step="0.1"
+                  value={rateInput}
+                  onChange={(e) => setRateInput(e.target.value)}
+                  placeholder="7.5"
+                  inputMode="decimal"
+                  className="w-full bg-white/[0.07] border border-white/20 rounded-[10px] py-[12px] pr-[14px] pl-[26px] text-white font-sans text-[15px] font-semibold outline-none focus:border-[#D9722C] focus:bg-white/10 transition-all"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="relative z-10">
+            <label className="block text-[12.5px] text-[#C9C4B8] mb-[6px] font-semibold">
+              Monthly taxes + insurance + HOA
+            </label>
+            <div className="relative">
+              <span className="absolute left-[14px] top-1/2 -translate-y-1/2 text-[#8F8A7C] font-sans text-[15px]">
+                $
+              </span>
+              <input
+                type="number"
+                value={taxInsInput}
+                onChange={(e) => setTaxInsInput(e.target.value)}
+                placeholder="450"
+                inputMode="numeric"
+                className="w-full bg-white/[0.07] border border-white/20 rounded-[10px] py-[12px] pr-[14px] pl-[30px] text-white font-sans text-[15px] font-semibold outline-none focus:border-[#D9722C] focus:bg-white/10 transition-all"
+              />
+            </div>
+          </div>
+
+          <div className="font-sans text-[13px] text-[#C9C4B8] bg-white/[0.06] border border-dashed border-white/20 rounded-[10px] p-[12px_14px] mt-[6px] leading-[1.6]">
+            {computedPiti > 0 ? (
+              <>
+                Est. principal &amp; interest:{" "}
+                <strong className="text-white">
+                  ${estimatedPI.toFixed(0)}
+                </strong>
+                /mo
+                <br />+ taxes/insurance/HOA:{" "}
+                <strong className="text-white">${taxIns.toFixed(0)}</strong>/mo
+                <br />
+                Total est. payment:{" "}
+                <strong className="text-white">
+                  ${computedPiti.toFixed(0)}
+                </strong>
+                /mo <span className="opacity-70">(30-yr term)</span>
+              </>
+            ) : (
+              "Fill in the fields above to estimate your payment"
+            )}
+          </div>
+        </div>
+      )}
+
+      <div className="mt-[24px] pt-[22px] border-t border-white/[0.14] relative z-10">
+        <div className="font-sans text-[48px] font-bold leading-none mb-[6px]">
+          {ratio !== null ? ratio.toFixed(2) : "—"}
+        </div>
+        <div className="text-[13px] text-[#C9C4B8] mb-[14px]">
+          Debt Service Coverage Ratio
+        </div>
+        <div className="h-[8px] bg-white/[0.12] rounded-full overflow-hidden mb-[10px]">
+          <div
+            className="h-full rounded-full transition-all duration-300 ease-out"
+            style={{
+              width: barWidth,
+              backgroundColor: barBg,
+            }}
+          />
+        </div>
+        <div
+          className="text-[13.5px] font-semibold"
+          style={{ color: verdictColor }}
+        >
+          {verdictText}
+        </div>
+      </div>
+    </div>
   );
 }
