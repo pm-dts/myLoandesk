@@ -1,201 +1,176 @@
 "use client";
 
 import { useState } from "react";
-import { Calculator, DollarSign, Percent, Hammer } from "lucide-react";
-import { sendGTMEvent } from "@next/third-parties/google";
 
-export default function ConstructionCalculator({
-  pagePath,
-}: {
-  pagePath: string;
-}) {
-  const [landCost, setLandCost] = useState<string>("100000");
-  const [buildBudget, setBuildBudget] = useState<string>("400000");
-  const [downPaymentPercent, setDownPaymentPercent] = useState<string>("20");
-  const [calcResult, setCalcResult] = useState<{
-    totalProjectCost: number;
-    requiredEquity: number;
-    estimatedLoanAmount: number;
-    estInterestOnlyPayment: number;
-  } | null>(null);
+export default function ConstructionCalculator() {
+  const [land, setLand] = useState<string>("");
+  const [build, setBuild] = useState<string>("");
+  const [value, setValue] = useState<string>("");
 
-  const handleCalculateConstruction = (e: React.FormEvent) => {
-    e.preventDefault();
-    const land = parseFloat(landCost.replace(/[^0-9.]/g, ""));
-    const build = parseFloat(buildBudget.replace(/[^0-9.]/g, ""));
-    const downPercent = parseFloat(downPaymentPercent.replace(/[^0-9.]/g, ""));
+  const landNum = parseFloat(land.replace(/[^0-9.]/g, ""));
+  const buildNum = parseFloat(build.replace(/[^0-9.]/g, "")) || 0;
+  const valueNum = parseFloat(value.replace(/[^0-9.]/g, "")) || 0;
 
-    if (land >= 0 && build > 0 && downPercent >= 0) {
-      const totalProjectCost = land + build;
-      const requiredEquity = totalProjectCost * (downPercent / 100);
-      const estimatedLoanAmount = totalProjectCost - requiredEquity;
-      // Est. interest-only payment assuming ~50% average drawn balance over build phase at 8.0% interest
-      const estInterestOnlyPayment = (estimatedLoanAmount * 0.5 * 0.08) / 12;
+  const isLandValid = !isNaN(landNum);
+  const hasValidInputs = isLandValid && buildNum > 0 && valueNum > 0;
 
-      setCalcResult({
-        totalProjectCost,
-        requiredEquity,
-        estimatedLoanAmount,
-        estInterestOnlyPayment,
-      });
+  const totalCost = (isLandValid ? landNum : 0) + buildNum;
+  const maxLoanByCost = totalCost * 0.8;
+  const maxLoanByValue = valueNum * 0.75;
+  const maxLoan = Math.min(maxLoanByCost, maxLoanByValue);
+  const downNeeded = Math.max(totalCost - maxLoan, 0);
 
-      sendGTMEvent({
-        event: "construction_calculator_used",
-        category: "engagement",
-        label: "Construction Loan Estimator Run",
-        total_project_cost: totalProjectCost,
-        estimated_loan_amount: estimatedLoanAmount,
-        page_path: pagePath || "/construction-loans",
-      });
+  const ltcPct = totalCost > 0 ? (maxLoan / totalCost) * 100 : 0;
+
+  let barBg = "#C9C4B8";
+  let verdictColor = "#C9C4B8";
+  let verdictText = "Enter your numbers to run the estimate";
+
+  if (hasValidInputs) {
+    if (ltcPct <= 75) {
+      barBg = "#4CA85C";
+      verdictColor = "#8FD69B";
+      verdictText = "Comfortably within typical construction lending limits";
+    } else if (ltcPct <= 82) {
+      barBg = "#D9722C";
+      verdictColor = "#EFB988";
+      verdictText =
+        "Near typical limits — down payment or land equity will matter";
+    } else {
+      barBg = "#C4453A";
+      verdictColor = "#F0A69E";
+      verdictText =
+        "Above typical limits — talk to a loan officer about your options";
     }
-  };
+  }
+
+  const fmt = (n: number) => "$" + Math.round(n).toLocaleString();
 
   return (
-    <section
-      id="calculator"
-      className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 sm:mb-24 scroll-mt-24"
-    >
-      <div className="bg-primary-bg border border-line rounded-3xl p-6 sm:p-10 shadow-lg">
-        <div className="text-center max-w-xl mx-auto mb-8">
-          <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-orange uppercase tracking-wider mb-2">
-            <Calculator size={16} /> Construction Budget Estimator
-          </div>
-          <h3 className="text-2xl sm:text-3xl font-display font-light text-ink">
-            Estimate Your Construction Loan &amp; Equity
-          </h3>
-          <p className="text-xs sm:text-sm text-ink-2 mt-2">
-            Calculate your total project cost basis, required equity
-            contribution, and estimated build phase payments.
-          </p>
-        </div>
+    <div className="bg-[#1C1C1C] rounded-[16px] p-[30px] text-white relative overflow-hidden">
+      <div
+        className="absolute -top-[60px] -right-[60px] w-[200px] h-[200px] rounded-full pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(217,114,44,0.35), transparent 70%)",
+        }}
+      />
 
-        <form onSubmit={handleCalculateConstruction} className="space-y-6">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 items-start">
-            {/* Land Acquisition / Value */}
-            <div>
-              <label className="block text-xs font-semibold uppercase tracking-wider text-ink-2 mb-2 h-8 flex items-end">
-                Land Cost or Equity ($)
-              </label>
-              <div className="relative">
-                <DollarSign
-                  className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none"
-                  size={18}
-                />
-                <input
-                  type="number"
-                  value={landCost}
-                  onChange={(e) => setLandCost(e.target.value)}
-                  placeholder="100000"
-                  className="w-full h-[50px] pl-12 pr-4 bg-cream/20 border border-line rounded-xl text-ink text-sm focus:outline-none focus:border-brand-orange transition-colors"
-                  required
-                />
-              </div>
-            </div>
-
-            {/* Estimated Build Budget */}
-            <div>
-              <label className="block text-xs font-semibold uppercase tracking-wider text-ink-2 mb-2 h-8 flex items-end">
-                Construction Budget ($)
-              </label>
-              <div className="relative">
-                <DollarSign
-                  className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none"
-                  size={18}
-                />
-                <input
-                  type="number"
-                  value={buildBudget}
-                  onChange={(e) => setBuildBudget(e.target.value)}
-                  placeholder="400000"
-                  className="w-full h-[50px] pl-12 pr-4 bg-cream/20 border border-line rounded-xl text-ink text-sm focus:outline-none focus:border-brand-orange transition-colors"
-                  required
-                />
-              </div>
-            </div>
-
-            {/* Down Payment % */}
-            <div>
-              <label className="block text-xs font-semibold uppercase tracking-wider text-ink-2 mb-2 h-8 flex items-end">
-                Down Payment / Equity (%)
-              </label>
-              <div className="relative">
-                <Percent
-                  className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none"
-                  size={16}
-                />
-                <input
-                  type="number"
-                  step="1"
-                  value={downPaymentPercent}
-                  onChange={(e) => setDownPaymentPercent(e.target.value)}
-                  placeholder="20"
-                  className="w-full h-[50px] pl-4 pr-10 bg-cream/20 border border-line rounded-xl text-ink text-sm focus:outline-none focus:border-brand-orange transition-colors"
-                  required
-                />
-              </div>
-            </div>
-          </div>
-
-          <button
-            type="submit"
-            className="w-full bg-moss-deep text-primary-bg py-3.5 rounded-full font-semibold text-sm sm:text-base hover:bg-moss-darker transition-colors flex items-center justify-center gap-2"
-          >
-            <Hammer size={18} /> Calculate Construction Loan Summary
-          </button>
-        </form>
-
-        {calcResult !== null && (
-          <div className="mt-8 p-6 bg-cream/30 border border-line rounded-2xl animate-in fade-in duration-300">
-            <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 text-center">
-              <div className="p-3 bg-primary-bg rounded-xl border border-line/50">
-                <div className="text-[11px] uppercase tracking-wider text-ink-2 font-semibold">
-                  Total Cost Basis
-                </div>
-                <div className="text-lg font-bold text-ink mt-1">
-                  ${calcResult.totalProjectCost.toLocaleString()}
-                </div>
-              </div>
-
-              <div className="p-3 bg-primary-bg rounded-xl border border-line/50">
-                <div className="text-[11px] uppercase tracking-wider text-brand-orange font-semibold">
-                  Equity Contribution
-                </div>
-                <div className="text-lg font-bold text-ink mt-1">
-                  ${calcResult.requiredEquity.toLocaleString()}
-                </div>
-              </div>
-
-              <div className="p-3 bg-primary-bg rounded-xl border border-line/50">
-                <div className="text-[11px] uppercase tracking-wider text-ink-2 font-semibold">
-                  Est. Loan Amount
-                </div>
-                <div className="text-lg font-bold text-ink mt-1">
-                  ${calcResult.estimatedLoanAmount.toLocaleString()}
-                </div>
-              </div>
-
-              <div className="p-3 bg-primary-bg rounded-xl border border-line/50">
-                <div className="text-[11px] uppercase tracking-wider text-moss-deep font-semibold">
-                  Est. Avg. Build Payment
-                </div>
-                <div className="text-xl font-bold text-moss-deep mt-1">
-                  ~$
-                  {calcResult.estInterestOnlyPayment.toLocaleString("en-US", {
-                    maximumFractionDigits: 0,
-                  })}{" "}
-                  / mo
-                </div>
-              </div>
-            </div>
-
-            <p className="text-xs text-ink-2 mt-4 text-center max-w-lg mx-auto">
-              * During construction, interest is charged only on funds drawn as
-              work is completed. Existing land equity can often count toward
-              your required contribution.
-            </p>
-          </div>
-        )}
+      <div className="font-sans text-[12px] tracking-[0.08em] uppercase text-[#D9B896] mb-[4px] relative z-10 font-bold">
+        Construction Loan Calculator
       </div>
-    </section>
+      <div className="text-[13px] text-[#C9C4B8] mb-[20px] relative z-10">
+        Estimate your loan amount and build-phase payment.
+      </div>
+
+      {/* Land / Lot Cost Input */}
+      <div className="mb-[14px] relative z-10">
+        <label className="block text-[12.5px] text-[#C9C4B8] mb-[6px] font-semibold">
+          Land / lot cost (enter $0 if you already own it free and clear)
+        </label>
+        <div className="relative">
+          <span className="absolute left-[14px] top-1/2 -translate-y-1/2 text-[#8F8A7C] font-sans text-[15px]">
+            $
+          </span>
+          <input
+            type="number"
+            value={land}
+            onChange={(e) => setLand(e.target.value)}
+            placeholder="80,000"
+            inputMode="numeric"
+            className="w-full bg-white/[0.07] border border-white/20 rounded-[10px] py-[12px] pr-[14px] pl-[30px] text-white font-sans text-[15px] font-semibold outline-none focus:border-[#D9722C] focus:bg-white/10 transition-all"
+          />
+        </div>
+      </div>
+
+      {/* Construction / Build Budget Input */}
+      <div className="mb-[14px] relative z-10">
+        <label className="block text-[12.5px] text-[#C9C4B8] mb-[6px] font-semibold">
+          Construction / build budget
+        </label>
+        <div className="relative">
+          <span className="absolute left-[14px] top-1/2 -translate-y-1/2 text-[#8F8A7C] font-sans text-[15px]">
+            $
+          </span>
+          <input
+            type="number"
+            value={build}
+            onChange={(e) => setBuild(e.target.value)}
+            placeholder="420,000"
+            inputMode="numeric"
+            className="w-full bg-white/[0.07] border border-white/20 rounded-[10px] py-[12px] pr-[14px] pl-[30px] text-white font-sans text-[15px] font-semibold outline-none focus:border-[#D9722C] focus:bg-white/10 transition-all"
+          />
+        </div>
+      </div>
+
+      {/* Estimated Completed Value Input */}
+      <div className="mb-[14px] relative z-10">
+        <label className="block text-[12.5px] text-[#C9C4B8] mb-[6px] font-semibold">
+          Est. completed value
+        </label>
+        <div className="relative">
+          <span className="absolute left-[14px] top-1/2 -translate-y-1/2 text-[#8F8A7C] font-sans text-[15px]">
+            $
+          </span>
+          <input
+            type="number"
+            value={value}
+            onChange={(e) => setValue(e.target.value)}
+            placeholder="620,000"
+            inputMode="numeric"
+            className="w-full bg-white/[0.07] border border-white/20 rounded-[10px] py-[12px] pr-[14px] pl-[30px] text-white font-sans text-[15px] font-semibold outline-none focus:border-[#D9722C] focus:bg-white/10 transition-all"
+          />
+        </div>
+      </div>
+
+      {/* Calculations Summary */}
+      {hasValidInputs && (
+        <div className="mt-[20px] pt-[20px] border-t border-white/15 relative z-10">
+          <div className="flex justify-between items-baseline text-[13.5px] text-[#C9C4B8] py-[6px]">
+            <span>Total project cost</span>
+            <strong className="font-sans text-white text-[15px] font-bold">
+              {fmt(totalCost)}
+            </strong>
+          </div>
+          <div className="flex justify-between items-baseline text-[13.5px] text-[#C9C4B8] py-[6px]">
+            <span>Est. max loan amount</span>
+            <strong className="font-sans text-white text-[15px] font-bold">
+              {fmt(maxLoan)}
+            </strong>
+          </div>
+          <div className="flex justify-between items-baseline text-[13.5px] text-[#C9C4B8] py-[6px]">
+            <span>Est. down payment needed</span>
+            <strong className="font-sans text-white text-[15px] font-bold">
+              {fmt(downNeeded)}
+            </strong>
+          </div>
+        </div>
+      )}
+
+      {/* Ratio Progress Display */}
+      <div className="mt-[16px] relative z-10">
+        <div className="font-sans text-[38px] font-bold text-white leading-none mb-[4px]">
+          {hasValidInputs ? `${ltcPct.toFixed(0)}%` : "—"}
+        </div>
+        <div className="text-[12.5px] text-[#C9C4B8] mb-[10px]">
+          Loan-to-cost ratio
+        </div>
+        <div className="h-[8px] bg-white/12 rounded-full overflow-hidden mb-[8px]">
+          <div
+            className="h-full rounded-full transition-all duration-300 ease-out"
+            style={{
+              width: hasValidInputs ? `${Math.min(ltcPct, 100)}%` : "0%",
+              backgroundColor: barBg,
+            }}
+          />
+        </div>
+        <div
+          className="text-[13px] font-semibold leading-[1.5]"
+          style={{ color: verdictColor }}
+        >
+          {verdictText}
+        </div>
+      </div>
+    </div>
   );
 }

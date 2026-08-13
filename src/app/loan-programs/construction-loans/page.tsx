@@ -1,509 +1,533 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Fraunces } from "next/font/google";
-import { cn } from "@/lib/utils";
-import {
-  Hammer,
-  CheckCircle2,
-  HelpCircle,
-  ArrowRight,
-  Building2,
-  MapPin,
-  Briefcase,
-  Layers,
-  FileText,
-  DollarSign,
-  TrendingUp,
-  ShieldCheck,
-  RefreshCw,
-  Zap,
-  Calculator,
-} from "lucide-react";
-
 import ConstructionCalculator from "@/components/site/LoanPrograms/ConstructionLoans/ConstructionCalculator";
 
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
-});
-
 export const metadata: Metadata = {
-  title: "Construction Loans - Build From the Ground Up | MyLoanDesk",
+  title: "Construction Loans for Custom Homes & Development | MyLoanDesk",
   description:
-    "Financing to build from the ground up. Explore construction-to-permanent, land + construction, and investor build financing with MyLoanDesk.",
-  openGraph: {
-    title: "Construction Loans for Homeowners & Investors | MyLoanDesk",
-    description:
-      "Finance land acquisition and construction draws for residential and investment projects. Flexible options for builders, developers, and homeowners.",
-    type: "website",
+    "Construction loans and construction-to-permanent financing for custom homes, spec builds, and small developments. Use our free calculator to estimate your loan amount and down payment before you apply.",
+  alternates: {
+    canonical: "https://www.myloandesk.com/loan-programs/construction-loans/",
   },
+  openGraph: {
+    title: "Construction Loans for Custom Homes & Development | MyLoanDesk",
+    description:
+      "Finance your dream home or next development project with construction-to-permanent financing. Estimate your loan amount, down payment, and interest-only payments with our free calculator.",
+    type: "website",
+    url: "https://www.myloandesk.com/loan-programs/construction-loans/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is a construction-to-permanent loan?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "A construction-to-permanent loan combines your short-term construction financing and your long-term mortgage into a single loan with a single closing. Once the home is complete, the loan automatically converts into a standard mortgage, so you avoid closing twice and re-qualifying for a separate end loan.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How much down payment is required for a construction loan?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Down payment requirements for construction loans are typically higher than for a standard mortgage, often ranging from 10% to 25% of the total project cost, depending on the lender, the borrower's credit profile, and whether the land is already owned free and clear.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do construction loan draws work?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Instead of receiving the full loan amount upfront, funds are released in stages called draws, tied to completed construction milestones such as foundation, framing, and finishing. An inspection typically confirms each stage is complete before the next draw is released.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do I pay principal during construction?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Most construction loans are interest-only during the build phase, and interest is typically charged only on the funds that have actually been drawn, not the full loan amount. Principal payments generally begin once the loan converts to a permanent mortgage after construction is complete.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can I use a construction loan to build on land I already own?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes — if you already own the land free and clear, its value can often be used as equity toward your down payment requirement, which can reduce the amount of cash you need to bring to closing.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What credit score is needed for a construction loan?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Construction loans generally require a stronger credit profile than a standard mortgage, often 680 or higher, since the lender is financing a project that doesn't yet exist as collateral. Builder experience and a detailed budget and plan set can also strengthen an application.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long does construction loan financing take to close?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Initial closing on a construction-to-permanent loan typically takes a similar timeframe to a conventional mortgage, often 30 to 45 days, since it requires underwriting the borrower, the builder, and the full project plans and budget.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What happens if construction costs more than the original budget?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Cost overruns are common in construction projects. Many lenders require a contingency reserve built into the original budget, and some allow a loan modification if costs increase significantly. Planning a realistic budget with a contingency buffer upfront is the best way to avoid a funding gap mid-project.",
+      },
+    },
+  ],
 };
 
 export default function ConstructionLoansPage() {
   return (
-    <main className="min-h-screen bg-primary-bg pt-6 pb-12 sm:pt-8 sm:pb-16 lg:pt-10 lg:pb-24 text-ink">
-      {/* --- HERO SECTION --- */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 mb-16 sm:mb-24">
-        <div className="relative bg-moss-deep text-cream rounded-[32px] overflow-hidden p-8 sm:p-12 lg:p-16">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-[#D4A574]/15 rounded-full blur-3xl -translate-y-1/3 translate-x-1/3 pointer-events-none" />
-          <div className="absolute bottom-0 left-0 w-80 h-80 bg-brand-orange/15 rounded-full blur-3xl translate-y-1/3 -translate-x-1/3 pointer-events-none" />
+    <main
+      className="min-h-screen font-sans"
+      style={{
+        backgroundColor: "#EDEAE2",
+        color: "#55524C",
+        WebkitFontSmoothing: "antialiased",
+      }}
+    >
+      {/* JSON-LD Structured Data for FAQs */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
 
-          <div className="relative max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cream/10 border border-cream/20 text-xs font-semibold uppercase tracking-wider text-[#D4A574] mb-6">
-              <Hammer size={14} />
-              Ground-Up Build Financing
-            </div>
+      <section className="block">
+        <div className="max-w-[900px] mx-auto bg-[#FBF8F2] px-6 sm:px-14 py-[44px] pb-[60px]">
+          <Link
+            href="/loan-programs"
+            className="text-[13px] text-[#55524C] font-semibold inline-flex items-center gap-1.5 mb-[18px] hover:text-[#B85A1C] transition-colors"
+          >
+            &larr; Back to Loan Programs
+          </Link>
 
-            <h1
-              className={cn(
-                "text-4xl sm:text-5xl lg:text-6xl leading-[1.1] tracking-tight font-light text-primary-bg mb-6",
-                fraunces.className,
-              )}
-            >
-              Construction Loans{" "}
-              <span className="block text-[#D4A574] font-serif italic text-3xl sm:text-4xl lg:text-5xl mt-1">
-                Financing to Build From the Ground Up
-              </span>
-            </h1>
+          <h1 className="font-serif font-bold text-3xl sm:text-[38px] text-[#1C1C1C] mb-[18px] leading-[1.15]">
+            Construction Loans
+          </h1>
 
-            <p className="text-base sm:text-lg text-primary-bg/80 leading-relaxed mb-6 max-w-2xl">
-              Building a home or investment property requires a different type
-              of financing than purchasing an existing property.
-            </p>
+          <hr className="border-0 border-t border-[#E6E0D3] mb-[26px]" />
 
-            <p className="text-xs sm:text-sm text-primary-bg/70 leading-relaxed mb-8 max-w-2xl">
-              Construction loans are designed to help finance eligible land
-              acquisition and construction costs while a property is being
-              built. MyLoanDesk provides access to construction financing
-              options for homeowners, investors, builders, and developers.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/get-quote"
-                className="btn-shine bg-brand-orange text-primary-bg px-8 py-4 rounded-full font-semibold text-sm sm:text-base hover:bg-orange-600 transition-colors shadow-sm flex items-center justify-center gap-2 text-center"
-              >
-                Explore Construction Loan Options
-                <ArrowRight size={18} />
-              </Link>
-              <a
-                href="#calculator"
-                className="bg-cream/10 border border-cream/20 text-primary-bg px-8 py-4 rounded-full font-semibold text-sm sm:text-base hover:bg-cream/20 transition-colors flex items-center justify-center gap-2 text-center"
-              >
-                <Calculator size={18} />
-                Calculate Construction Budget
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* --- WHAT IS A CONSTRUCTION LOAN? --- */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 mb-16 sm:mb-24">
-        <div className="grid lg:grid-cols-12 gap-10 items-center">
-          <div className="lg:col-span-7">
-            <div className="text-[10px] uppercase tracking-[0.25em] text-brand-orange font-semibold mb-3">
-              01 — Overview
-            </div>
-            <h2
-              className={cn(
-                "text-3xl sm:text-4xl lg:text-5xl tracking-tight text-ink font-light leading-tight mb-6",
-                fraunces.className,
-              )}
-            >
-              What Is a Construction Loan?
-            </h2>
-            <p className="text-sm sm:text-base text-ink-2 leading-relaxed mb-6">
-              A construction loan provides financing for an eligible
-              construction project, with funds generally released in stages as
-              work is completed.
-            </p>
-
-            <p className="text-sm sm:text-base text-ink-2 leading-relaxed mb-6">
-              Rather than receiving all construction funds at closing, borrowers
-              typically access funds through a draw process tied to the
-              project&apos;s progress.
-            </p>
-
-            <p className="text-xs text-ink-2/80 italic">
-              * The exact structure depends on the lender and type of
-              construction loan.
-            </p>
-          </div>
-
-          <div className="lg:col-span-5 bg-cream/40 border border-line p-6 sm:p-8 rounded-3xl">
-            <div className="text-xs font-semibold uppercase tracking-wider text-ink-2 mb-4">
-              Core Draw Mechanics
-            </div>
-            <ul className="space-y-3.5 text-xs sm:text-sm text-ink">
-              {[
-                "Stage-Based Fund Releases",
-                "Verified Draw Inspections",
-                "Interest Charged Only on Drawn Funds",
-                "Land Acquisition Integration Options",
-                "Conversion or Refinance to Permanent Loan",
-              ].map((item, idx) => (
-                <li key={idx} className="flex items-start gap-2.5">
-                  <CheckCircle2
-                    size={16}
-                    className="text-moss-deep shrink-0 mt-0.5"
-                  />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* --- CONSTRUCTION FINANCING OPTIONS --- */}
-      <section className="py-16 sm:py-24 border-t border-b border-line bg-cream/20 mb-16 sm:mb-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <div className="text-[10px] uppercase tracking-[0.25em] text-brand-orange font-semibold mb-3">
-              02 — Program Structures
-            </div>
-            <h2
-              className={cn(
-                "text-3xl sm:text-4xl font-light text-ink",
-                fraunces.className,
-              )}
-            >
-              Construction Financing Options
-            </h2>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                title: "Construction-to-Permanent Loans",
-                desc: "Finance construction and transition into longer-term mortgage financing after the home is completed, subject to the specific program structure.",
-                icon: RefreshCw,
-              },
-              {
-                title: "Ground-Up Construction",
-                desc: "Financing for qualifying residential or investment projects being built from the ground up.",
-                icon: Building2,
-              },
-              {
-                title: "Investor Construction Loans",
-                desc: "Programs may be available for experienced real estate investors and builders constructing properties for sale or rental.",
-                icon: Briefcase,
-              },
-              {
-                title: "Land + Construction",
-                desc: "Certain programs may allow eligible land acquisition or existing land equity to be incorporated into the financing structure.",
-                icon: MapPin,
-              },
-            ].map((item, idx) => (
-              <div
-                key={idx}
-                className="bg-primary-bg border border-line rounded-2xl p-6 flex flex-col justify-between shadow-sm"
-              >
-                <div>
-                  <div className="w-10 h-10 rounded-xl bg-moss-deep/10 text-moss-deep flex items-center justify-center font-bold text-sm mb-4">
-                    <item.icon size={20} />
-                  </div>
-                  <h3 className="font-semibold text-base text-ink mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-xs text-ink-2 leading-relaxed">
-                    {item.desc}
-                  </p>
+          <div className="grid grid-cols-1 md:grid-cols-[1.05fr_0.95fr] gap-10 items-start mb-[6px]">
+            <div>
+              <div className="font-sans font-bold text-xs sm:text-[14px] tracking-[0.02em] text-[#B85A1C] uppercase mb-[16px]">
+                Finance your dream home or next development project.
+              </div>
+              <p className="text-[15.5px] leading-[1.7] text-[#55524C] mb-[24px] max-w-[680px]">
+                Whether you&apos;re building a custom home, developing a
+                residential community, or constructing investment properties,
+                MyLoanDesk offers construction financing structured around your
+                project&apos;s timeline — from groundbreaking to certificate of
+                occupancy. Our construction-to-permanent loans combine your
+                build financing and your long-term mortgage into a single
+                closing, so you&apos;re not qualifying twice or paying two sets
+                of closing costs.
+              </p>
+              <div className="flex flex-col gap-2.5 mt-[18px]">
+                <div className="text-[13.5px] text-[#55524C] flex items-center gap-2">
+                  <svg
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    className="shrink-0"
+                  >
+                    <path
+                      d="M20 6L9 17l-5-5"
+                      stroke="#D9722C"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                  One closing — construction converts straight to your mortgage
+                </div>
+                <div className="text-[13.5px] text-[#55524C] flex items-center gap-2">
+                  <svg
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    className="shrink-0"
+                  >
+                    <path
+                      d="M20 6L9 17l-5-5"
+                      stroke="#D9722C"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                  Interest-only payments during the build phase
+                </div>
+                <div className="text-[13.5px] text-[#55524C] flex items-center gap-2">
+                  <svg
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    className="shrink-0"
+                  >
+                    <path
+                      d="M20 6L9 17l-5-5"
+                      stroke="#D9722C"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                  Land equity can count toward your down payment
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+            </div>
 
-      {/* --- HOW CONSTRUCTION FINANCING WORKS --- */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 mb-16 sm:mb-24">
-        <div className="text-center max-w-2xl mx-auto mb-12">
-          <div className="text-[10px] uppercase tracking-[0.25em] text-brand-orange font-semibold mb-3">
-            03 — Process
+            {/* Interactive Calculator Client Component */}
+            <ConstructionCalculator />
           </div>
-          <h2
-            className={cn(
-              "text-3xl sm:text-4xl font-light text-ink",
-              fraunces.className,
-            )}
-          >
+
+          <p className="text-[11.5px] text-[#9A9585] max-w-[680px] mt-[6px] mb-0">
+            Estimate only, based on common construction lending guidelines (up
+            to 80% of total project cost, capped at roughly 75% of completed
+            value). Actual loan amount, rate, and terms depend on underwriting,
+            the builder, and the specific project.
+          </p>
+
+          {/* WHAT IS A CONSTRUCTION LOAN */}
+          <h2 className="font-serif font-bold text-[24px] text-[#1C1C1C] mt-[42px] mb-[14px] leading-[1.25]">
+            What Is a Construction Loan?
+          </h2>
+          <p className="text-[15px] leading-[1.75] text-[#55524C] mb-[14px] max-w-[700px]">
+            A construction loan is short-term financing used to pay for building
+            a home or development project from the ground up. Rather than
+            receiving the full loan amount at closing like a traditional
+            mortgage, funds are released in stages — called draws — as
+            construction reaches specific milestones. Once the home is complete,
+            most construction loans either require a separate mortgage to pay
+            off the balance, or, with a construction-to-permanent loan,
+            automatically convert into a standard long-term mortgage at a single
+            closing.
+          </p>
+          <p className="text-[15px] leading-[1.75] text-[#55524C] mb-[14px] max-w-[700px]">
+            Because the collateral (the finished home) doesn&apos;t exist yet at
+            the time of closing, construction loans are underwritten differently
+            than a mortgage on an existing property — lenders evaluate the
+            borrower, the builder, the plans, and the budget together.
+          </p>
+
+          {/* HOW IT WORKS */}
+          <h2 className="font-serif font-bold text-[24px] text-[#1C1C1C] mt-[42px] mb-[14px] leading-[1.25]">
             How Construction Financing Works
           </h2>
-        </div>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
             {
               step: "1",
-              title: "Project Review",
-              desc: "The lender reviews the borrower, plans, specifications, budget, builder, property, and proposed project.",
+              title: "Finalize your plans and budget.",
+              text: "Lenders will want detailed building plans, a construction budget, and your builder's information.",
             },
             {
               step: "2",
-              title: "Approval & Closing",
-              desc: "Once underwriting and project requirements are satisfied, the construction loan closes.",
+              title: "Get approved and close.",
+              text: "Underwriting evaluates you, your builder, and the project as a whole — closing typically resembles a standard mortgage timeline.",
             },
             {
               step: "3",
-              title: "Construction Draws",
-              desc: "Funds are generally released in stages as specified work is completed and verified.",
+              title: "Funds are released in draws.",
+              text: "As construction reaches milestones — foundation, framing, mechanicals, finishes — an inspection confirms progress and the next draw is released.",
             },
             {
               step: "4",
-              title: "Project Completion",
-              desc: "Loan converts to permanent financing or is paid off/refinanced depending on original structure.",
+              title: "Make interest-only payments.",
+              text: "During the build, you typically pay interest only on the funds actually drawn, not the full loan amount.",
             },
-          ].map((item, idx) => (
+            {
+              step: "5",
+              title: "Convert to a permanent mortgage.",
+              text: "Once construction is complete, a construction-to-permanent loan converts automatically into your long-term mortgage — no second closing required.",
+            },
+          ].map((item) => (
             <div
-              key={idx}
-              className="bg-primary-bg border border-line rounded-2xl p-6 flex flex-col justify-between shadow-sm"
+              key={item.step}
+              className="flex gap-[14px] mb-[16px] max-w-[700px]"
             >
-              <div>
-                <div className="w-10 h-10 rounded-xl bg-moss-deep/10 text-moss-deep flex items-center justify-center font-bold text-sm mb-4">
-                  0{item.step}
-                </div>
-                <h3 className="font-semibold text-base text-ink mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-xs text-ink-2 leading-relaxed">
-                  {item.desc}
-                </p>
+              <div className="shrink-0 w-[28px] h-[28px] rounded-full bg-[#D9722C] text-white font-sans font-bold text-[13px] flex items-center justify-center">
+                {item.step}
+              </div>
+              <div className="text-[14.5px] leading-[1.6] text-[#55524C] pt-[3px]">
+                <strong className="text-[#1C1C1C]">{item.title}</strong>{" "}
+                {item.text}
               </div>
             </div>
           ))}
-        </div>
-      </section>
 
-      {/* --- WHAT WILL THE LENDER REVIEW? --- */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 mb-16 sm:mb-24">
-        <div className="mb-8">
-          <div className="text-[10px] uppercase tracking-[0.25em] text-brand-orange font-semibold mb-2">
-            04 — Underwriting Variables
-          </div>
-          <h2
-            className={cn(
-              "text-3xl sm:text-4xl font-light text-ink",
-              fraunces.className,
-            )}
-          >
-            What Will the Lender Review?
+          {/* PROGRAM HIGHLIGHTS */}
+          <h2 className="font-serif font-bold text-[24px] text-[#1C1C1C] mt-[42px] mb-[14px] leading-[1.25]">
+            Program Highlights
           </h2>
-          <p className="text-xs sm:text-sm text-ink-2 mt-2 max-w-xl">
-            Construction underwriting includes thorough evaluation across
-            project, borrower, and contractor variables:
-          </p>
-        </div>
+          <div className="font-sans font-bold text-[13.5px] tracking-[0.03em] text-[#1C1C1C] uppercase mb-[14px]">
+            What&apos;s included:
+          </div>
+          <ul className="list-none m-0 p-0 mb-[12px] max-w-[700px]">
+            {[
+              "Construction-to-permanent options that convert to a standard mortgage at completion",
+              "Interest-only payments during the build phase",
+              "Draw schedules aligned to construction milestones",
+              "Available for custom homes, spec builds, and small residential developments",
+              "Land acquisition financing available if you don't already own the lot",
+              "Existing land equity can be credited toward your down payment",
+            ].map((highlight, i) => (
+              <li
+                key={i}
+                className="relative pl-[20px] text-[15px] text-[#55524C] leading-[1.6] mb-[11px] before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-[6px] before:h-[6px] before:rounded-full before:bg-[#55524C]"
+              >
+                {highlight}
+              </li>
+            ))}
+          </ul>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
-          {[
-            { title: "Borrower Credit & Profile", icon: ShieldCheck },
-            { title: "Plans & Specifications", icon: FileText },
-            { title: "Construction Budget", icon: DollarSign },
-            { title: "Builder Experience", icon: Briefcase },
-            { title: "Construction Contract", icon: Layers },
-            { title: "Project Timeline", icon: Zap },
-            { title: "Property Appraisal", icon: TrendingUp },
-            { title: "Land Cost or Value", icon: MapPin },
-            { title: "Borrower Equity", icon: DollarSign },
-            { title: "Investor Exit Strategy", icon: RefreshCw },
-          ].map((varItem, idx) => (
-            <div
-              key={idx}
-              className="bg-primary-bg border border-line rounded-xl p-4 flex items-center gap-3 shadow-xs"
-            >
-              <div className="w-8 h-8 rounded-lg bg-moss-deep/10 text-moss-deep flex items-center justify-center shrink-0">
-                <varItem.icon size={16} />
-              </div>
-              <span className="text-xs font-semibold text-ink">
-                {varItem.title}
-              </span>
+          {/* STRATEGIC ADVANTAGES */}
+          <div className="bg-[#F3EFE6] border border-[#E6E0D3] rounded-[12px] p-[26px_28px] mt-[18px] mb-[30px]">
+            <div className="font-sans font-bold text-[13.5px] tracking-[0.03em] text-[#1C1C1C] uppercase mb-[12px]">
+              Strategic Advantages:
             </div>
-          ))}
-        </div>
-      </section>
-
-      {/* --- ALREADY OWN THE LAND? --- */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 mb-16 sm:mb-24">
-        <div className="bg-cream/30 border border-line rounded-3xl p-8 sm:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
-          <div className="max-w-xl">
-            <div className="text-[10px] uppercase tracking-[0.25em] text-brand-orange font-semibold mb-2">
-              05 — Equity Credit
-            </div>
-            <h2
-              className={cn(
-                "text-3xl sm:text-4xl font-light text-ink mb-4",
-                fraunces.className,
-              )}
-            >
-              Already Own the Land?
-            </h2>
-            <p className="text-xs sm:text-sm text-ink-2 leading-relaxed mb-4">
-              Your existing land equity may be important.
+            <p className="text-[14.5px] leading-[1.7] text-[#55524C] mb-[12px]">
+              A construction-to-permanent loan means one closing, not two —
+              saving on closing costs and eliminating the risk of needing to
+              re-qualify for a separate end loan once the home is complete, when
+              rates or your financial picture may have changed.
             </p>
-            <p className="text-xs sm:text-sm text-ink-2 leading-relaxed">
-              Depending on the lender and transaction structure, eligible land
-              equity may be considered when determining the borrower&apos;s
-              contribution to the project. We&apos;ll review how the land was
-              acquired, its value, existing liens, and the proposed construction
-              budget.
+            <p className="text-[14.5px] leading-[1.7] text-[#55524C] mb-[12px]">
+              Draw schedules tied to inspected milestones protect both the
+              builder&apos;s cash flow and the lender&apos;s collateral, keeping
+              the project funded at each stage without requiring you to front
+              costs out of pocket.
+            </p>
+            <p className="text-[14.5px] leading-[1.7] text-[#55524C] m-0">
+              If you already own the land, its equity can often be credited
+              toward your required down payment — reducing the amount of new
+              cash you need to bring to the project.
             </p>
           </div>
 
-          <div className="w-full md:w-auto shrink-0 text-center">
-            <Link
-              href="/calendar"
-              className="btn-shine bg-brand-orange text-primary-bg px-8 py-4 rounded-full font-semibold text-sm sm:text-base hover:bg-orange-600 transition-colors shadow-sm inline-flex items-center justify-center gap-2"
-            >
-              Review My Land Equity
-              <ArrowRight size={18} />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* --- WHY MYLOANDESK? --- */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 mb-16 sm:mb-24">
-        <div className="grid lg:grid-cols-12 gap-10 items-center">
-          <div className="lg:col-span-7">
-            <div className="text-[10px] uppercase tracking-[0.25em] text-brand-orange font-semibold mb-3">
-              06 — Value Proposition
-            </div>
-            <h2
-              className={cn(
-                "text-3xl sm:text-4xl lg:text-5xl tracking-tight text-ink font-light leading-tight mb-6",
-                fraunces.className,
-              )}
-            >
-              Why MyLoanDesk?
-            </h2>
-            <p className="text-sm sm:text-base text-ink-2 leading-relaxed mb-6">
-              Construction financing involves more than simply comparing
-              interest rates. The lender needs to fit the project.
-            </p>
-
-            <p className="text-sm sm:text-base text-ink-2 leading-relaxed">
-              We help evaluate financing based on the borrower, property,
-              builder, budget, construction timeline, and long-term plan for the
-              completed property.
-            </p>
-          </div>
-
-          <div className="lg:col-span-5 bg-moss-deep text-cream p-8 rounded-3xl relative overflow-hidden text-center">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-[#D4A574]/10 rounded-full blur-2xl pointer-events-none" />
-            <h3
-              className={cn(
-                "text-2xl font-light text-primary-bg mb-4",
-                fraunces.className,
-              )}
-            >
-              Have plans, land, or a construction budget ready?
-            </h3>
-            <p className="text-xs text-primary-bg/80 leading-relaxed mb-6">
-              Get customized construction loan terms tailored to your build
-              specifications and contractor timeline.
-            </p>
-            <Link
-              href="/get-quote"
-              className="btn-shine bg-brand-orange text-primary-bg px-6 py-3.5 rounded-full font-semibold text-xs sm:text-sm inline-flex items-center gap-2 hover:bg-orange-600 transition-colors shadow-sm"
-            >
-              Review My Construction Project
-              <ArrowRight size={16} />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* --- CONSTRUCTION CALCULATOR (CLIENT COMPONENT) --- */}
-      <ConstructionCalculator pagePath="/construction-loans" />
-
-      {/* --- FREQUENTLY ASKED QUESTIONS --- */}
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 sm:mb-24">
-        <div className="text-center mb-12">
-          <div className="text-[10px] uppercase tracking-[0.25em] text-brand-orange font-semibold mb-2">
-            07 — Clarity
-          </div>
-          <h2
-            className={cn(
-              "text-3xl sm:text-4xl font-light text-ink",
-              fraunces.className,
-            )}
-          >
-            Construction Loan FAQs
+          {/* WHO THIS IS FOR */}
+          <h2 className="font-serif font-bold text-[24px] text-[#1C1C1C] mt-[42px] mb-[14px] leading-[1.25]">
+            Who Construction Loans Are For
           </h2>
-        </div>
+          <ul className="list-none m-0 p-0 mb-[12px] max-w-[700px]">
+            {[
+              "Buyers building a custom home on land they own or are purchasing",
+              "Small developers building spec homes to sell upon completion",
+              "Investors constructing new rental or multifamily properties",
+              "Landowners looking to use their lot's equity toward a new build",
+              "Buyers who want a single closing rather than separate construction and end loans",
+            ].map((item, i) => (
+              <li
+                key={i}
+                className="relative pl-[20px] text-[15px] text-[#55524C] leading-[1.6] mb-[11px] before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-[6px] before:h-[6px] before:rounded-full before:bg-[#55524C]"
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
 
-        <div className="space-y-4">
+          {/* COMPARISON TABLE */}
+          <h2 className="font-serif font-bold text-[24px] text-[#1C1C1C] mt-[42px] mb-[14px] leading-[1.25]">
+            Construction Loans vs. Other Financing Options
+          </h2>
+          <div className="overflow-x-auto mb-[30px]">
+            <table className="w-full border-collapse font-sans text-[13.5px]">
+              <thead>
+                <tr className="bg-[#1C1C1C] text-white">
+                  <th className="p-[11px_14px] text-left font-bold"></th>
+                  <th className="p-[11px_14px] text-left font-bold">
+                    Construction-to-Permanent
+                  </th>
+                  <th className="p-[11px_14px] text-left font-bold">
+                    Renovation Loan
+                  </th>
+                  <th className="p-[11px_14px] text-left font-bold">
+                    Conventional Mortgage
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-[#E6E0D3]">
+                  <td className="p-[11px_14px] font-bold text-[#1C1C1C]">
+                    Best for
+                  </td>
+                  <td className="p-[11px_14px] text-[#55524C]">
+                    Building a new home from the ground up
+                  </td>
+                  <td className="p-[11px_14px] text-[#55524C]">
+                    Renovating an existing home
+                  </td>
+                  <td className="p-[11px_14px] text-[#55524C]">
+                    Purchasing a completed, move-in-ready home
+                  </td>
+                </tr>
+                <tr className="bg-[#F3EFE6] border-b border-[#E6E0D3]">
+                  <td className="p-[11px_14px] font-bold text-[#1C1C1C]">
+                    Funds disbursed
+                  </td>
+                  <td className="p-[11px_14px] text-[#55524C]">
+                    In draws, tied to construction milestones
+                  </td>
+                  <td className="p-[11px_14px] text-[#55524C]">
+                    Often in draws, tied to renovation scope
+                  </td>
+                  <td className="p-[11px_14px] text-[#55524C]">
+                    In full, at closing
+                  </td>
+                </tr>
+                <tr className="border-b border-[#E6E0D3]">
+                  <td className="p-[11px_14px] font-bold text-[#1C1C1C]">
+                    Payment during project
+                  </td>
+                  <td className="p-[11px_14px] text-[#55524C]">
+                    Interest-only on funds drawn
+                  </td>
+                  <td className="p-[11px_14px] text-[#55524C]">
+                    Varies by program
+                  </td>
+                  <td className="p-[11px_14px] text-[#55524C]">
+                    N/A — no project phase
+                  </td>
+                </tr>
+                <tr className="bg-[#F3EFE6] border-b border-[#E6E0D3]">
+                  <td className="p-[11px_14px] font-bold text-[#1C1C1C]">
+                    Number of closings
+                  </td>
+                  <td className="p-[11px_14px] text-[#55524C]">
+                    One, if construction-to-permanent
+                  </td>
+                  <td className="p-[11px_14px] text-[#55524C]">One</td>
+                  <td className="p-[11px_14px] text-[#55524C]">One</td>
+                </tr>
+                <tr className="border-b border-[#E6E0D3]">
+                  <td className="p-[11px_14px] font-bold text-[#1C1C1C]">
+                    Collateral at closing
+                  </td>
+                  <td className="p-[11px_14px] text-[#55524C]">
+                    Land plus plans (home doesn&apos;t exist yet)
+                  </td>
+                  <td className="p-[11px_14px] text-[#55524C]">
+                    Existing home
+                  </td>
+                  <td className="p-[11px_14px] text-[#55524C]">
+                    Existing home
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          {/* ELIGIBILITY */}
+          <h2 className="font-serif font-bold text-[24px] text-[#1C1C1C] mt-[42px] mb-[14px] leading-[1.25]">
+            Eligibility Requirements
+          </h2>
+          <ul className="list-none m-0 p-0 mb-[12px] max-w-[700px]">
+            {[
+              "Credit score of approximately 680+ (varies by lender and project type)",
+              "Detailed construction plans, specifications, and a realistic budget",
+              "A licensed, vetted builder or general contractor",
+              "Down payment or land equity, typically 10–25% of total project cost",
+              "Sufficient reserves to cover contingencies and unexpected cost increases",
+            ].map((req, i) => (
+              <li
+                key={i}
+                className="relative pl-[20px] text-[15px] text-[#55524C] leading-[1.6] mb-[11px] before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-[6px] before:h-[6px] before:rounded-full before:bg-[#55524C]"
+              >
+                {req}
+              </li>
+            ))}
+          </ul>
+
+          {/* FAQ */}
+          <h2 className="font-serif font-bold text-[24px] text-[#1C1C1C] mt-[42px] mb-[14px] leading-[1.25]">
+            Frequently Asked Questions
+          </h2>
+
           {[
             {
-              q: "Do I need to own the land first?",
-              a: "Not always. Certain construction programs may incorporate eligible land acquisition into the transaction.",
+              q: "What is a construction-to-permanent loan?",
+              a: "A construction-to-permanent loan combines your short-term construction financing and your long-term mortgage into a single loan with a single closing. Once the home is complete, the loan automatically converts into a standard mortgage, so you avoid closing twice and re-qualifying for a separate end loan.",
             },
             {
-              q: "Can land equity count toward my contribution?",
-              a: "Potentially, depending on the lender and transaction structure.",
+              q: "How much down payment is required for a construction loan?",
+              a: "Down payment requirements for construction loans are typically higher than for a standard mortgage, often ranging from 10% to 25% of the total project cost, depending on the lender, the borrower's credit profile, and whether the land is already owned free and clear.",
             },
             {
-              q: "How are construction funds released?",
-              a: "Construction funds are typically released through draws as specified stages of work are completed and verified.",
+              q: "How do construction loan draws work?",
+              a: "Instead of receiving the full loan amount upfront, funds are released in stages called draws, tied to completed construction milestones such as foundation, framing, and finishing. An inspection typically confirms each stage is complete before the next draw is released.",
             },
             {
-              q: "Do I need a licensed contractor?",
-              a: "Builder and contractor requirements vary by lender and program.",
+              q: "Do I pay principal during construction?",
+              a: "Most construction loans are interest-only during the build phase, and interest is typically charged only on the funds that have actually been drawn, not the full loan amount. Principal payments generally begin once the loan converts to a permanent mortgage after construction is complete.",
             },
             {
-              q: "Can investors get construction financing?",
-              a: "Yes. Specialized programs may be available for qualifying investors, builders, and developers.",
+              q: "Can I use a construction loan to build on land I already own?",
+              a: "Yes — if you already own the land free and clear, its value can often be used as equity toward your down payment requirement, which can reduce the amount of cash you need to bring to closing.",
             },
-          ].map((faq, idx) => (
+            {
+              q: "What credit score is needed for a construction loan?",
+              a: "Construction loans generally require a stronger credit profile than a standard mortgage, often 680 or higher, since the lender is financing a project that doesn't yet exist as collateral. Builder experience and a detailed budget and plan set can also strengthen an application.",
+            },
+            {
+              q: "How long does construction loan financing take to close?",
+              a: "Initial closing on a construction-to-permanent loan typically takes a similar timeframe to a conventional mortgage, often 30 to 45 days, since it requires underwriting the borrower, the builder, and the full project plans and budget.",
+            },
+            {
+              q: "What happens if construction costs more than the original budget?",
+              a: "Cost overruns are common in construction projects. Many lenders require a contingency reserve built into the original budget, and some allow a loan modification if costs increase significantly. Planning a realistic budget with a contingency buffer upfront is the best way to avoid a funding gap mid-project.",
+              border: false,
+            },
+          ].map((faq, i) => (
             <div
-              key={idx}
-              className="bg-primary-bg border border-line rounded-2xl p-6 shadow-sm"
+              key={i}
+              className={`py-[16px] ${
+                faq.border !== false ? "border-b border-[#E6E0D3]" : ""
+              }`}
             >
-              <h3 className="font-semibold text-base text-ink mb-2 flex items-start gap-2">
-                <HelpCircle
-                  size={18}
-                  className="text-brand-orange shrink-0 mt-0.5"
-                />
-                <span>{faq.q}</span>
-              </h3>
-              <p className="text-xs sm:text-sm text-ink-2 leading-relaxed pl-6">
+              <p className="font-sans font-bold text-[15px] text-[#1C1C1C] m-0 mb-[6px]">
+                {faq.q}
+              </p>
+              <p className="text-[14.5px] leading-[1.7] text-[#55524C] m-0">
                 {faq.a}
               </p>
             </div>
           ))}
-        </div>
-      </section>
 
-      {/* --- BOTTOM CTA --- */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
-        <div className="bg-cream/40 border border-line rounded-[32px] p-8 sm:p-12 text-center max-w-3xl mx-auto">
-          <h2
-            className={cn(
-              "text-3xl sm:text-4xl font-light text-ink mb-4",
-              fraunces.className,
-            )}
-          >
-            Let&apos;s Find Financing That Fits Your Project.
-          </h2>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-6">
+          {/* CTA BUTTONS */}
+          <div className="mt-[36px]">
             <Link
-              href="/get-quote"
-              className="btn-shine bg-brand-orange text-primary-bg px-8 py-4 rounded-full font-semibold text-sm sm:text-base hover:bg-orange-600 transition-colors shadow-sm flex items-center justify-center gap-2 w-full sm:w-auto"
+              href="/get-started"
+              className="flex items-center justify-center gap-[8px] w-full bg-[#D9722C] text-white font-sans font-bold text-[15px] p-[16px] border-0 rounded-[10px] cursor-pointer mb-[10px] no-underline hover:bg-[#B85A1C] transition-colors"
             >
-              Get My Construction Loan Options
-              <ArrowRight size={18} />
+              Apply Now &rarr;
             </Link>
+            <Link
+              href="/contact"
+              className="flex items-center justify-center w-full bg-[#F5EFDF] text-[#1C1C1C] font-sans font-bold text-[15px] p-[16px] border border-[#E7DEC7] rounded-[10px] cursor-pointer no-underline hover:bg-[#EFE7D3] transition-colors"
+            >
+              Contact Us Now
+            </Link>
+            <div className="text-center text-[12.5px] text-[#8F8A7C] mt-[14px]">
+              Already have plans and a builder lined up? Send us the details — a
+              loan officer will walk through your numbers the same day.
+            </div>
           </div>
-
-          <p className="text-[11px] text-ink-2/70 mt-6 leading-relaxed italic max-w-2xl mx-auto">
-            Construction financing is subject to lender approval, project
-            review, appraisal, builder approval, draw requirements, loan-to-cost
-            and loan-to-value limitations, and other underwriting requirements.
-          </p>
         </div>
       </section>
     </main>
