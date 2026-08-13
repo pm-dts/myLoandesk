@@ -269,7 +269,7 @@ const AffordabilityCalculator = () => {
     monthlyRate === 0
       ? 1 / loanTermMonths
       : (monthlyRate * Math.pow(1 + monthlyRate, loanTermMonths)) /
-      (Math.pow(1 + monthlyRate, loanTermMonths) - 1);
+        (Math.pow(1 + monthlyRate, loanTermMonths) - 1);
   const maxLoanAmount = maxPayment / paymentFactor;
   const estimatedHomePrice = Math.max(0, maxLoanAmount + downPayment);
 
@@ -744,7 +744,7 @@ export default function CalculatorsHub() {
     },
   ];
 
-  const handleOpenCalculator = (calc: typeof calculators[number]) => {
+  const handleOpenCalculator = (calc: (typeof calculators)[number]) => {
     sendGTMEvent({
       event: "calculator_opened",
       category: "engagement",
@@ -769,7 +769,7 @@ export default function CalculatorsHub() {
           <h2
             className={`text-5xl md:text-6xl text-[#0F2027] mb-4 tracking-tight ${fraunces.className}`}
           >
-            Try Our Calculators
+            Try Our Mortgage Calculators
           </h2>
           <p className="text-lg text-gray-600 max-w-xl">
             Powerful tools to help you make smarter mortgage decisions.

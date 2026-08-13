@@ -182,7 +182,7 @@ export const Header: React.FC = () => {
       />
 
       {/* --- DESKTOP NAVIGATION --- */}
-      <nav className="hidden lg:flex max-w-[1600px] mx-auto px-6 lg:px-8 h-36 items-center justify-between gap-4">
+      <nav className="hidden lg:flex max-w-[1600px] mx-auto pl-1 pr-5 h-36 items-center justify-between gap-3">
         {/* Desktop Logo Layout */}
         <Link href="/" className="shrink-0 flex items-center py-2">
           <Image
@@ -196,7 +196,7 @@ export const Header: React.FC = () => {
         </Link>
 
         {/* Center Links */}
-        <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-[13px] font-medium text-ink-2 whitespace-nowrap relative">
+        <div className="flex flex-wrap items-center gap-x-3.5 gap-y-1 text-[13px] font-medium text-ink-2 whitespace-nowrap relative">
           <div
             className="relative group py-2" // Added padding to increase hover target area
             onMouseEnter={handleMouseEnterDropdown}
