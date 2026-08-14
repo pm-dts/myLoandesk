@@ -597,7 +597,7 @@ export default function BankStatementLoansPage() {
             },
             {
               q: "Will large one-time deposits count as income?",
-              a: "Typically no — lenders generally look for consistent, recurring deposits and may exclude transfers or one-time windfalls.",
+              a: "Yes, in some cases. Large one-time deposits may be considered depending on the loan program and the source of the funds. Lenders will review the deposit history and documentation to determine whether the funds can be included as qualifying income.",
             },
             {
               q: "Is 24 months of statements always required?",
