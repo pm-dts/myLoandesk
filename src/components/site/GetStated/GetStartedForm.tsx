@@ -109,6 +109,7 @@ export default function GetStartedForm() {
         label: "Get Started Form",
       });
       setShowSuccess(true);
+      window.scrollTo({ top: 0, behavior: "smooth" });
     } catch (error) {
       console.error("Error submitting lead to GHL:", error);
       // Fallback success screen even if webhook fails, to prevent UX block
@@ -169,23 +170,45 @@ export default function GetStartedForm() {
 
         {/* Conditional Rendering: Form OR Success Message */}
         {showSuccess ? (
-          <div className="bg-cream/30 border border-line rounded-[32px] p-8 sm:p-12 shadow-sm flex flex-col items-center justify-center animate-in fade-in zoom-in-95 duration-500">
+          <div className="bg-cream/30 border border-line rounded-[32px] p-8 sm:p-12 shadow-sm flex flex-col items-center justify-center animate-in fade-in zoom-in-95 duration-500 text-center">
             <div className="w-16 h-16 rounded-full bg-moss-deep/10 text-moss-deep flex items-center justify-center mx-auto mb-6">
               <CheckCircle2 size={32} />
             </div>
+
             <h2
               className={cn(
-                "text-3xl sm:text-4xl font-light text-center text-ink mb-4",
+                "text-3xl sm:text-4xl font-light text-ink mb-2",
                 fraunces.className,
               )}
             >
-              Thank You
+              Thank You{answers.firstName ? `, ${answers.firstName}` : ""}!
             </h2>
-            <p className="text-ink-2 leading-relaxed mb-8 max-w-lg text-center">
-              We’ve received your information. A MyLoanDesk mortgage
-              professional will review your answers and help identify financing
-              options that fit your goals.
+
+            <p className="text-sm sm:text-base font-semibold text-moss-deep mb-4">
+              Your inquiry has been successfully submitted.
             </p>
+
+            <p className="text-sm sm:text-base text-ink-2 leading-relaxed mb-6 max-w-lg">
+              A MyLoanDesk mortgage professional will review your information
+              and contact you shortly to discuss financing options that may fit
+              your goals.
+            </p>
+
+            <div className="bg-primary-bg border border-line rounded-2xl p-5 mb-8 w-full max-w-md shadow-xs">
+              <div className="text-xs font-semibold uppercase tracking-wider text-ink-2 mb-1">
+                Need immediate assistance?
+              </div>
+              <div className="text-sm sm:text-base font-medium text-ink">
+                Call or text{" "}
+                <a
+                  href="tel:3058916500"
+                  className="font-bold text-brand-orange hover:underline"
+                >
+                  (305) 891-6500
+                </a>
+              </div>
+            </div>
+
             <div className="flex flex-col sm:flex-row w-full max-w-md gap-4">
               <a
                 href="/#start"
