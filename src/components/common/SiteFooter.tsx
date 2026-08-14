@@ -7,10 +7,6 @@ import { usePathname } from "next/navigation";
 
 import brandLogo from "@/assets/new-logo.png";
 import youTubeIcon from "@/assets/youtube.png";
-// import facebookIcon from "@/assets/communication.png";
-// import instagramIcon from "@/assets/instagram.png";
-// import tikTokIcon from "@/assets/tik-tok.png";
-// import whatsappIcon from "@/assets/whatsapp.png";
 import qrImg from "@/assets/qr.avif";
 
 export default function Footer() {
@@ -47,10 +43,10 @@ export default function Footer() {
   };
 
   return (
-    <footer className="text-ink bg-cream pt-20 pb-10 select-none">
+    <footer className="text-ink bg-cream pt-16 pb-12 select-none border-t border-line">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         {/* Main Footer Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-10 gap-10 lg:gap-8 pb-14 border-b border-ink/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-10 gap-10 lg:gap-8 pb-12 border-b border-ink/10">
           {/* Brand & Socials Column */}
           <div className="md:col-span-2 lg:col-span-4 space-y-4">
             <Link
@@ -63,29 +59,14 @@ export default function Footer() {
                 alt="My Loan Desk Logo"
                 width={220}
                 height={160}
-                className="w-78 h-auto object-contain"
+                className="w-72 h-auto object-contain"
                 priority
               />
             </Link>
 
-            <p className="text-sm leading-relaxed text-ink/65 max-w-sm">
-              MyLoanDesk.com is a dba of Secured Horizon Financial Group, Inc.
-              Secured Horizon Mortgage Group, Inc. NMLS 314226, 1444825.
-              <br />
-              <a
-                href="http://www.nmlsconsumeraccess.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() =>
-                  trackFooterContact(
-                    "NMLS Consumer Access",
-                    "http://www.nmlsconsumeraccess.org/",
-                  )
-                }
-                className="text-ink/75 hover:text-brand-orange underline inline-block mt-1 transition-colors break-all"
-              >
-                http://www.nmlsconsumeraccess.org/
-              </a>
+            <p className="text-sm leading-relaxed text-ink/75 max-w-sm">
+              Your trusted mortgage partner for conventional, government, and
+              innovative investor loan programs nationwide.
             </p>
 
             {/* Social Media Links */}
@@ -124,7 +105,6 @@ export default function Footer() {
             <div className="text-[10px] uppercase tracking-[0.2em] text-ink/40 font-bold mb-5">
               Links
             </div>
-            {/* Display as a 2-column grid on small screens, falling back to block layout on sm+ */}
             <ul className="grid grid-cols-2 gap-y-3 gap-x-4 sm:block sm:space-y-3 text-sm font-medium">
               {[
                 { label: "Get a quote", href: "/get-quote" },
@@ -138,6 +118,7 @@ export default function Footer() {
                 { label: "Lenders", href: "/#lenders" },
                 { label: "Careers", href: "/careers" },
                 { label: "Blog", href: "/blog" },
+                { label: "Accessibility", href: "/accessibility" },
                 { label: "Privacy Policy", href: "/privacy-policy" },
                 { label: "Terms & Conditions", href: "/terms-conditions" },
                 { label: "Cookies Policy", href: "/cookies-policy" },
@@ -205,11 +186,11 @@ export default function Footer() {
               <li>
                 <span>Fax: </span>
                 <a
-                  href="tel:(855)794-7611"
+                  href="tel:8557947611"
                   onClick={() => trackFooterContact("Fax", "(855)794-7611")}
                   className="text-ink/70 hover:text-brand-orange transition-colors duration-200 font-mono"
                 >
-                  (855)794-7611
+                  (855) 794-7611
                 </a>
               </li>
               <li>
@@ -224,11 +205,15 @@ export default function Footer() {
                   info@myloandesk.com
                 </a>
               </li>
-              <li className="text-ink/50 text-xs font-normal">
-                <p className="text-sm font-medium text-ink-2 mb-2">
-                  Let's connect on whatsapp:
+              <li className="text-ink/50 text-xs font-normal pt-1">
+                <p className="text-xs font-semibold text-ink-2 mb-2">
+                  Let's connect on WhatsApp:
                 </p>
-                <Image src={qrImg} alt="qr" />
+                <Image
+                  src={qrImg}
+                  alt="WhatsApp QR Code"
+                  className="w-24 h-auto rounded-lg border border-line"
+                />
               </li>
               <li className="pt-2">
                 <Link
@@ -244,83 +229,49 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Legal Section */}
-        <div className="pt-8 flex flex-col gap-6 justify-between items-start text-xs text-ink/50 leading-relaxed">
-          <div className="w-full">
-            <p className="font-medium text-ink/60">
-              © {new Date().getFullYear()} MyLoanDesk LLC · NMLS #1846297 ·
-              Equal Housing Lender
-            </p>
-            <p className="mt-4">
-              Interest Rates, APR's & programs are illustrations subject to
-              change at any time. These do not constitute a 'Loan or Good Faith
-              Estimate' for payments and closing costs. Not all applicants will
-              qualify. APR may vary by product type. Consumer is not obligated
-              to use any party mentioned. MyLoanDesk.com is not affiliated with
-              FHA, VA, USDA or the Federal Government. MyLoanDesk.com supports
-              Equal Housing Opportunity. MyLoanDesk.com is a dba of Secured
-              Horizon Financial Group, Inc. Secured Horizon Mortgage Group, Inc.
-              NMLS 314226,1444825 (www.nmlsconsumeraccess.org) | (305) 891-6500
-              | 1801 NE 123 St, Suite 314, North Miami, FL 33181. Regulated by
-              FL Division of Real Estate.
-            </p>
-
-            {/* ADA Accessibility Statement */}
-            <div className="mt-8 pt-8 border-t border-ink/10">
-              <h4 className="font-bold text-ink/70 mb-3 text-sm">
-                ADA Accessibility Statement
-              </h4>
-              <p className="mb-5">
-                MyLoanDesk is committed to providing a website that is
-                accessible to all its customers and compliant with the Web
-                Content Accessibility Guidelines (WCAG) put forth by the World
-                Wide Web Consortium (W3C). We are continually making
-                improvements to meet these guidelines, and our website has been
-                designed with accessibility guidelines in mind.
-              </p>
-
-              <h5 className="font-semibold text-ink/60 mb-2">
-                Need help or have feedback?
-              </h5>
-              <p className="mb-3">
-                If you have specific questions or feedback about this site's
-                accessibility or need assistance using specific features, please
-                contact us via email at{" "}
-                <a
-                  href="mailto:info@myloandesk.com"
-                  onClick={() =>
-                    trackFooterContact(
-                      "ADA Support Email",
-                      "info@myloandesk.com",
-                    )
-                  }
-                  className="text-ink/75 hover:text-brand-orange underline transition-colors"
-                >
-                  info@myloandesk.com
-                </a>
-              </p>
-              <p className="mb-3">
-                If you have found an inaccessible area on the site, please
-                assist our team by informing us of the issue via email at{" "}
-                <a
-                  href="mailto:info@myloandesk.com"
-                  onClick={() =>
-                    trackFooterContact(
-                      "ADA Feedback Email",
-                      "info@myloandesk.com",
-                    )
-                  }
-                  className="text-ink/75 hover:text-brand-orange underline transition-colors"
-                >
-                  info@myloandesk.com
-                </a>
-              </p>
-              <p>
-                In the event a page cannot be made accessible, we will work with
-                you to make a text version of the content available.
-              </p>
-            </div>
+        {/* Bottom Legal & Regulatory Deck */}
+        <div className="pt-8 space-y-4 text-[13px] sm:text-sm text-ink/75 leading-relaxed">
+          {/* Licensing & DBA Line */}
+          <div className="font-medium text-ink/90 flex flex-wrap items-center gap-x-2 gap-y-1">
+            <span>
+              MyLoanDesk.com is a DBA of Secured Horizon Financial Group, Inc. /
+              Secured Horizon Mortgage Group, Inc.
+            </span>
           </div>
+
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs sm:text-[13px] font-semibold text-ink/85">
+            <span>NMLS #341393 (Individual)</span>
+            <span>|</span>
+            <span>NMLS #314226, #1444825 (Company)</span>
+            <span>|</span>
+            <a
+              href="https://www.nmlsconsumeraccess.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-brand-orange hover:underline"
+            >
+              NMLS Consumer Access
+            </a>
+            <span>|</span>
+            <span>Equal Housing Opportunity</span>
+          </div>
+
+          {/* Copyright */}
+          <div className="text-xs text-ink/60 pt-1">
+            © 2026 MyLoanDesk. All rights reserved.
+          </div>
+
+          {/* Regulatory / Disclaimer Paragraph */}
+          <p className="text-sm text-ink/70 leading-normal pt-1">
+            Interest Rates, APRs, and loan programs are illustrations subject to
+            change at any time without notice. These do not constitute a Loan
+            Estimate or Good Faith Estimate for payments and closing costs. Not
+            all applicants will qualify. APR may vary by product type. Consumers
+            are not obligated to use any party mentioned. MyLoanDesk.com is not
+            affiliated with FHA, VA, USDA, or the Federal Government. 1801 NE
+            123rd St, Suite 314, North Miami, FL 33181 | (305) 891-6500.
+            Regulated by the FL Division of Real Estate.
+          </p>
         </div>
       </div>
     </footer>
