@@ -91,12 +91,15 @@ export default function LoansSection() {
         {/* Cards Grid */}
         <div className="grid sm:grid-cols-2 gap-6 max-w-7xl mx-auto items-stretch">
           {/* Forward Mortgage Card */}
-          <article className="bg-cream border border-line rounded-2xl p-7 transition-all duration-300 hover:border-moss-deep/30 hover:shadow-[0_20px_50px_-20px_rgba(15,61,46,0.25)] flex flex-col justify-between">
+          <article
+            onClick={() => router.push("/loan-programs#resident")}
+            className="group bg-cream border border-line rounded-2xl p-7 transition-all duration-300 hover:border-moss-deep/30 hover:shadow-[0_20px_50px_-20px_rgba(15,61,46,0.25)] flex flex-col justify-between cursor-pointer"
+          >
             <div>
-              <div className="w-12 h-12 rounded-xl bg-moss-deep/10 flex items-center justify-center mb-5 shrink-0">
+              <div className="w-12 h-12 rounded-xl bg-moss-deep/10 flex items-center justify-center mb-5 shrink-0 transition-transform duration-300 group-hover:scale-105">
                 <Home className="text-moss-deep" size={22} strokeWidth={1.8} />
               </div>
-              <h3 className="font-display text-2xl mb-2 text-ink">
+              <h3 className="font-display text-2xl mb-2 text-ink group-hover:text-brand-orange transition-colors">
                 Forward Mortgage
               </h3>
               <p className="text-sm text-ink-2 leading-relaxed mb-6">
@@ -109,36 +112,38 @@ export default function LoansSection() {
 
             <div className="mt-auto space-y-3 pt-4 border-t border-line/40">
               <button
-                onClick={() =>
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation(); // Prevents card navigation
                   setActiveVideo({
                     src: "https://myloandesk-assets.s3.eu-north-1.amazonaws.com/Forward+Mortgage_1080p_caption.mp4",
                     title: "Forward Mortgage",
-                  })
-                }
-                className="w-full py-3 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-semibold flex items-center justify-center gap-2 transition-all shadow-sm"
+                  });
+                }}
+                className="w-full py-3 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-semibold flex items-center justify-center gap-2 transition-all shadow-sm relative z-10"
               >
                 <PlayCircle size={16} /> See how it's done
               </button>
-              <button
-                onClick={() => router.push("/loan-programs#resident")}
-                className="w-full py-3 bg-cream hover:bg-moss-deep hover:text-white border border-line hover:border-moss-deep rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-2 transition-all"
-              >
+              <div className="w-full py-3 bg-cream group-hover:bg-moss-deep group-hover:text-white border border-line group-hover:border-moss-deep rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-2 transition-all">
                 Explore Options <ArrowRight size={14} />
-              </button>
+              </div>
             </div>
           </article>
 
           {/* Reverse Mortgage Card */}
-          <article className="bg-cream border border-line rounded-2xl p-7 transition-all duration-300 hover:border-moss-deep/30 hover:shadow-[0_20px_50px_-20px_rgba(15,61,46,0.25)] flex flex-col justify-between">
+          <article
+            onClick={() => router.push("/reverse-mortgage")}
+            className="group bg-cream border border-line rounded-2xl p-7 transition-all duration-300 hover:border-moss-deep/30 hover:shadow-[0_20px_50px_-20px_rgba(15,61,46,0.25)] flex flex-col justify-between cursor-pointer"
+          >
             <div>
-              <div className="w-12 h-12 rounded-xl bg-brand-orange/10 flex items-center justify-center mb-5 shrink-0">
+              <div className="w-12 h-12 rounded-xl bg-brand-orange/10 flex items-center justify-center mb-5 shrink-0 transition-transform duration-300 group-hover:scale-105">
                 <RefreshCw
                   className="text-brand-orange"
                   size={22}
                   strokeWidth={1.8}
                 />
               </div>
-              <h3 className="font-display text-2xl mb-2 text-ink">
+              <h3 className="font-display text-2xl mb-2 text-ink group-hover:text-brand-orange transition-colors">
                 Reverse Mortgage
               </h3>
               <p className="text-sm text-ink-2 leading-relaxed mb-6">
@@ -150,22 +155,21 @@ export default function LoansSection() {
 
             <div className="mt-auto space-y-3 pt-4 border-t border-line/40">
               <button
-                onClick={() =>
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation(); // Prevents card navigation
                   setActiveVideo({
                     src: "https://myloandesk-assets.s3.eu-north-1.amazonaws.com/Reverse+Mortgage+%E2%80%93+Turn+Your+Home+Equity+Into+Financial+Freedom_1080p_caption.mp4",
                     title: "Reverse Mortgage",
-                  })
-                }
-                className="w-full py-3 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-semibold flex items-center justify-center gap-2 transition-all shadow-sm"
+                  });
+                }}
+                className="w-full py-3 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-semibold flex items-center justify-center gap-2 transition-all shadow-sm relative z-10"
               >
                 <PlayCircle size={16} /> See how it's done
               </button>
-              <button
-                onClick={() => router.push("/reverse-mortgage")}
-                className="w-full py-3 bg-cream hover:bg-moss-deep hover:text-white border border-line hover:border-moss-deep rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-2 transition-all"
-              >
+              <div className="w-full py-3 bg-cream group-hover:bg-moss-deep group-hover:text-white border border-line group-hover:border-moss-deep rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-2 transition-all">
                 Explore Options <ArrowRight size={14} />
-              </button>
+              </div>
             </div>
           </article>
         </div>

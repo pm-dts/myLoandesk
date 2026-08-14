@@ -16,7 +16,7 @@ import Link from "next/link";
 import { sendGTMEvent } from "@next/third-parties/google";
 import { usePathname } from "next/navigation";
 
-import brandLogo from "@/assets/new-logo.png";
+import brandLogo from "@/assets/logo-cropped.png";
 
 const loanLinks = [
   { name: "Conventional Loans", href: "/loan-programs#conventional" },
@@ -40,7 +40,6 @@ const loanLinks = [
   { name: "DSCR Investment Property Loans", href: "/loan-programs#DSCR" },
   { name: "Fix & Flip Loans", href: "/loan-programs#fix-flip" },
   { name: "Construction Loans", href: "/loan-programs#ground-up" },
-  // { name: "Bridge Loans", href: "/loan-programs#bridge-loans" },
   { name: "Reverse Mortgage", href: "/loan-programs#reverse-mortgage" },
   {
     name: "Commercial Real Estate Loans",
@@ -66,9 +65,7 @@ export const Header: React.FC = () => {
   const pathname = usePathname();
 
   useEffect(() => {
-    // Trigger the neon flash effect shortly after the component mounts
     const startFlash = setTimeout(() => setIsFlashing(true), 500);
-    // Remove the class after the animation completes so it resets cleanly
     const endFlash = setTimeout(() => setIsFlashing(false), 3000);
 
     const handleHashScroll = () => {
@@ -110,7 +107,7 @@ export const Header: React.FC = () => {
   const handleMouseLeaveDropdown = () => {
     dropdownTimeoutRef.current = setTimeout(() => {
       setIsDropdownOpen(false);
-    }, 200); // 200ms delay to make it easier to move the mouse
+    }, 200);
   };
 
   // Tracking Handlers
@@ -182,23 +179,25 @@ export const Header: React.FC = () => {
       />
 
       {/* --- DESKTOP NAVIGATION --- */}
-      <nav className="hidden lg:flex max-w-[1600px] mx-auto pl-1 pr-5 h-36 items-center justify-between gap-3">
+      <nav className="hidden lg:flex max-w-[1600px] mx-auto pl-2 pr-5 h-36 items-center justify-between gap-3">
         {/* Desktop Logo Layout */}
-        <Link href="/" className="shrink-0 flex items-center py-2">
+        <Link href="/" className="shrink-0 flex items-center py-2 z-10">
           <Image
             src={brandLogo}
             alt="My Loan Desk Logo"
             width={270}
             height={100}
-            className={`w-auto h-46 object-contain transition-all duration-300 hover-neon-flash ${isFlashing ? "neon-flash-active" : ""}`}
+            className={`w-auto h-28 ml-1 object-contain transition-all duration-300 hover-neon-flash ${
+              isFlashing ? "neon-flash-active" : ""
+            }`}
             priority
           />
         </Link>
 
         {/* Center Links */}
-        <div className="flex flex-wrap items-center gap-x-3.5 gap-y-1 text-[13px] font-medium text-ink-2 whitespace-nowrap relative">
+        <div className="flex flex-wrap items-center gap-x-3.5 gap-y-1 text-[13px] font-medium text-ink-2 whitespace-nowrap relative z-10">
           <div
-            className="relative group py-2" // Added padding to increase hover target area
+            className="relative group py-2"
             onMouseEnter={handleMouseEnterDropdown}
             onMouseLeave={handleMouseLeaveDropdown}
           >
@@ -210,13 +209,17 @@ export const Header: React.FC = () => {
               Loan types
               <ChevronDown
                 size={13}
-                className={`transition-transform duration-300 ${isDropdownOpen ? "rotate-180" : ""}`}
+                className={`transition-transform duration-300 ${
+                  isDropdownOpen ? "rotate-180" : ""
+                }`}
               />
             </Link>
 
-            {/* Added a transparent bridge area to keep hover active between the link and the dropdown */}
+            {/* Transparent bridge area to keep hover active between the link and the dropdown */}
             <div
-              className={`absolute left-0 top-full h-4 w-full ${isDropdownOpen ? "block" : "hidden"}`}
+              className={`absolute left-0 top-full h-4 w-full ${
+                isDropdownOpen ? "block" : "hidden"
+              }`}
             ></div>
 
             <div
@@ -303,23 +306,27 @@ export const Header: React.FC = () => {
         </div>
 
         {/* --- Action Button Deck --- */}
-        <div className="flex items-center gap-6 shrink-0">
+        <div className="flex items-center gap-6 shrink-0 relative z-20">
           {/* Phone and Quote Column */}
-          <div className="flex flex-col items-center gap-2">
+          <div className="flex flex-col items-center justify-center">
+            {/* Phone link with dedicated clickable container */}
             <a
               href="tel:3058916500"
               onClick={() => trackPhoneClick("Desktop Header Phone Link")}
-              className="text-brand-orange font-bold text-sm underline underline-offset-2 hover:text-orange-600 transition-colors"
+              className="relative z-30 inline-block py-1 text-brand-orange font-bold text-sm underline underline-offset-4 hover:text-orange-600 transition-colors cursor-pointer"
             >
               Call/Text (305) 891-6500
             </a>
-            <Link
-              href="/get-started"
-              onClick={() => trackQuoteClick("Desktop Header")}
-              className="btn-shine bg-brand-orange text-white px-5 py-2.5 rounded-full font-bold text-xs flex items-center gap-1.5 uppercase tracking-wider hover:bg-orange-600 transition-colors shadow-sm"
-            >
-              Get A Quote <PlayCircle size={16} />
-            </Link>
+
+            <div className="mt-2.5">
+              <Link
+                href="/get-quote"
+                onClick={() => trackQuoteClick("Desktop Header")}
+                className="btn-shine bg-brand-orange text-white px-5 py-2.5 rounded-full font-bold text-xs flex items-center gap-1.5 uppercase tracking-wider hover:bg-orange-600 transition-colors shadow-sm"
+              >
+                Get A Quote <PlayCircle size={16} />
+              </Link>
+            </div>
           </div>
 
           {/* Stacked Buttons Column */}
@@ -361,7 +368,7 @@ export const Header: React.FC = () => {
           {/* Menu Button */}
           <button
             onClick={toggleMobileMenu}
-            className="absolute left-4 w-11 h-11 flex items-center justify-center rounded-full border border-line text-ink-2 bg-cream/40 focus-ring"
+            className="absolute left-4 w-11 h-11 flex items-center justify-center rounded-full border border-line text-ink-2 bg-cream/40 focus-ring z-20"
             aria-label="Toggle Menu"
             aria-expanded={isMobileMenuOpen}
           >
@@ -369,31 +376,33 @@ export const Header: React.FC = () => {
           </button>
 
           {/* Centered Bigger Logo */}
-          <Link href="/" className="shrink-0 flex items-center justify-center ">
+          <Link href="/" className="shrink-0 flex items-center justify-center">
             <Image
               src={brandLogo}
               alt="My Loan Desk Logo"
               width={220}
               height={80}
-              className={`w-auto h-34 object-contain transition-all duration-300 hover-neon-flash ${isFlashing ? "neon-flash-active" : ""}`}
+              className={`w-auto h-26 ml-2 p-2 object-contain transition-all duration-300 hover-neon-flash ${
+                isFlashing ? "neon-flash-active" : ""
+              }`}
               priority
             />
           </Link>
         </div>
 
         {/* Row 2: Secondary Action Button Line */}
-        <div className="px-4 pb-2 flex flex-col gap-2 border-b border-line/50 bg-cream/10">
+        <div className="px-4 py-3 flex flex-col gap-2.5 border-b border-line/50 bg-cream/10">
           <a
             href="tel:3058916500"
             onClick={() => trackPhoneClick("Mobile Subheader Phone Link")}
-            className="text-brand-orange text-center font-bold underline underline-offset-2 hover:text-orange-600 transition-colors"
+            className="relative z-30 inline-block py-0.5 text-brand-orange text-center font-bold underline underline-offset-4 hover:text-orange-600 transition-colors"
           >
             Call/Text (305) 891-6500
           </a>
           <Link
-            href="/get-started"
+            href="/get-quote"
             onClick={() => trackQuoteClick("Mobile Subheader")}
-            className="btn-shine w-full bg-brand-orange text-primary-bg py-1.5 rounded-full text-md font-semibold tracking-wide flex items-center justify-center transition-colors focus-ring"
+            className="btn-shine w-full bg-brand-orange text-primary-bg py-2 rounded-full text-sm font-semibold tracking-wide flex items-center justify-center transition-colors focus-ring shadow-sm"
           >
             Get a Quote
           </Link>
@@ -494,7 +503,9 @@ export const Header: React.FC = () => {
                 Loan Programs Options
                 <ChevronDown
                   size={16}
-                  className={`transition-transform duration-200 ${isMobileLoanOpen ? "rotate-180 text-brand-orange" : ""}`}
+                  className={`transition-transform duration-200 ${
+                    isMobileLoanOpen ? "rotate-180 text-brand-orange" : ""
+                  }`}
                 />
               </button>
 
