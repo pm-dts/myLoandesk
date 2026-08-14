@@ -11,7 +11,14 @@ export const metadata: Metadata = {
     description:
       "Stay informed with MyLoanDesk's blog. Explore market updates, negotiation strategies, and mortgage insights to navigate the housing market with confidence.",
     type: "website",
-    url: "https://www.myloandesk.com/blog",
+    url: "/blog",
+  },
+  alternates: {
+    canonical: "/blog/",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

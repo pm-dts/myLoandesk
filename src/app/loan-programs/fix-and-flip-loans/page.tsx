@@ -7,14 +7,14 @@ export const metadata: Metadata = {
   description:
     "Fix and flip loans with fast closings, rehab budget financing, and interest-only payments. Use our free deal calculator to check your numbers against the 70% rule before you apply.",
   alternates: {
-    canonical: "https://www.myloandesk.com/loan-programs/fix-and-flip-loans/",
+    canonical: "/loan-programs/fix-and-flip-loans/",
   },
   openGraph: {
     title: "Fix and Flip Loans for Real Estate Investors | MyLoanDesk",
     description:
       "Fast, flexible financing for house flippers — purchase, rehab, and resell without tying up your own cash. Run your numbers with our free fix and flip deal calculator.",
     type: "website",
-    url: "https://www.myloandesk.com/loan-programs/fix-and-flip-loans/",
+    url: "/loan-programs/fix-and-flip-loans/",
   },
   robots: {
     index: true,

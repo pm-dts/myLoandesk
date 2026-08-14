@@ -15,7 +15,14 @@ export const metadata: Metadata = {
     description:
       "Explore career opportunities at MyLoanDesk. Join our team of dedicated professionals and help clients achieve their homeownership dreams.",
     type: "website",
-    url: "https://www.myloandesk.com/careers",
+    url: "/careers",
+  },
+  alternates: {
+    canonical: "/careers/",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

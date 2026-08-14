@@ -32,6 +32,14 @@ export const metadata: Metadata = {
     description:
       "Qualify with your bank deposits, not your tax returns. Designed for business owners, 1099 earners, and freelancers.",
     type: "website",
+    url: "/loan-programs/bank-statement-loans",
+  },
+  alternates: {
+    canonical: "/loan-programs/bank-statement-loans/",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

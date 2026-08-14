@@ -35,6 +35,14 @@ export const metadata: Metadata = {
     description:
       "Purchase or refinance a home using your Individual Taxpayer Identification Number (ITIN). Flexible options for self-employed, 1099, and alternative credit profiles.",
     type: "website",
+    url: "/loan-programs/itin-loans",
+  },
+  alternates: {
+    canonical: "/loan-programs/itin-loans/",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

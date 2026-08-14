@@ -31,6 +31,14 @@ export const metadata: Metadata = {
     description:
       "Access your home equity without selling your home or replacing your current low mortgage rate.",
     type: "website",
+    url: "/loan-programs/heloc-loans",
+  },
+  alternates: {
+    canonical: "/loan-programs/heloc-loans/",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

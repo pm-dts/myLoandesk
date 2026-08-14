@@ -33,6 +33,14 @@ export const metadata: Metadata = {
     description:
       "Access equity in your current property before it sells. Submit strong non-contingent offers and sell on your timeline without pressure.",
     type: "website",
+    url: "/loan-programs/bridge-to-sale-loans",
+  },
+  alternates: {
+    canonical: "/loan-programs/bridge-to-sale-loans/",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

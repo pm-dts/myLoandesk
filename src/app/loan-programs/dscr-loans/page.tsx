@@ -11,6 +11,14 @@ export const metadata: Metadata = {
     description:
       "Qualify for investment property financing based on property rental cash flow instead of personal income tax returns.",
     type: "website",
+    url: "/loan-programs/dscr-loans",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "/loan-programs/dscr-loans/",
   },
 };
 

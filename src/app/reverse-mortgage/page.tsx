@@ -23,7 +23,14 @@ export const metadata = {
     description:
       "Explore Reverse Mortgage options with MyLoanDesk. Learn how to convert your home equity into financial freedom, with no monthly payments and flexible access to funds.",
     type: "website",
-    url: "https://www.myloandesk.com/reverse-mortgage",
+    url: "/reverse-mortgage",
+  },
+  alternates: {
+    canonical: "/reverse-mortgage/",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

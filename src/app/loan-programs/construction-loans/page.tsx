@@ -7,14 +7,14 @@ export const metadata: Metadata = {
   description:
     "Construction loans and construction-to-permanent financing for custom homes, spec builds, and small developments. Use our free calculator to estimate your loan amount and down payment before you apply.",
   alternates: {
-    canonical: "https://www.myloandesk.com/loan-programs/construction-loans/",
+    canonical: "/loan-programs/construction-loans/",
   },
   openGraph: {
     title: "Construction Loans for Custom Homes & Development | MyLoanDesk",
     description:
       "Finance your dream home or next development project with construction-to-permanent financing. Estimate your loan amount, down payment, and interest-only payments with our free calculator.",
     type: "website",
-    url: "https://www.myloandesk.com/loan-programs/construction-loans/",
+    url: "/loan-programs/construction-loans/",
   },
   robots: {
     index: true,

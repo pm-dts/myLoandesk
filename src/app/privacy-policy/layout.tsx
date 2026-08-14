@@ -9,7 +9,14 @@ export const metadata: Metadata = {
     description:
       "This Privacy Policy outlines how MyLoanDesk collects, uses, shares, and protects your personal information when you visit our website, communicate with us, or use our online services.",
     type: "website",
-    url: "https://www.myloandesk.com/privacy-policy",
+    url: "/privacy-policy",
+  },
+  alternates: {
+    canonical: "/privacy-policy/",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

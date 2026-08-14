@@ -9,7 +9,14 @@ export const metadata: Metadata = {
     description:
       "Schedule a direct consultation with our expert loan origination team.",
     type: "website",
-    url: "https://www.myloandesk.com/calendar",
+    url: "/calendar",
+  },
+  alternates: {
+    canonical: "/calendar/",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

@@ -34,6 +34,14 @@ export const metadata: Metadata = {
     description:
       "Finance U.S. real estate without a U.S. credit score or Social Security number. Options for foreign income, foreign asset reserves, and rental cash-flow loans.",
     type: "website",
+    url: "/loan-programs/foreign-national-loans",
+  },
+  alternates: {
+    canonical: "/loan-programs/foreign-national-loans/",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

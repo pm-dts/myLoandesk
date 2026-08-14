@@ -1,20 +1,30 @@
-"use client";
+// "use client";
 import Link from "next/link";
 import { Home, FileText, PhoneCall, HelpCircle } from "lucide-react";
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { Metadata } from "next";
+// import { useRouter } from "next/navigation";
+// import { useEffect } from "react";
 
-// export const metadata = {
-//   title: "404 - Page Not Found | MyLoanDesk",
-//   description: "The page you are looking for does not exist.",
-// };
+export const metadata: Metadata = {
+  title: "404 - Page Not Found | MyLoanDesk",
+  description: "The page you are looking for does not exist.",
+  openGraph: {
+    title: "404 - Page Not Found | MyLoanDesk",
+    description: "The page you are looking for does not exist.",
+    type: "website",
+    url: "/404",
+  },
+  alternates: {
+    canonical: "/404/",
+  },
+};
 
 export default function NotFound() {
-  const router = useRouter();
+  // const router = useRouter();
 
-  useEffect(() => {
-    router.replace("/");
-  }, [router]);
+  // useEffect(() => {
+  //   router.replace("/");
+  // }, [router]);
 
   return (
     <main className="min-h-screen bg-cream py-24 px-6 flex items-center justify-center relative overflow-hidden">

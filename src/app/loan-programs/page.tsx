@@ -33,7 +33,14 @@ export const metadata = {
     description:
       "Explore our diverse loan programs at MyLoanDesk. We specialize in Residential, Commercial, Rehab, Refinance, Reverse Mortgages, SBA Business Loans, and International Financing options.",
     type: "website",
-    url: "https://www.myloandesk.com/loan-programs",
+    url: "/loan-programs",
+  },
+  alternates: {
+    canonical: "/loan-programs/",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

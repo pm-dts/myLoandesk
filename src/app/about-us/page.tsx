@@ -12,7 +12,14 @@ export const metadata: Metadata = {
     description:
       "Discover MyLoanDesk, your trusted mortgage partner. Learn about our mission, values, and commitment to providing personalized mortgage solutions for every client.",
     type: "website",
-    url: "https://www.myloandesk.com/about-us",
+    url: "/about-us",
+  },
+  alternates: {
+    canonical: "/about-us/",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

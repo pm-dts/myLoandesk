@@ -33,6 +33,14 @@ export const metadata: Metadata = {
     description:
       "Mortgage programs recognizing the unique earning potential and financial profiles of doctors and medical professionals.",
     type: "website",
+    url: "/loan-programs/medical-professional-loans",
+  },
+  alternates: {
+    canonical: "/loan-programs/medical-professional-loans/",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

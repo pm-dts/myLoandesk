@@ -10,7 +10,14 @@ export const metadata: Metadata = {
     description:
       "Answer a few quick questions to discover the best mortgage programs for your situation.",
     type: "website",
-    url: "https://www.myloandesk.com/get-started",
+    url: "/get-started",
+  },
+  alternates: {
+    canonical: "/get-started/",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

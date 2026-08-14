@@ -17,7 +17,14 @@ export const metadata = {
     description:
       "Upload your financial documents securely through MyLoanDesk's encrypted document portal. Ensure your sensitive information is protected while we assist you with your mortgage needs.",
     type: "website",
-    url: "https://www.myloandesk.com/secure-document-upload",
+    url: "/secure-document-upload",
+  },
+  alternates: {
+    canonical: "/secure-document-upload/",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

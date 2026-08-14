@@ -32,6 +32,14 @@ export const metadata: Metadata = {
     description:
       "Lower your mortgage payment for the first two years. Funded by sellers, builders, or lenders as a payment subsidy.",
     type: "website",
+    url: "/loan-programs/2-1-buydown-loans",
+  },
+  alternates: {
+    canonical: "/loan-programs/2-1-buydown-loans/",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

@@ -14,7 +14,14 @@ export const metadata = {
     description:
       "Join MyLoanDesk's Realtor Partnership Program to close loans faster and provide a seamless experience for your clients. Partner with us for networking, marketing support, and more.",
     type: "website",
-    url: "https://www.myloandesk.com/realtors",
+    url: "/realtors",
+  },
+  alternates: {
+    canonical: "/realtors/",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

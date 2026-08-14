@@ -10,7 +10,14 @@ export const metadata = {
     description:
       "This Email & Communication Policy outlines how MyLoanDesk uses email to communicate with clients and business partners, including security, limitations, and best practices.",
     type: "website",
-    url: "https://www.myloandesk.com/email-communication",
+    url: "/email-communication",
+  },
+  alternates: {
+    canonical: "/email-communication/",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

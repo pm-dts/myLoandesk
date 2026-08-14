@@ -9,7 +9,14 @@ export const metadata: Metadata = {
     description:
       "This Cookie Policy explains how MyLoanDesk uses cookies and similar technologies when you visit our website, landing pages, mortgage calculators, customer portal, and related online services.",
     type: "website",
-    url: "https://www.myloandesk.com/cookies-policy",
+    url: "/cookies-policy",
+  },
+  alternates: {
+    canonical: "/cookies-policy/",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
