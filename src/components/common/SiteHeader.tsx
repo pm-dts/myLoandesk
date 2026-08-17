@@ -320,7 +320,7 @@ export const Header: React.FC = () => {
 
             <div className="mt-2.5">
               <Link
-                href="/get-quote"
+                href="/get-started"
                 onClick={() => trackQuoteClick("Desktop Header")}
                 className="btn-shine bg-brand-orange text-white px-5 py-2.5 rounded-full font-bold text-xs flex items-center gap-1.5 uppercase tracking-wider hover:bg-orange-600 transition-colors shadow-sm"
               >
@@ -400,7 +400,7 @@ export const Header: React.FC = () => {
             Call/Text (305) 891-6500
           </a>
           <Link
-            href="/get-quote"
+            href="/get-started"
             onClick={() => trackQuoteClick("Mobile Subheader")}
             className="btn-shine w-full bg-brand-orange text-primary-bg py-2 rounded-full text-sm font-semibold tracking-wide flex items-center justify-center transition-colors focus-ring shadow-sm"
           >
