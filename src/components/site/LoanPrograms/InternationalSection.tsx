@@ -123,7 +123,7 @@ export default function InternationalCustomSection() {
               Whether you are buying a home, investing in commercial real
               estate, or developing a new project, we help qualified borrowers
               explore financing options through our network of lenders in
-              Portugal[cite: 16].
+              Portugal.
             </p>
           </div>
 
@@ -159,7 +159,7 @@ export default function InternationalCustomSection() {
                 Whether you are buying a home, investing in commercial real
                 estate, or developing a new project, we help qualified borrowers
                 explore financing options through our network of lenders in
-                Portugal[cite: 16].
+                Portugal.
               </p>
 
               <p className="text-xs font-bold text-ink mb-3">
@@ -223,7 +223,7 @@ export default function InternationalCustomSection() {
               </p>
               <p className="text-xs text-ink-2 leading-relaxed mb-6">
                 Financing may also be available for ground-up construction,
-                renovation, and development projects[cite: 16].
+                renovation, and development projects.
               </p>
 
               {/* Direct Program Page Link Box inside Modal */}
@@ -234,7 +234,7 @@ export default function InternationalCustomSection() {
                   </div>
                   <p className="text-xs text-ink-2">
                     Estimate monthly euro payments, review non-resident deposit
-                    rules, and check Golden Visa clarifications[cite: 15, 16].
+                    rules, and check Golden Visa clarifications.
                   </p>
                 </div>
                 <Link

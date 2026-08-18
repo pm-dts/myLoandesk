@@ -122,13 +122,12 @@ export default function CommercialFinancingSection() {
               Commercial Real Estate Loans
             </h3>
             <h4 className="font-medium text-ink text-sm mb-2 line-clamp-1">
-              Financing Solutions for Businesses, Investors &amp;
-              Developers[cite: 12]
+              Financing Solutions for Businesses, Investors &amp; Developers
             </h4>
             <p className="text-sm text-ink-2 leading-relaxed line-clamp-3">
               Whether you&apos;re purchasing, refinancing, constructing, or
               expanding commercial real estate, MyLoanDesk provides access to a
-              broad network of commercial lenders[cite: 12].
+              broad network of commercial lenders.
             </p>
           </div>
 
@@ -157,21 +156,20 @@ export default function CommercialFinancingSection() {
           >
             <div>
               <h4 className="font-medium text-ink mb-3">
-                Financing Solutions for Businesses, Investors &amp;
-                Developers[cite: 12]
+                Financing Solutions for Businesses, Investors &amp; Developers
               </h4>
 
               <p className="text-sm text-ink-2 leading-relaxed mb-2">
                 Whether you&apos;re purchasing, refinancing, constructing, or
                 expanding commercial real estate, MyLoanDesk provides access to
                 a broad network of commercial lenders offering financing
-                tailored to your business and investment goals[cite: 12].
+                tailored to your business and investment goals.
               </p>
               <p className="text-sm text-ink-2 leading-relaxed mb-6">
                 From owner-occupied properties to large-scale investment and
                 development projects, we&apos;ll help you secure the right
                 financing with competitive rates, flexible loan structures, and
-                personalized guidance every step of the way[cite: 12].
+                personalized guidance every step of the way.
               </p>
 
               <h4 className="font-medium text-ink mb-3">
@@ -227,12 +225,11 @@ export default function CommercialFinancingSection() {
               <div className="mb-6 p-4 bg-cream/40 border border-line rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-3">
                 <div>
                   <div className="text-xs font-semibold text-ink uppercase tracking-wider">
-                    Want to calculate CRE payments &amp; LTV?[cite: 11, 12]
+                    Want to calculate CRE payments &amp; LTV?
                   </div>
                   <p className="text-xs text-ink-2">
                     Estimate monthly costs, explore SBA 7(a)/504 vs.
-                    conventional terms, and check special-use property
-                    options[cite: 11, 12].
+                    conventional terms, and check special-use property options.
                   </p>
                 </div>
                 <Link
@@ -717,7 +714,7 @@ export default function CommercialFinancingSection() {
             <p className="text-sm text-ink-2 leading-relaxed line-clamp-4">
               We structure institutional-level options spanning standard asset
               classes: Multifamily, Mixed-Use, Warehouse/Industrial footprints,
-              Office properties, and Retail strip centers[cite: 12].
+              Office properties, and Retail strip centers.
             </p>
           </div>
           <div className="mt-auto pt-4">
@@ -739,12 +736,11 @@ export default function CommercialFinancingSection() {
                 <p>
                   We structure institutional-level options spanning standard
                   asset classes: Multifamily, Mixed-Use, Warehouse/Industrial
-                  footprints, Office properties, and Retail strip centers[cite:
-                  12].
+                  footprints, Office properties, and Retail strip centers.
                 </p>
                 <div className="p-3 bg-line/20 rounded-xl border border-line">
                   <h4 className="font-bold text-ink text-xs mb-1">
-                    SBA 7(a) Guaranty Systems[cite: 14]
+                    SBA 7(a) Guaranty Systems
                   </h4>
                   <p className="text-xs">
                     Leverage core agency backing parameters to secure essential

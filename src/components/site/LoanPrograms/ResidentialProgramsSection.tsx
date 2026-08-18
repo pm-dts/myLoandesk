@@ -256,10 +256,10 @@ export default function ResidentialProgramsSection() {
               Jumbo Loans
             </h3>
             <p className="text-sm text-ink-2 leading-relaxed line-clamp-3">
-              Exceptional homes deserve exceptional financing[cite: 7]. Our
-              Jumbo Loan programs are designed for luxury homes, high-value
-              properties, and discerning borrowers who expect personalized,
-              white-glove service from start to finish.
+              Exceptional homes deserve exceptional financing. Our Jumbo Loan
+              programs are designed for luxury homes, high-value properties, and
+              discerning borrowers who expect personalized, white-glove service
+              from start to finish.
             </p>
           </div>
 
@@ -290,7 +290,7 @@ export default function ResidentialProgramsSection() {
           >
             <div>
               <div className="text-sm text-ink-2 space-y-4 mb-6 leading-relaxed">
-                <p>Exceptional homes deserve exceptional financing[cite: 7].</p>
+                <p>Exceptional homes deserve exceptional financing.</p>
                 <p>
                   Our Jumbo Loan programs are designed for luxury homes,
                   high-value properties, and discerning borrowers who expect
@@ -298,15 +298,15 @@ export default function ResidentialProgramsSection() {
                   Whether you&apos;re purchasing a primary residence, second
                   home, or investment property, we provide access to some of the
                   industry&apos;s most competitive rates, flexible underwriting,
-                  and customized financing solutions[cite: 7].
+                  and customized financing solutions.
                 </p>
                 <p>
                   At MyLoanDesk, we understand that affluent borrowers often
-                  have complex financial profiles[cite: 7]. From self-employed
+                  have complex financial profiles. From self-employed
                   professionals and business owners to executives, investors,
                   and foreign nationals, our experienced team works with a broad
                   network of premier jumbo lenders to structure financing
-                  tailored to your unique needs[cite: 7].
+                  tailored to your unique needs.
                 </p>
               </div>
 
@@ -335,11 +335,11 @@ export default function ResidentialProgramsSection() {
                 <div>
                   <div className="text-xs font-semibold text-ink uppercase tracking-wider">
                     Want to estimate payments &amp; see all 5 qualification
-                    paths?[cite: 7, 8]
+                    paths?
                   </div>
                   <p className="text-xs text-ink-2">
                     Explore Bank Statement, Asset Depletion, Foreign National,
-                    and DSCR Jumbo options[cite: 7, 8].
+                    and DSCR Jumbo options.
                   </p>
                 </div>
                 <Link

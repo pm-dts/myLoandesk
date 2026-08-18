@@ -350,7 +350,7 @@ export default function HomeEquitySection() {
             <p className="text-sm text-ink-2 leading-relaxed line-clamp-3">
               If you hold a current FHA mortgage in good standing, an FHA
               Streamline Refinance represents a highly efficient path to
-              lowering interest rates and payment obligations[cite: 6].
+              lowering interest rates and payment obligations.
             </p>
           </div>
 
@@ -381,7 +381,7 @@ export default function HomeEquitySection() {
               <p className="text-sm text-ink-2 leading-relaxed mb-4">
                 If you hold a current FHA mortgage in good standing, an FHA
                 Streamline Refinance represents a highly efficient path to
-                lowering interest rates and payment obligations[cite: 6].
+                lowering interest rates and payment obligations.
               </p>
               <p className="text-xs font-medium text-ink mb-2">
                 Benefits include:
@@ -415,7 +415,7 @@ export default function HomeEquitySection() {
                   </div>
                   <p className="text-xs text-ink-2">
                     Check your net tangible benefit and calculate your estimated
-                    new monthly payment[cite: 5, 6].
+                    new monthly payment.
                   </p>
                 </div>
                 <Link
