@@ -159,7 +159,7 @@ export default function ResidentialProgramsSection() {
         {/* 1. Conventional Loans */}
         <div
           id="conventional"
-          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col h-[380px] transition-colors duration-300 hover:bg-cream/40"
+          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col h-[435px] transition-colors duration-300 hover:bg-cream/40"
         >
           <div>
             <div className="flex items-center justify-between mb-6">
@@ -236,7 +236,7 @@ export default function ResidentialProgramsSection() {
         {/* 2. Jumbo Loans */}
         <div
           id="portfolio"
-          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col h-[380px] transition-colors duration-300 hover:bg-cream/40"
+          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col h-[435px] transition-colors duration-300 hover:bg-cream/40"
         >
           <div>
             <div className="flex items-center justify-between mb-6">
@@ -329,7 +329,7 @@ export default function ResidentialProgramsSection() {
         {/* 3. FHA Loans */}
         <div
           id="fha"
-          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col h-[380px] transition-colors duration-300 hover:bg-cream/40"
+          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col h-[435px] transition-colors duration-300 hover:bg-cream/40"
         >
           <div>
             <div className="flex items-center justify-between mb-6">
@@ -342,38 +342,55 @@ export default function ResidentialProgramsSection() {
             </div>
             <h3
               className={cn(
-                "text-2xl font-medium text-ink mb-3",
+                "text-2xl font-medium text-ink mb-2",
                 fraunces.className,
               )}
             >
               FHA Loans
             </h3>
-            <p className="text-sm text-ink-2 leading-relaxed line-clamp-4">
+            <p className="text-sm text-ink-2 leading-relaxed line-clamp-3">
               FHA loans are a great option for borrowers that do not have a lot
               of cash on hand for a down payment and may need some flexibility
-              in qualification guidelines. Benefits include:
+              in qualification guidelines.
             </p>
           </div>
-          <div className="mt-auto pt-4">
+
+          {/* Card Action Buttons with Link to Dedicated Page */}
+          <div className="mt-auto pt-4 flex flex-col gap-2">
             <button
               onClick={() => setActiveModal("fha")}
-              className="w-full py-3 bg-cream hover:bg-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-2 transition-all"
+              className="flex-1 py-3 bg-cream hover:bg-moss-deep hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
             >
               Read More <ArrowRight size={14} />
             </button>
+
+            {/* Direct Page Link in Card */}
+            <Link
+              href="/loan-programs/fha-loans"
+              className="flex-1 py-3 bg-primary-bg hover:bg-cream border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
+            >
+              Program Page{" "}
+              <ExternalLink size={14} className="text-brand-orange" />
+            </Link>
           </div>
 
+          {/* Modal Dialog with Embedded Program Link */}
           <LoanDetailModal
             isOpen={activeModal === "fha"}
             onClose={closeModal}
             title="FHA Loans"
           >
             <div>
-              <p className="text-sm text-ink-2 leading-relaxed mb-4">
+              <p className="text-base font-medium text-moss-deep mb-4">
+                Accessible Home Financing with as Little as 3.5% Down
+              </p>
+
+              <p className="text-sm text-ink-2 leading-relaxed mb-6">
                 FHA loans are a great option for borrowers that do not have a
                 lot of cash on hand for a down payment and may need some
                 flexibility in qualification guidelines. Benefits include:
               </p>
+
               <ul className="space-y-2 mb-6">
                 {[
                   "Low 3.5% down payment",
@@ -397,7 +414,28 @@ export default function ResidentialProgramsSection() {
                   </li>
                 ))}
               </ul>
+
+              {/* Direct Program Page Link Box inside Modal */}
+              <div className="mb-6 p-4 bg-cream/40 border border-line rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-3">
+                <div>
+                  <div className="text-xs font-semibold text-ink uppercase tracking-wider">
+                    Want detailed rate comparisons &amp; calculator?
+                  </div>
+                  <p className="text-xs text-ink-2">
+                    Explore complete FHA guidelines, mortgage insurance (MIP)
+                    costs, and run down payment calculations.
+                  </p>
+                </div>
+                <Link
+                  href="/loan-programs/fha-loans"
+                  onClick={closeModal}
+                  className="btn-shine bg-brand-orange text-white px-5 py-2.5 rounded-full text-xs font-semibold flex items-center gap-1.5 shrink-0 hover:bg-orange-600 transition-colors"
+                >
+                  Visit Full Program Page <ArrowRight size={14} />
+                </Link>
+              </div>
             </div>
+
             <LoanProgramButton loan_type="FHA" />
           </LoanDetailModal>
         </div>
@@ -899,7 +937,7 @@ export default function ResidentialProgramsSection() {
         {/* 7. VA Loans */}
         <div
           id="va"
-          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col h-[380px] transition-colors duration-300 hover:bg-cream/40"
+          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col h-[435px] transition-colors duration-300 hover:bg-cream/40"
         >
           <div>
             <div className="flex items-center justify-between mb-6">
@@ -912,7 +950,7 @@ export default function ResidentialProgramsSection() {
             </div>
             <h3
               className={cn(
-                "text-2xl font-medium text-ink mb-4",
+                "text-2xl font-medium text-ink mb-2",
                 fraunces.className,
               )}
             >
@@ -925,15 +963,27 @@ export default function ResidentialProgramsSection() {
               fall behind.
             </p>
           </div>
-          <div className="mt-auto pt-4">
+
+          {/* Card Action Buttons with Link to Dedicated Page */}
+          <div className="mt-auto pt-4 flex sm:flex-row flex-col gap-2">
             <button
               onClick={() => setActiveModal("va")}
-              className="w-full py-3 bg-cream hover:bg-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-2 transition-all"
+              className="flex-1 py-3 bg-cream hover:bg-moss-deep hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
             >
               Read More <ArrowRight size={14} />
             </button>
+
+            {/* Direct Page Link in Card */}
+            <Link
+              href="/loan-programs/va-loans"
+              className="flex-1 py-3 bg-primary-bg hover:bg-cream border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
+            >
+              Program Page{" "}
+              <ExternalLink size={14} className="text-brand-orange" />
+            </Link>
           </div>
 
+          {/* Modal Dialog with Embedded Program Link */}
           <LoanDetailModal
             isOpen={activeModal === "va"}
             onClose={closeModal}
@@ -972,6 +1022,26 @@ export default function ResidentialProgramsSection() {
                   </li>
                 ))}
               </ul>
+
+              {/* Direct Program Page Link Box inside Modal */}
+              <div className="mb-6 p-4 bg-cream/40 border border-line rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-3">
+                <div>
+                  <div className="text-xs font-semibold text-ink uppercase tracking-wider">
+                    Want detailed rate comparisons &amp; calculator?
+                  </div>
+                  <p className="text-xs text-ink-2">
+                    Estimate your VA funding fee and run monthly payments with
+                    zero down payment.
+                  </p>
+                </div>
+                <Link
+                  href="/loan-programs/va-loans"
+                  onClick={closeModal}
+                  className="btn-shine bg-brand-orange text-white px-5 py-2.5 rounded-full text-xs font-semibold flex items-center gap-1.5 shrink-0 hover:bg-orange-600 transition-colors"
+                >
+                  Visit Full Program Page <ArrowRight size={14} />
+                </Link>
+              </div>
             </div>
             <LoanProgramButton loan_type="VA" />
           </LoanDetailModal>
@@ -980,78 +1050,125 @@ export default function ResidentialProgramsSection() {
         {/* 8. Private Bridge Loans */}
         <div
           id="bridge"
-          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col h-[380px] transition-colors duration-300 hover:bg-cream/40"
+          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col h-[435px] transition-colors duration-300 hover:bg-cream/40"
         >
           <div>
             <div className="flex items-center justify-between mb-6">
               <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-[#D4A373]/20 text-[#D4A373] shrink-0">
                 <Building size={22} strokeWidth={1.8} />
               </div>
-              <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2 py-1 rounded">
+              <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2.5 py-1 rounded-md">
                 Liquidity Solutions
               </span>
             </div>
             <h3
               className={cn(
-                "text-2xl font-medium text-ink mb-4",
+                "text-2xl font-medium text-ink mb-2",
                 fraunces.className,
               )}
             >
               Private Bridge Loans
             </h3>
-            <p className="text-sm text-ink-2 leading-relaxed line-clamp-3">
-              Private bridge loans provide fast, flexible financing when
-              traditional mortgage options aren't the right fit. Whether you're
-              buying before selling, investing, or renovating.
+            <p className="text-xs font-bold text-brand-orange uppercase tracking-wide mb-4">
+              Fast, Flexible Financing for Residential and Commercial Moves
+            </p>
+            <p className="text-xs text-ink-2 leading-relaxed line-clamp-2">
+              Private bridge loans provide short-term financing when traditional
+              mortgages are too slow, helping you bridge the gap between
+              transactions.
             </p>
           </div>
-          <div className="mt-auto pt-4">
+
+          {/* Card Action Buttons with Direct Link to Dedicated Page */}
+          <div className="mt-auto pt-4 flex flex-col sm:flex-row gap-2">
             <button
               onClick={() => setActiveModal("bridge")}
-              className="w-full py-3 bg-cream hover:bg-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-2 transition-all"
+              className="flex-1 py-3 bg-cream hover:bg-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
             >
               Read More <ArrowRight size={14} />
             </button>
+
+            <Link
+              href="/loan-programs/bridge-loans"
+              className="flex-1 py-3 bg-primary-bg hover:bg-cream border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
+            >
+              Program Page{" "}
+              <ExternalLink size={14} className="text-brand-orange" />
+            </Link>
           </div>
 
+          {/* Loan Detail Modal with Direct Page Callout */}
           <LoanDetailModal
             isOpen={activeModal === "bridge"}
             onClose={closeModal}
             title="Private Bridge Loans"
           >
             <div>
-              <div className="text-sm text-ink-2 space-y-4 mb-6 leading-relaxed">
-                <p>
-                  Private bridge loans provide fast, flexible financing when
-                  traditional mortgage options aren't the right fit. Whether
-                  you're buying before selling, investing, renovating, or need
-                  to close quickly, we can help you secure short-term financing
-                  tailored to your situation.
-                </p>
+              <p className="text-xs font-bold text-brand-orange uppercase tracking-wide mb-4">
+                Fast, Flexible Financing for Residential and Commercial Real
+                Estate
+              </p>
 
-                <h4 className="font-medium text-ink mb-3">Ideal For:</h4>
-                <ul className="space-y-2 mb-6">
-                  {[
-                    "Buy before you sell",
-                    "Investment properties",
-                    "Renovation projects",
-                    "Commercial real estate",
-                    "Fast closings",
-                  ].map((item, index) => (
-                    <li
-                      key={index}
-                      className="flex items-start gap-2 text-xs text-ink/90 leading-normal"
-                    >
-                      <CheckCircle2
-                        size={13}
-                        className="text-moss-deep mt-0.5 shrink-0"
-                      />
-                      <span>{item}</span>
-                    </li>
-                  ))}
+              <p className="text-xs text-ink-2 leading-relaxed mb-6">
+                Private bridge loans provide fast, flexible financing when
+                traditional mortgage options aren't the right fit. Whether
+                you're buying before selling, investing, renovating, or need to
+                close quickly, we can help you secure short-term financing
+                tailored to your situation.
+              </p>
+
+              <div className="text-xs text-ink-2 mb-6">
+                <h4 className="font-semibold text-ink text-xs uppercase tracking-wider mb-2">
+                  Ideal For:
+                </h4>
+                <ul className="list-disc list-inside space-y-1 text-[11px] leading-relaxed">
+                  <li>Buy before you sell (residential transitions)</li>
+                  <li>Non-contingent purchase offers in competitive markets</li>
+                  <li>Commercial acquisitions prior to stabilization</li>
+                  <li>Value-add and capital improvement financing</li>
+                  <li>Fast closings in as little as 7–14 days</li>
                 </ul>
               </div>
+
+              <div className="text-xs text-ink-2 bg-[#f0ece1]/50 p-4 rounded-xl border border-line/50 leading-relaxed mb-6 space-y-3">
+                <p className="font-semibold text-ink text-[11px] uppercase tracking-wider">
+                  Strategic Advantages:
+                </p>
+                <p className="text-[11px]">
+                  Approval is based on real estate asset value and equity rather
+                  than lengthy income verifications. This provides the speed
+                  required to seize time-sensitive opportunities or meet strict
+                  1031 exchange deadlines.
+                </p>
+                <p className="text-[11px]">
+                  With flexible terms from 6 to 24 months and interest-only
+                  payment structures, bridge financing acts as a reliable
+                  temporary bridge until permanent financing or sale proceeds
+                  are completed.
+                </p>
+              </div>
+
+              {/* Direct Program Page Link Box inside Modal */}
+              <div className="mb-6 p-4 bg-cream/40 border border-line rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-3">
+                <div>
+                  <div className="text-xs font-semibold text-ink uppercase tracking-wider">
+                    Want to estimate your bridge payment &amp; terms?
+                  </div>
+                  <p className="text-xs text-ink-2">
+                    Explore complete bridge loan guidelines and use our
+                    interactive loan estimator.
+                  </p>
+                </div>
+                <Link
+                  href="/loan-programs/bridge-loans"
+                  onClick={closeModal}
+                  className="btn-shine bg-brand-orange text-white px-5 py-2.5 rounded-full text-xs font-semibold flex items-center gap-1.5 shrink-0 hover:bg-orange-600 transition-colors"
+                >
+                  Visit Full Program Page <ArrowRight size={14} />
+                </Link>
+              </div>
             </div>
+
             <LoanProgramButton loan_type="Private Bridge" />
           </LoanDetailModal>
         </div>
@@ -1059,7 +1176,7 @@ export default function ResidentialProgramsSection() {
         {/* 9. Bridge to Sale */}
         <div
           id="bridge-to-sale"
-          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col h-[380px] transition-colors duration-300 hover:bg-cream/40"
+          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col h-[435px] transition-colors duration-300 hover:bg-cream/40"
         >
           <div>
             <div className="flex items-center justify-between mb-6">

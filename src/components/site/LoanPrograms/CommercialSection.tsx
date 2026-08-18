@@ -10,10 +10,10 @@ import {
   Building,
   X,
   ArrowRight,
+  ExternalLink,
 } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-// Make sure to import or define fraunces appropriately in your project
 import { Fraunces } from "next/font/google";
 
 const fraunces = Fraunces({
@@ -97,43 +97,57 @@ export default function CommercialFinancingSection() {
         Commercial Financing Solutions
       </h2>
 
-      {/* Grid updated to gap-6 matching the fixed card layout */}
+      {/* Grid with uniform card heights */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {/* 1. Commercial Real Estate Loans */}
         <div
           id="commercial-real-estate"
-          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col justify-between h-[400px] transition-colors duration-300 hover:bg-cream/40"
+          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col h-[440px] transition-colors duration-300 hover:bg-cream/40"
         >
-          <div>
+          <div className="flex-1 flex flex-col">
             <div className="flex items-center justify-between mb-6">
               <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-brand-orange/10 text-brand-orange shrink-0">
                 <Shield size={22} strokeWidth={1.8} />
               </div>
+              <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2.5 py-1 rounded-md">
+                Commercial Property
+              </span>
             </div>
             <h3
               className={cn(
-                "text-2xl font-medium text-ink mb-3",
+                "text-2xl font-medium text-ink mb-2",
                 fraunces.className,
               )}
             >
               Commercial Real Estate Loans
             </h3>
-            <h4 className="font-medium text-ink text-sm mb-2 line-clamp-2">
-              Financing Solutions for Businesses, Investors & Developers
+            <h4 className="font-medium text-ink text-sm mb-2 line-clamp-1">
+              Financing Solutions for Businesses, Investors &amp;
+              Developers[cite: 12]
             </h4>
             <p className="text-sm text-ink-2 leading-relaxed line-clamp-3">
-              Whether you're purchasing, refinancing, constructing, or expanding
-              commercial real estate, MyLoanDesk provides access to a broad
-              network of commercial lenders...
+              Whether you&apos;re purchasing, refinancing, constructing, or
+              expanding commercial real estate, MyLoanDesk provides access to a
+              broad network of commercial lenders[cite: 12].
             </p>
           </div>
-          <div className="mt-auto pt-4">
+
+          {/* Card Action Buttons */}
+          <div className="mt-auto pt-4 flex flex-col sm:flex-row gap-2">
             <button
               onClick={() => setActiveModal("commercial-real-estate")}
-              className="w-full py-3 bg-cream hover:bg-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-2 transition-all"
+              className="flex-1 py-3 bg-cream hover:bg-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
             >
               Read More <ArrowRight size={14} />
             </button>
+
+            <Link
+              href="/loan-programs/commercial-real-estate-loans"
+              className="flex-1 py-3 bg-primary-bg hover:bg-cream border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
+            >
+              Program Page{" "}
+              <ExternalLink size={14} className="text-brand-orange" />
+            </Link>
           </div>
 
           <LoanDetailModal
@@ -143,20 +157,21 @@ export default function CommercialFinancingSection() {
           >
             <div>
               <h4 className="font-medium text-ink mb-3">
-                Financing Solutions for Businesses, Investors & Developers
+                Financing Solutions for Businesses, Investors &amp;
+                Developers[cite: 12]
               </h4>
 
               <p className="text-sm text-ink-2 leading-relaxed mb-2">
-                Whether you're purchasing, refinancing, constructing, or
+                Whether you&apos;re purchasing, refinancing, constructing, or
                 expanding commercial real estate, MyLoanDesk provides access to
                 a broad network of commercial lenders offering financing
-                tailored to your business and investment goals.
+                tailored to your business and investment goals[cite: 12].
               </p>
               <p className="text-sm text-ink-2 leading-relaxed mb-6">
                 From owner-occupied properties to large-scale investment and
-                development projects, we'll help you secure the right financing
-                with competitive rates, flexible loan structures, and
-                personalized guidance every step of the way.
+                development projects, we&apos;ll help you secure the right
+                financing with competitive rates, flexible loan structures, and
+                personalized guidance every step of the way[cite: 12].
               </p>
 
               <h4 className="font-medium text-ink mb-3">
@@ -209,6 +224,26 @@ export default function CommercialFinancingSection() {
                 ))}
               </ul>
 
+              <div className="mb-6 p-4 bg-cream/40 border border-line rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-3">
+                <div>
+                  <div className="text-xs font-semibold text-ink uppercase tracking-wider">
+                    Want to calculate CRE payments &amp; LTV?[cite: 11, 12]
+                  </div>
+                  <p className="text-xs text-ink-2">
+                    Estimate monthly costs, explore SBA 7(a)/504 vs.
+                    conventional terms, and check special-use property
+                    options[cite: 11, 12].
+                  </p>
+                </div>
+                <Link
+                  href="/loan-programs/commercial-real-estate-loans"
+                  onClick={closeModal}
+                  className="btn-shine bg-brand-orange text-white px-5 py-2.5 rounded-full text-xs font-semibold flex items-center gap-1.5 shrink-0 hover:bg-orange-600 transition-colors"
+                >
+                  Visit Full Program Page <ArrowRight size={14} />
+                </Link>
+              </div>
+
               <h4 className="font-medium text-ink mb-3">
                 Why Choose MyLoanDesk?
               </h4>
@@ -234,14 +269,9 @@ export default function CommercialFinancingSection() {
                 Ready to finance your next commercial project?
               </h4>
               <p className="text-sm text-ink-2 leading-relaxed mb-6">
-                Whether you're acquiring your first commercial property or
+                Whether you&apos;re acquiring your first commercial property or
                 expanding an established real estate portfolio, MyLoanDesk can
                 help you find the financing solution that fits your goals.
-              </p>
-
-              <p className="text-xs mb-4 text-ink-2">
-                Contact MyLoanDesk today to explore your commercial financing
-                options and get started.
               </p>
             </div>
             <div className="flex flex-col gap-3 mt-6">
@@ -258,30 +288,30 @@ export default function CommercialFinancingSection() {
         {/* 2. Equipment Financing */}
         <div
           id="equipment"
-          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col justify-between h-[400px] transition-colors duration-300 hover:bg-cream/40"
+          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col h-[440px] transition-colors duration-300 hover:bg-cream/40"
         >
-          <div>
+          <div className="flex-1 flex flex-col">
             <div className="flex items-center justify-between mb-6">
               <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-[#D4A373]/20 text-[#D4A373] shrink-0">
                 <Briefcase size={22} strokeWidth={1.8} />
               </div>
-              <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2 py-1 rounded">
+              <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2.5 py-1 rounded-md">
                 Capital Growth
               </span>
             </div>
             <h3
               className={cn(
-                "text-2xl font-medium text-ink mb-4",
+                "text-2xl font-medium text-ink mb-2",
                 fraunces.className,
               )}
             >
               Equipment Financing
             </h3>
-            <h4 className="font-medium text-ink text-sm mb-2 line-clamp-2">
+            <h4 className="font-medium text-ink text-sm mb-2 line-clamp-1">
               Finance the Equipment Your Business Needs to Grow
             </h4>
             <p className="text-sm text-ink-2 leading-relaxed line-clamp-3">
-              Whether you're purchasing new equipment, replacing outdated
+              Whether you&apos;re purchasing new equipment, replacing outdated
               machinery, or expanding your operations, MyLoanDesk offers
               flexible equipment financing solutions...
             </p>
@@ -305,7 +335,7 @@ export default function CommercialFinancingSection() {
                 Finance the Equipment Your Business Needs to Grow
               </h4>
               <p className="text-sm text-ink-2 leading-relaxed mb-2">
-                Whether you're purchasing new equipment, replacing outdated
+                Whether you&apos;re purchasing new equipment, replacing outdated
                 machinery, or expanding your operations, MyLoanDesk offers
                 flexible equipment financing solutions designed to help your
                 business grow while preserving valuable working capital.
@@ -408,26 +438,26 @@ export default function CommercialFinancingSection() {
         {/* 3. Business Lines of Credit */}
         <div
           id="business-lines"
-          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col justify-between h-[400px] transition-colors duration-300 hover:bg-cream/40"
+          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col h-[440px] transition-colors duration-300 hover:bg-cream/40"
         >
-          <div>
+          <div className="flex-1 flex flex-col">
             <div className="flex items-center justify-between mb-6">
               <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-moss-deep/10 text-moss-deep shrink-0">
                 <Landmark size={22} strokeWidth={1.8} />
               </div>
-              <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2 py-1 rounded">
+              <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2.5 py-1 rounded-md">
                 Liquidity Access
               </span>
             </div>
             <h3
               className={cn(
-                "text-2xl font-medium text-ink mb-4",
+                "text-2xl font-medium text-ink mb-2",
                 fraunces.className,
               )}
             >
               Business Lines of Credit
             </h3>
-            <p className="text-xs font-bold uppercase tracking-wider text-moss-deep mb-3 line-clamp-2">
+            <p className="text-xs font-bold uppercase tracking-wider text-moss-deep mb-2 line-clamp-1">
               Secure quick access to floating working capital reserves smoothly.
             </p>
             <p className="text-sm text-ink-2 leading-relaxed line-clamp-3">
@@ -473,7 +503,7 @@ export default function CommercialFinancingSection() {
 
                 <div className="bg-[#f0ece1]/50 p-4 rounded-xl border border-line/50 text-xs space-y-2">
                   <h4 className="font-semibold text-ink text-[11px] uppercase tracking-wider">
-                    Capital Deployment & Use Cases:
+                    Capital Deployment &amp; Use Cases:
                   </h4>
                   <ul className="list-disc list-inside space-y-1 text-[11px] text-ink-2 leading-relaxed">
                     <li>
@@ -509,28 +539,27 @@ export default function CommercialFinancingSection() {
         {/* 4. Working Capital */}
         <div
           id="working-capital"
-          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col justify-between h-[400px] transition-colors duration-300 hover:bg-cream/40"
+          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col h-[440px] transition-colors duration-300 hover:bg-cream/40"
         >
-          <div>
+          <div className="flex-1 flex flex-col">
             <div className="flex items-center justify-between mb-6">
               <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-brand-orange/10 text-brand-orange shrink-0">
                 <RefreshCw size={22} strokeWidth={1.8} />
               </div>
-              <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2 py-1 rounded">
+              <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2.5 py-1 rounded-md">
                 Operations Stack
               </span>
             </div>
             <h3
               className={cn(
-                "text-2xl font-medium text-ink mb-4",
+                "text-2xl font-medium text-ink mb-2",
                 fraunces.className,
               )}
             >
               Working Capital
             </h3>
-            <p className="text-xs font-medium italic text-ink-2 mb-3 line-clamp-2">
-              Customized liquid solutions tailored to enterprise growth metrics
-              with complete compliance transparency.
+            <p className="text-xs font-medium italic text-ink-2 mb-2 line-clamp-1">
+              Customized liquid solutions tailored to enterprise growth metrics.
             </p>
             <p className="text-sm text-ink-2 leading-relaxed line-clamp-3">
               Empower seasonal purchase capacity or capitalize on high-volume
@@ -588,26 +617,26 @@ export default function CommercialFinancingSection() {
         {/* 5. Franchise Financing Solutions */}
         <div
           id="franchise"
-          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col justify-between h-[400px] transition-colors duration-300 hover:bg-cream/40"
+          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col h-[440px] transition-colors duration-300 hover:bg-cream/40"
         >
-          <div>
+          <div className="flex-1 flex flex-col">
             <div className="flex items-center justify-between mb-6">
               <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-[#D4A373]/20 text-[#D4A373] shrink-0">
                 <Key size={22} strokeWidth={1.8} />
               </div>
-              <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2 py-1 rounded">
+              <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2.5 py-1 rounded-md">
                 Franchise Desk
               </span>
             </div>
             <h3
               className={cn(
-                "text-2xl font-medium text-ink mb-4",
+                "text-2xl font-medium text-ink mb-2",
                 fraunces.className,
               )}
             >
               Franchise Financing Solutions
             </h3>
-            <p className="text-xs font-semibold text-brand-orange mb-3 line-clamp-2">
+            <p className="text-xs font-semibold text-brand-orange mb-2 line-clamp-1">
               Comprehensive capitalization matrices built for single and
               multi-unit expansions.
             </p>
@@ -666,20 +695,20 @@ export default function CommercialFinancingSection() {
         {/* 6. Commercial Loans */}
         <div
           id="commercial"
-          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col justify-between h-[400px] transition-colors duration-300 hover:bg-cream/40"
+          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col h-[440px] transition-colors duration-300 hover:bg-cream/40"
         >
-          <div>
+          <div className="flex-1 flex flex-col">
             <div className="flex items-center justify-between mb-6">
               <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-moss-deep/10 text-moss-deep shrink-0">
                 <Building size={22} strokeWidth={1.8} />
               </div>
-              <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2 py-1 rounded">
+              <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2.5 py-1 rounded-md">
                 Commercial Scale
               </span>
             </div>
             <h3
               className={cn(
-                "text-2xl font-medium text-ink mb-4",
+                "text-2xl font-medium text-ink mb-2",
                 fraunces.className,
               )}
             >
@@ -688,7 +717,7 @@ export default function CommercialFinancingSection() {
             <p className="text-sm text-ink-2 leading-relaxed line-clamp-4">
               We structure institutional-level options spanning standard asset
               classes: Multifamily, Mixed-Use, Warehouse/Industrial footprints,
-              Office properties, and Retail strip centers.
+              Office properties, and Retail strip centers[cite: 12].
             </p>
           </div>
           <div className="mt-auto pt-4">
@@ -710,11 +739,12 @@ export default function CommercialFinancingSection() {
                 <p>
                   We structure institutional-level options spanning standard
                   asset classes: Multifamily, Mixed-Use, Warehouse/Industrial
-                  footprints, Office properties, and Retail strip centers.
+                  footprints, Office properties, and Retail strip centers[cite:
+                  12].
                 </p>
                 <div className="p-3 bg-line/20 rounded-xl border border-line">
                   <h4 className="font-bold text-ink text-xs mb-1">
-                    SBA 7(a) Guaranty Systems
+                    SBA 7(a) Guaranty Systems[cite: 14]
                   </h4>
                   <p className="text-xs">
                     Leverage core agency backing parameters to secure essential

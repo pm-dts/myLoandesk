@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Shield, X, ArrowRight } from "lucide-react";
+import Link from "next/link";
+import { Shield, X, ArrowRight, ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
 import LoanProgramButton from "@/components/site/utils/LoanProgramButton";
 import { Fraunces } from "next/font/google";
@@ -90,44 +91,54 @@ export default function SBABusinessSection() {
       {/* Grid updated to gap-6 matching the fixed card layout */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {/* 1. SBA Business Loans */}
-        {/* Keeping col-span logic based on original design intent, but adopting the fixed card structure */}
         <div
           id="sba-business"
-          className="scroll-mt-36 col-span-1 md:col-span-2 lg:col-span-3 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col justify-between h-[400px] transition-colors duration-300 hover:bg-cream/40"
+          className="scroll-mt-36 col-span-1 md:col-span-2 lg:col-span-3 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col justify-between h-[435px] transition-colors duration-300 hover:bg-cream/40"
         >
           <div>
             <div className="flex items-center justify-between mb-6">
               <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-brand-orange/10 text-brand-orange shrink-0">
                 <Shield size={22} strokeWidth={1.8} />
               </div>
+              <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2.5 py-1 rounded-md">
+                Business Growth
+              </span>
             </div>
             <h3
               className={cn(
-                "text-2xl font-medium text-ink mb-3",
+                "text-2xl font-medium text-ink mb-2",
                 fraunces.className,
               )}
             >
               SBA Business Loans
             </h3>
-            <h4 className="font-medium text-ink text-sm mb-2 line-clamp-2">
+            <h4 className="font-medium text-ink text-sm mb-2 line-clamp-1">
               Affordable Financing to Help Your Business Grow
             </h4>
-            <p className="text-sm text-ink-2 leading-relaxed line-clamp-4 max-w-4xl">
-              Whether you're starting a new business, expanding operations,
-              purchasing commercial real estate, or acquiring an existing
-              company, <span className="font-bold">SBA Loans</span> offer
-              flexible financing backed by the U.S. Small Business
-              Administration. Designed to make capital more accessible, SBA
-              loans often provide lower down payments...
+            <p className="text-sm text-ink-2 leading-relaxed line-clamp-3 max-w-4xl">
+              Whether you&apos;re starting a new business, expanding operations,
+              purchasing equipment, or acquiring an existing company, SBA loans
+              offer flexible financing backed by the U.S. Small Business
+              Administration with loan amounts up to $5M.
             </p>
           </div>
-          <div className="mt-auto pt-4 max-w-sm">
+
+          {/* Card Action Buttons with Link to Dedicated Page */}
+          <div className="mt-auto pt-4 flex flex-col sm:flex-row gap-2 max-w-md">
             <button
               onClick={() => setActiveModal("sba-business")}
-              className="w-full py-3 bg-cream hover:bg-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-2 transition-all"
+              className="flex-1 py-3 bg-cream hover:bg-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
             >
               Read More <ArrowRight size={14} />
             </button>
+
+            <Link
+              href="/loan-programs/sba-business-loans"
+              className="flex-1 py-3 bg-primary-bg hover:bg-cream border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
+            >
+              Program Page{" "}
+              <ExternalLink size={14} className="text-brand-orange" />
+            </Link>
           </div>
 
           <LoanDetailModal
@@ -141,10 +152,10 @@ export default function SBABusinessSection() {
               </h4>
 
               <p className="text-sm text-ink-2 leading-relaxed mb-2">
-                Whether you're starting a new business, expanding operations,
-                purchasing commercial real estate, or acquiring an existing
-                company, <span className="font-bold"> SBA Loans</span> offer
-                flexible financing backed by the U.S. Small Business
+                Whether you&apos;re starting a new business, expanding
+                operations, purchasing commercial real estate, or acquiring an
+                existing company, <span className="font-bold"> SBA Loans</span>{" "}
+                offer flexible financing backed by the U.S. Small Business
                 Administration.
               </p>
               <p className="text-sm text-ink-2 leading-relaxed mb-6">
@@ -229,12 +240,32 @@ export default function SBABusinessSection() {
                 ))}
               </ul>
 
+              {/* Direct Program Page Link Box inside Modal */}
+              <div className="mb-6 p-4 bg-cream/40 border border-line rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-3">
+                <div>
+                  <div className="text-xs font-semibold text-ink uppercase tracking-wider">
+                    Want to calculate payments & explore loan options?
+                  </div>
+                  <p className="text-xs text-ink-2">
+                    Estimate monthly costs with our live WSJ Prime rate
+                    calculator and review full SBA guidelines.
+                  </p>
+                </div>
+                <Link
+                  href="/loan-programs/sba-business-loans"
+                  onClick={closeModal}
+                  className="btn-shine bg-brand-orange text-white px-5 py-2.5 rounded-full text-xs font-semibold flex items-center gap-1.5 shrink-0 hover:bg-orange-600 transition-colors"
+                >
+                  Visit Full Program Page <ArrowRight size={14} />
+                </Link>
+              </div>
+
               <h4 className="font-medium text-ink mb-3 mt-6">
                 Build Your Business With Confidence
               </h4>
               <p className="text-sm text-ink-2 leading-relaxed mb-6">
-                Whether you're purchasing your first commercial property,
-                expanding to a new location, or investing in your company's
+                Whether you&apos;re purchasing your first commercial property,
+                expanding to a new location, or investing in your company&apos;s
                 future, MyLoanDesk can help you navigate the SBA loan process
                 from application through closing.
               </p>
@@ -247,7 +278,7 @@ export default function SBABusinessSection() {
                 </span>
                 <br />
                 Contact MyLoanDesk today to explore your SBA financing options
-                and find the loan that's right for your business.
+                and find the loan that&apos;s right for your business.
               </p>
               <LoanProgramButton loan_type="SBA Business" />
             </div>
