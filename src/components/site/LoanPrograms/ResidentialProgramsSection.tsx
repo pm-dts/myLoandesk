@@ -474,6 +474,121 @@ export default function ResidentialProgramsSection() {
           </LoanDetailModal>
         </div>
 
+        {/* FHA Alternative Income Documentation */}
+        <div
+          id="fha-alt-docs"
+          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col h-[435px] transition-colors duration-300 hover:bg-cream/40"
+        >
+          <div>
+            <div className="flex items-center justify-between mb-6">
+              <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-brand-orange/10 text-brand-orange shrink-0">
+                <Shield size={22} strokeWidth={1.8} />
+              </div>
+              <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2 py-1 rounded">
+                Flexible Qualification
+              </span>
+            </div>
+            <h3
+              className={cn(
+                "text-2xl font-medium text-ink mb-2",
+                fraunces.className,
+              )}
+            >
+              FHA Alternative Docs
+            </h3>
+            <p className="text-sm text-ink-2 leading-relaxed line-clamp-3">
+              Not every qualified borrower&apos;s income fits neatly into a
+              standard FHA documentation review. These alternative options
+              finance up to 96.5% of the purchase price using VOE or P&amp;L
+              verification.
+            </p>
+          </div>
+
+          {/* Card Action Buttons with Link to Dedicated Page */}
+          <div className="mt-auto pt-4 flex flex-col sm:flex-row gap-2">
+            <button
+              onClick={() => setActiveModal("fha-alt-docs")}
+              className="flex-1 py-3 bg-cream hover:bg-moss-deep hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
+            >
+              Read More <ArrowRight size={14} />
+            </button>
+
+            {/* Direct Page Link in Card */}
+            <Link
+              href="/loan-programs/fha-alternative-loans"
+              className="flex-1 py-3 bg-primary-bg hover:bg-cream border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
+            >
+              Program Page{" "}
+              <ExternalLink size={14} className="text-brand-orange" />
+            </Link>
+          </div>
+
+          {/* Modal Dialog with Embedded Program Link */}
+          <LoanDetailModal
+            isOpen={activeModal === "fha-alt-docs"}
+            onClose={closeModal}
+            title="FHA Alternative Income Documentation"
+          >
+            <div>
+              <p className="text-base font-medium text-moss-deep mb-4">
+                When your income doesn&apos;t fit a standard file, there may
+                still be an FHA path.
+              </p>
+
+              <p className="text-sm text-ink-2 leading-relaxed mb-6">
+                Not every qualified borrower&apos;s income fits neatly into a
+                standard FHA documentation review — a wage earner with a
+                nontraditional pay structure, or a business owner whose tax
+                returns understate real income after deductions, can still be a
+                strong borrower. These alternative documentation options finance
+                up to 96.5% of the purchase price using a different — but still
+                fully documented — path to verify your income.
+              </p>
+
+              <ul className="space-y-2 mb-6">
+                {[
+                  "FHA VOE Program for W-2 wage earners verified directly through your employer",
+                  "FHA Self-Employed P&L Program qualifying from profit & loss statements without tax returns",
+                  "Up to 96.5% financing (as low as 3.5% down payment)",
+                  "100% of down payment can come from eligible family gift funds",
+                  "Available for primary residences with 1 to 4 units",
+                  "Minimum credit score thresholds as low as 580 (VOE) and 640 (P&L)",
+                ].map((item, index) => (
+                  <li
+                    key={index}
+                    className="flex items-start gap-2 text-xs text-ink/90 leading-normal"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-1.5 shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              {/* Direct Program Page Link Box inside Modal */}
+              <div className="mb-6 p-4 bg-cream/40 border border-line rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-3">
+                <div>
+                  <div className="text-xs font-semibold text-ink uppercase tracking-wider">
+                    Want to explore VOE vs. P&amp;L program guidelines?
+                  </div>
+                  <p className="text-xs text-ink-2">
+                    Compare loan terms, review credit score minimums, and check
+                    local FHA loan limits.
+                  </p>
+                </div>
+                <Link
+                  href="/loan-programs/fha-alternative-loans"
+                  onClick={closeModal}
+                  className="btn-shine bg-brand-orange text-white px-5 py-2.5 rounded-full text-xs font-semibold flex items-center gap-1.5 shrink-0 hover:bg-orange-600 transition-colors"
+                >
+                  Visit Full Program Page <ArrowRight size={14} />
+                </Link>
+              </div>
+            </div>
+
+            <LoanProgramButton loan_type="FHA Alternative Documentation" />
+          </LoanDetailModal>
+        </div>
+
         {/* 4. 2/1 Buydown */}
         <div
           id="buydown-2-1"
