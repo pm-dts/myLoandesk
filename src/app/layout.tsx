@@ -26,6 +26,21 @@ export const metadata: Metadata = {
       "MyLoanDesk is your trusted partner for all your mortgage needs, providing expert guidance and seamless online services.",
     type: "website",
     url: "/",
+    images: [
+      {
+        url: "/og-image.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "MyLoanDesk - Your Trusted Mortgage Partner",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MyLoanDesk - Your Trusted Mortgage Partner",
+    description:
+      "MyLoanDesk is your trusted partner for all your mortgage needs, providing expert guidance and seamless online services.",
+    images: ["/og-image.jpeg"],
   },
   alternates: {
     canonical: "/",

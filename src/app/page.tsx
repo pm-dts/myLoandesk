@@ -1,23 +1,25 @@
-import { ArrowRight, Star } from "lucide-react";
-import { Home, RefreshCw, AlertCircle } from "lucide-react";
-import { Clock, FileText, Phone, FileCheck } from "lucide-react";
-import { cn } from "@/lib/utils";
+import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
+import {
+  ArrowRight,
+  Star,
+  AlertCircle,
+  Clock,
+  FileText,
+  Phone,
+  FileCheck,
+} from "lucide-react";
+import { Fraunces } from "next/font/google";
+import { cn } from "@/lib/utils";
+import Script from "next/script";
 
 import Calculator from "@/components/site/Home/Calculator";
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
 import LenderMarquee from "@/components/site/Home/LenderMarquee";
-// import CurrentRates from "@/components/site/Home/InterestRates";
-// import Contact from "@/components/site/Home/Contact";
-
-import { Fraunces } from "next/font/google";
 import Faq from "@/components/site/Home/FAQ";
 import PreQualified from "@/components/site/Home/ApplicationForm";
 import CalculatorSection from "@/components/site/Home/CalculatorSection";
 import RateAlert from "@/components/site/Home/RateAlert";
-
-import deskImg from "@/assets/desk.png";
 import HeroSmallIcons from "@/components/site/Home/HeroSmallIcons";
 import LoansSection from "@/components/site/Home/LoanCards";
 
@@ -27,9 +29,141 @@ const fraunces = Fraunces({
   weight: ["400", "500", "600", "700", "800", "900"],
 });
 
-export default function Hero() {
+export const metadata: Metadata = {
+  title: "MyLoanDesk | Compare Wholesale Mortgage Rates & Home Loan Options",
+  description:
+    "Access hundreds of mortgage solutions through our nationwide lending network. Compare loan options, negotiate competitive rates, and close in as little as 10–28 days.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "MyLoanDesk | Compare Wholesale Mortgage Rates & Home Loan Options",
+    description:
+      "Access hundreds of mortgage solutions through our nationwide lending network. We compare options, negotiate competitive rates, and manage every step.",
+    url: "/",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "MyLoanDesk | Compare Wholesale Mortgage Rates",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MyLoanDesk | Compare Wholesale Mortgage Rates & Home Loan Options",
+    description:
+      "Access hundreds of mortgage solutions through our nationwide lending network. Compare loan options, negotiate competitive rates, and close in as little as 10–28 days.",
+    images: ["/og-image.jpeg"],
+  },
+};
+
+// Page-specific Schema: WebPage, FAQPage, HowTo Process, and Breadcrumb
+const pageStructuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.myloandesk.com/#webpage",
+      url: "https://www.myloandesk.com",
+      name: "MyLoanDesk | Compare Wholesale Mortgage Rates & Home Loan Options",
+      description:
+        "Access hundreds of mortgage solutions through our nationwide lending network. Compare loan options, negotiate competitive rates, and close in as little as 10–28 days.",
+      isPartOf: {
+        "@id": "https://www.myloandesk.com/#website",
+      },
+      about: {
+        "@id": "https://www.myloandesk.com/#organization",
+      },
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.myloandesk.com/#breadcrumb",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://www.myloandesk.com",
+        },
+      ],
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.myloandesk.com/#faq-schema",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "How are you different from a bank's loan officer?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "A bank can only offer the mortgage products available through that bank. At MyLoan Desk, we work with multiple lenders, giving you access to a wider range of loan programs, competitive interest rates, and flexible underwriting options. We compare offers on your behalf to help you find the mortgage that best fits your financial goals-not just the one a single bank has available.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How much do I need for a down payment?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Down payment requirements vary by loan program. Some loans require as little as 3% down, while eligible veterans may qualify for 0% down through VA loans. There are also down payment assistance programs available for many first-time homebuyers. We'll help you explore the options that best fit your financial situation.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How much can I qualify for?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "The amount you qualify for depends on several factors, including your income, assets, credit history, existing debts, down payment, and the type of loan you're applying for. The fastest way to find out is through a free pre-approval. We'll review your financial situation and provide a personalized estimate so you can shop for a home with confidence.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What are the closing costs on a mortgage?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Closing costs vary based on the loan program, property, loan amount, and your individual qualifications. They may include lender fees, appraisal, title services, government recording fees, prepaid taxes and insurance, and other third-party costs. Before you commit to a loan, you'll receive a detailed Loan Estimate that clearly outlines every fee, so you'll know exactly what to expect. In many cases, lender credits or seller concessions can help reduce your out-of-pocket costs.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How fast can you close?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Every loan is different, but many mortgages can close in as little as 14 to 30 days, depending on the loan program, appraisal timing, and how quickly required documents are provided. Our team works proactively with borrowers, real estate agents, and lenders to keep your loan moving efficiently from application to closing.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Will shopping around hurt my credit score?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "No. Credit scoring models recognize that borrowers often compare mortgage offers before choosing a lender. Multiple mortgage-related credit inquiries made within a short shopping period are generally treated as a single inquiry for scoring purposes. Comparing loan options can help you find a better rate and potentially save thousands over the life of your mortgage.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What if my credit isn't great?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Don't assume you won't qualify. We work with a variety of lenders offering programs for borrowers with different credit profiles. Depending on your situation, there may be options available even if your credit score isn't perfect. If you're not ready today, we'll help you understand what steps could improve your chances of qualifying in the future.",
+          },
+        },
+      ],
+    },
+  ],
+};
+
+export default function HomePage() {
   return (
     <main className="min-h-screen bg-primary-bg pt-16">
+      {/* Page-Specific JSON-LD Schema (WebPage, FAQPage, HowTo) */}
+      <Script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageStructuredData) }}
+      />
+
       <section className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-8 items-center">
           {/* Left Column: Copy & CTAs */}
@@ -47,7 +181,9 @@ export default function Hero() {
 
             {/* Subheadline */}
             <p className="text-lg text-ink-2 leading-relaxed mb-10">
-              Access hundreds of mortgage solutions through our nationwide lending network. We compare your options, negotiate competitive rates, and handle every detail from application to closing.
+              Access hundreds of mortgage solutions through our nationwide
+              lending network. We compare your options, negotiate competitive
+              rates, and handle every detail from application to closing.
             </p>
 
             {/* Actions & Social Proof Container */}
@@ -84,7 +220,7 @@ export default function Hero() {
                     <img
                       key={i}
                       src={src}
-                      alt="Customer"
+                      alt="Satisfied client avatar"
                       className={`w-9 h-9 rounded-full border-2 border-primary-bg object-cover relative z-0 ${i !== 0 ? "-ml-2.5" : ""}`}
                     />
                   ))}
@@ -125,7 +261,6 @@ export default function Hero() {
           {/* Right Column: Calculator Component */}
           <div className="relative w-full max-w-xl mx-auto lg:ml-auto lg:mr-0 mt-8 lg:mt-0">
             <div className="absolute inset-0 bg-[#E8E4D8] rounded-3xl transform rotate-2 translate-x-3 translate-y-3 -z-10"></div>
-
             <div className="relative z-10">
               <Calculator />
             </div>
@@ -133,14 +268,14 @@ export default function Hero() {
         </div>
       </section>
 
-      {/* loans card */}
+      {/* Loans Cards */}
       <LoansSection />
 
       <section className="py-10 px-4 sm:px-6 flex flex-col items-center gap-6">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-2">
           <h2
-            className={` ${fraunces.className} text-3xl sm:text-3xl lg:text-4xl font-display font-semibold text-ink tracking-tight`}
+            className={`${fraunces.className} text-3xl sm:text-3xl lg:text-4xl font-display font-semibold text-ink tracking-tight`}
           >
             Average US Mortgage Rates
           </h2>
@@ -156,6 +291,7 @@ export default function Hero() {
             width="750"
             height="502"
             frameBorder="0"
+            title="Daily Average US Mortgage Rates Widget"
             className="max-w-full"
           ></iframe>
           <div className="bg-cream/40 rounded-2xl border border-line/50 p-6 sm:p-8 flex flex-col items-start md:items-center justify-between gap-6 w-full max-w-[782px]">
@@ -177,7 +313,7 @@ export default function Hero() {
             </div>
 
             {/* Action Callout Box */}
-            <div className="flex flex-col  gap-2 shrink-0 w-full md:w-auto border-t md:border-t-0 border-line/40 pt-4 md:pt-0">
+            <div className="flex flex-col gap-2 shrink-0 w-full md:w-auto border-t md:border-t-0 border-line/40 pt-4 md:pt-0">
               <span className="text-[10px] text-center sm:text-xs font-semibold uppercase tracking-wider text-ink-2/80">
                 Contact us for your personalized quote
               </span>
@@ -188,32 +324,34 @@ export default function Hero() {
                 Get Your Personalized Mortgage Rate
               </Link>
               <p className="text-xs text-ink-2 text-center mt-2">
-                Complete this short form and a MyLoanDesk mortgage specialist will compare loan options from our nationwide lending network and contact you with personalized rates and financing solutions tailored to your goals.
+                Complete this short form and a MyLoanDesk mortgage specialist
+                will compare loan options from our nationwide lending network
+                and contact you with personalized rates and financing solutions
+                tailored to your goals.
               </p>
             </div>
-
           </div>
         </div>
       </section>
 
-      <section className="">
+      <section>
         <RateAlert />
       </section>
 
       <section className="px-6 lg:px-10 border-t border-b border-line py-8">
         <div className="max-w-7xl mx-auto flex flex-wrap gap-8 justify-between items-center">
-          <div className="">
+          <div>
             <AnimatedCounter
               value={2.4}
               duration={2000}
-              decimals={0}
+              decimals={1}
               prev="$"
               next="B+"
               className={cn("text-5xl text-ink", fraunces.className)}
             />
             <p className="mt-2 text-ink-2">Funded for families since 1995</p>
           </div>
-          <div className="">
+          <div>
             <AnimatedCounter
               value={12400}
               duration={2000}
@@ -223,7 +361,7 @@ export default function Hero() {
             />
             <p className="mt-2 text-ink-2">Loans completed</p>
           </div>
-          <div className="">
+          <div>
             <AnimatedCounter
               value={23}
               duration={2000}
@@ -235,7 +373,7 @@ export default function Hero() {
               Average time from application to keys
             </p>
           </div>
-          <div className="">
+          <div>
             <AnimatedCounter
               value={4.9}
               duration={2000}
@@ -279,9 +417,7 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* 1px Grid Layout 
-          Using gap-px and bg-line on the parent creates flawless 1px internal borders 
-        */}
+          {/* 1px Grid Layout */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-line border border-line rounded-2xl overflow-hidden shadow-sm">
             {/* Step 01 */}
             <div className="bg-primary-bg p-7 lg:p-8 transition-colors duration-300 hover:bg-cream">
@@ -363,13 +499,11 @@ export default function Hero() {
           </div>
         </div>
       </section>
+
       <section
         id="why"
         className="py-24 lg:py-32 text-ink relative overflow-hidden dotted-bg"
       >
-        {/* Optional: If you don't have .dotted-bg in your CSS, you can replace it with: 
-          className="... bg-[radial-gradient(#e6e2d6_1px,transparent_1px)] [background-size:20px_20px]" 
-      */}
         <div className="max-w-7xl mx-auto px-6 lg:px-10 relative">
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
             {/* Left Column: Copy & Testimonial */}
@@ -413,7 +547,6 @@ export default function Hero() {
 
             {/* Right Column: Feature Grid */}
             <div className="lg:col-span-7 grid sm:grid-cols-2 gap-4">
-              {/* Feature 1 */}
               <div className="p-7 bg-cream/5 border border-cream/12 rounded-2xl transition-all duration-300 hover:bg-cream/10 hover:border-[#D4A574]/30 hover:-translate-y-1">
                 <div className="w-11 h-11 rounded-xl bg-[#D4A574]/20 flex items-center justify-center mb-5">
                   <Clock className="text-[#D4A574]" size={20} strokeWidth={2} />
@@ -427,7 +560,6 @@ export default function Hero() {
                 </p>
               </div>
 
-              {/* Feature 2 */}
               <div className="p-7 bg-cream/5 border border-cream/12 rounded-2xl transition-all duration-300 hover:bg-cream/10 hover:border-[#D4A574]/30 hover:-translate-y-1">
                 <div className="w-11 h-11 rounded-xl bg-[#D4A574]/20 flex items-center justify-center mb-5">
                   <FileText
@@ -443,7 +575,6 @@ export default function Hero() {
                 </p>
               </div>
 
-              {/* Feature 3 */}
               <div className="p-7 bg-cream/5 border border-cream/12 rounded-2xl transition-all duration-300 hover:bg-cream/10 hover:border-[#D4A574]/30 hover:-translate-y-1">
                 <div className="w-11 h-11 rounded-xl bg-[#D4A574]/20 flex items-center justify-center mb-5">
                   <Phone className="text-[#D4A574]" size={20} strokeWidth={2} />
@@ -457,7 +588,6 @@ export default function Hero() {
                 </p>
               </div>
 
-              {/* Feature 4 */}
               <div className="p-7 bg-cream/5 border border-cream/12 rounded-2xl transition-all duration-300 hover:bg-cream/10 hover:border-[#D4A574]/30 hover:-translate-y-1">
                 <div className="w-11 h-11 rounded-xl bg-[#D4A574]/20 flex items-center justify-center mb-5">
                   <FileCheck
@@ -477,9 +607,9 @@ export default function Hero() {
           </div>
         </div>
       </section>
+
       <section id="stories" className="py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          {/* Header Row */}
           <div className="grid lg:grid-cols-12 gap-10 mb-14">
             <div className="lg:col-span-6">
               <div className="text-[10px] uppercase tracking-[0.25em] text-brand-orange font-semibold mb-5">
@@ -503,12 +633,8 @@ export default function Hero() {
 
           {/* Testimonials Embed */}
           <div className="w-full mx-auto relative mt-8" id="reviews">
-            {/* Background design elements to match your brand style */}
             <div className="absolute inset-0 bg-[#E8E4D8] rounded-[24px] sm:rounded-[32px] transform -rotate-1 -translate-x-1.5 translate-y-1.5 sm:-translate-x-2 sm:translate-y-2 -z-10"></div>
-
-            {/* Iframe Container */}
             <div className="relative z-10 bg-primary-bg border border-line rounded-[24px] sm:rounded-[32px] overflow-hidden shadow-[0_20px_50px_-20px_rgba(15,61,46,0.2)]">
-              {/* Note: Iframe height is explicitly set to ensure enough vertical room for the widget to display the reviews without internal scrolling if possible */}
               <iframe
                 className="w-full h-[900px] sm:h-[700px]"
                 title="Google Review"
@@ -521,9 +647,9 @@ export default function Hero() {
           </div>
         </div>
       </section>
+
       <Faq />
       <PreQualified />
-      {/* <Contact /> */}
       <LenderMarquee />
     </main>
   );
