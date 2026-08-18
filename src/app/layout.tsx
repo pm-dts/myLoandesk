@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
-// import Script from "next/script";
+import Script from "next/script";
 import "./globals.css";
 import { GoogleTagManager } from "@next/third-parties/google";
 
@@ -40,6 +40,69 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["Organization", "FinancialService", "MortgageBroker"],
+      "@id": "https://www.myloandesk.com/#organization",
+      name: "MyLoanDesk",
+      legalName:
+        "Secured Horizon Financial Group, Inc. / Secured Horizon Mortgage Group, Inc.",
+      url: "https://www.myloandesk.com",
+      logo: "https://www.myloandesk.com/assets/new-logo.png",
+      image: "https://www.myloandesk.com/assets/new-logo.png",
+      description:
+        "Access hundreds of mortgage solutions through our nationwide lending network. Compare loan options, secure competitive interest rates, and close on time.",
+      telephone: "+1-305-891-6500",
+      faxNumber: "+1-855-794-7611",
+      email: "info@myloandesk.com",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "1801 NE 123rd St, Suite 314",
+        addressLocality: "North Miami",
+        addressRegion: "FL",
+        postalCode: "33181",
+        addressCountry: "US",
+      },
+      identifier: [
+        {
+          "@type": "PropertyValue",
+          name: "Individual NMLS ID",
+          value: "341393",
+        },
+        {
+          "@type": "PropertyValue",
+          name: "Company NMLS ID",
+          value: "314226, 1444825",
+        },
+      ],
+      priceRange: "$$",
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.9",
+        bestRating: "5",
+        worstRating: "1",
+        ratingCount: "2300",
+        reviewCount: "2300",
+      },
+      sameAs: [
+        "https://youtube.com/@MyLoanDeskMortgage",
+        "https://www.nmlsconsumeraccess.org/",
+      ],
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.myloandesk.com/#website",
+      url: "https://www.myloandesk.com",
+      name: "MyLoanDesk",
+      publisher: {
+        "@id": "https://www.myloandesk.com/#organization",
+      },
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -50,6 +113,14 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.className} h-full antialiased bg-cream`}
     >
+      <head>
+        <Script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
+      </head>
       <body className="min-h-full flex flex-col relative bg-cream">
         <SiteHeader />
 
