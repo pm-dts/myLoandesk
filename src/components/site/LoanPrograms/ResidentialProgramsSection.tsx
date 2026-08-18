@@ -249,28 +249,40 @@ export default function ResidentialProgramsSection() {
             </div>
             <h3
               className={cn(
-                "text-2xl font-medium text-ink mb-4",
+                "text-2xl font-medium text-ink mb-2",
                 fraunces.className,
               )}
             >
               Jumbo Loans
             </h3>
             <p className="text-sm text-ink-2 leading-relaxed line-clamp-3">
-              Exceptional homes deserve exceptional financing. Our Jumbo Loan
-              programs are designed for luxury homes, high-value properties, and
-              discerning borrowers who expect personalized, white-glove service
-              from start to finish.
+              Exceptional homes deserve exceptional financing[cite: 7]. Our
+              Jumbo Loan programs are designed for luxury homes, high-value
+              properties, and discerning borrowers who expect personalized,
+              white-glove service from start to finish.
             </p>
           </div>
-          <div className="mt-auto pt-4">
+
+          {/* Card Action Buttons with Link to Dedicated Page */}
+          <div className="mt-auto pt-4 flex flex-col sm:flex-row gap-2">
             <button
               onClick={() => setActiveModal("jumbo")}
-              className="w-full py-3 bg-cream hover:bg-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-2 transition-all"
+              className="flex-1 py-3 bg-cream hover:bg-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
             >
               Read More <ArrowRight size={14} />
             </button>
+
+            {/* Direct Page Link in Card */}
+            <Link
+              href="/loan-programs/jumbo-loans"
+              className="flex-1 py-3 bg-primary-bg hover:bg-cream border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
+            >
+              Program Page{" "}
+              <ExternalLink size={14} className="text-brand-orange" />
+            </Link>
           </div>
 
+          {/* Modal Dialog with Embedded Program Link */}
           <LoanDetailModal
             isOpen={activeModal === "jumbo"}
             onClose={closeModal}
@@ -278,25 +290,26 @@ export default function ResidentialProgramsSection() {
           >
             <div>
               <div className="text-sm text-ink-2 space-y-4 mb-6 leading-relaxed">
-                <p>Exceptional homes deserve exceptional financing.</p>
+                <p>Exceptional homes deserve exceptional financing[cite: 7].</p>
                 <p>
                   Our Jumbo Loan programs are designed for luxury homes,
                   high-value properties, and discerning borrowers who expect
                   personalized, white-glove service from start to finish.
-                  Whether you're purchasing a primary residence, second home, or
-                  investment property, we provide access to some of the
-                  industry's most competitive rates, flexible underwriting, and
-                  customized financing solutions.
+                  Whether you&apos;re purchasing a primary residence, second
+                  home, or investment property, we provide access to some of the
+                  industry&apos;s most competitive rates, flexible underwriting,
+                  and customized financing solutions[cite: 7].
                 </p>
                 <p>
                   At MyLoanDesk, we understand that affluent borrowers often
-                  have complex financial profiles. From self-employed
+                  have complex financial profiles[cite: 7]. From self-employed
                   professionals and business owners to executives, investors,
                   and foreign nationals, our experienced team works with a broad
                   network of premier jumbo lenders to structure financing
-                  tailored to your unique needs.
+                  tailored to your unique needs[cite: 7].
                 </p>
               </div>
+
               <h4 className="font-medium text-ink mb-3">Ideal For:</h4>
 
               <ul className="space-y-2 mb-6">
@@ -316,6 +329,28 @@ export default function ResidentialProgramsSection() {
                   </li>
                 ))}
               </ul>
+
+              {/* Direct Program Page Link Box inside Modal */}
+              <div className="mb-6 p-4 bg-cream/40 border border-line rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-3">
+                <div>
+                  <div className="text-xs font-semibold text-ink uppercase tracking-wider">
+                    Want to estimate payments &amp; see all 5 qualification
+                    paths?[cite: 7, 8]
+                  </div>
+                  <p className="text-xs text-ink-2">
+                    Explore Bank Statement, Asset Depletion, Foreign National,
+                    and DSCR Jumbo options[cite: 7, 8].
+                  </p>
+                </div>
+                <Link
+                  href="/loan-programs/jumbo-loans"
+                  onClick={closeModal}
+                  className="btn-shine bg-brand-orange text-white px-5 py-2.5 rounded-full text-xs font-semibold flex items-center gap-1.5 shrink-0 hover:bg-orange-600 transition-colors"
+                >
+                  Visit Full Program Page <ArrowRight size={14} />
+                </Link>
+              </div>
+
               <p className="font-bold text-sm text-ink-2 space-y-4 mb-6 leading-relaxed">
                 Experience the difference of personalized, concierge-level
                 service with competitive rates, exceptional terms, and a lending
@@ -325,7 +360,6 @@ export default function ResidentialProgramsSection() {
             <LoanProgramButton loan_type="Jumbo Loans" />
           </LoanDetailModal>
         </div>
-
         {/* 3. FHA Loans */}
         <div
           id="fha"
@@ -356,7 +390,7 @@ export default function ResidentialProgramsSection() {
           </div>
 
           {/* Card Action Buttons with Link to Dedicated Page */}
-          <div className="mt-auto pt-4 flex flex-col gap-2">
+          <div className="mt-auto pt-4 flex flex-col sm:flex-row gap-2">
             <button
               onClick={() => setActiveModal("fha")}
               className="flex-1 py-3 bg-cream hover:bg-moss-deep hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
