@@ -1325,7 +1325,7 @@ export default function ResidentialProgramsSection() {
         {/* 9. Bridge to Sale */}
         <div
           id="bridge-to-sale"
-          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col h-[435px] transition-colors duration-300 hover:bg-cream/40"
+          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col sm:h-[380px] transition-colors duration-300 hover:bg-cream/40"
         >
           <div>
             <div className="flex items-center justify-between mb-6">
@@ -1776,7 +1776,7 @@ export default function ResidentialProgramsSection() {
         {/* 12. Dream Home Builder AKA Earned Equity Program (EEP) */}
         <div
           id="eep"
-          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col justify-between sm:h-[380px] transition-colors duration-300 hover:bg-cream/40"
+          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col justify-between sm:h-[450px] transition-colors duration-300 hover:bg-cream/40"
         >
           <div>
             <div className="flex items-center justify-between mb-6">
