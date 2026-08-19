@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Fraunces } from "next/font/google";
 import { cn } from "@/lib/utils";
@@ -11,26 +12,51 @@ import {
   Landmark,
   ArrowRight,
 } from "lucide-react";
+import BreadcrumbSchema from "@/components/site/utils/BreadcrumbScripts";
 import ReverseMortgageForm from "@/components/site/ReverseMortgage/InquiryForm";
 import ReverseMortgageSection from "@/components/site/LoanPrograms/ReverseMortgageSection";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Reverse Mortgage | MyLoanDesk",
   description:
     "Explore Reverse Mortgage options with MyLoanDesk. Learn how to convert your home equity into financial freedom, with no monthly payments and flexible access to funds.",
+  alternates: {
+    canonical: "https://www.myloandesk.com/reverse-mortgage/",
+  },
   openGraph: {
     title: "Reverse Mortgage | MyLoanDesk",
     description:
       "Explore Reverse Mortgage options with MyLoanDesk. Learn how to convert your home equity into financial freedom, with no monthly payments and flexible access to funds.",
     type: "website",
-    url: "/reverse-mortgage",
+    url: "https://www.myloandesk.com/reverse-mortgage/",
+    siteName: "MyLoanDesk",
+    locale: "en_US",
+    images: [
+      {
+        url: "/og-image.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Reverse Mortgage Programs - MyLoanDesk",
+      },
+    ],
   },
-  alternates: {
-    canonical: "/reverse-mortgage/",
+  twitter: {
+    card: "summary_large_image",
+    title: "Reverse Mortgage | MyLoanDesk",
+    description:
+      "Convert your home equity into retirement funding and financial freedom with no monthly mortgage payments.",
+    images: ["/og-image.jpeg"],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
@@ -40,7 +66,82 @@ const fraunces = Fraunces({
   weight: ["400", "500", "600", "700", "800", "900"],
 });
 
+const reverseMortgageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.myloandesk.com/reverse-mortgage/#webpage",
+      url: "https://www.myloandesk.com/reverse-mortgage/",
+      name: "Reverse Mortgage Solutions | MyLoanDesk",
+      description:
+        "Comprehensive guide and inquiry options for FHA-insured HECM and proprietary reverse mortgage programs for homeowners age 55+.",
+      isPartOf: {
+        "@type": "WebSite",
+        "@id": "https://www.myloandesk.com/#website",
+      },
+      about: {
+        "@id": "https://www.myloandesk.com/#organization",
+      },
+    },
+    {
+      "@type": "FinancialProduct",
+      "@id": "https://www.myloandesk.com/reverse-mortgage/#product",
+      name: "Reverse Mortgage Loan (HECM & Jumbo)",
+      description:
+        "Home equity conversion financing enabling eligible homeowners age 55 and older to access home equity without monthly mortgage principal and interest payments.",
+      provider: {
+        "@id": "https://www.myloandesk.com/#organization",
+      },
+      category: "ReverseMortgage",
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.myloandesk.com/reverse-mortgage/#faq",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Do I have to make monthly mortgage payments on a reverse mortgage?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "No monthly mortgage payments are required as long as you live in the home as your primary residence, keep property taxes and homeowners insurance current, and maintain the property.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Who retains ownership of the home with a reverse mortgage?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "You remain on the title and retain full ownership of your home throughout the life of the reverse mortgage.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What is non-recourse protection on an FHA HECM loan?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Non-recourse protection ensures that neither you nor your heirs will ever owe more than the fair market value of the home when the loan is repaid upon sale.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How can I receive funds from a reverse mortgage?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Proceeds can be received as an upfront lump sum, monthly payments, a growing line of credit, or a customized combination of these options.",
+          },
+        },
+      ],
+    },
+  ],
+};
+
 export default function ReverseMortgagePage() {
+  const breadcrumbItems = [
+    { name: "Home", url: "/" },
+    { name: "Reverse Mortgage", url: "/reverse-mortgage" },
+  ];
+
   const benefits = [
     {
       title: "No Monthly Payments",
@@ -85,6 +186,15 @@ export default function ReverseMortgagePage() {
 
   return (
     <main className="min-h-screen bg-primary-bg pt-20 pb-16 lg:pt-32 lg:pb-24 text-ink">
+      {/* Structural SEO Breadcrumbs & Schema */}
+      <BreadcrumbSchema items={breadcrumbItems} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(reverseMortgageSchema),
+        }}
+      />
+
       {/* --- HERO SECTION --- */}
       <section className="max-w-7xl mx-auto px-6 lg:px-10 mb-20 lg:mb-32 text-center flex flex-col items-center">
         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-line text-xs font-medium text-ink-2 mb-6">
@@ -114,7 +224,7 @@ export default function ReverseMortgagePage() {
             href="#reverse-mortgage-inquiry"
             className="btn-shine bg-brand-orange text-white px-8 py-4 rounded-full font-bold text-sm tracking-wide flex items-center justify-center gap-2 hover:bg-orange-600 transition-colors shadow-sm focus-ring"
           >
-            Let's Find your Options
+            Let&apos;s Find your Options
             <ArrowRight size={18} />
           </Link>
         </div>
@@ -133,8 +243,8 @@ export default function ReverseMortgagePage() {
               The Benefits of a Reverse Mortgage
             </h2>
             <p className="text-ink-2 mt-4 text-sm md:text-base max-w-2xl mx-auto">
-              Discover how tapping into your home's equity can provide financial
-              security and peace of mind during your retirement years.
+              Discover how tapping into your home&apos;s equity can provide
+              financial security and peace of mind during your retirement years.
             </p>
           </div>
 

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import SbaCalculator from "@/components/site/LoanPrograms/SBALoans/SBACalculator";
+import BreadcrumbSchema from "@/components/site/utils/BreadcrumbScripts";
 
 export const metadata: Metadata = {
   title:
@@ -8,15 +9,33 @@ export const metadata: Metadata = {
   description:
     "SBA-backed business financing up to $5M for working capital, equipment, business acquisitions, debt refinance, and franchise financing. Estimate your payment with our free calculator.",
   alternates: {
-    canonical: "/loan-programs/sba-business-loans/",
+    canonical: "https://www.myloandesk.com/loan-programs/sba-business-loans/",
   },
   openGraph: {
     title:
       "SBA Business Loans — Up to $5M for Growth, Equipment & Acquisitions | MyLoanDesk",
     description:
       "Affordable financing to help your business grow, backed by the U.S. Small Business Administration. Estimate your payment with our free calculator.",
-    url: "/loan-programs/sba-business-loans/",
+    url: "https://www.myloandesk.com/loan-programs/sba-business-loans/",
+    siteName: "MyLoanDesk",
+    locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/og-image.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "SBA Business Loans - MyLoanDesk",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "SBA Business Loans — Up to $5M for Growth, Equipment & Acquisitions | MyLoanDesk",
+    description:
+      "Affordable business financing up to $5M backed by the U.S. Small Business Administration.",
+    images: ["/og-image.jpeg"],
   },
   robots: {
     index: true,
@@ -24,95 +43,142 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
 };
 
-const jsonLd = {
+const sbaPageSchema = {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
+  "@graph": [
     {
-      "@type": "Question",
-      name: "What can I use an SBA loan for?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "SBA loan proceeds are flexible and can generally be used for working capital, equipment purchases, business acquisitions, debt refinancing, franchise financing, and commercial real estate. The specific program you use can affect which uses are eligible and the maximum term available.",
+      "@type": "WebPage",
+      "@id":
+        "https://www.myloandesk.com/loan-programs/sba-business-loans/#webpage",
+      url: "https://www.myloandesk.com/loan-programs/sba-business-loans/",
+      name: "SBA Business Loans — Up to $5M for Growth, Equipment & Acquisitions | MyLoanDesk",
+      description:
+        "Comprehensive guide and payment calculator for SBA 7(a), SBA Express, and small business growth loans.",
+      isPartOf: {
+        "@type": "WebSite",
+        "@id": "https://www.myloandesk.com/#website",
+      },
+      about: {
+        "@id": "https://www.myloandesk.com/#organization",
       },
     },
     {
-      "@type": "Question",
-      name: "How much can I borrow with an SBA loan?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "SBA 7(a) loans, the most widely used SBA program, go up to $5 million. Smaller programs like SBA Express offer faster approval on loans up to $500,000, while SBA microloans are available for smaller amounts, often used by newer or smaller businesses.",
+      "@type": "FinancialProduct",
+      "@id":
+        "https://www.myloandesk.com/loan-programs/sba-business-loans/#product",
+      name: "SBA 7(a) & SBA Express Business Loan",
+      description:
+        "Government-guaranteed business loan up to $5M offering extended terms and lower down payments for working capital, equipment, debt consolidation, and business acquisitions.",
+      provider: {
+        "@id": "https://www.myloandesk.com/#organization",
       },
+      category: "BusinessLoan",
     },
     {
-      "@type": "Question",
-      name: "What is the SBA guaranty fee?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "The SBA guaranty fee is a one-time, government-set fee paid on the guaranteed portion of most SBA loans with a maturity over 12 months, in addition to interest. Fee tiers vary by loan size and are reviewed and published annually by the SBA, so the exact percentage should be confirmed at the time of your application.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do I need collateral for an SBA loan?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "It depends on the loan size and program. Smaller SBA loans may require little to no specific collateral, while larger loans typically require available business or personal assets to be pledged, though the SBA generally won't decline a loan solely for lack of full collateral if the business otherwise qualifies.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long does SBA loan approval take?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Timelines vary by program and lender. Standard SBA 7(a) loans often take several weeks to a few months, while SBA Express and similarly streamlined programs are designed for faster turnaround, sometimes within days for an initial decision.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is SBA Express and how is it different from a standard 7(a) loan?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "SBA Express is a streamlined version of the 7(a) program offering faster approval turnaround, typically for loans up to $500,000, in exchange for a lower SBA guaranty percentage than a standard 7(a) loan.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can I use an SBA loan to buy an existing business?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. SBA 7(a) loans are commonly used to finance the purchase of an existing business, including goodwill, equipment, and in some cases real estate associated with the acquisition, often combined into a single loan.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What credit score do I need to qualify for an SBA loan?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "SBA lenders generally look for a personal credit score in the high 600s or above, along with a review of business cash flow, time in business, and industry experience. Requirements vary by lender and loan program.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can I use an SBA loan to buy commercial real estate?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes — SBA 7(a) and SBA 504 loans are both commonly used to purchase or refinance commercial real estate, often with lower down payments than a conventional commercial mortgage. See our Commercial Real Estate Loans page for details specific to property purchases.",
-      },
+      "@type": "FAQPage",
+      "@id": "https://www.myloandesk.com/loan-programs/sba-business-loans/#faq",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "What can I use an SBA loan for?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "SBA loan proceeds are flexible and can generally be used for working capital, equipment purchases, business acquisitions, debt refinancing, franchise financing, and commercial real estate. The specific program you use can affect which uses are eligible and the maximum term available.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How much can I borrow with an SBA loan?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "SBA 7(a) loans, the most widely used SBA program, go up to $5 million. Smaller programs like SBA Express offer faster approval on loans up to $500,000, while SBA microloans are available for smaller amounts, often used by newer or smaller businesses.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What is the SBA guaranty fee?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "The SBA guaranty fee is a one-time, government-set fee paid on the guaranteed portion of most SBA loans with a maturity over 12 months, in addition to interest. Fee tiers vary by loan size and are reviewed and published annually by the SBA, so the exact percentage should be confirmed at the time of your application.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do I need collateral for an SBA loan?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "It depends on the loan size and program. Smaller SBA loans may require little to no specific collateral, while larger loans typically require available business or personal assets to be pledged, though the SBA generally won't decline a loan solely for lack of full collateral if the business otherwise qualifies.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How long does SBA loan approval take?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Timelines vary by program and lender. Standard SBA 7(a) loans often take several weeks to a few months, while SBA Express and similarly streamlined programs are designed for faster turnaround, sometimes within days for an initial decision.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What is SBA Express and how is it different from a standard 7(a) loan?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "SBA Express is a streamlined version of the 7(a) program offering faster approval turnaround, typically for loans up to $500,000, in exchange for a lower SBA guaranty percentage than a standard 7(a) loan.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can I use an SBA loan to buy an existing business?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. SBA 7(a) loans are commonly used to finance the purchase of an existing business, including goodwill, equipment, and in some cases real estate associated with the acquisition, often combined into a single loan.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What credit score do I need to qualify for an SBA loan?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "SBA lenders generally look for a personal credit score in the high 600s or above, along with a review of business cash flow, time in business, and industry experience. Requirements vary by lender and loan program.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can I use an SBA loan to buy commercial real estate?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes — SBA 7(a) and SBA 504 loans are both commonly used to purchase or refinance commercial real estate, often with lower down payments than a conventional commercial mortgage. See our Commercial Real Estate Loans page for details specific to property purchases.",
+          },
+        },
+      ],
     },
   ],
 };
 
 export default function SbaBusinessLoansPage() {
+  const breadcrumbItems = [
+    { name: "Home", url: "/" },
+    { name: "Loan Programs", url: "/loan-programs" },
+    {
+      name: "SBA Business Loans",
+      url: "/loan-programs/sba-business-loans",
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-[#EDEAE2] text-[#55524C] antialiased">
+      {/* Structural SEO Breadcrumbs & Schema */}
+      <BreadcrumbSchema items={breadcrumbItems} />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(sbaPageSchema) }}
       />
 
       <section className="mx-auto max-w-[900px] bg-[#FBF8F2] px-[22px] py-8 sm:px-14 sm:py-[44px] sm:pb-[60px]">
@@ -137,7 +203,7 @@ export default function SbaBusinessLoansPage() {
               Affordable financing to help your business grow.
             </div>
             <p className="mb-6 max-w-[680px] text-[15.5px] leading-[1.7] text-[#55524C]">
-              Whether you're starting a new business, expanding operations,
+              Whether you&apos;re starting a new business, expanding operations,
               purchasing equipment, or acquiring an existing company, SBA loans
               offer flexible financing backed by the U.S. Small Business
               Administration. The government guaranty behind these loans often
@@ -217,14 +283,14 @@ export default function SbaBusinessLoansPage() {
           What Is an SBA Loan?
         </h2>
         <p className="mb-3.5 max-w-[700px] text-[15px] leading-[1.75] text-[#55524C]">
-          An SBA loan is a loan made by a private lender, like MyLoanDesk's
+          An SBA loan is a loan made by a private lender, like MyLoanDesk&apos;s
           network of lending partners, and partially guaranteed by the U.S.
-          Small Business Administration. The SBA doesn't lend the money directly
-          — its guaranty reduces the lender's risk, which is what allows SBA
-          loans to offer terms that are often more accessible than a typical
-          conventional business loan: lower down payments, longer repayment
-          terms, and financing for businesses that might not otherwise qualify
-          for conventional credit on their own.
+          Small Business Administration. The SBA doesn&apos;t lend the money
+          directly — its guaranty reduces the lender&apos;s risk, which is what
+          allows SBA loans to offer terms that are often more accessible than a
+          typical conventional business loan: lower down payments, longer
+          repayment terms, and financing for businesses that might not otherwise
+          qualify for conventional credit on their own.
         </p>
         <p className="mb-3.5 max-w-[700px] text-[15px] leading-[1.75] text-[#55524C]">
           The most widely used SBA program is the 7(a) loan, which allows up to
@@ -365,7 +431,7 @@ export default function SbaBusinessLoansPage() {
           Program Highlights
         </h2>
         <div className="mb-3.5 font-sans text-[13.5px] font-bold uppercase tracking-[0.03em] text-[#1C1C1C]">
-          What's included:
+          What&apos;s included:
         </div>
         <ul className="mb-3 max-w-[700px] list-none p-0">
           {[
@@ -445,10 +511,11 @@ export default function SbaBusinessLoansPage() {
             Strategic Advantages:
           </div>
           <p className="mb-3 text-[14.5px] leading-[1.7] text-[#55524C]">
-            The SBA's guaranty means lenders can extend credit to businesses
-            that might not qualify for a conventional loan on their own — newer
-            businesses, or those without extensive collateral, often have a real
-            path to financing here that wouldn't otherwise exist.
+            The SBA&apos;s guaranty means lenders can extend credit to
+            businesses that might not qualify for a conventional loan on their
+            own — newer businesses, or those without extensive collateral, often
+            have a real path to financing here that wouldn&apos;t otherwise
+            exist.
           </p>
           <p className="mb-3 text-[14.5px] leading-[1.7] text-[#55524C]">
             Longer repayment terms than most conventional business loans mean
@@ -573,7 +640,7 @@ export default function SbaBusinessLoansPage() {
                   Smaller loans needing a fast decision
                 </td>
                 <td className="p-[11px_14px] text-[#55524C]">
-                  Strong businesses that don't need SBA flexibility
+                  Strong businesses that don&apos;t need SBA flexibility
                 </td>
               </tr>
             </tbody>

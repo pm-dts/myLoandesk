@@ -1,27 +1,54 @@
+import type { Metadata } from "next";
 import { ArrowRight, Users, Share2, Award, Zap } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Fraunces } from "next/font/google";
-import PartnerFormSection from "@/components/site/Realtors/PartnerForm";
-import ReferralFormSection from "@/components/site/Realtors/PreApprovalRefferal";
 import { Toaster } from "react-hot-toast";
 
-export const metadata = {
+import BreadcrumbSchema from "@/components/site/utils/BreadcrumbScripts";
+import PartnerFormSection from "@/components/site/Realtors/PartnerForm";
+import ReferralFormSection from "@/components/site/Realtors/PreApprovalRefferal";
+
+export const metadata: Metadata = {
   title: "Realtor Partnership Program | MyLoanDesk",
   description:
     "Join MyLoanDesk's Realtor Partnership Program to close loans faster and provide a seamless experience for your clients. Partner with us for networking, marketing support, and more.",
+  alternates: {
+    canonical: "https://www.myloandesk.com/realtors/",
+  },
   openGraph: {
     title: "Realtor Partnership Program | MyLoanDesk",
     description:
       "Join MyLoanDesk's Realtor Partnership Program to close loans faster and provide a seamless experience for your clients. Partner with us for networking, marketing support, and more.",
     type: "website",
-    url: "/realtors",
+    url: "https://www.myloandesk.com/realtors/",
+    siteName: "MyLoanDesk",
+    locale: "en_US",
+    images: [
+      {
+        url: "/og-image.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "MyLoanDesk Realtor Partnership Program",
+      },
+    ],
   },
-  alternates: {
-    canonical: "/realtors/",
+  twitter: {
+    card: "summary_large_image",
+    title: "Realtor Partnership Program | MyLoanDesk",
+    description:
+      "Partner with MyLoanDesk for faster loan closings, cobranded marketing support, and seamless communication for real estate agents.",
+    images: ["/og-image.jpeg"],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
@@ -31,10 +58,56 @@ const fraunces = Fraunces({
   weight: ["400", "500", "600", "700", "800", "900"],
 });
 
+const realtorsPageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.myloandesk.com/realtors/#webpage",
+      url: "https://www.myloandesk.com/realtors/",
+      name: "Realtor Partnership Program | MyLoanDesk",
+      description:
+        "Direct wholesale lender partnership opportunities, cobranded marketing support, and client pre-approval referral pathways for licensed real estate agents.",
+      isPartOf: {
+        "@type": "WebSite",
+        "@id": "https://www.myloandesk.com/#website",
+      },
+      about: {
+        "@id": "https://www.myloandesk.com/#organization",
+      },
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.myloandesk.com/realtors/#service",
+      name: "Realtor Partnership & Referral Program",
+      description:
+        "Collaborative lending program for realtors featuring fast pre-approvals, direct wholesale loan underwriting, cobranded marketing collateral, and co-hosted networking events.",
+      provider: {
+        "@id": "https://www.myloandesk.com/#organization",
+      },
+      serviceType: "Mortgage Lending Partnership",
+    },
+  ],
+};
+
 export default function RealtorsPage() {
+  const breadcrumbItems = [
+    { name: "Home", url: "/" },
+    { name: "Realtors", url: "/realtors" },
+  ];
+
   return (
     <main className="min-h-screen bg-primary-bg pt-28 pb-16 lg:pt-36 lg:pb-24 text-ink">
+      {/* Structural SEO Breadcrumbs & Schema */}
+      <BreadcrumbSchema items={breadcrumbItems} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(realtorsPageSchema),
+        }}
+      />
       <Toaster position="bottom-right" />
+
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-6 lg:px-10 mb-20">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-8 items-center">
@@ -54,9 +127,9 @@ export default function RealtorsPage() {
 
             {/* Subheadline */}
             <p className="text-lg text-ink-2 leading-relaxed mb-10">
-              Realtors join us because it's a mutually beneficial opportunity.
-              We go above and beyond to provide clear, timely communication and
-              a smooth transaction experience.
+              Realtors join us because it&apos;s a mutually beneficial
+              opportunity. We go above and beyond to provide clear, timely
+              communication and a smooth transaction experience.
             </p>
 
             {/* Action Buttons */}
@@ -125,7 +198,7 @@ export default function RealtorsPage() {
                 <Users className="text-moss-deep" size={22} strokeWidth={1.8} />
               </div>
               <h3 className="font-display text-xl font-semibold mb-2 text-ink">
-                Networking & Referral Opportunities
+                Networking &amp; Referral Opportunities
               </h3>
               <p className="text-sm text-ink-2 leading-relaxed">
                 Take advantage of sponsoring, co-hosting, or attending our
@@ -148,9 +221,9 @@ export default function RealtorsPage() {
               </h3>
               <p className="text-sm text-ink-2 leading-relaxed">
                 Enhance your social media content by sharing our thoughtfully
-                curated content including home buying & financing tips, mortgage
-                101, local market news and valuable information for your
-                clients.
+                curated content including home buying &amp; financing tips,
+                mortgage 101, local market news and valuable information for
+                your clients.
               </p>
             </article>
 
@@ -163,9 +236,9 @@ export default function RealtorsPage() {
                 Cobranded Marketing Materials
               </h3>
               <p className="text-sm text-ink-2 leading-relaxed">
-                Become a known & trusted partner of MyLoanDesk.com with your
-                logo, photo, and contact information included on select print &
-                digital marketing materials.
+                Become a known &amp; trusted partner of MyLoanDesk.com with your
+                logo, photo, and contact information included on select print
+                &amp; digital marketing materials.
               </p>
             </article>
 
@@ -199,11 +272,12 @@ export default function RealtorsPage() {
               fraunces.className,
             )}
           >
-            "As a realtor, I have worked with many lenders, but working with My
-            Loan Desk was the best decision. We have a streamlined process, I
-            have consistent market updates and marketing materials to educate my
-            home buyers - and they are always happy to have no surprises and
-            close quickly! I'm grateful to have such a reliable lender partner."
+            &quot;As a realtor, I have worked with many lenders, but working
+            with My Loan Desk was the best decision. We have a streamlined
+            process, I have consistent market updates and marketing materials to
+            educate my home buyers - and they are always happy to have no
+            surprises and close quickly! I&apos;m grateful to have such a
+            reliable lender partner.&quot;
           </blockquote>
           <div className="mt-8 flex items-center justify-center gap-3">
             <div className="w-10 h-10 rounded-full bg-moss-deep text-primary-bg flex items-center justify-center text-xs font-semibold">

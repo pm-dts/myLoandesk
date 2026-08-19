@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PortugalCalculator from "@/components/site/LoanPrograms/PortugalLoans/Calculator";
+import BreadcrumbSchema from "@/components/site/utils/BreadcrumbScripts";
 
 export const metadata: Metadata = {
   title:
@@ -8,15 +9,34 @@ export const metadata: Metadata = {
   description:
     "Financing for expats and foreign buyers purchasing residential, commercial, or investment property in Portugal. Estimate your Portuguese mortgage payment with our free calculator.",
   alternates: {
-    canonical: "/loan-programs/portugal-property-financing/",
+    canonical:
+      "https://www.myloandesk.com/loan-programs/portugal-property-financing/",
   },
   openGraph: {
     title:
       "Property Financing in Portugal for Expats & Foreign Buyers | MyLoanDesk",
     description:
       "Buying a home, investing in commercial real estate, or developing a new project in Portugal? Explore financing options through our network of lenders in Portugal.",
-    url: "/loan-programs/portugal-property-financing/",
+    url: "https://www.myloandesk.com/loan-programs/portugal-property-financing/",
+    siteName: "MyLoanDesk",
+    locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/og-image.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Portugal Property Financing - MyLoanDesk",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "Property Financing in Portugal for Expats & Foreign Buyers | MyLoanDesk",
+    description:
+      "Financing for expats and foreign buyers purchasing residential, commercial, or investment property in Portugal.",
+    images: ["/og-image.jpeg"],
   },
   robots: {
     index: true,
@@ -24,95 +44,143 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
 };
 
-const jsonLd = {
+const portugalPageSchema = {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
+  "@graph": [
     {
-      "@type": "Question",
-      name: "Can foreigners get a mortgage to buy property in Portugal?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Portugal places no legal restrictions on foreign ownership or foreign borrowing, and Portuguese banks regularly lend to both EU and non-EU non-residents. The main practical differences from a resident mortgage are a larger required deposit, more thorough documentation, and typically a somewhat higher rate spread.",
+      "@type": "WebPage",
+      "@id":
+        "https://www.myloandesk.com/loan-programs/portugal-property-financing/#webpage",
+      url: "https://www.myloandesk.com/loan-programs/portugal-property-financing/",
+      name: "Property Financing in Portugal for Expats & Foreign Buyers | MyLoanDesk",
+      description:
+        "Comprehensive guide and mortgage payment calculator for expats, non-residents, and international buyers purchasing property in Portugal.",
+      isPartOf: {
+        "@type": "WebSite",
+        "@id": "https://www.myloandesk.com/#website",
+      },
+      about: {
+        "@id": "https://www.myloandesk.com/#organization",
       },
     },
     {
-      "@type": "Question",
-      name: "How much deposit do I need as a non-resident buyer?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Non-resident buyers should generally expect to put down at least 25-35% of the purchase price, since Portuguese banks typically cap non-resident financing around 60-75% loan-to-value. Some scenarios may allow for a smaller deposit or a higher loan-to-value, depending on the buyer's financial profile and the specific bank.",
+      "@type": "FinancialProduct",
+      "@id":
+        "https://www.myloandesk.com/loan-programs/portugal-property-financing/#product",
+      name: "Portugal International Mortgage & Property Loan",
+      description:
+        "Mortgage financing in Portugal (Crédito à Habitação) for EU and non-EU foreign buyers, expats, and retirees covering residential, commercial, and construction properties.",
+      provider: {
+        "@id": "https://www.myloandesk.com/#organization",
       },
+      category: "InternationalMortgageLoan",
     },
     {
-      "@type": "Question",
-      name: "Does buying property in Portugal still qualify me for the Golden Visa?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "No. Since October 2023, real estate purchases no longer qualify as an investment route for Portugal’s Golden Visa program. Property in Portugal can still be purchased and financed by foreign buyers, but it will not, on its own, grant Portuguese residency. Anyone considering the Golden Visa program should speak with an immigration attorney about the current qualifying routes, which no longer include real estate.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do I need a Portuguese bank account or tax number (NIF) to get a mortgage?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Generally, yes. Most Portuguese lenders require a Portuguese tax identification number (NIF) and, in most cases, a Portuguese bank account to process a mortgage application, both of which can typically be set up before or during the financing process.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can retirees qualify for a mortgage in Portugal?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, retirees with a documented, regular pension income can generally qualify for a Portuguese mortgage. Loan terms are often structured so the loan is repaid by a certain age, which can shorten the available term for older borrowers, and adding a guarantor is sometimes used to extend borrowing capacity.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What’s the difference between fixed and variable rate mortgages in Portugal?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Portuguese mortgages are commonly offered as either a fixed rate for a set period, or a variable rate tied to Euribor plus a bank spread, which adjusts periodically. Some products also offer a mixed structure, combining a fixed period followed by a variable one.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long can a mortgage term be in Portugal?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Portuguese mortgage terms can extend up to around 30-40 years for younger borrowers, though most banks require the loan to be fully repaid by a set age, often somewhere between 70 and 80, which effectively shortens the maximum term available to older borrowers.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can I get financing for a commercial or investment property in Portugal?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, though commercial and investment property financing typically comes with a lower loan-to-value than a primary residence — often around 50% of the purchase price or appraised value, whichever is lower — reflecting the higher risk profile banks assign to non-owner-occupied property.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long does the mortgage approval and closing process take in Portugal?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: 'Timelines vary, but buyers should generally plan for a longer process than a typical U.S. mortgage, given the additional documentation, valuation, and legal steps involved, including the final signing at a notary (the "escritura"). Working with a broker experienced in the Portuguese market can help keep the process moving efficiently.',
-      },
+      "@type": "FAQPage",
+      "@id":
+        "https://www.myloandesk.com/loan-programs/portugal-property-financing/#faq",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Can foreigners get a mortgage to buy property in Portugal?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. Portugal places no legal restrictions on foreign ownership or foreign borrowing, and Portuguese banks regularly lend to both EU and non-EU non-residents. The main practical differences from a resident mortgage are a larger required deposit, more thorough documentation, and typically a somewhat higher rate spread.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How much deposit do I need as a non-resident buyer?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Non-resident buyers should generally expect to put down at least 25-35% of the purchase price, since Portuguese banks typically cap non-resident financing around 60-75% loan-to-value. Some scenarios may allow for a smaller deposit or a higher loan-to-value, depending on the buyer's financial profile and the specific bank.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Does buying property in Portugal still qualify me for the Golden Visa?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "No. Since October 2023, real estate purchases no longer qualify as an investment route for Portugal’s Golden Visa program. Property in Portugal can still be purchased and financed by foreign buyers, but it will not, on its own, grant Portuguese residency. Anyone considering the Golden Visa program should speak with an immigration attorney about the current qualifying routes, which no longer include real estate.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do I need a Portuguese bank account or tax number (NIF) to get a mortgage?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Generally, yes. Most Portuguese lenders require a Portuguese tax identification number (NIF) and, in most cases, a Portuguese bank account to process a mortgage application, both of which can typically be set up before or during the financing process.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can retirees qualify for a mortgage in Portugal?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, retirees with a documented, regular pension income can generally qualify for a Portuguese mortgage. Loan terms are often structured so the loan is repaid by a certain age, which can shorten the available term for older borrowers, and adding a guarantor is sometimes used to extend borrowing capacity.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What’s the difference between fixed and variable rate mortgages in Portugal?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Portuguese mortgages are commonly offered as either a fixed rate for a set period, or a variable rate tied to Euribor plus a bank spread, which adjusts periodically. Some products also offer a mixed structure, combining a fixed period followed by a variable one.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How long can a mortgage term be in Portugal?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Portuguese mortgage terms can extend up to around 30-40 years for younger borrowers, though most banks require the loan to be fully repaid by a set age, often somewhere between 70 and 80, which effectively shortens the maximum term available to older borrowers.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can I get financing for a commercial or investment property in Portugal?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, though commercial and investment property financing typically comes with a lower loan-to-value than a primary residence — often around 50% of the purchase price or appraised value, whichever is lower — reflecting the higher risk profile banks assign to non-owner-occupied property.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How long does the mortgage approval and closing process take in Portugal?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: 'Timelines vary, but buyers should generally plan for a longer process than a typical U.S. mortgage, given the additional documentation, valuation, and legal steps involved, including the final signing at a notary (the "escritura"). Working with a broker experienced in the Portuguese market can help keep the process moving efficiently.',
+          },
+        },
+      ],
     },
   ],
 };
 
 export default function PortugalPropertyFinancingPage() {
+  const breadcrumbItems = [
+    { name: "Home", url: "/" },
+    { name: "Loan Programs", url: "/loan-programs" },
+    {
+      name: "Portugal Property Financing",
+      url: "/loan-programs/portugal-property-financing",
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-[#EDEAE2] text-[#55524C] antialiased">
+      {/* Structural SEO Breadcrumbs & Schema */}
+      <BreadcrumbSchema items={breadcrumbItems} />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(portugalPageSchema) }}
       />
 
       <section className="mx-auto max-w-[900px] bg-[#FBF8F2] px-[22px] py-8 sm:px-14 sm:py-[44px] sm:pb-[60px]">
@@ -138,11 +206,11 @@ export default function PortugalPropertyFinancingPage() {
               than most expats expect.
             </div>
             <p className="mb-6 max-w-[680px] text-[15.5px] leading-[1.7] text-[#55524C]">
-              Whether you're buying a home, investing in commercial real estate,
-              or developing a new project, MyLoanDesk helps qualified borrowers
-              explore financing options through our network of lenders in
-              Portugal. Portuguese banks lend openly to foreign buyers — there
-              are no legal restrictions on foreign ownership or foreign
+              Whether you&apos;re buying a home, investing in commercial real
+              estate, or developing a new project, MyLoanDesk helps qualified
+              borrowers explore financing options through our network of lenders
+              in Portugal. Portuguese banks lend openly to foreign buyers —
+              there are no legal restrictions on foreign ownership or foreign
               borrowing — but the process looks different from a U.S. mortgage,
               and knowing what to expect makes all the difference.
             </p>
@@ -217,8 +285,8 @@ export default function PortugalPropertyFinancingPage() {
           How Property Financing Works in Portugal
         </h2>
         <p className="mb-3.5 max-w-[700px] text-[15px] leading-[1.75] text-[#55524C]">
-          Portuguese banks offer what's called <em>Crédito à Habitação</em> —
-          home loan financing — to both tax residents and non-residents,
+          Portuguese banks offer what&apos;s called <em>Crédito à Habitação</em>{" "}
+          — home loan financing — to both tax residents and non-residents,
           including American and other foreign buyers. Unlike some countries
           that restrict foreign ownership, Portugal imposes no special permits
           or restrictions on international buyers purchasing or financing
@@ -284,7 +352,7 @@ export default function PortugalPropertyFinancingPage() {
           Program Highlights
         </h2>
         <div className="mb-3.5 font-sans text-[13.5px] font-bold uppercase tracking-[0.03em] text-[#1C1C1C]">
-          What's included:
+          What&apos;s included:
         </div>
         <ul className="mb-3 max-w-[700px] list-none p-0">
           {[
@@ -355,20 +423,20 @@ export default function PortugalPropertyFinancingPage() {
           </div>
           <p className="mb-2.5 text-[14.5px] leading-[1.7] text-[#55524C]">
             Many buyers researching Portugal still associate property purchases
-            with the country's Golden Visa residency-by-investment program.{" "}
-            <strong>That's no longer accurate.</strong>
+            with the country&apos;s Golden Visa residency-by-investment program.{" "}
+            <strong>That&apos;s no longer accurate.</strong>
             Since October 2023, real estate purchases no longer qualify as an
             investment route for the Golden Visa program — that door closed
-            under Portugal's "Mais Habitação" housing law.
+            under Portugal&apos;s &quot;Mais Habitação&quot; housing law.
           </p>
           <p className="mb-0 text-[14.5px] leading-[1.7] text-[#55524C]">
             You can absolutely still buy and finance property in Portugal as a
-            foreign buyer — that hasn't changed. But it will not, by itself,
-            grant you Portuguese residency or a path to the Golden Visa. If
-            residency is part of your goal, that's a separate conversation for
-            an immigration attorney, not something this financing accomplishes
-            on its own. We'd rather tell you that plainly upfront than let a
-            common misconception shape your decision.
+            foreign buyer — that hasn&apos;t changed. But it will not, by
+            itself, grant you Portuguese residency or a path to the Golden Visa.
+            If residency is part of your goal, that&apos;s a separate
+            conversation for an immigration attorney, not something this
+            financing accomplishes on its own. We&apos;d rather tell you that
+            plainly upfront than let a common misconception shape your decision.
           </p>
         </div>
 
@@ -416,7 +484,7 @@ export default function PortugalPropertyFinancingPage() {
 
         {/* What You'll Likely Need */}
         <h2 className="mb-3.5 mt-[42px] font-serif text-[23px] font-bold leading-[1.25] text-[#1C1C1C]">
-          What You'll Likely Need
+          What You&apos;ll Likely Need
         </h2>
         <div className="mb-3 grid max-w-[700px] grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-2">
           {[

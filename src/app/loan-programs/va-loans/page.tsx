@@ -1,7 +1,7 @@
-// app/loan-programs/va-loans/page.tsx
 import type { Metadata } from "next";
 import Link from "next/link";
 import VaCalculator from "@/components/site/LoanPrograms/VALoans/VACalculator";
+import BreadcrumbSchema from "@/components/site/utils/BreadcrumbScripts";
 
 export const metadata: Metadata = {
   title: "VA Loans — Zero Down Payment for Eligible Veterans | MyLoanDesk",
@@ -15,99 +15,165 @@ export const metadata: Metadata = {
     description:
       "Zero down payment, no monthly mortgage insurance, and a benefit you can use again and again. Estimate your VA funding fee with our free calculator.",
     url: "https://www.myloandesk.com/loan-programs/va-loans/",
+    siteName: "MyLoanDesk",
+    locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/og-image.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "VA Loans - MyLoanDesk",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "VA Loans — Zero Down Payment for Eligible Veterans | MyLoanDesk",
+    description:
+      "Zero down payment and no monthly mortgage insurance for eligible veterans and service members.",
+    images: ["/og-image.jpeg"],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
-const jsonLd = {
+const vaPageSchema = {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
+  "@graph": [
     {
-      "@type": "Question",
-      name: "Do I have to make a down payment for a VA loan?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "No. Eligible VA borrowers can finance up to 100% of the purchase price with no down payment required, one of the program's signature benefits. A down payment is never required, though making one can reduce your VA funding fee.",
+      "@type": "WebPage",
+      "@id": "https://www.myloandesk.com/loan-programs/va-loans/#webpage",
+      url: "https://www.myloandesk.com/loan-programs/va-loans/",
+      name: "VA Loans — Zero Down Payment for Eligible Veterans | MyLoanDesk",
+      description:
+        "Comprehensive guide and funding fee calculator for government-guaranteed VA mortgage purchase and refinance programs.",
+      isPartOf: {
+        "@type": "WebSite",
+        "@id": "https://www.myloandesk.com/#website",
+      },
+      about: {
+        "@id": "https://www.myloandesk.com/#organization",
       },
     },
     {
-      "@type": "Question",
-      name: "What is the VA funding fee and how much is it?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "The VA funding fee is a one-time fee that helps sustain the VA loan program, replacing the need for monthly mortgage insurance. For 2026, first-time use with less than 5% down is 2.15% of the loan amount; subsequent use with less than 5% down is 3.30%. Putting 5% or more down lowers the fee to 1.50%, and 10% or more down lowers it to 1.25%, regardless of prior use.",
+      "@type": "FinancialProduct",
+      "@id": "https://www.myloandesk.com/loan-programs/va-loans/#product",
+      name: "VA Home Loan",
+      description:
+        "A government-guaranteed mortgage loan backed by the U.S. Department of Veterans Affairs offering 100% financing with zero down payment and no monthly mortgage insurance for eligible service members, veterans, and surviving spouses.",
+      provider: {
+        "@id": "https://www.myloandesk.com/#organization",
       },
+      category: "MortgageLoan",
     },
     {
-      "@type": "Question",
-      name: "Am I exempt from the VA funding fee?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Veterans receiving VA disability compensation, Purple Heart recipients on active duty, and certain surviving spouses receiving Dependency and Indemnity Compensation (DIC) are typically exempt from the VA funding fee entirely.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is a Certificate of Eligibility (COE) and how do I get one?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "A Certificate of Eligibility is the document that confirms your VA loan entitlement to a lender. It can be requested through the VA's eBenefits portal, by mail, or in many cases pulled directly by your lender during the application process, so you don't need to obtain it yourself beforehand.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can I use my VA loan benefit more than once?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. VA loan entitlement can typically be reused for future home purchases, including after paying off a prior VA loan or, in many cases, while still carrying one, depending on your remaining entitlement.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is there a maximum VA loan amount?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "For most eligible veterans with full entitlement, there is no VA-imposed maximum loan amount. Lenders may still apply their own underwriting limits for larger loan amounts, but the VA guaranty itself is no longer capped by the county loan limits that applied before 2020.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do VA loans require mortgage insurance?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "No. VA loans do not require monthly private mortgage insurance (PMI) or mortgage insurance premiums (MIP), regardless of down payment. The one-time VA funding fee replaces the need for ongoing mortgage insurance.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is a VA IRRRL (VA Streamline Refinance)?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "A VA Interest Rate Reduction Refinance Loan (IRRRL) is a simplified refinance option for existing VA loan holders, typically requiring less documentation and often no new appraisal or credit underwriting, with a lower funding fee of just 0.50%.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can National Guard and Reserve members use VA loans?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. National Guard and Reserve members who meet the required service length can qualify for VA loans, and pay the same funding fee rates as active duty service members and veterans.",
-      },
+      "@type": "FAQPage",
+      "@id": "https://www.myloandesk.com/loan-programs/va-loans/#faq",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Do I have to make a down payment for a VA loan?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "No. Eligible VA borrowers can finance up to 100% of the purchase price with no down payment required, one of the program's signature benefits. A down payment is never required, though making one can reduce your VA funding fee.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What is the VA funding fee and how much is it?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "The VA funding fee is a one-time fee that helps sustain the VA loan program, replacing the need for monthly mortgage insurance. For 2026, first-time use with less than 5% down is 2.15% of the loan amount; subsequent use with less than 5% down is 3.30%. Putting 5% or more down lowers the fee to 1.50%, and 10% or more down lowers it to 1.25%, regardless of prior use.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Am I exempt from the VA funding fee?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Veterans receiving VA disability compensation, Purple Heart recipients on active duty, and certain surviving spouses receiving Dependency and Indemnity Compensation (DIC) are typically exempt from the VA funding fee entirely.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What is a Certificate of Eligibility (COE) and how do I get one?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "A Certificate of Eligibility is the document that confirms your VA loan entitlement to a lender. It can be requested through the VA's eBenefits portal, by mail, or in many cases pulled directly by your lender during the application process, so you don't need to obtain it yourself beforehand.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can I use my VA loan benefit more than once?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. VA loan entitlement can typically be reused for future home purchases, including after paying off a prior VA loan or, in many cases, while still carrying one, depending on your remaining entitlement.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Is there a maximum VA loan amount?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "For most eligible veterans with full entitlement, there is no VA-imposed maximum loan amount. Lenders may still apply their own underwriting limits for larger loan amounts, but the VA guaranty itself is no longer capped by the county loan limits that applied before 2020.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do VA loans require mortgage insurance?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "No. VA loans do not require monthly private mortgage insurance (PMI) or mortgage insurance premiums (MIP), regardless of down payment. The one-time VA funding fee replaces the need for ongoing mortgage insurance.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What is a VA IRRRL (VA Streamline Refinance)?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "A VA Interest Rate Reduction Refinance Loan (IRRRL) is a simplified refinance option for existing VA loan holders, typically requiring less documentation and often no new appraisal or credit underwriting, with a lower funding fee of just 0.50%.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can National Guard and Reserve members use VA loans?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. National Guard and Reserve members who meet the required service length can qualify for VA loans, and pay the same funding fee rates as active duty service members and veterans.",
+          },
+        },
+      ],
     },
   ],
 };
 
 export default function VaLoansPage() {
+  const breadcrumbItems = [
+    { name: "Home", url: "/" },
+    { name: "Loan Programs", url: "/loan-programs" },
+    {
+      name: "VA Loans",
+      url: "/loan-programs/va-loans",
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-[#EDEAE2] text-[#55524C] antialiased">
+      {/* Structural SEO Breadcrumbs & Schema */}
+      <BreadcrumbSchema items={breadcrumbItems} />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(vaPageSchema) }}
       />
 
       <section className="mx-auto max-w-[900px] bg-[#FBF8F2] px-[22px] py-8 sm:px-14 sm:py-[44px] sm:pb-[60px]">
@@ -135,9 +201,9 @@ export default function VaLoansPage() {
               VA loans give eligible veterans, active duty service members,
               National Guard and Reserve members, and certain surviving spouses
               one of the strongest home financing benefits available in the U.S.
-              — the ability to finance up to 100% of a home's purchase price
-              without private mortgage insurance, backed by the U.S. Department
-              of Veterans Affairs.
+              — the ability to finance up to 100% of a home&apos;s purchase
+              price without private mortgage insurance, backed by the U.S.
+              Department of Veterans Affairs.
             </p>
             <div className="mt-[18px] flex flex-col gap-2.5">
               <div className="flex items-center gap-2 text-[13.5px] text-[#55524C]">
@@ -213,7 +279,7 @@ export default function VaLoansPage() {
           A VA loan is a mortgage guaranteed by the U.S. Department of Veterans
           Affairs, made available to eligible veterans, active duty service
           members, National Guard and Reserve members, and certain surviving
-          spouses. The VA doesn't lend the money directly — it guarantees a
+          spouses. The VA doesn&apos;t lend the money directly — it guarantees a
           portion of the loan, which allows approved lenders like MyLoanDesk to
           offer terms that are difficult to match anywhere else in the mortgage
           market, most notably zero down payment and no monthly mortgage
@@ -221,8 +287,8 @@ export default function VaLoansPage() {
         </p>
         <p className="mb-3.5 max-w-[700px] text-[15px] leading-[1.75] text-[#55524C]">
           In exchange for that guarantee, most VA loans include a one-time VA
-          funding fee, which we break down in detail below — along with who's
-          exempt from paying it entirely.
+          funding fee, which we break down in detail below — along with
+          who&apos;s exempt from paying it entirely.
         </p>
 
         {/* How It Works */}
@@ -274,7 +340,7 @@ export default function VaLoansPage() {
           Program Highlights
         </h2>
         <div className="mb-3.5 font-sans text-[13.5px] font-bold uppercase tracking-[0.03em] text-[#1C1C1C]">
-          What's included:
+          What&apos;s included:
         </div>
         <ul className="mb-3 max-w-[700px] list-none p-0">
           {[
@@ -301,14 +367,14 @@ export default function VaLoansPage() {
             Strategic Advantages:
           </div>
           <p className="mb-3 text-[14.5px] leading-[1.7] text-[#55524C]">
-            Skipping a down payment doesn't just lower your cash needed at
+            Skipping a down payment doesn&apos;t just lower your cash needed at
             closing — it also means keeping more savings in reserve, or using
             those funds toward moving costs, furnishings, or an emergency fund
             instead of tying it all up in home equity on day one.
           </p>
           <p className="mb-3 text-[14.5px] leading-[1.7] text-[#55524C]">
-            Because there's no ongoing mortgage insurance, VA borrowers often
-            have a meaningfully lower monthly payment than an FHA or
+            Because there&apos;s no ongoing mortgage insurance, VA borrowers
+            often have a meaningfully lower monthly payment than an FHA or
             low-down-payment conventional borrower financing the same home —
             insurance alone can add hundreds of dollars a month on other loan
             types.
@@ -421,7 +487,7 @@ export default function VaLoansPage() {
                 </td>
                 <td className="p-[11px_14px] text-[#55524C]">None</td>
                 <td className="p-[11px_14px] text-[#55524C]">
-                  Upfront + annual MIP, often for the loan's life
+                  Upfront + annual MIP, often for the loan&apos;s life
                 </td>
                 <td className="p-[11px_14px] text-[#55524C]">
                   PMI, removable around 20% equity
