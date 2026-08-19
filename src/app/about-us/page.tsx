@@ -1,25 +1,50 @@
-import { CheckCircle2, Home, Landmark, ShieldCheck } from "lucide-react";
+import { ShieldCheck } from "lucide-react";
 import { Metadata } from "next";
 import { Fraunces } from "next/font/google";
 import Link from "next/link";
+import BreadcrumbSchema from "@/components/site/utils/BreadcrumbScripts";
 
 export const metadata: Metadata = {
-  title: "About Us | MyLoanDesk",
+  title: "About Us | MyLoanDesk Mortgage Brokerage",
   description:
-    "Discover MyLoanDesk, your trusted mortgage partner. Learn about our mission, values, and commitment to providing personalized mortgage solutions for every client.",
-  openGraph: {
-    title: "About Us | MyLoanDesk",
-    description:
-      "Discover MyLoanDesk, your trusted mortgage partner. Learn about our mission, values, and commitment to providing personalized mortgage solutions for every client.",
-    type: "website",
-    url: "/about-us",
-  },
+    "Discover MyLoanDesk, your trusted independent mortgage brokerage. Learn about our mission, values, and how we compare 100+ wholesale lenders to deliver competitive residential and commercial loan solutions.",
   alternates: {
-    canonical: "/about-us/",
+    canonical: "https://www.myloandesk.com/about-us/",
+  },
+  openGraph: {
+    title: "About Us | MyLoanDesk - Your Trusted Mortgage Partner",
+    description:
+      "Discover MyLoanDesk, your trusted independent mortgage brokerage. Learn about our mission, values, and how we compare 100+ wholesale lenders to deliver competitive residential and commercial loan solutions.",
+    type: "website",
+    url: "https://www.myloandesk.com/about-us/",
+    siteName: "MyLoanDesk",
+    locale: "en_US",
+    images: [
+      {
+        url: "/og-image.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "About MyLoanDesk - Independent Mortgage Solutions",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Us | MyLoanDesk - Your Trusted Mortgage Partner",
+    description:
+      "Discover MyLoanDesk, your trusted independent mortgage brokerage. We compare 100+ wholesale lenders for custom residential and commercial financing.",
+    images: ["/og-image.jpeg"],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
@@ -29,7 +54,71 @@ const fraunces = Fraunces({
   weight: ["400", "500", "600", "700"],
 });
 
+const aboutPageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AboutPage",
+      "@id": "https://www.myloandesk.com/about-us/#webpage",
+      url: "https://www.myloandesk.com/about-us/",
+      name: "About Us | MyLoanDesk",
+      description:
+        "Learn about MyLoanDesk, an independent mortgage brokerage providing access to hundreds of residential and commercial lending options.",
+      isPartOf: {
+        "@type": "WebSite",
+        "@id": "https://www.myloandesk.com/#website",
+      },
+      about: {
+        "@id": "https://www.myloandesk.com/#organization",
+      },
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.myloandesk.com/about-us/#faq",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "How is MyLoanDesk different from a traditional bank loan officer?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "A bank can only offer the mortgage products approved through that single institution. As an independent brokerage, MyLoanDesk works with over 100 wholesale lenders, giving you access to a broader selection of loan options, wholesale pricing, and flexible underwriting standards.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What types of loan programs does MyLoanDesk offer?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "We offer a full suite of financing options including Conventional, FHA, VA, DSCR investment property loans, Jumbo & Super Jumbo loans, Commercial Real Estate, SBA loans, Private Bridge financing, and international property financing in Portugal.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How fast can MyLoanDesk close a loan?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Many standard residential mortgages close in 14 to 30 days, while our private bridge and specialized financing programs can close in as little as 7 to 14 days depending on documentation and appraisal timing.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Does MyLoanDesk work with self-employed or non-traditional borrowers?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. In addition to standard W-2 financing, we specialize in non-QM and alternative documentation programs such as Bank Statement loans, Profit & Loss qualification, Asset Depletion, and Foreign National programs.",
+          },
+        },
+      ],
+    },
+  ],
+};
+
 export default function AboutUs() {
+  const breadcrumbItems = [
+    { name: "Home", url: "/" },
+    { name: "About Us", url: "/about-us" },
+  ];
+
   const valueProps = [
     {
       id: 1,
@@ -53,6 +142,15 @@ export default function AboutUs() {
 
   return (
     <div className="bg-[#F8F6F1] min-h-screen selection:bg-brand-orange/20">
+      {/* Structural SEO Breadcrumbs & Schema */}
+      <BreadcrumbSchema items={breadcrumbItems} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(aboutPageSchema),
+        }}
+      />
+
       {/* Hero Section */}
       <section className="relative pt-24 pb-20 px-6 overflow-hidden bg-white border-b border-line/60">
         <div className="max-w-4xl mx-auto text-center relative z-10">
@@ -70,7 +168,7 @@ export default function AboutUs() {
             mortgages, and commercial financing.
           </p>
         </div>
-        {/* Subtle decorative grid overlay background element */}
+        {/* Decorative grid overlay */}
         <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:24px_24px]"></div>
       </section>
 
@@ -85,11 +183,12 @@ export default function AboutUs() {
               Mortgage Solutions for Every Situation
             </h2>
             <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
-              Whether you're buying, refinancing, investing, or financing a
+              Whether you&apos;re buying, refinancing, investing, or financing a
               commercial property, MyLoanDesk helps you find the right loan
               through our extensive network of lending partners. From
-              conventional mortgages to specialized financing, we're committed
-              to delivering personalized solutions and exceptional service.
+              conventional mortgages to specialized financing, we&apos;re
+              committed to delivering personalized solutions and exceptional
+              service.
             </p>
           </div>
 
@@ -102,10 +201,10 @@ export default function AboutUs() {
             <h3 className="text-xs font-bold uppercase tracking-wider text-gray-400">
               Our Pledge
             </h3>
-            <p className="text-[#0B1221] text-base leading-relaxed font-medium italic z-50">
-              "Whether you’re buying a new property or refinancing an existing
-              mortgage, MyLoanDesk.com will be by your side from start to
-              finish."
+            <p className="text-[#0B1221] text-base leading-relaxed font-medium italic z-10 relative">
+              &ldquo;Whether you’re buying a new property or refinancing an
+              existing mortgage, MyLoanDesk.com will be by your side from start
+              to finish.&rdquo;
             </p>
             <div className="h-px bg-gray-100 border-dashed border-b my-2"></div>
             <p className="text-sm text-gray-600">
@@ -117,7 +216,7 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* Grid Features List: Get More From MyLoanDesk */}
+      {/* Grid Features List */}
       <section className="pb-24 px-6 max-w-5xl mx-auto">
         <div className="border-t border-gray-300/60 pt-16">
           <h2
