@@ -96,7 +96,7 @@ const accessibilityPageSchema = {
           name: "How can I request assistance or report an accessibility barrier?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "If you experience difficulty accessing any part of MyLoanDesk.com, you can reach our team via email at info@myloandesk.com or by phone at (305) 891-6500 to receive alternative assistance[cite: 2].",
+            text: "If you experience difficulty accessing any part of MyLoanDesk.com, you can reach our team via email at info@myloandesk.com or by phone at (305) 891-6500 to receive alternative assistance.",
           },
         },
         {
@@ -294,7 +294,7 @@ export default function AccessibilityPage() {
                       href="tel:3058916500"
                       className="font-medium text-ink hover:text-brand-orange transition-colors"
                     >
-                      (305) 891-6500[cite: 2]
+                      (305) 891-6500
                     </a>
                   </div>
                 </div>
