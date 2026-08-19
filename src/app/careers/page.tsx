@@ -5,24 +5,49 @@ import { Fraunces } from "next/font/google";
 import Image from "next/image";
 import teamImg from "@/assets/Team_Meeting.jpeg";
 import meetingImg from "@/assets/Meeting_At_The_Office.jpeg";
+import BreadcrumbSchema from "@/components/site/utils/BreadcrumbScripts";
 
 export const metadata: Metadata = {
-  title: "Careers at MyLoanDesk | Join Our Team",
+  title: "Mortgage Loan Officer Careers | Join MyLoanDesk",
   description:
-    "Explore career opportunities at MyLoanDesk. Join our team of dedicated professionals and help clients achieve their homeownership dreams.",
-  openGraph: {
-    title: "Careers at MyLoanDesk | Join Our Team",
-    description:
-      "Explore career opportunities at MyLoanDesk. Join our team of dedicated professionals and help clients achieve their homeownership dreams.",
-    type: "website",
-    url: "/careers",
-  },
+    "Explore career opportunities for licensed loan officers at MyLoanDesk. Access creative residential and commercial loan programs, competitive compensation, and growth support.",
   alternates: {
-    canonical: "/careers/",
+    canonical: "https://www.myloandesk.com/careers/",
+  },
+  openGraph: {
+    title: "Mortgage Loan Officer Careers | Join MyLoanDesk",
+    description:
+      "Explore career opportunities for licensed loan officers at MyLoanDesk. Access creative residential and commercial loan programs, competitive compensation, and growth support.",
+    type: "website",
+    url: "https://www.myloandesk.com/careers/",
+    siteName: "MyLoanDesk",
+    locale: "en_US",
+    images: [
+      {
+        url: "/og-image.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Careers at MyLoanDesk",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mortgage Loan Officer Careers | Join MyLoanDesk",
+    description:
+      "Explore career opportunities for licensed loan officers at MyLoanDesk. Access creative residential and commercial loan programs, competitive compensation, and growth support.",
+    images: ["/og-image.jpeg"],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
@@ -32,9 +57,93 @@ const fraunces = Fraunces({
   weight: ["400", "500", "600", "700", "800", "900"],
 });
 
+const careersPageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.myloandesk.com/careers/#webpage",
+      url: "https://www.myloandesk.com/careers/",
+      name: "Mortgage Loan Officer Careers | Join MyLoanDesk",
+      description:
+        "Career and loan originator hiring opportunities at MyLoanDesk mortgage brokerage.",
+      isPartOf: {
+        "@type": "WebSite",
+        "@id": "https://www.myloandesk.com/#website",
+      },
+      about: {
+        "@id": "https://www.myloandesk.com/#organization",
+      },
+    },
+    {
+      "@type": "JobPosting",
+      "@id": "https://www.myloandesk.com/careers/#job-originator",
+      title: "Mortgage Loan Originator / Loan Officer",
+      description:
+        "MyLoanDesk is looking for licensed, high-producing mortgage loan originators to structure residential, commercial, and non-QM loan solutions.",
+      datePosted: "2026-01-01",
+      employmentType: "FULL_TIME",
+      hiringOrganization: {
+        "@id": "https://www.myloandesk.com/#organization",
+      },
+      jobLocation: {
+        "@type": "Place",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "1801 NE 123rd St, Suite 314",
+          addressLocality: "North Miami",
+          addressRegion: "FL",
+          postalCode: "33181",
+          addressCountry: "US",
+        },
+      },
+      applicantLocationRequirements: {
+        "@type": "Country",
+        name: "United States",
+      },
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.myloandesk.com/careers/#faq",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "What loan programs do MyLoanDesk originators have access to?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Our originators have access to wholesale lenders providing Conventional, FHA, VA, DSCR, Jumbo, Commercial Real Estate, SBA, and Bridge financing options[cite: 1, 4, 6, 8, 10, 11].",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How can loan originators submit an application to join MyLoanDesk?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Licensed loan officers can submit their resume directly using the embedded careers application form on our careers page.",
+          },
+        },
+      ],
+    },
+  ],
+};
+
 export default function CareersPage() {
+  const breadcrumbItems = [
+    { name: "Home", url: "/" },
+    { name: "Careers", url: "/careers" },
+  ];
+
   return (
     <main className="min-h-screen bg-primary-bg pt-6 pb-12 sm:pt-8 sm:pb-16 lg:pt-10 lg:pb-24 text-ink">
+      {/* Structural SEO Breadcrumbs & Schema */}
+      <BreadcrumbSchema items={breadcrumbItems} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(careersPageSchema),
+        }}
+      />
+
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 mb-12 sm:mb-20">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-8 items-center">
@@ -125,9 +234,9 @@ export default function CareersPage() {
                 experience.
               </p>
               <p className="text-ink-2 text-sm leading-relaxed">
-                We're driven by the commitment to provide white glove customer
-                service, competitive pricing, consistent turn-times and a
-                variety of loan solutions for our residential and commercial
+                We&apos;re driven by the commitment to provide white glove
+                customer service, competitive pricing, consistent turn-times and
+                a variety of loan solutions for our residential and commercial
                 clients.
               </p>
             </div>
@@ -140,7 +249,7 @@ export default function CareersPage() {
                   alt="MyLoanDesk collaborative team working at desk"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  sizes="(max-w-1024px) 100vw, 50vw"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   priority
                 />
               </div>
@@ -176,7 +285,7 @@ export default function CareersPage() {
                 </div>
                 <div>
                   <h3 className="font-display text-base sm:text-lg font-semibold mb-1 sm:mb-2 text-ink">
-                    Support & Growth Opportunities
+                    Support &amp; Growth Opportunities
                   </h3>
                   <p className="text-xs text-ink-2 leading-relaxed">
                     We provide our talented loan officers with support and
@@ -251,7 +360,7 @@ export default function CareersPage() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
           <div className="relative bg-moss-deep text-cream rounded-[32px] overflow-hidden p-6 sm:p-12 lg:p-16">
-            {/* Background Glow Gradients Applied from Design Spec */}
+            {/* Background Glow Gradients */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-[#D4A574]/15 rounded-full blur-3xl -translate-y-1/3 translate-x-1/3 pointer-events-none"></div>
             <div className="absolute bottom-0 left-0 w-80 h-80 bg-brand-orange/15 rounded-full blur-3xl translate-y-1/3 -translate-x-1/3 pointer-events-none"></div>
 
@@ -275,12 +384,12 @@ export default function CareersPage() {
                   </h2>
                   <p className="mt-6 text-base sm:text-lg text-primary-bg/75 max-w-xl leading-relaxed">
                     Does this sound like something you want to be a part of?
-                    We're looking for high-producing loan originators to join
-                    our team and scale together.
+                    We&apos;re looking for high-producing loan originators to
+                    join our team and scale together.
                   </p>
                 </div>
 
-                {/* TALLER IMAGE TREATMENT: Adjusted aspect ratio from 16/10 to 3/4 and added flex-1 */}
+                {/* Taller Image Treatment */}
                 <div className="mt-10 w-full hidden lg:block flex-1">
                   <div className="relative aspect-[3/4] xl:aspect-[4/5] w-full overflow-hidden rounded-2xl border border-primary-bg/10 group">
                     <Image
@@ -308,7 +417,6 @@ export default function CareersPage() {
                   title="Careers Application Form"
                   scrolling="no"
                 />
-                {/* External Script provided by LeadConnector to handle iframe sizing dynamically */}
                 <script src="https://link.msgsndr.com/js/form_embed.js" async />
               </div>
 
