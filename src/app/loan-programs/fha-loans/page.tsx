@@ -157,7 +157,7 @@ export default function FhaLoansPage() {
   ];
 
   return (
-    <section className="bg-[#EDEAE2] py-4 text-[#55524C] font-sans antialiased">
+    <section className="bg-[#EDEAE2] text-[#55524C] font-sans antialiased">
       {/* Structural SEO Breadcrumbs & Schema */}
       <BreadcrumbSchema items={breadcrumbItems} />
       <script
