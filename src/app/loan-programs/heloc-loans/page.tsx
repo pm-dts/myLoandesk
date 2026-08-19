@@ -14,6 +14,7 @@ import {
   TrendingUp,
 } from "lucide-react";
 
+import BreadcrumbSchema from "@/components/site/utils/BreadcrumbScripts";
 import HelocCalculator from "@/components/site/LoanPrograms/HelocLoans/HelocCalculator";
 
 const fraunces = Fraunces({
@@ -26,28 +27,164 @@ export const metadata: Metadata = {
   title: "Home Equity Loans & HELOCs | MyLoanDesk",
   description:
     "Explore home equity loans and HELOC options. Compare ways to access your home equity while keeping your existing first mortgage in place.",
+  alternates: {
+    canonical: "https://www.myloandesk.com/loan-programs/heloc-loans/",
+  },
   openGraph: {
     title: "Home Equity Loans & HELOCs | MyLoanDesk",
     description:
       "Access your home equity without selling your home or replacing your current low mortgage rate.",
     type: "website",
-    url: "/loan-programs/heloc-loans",
+    url: "https://www.myloandesk.com/loan-programs/heloc-loans/",
+    siteName: "MyLoanDesk",
+    locale: "en_US",
+    images: [
+      {
+        url: "/og-image.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Home Equity Loans & HELOCs - MyLoanDesk",
+      },
+    ],
   },
-  alternates: {
-    canonical: "/loan-programs/heloc-loans/",
+  twitter: {
+    card: "summary_large_image",
+    title: "Home Equity Loans & HELOCs | MyLoanDesk",
+    description:
+      "Access your home equity without selling your home or replacing your current low mortgage rate.",
+    images: ["/og-image.jpeg"],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
+};
+
+const helocPageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.myloandesk.com/loan-programs/heloc-loans/#webpage",
+      url: "https://www.myloandesk.com/loan-programs/heloc-loans/",
+      name: "Home Equity Loans & HELOCs | MyLoanDesk",
+      description:
+        "Comprehensive guide and equity borrowing calculator for Home Equity Lines of Credit (HELOC) and fixed home equity installment loans.",
+      isPartOf: {
+        "@type": "WebSite",
+        "@id": "https://www.myloandesk.com/#website",
+      },
+      about: {
+        "@id": "https://www.myloandesk.com/#organization",
+      },
+    },
+    {
+      "@type": "FinancialProduct",
+      "@id": "https://www.myloandesk.com/loan-programs/heloc-loans/#product",
+      name: "Home Equity Loan & HELOC",
+      description:
+        "Second-lien financing solutions allowing homeowners to access accumulated home equity via revolving credit lines or fixed-rate lump sums while preserving their low first mortgage rate.",
+      provider: {
+        "@id": "https://www.myloandesk.com/#organization",
+      },
+      category: "HomeEquityLoan",
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.myloandesk.com/loan-programs/heloc-loans/#faq",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "What is the difference between a HELOC and a home equity loan?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "A HELOC is generally a revolving credit line that lets you access funds as needed during a draw period, while a home equity loan generally provides the borrowed funds as an upfront lump sum with fixed monthly payments.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do I have to refinance my current mortgage to get a HELOC?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "No. HELOCs and home equity loans are structured as second mortgages, allowing your existing low-rate first mortgage to remain completely intact.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How much equity do I need to qualify?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Borrowing limits depend on your property value, current mortgage balance, and maximum combined loan-to-value (CLTV) ratios, typically allowing combined financing up to 80%–90% of your home value.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can I use home equity to renovate my house?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. Home improvements and renovations are among the most common reasons homeowners use home equity lines of credit or fixed loans.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can I use a HELOC for debt consolidation?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. Homeowners frequently use equity financing to consolidate higher-interest credit cards and personal loans into a single lower-rate payment.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Does a HELOC have a fixed interest rate?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Most HELOCs carry variable interest rates pegged to the Prime Rate, though some programs offer fixed-rate draw locks for specific withdrawal amounts.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can I get a HELOC on an investment property?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. Select lenders offer home equity lines of credit and second mortgages on second homes and investment properties, though CLTV limits and qualification parameters may be slightly stricter than primary residences.",
+          },
+        },
+      ],
+    },
+  ],
 };
 
 const VIDEO_URL =
   "https://myloandesk-assets.s3.eu-north-1.amazonaws.com/HELOC+%E2%80%93+Access+the+Equity+in+Your+Home+Without+Refinancing_1080p_caption.mp4";
 
 export default function HomeEquityHelocPage() {
+  const breadcrumbItems = [
+    { name: "Home", url: "/" },
+    { name: "Loan Programs", url: "/loan-programs" },
+    {
+      name: "HELOC & Home Equity Loans",
+      url: "/loan-programs/heloc-loans",
+    },
+  ];
+
   return (
     <main className="min-h-screen bg-primary-bg pt-6 pb-12 sm:pt-8 sm:pb-16 lg:pt-10 lg:pb-24 text-ink">
+      {/* Structural SEO Breadcrumbs & Schema */}
+      <BreadcrumbSchema items={breadcrumbItems} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(helocPageSchema),
+        }}
+      />
+
       {/* --- HERO SECTION --- */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 mb-16 sm:mb-24">
         <div className="relative bg-moss-deep text-cream rounded-[32px] overflow-hidden p-8 sm:p-12 lg:p-16">

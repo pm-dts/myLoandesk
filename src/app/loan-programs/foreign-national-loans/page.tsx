@@ -12,11 +12,11 @@ import {
   Home,
   FileCheck,
   BadgeCheck,
-  CreditCard,
   Building,
   Calculator,
 } from "lucide-react";
 
+import BreadcrumbSchema from "@/components/site/utils/BreadcrumbScripts";
 import ForeignNationalCalculator from "@/components/site/LoanPrograms/ForeignNationalLoans/ForeignNationalCalculator";
 
 const fraunces = Fraunces({
@@ -29,25 +29,149 @@ export const metadata: Metadata = {
   title: "Foreign National & International Buyer Loans | MyLoanDesk",
   description:
     "U.S. property financing for international buyers and non-U.S. citizens. Access specialized mortgage programs for second homes, vacation properties, and rentals.",
+  alternates: {
+    canonical:
+      "https://www.myloandesk.com/loan-programs/foreign-national-loans/",
+  },
   openGraph: {
     title: "Foreign National Mortgage Solutions in U.S. | MyLoanDesk",
     description:
       "Finance U.S. real estate without a U.S. credit score or Social Security number. Options for foreign income, foreign asset reserves, and rental cash-flow loans.",
     type: "website",
-    url: "/loan-programs/foreign-national-loans",
+    url: "https://www.myloandesk.com/loan-programs/foreign-national-loans/",
+    siteName: "MyLoanDesk",
+    locale: "en_US",
+    images: [
+      {
+        url: "/og-image.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Foreign National Loans - MyLoanDesk",
+      },
+    ],
   },
-  alternates: {
-    canonical: "/loan-programs/foreign-national-loans/",
+  twitter: {
+    card: "summary_large_image",
+    title: "Foreign National Mortgage Solutions in U.S. | MyLoanDesk",
+    description:
+      "Finance U.S. real estate without a U.S. credit score or SSN. Specialized programs for international investors and second-home buyers.",
+    images: ["/og-image.jpeg"],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
+const foreignNationalPageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id":
+        "https://www.myloandesk.com/loan-programs/foreign-national-loans/#webpage",
+      url: "https://www.myloandesk.com/loan-programs/foreign-national-loans/",
+      name: "Foreign National & International Buyer Loans | MyLoanDesk",
+      description:
+        "Specialized U.S. mortgage financing programs for non-resident international buyers, foreign investors, and vacation property purchasers.",
+      isPartOf: {
+        "@type": "WebSite",
+        "@id": "https://www.myloandesk.com/#website",
+      },
+      about: {
+        "@id": "https://www.myloandesk.com/#organization",
+      },
+    },
+    {
+      "@type": "FinancialProduct",
+      "@id":
+        "https://www.myloandesk.com/loan-programs/foreign-national-loans/#product",
+      name: "Foreign National Mortgage Loan",
+      description:
+        "Non-QM mortgage program designed for non-U.S. citizens allowing qualification using international assets, foreign income, or property rental revenue without U.S. credit history or SSN.",
+      provider: {
+        "@id": "https://www.myloandesk.com/#organization",
+      },
+      category: "MortgageLoan",
+    },
+    {
+      "@type": "FAQPage",
+      "@id":
+        "https://www.myloandesk.com/loan-programs/foreign-national-loans/#faq",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Can a non-U.S. citizen buy property in the United States?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Generally, foreign ownership itself does not prevent someone from purchasing U.S. real estate, although financing, tax, legal, and other requirements can differ.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do I need U.S. credit to qualify for a foreign national mortgage?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Not necessarily. Some foreign national mortgage programs permit alternative credit documentation, international credit reference letters, or rental cash-flow qualification.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can foreign income and foreign banking assets be used?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Potentially yes. Lenders evaluate verified foreign income and asset statements, which may require certified English translation and international wire documentation.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can I finance a U.S. investment property as a foreign national?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, subject to lender, borrower, and property eligibility requirements across single-family, condo, and multifamily assets.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can I qualify based on rental income rather than personal employment?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Certain investment-property programs, such as Foreign National DSCR loans, focus on the property's projected or actual rental cash flow rather than personal global income.",
+          },
+        },
+      ],
+    },
+  ],
+};
+
 export default function ForeignNationalLoansPage() {
+  const breadcrumbItems = [
+    { name: "Home", url: "/" },
+    { name: "Loan Programs", url: "/loan-programs" },
+    {
+      name: "Foreign National Loans",
+      url: "/loan-programs/foreign-national-loans",
+    },
+  ];
+
   return (
     <main className="min-h-screen bg-primary-bg pt-6 pb-12 sm:pt-8 sm:pb-16 lg:pt-10 lg:pb-24 text-ink">
+      {/* Structural SEO Breadcrumbs & Schema */}
+      <BreadcrumbSchema items={breadcrumbItems} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(foreignNationalPageSchema),
+        }}
+      />
+
       {/* --- HERO SECTION --- */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 mb-16 sm:mb-24">
         <div className="relative bg-moss-deep text-cream rounded-[32px] overflow-hidden p-8 sm:p-12 lg:p-16">

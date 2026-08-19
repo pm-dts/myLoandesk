@@ -9,13 +9,11 @@ import {
   ArrowRight,
   TrendingUp,
   FileCheck,
-  Award,
-  Building2,
   GraduationCap,
   Sparkles,
-  ShieldCheck,
 } from "lucide-react";
 
+import BreadcrumbSchema from "@/components/site/utils/BreadcrumbScripts";
 import MedicalProfessionalCalculator from "@/components/site/LoanPrograms/MedicalProfessionalLoans/MedicalProfessionalCalculator";
 
 const fraunces = Fraunces({
@@ -28,25 +26,149 @@ export const metadata: Metadata = {
   title: "Medical Professional Loan Programs | MyLoanDesk",
   description:
     "Specialized mortgage programs designed for physicians, dentists, residents, and eligible healthcare professionals. Qualify with student debt or new employment contracts.",
+  alternates: {
+    canonical:
+      "https://www.myloandesk.com/loan-programs/medical-professional-loans/",
+  },
   openGraph: {
     title: "Medical Professional Mortgage Solutions | MyLoanDesk",
     description:
       "Mortgage programs recognizing the unique earning potential and financial profiles of doctors and medical professionals.",
     type: "website",
-    url: "/loan-programs/medical-professional-loans",
+    url: "https://www.myloandesk.com/loan-programs/medical-professional-loans/",
+    siteName: "MyLoanDesk",
+    locale: "en_US",
+    images: [
+      {
+        url: "/og-image.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Medical Professional Loans - MyLoanDesk",
+      },
+    ],
   },
-  alternates: {
-    canonical: "/loan-programs/medical-professional-loans/",
+  twitter: {
+    card: "summary_large_image",
+    title: "Medical Professional Mortgage Solutions | MyLoanDesk",
+    description:
+      "Mortgage programs recognizing the unique earning potential and financial profiles of doctors and medical professionals.",
+    images: ["/og-image.jpeg"],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
+const medicalPageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id":
+        "https://www.myloandesk.com/loan-programs/medical-professional-loans/#webpage",
+      url: "https://www.myloandesk.com/loan-programs/medical-professional-loans/",
+      name: "Medical Professional Loan Programs | MyLoanDesk",
+      description:
+        "Specialized home financing solutions for doctors, dentists, residents, and licensed medical professionals.",
+      isPartOf: {
+        "@type": "WebSite",
+        "@id": "https://www.myloandesk.com/#website",
+      },
+      about: {
+        "@id": "https://www.myloandesk.com/#organization",
+      },
+    },
+    {
+      "@type": "FinancialProduct",
+      "@id":
+        "https://www.myloandesk.com/loan-programs/medical-professional-loans/#product",
+      name: "Physician & Medical Professional Mortgage Loan",
+      description:
+        "Custom home financing for medical doctors, dentists, and residents offering low-to-no down payments, student debt exclusions, and contract-based income qualification.",
+      provider: {
+        "@id": "https://www.myloandesk.com/#organization",
+      },
+      category: "MortgageLoan",
+    },
+    {
+      "@type": "FAQPage",
+      "@id":
+        "https://www.myloandesk.com/loan-programs/medical-professional-loans/#faq",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Do medical professional loans require mortgage insurance?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "It depends on the lender, financing level, and program. Certain specialized programs may provide alternatives to traditional mortgage-insurance structures.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can residents and fellows qualify?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Potentially. Some lenders offer programs for eligible residents and fellows.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can I qualify using a new employment contract?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Certain lenders may permit qualification based on an acceptable employment contract or offer letter, subject to their guidelines.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What professions qualify?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Eligibility varies by lender. Physicians and dentists are commonly included, while some programs extend eligibility to additional healthcare professions.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Should I use a medical professional loan or conventional mortgage?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "It depends. Comparing both can help determine which financing structure better fits your goals.",
+          },
+        },
+      ],
+    },
+  ],
+};
+
 export default function MedicalProfessionalLoansPage() {
+  const breadcrumbItems = [
+    { name: "Home", url: "/" },
+    { name: "Loan Programs", url: "/loan-programs" },
+    {
+      name: "Medical Professional Loans",
+      url: "/loan-programs/medical-professional-loans",
+    },
+  ];
+
   return (
     <main className="min-h-screen bg-primary-bg pt-6 pb-12 sm:pt-8 sm:pb-16 lg:pt-10 lg:pb-24 text-ink">
+      {/* Structural SEO Breadcrumbs & Schema */}
+      <BreadcrumbSchema items={breadcrumbItems} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(medicalPageSchema),
+        }}
+      />
+
       {/* --- HERO SECTION --- */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 mb-16 sm:mb-24">
         <div className="relative bg-moss-deep text-cream rounded-[32px] overflow-hidden p-8 sm:p-12 lg:p-16">

@@ -17,6 +17,7 @@ import {
   Globe,
 } from "lucide-react";
 
+import BreadcrumbSchema from "@/components/site/utils/BreadcrumbScripts";
 import ItinCalculator from "@/components/site/LoanPrograms/ITINLoans/ITINCalculator";
 
 const fraunces = Fraunces({
@@ -30,25 +31,145 @@ export const metadata: Metadata = {
     "ITIN Loans - Home Financing Without a Social Security Number | MyLoanDesk",
   description:
     "Explore ITIN mortgage programs designed for borrowers with an Individual Taxpayer Identification Number who may not qualify for traditional mortgage financing.",
+  alternates: {
+    canonical: "https://www.myloandesk.com/loan-programs/itin-loans/",
+  },
   openGraph: {
     title: "ITIN Loans - Home Financing Without an SSN | MyLoanDesk",
     description:
       "Purchase or refinance a home using your Individual Taxpayer Identification Number (ITIN). Flexible options for self-employed, 1099, and alternative credit profiles.",
     type: "website",
-    url: "/loan-programs/itin-loans",
+    url: "https://www.myloandesk.com/loan-programs/itin-loans/",
+    siteName: "MyLoanDesk",
+    locale: "en_US",
+    images: [
+      {
+        url: "/og-image.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "ITIN Loans - MyLoanDesk",
+      },
+    ],
   },
-  alternates: {
-    canonical: "/loan-programs/itin-loans/",
+  twitter: {
+    card: "summary_large_image",
+    title: "ITIN Loans - Home Financing Without an SSN | MyLoanDesk",
+    description:
+      "Purchase or refinance a home using your Individual Taxpayer Identification Number (ITIN).",
+    images: ["/og-image.jpeg"],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
+const itinPageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.myloandesk.com/loan-programs/itin-loans/#webpage",
+      url: "https://www.myloandesk.com/loan-programs/itin-loans/",
+      name: "ITIN Loans - Home Financing Without a Social Security Number | MyLoanDesk",
+      description:
+        "Comprehensive guide and calculation tools for ITIN mortgage programs designed for borrowers without an SSN.",
+      isPartOf: {
+        "@type": "WebSite",
+        "@id": "https://www.myloandesk.com/#website",
+      },
+      about: {
+        "@id": "https://www.myloandesk.com/#organization",
+      },
+    },
+    {
+      "@type": "FinancialProduct",
+      "@id": "https://www.myloandesk.com/loan-programs/itin-loans/#product",
+      name: "ITIN Mortgage Loan",
+      description:
+        "Specialized Non-QM home financing designed for borrowers using an Individual Taxpayer Identification Number (ITIN) instead of a Social Security number.",
+      provider: {
+        "@id": "https://www.myloandesk.com/#organization",
+      },
+      category: "MortgageLoan",
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.myloandesk.com/loan-programs/itin-loans/#faq",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Can I get a mortgage with an ITIN?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. Specialized Non-QM lenders offer mortgage programs for eligible borrowers who file taxes using an Individual Taxpayer Identification Number (ITIN) rather than a Social Security number.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do ITIN loans require a large down payment?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Down payment requirements typically range from 10% to 20%, depending on the lender, property type, credit history, and whether standard tax returns or bank statements are used to document income.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can self-employed borrowers qualify for an ITIN loan?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. Many ITIN loan programs provide alternative documentation pathways such as 12 to 24 months of business or personal bank statements or 1099 forms.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do I need established U.S. credit to qualify?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Not always. While established credit scores can provide access to higher loan-to-value limits, many programs allow alternative credit histories such as on-time rent, utility, and insurance payment records.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can MyLoanDesk help me determine whether I qualify?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. Tell us about your income, documentation, and purchase timeline, and our loan origination team will compare programs across our network of specialized ITIN lenders.",
+          },
+        },
+      ],
+    },
+  ],
+};
+
 export default function ItinLoansPage() {
+  const breadcrumbItems = [
+    { name: "Home", url: "/" },
+    { name: "Loan Programs", url: "/loan-programs" },
+    {
+      name: "ITIN Loans",
+      url: "/loan-programs/itin-loans",
+    },
+  ];
+
   return (
     <main className="min-h-screen bg-primary-bg pt-6 pb-12 sm:pt-8 sm:pb-16 lg:pt-10 lg:pb-24 text-ink">
+      {/* Structural SEO Breadcrumbs & Schema */}
+      <BreadcrumbSchema items={breadcrumbItems} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(itinPageSchema),
+        }}
+      />
+
       {/* --- HERO SECTION --- */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 mb-16 sm:mb-24">
         <div className="relative bg-moss-deep text-cream rounded-[32px] overflow-hidden p-8 sm:p-12 lg:p-16">

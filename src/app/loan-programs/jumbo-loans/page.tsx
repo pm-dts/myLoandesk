@@ -4,20 +4,38 @@ import {
   JumboCalculator,
   JumboPathSelector,
 } from "@/components/site/LoanPrograms/JumboLoans/Interactive";
+import BreadcrumbSchema from "@/components/site/utils/BreadcrumbScripts";
 
 export const metadata: Metadata = {
   title: "Jumbo & Super Jumbo Loans Up to $30M+ | MyLoanDesk",
   description:
     "Jumbo and Super Jumbo financing up to $30 million and beyond, with multiple ways to qualify — full documentation, bank statement, asset depletion, foreign national, and DSCR investment paths. Estimate your payment with our free calculator.",
   alternates: {
-    canonical: "/loan-programs/jumbo-loans/",
+    canonical: "https://www.myloandesk.com/loan-programs/jumbo-loans/",
   },
   openGraph: {
     title: "Jumbo & Super Jumbo Loans Up to $30M+ | MyLoanDesk",
     description:
       "Exceptional homes deserve exceptional financing. Jumbo and Super Jumbo loans up to $30M+, with multiple qualification paths for complex financial profiles.",
-    url: "/loan-programs/jumbo-loans/",
+    url: "https://www.myloandesk.com/loan-programs/jumbo-loans/",
+    siteName: "MyLoanDesk",
+    locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/og-image.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Jumbo and Super Jumbo Loans - MyLoanDesk",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Jumbo & Super Jumbo Loans Up to $30M+ | MyLoanDesk",
+    description:
+      "Jumbo and Super Jumbo mortgage programs up to $30M+ with multiple qualification paths.",
+    images: ["/og-image.jpeg"],
   },
   robots: {
     index: true,
@@ -25,95 +43,140 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
 };
 
-const jsonLd = {
+const jumboPageSchema = {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
+  "@graph": [
     {
-      "@type": "Question",
-      name: "What is the difference between a jumbo loan and a super jumbo loan?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "A jumbo loan is any mortgage above the conforming loan limit set annually by the FHFA — $832,750 in most U.S. counties for 2026, and up to $1,249,125 in high-cost areas. A super jumbo loan is an informal term for jumbo loans well above that threshold, typically starting somewhere around $2.5 million to $3 million and extending into eight figures, depending on the lender.",
+      "@type": "WebPage",
+      "@id": "https://www.myloandesk.com/loan-programs/jumbo-loans/#webpage",
+      url: "https://www.myloandesk.com/loan-programs/jumbo-loans/",
+      name: "Jumbo & Super Jumbo Loans Up to $30M+ | MyLoanDesk",
+      description:
+        "Comprehensive guide and calculation tools for Jumbo and Super Jumbo luxury home financing and non-conforming qualification paths.",
+      isPartOf: {
+        "@type": "WebSite",
+        "@id": "https://www.myloandesk.com/#website",
+      },
+      about: {
+        "@id": "https://www.myloandesk.com/#organization",
       },
     },
     {
-      "@type": "Question",
-      name: "Do jumbo loans require private mortgage insurance (PMI)?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "No. Jumbo and super jumbo loans typically don't carry PMI regardless of your down payment, unlike many conforming conventional loans. Lenders manage the added risk of a larger loan through credit, reserve, and down payment requirements instead.",
+      "@type": "FinancialProduct",
+      "@id": "https://www.myloandesk.com/loan-programs/jumbo-loans/#product",
+      name: "Jumbo & Super Jumbo Mortgage Loan",
+      description:
+        "High-balance mortgage financing up to $30M+ exceeding conforming limits with flexible qualification methods including full doc, bank statements, asset depletion, and DSCR.",
+      provider: {
+        "@id": "https://www.myloandesk.com/#organization",
       },
+      category: "MortgageLoan",
     },
     {
-      "@type": "Question",
-      name: "Can I qualify for a jumbo loan without providing tax returns?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "In many cases, yes. Alongside traditional full-documentation underwriting, options like bank statement qualification for self-employed borrowers and asset depletion (or asset utilization) qualification for high-net-worth borrowers can allow you to qualify without tax returns being the primary income document.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is asset depletion or asset utilization qualification?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Asset depletion, also called asset utilization, is a qualification method that converts your liquid assets — such as investment or retirement accounts — into a monthly qualifying income figure, typically by dividing an eligible portion of those assets over a set number of months. It's often used by retirees, high-net-worth individuals, or business owners whose reported income doesn't reflect their true financial strength.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How much in reserves do I need for a jumbo or super jumbo loan?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Reserve requirements generally scale with loan size. Smaller jumbo loans may require around 6 months of principal, interest, taxes, and insurance (PITI) in reserves, while larger super jumbo loans, particularly above $5 million, often require 12 to 24 months or more, depending on the lender and the full financial profile.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can foreign nationals qualify for a jumbo loan in the U.S.?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, in many cases. Foreign national jumbo programs are designed for international buyers without U.S. credit history or domestic income documentation, typically requiring a larger down payment and additional documentation of foreign income or assets.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can I get a jumbo loan on an investment property?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. DSCR-based jumbo financing allows investment property purchases to be qualified based on the property's rental income relative to its debt obligations, rather than the borrower's personal income, which can be useful for luxury rental and investment properties above conforming loan limits.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What credit score do I need for a jumbo or super jumbo loan?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Jumbo lending generally expects stronger credit than conforming loans, often a score of 700 or higher, with larger super jumbo loans sometimes expecting 720 or above. Exact requirements vary based on the full loan scenario, including down payment, reserves, and qualification path.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can complex income from trusts, LLCs, or multiple businesses be used to qualify?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Jumbo and super jumbo underwriting is often built to accommodate complex financial profiles, including income or assets held in trusts, multiple business entities, LLCs, and other non-traditional structures common among high-net-worth borrowers.",
-      },
+      "@type": "FAQPage",
+      "@id": "https://www.myloandesk.com/loan-programs/jumbo-loans/#faq",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "What is the difference between a jumbo loan and a super jumbo loan?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "A jumbo loan is any mortgage above the conforming loan limit set annually by the FHFA — $832,750 in most U.S. counties for 2026, and up to $1,249,125 in high-cost areas. A super jumbo loan is an informal term for jumbo loans well above that threshold, typically starting somewhere around $2.5 million to $3 million and extending into eight figures, depending on the lender.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do jumbo loans require private mortgage insurance (PMI)?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "No. Jumbo and super jumbo loans typically don't carry PMI regardless of your down payment, unlike many conforming conventional loans. Lenders manage the added risk of a larger loan through credit, reserve, and down payment requirements instead.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can I qualify for a jumbo loan without providing tax returns?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "In many cases, yes. Alongside traditional full-documentation underwriting, options like bank statement qualification for self-employed borrowers and asset depletion (or asset utilization) qualification for high-net-worth borrowers can allow you to qualify without tax returns being the primary income document.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What is asset depletion or asset utilization qualification?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Asset depletion, also called asset utilization, is a qualification method that converts your liquid assets — such as investment or retirement accounts — into a monthly qualifying income figure, typically by dividing an eligible portion of those assets over a set number of months. It's often used by retirees, high-net-worth individuals, or business owners whose reported income doesn't reflect their true financial strength.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How much in reserves do I need for a jumbo or super jumbo loan?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Reserve requirements generally scale with loan size. Smaller jumbo loans may require around 6 months of principal, interest, taxes, and insurance (PITI) in reserves, while larger super jumbo loans, particularly above $5 million, often require 12 to 24 months or more, depending on the lender and the full financial profile.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can foreign nationals qualify for a jumbo loan in the U.S.?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, in many cases. Foreign national jumbo programs are designed for international buyers without U.S. credit history or domestic income documentation, typically requiring a larger down payment and additional documentation of foreign income or assets.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can I get a jumbo loan on an investment property?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. DSCR-based jumbo financing allows investment property purchases to be qualified based on the property's rental income relative to its debt obligations, rather than the borrower's personal income, which can be useful for luxury rental and investment properties above conforming loan limits.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What credit score do I need for a jumbo or super jumbo loan?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Jumbo lending generally expects stronger credit than conforming loans, often a score of 700 or higher, with larger super jumbo loans sometimes expecting 720 or above. Exact requirements vary based on the full loan scenario, including down payment, reserves, and qualification path.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can complex income from trusts, LLCs, or multiple businesses be used to qualify?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. Jumbo and super jumbo underwriting is often built to accommodate complex financial profiles, including income or assets held in trusts, multiple business entities, LLCs, and other non-traditional structures common among high-net-worth borrowers.",
+          },
+        },
+      ],
     },
   ],
 };
 
 export default function JumboLoansPage() {
+  const breadcrumbItems = [
+    { name: "Home", url: "/" },
+    { name: "Loan Programs", url: "/loan-programs" },
+    {
+      name: "Jumbo Loans",
+      url: "/loan-programs/jumbo-loans",
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-[#EDEAE2] text-[#55524C] antialiased">
+      {/* Structural SEO Breadcrumbs & Schema */}
+      <BreadcrumbSchema items={breadcrumbItems} />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jumboPageSchema) }}
       />
 
       <section className="mx-auto max-w-[900px] bg-[#FBF8F2] px-[22px] py-8 sm:px-14 sm:py-[44px] sm:pb-[60px]">
@@ -139,13 +202,13 @@ export default function JumboLoansPage() {
               qualify.
             </div>
             <p className="mb-6 max-w-[680px] text-[15.5px] leading-[1.7] text-[#55524C]">
-              Exceptional homes deserve exceptional financing. MyLoanDesk's
+              Exceptional homes deserve exceptional financing. MyLoanDesk&apos;s
               Jumbo and Super Jumbo programs go well beyond conforming loan
               limits, with the flexibility to structure your financing around
               how your wealth actually works — not just a single income
               documentation path. Whether your income is straightforward, tied
-              up in a business, or held largely in liquid assets, there's likely
-              a way to make the numbers work.
+              up in a business, or held largely in liquid assets, there&apos;s
+              likely a way to make the numbers work.
             </p>
             <div className="mt-[18px] flex flex-col gap-2.5">
               <div className="flex items-center gap-2 text-[13.5px] text-[#55524C]">
@@ -218,21 +281,21 @@ export default function JumboLoansPage() {
           What Is a Jumbo Loan — and a Super Jumbo Loan?
         </h2>
         <p className="mb-3.5 max-w-[700px] text-[15px] leading-[1.75] text-[#55524C]">
-          A jumbo loan is any mortgage above the "conforming" loan limit set
-          annually by the Federal Housing Finance Agency (FHFA). For 2026, that
-          baseline limit is <strong>$832,750</strong> in most U.S. counties,
-          rising to <strong>$1,249,125</strong> in officially designated
-          high-cost areas. Once a loan amount exceeds that threshold, it falls
-          outside what Fannie Mae and Freddie Mac can purchase, and requires
-          jumbo financing instead.
+          A jumbo loan is any mortgage above the &quot;conforming&quot; loan
+          limit set annually by the Federal Housing Finance Agency (FHFA). For
+          2026, that baseline limit is <strong>$832,750</strong> in most U.S.
+          counties, rising to <strong>$1,249,125</strong> in officially
+          designated high-cost areas. Once a loan amount exceeds that threshold,
+          it falls outside what Fannie Mae and Freddie Mac can purchase, and
+          requires jumbo financing instead.
         </p>
         <p className="mb-3.5 max-w-[700px] text-[15px] leading-[1.75] text-[#55524C]">
-          "Super jumbo" isn't an official government category — it's industry
-          shorthand for jumbo loans well above the standard jumbo range,
-          generally starting somewhere around $2.5–3 million and extending into
-          eight-figure territory. MyLoanDesk's programs are built to serve this
-          full spectrum, from a $900,000 jumbo purchase up to $30 million and,
-          in select scenarios, beyond.
+          &quot;Super jumbo&quot; isn&apos;t an official government category —
+          it&apos;s industry shorthand for jumbo loans well above the standard
+          jumbo range, generally starting somewhere around $2.5–3 million and
+          extending into eight-figure territory. MyLoanDesk&apos;s programs are
+          built to serve this full spectrum, from a $900,000 jumbo purchase up
+          to $30 million and, in select scenarios, beyond.
         </p>
 
         {/* Five Ways to Qualify */}
@@ -241,8 +304,9 @@ export default function JumboLoansPage() {
         </h2>
         <p className="mb-3.5 max-w-[700px] text-[15px] leading-[1.75] text-[#55524C]">
           High-net-worth and complex-income borrowers rarely fit into a single
-          underwriting box — so we don't force one. Select how your financial
-          picture is structured below to see the path likely to fit best.
+          underwriting box — so we don&apos;t force one. Select how your
+          financial picture is structured below to see the path likely to fit
+          best.
         </p>
 
         {/* Interactive Qualification Path Selector */}
@@ -297,7 +361,7 @@ export default function JumboLoansPage() {
           Program Highlights
         </h2>
         <div className="mb-3.5 font-sans text-[13.5px] font-bold uppercase tracking-[0.03em] text-[#1C1C1C]">
-          What's included:
+          What&apos;s included:
         </div>
         <ul className="mb-3 max-w-[700px] list-none p-0">
           {[
@@ -324,12 +388,13 @@ export default function JumboLoansPage() {
             Strategic Advantages:
           </div>
           <p className="mb-3 text-[14.5px] leading-[1.7] text-[#55524C]">
-            Because jumbo and super jumbo loans aren't sold to Fannie Mae or
-            Freddie Mac, underwriting isn't bound by the same rigid rules as a
-            conforming loan — which is exactly why multiple qualification paths
-            exist. A borrower who wouldn't fit a conventional box on paper may
-            still be an excellent credit risk once assets, business structure,
-            or global income are properly accounted for.
+            Because jumbo and super jumbo loans aren&apos;t sold to Fannie Mae
+            or Freddie Mac, underwriting isn&apos;t bound by the same rigid
+            rules as a conforming loan — which is exactly why multiple
+            qualification paths exist. A borrower who wouldn&apos;t fit a
+            conventional box on paper may still be an excellent credit risk once
+            assets, business structure, or global income are properly accounted
+            for.
           </p>
           <p className="mb-3 text-[14.5px] leading-[1.7] text-[#55524C]">
             Avoiding PMI on a multi-million dollar loan is a meaningful monthly
