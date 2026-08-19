@@ -203,6 +203,12 @@ const loanProgramsSchema = {
           name: "Property Financing in Portugal",
           url: "https://www.myloandesk.com/loan-programs/portugal-property-financing",
         },
+        {
+          "@type": "ListItem",
+          position: 21,
+          name: "Reverse Mortgage Programs",
+          url: "https://www.myloandesk.com/reverse-mortgage",
+        },
       ],
     },
     {
