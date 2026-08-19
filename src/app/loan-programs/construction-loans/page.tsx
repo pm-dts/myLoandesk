@@ -518,7 +518,7 @@ export default function ConstructionLoansPage() {
               Apply Now &rarr;
             </Link>
             <Link
-              href="/contact"
+              href="/#start"
               className="flex items-center justify-center w-full bg-[#F5EFDF] text-[#1C1C1C] font-sans font-bold text-[15px] p-[16px] border border-[#E7DEC7] rounded-[10px] cursor-pointer no-underline hover:bg-[#EFE7D3] transition-colors"
             >
               Contact Us Now

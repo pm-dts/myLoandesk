@@ -563,7 +563,7 @@ export default function CommercialRealEstateLoansPage() {
             Apply Now &rarr;
           </a>
           <Link
-            href="/contact"
+            href="/#start"
             className="flex w-full items-center justify-center rounded-[10px] border border-[#E7DEC7] bg-[#F5EFDF] p-4 font-sans text-[15px] font-bold text-[#1C1C1C] transition-colors hover:bg-[#EFE7D3]"
           >
             Contact Us Now
