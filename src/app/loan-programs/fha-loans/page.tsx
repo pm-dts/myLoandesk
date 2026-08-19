@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import FhaCalculator from "@/components/site/LoanPrograms/FHALoans/FhaCalculator";
-import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "FHA Loans — Buy a Home with as Little as 3.5% Down | MyLoanDesk",
@@ -101,7 +100,7 @@ const faqSchema = {
 export default function FhaLoansPage() {
   return (
     <section className="bg-[#EDEAE2] py-4 text-[#55524C] font-sans antialiased">
-      <Script
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />

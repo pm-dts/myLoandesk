@@ -11,7 +11,6 @@ import {
 } from "lucide-react";
 import { Fraunces } from "next/font/google";
 import { cn } from "@/lib/utils";
-import Script from "next/script";
 
 import Calculator from "@/components/site/Home/Calculator";
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
@@ -159,7 +158,7 @@ export default function HomePage() {
   return (
     <main className="min-h-screen bg-primary-bg pt-16">
       {/* Page-Specific JSON-LD Schema (WebPage, FAQPage, HowTo) */}
-      <Script
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pageStructuredData) }}
       />
