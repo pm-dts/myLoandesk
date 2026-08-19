@@ -15,6 +15,7 @@ import {
   Calculator,
 } from "lucide-react";
 
+import BreadcrumbSchema from "@/components/site/utils/BreadcrumbScripts";
 import BridgeToSaleCalculator from "@/components/site/LoanPrograms/BridgeToSaleLoans/BridgeToSaleCalculator";
 
 const fraunces = Fraunces({
@@ -28,25 +29,148 @@ export const metadata: Metadata = {
     "Bridge to Sale Loans - Buy Your Next Home Before You Sell | MyLoanDesk",
   description:
     "Unlock equity in your current home to buy your next property without waiting for a sale. Submit strong, non-contingent offers with flexible bridge financing.",
+  alternates: {
+    canonical: "https://www.myloandesk.com/loan-programs/bridge-to-sale-loans/",
+  },
   openGraph: {
     title: "Bridge to Sale Loans | MyLoanDesk",
     description:
       "Access equity in your current property before it sells. Submit strong non-contingent offers and sell on your timeline without pressure.",
     type: "website",
-    url: "/loan-programs/bridge-to-sale-loans",
+    url: "https://www.myloandesk.com/loan-programs/bridge-to-sale-loans/",
+    siteName: "MyLoanDesk",
+    locale: "en_US",
+    images: [
+      {
+        url: "/og-image.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Bridge to Sale Loans - MyLoanDesk",
+      },
+    ],
   },
-  alternates: {
-    canonical: "/loan-programs/bridge-to-sale-loans/",
+  twitter: {
+    card: "summary_large_image",
+    title: "Bridge to Sale Loans | MyLoanDesk",
+    description:
+      "Unlock equity in your current home to buy your next property without waiting for a sale.",
+    images: ["/og-image.jpeg"],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
+const bridgeToSaleSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id":
+        "https://www.myloandesk.com/loan-programs/bridge-to-sale-loans/#webpage",
+      url: "https://www.myloandesk.com/loan-programs/bridge-to-sale-loans/",
+      name: "Bridge to Sale Loans | MyLoanDesk",
+      description:
+        "Comprehensive guide and capacity calculators for residential bridge-to-sale mortgage programs.",
+      isPartOf: {
+        "@type": "WebSite",
+        "@id": "https://www.myloandesk.com/#website",
+      },
+      about: {
+        "@id": "https://www.myloandesk.com/#organization",
+      },
+    },
+    {
+      "@type": "FinancialProduct",
+      "@id":
+        "https://www.myloandesk.com/loan-programs/bridge-to-sale-loans/#product",
+      name: "Bridge to Sale Loan",
+      description:
+        "Short-term residential bridge loan enabling homeowners to unlock equity in their existing home to buy a new home before selling their current property.",
+      provider: {
+        "@id": "https://www.myloandesk.com/#organization",
+      },
+      category: "BridgeLoan",
+    },
+    {
+      "@type": "FAQPage",
+      "@id":
+        "https://www.myloandesk.com/loan-programs/bridge-to-sale-loans/#faq",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "How much can I borrow against my current home?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "This depends on your home's appraised value, your existing mortgage balance, and the lender's maximum combined loan-to-value (CLTV) limit. A loan officer can confirm exact borrowing capacity with a quick equity review.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do I have to make monthly payments while I own both homes?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Some bridge programs offer no-monthly-payment options for qualified borrowers, with the balance repaid when your current home sells. Other programs structure interest-only monthly payments.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What happens if my home takes longer to sell than expected?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Bridge terms are typically structured for 6 to 12 months, providing a comfortable window to sell. In many scenarios, term extensions may be requested if additional listing time is needed.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Is there a prepayment penalty for paying off the bridge loan early?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "No. Once your current home sells, proceeds directly pay off the remaining bridge loan balance without any prepayment penalties.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How is a Bridge to Sale loan different from a HELOC?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "While a HELOC is a revolving line of credit requiring ongoing debt qualification, a Bridge to Sale loan is specifically structured for the gap between buying and selling, often offering deferred payments and underwriting centered on asset equity.",
+          },
+        },
+      ],
+    },
+  ],
+};
+
 export default function BridgeToSaleLoansPage() {
+  const breadcrumbItems = [
+    { name: "Home", url: "/" },
+    { name: "Loan Programs", url: "/loan-programs" },
+    {
+      name: "Bridge to Sale Loans",
+      url: "/loan-programs/bridge-to-sale-loans",
+    },
+  ];
+
   return (
     <main className="min-h-screen bg-primary-bg pt-6 pb-12 sm:pt-8 sm:pb-16 lg:pt-10 lg:pb-24 text-ink">
+      {/* Structural SEO Breadcrumbs & Schema */}
+      <BreadcrumbSchema items={breadcrumbItems} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(bridgeToSaleSchema),
+        }}
+      />
+
       {/* --- HERO SECTION --- */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 mb-16 sm:mb-24">
         <div className="relative bg-moss-deep text-cream rounded-[32px] overflow-hidden p-8 sm:p-12 lg:p-16">

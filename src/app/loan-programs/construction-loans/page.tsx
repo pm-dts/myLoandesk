@@ -1,99 +1,163 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ConstructionCalculator from "@/components/site/LoanPrograms/ConstructionLoans/ConstructionCalculator";
+import BreadcrumbSchema from "@/components/site/utils/BreadcrumbScripts";
 
 export const metadata: Metadata = {
   title: "Construction Loans for Custom Homes & Development | MyLoanDesk",
   description:
     "Construction loans and construction-to-permanent financing for custom homes, spec builds, and small developments. Use our free calculator to estimate your loan amount and down payment before you apply.",
   alternates: {
-    canonical: "/loan-programs/construction-loans/",
+    canonical: "https://www.myloandesk.com/loan-programs/construction-loans/",
   },
   openGraph: {
     title: "Construction Loans for Custom Homes & Development | MyLoanDesk",
     description:
       "Finance your dream home or next development project with construction-to-permanent financing. Estimate your loan amount, down payment, and interest-only payments with our free calculator.",
     type: "website",
-    url: "/loan-programs/construction-loans/",
+    url: "https://www.myloandesk.com/loan-programs/construction-loans/",
+    siteName: "MyLoanDesk",
+    locale: "en_US",
+    images: [
+      {
+        url: "/og-image.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Construction Loans - MyLoanDesk",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Construction Loans for Custom Homes & Development | MyLoanDesk",
+    description:
+      "Finance your custom build with single-close construction-to-permanent financing.",
+    images: ["/og-image.jpeg"],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
-const faqSchema = {
+const constructionPageSchema = {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
+  "@graph": [
     {
-      "@type": "Question",
-      name: "What is a construction-to-permanent loan?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "A construction-to-permanent loan combines your short-term construction financing and your long-term mortgage into a single loan with a single closing. Once the home is complete, the loan automatically converts into a standard mortgage, so you avoid closing twice and re-qualifying for a separate end loan.",
+      "@type": "WebPage",
+      "@id":
+        "https://www.myloandesk.com/loan-programs/construction-loans/#webpage",
+      url: "https://www.myloandesk.com/loan-programs/construction-loans/",
+      name: "Construction Loans | MyLoanDesk",
+      description:
+        "Construction loans and construction-to-permanent financing for custom homes, spec builds, and residential developments.",
+      isPartOf: {
+        "@type": "WebSite",
+        "@id": "https://www.myloandesk.com/#website",
+      },
+      about: {
+        "@id": "https://www.myloandesk.com/#organization",
       },
     },
     {
-      "@type": "Question",
-      name: "How much down payment is required for a construction loan?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Down payment requirements for construction loans are typically higher than for a standard mortgage, often ranging from 10% to 25% of the total project cost, depending on the lender, the borrower's credit profile, and whether the land is already owned free and clear.",
+      "@type": "FinancialProduct",
+      "@id":
+        "https://www.myloandesk.com/loan-programs/construction-loans/#product",
+      name: "Construction-to-Permanent Loan",
+      description:
+        "Single-close financing combining short-term construction draw funding with a long-term fixed mortgage for custom residential builds.",
+      provider: {
+        "@id": "https://www.myloandesk.com/#organization",
       },
+      category: "ConstructionLoan",
     },
     {
-      "@type": "Question",
-      name: "How do construction loan draws work?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Instead of receiving the full loan amount upfront, funds are released in stages called draws, tied to completed construction milestones such as foundation, framing, and finishing. An inspection typically confirms each stage is complete before the next draw is released.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do I pay principal during construction?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Most construction loans are interest-only during the build phase, and interest is typically charged only on the funds that have actually been drawn, not the full loan amount. Principal payments generally begin once the loan converts to a permanent mortgage after construction is complete.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can I use a construction loan to build on land I already own?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes — if you already own the land free and clear, its value can often be used as equity toward your down payment requirement, which can reduce the amount of cash you need to bring to closing.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What credit score is needed for a construction loan?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Construction loans generally require a stronger credit profile than a standard mortgage, often 680 or higher, since the lender is financing a project that doesn't yet exist as collateral. Builder experience and a detailed budget and plan set can also strengthen an application.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long does construction loan financing take to close?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Initial closing on a construction-to-permanent loan typically takes a similar timeframe to a conventional mortgage, often 30 to 45 days, since it requires underwriting the borrower, the builder, and the full project plans and budget.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What happens if construction costs more than the original budget?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Cost overruns are common in construction projects. Many lenders require a contingency reserve built into the original budget, and some allow a loan modification if costs increase significantly. Planning a realistic budget with a contingency buffer upfront is the best way to avoid a funding gap mid-project.",
-      },
+      "@type": "FAQPage",
+      "@id": "https://www.myloandesk.com/loan-programs/construction-loans/#faq",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "What is a construction-to-permanent loan?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "A construction-to-permanent loan combines your short-term construction financing and your long-term mortgage into a single loan with a single closing. Once the home is complete, the loan automatically converts into a standard mortgage, so you avoid closing twice and re-qualifying for a separate end loan.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How much down payment is required for a construction loan?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Down payment requirements for construction loans are typically higher than for a standard mortgage, often ranging from 10% to 25% of the total project cost, depending on the lender, the borrower's credit profile, and whether the land is already owned free and clear.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How do construction loan draws work?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Instead of receiving the full loan amount upfront, funds are released in stages called draws, tied to completed construction milestones such as foundation, framing, and finishing. An inspection typically confirms each stage is complete before the next draw is released.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do I pay principal during construction?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Most construction loans are interest-only during the build phase, and interest is typically charged only on the funds that have actually been drawn, not the full loan amount. Principal payments generally begin once the loan converts to a permanent mortgage after construction is complete.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can I use a construction loan to build on land I already own?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes — if you already own the land free and clear, its value can often be used as equity toward your down payment requirement, which can reduce the amount of cash you need to bring to closing.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What credit score is needed for a construction loan?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Construction loans generally require a stronger credit profile than a standard mortgage, often 680 or higher, since the lender is financing a project that doesn't yet exist as collateral. Builder experience and a detailed budget and plan set can also strengthen an application.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How long does construction loan financing take to close?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Initial closing on a construction-to-permanent loan typically takes a similar timeframe to a conventional mortgage, often 30 to 45 days, since it requires underwriting the borrower, the builder, and the full project plans and budget.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What happens if construction costs more than the original budget?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Cost overruns are common in construction projects. Many lenders require a contingency reserve built into the original budget, and some allow a loan modification if costs increase significantly. Planning a realistic budget with a contingency buffer upfront is the best way to avoid a funding gap mid-project.",
+          },
+        },
+      ],
     },
   ],
 };
 
 export default function ConstructionLoansPage() {
+  const breadcrumbItems = [
+    { name: "Home", url: "/" },
+    { name: "Loan Programs", url: "/loan-programs" },
+    { name: "Construction Loans", url: "/loan-programs/construction-loans" },
+  ];
+
   return (
     <main
       className="min-h-screen font-sans"
@@ -103,10 +167,13 @@ export default function ConstructionLoansPage() {
         WebkitFontSmoothing: "antialiased",
       }}
     >
-      {/* JSON-LD Structured Data for FAQs */}
+      {/* Structural SEO Breadcrumbs & Schema */}
+      <BreadcrumbSchema items={breadcrumbItems} />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(constructionPageSchema),
+        }}
       />
 
       <section className="block">

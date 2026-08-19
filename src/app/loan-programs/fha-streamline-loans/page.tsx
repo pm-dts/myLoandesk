@@ -1,7 +1,7 @@
-// app/loan-programs/fha-streamline-refinance/page.tsx
 import type { Metadata } from "next";
 import Link from "next/link";
 import StreamlineCalculator from "@/components/site/LoanPrograms/FHALoans/FHAStreamlineCalculator";
+import BreadcrumbSchema from "@/components/site/utils/BreadcrumbScripts";
 
 export const metadata: Metadata = {
   title:
@@ -9,15 +9,34 @@ export const metadata: Metadata = {
   description:
     "Refinance your existing FHA loan with reduced documentation and, in most cases, no new appraisal. Use our free calculator to see your potential monthly savings before you apply.",
   alternates: {
-    canonical: "/loan-programs/fha-streamline-refinance/",
+    canonical:
+      "https://www.myloandesk.com/loan-programs/fha-streamline-refinance/",
   },
   openGraph: {
     title:
       "FHA Streamline Refinance — Lower Your Rate, Less Paperwork | MyLoanDesk",
     description:
       "If you already have an FHA loan, a Streamline Refinance can lower your rate with reduced documentation and often no new appraisal. Estimate your savings with our free calculator.",
-    url: "/loan-programs/fha-streamline-refinance/",
+    url: "https://www.myloandesk.com/loan-programs/fha-streamline-refinance/",
+    siteName: "MyLoanDesk",
+    locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/og-image.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "FHA Streamline Refinance - MyLoanDesk",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "FHA Streamline Refinance — Lower Your Rate, Less Paperwork | MyLoanDesk",
+    description:
+      "Refinance your existing FHA loan with reduced documentation and no appraisal in most cases.",
+    images: ["/og-image.jpeg"],
   },
   robots: {
     index: true,
@@ -25,87 +44,137 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
 };
 
-const jsonLd = {
+const streamlinePageSchema = {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
+  "@graph": [
     {
-      "@type": "Question",
-      name: "What is an FHA Streamline Refinance?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "An FHA Streamline Refinance is a simplified refinance option available only to homeowners who already have an FHA loan. It's designed to lower your rate or payment with reduced documentation and, in most cases, no new home appraisal, compared to a standard refinance.",
+      "@type": "WebPage",
+      "@id":
+        "https://www.myloandesk.com/loan-programs/fha-streamline-refinance/#webpage",
+      url: "https://www.myloandesk.com/loan-programs/fha-streamline-refinance/",
+      name: "FHA Streamline Refinance | MyLoanDesk",
+      description:
+        "Comprehensive guide and monthly savings calculator for FHA Streamline Refinance mortgage programs.",
+      isPartOf: {
+        "@type": "WebSite",
+        "@id": "https://www.myloandesk.com/#website",
+      },
+      about: {
+        "@id": "https://www.myloandesk.com/#organization",
       },
     },
     {
-      "@type": "Question",
-      name: "Do I need an appraisal for an FHA Streamline Refinance?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "In most cases, no. FHA Streamline Refinances typically don't require a new appraisal, which is one of the program's biggest advantages — your loan amount is generally based on your existing loan balance rather than a new appraised value.",
+      "@type": "FinancialProduct",
+      "@id":
+        "https://www.myloandesk.com/loan-programs/fha-streamline-refinance/#product",
+      name: "FHA Streamline Refinance",
+      description:
+        "A simplified rate-and-term refinance program for existing FHA borrowers featuring reduced documentation, net tangible benefit requirements, and typically no appraisal requirement.",
+      provider: {
+        "@id": "https://www.myloandesk.com/#organization",
       },
+      category: "RefinanceLoan",
     },
     {
-      "@type": "Question",
-      name: "What is the net tangible benefit requirement?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "FHA requires that a Streamline Refinance provide a clear financial benefit to the borrower — commonly a reduction in combined principal, interest, and mortgage insurance payment, or a move from an adjustable-rate to a fixed-rate loan. This protects borrowers from refinancing into a loan that doesn’t actually improve their position.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can I get cash out with an FHA Streamline Refinance?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "No. FHA Streamline Refinances are rate-and-term refinances only, meaning they’re designed to improve your rate or terms, not to pull cash out of your equity. Borrowers who want to access equity would instead look at an FHA cash-out refinance.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do I need to requalify with income and credit documentation?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Many FHA Streamline Refinances involve reduced income and asset documentation compared to a standard refinance, since you're already an established FHA borrower. Specific requirements can vary by lender and loan scenario.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is the FHA upfront MIP refund?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "If you refinance within roughly the first three years of your original FHA loan, you may be eligible for a partial refund of your original upfront mortgage insurance premium, which is credited toward the upfront MIP on your new loan — reducing your overall refinance cost.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long must I have had my current FHA loan before refinancing?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "FHA generally requires your current loan to be at least 210 days old and for you to have made at least six monthly payments before you can complete a Streamline Refinance.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can I convert an adjustable-rate FHA loan to fixed with a Streamline Refinance?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Converting from an adjustable-rate FHA loan to a fixed-rate FHA loan is one of the ways a Streamline Refinance can satisfy FHA's net tangible benefit requirement, even if the immediate payment change is modest.",
-      },
+      "@type": "FAQPage",
+      "@id":
+        "https://www.myloandesk.com/loan-programs/fha-streamline-refinance/#faq",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "What is an FHA Streamline Refinance?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "An FHA Streamline Refinance is a simplified refinance option available only to homeowners who already have an FHA loan. It's designed to lower your rate or payment with reduced documentation and, in most cases, no new home appraisal, compared to a standard refinance.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do I need an appraisal for an FHA Streamline Refinance?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "In most cases, no. FHA Streamline Refinances typically don't require a new appraisal, which is one of the program's biggest advantages — your loan amount is generally based on your existing loan balance rather than a new appraised value.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What is the net tangible benefit requirement?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "FHA requires that a Streamline Refinance provide a clear financial benefit to the borrower — commonly a reduction in combined principal, interest, and mortgage insurance payment, or a move from an adjustable-rate to a fixed-rate loan. This protects borrowers from refinancing into a loan that doesn’t actually improve their position.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can I get cash out with an FHA Streamline Refinance?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "No. FHA Streamline Refinances are rate-and-term refinances only, meaning they’re designed to improve your rate or terms, not to pull cash out of your equity. Borrowers who want to access equity would instead look at an FHA cash-out refinance.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do I need to requalify with income and credit documentation?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Many FHA Streamline Refinances involve reduced income and asset documentation compared to a standard refinance, since you're already an established FHA borrower. Specific requirements can vary by lender and loan scenario.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What is the FHA upfront MIP refund?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "If you refinance within roughly the first three years of your original FHA loan, you may be eligible for a partial refund of your original upfront mortgage insurance premium, which is credited toward the upfront MIP on your new loan — reducing your overall refinance cost.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How long must I have had my current FHA loan before refinancing?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "FHA generally requires your current loan to be at least 210 days old and for you to have made at least six monthly payments before you can complete a Streamline Refinance.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can I convert an adjustable-rate FHA loan to fixed with a Streamline Refinance?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. Converting from an adjustable-rate FHA loan to a fixed-rate FHA loan is one of the ways a Streamline Refinance can satisfy FHA's net tangible benefit requirement, even if the immediate payment change is modest.",
+          },
+        },
+      ],
     },
   ],
 };
 
 export default function FhaStreamlinePage() {
+  const breadcrumbItems = [
+    { name: "Home", url: "/" },
+    { name: "Loan Programs", url: "/loan-programs" },
+    {
+      name: "FHA Streamline Refinance",
+      url: "/loan-programs/fha-streamline-refinance",
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-[#EDEAE2] text-[#55524C] antialiased">
+      {/* Structural SEO Breadcrumbs & Schema */}
+      <BreadcrumbSchema items={breadcrumbItems} />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(streamlinePageSchema),
+        }}
       />
 
       <section className="mx-auto max-w-[900px] bg-[#FBF8F2] px-[22px] py-8 sm:px-14 sm:py-[44px] sm:pb-[60px]">

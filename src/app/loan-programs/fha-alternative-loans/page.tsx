@@ -1,7 +1,7 @@
-// app/loan-programs/fha-alternative-documentation/page.tsx
 import type { Metadata } from "next";
 import Link from "next/link";
 import ProgramSwitcher from "@/components/site/LoanPrograms/FHALoans/FHAProgramSwitcher";
+import BreadcrumbSchema from "@/components/site/utils/BreadcrumbScripts";
 
 export const metadata: Metadata = {
   title: "FHA Alternative Income Documentation Programs | MyLoanDesk",
@@ -16,91 +16,160 @@ export const metadata: Metadata = {
     description:
       "Up to 96.5% FHA financing for wage earners and self-employed borrowers whose income doesn't fit a standard file. Learn about VOE and profit & loss documentation options.",
     url: "https://www.myloandesk.com/loan-programs/fha-alternative-documentation/",
+    siteName: "MyLoanDesk",
+    locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/og-image.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "FHA Alternative Documentation Loans - MyLoanDesk",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "FHA Alternative Income Documentation Programs | MyLoanDesk",
+    description:
+      "Up to 96.5% FHA financing using VOE or P&L statements without standard tax returns.",
+    images: ["/og-image.jpeg"],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
-const jsonLd = {
+const fhaAltDocsSchema = {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
+  "@graph": [
     {
-      "@type": "Question",
-      name: "What is FHA VOE and how is it different from a standard FHA loan?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "FHA VOE is an FHA-based option for eligible wage-earning borrowers that uses a direct verification of employment from your employer along with a recent pay stub, rather than the fuller income documentation package a standard FHA file may require. It can be a helpful path when your income is stable but doesn’t fit cleanly into a typical documentation review.",
+      "@type": "WebPage",
+      "@id":
+        "https://www.myloandesk.com/loan-programs/fha-alternative-documentation/#webpage",
+      url: "https://www.myloandesk.com/loan-programs/fha-alternative-documentation/",
+      name: "FHA Alternative Income Documentation Programs | MyLoanDesk",
+      description:
+        "Flexible FHA qualification programs utilizing verification of employment (VOE) or profit & loss (P&L) statements for non-traditional wage earners and self-employed borrowers.",
+      isPartOf: {
+        "@type": "WebSite",
+        "@id": "https://www.myloandesk.com/#website",
+      },
+      about: {
+        "@id": "https://www.myloandesk.com/#organization",
       },
     },
     {
-      "@type": "Question",
-      name: "Can I qualify for an FHA loan without providing tax returns if I’m self-employed?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "In some cases, yes. The FHA Self-Employed P&L option allows eligible business owners to qualify using profit and loss statements and a current balance sheet instead of tax returns, provided they’ve been self-employed for at least two full years and own at least 25% of the business.",
+      "@type": "FinancialProduct",
+      "@id":
+        "https://www.myloandesk.com/loan-programs/fha-alternative-documentation/#product",
+      name: "FHA Alternative Documentation Loan",
+      description:
+        "Government-insured FHA mortgage financing up to 96.5% LTV using non-traditional income documentation paths such as VOE and self-employed P&L statements.",
+      provider: {
+        "@id": "https://www.myloandesk.com/#organization",
       },
+      category: "MortgageLoan",
     },
     {
-      "@type": "Question",
-      name: "What credit score do I need for these alternative documentation programs?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "The FHA VOE option generally looks for a minimum credit score of 580. The FHA Self-Employed P&L option generally looks for a mid credit score of at least 640, based on three credit scores. Exact requirements can vary based on the full loan scenario.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How much do I need to put down?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Both programs offer financing up to 96.5% of the purchase price, meaning a minimum down payment as low as 3.5%, similar to a standard FHA loan.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can I use gift funds for my down payment?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Both programs allow down payment funds to come entirely from an eligible gift, typically from an immediate family member such as a spouse, parent, child, sibling, or grandparent, subject to standard gift documentation requirements.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Are these programs available for a duplex, triplex, or fourplex?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Both programs may be available for primary residence properties with 1 to 4 units, subject to full eligibility and property review.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What are FHA loan limits and how do they affect how much I can borrow?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "FHA loan limits set the maximum standard-balance loan amount and vary by state, county, property type, and number of units. Higher-cost counties often have higher limits than the national baseline. Because limits are set locally and updated periodically, it’s best to confirm the current limit for your specific county before assuming a loan amount.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Who is a good fit for the FHA Self-Employed P&L option versus a traditional FHA loan?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Business owners with stable, provable income who don’t have an LLC or corporation, or whose tax returns understate their true income due to deductions, are often a better fit for the P&L option than a tax-return-based FHA file. A loan officer can review your specific situation to confirm which path fits best.",
-      },
+      "@type": "FAQPage",
+      "@id":
+        "https://www.myloandesk.com/loan-programs/fha-alternative-documentation/#faq",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "What is FHA VOE and how is it different from a standard FHA loan?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "FHA VOE is an FHA-based option for eligible wage-earning borrowers that uses a direct verification of employment from your employer along with a recent pay stub, rather than the fuller income documentation package a standard FHA file may require. It can be a helpful path when your income is stable but doesn't fit cleanly into a typical documentation review.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can I qualify for an FHA loan without providing tax returns if I'm self-employed?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "In some cases, yes. The FHA Self-Employed P&L option allows eligible business owners to qualify using profit and loss statements and a current balance sheet instead of tax returns, provided they've been self-employed for at least two full years and own at least 25% of the business.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What credit score do I need for these alternative documentation programs?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "The FHA VOE option generally looks for a minimum credit score of 580. The FHA Self-Employed P&L option generally looks for a mid credit score of at least 640, based on three credit scores. Exact requirements can vary based on the full loan scenario.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How much do I need to put down?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Both programs offer financing up to 96.5% of the purchase price, meaning a minimum down payment as low as 3.5%, similar to a standard FHA loan.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can I use gift funds for my down payment?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. Both programs allow down payment funds to come entirely from an eligible gift, typically from an immediate family member such as a spouse, parent, child, sibling, or grandparent, subject to standard gift documentation requirements.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Are these programs available for a duplex, triplex, or fourplex?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Both programs may be available for primary residence properties with 1 to 4 units, subject to full eligibility and property review.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What are FHA loan limits and how do they affect how much I can borrow?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "FHA loan limits set the maximum standard-balance loan amount and vary by state, county, property type, and number of units. Higher-cost counties often have higher limits than the national baseline. Because limits are set locally and updated periodically, it's best to confirm the current limit for your specific county before assuming a loan amount.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Who is a good fit for the FHA Self-Employed P&L option versus a traditional FHA loan?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Business owners with stable, provable income who don't have an LLC or corporation, or whose tax returns understate their true income due to deductions, are often a better fit for the P&L option than a tax-return-based FHA file. A loan officer can review your specific situation to confirm which path fits best.",
+          },
+        },
+      ],
     },
   ],
 };
 
 export default function FhaAlternativeDocsPage() {
+  const breadcrumbItems = [
+    { name: "Home", url: "/" },
+    { name: "Loan Programs", url: "/loan-programs" },
+    {
+      name: "FHA Alternative Documentation",
+      url: "/loan-programs/fha-alternative-documentation",
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-[#EDEAE2] text-[#55524C] antialiased">
+      {/* Structural SEO Breadcrumbs & Schema */}
+      <BreadcrumbSchema items={breadcrumbItems} />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(fhaAltDocsSchema) }}
       />
 
       <section className="mx-auto max-w-[900px] bg-[#FBF8F2] px-[22px] py-8 sm:px-14 sm:py-[44px] sm:pb-[60px]">
@@ -122,17 +191,17 @@ export default function FhaAlternativeDocsPage() {
         <div className="mb-1.5 grid grid-cols-1 items-start gap-10 lg:grid-cols-[1.05fr_0.95fr]">
           <div>
             <div className="mb-4 font-sans text-sm font-bold uppercase tracking-[0.02em] text-[#B85A1C]">
-              When your income doesn't fit a standard file, there may still be
-              an FHA path.
+              When your income doesn&apos;t fit a standard file, there may still
+              be an FHA path.
             </div>
             <p className="mb-6 max-w-[700px] text-[15.5px] leading-[1.7] text-[#55524C]">
-              Not every qualified borrower's income fits neatly into a standard
-              FHA documentation review — a wage earner with a nontraditional pay
-              structure, or a business owner whose tax returns understate real
-              income after deductions, can still be a strong borrower. These
-              alternative documentation options finance up to 96.5% of the
-              purchase price using a different — but still fully documented —
-              path to verify your income.
+              Not every qualified borrower&apos;s income fits neatly into a
+              standard FHA documentation review — a wage earner with a
+              nontraditional pay structure, or a business owner whose tax
+              returns understate real income after deductions, can still be a
+              strong borrower. These alternative documentation options finance
+              up to 96.5% of the purchase price using a different — but still
+              fully documented — path to verify your income.
             </p>
             <div className="mt-[18px] flex flex-col gap-2.5">
               <div className="flex items-center gap-2 text-[13.5px] text-[#55524C]">
@@ -217,7 +286,7 @@ export default function FhaAlternativeDocsPage() {
           Program Highlights
         </h2>
         <div className="mb-3.5 font-sans text-[13.5px] font-bold uppercase tracking-[0.03em] text-[#1C1C1C]">
-          What's included, across both options:
+          What&apos;s included, across both options:
         </div>
         <ul className="mb-3 max-w-[700px] list-none p-0">
           <li className="relative mb-[11px] pl-5 text-[15px] leading-[1.6] text-[#55524C] before:absolute before:left-0 before:top-[9px] before:h-1.5 before:w-1.5 before:rounded-full before:bg-[#55524C]">
@@ -246,14 +315,15 @@ export default function FhaAlternativeDocsPage() {
           </div>
           <p className="mb-3 text-[14.5px] leading-[1.7] text-[#55524C]">
             Many strong borrowers get turned away from standard FHA underwriting
-            simply because their documentation doesn't match the file format a
-            lender is used to reviewing — not because their income isn't real or
-            stable. These programs exist for exactly that gap.
+            simply because their documentation doesn&apos;t match the file
+            format a lender is used to reviewing — not because their income
+            isn&apos;t real or stable. These programs exist for exactly that
+            gap.
           </p>
           <p className="mb-0 text-[14.5px] leading-[1.7] text-[#55524C]">
             For self-employed borrowers in particular, tax returns often
             understate true income after legitimate business deductions. A
-            profit-and-loss-based review can reflect your business's actual
+            profit-and-loss-based review can reflect your business&apos;s actual
             performance more accurately than a tax-return-only file would.
           </p>
         </div>
@@ -364,11 +434,11 @@ export default function FhaAlternativeDocsPage() {
           A Note on FHA Loan Limits
         </h2>
         <p className="mb-3.5 max-w-[700px] text-[15px] leading-[1.75] text-[#55524C]">
-          FHA sets a maximum "standard-balance" loan amount that varies by
-          state, county, property type, and number of units — higher-cost areas
-          often have higher limits than the national baseline. As an example,
-          standard-balance FHA limits for a high-cost county like Los Angeles
-          County, CA currently look like this:
+          FHA sets a maximum &quot;standard-balance&quot; loan amount that
+          varies by state, county, property type, and number of units —
+          higher-cost areas often have higher limits than the national baseline.
+          As an example, standard-balance FHA limits for a high-cost county like
+          Los Angeles County, CA currently look like this:
         </p>
         <table className="my-3.5 mb-2 max-w-[520px] w-full border-collapse text-[13.5px]">
           <thead>
@@ -417,21 +487,21 @@ export default function FhaAlternativeDocsPage() {
               that uses a direct verification of employment from your employer
               along with a recent pay stub, rather than the fuller income
               documentation package a standard FHA file may require. It can be a
-              helpful path when your income is stable but doesn't fit cleanly
-              into a typical documentation review.
+              helpful path when your income is stable but doesn&apos;t fit
+              cleanly into a typical documentation review.
             </p>
           </div>
           <div className="border-b border-[#E6E0D3] py-4">
             <p className="mb-1.5 font-sans text-[15px] font-bold text-[#1C1C1C]">
-              Can I qualify for an FHA loan without providing tax returns if I'm
-              self-employed?
+              Can I qualify for an FHA loan without providing tax returns if
+              I&apos;m self-employed?
             </p>
             <p className="m-0 text-[14.5px] leading-[1.7] text-[#55524C]">
-              In some cases, yes. The FHA Self-Employed P&L option allows
+              In some cases, yes. The FHA Self-Employed P&amp;L option allows
               eligible business owners to qualify using profit and loss
               statements and a current balance sheet instead of tax returns,
-              provided they've been self-employed for at least two full years
-              and own at least 25% of the business.
+              provided they&apos;ve been self-employed for at least two full
+              years and own at least 25% of the business.
             </p>
           </div>
           <div className="border-b border-[#E6E0D3] py-4">
@@ -441,9 +511,9 @@ export default function FhaAlternativeDocsPage() {
             </p>
             <p className="m-0 text-[14.5px] leading-[1.7] text-[#55524C]">
               The FHA VOE option generally looks for a minimum credit score of
-              580. The FHA Self-Employed P&L option generally looks for a mid
-              credit score of at least 640, based on three credit scores. Exact
-              requirements can vary based on the full loan scenario.
+              580. The FHA Self-Employed P&amp;L option generally looks for a
+              mid credit score of at least 640, based on three credit scores.
+              Exact requirements can vary based on the full loan scenario.
             </p>
           </div>
           <div className="border-b border-[#E6E0D3] py-4">
@@ -487,21 +557,21 @@ export default function FhaAlternativeDocsPage() {
               vary by state, county, property type, and number of units.
               Higher-cost counties often have higher limits than the national
               baseline. Because limits are set locally and updated periodically,
-              it's best to confirm the current limit for your specific county
-              before assuming a loan amount.
+              it&apos;s best to confirm the current limit for your specific
+              county before assuming a loan amount.
             </p>
           </div>
           <div className="py-4">
             <p className="mb-1.5 font-sans text-[15px] font-bold text-[#1C1C1C]">
-              Who is a good fit for the FHA Self-Employed P&L option versus a
-              traditional FHA loan?
+              Who is a good fit for the FHA Self-Employed P&amp;L option versus
+              a traditional FHA loan?
             </p>
             <p className="m-0 text-[14.5px] leading-[1.7] text-[#55524C]">
-              Business owners with stable, provable income who don't have an LLC
-              or corporation, or whose tax returns understate their true income
-              due to deductions, are often a better fit for the P&L option than
-              a tax-return-based FHA file. A loan officer can review your
-              specific situation to confirm which path fits best.
+              Business owners with stable, provable income who don&apos;t have
+              an LLC or corporation, or whose tax returns understate their true
+              income due to deductions, are often a better fit for the P&amp;L
+              option than a tax-return-based FHA file. A loan officer can review
+              your specific situation to confirm which path fits best.
             </p>
           </div>
         </div>
@@ -517,13 +587,13 @@ export default function FhaAlternativeDocsPage() {
         </p>
         <div className="mb-3 grid max-w-[700px] grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-2">
           <div className="relative mb-[9px] pl-5 text-[14.5px] leading-[1.6] text-[#55524C] before:absolute before:left-0 before:top-2 before:h-1.5 before:w-1.5 before:rounded-full before:bg-[#D9722C]">
-            Whether you're buying or refinancing
+            Whether you&apos;re buying or refinancing
           </div>
           <div className="relative mb-[9px] pl-5 text-[14.5px] leading-[1.6] text-[#55524C] before:absolute before:left-0 before:top-2 before:h-1.5 before:w-1.5 before:rounded-full before:bg-[#D9722C]">
             The property type and number of units
           </div>
           <div className="relative mb-[9px] pl-5 text-[14.5px] leading-[1.6] text-[#55524C] before:absolute before:left-0 before:top-2 before:h-1.5 before:w-1.5 before:rounded-full before:bg-[#D9722C]">
-            The city and state you're buying in
+            The city and state you&apos;re buying in
           </div>
           <div className="relative mb-[9px] pl-5 text-[14.5px] leading-[1.6] text-[#55524C] before:absolute before:left-0 before:top-2 before:h-1.5 before:w-1.5 before:rounded-full before:bg-[#D9722C]">
             Purchase price or estimated value
@@ -532,7 +602,7 @@ export default function FhaAlternativeDocsPage() {
             Your approximate credit score
           </div>
           <div className="relative mb-[9px] pl-5 text-[14.5px] leading-[1.6] text-[#55524C] before:absolute before:left-0 before:top-2 before:h-1.5 before:w-1.5 before:rounded-full before:bg-[#D9722C]">
-            Whether you're a wage earner or self-employed
+            Whether you&apos;re a wage earner or self-employed
           </div>
           <div className="relative mb-[9px] pl-5 text-[14.5px] leading-[1.6] text-[#55524C] before:absolute before:left-0 before:top-2 before:h-1.5 before:w-1.5 before:rounded-full before:bg-[#D9722C]">
             Years at your job (VOE) or years in business (P&amp;L)

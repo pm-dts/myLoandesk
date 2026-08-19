@@ -1,20 +1,38 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import FhaCalculator from "@/components/site/LoanPrograms/FHALoans/FhaCalculator";
+import BreadcrumbSchema from "@/components/site/utils/BreadcrumbScripts";
 
 export const metadata: Metadata = {
   title: "FHA Loans — Buy a Home with as Little as 3.5% Down | MyLoanDesk",
   description:
     "FHA loans with down payments as low as 3.5%, flexible credit requirements, and options after bankruptcy or foreclosure. Use our free calculator to estimate your down payment and mortgage insurance before you apply.",
   alternates: {
-    canonical: "/loan-programs/fha-loans/",
+    canonical: "https://www.myloandesk.com/loan-programs/fha-loans/",
   },
   openGraph: {
     title: "FHA Loans — Buy a Home with as Little as 3.5% Down | MyLoanDesk",
     description:
       "Lower credit and down payment requirements make FHA one of the most accessible paths to homeownership. Estimate your down payment and mortgage insurance with our free FHA calculator.",
-    url: "/loan-programs/fha-loans/",
+    url: "https://www.myloandesk.com/loan-programs/fha-loans/",
+    siteName: "MyLoanDesk",
+    locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/og-image.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "FHA Loans - MyLoanDesk",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "FHA Loans — Buy a Home with as Little as 3.5% Down | MyLoanDesk",
+    description:
+      "Buy a home with as little as 3.5% down and flexible credit requirements through FHA financing.",
+    images: ["/og-image.jpeg"],
   },
   robots: {
     index: true,
@@ -22,87 +40,129 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
 };
 
-const faqSchema = {
+const fhaPageSchema = {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
+  "@graph": [
     {
-      "@type": "Question",
-      name: "What credit score do I need for an FHA loan?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Borrowers with a credit score of 580 or higher typically qualify for FHA's minimum 3.5% down payment. Scores between 500 and 579 may still qualify, but usually require a larger 10% down payment. Scores below 500 generally do not qualify for FHA financing.",
+      "@type": "WebPage",
+      "@id": "https://www.myloandesk.com/loan-programs/fha-loans/#webpage",
+      url: "https://www.myloandesk.com/loan-programs/fha-loans/",
+      name: "FHA Loans — Buy a Home with as Little as 3.5% Down | MyLoanDesk",
+      description:
+        "Comprehensive guide and calculation tools for government-backed FHA home purchase and refinance loans.",
+      isPartOf: {
+        "@type": "WebSite",
+        "@id": "https://www.myloandesk.com/#website",
+      },
+      about: {
+        "@id": "https://www.myloandesk.com/#organization",
       },
     },
     {
-      "@type": "Question",
-      name: "How much down payment do I need for an FHA loan?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "With a credit score of 580 or higher, the minimum down payment is 3.5% of the purchase price. With a credit score between 500 and 579, most lenders require at least 10% down. Down payment funds can often come from savings, an eligible gift, or a qualifying down payment assistance program.",
+      "@type": "FinancialProduct",
+      "@id": "https://www.myloandesk.com/loan-programs/fha-loans/#product",
+      name: "FHA Loan",
+      description:
+        "A government-insured mortgage loan backed by the Federal Housing Administration offering low down payments from 3.5% and flexible credit qualifying guidelines.",
+      provider: {
+        "@id": "https://www.myloandesk.com/#organization",
       },
+      category: "MortgageLoan",
     },
     {
-      "@type": "Question",
-      name: "What is FHA mortgage insurance (MIP) and how much does it cost?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "FHA loans require two forms of mortgage insurance: an upfront premium (UFMIP), typically 1.75% of the loan amount and usually financed into the loan, and an annual premium (MIP), typically around 0.55% of the loan balance per year, paid monthly. Unlike conventional PMI, FHA's annual MIP often continues for the life of the loan unless you refinance out of FHA financing.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can I get an FHA loan after a bankruptcy or foreclosure?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, in many cases. FHA guidelines generally allow borrowers to qualify roughly two years after a Chapter 7 bankruptcy discharge and around three years after a foreclosure, provided credit has been reestablished and payment history since then has been solid. Specific timelines can vary by lender and circumstance.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What property types are eligible for FHA financing?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "FHA loans can be used for single-family homes, FHA-approved condominiums, 2-4 unit properties (as long as the borrower occupies one unit), and many manufactured and modular homes that meet FHA construction standards.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What documents do I need to apply for an FHA loan?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Typical documentation includes two years of tax returns, W-2s or 1099s, your most recent pay stub, two months of bank statements, recent statements for any investment or retirement accounts, and a valid government-issued ID. Self-employed borrowers generally also provide two years of business tax returns and a year-to-date profit and loss statement.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is there a maximum debt-to-income ratio for FHA loans?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "FHA guidelines are generally more flexible than conventional loans, with many borrowers qualifying up to around a 43-50% debt-to-income ratio depending on credit score, reserves, and other compensating factors. Your total monthly debts, including the new mortgage payment, are weighed against your gross monthly income.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can I use an FHA loan to buy a fixer-upper?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes — the FHA 203(k) rehabilitation loan lets you finance the purchase price and the cost of eligible repairs or renovations in a single loan, based on the property's value after the work is completed, rather than requiring separate financing for the purchase and the renovation.",
-      },
+      "@type": "FAQPage",
+      "@id": "https://www.myloandesk.com/loan-programs/fha-loans/#faq",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "What credit score do I need for an FHA loan?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Borrowers with a credit score of 580 or higher typically qualify for FHA's minimum 3.5% down payment. Scores between 500 and 579 may still qualify, but usually require a larger 10% down payment. Scores below 500 generally do not qualify for FHA financing.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How much down payment do I need for an FHA loan?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "With a credit score of 580 or higher, the minimum down payment is 3.5% of the purchase price. With a credit score between 500 and 579, most lenders require at least 10% down. Down payment funds can often come from savings, an eligible gift, or a qualifying down payment assistance program.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What is FHA mortgage insurance (MIP) and how much does it cost?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "FHA loans require two forms of mortgage insurance: an upfront premium (UFMIP), typically 1.75% of the loan amount and usually financed into the loan, and an annual premium (MIP), typically around 0.55% of the loan balance per year, paid monthly. Unlike conventional PMI, FHA's annual MIP often continues for the life of the loan unless you refinance out of FHA financing.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can I get an FHA loan after a bankruptcy or foreclosure?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, in many cases. FHA guidelines generally allow borrowers to qualify roughly two years after a Chapter 7 bankruptcy discharge and around three years after a foreclosure, provided credit has been reestablished and payment history since then has been solid. Specific timelines can vary by lender and circumstance.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What property types are eligible for FHA financing?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "FHA loans can be used for single-family homes, FHA-approved condominiums, 2-4 unit properties (as long as the borrower occupies one unit), and many manufactured and modular homes that meet FHA construction standards.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What documents do I need to apply for an FHA loan?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Typical documentation includes two years of tax returns, W-2s or 1099s, your most recent pay stub, two months of bank statements, recent statements for any investment or retirement accounts, and a valid government-issued ID. Self-employed borrowers generally also provide two years of business tax returns and a year-to-date profit and loss statement.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Is there a maximum debt-to-income ratio for FHA loans?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "FHA guidelines are generally more flexible than conventional loans, with many borrowers qualifying up to around a 43-50% debt-to-income ratio depending on credit score, reserves, and other compensating factors. Your total monthly debts, including the new mortgage payment, are weighed against your gross monthly income.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can I use an FHA loan to buy a fixer-upper?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes — the FHA 203(k) rehabilitation loan lets you finance the purchase price and the cost of eligible repairs or renovations in a single loan, based on the property's value after the work is completed, rather than requiring separate financing for the purchase and the renovation.",
+          },
+        },
+      ],
     },
   ],
 };
 
 export default function FhaLoansPage() {
+  const breadcrumbItems = [
+    { name: "Home", url: "/" },
+    { name: "Loan Programs", url: "/loan-programs" },
+    { name: "FHA Loans", url: "/loan-programs/fha-loans" },
+  ];
+
   return (
     <section className="bg-[#EDEAE2] py-4 text-[#55524C] font-sans antialiased">
+      {/* Structural SEO Breadcrumbs & Schema */}
+      <BreadcrumbSchema items={breadcrumbItems} />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(fhaPageSchema) }}
       />
 
       <div className="mx-auto max-w-[900px] bg-[#FBF8F2] px-6 py-8 sm:px-14 sm:py-11 md:pb-16">

@@ -1,28 +1,144 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import DscrCalculator from "@/components/site/LoanPrograms/DSCRLoans/DSCRCalculator";
+import BreadcrumbSchema from "@/components/site/utils/BreadcrumbScripts";
 
 export const metadata: Metadata = {
   title: "DSCR Investment Property Loans | MyLoanDesk",
   description:
     "Grow your real estate portfolio without personal income verification. Qualify for DSCR investment property financing based on property rental cash flow.",
+  alternates: {
+    canonical:
+      "https://www.myloandesk.com/loan-programs/dscr-investment-property-loans/",
+  },
   openGraph: {
     title: "DSCR Investment Property Loans | MyLoanDesk",
     description:
       "Qualify for investment property financing based on property rental cash flow instead of personal income tax returns.",
     type: "website",
-    url: "/loan-programs/dscr-loans",
+    url: "https://www.myloandesk.com/loan-programs/dscr-investment-property-loans/",
+    siteName: "MyLoanDesk",
+    locale: "en_US",
+    images: [
+      {
+        url: "/og-image.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "DSCR Investment Property Loans - MyLoanDesk",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "DSCR Investment Property Loans | MyLoanDesk",
+    description:
+      "Qualify for investment property financing based on property rental cash flow without personal tax returns.",
+    images: ["/og-image.jpeg"],
   },
   robots: {
     index: true,
     follow: true,
-  },
-  alternates: {
-    canonical: "/loan-programs/dscr-loans/",
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
+const dscrPageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id":
+        "https://www.myloandesk.com/loan-programs/dscr-investment-property-loans/#webpage",
+      url: "https://www.myloandesk.com/loan-programs/dscr-investment-property-loans/",
+      name: "DSCR Investment Property Loans | MyLoanDesk",
+      description:
+        "Comprehensive guide and debt coverage ratio calculator for investor DSCR mortgage programs.",
+      isPartOf: {
+        "@type": "WebSite",
+        "@id": "https://www.myloandesk.com/#website",
+      },
+      about: {
+        "@id": "https://www.myloandesk.com/#organization",
+      },
+    },
+    {
+      "@type": "FinancialProduct",
+      "@id":
+        "https://www.myloandesk.com/loan-programs/dscr-investment-property-loans/#product",
+      name: "DSCR Investment Property Loan",
+      description:
+        "An asset-based Non-QM mortgage allowing real estate investors to qualify using property rental cash flow rather than personal income or tax transcripts.",
+      provider: {
+        "@id": "https://www.myloandesk.com/#organization",
+      },
+      category: "MortgageLoan",
+    },
+    {
+      "@type": "FAQPage",
+      "@id":
+        "https://www.myloandesk.com/loan-programs/dscr-investment-property-loans/#faq",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "What is a DSCR loan and how is it calculated?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "A Debt Service Coverage Ratio (DSCR) loan qualifies real estate investors based on the property's gross rental income divided by its total monthly housing debt (principal, interest, taxes, insurance, and HOA dues). A ratio of 1.0 means the rent exactly covers the debt obligations.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do I need personal tax returns or employment verification for a DSCR loan?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "No. DSCR financing requires no personal tax returns, W-2s, pay stubs, or traditional debt-to-income (DTI) calculations, making it ideal for self-employed and portfolio real estate investors.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can I finance an unlimited number of investment properties?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. Unlike conventional Fannie Mae/Freddie Mac loans that cap individual borrowers at 10 financed properties, DSCR loan programs generally place no limits on the total number of properties an investor can finance.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can short-term rentals (Airbnb / VRBO) qualify for DSCR loans?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. Many DSCR programs allow projected or historical short-term rental revenue verified through market data tools like AirDNA or 12-month operating statements.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can I qualify if the DSCR ratio is below 1.0?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. Some lenders offer 'no-ratio' or under-1.0 DSCR options that accommodate cash-flow deficits with slightly higher down payment or liquidity reserve requirements.",
+          },
+        },
+      ],
+    },
+  ],
+};
+
 export default function DSCRLoansPage() {
+  const breadcrumbItems = [
+    { name: "Home", url: "/" },
+    { name: "Loan Programs", url: "/loan-programs" },
+    {
+      name: "DSCR Investment Property Loans",
+      url: "/loan-programs/dscr-investment-property-loans",
+    },
+  ];
+
   return (
     <main
       className="min-h-screen font-sans"
@@ -32,6 +148,15 @@ export default function DSCRLoansPage() {
         WebkitFontSmoothing: "antialiased",
       }}
     >
+      {/* Structural SEO Breadcrumbs & Schema */}
+      <BreadcrumbSchema items={breadcrumbItems} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(dscrPageSchema),
+        }}
+      />
+
       <section className="block">
         <div className="max-w-[900px] mx-auto bg-[#FBF8F2] px-6 sm:px-14 py-11 pb-14">
           <Link
@@ -137,7 +262,7 @@ export default function DSCRLoansPage() {
             </p>
             <p className="text-[14.5px] leading-[1.7] text-[#55524C] m-0">
               Many investors use DSCR financing to close faster and with fewer
-              conditions, since there's no employment verification, no
+              conditions, since there&apos;s no employment verification, no
               debt-to-income calculation, and no tax transcript requests slowing
               down the loan.
             </p>

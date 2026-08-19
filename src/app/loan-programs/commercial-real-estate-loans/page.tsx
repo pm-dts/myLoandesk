@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import CreCalculator from "@/components/site/LoanPrograms/CommercialLoans/CreCalculator";
+import BreadcrumbSchema from "@/components/site/utils/BreadcrumbScripts";
 
 export const metadata: Metadata = {
   title: "Commercial Real Estate Loans | MyLoanDesk",
@@ -15,7 +16,24 @@ export const metadata: Metadata = {
     description:
       "Financing solutions for businesses, investors, and developers — including special-use properties many lenders won’t touch. Estimate your payment with our free calculator.",
     url: "https://www.myloandesk.com/loan-programs/commercial-real-estate-loans/",
+    siteName: "MyLoanDesk",
+    locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/og-image.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Commercial Real Estate Loans - MyLoanDesk",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Commercial Real Estate Loans | MyLoanDesk",
+    description:
+      "Commercial real estate financing from $350K to $10M+ across conventional, SBA, and special-use properties.",
+    images: ["/og-image.jpeg"],
   },
   robots: {
     index: true,
@@ -23,95 +41,143 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
 };
 
-const jsonLd = {
+const crePageSchema = {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
+  "@graph": [
     {
-      "@type": "Question",
-      name: "What's the difference between an SBA 7(a) and an SBA 504 loan for commercial real estate?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "An SBA 7(a) loan is more flexible and can combine a real estate purchase with business acquisition costs or working capital in a single loan, typically up to $5 million. An SBA 504 loan is structured specifically for long-term fixed assets like commercial real estate or equipment, often with a lower down payment and a below-market fixed rate on a portion of the loan, but less flexibility to include other business costs.",
+      "@type": "WebPage",
+      "@id":
+        "https://www.myloandesk.com/loan-programs/commercial-real-estate-loans/#webpage",
+      url: "https://www.myloandesk.com/loan-programs/commercial-real-estate-loans/",
+      name: "Commercial Real Estate Loans | MyLoanDesk",
+      description:
+        "Comprehensive guide and debt calculation tools for commercial real estate mortgages, SBA loans, and special-use properties.",
+      isPartOf: {
+        "@type": "WebSite",
+        "@id": "https://www.myloandesk.com/#website",
+      },
+      about: {
+        "@id": "https://www.myloandesk.com/#organization",
       },
     },
     {
-      "@type": "Question",
-      name: "How much down payment do I need for a commercial real estate loan?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "It depends on the program. SBA-backed commercial real estate loans can require as little as 10% down, well below the 20-30% typically required for a conventional commercial mortgage. The exact amount depends on the property type, your business financials, and the specific loan program.",
+      "@type": "FinancialProduct",
+      "@id":
+        "https://www.myloandesk.com/loan-programs/commercial-real-estate-loans/#product",
+      name: "Commercial Real Estate Loan",
+      description:
+        "Commercial property financing solutions spanning SBA 7(a), SBA 504, conventional commercial debt, and bridge financing up to $10M+.",
+      provider: {
+        "@id": "https://www.myloandesk.com/#organization",
       },
+      category: "CommercialLoan",
     },
     {
-      "@type": "Question",
-      name: "Can I get financing for a special-use property like a hotel or gas station?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, though not every lender finances special-use properties such as hotels, gas stations, car washes, assisted living facilities, restaurants, funeral homes, or golf courses. These properties are often harder to resell if a loan defaults, so it’s worth working with a lender experienced in that specific property type rather than assuming a general commercial lender will approve it.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What loan-to-value can I get on commercial real estate?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "SBA-backed commercial real estate loans can offer loan-to-value ratios up to around 90%, meaningfully higher than the 70-75% typically available through a conventional commercial mortgage.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can I combine a business acquisition with a real estate purchase in one loan?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "In many cases, yes. Certain SBA loan structures, particularly the SBA 7(a) program, allow a business acquisition, real estate purchase, and working capital needs to be financed together in a single loan rather than requiring separate financing for each piece.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Are there balloon payments on commercial real estate loans?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "It depends on the loan type. Many SBA-backed commercial real estate loans are fully amortizing with no balloon payment, while some conventional commercial mortgages carry a balloon payment after a shorter fixed-rate period. Confirming the amortization structure upfront is worth doing before committing to a program.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long does commercial real estate financing take to close?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Timelines vary by loan size, property type, and program, but working with a lender that underwrites in-house rather than routing files through multiple external approvals can meaningfully speed up the process compared to a standard bank timeline.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can commercial real estate financing include funds for working capital or renovations?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Some programs, particularly SBA 7(a) loans, allow working capital or renovation and improvement costs to be included alongside the real estate purchase, which can be useful when acquiring a property that needs work before it’s fully operational.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What credit and business history do I need to qualify?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Requirements vary by program and lender, but most commercial real estate financing looks at business cash flow and debt service coverage, the owner’s personal credit and financial strength, and time in business, among other factors. A stronger financial profile generally unlocks better rates and higher loan-to-value.",
-      },
+      "@type": "FAQPage",
+      "@id":
+        "https://www.myloandesk.com/loan-programs/commercial-real-estate-loans/#faq",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "What's the difference between an SBA 7(a) and an SBA 504 loan for commercial real estate?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "An SBA 7(a) loan is more flexible and can combine a real estate purchase with business acquisition costs or working capital in a single loan, typically up to $5 million. An SBA 504 loan is structured specifically for long-term fixed assets like commercial real estate or equipment, often with a lower down payment and a below-market fixed rate on a portion of the loan, but less flexibility to include other business costs.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How much down payment do I need for a commercial real estate loan?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "It depends on the program. SBA-backed commercial real estate loans can require as little as 10% down, well below the 20-30% typically required for a conventional commercial mortgage. The exact amount depends on the property type, your business financials, and the specific loan program.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can I get financing for a special-use property like a hotel or gas station?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, though not every lender finances special-use properties such as hotels, gas stations, car washes, assisted living facilities, restaurants, funeral homes, or golf courses. These properties are often harder to resell if a loan defaults, so it’s worth working with a lender experienced in that specific property type rather than assuming a general commercial lender will approve it.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What loan-to-value can I get on commercial real estate?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "SBA-backed commercial real estate loans can offer loan-to-value ratios up to around 90%, meaningfully higher than the 70-75% typically available through a conventional commercial mortgage.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can I combine a business acquisition with a real estate purchase in one loan?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "In many cases, yes. Certain SBA loan structures, particularly the SBA 7(a) program, allow a business acquisition, real estate purchase, and working capital needs to be financed together in a single loan rather than requiring separate financing for each piece.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Are there balloon payments on commercial real estate loans?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "It depends on the loan type. Many SBA-backed commercial real estate loans are fully amortizing with no balloon payment, while some conventional commercial mortgages carry a balloon payment after a shorter fixed-rate period. Confirming the amortization structure upfront is worth doing before committing to a program.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How long does commercial real estate financing take to close?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Timelines vary by loan size, property type, and program, but working with a lender that underwrites in-house rather than routing files through multiple external approvals can meaningfully speed up the process compared to a standard bank timeline.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can commercial real estate financing include funds for working capital or renovations?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Some programs, particularly SBA 7(a) loans, allow working capital or renovation and improvement costs to be included alongside the real estate purchase, which can be useful when acquiring a property that needs work before it’s fully operational.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What credit and business history do I need to qualify?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Requirements vary by program and lender, but most commercial real estate financing looks at business cash flow and debt service coverage, the owner’s personal credit and financial strength, and time in business, among other factors. A stronger financial profile generally unlocks better rates and higher loan-to-value.",
+          },
+        },
+      ],
     },
   ],
 };
 
 export default function CommercialRealEstateLoansPage() {
+  const breadcrumbItems = [
+    { name: "Home", url: "/" },
+    { name: "Loan Programs", url: "/loan-programs" },
+    {
+      name: "Commercial Real Estate Loans",
+      url: "/loan-programs/commercial-real-estate-loans",
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-[#EDEAE2] text-[#55524C] antialiased">
+      {/* Structural SEO Breadcrumbs & Schema */}
+      <BreadcrumbSchema items={breadcrumbItems} />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(crePageSchema) }}
       />
 
       <section className="mx-auto max-w-[900px] bg-[#FBF8F2] px-[22px] py-8 sm:px-14 sm:py-[44px] sm:pb-[60px]">
@@ -136,11 +202,11 @@ export default function CommercialRealEstateLoansPage() {
               Financing solutions for businesses, investors &amp; developers.
             </div>
             <p className="mb-6 max-w-[680px] text-[15.5px] leading-[1.7] text-[#55524C]">
-              Whether you're purchasing, refinancing, constructing, or expanding
-              commercial real estate, MyLoanDesk provides access to a broad
-              network of commercial lenders — including options for special-use
-              properties that many lenders won't finance, like hotels,
-              self-storage facilities, and gas stations.
+              Whether you&apos;re purchasing, refinancing, constructing, or
+              expanding commercial real estate, MyLoanDesk provides access to a
+              broad network of commercial lenders — including options for
+              special-use properties that many lenders won&apos;t finance, like
+              hotels, self-storage facilities, and gas stations.
             </p>
             <div className="mt-[18px] flex flex-col gap-2.5">
               <div className="flex items-center gap-2 text-[13.5px] text-[#55524C]">
@@ -217,8 +283,9 @@ export default function CommercialRealEstateLoansPage() {
           buildings, retail space, mixed-use buildings, multifamily properties,
           and specialized properties like hotels or self-storage facilities.
           Unlike a residential mortgage, commercial real estate loans are
-          typically underwritten around both the property's income potential and
-          the borrowing business's overall financial strength.
+          typically underwritten around both the property&apos;s income
+          potential and the borrowing business&apos;s overall financial
+          strength.
         </p>
         <p className="mb-3.5 max-w-[700px] text-[15px] leading-[1.75] text-[#55524C]">
           Several distinct paths exist to finance commercial real estate, each
@@ -267,8 +334,8 @@ export default function CommercialRealEstateLoansPage() {
             </h3>
             <p className="m-0 text-[13.5px] leading-[1.6] text-[#55524C]">
               Traditional commercial mortgages and bridge financing for
-              borrowers who don't need or want SBA involvement, or need to move
-              faster.
+              borrowers who don&apos;t need or want SBA involvement, or need to
+              move faster.
             </p>
           </div>
         </div>
@@ -322,10 +389,10 @@ export default function CommercialRealEstateLoansPage() {
           Special-Use Properties We Finance
         </h2>
         <p className="mb-3.5 max-w-[700px] text-[15px] leading-[1.75] text-[#55524C]">
-          Many lenders stay away from "special purpose" commercial properties
-          because they can be harder to resell if a loan ever defaults.
-          MyLoanDesk works with lenders who finance these property types as a
-          regular part of their business, not an exception:
+          Many lenders stay away from &quot;special purpose&quot; commercial
+          properties because they can be harder to resell if a loan ever
+          defaults. MyLoanDesk works with lenders who finance these property
+          types as a regular part of their business, not an exception:
         </p>
         <div className="my-3.5 mb-2 flex max-w-[700px] flex-wrap gap-2">
           {[
@@ -353,7 +420,7 @@ export default function CommercialRealEstateLoansPage() {
           Program Highlights
         </h2>
         <div className="mb-3.5 font-sans text-[13.5px] font-bold uppercase tracking-[0.03em] text-[#1C1C1C]">
-          What's included:
+          What&apos;s included:
         </div>
         <ul className="mb-3 max-w-[700px] list-none p-0">
           {[
@@ -488,7 +555,7 @@ export default function CommercialRealEstateLoansPage() {
                   Long-term ownership of real estate or major equipment
                 </td>
                 <td className="p-[11px_14px] text-[#55524C]">
-                  Borrowers who don't need or want SBA involvement
+                  Borrowers who don&apos;t need or want SBA involvement
                 </td>
               </tr>
             </tbody>

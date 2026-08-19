@@ -1,99 +1,166 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import FixFlipCalculator from "@/components/site/LoanPrograms/FixFlipLoans/FixFlipCalculator";
+import BreadcrumbSchema from "@/components/site/utils/BreadcrumbScripts";
 
 export const metadata: Metadata = {
   title: "Fix and Flip Loans for Real Estate Investors | MyLoanDesk",
   description:
     "Fix and flip loans with fast closings, rehab budget financing, and interest-only payments. Use our free deal calculator to check your numbers against the 70% rule before you apply.",
   alternates: {
-    canonical: "/loan-programs/fix-and-flip-loans/",
+    canonical: "https://www.myloandesk.com/loan-programs/fix-and-flip-loans/",
   },
   openGraph: {
     title: "Fix and Flip Loans for Real Estate Investors | MyLoanDesk",
     description:
       "Fast, flexible financing for house flippers — purchase, rehab, and resell without tying up your own cash. Run your numbers with our free fix and flip deal calculator.",
+    url: "https://www.myloandesk.com/loan-programs/fix-and-flip-loans/",
+    siteName: "MyLoanDesk",
+    locale: "en_US",
     type: "website",
-    url: "/loan-programs/fix-and-flip-loans/",
+    images: [
+      {
+        url: "/og-image.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Fix and Flip Loans - MyLoanDesk",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Fix and Flip Loans for Real Estate Investors | MyLoanDesk",
+    description:
+      "Fast, flexible financing for house flippers — purchase, rehab, and resell without tying up your own cash.",
+    images: ["/og-image.jpeg"],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
-const faqSchema = {
+const fixFlipPageSchema = {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
+  "@graph": [
     {
-      "@type": "Question",
-      name: "What credit score do I need for a fix and flip loan?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Most fix and flip lenders look for a credit score of 620 or higher, though some programs accept lower scores if the deal itself — the purchase price, rehab budget, and after-repair value — is strong. Because these loans are asset-based, your credit score typically matters less than it would for a conventional mortgage.",
+      "@type": "WebPage",
+      "@id":
+        "https://www.myloandesk.com/loan-programs/fix-and-flip-loans/#webpage",
+      url: "https://www.myloandesk.com/loan-programs/fix-and-flip-loans/",
+      name: "Fix and Flip Loans for Real Estate Investors | MyLoanDesk",
+      description:
+        "Comprehensive guide and deal evaluation calculator for short-term fix and flip real estate investor financing.",
+      isPartOf: {
+        "@type": "WebSite",
+        "@id": "https://www.myloandesk.com/#website",
+      },
+      about: {
+        "@id": "https://www.myloandesk.com/#organization",
       },
     },
     {
-      "@type": "Question",
-      name: "How much of the rehab budget can be financed?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Many fix and flip programs finance 100% of the rehab budget in addition to a portion of the purchase price, released in draws as work is completed and inspected. The exact amount depends on the deal's loan-to-cost and loan-to-ARV ratios.",
+      "@type": "FinancialProduct",
+      "@id":
+        "https://www.myloandesk.com/loan-programs/fix-and-flip-loans/#product",
+      name: "Fix and Flip Loan",
+      description:
+        "Short-term, asset-based bridge financing for real estate investors designed to cover property acquisition and up to 100% of renovation costs.",
+      provider: {
+        "@id": "https://www.myloandesk.com/#organization",
       },
+      category: "BridgeLoan",
     },
     {
-      "@type": "Question",
-      name: "What is the 70% rule in house flipping?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "The 70% rule is a rule of thumb many investors use to evaluate a flip: your purchase price plus rehab costs should generally not exceed 70% of the property's after-repair value (ARV). Deals within that range tend to leave enough margin for financing costs, holding costs, selling costs, and profit.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How fast can a fix and flip loan close?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Because fix and flip loans are underwritten primarily around the property and the deal rather than extensive personal income documentation, many close in as little as 7 to 14 days — significantly faster than a conventional 30 to 45 day mortgage timeline.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do I need real estate investing experience to qualify?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "No — many fix and flip lenders work with first-time flippers, though your experience level can affect your available leverage, rate, and terms. Investors with a track record of completed flips often qualify for higher loan-to-cost ratios.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Are fix and flip loan payments interest-only?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Most fix and flip loans are structured as interest-only for the duration of the loan term, which keeps monthly holding costs lower while you complete the renovation and prepare the property for resale.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is there a penalty for paying off a fix and flip loan early?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Most fix and flip loans carry no prepayment penalty, since the entire model is built around a short holding period — lenders expect and plan for an early payoff once the property sells.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can I use a fix and flip loan for a rental property instead?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Fix and flip loans are designed for short-term rehab-and-resell projects. If your plan is to renovate and hold the property as a rental, a DSCR loan or a fix-to-rent refinance is typically a better long-term fit once the renovation is complete.",
-      },
+      "@type": "FAQPage",
+      "@id": "https://www.myloandesk.com/loan-programs/fix-and-flip-loans/#faq",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "What credit score do I need for a fix and flip loan?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Most fix and flip lenders look for a credit score of 620 or higher, though some programs accept lower scores if the deal itself — the purchase price, rehab budget, and after-repair value — is strong. Because these loans are asset-based, your credit score typically matters less than it would for a conventional mortgage.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How much of the rehab budget can be financed?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Many fix and flip programs finance 100% of the rehab budget in addition to a portion of the purchase price, released in draws as work is completed and inspected. The exact amount depends on the deal's loan-to-cost and loan-to-ARV ratios.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What is the 70% rule in house flipping?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "The 70% rule is a rule of thumb many investors use to evaluate a flip: your purchase price plus rehab costs should generally not exceed 70% of the property's after-repair value (ARV). Deals within that range tend to leave enough margin for financing costs, holding costs, selling costs, and profit.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How fast can a fix and flip loan close?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Because fix and flip loans are underwritten primarily around the property and the deal rather than extensive personal income documentation, many close in as little as 7 to 14 days — significantly faster than a conventional 30 to 45 day mortgage timeline.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do I need real estate investing experience to qualify?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "No — many fix and flip lenders work with first-time flippers, though your experience level can affect your available leverage, rate, and terms. Investors with a track record of completed flips often qualify for higher loan-to-cost ratios.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Are fix and flip loan payments interest-only?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Most fix and flip loans are structured as interest-only for the duration of the loan term, which keeps monthly holding costs lower while you complete the renovation and prepare the property for resale.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Is there a penalty for paying off a fix and flip loan early?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Most fix and flip loans carry no prepayment penalty, since the entire model is built around a short holding period — lenders expect and plan for an early payoff once the property sells.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can I use a fix and flip loan for a rental property instead?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Fix and flip loans are designed for short-term rehab-and-resell projects. If your plan is to renovate and hold the property as a rental, a DSCR loan or a fix-to-rent refinance is typically a better long-term fit once the renovation is complete.",
+          },
+        },
+      ],
     },
   ],
 };
 
 export default function FixAndFlipLoansPage() {
+  const breadcrumbItems = [
+    { name: "Home", url: "/" },
+    { name: "Loan Programs", url: "/loan-programs" },
+    {
+      name: "Fix and Flip Loans",
+      url: "/loan-programs/fix-and-flip-loans",
+    },
+  ];
+
   return (
     <main
       className="min-h-screen font-sans"
@@ -103,10 +170,11 @@ export default function FixAndFlipLoansPage() {
         WebkitFontSmoothing: "antialiased",
       }}
     >
-      {/* JSON-LD Structured Data for FAQs */}
+      {/* Structural SEO Breadcrumbs & Schema */}
+      <BreadcrumbSchema items={breadcrumbItems} />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(fixFlipPageSchema) }}
       />
 
       <section className="block">
