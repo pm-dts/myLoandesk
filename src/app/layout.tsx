@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 import { GoogleTagManager } from "@next/third-parties/google";
 
@@ -17,15 +16,25 @@ const geistSans = Geist({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.myloandesk.com"),
-  title: "MyLoanDesk - Your Trusted Mortgage Partner",
+  title: "MyLoanDesk | Compare Wholesale Mortgage Rates & Home Loan Options",
+  // title: {
+  //   default:
+  //     "MyLoanDesk | Compare Wholesale Mortgage Rates & Home Loan Options",
+  //   // template: "%s | MyLoanDesk",
+  // },
   description:
-    "MyLoanDesk is your trusted partner for all your mortgage needs, providing expert guidance and seamless online services.",
+    "MyLoanDesk is your trusted mortgage brokerage. We compare 100+ lenders to secure competitive interest rates and custom financing solutions from application to closing.",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "MyLoanDesk - Your Trusted Mortgage Partner",
     description:
-      "MyLoanDesk is your trusted partner for all your mortgage needs, providing expert guidance and seamless online services.",
-    type: "website",
+      "Access hundreds of mortgage solutions through our nationwide lending network. Compare loan options, secure competitive interest rates, and close on time.",
     url: "/",
+    siteName: "MyLoanDesk",
+    locale: "en_US",
+    type: "website",
     images: [
       {
         url: "/og-image.jpeg",
@@ -39,11 +48,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "MyLoanDesk - Your Trusted Mortgage Partner",
     description:
-      "MyLoanDesk is your trusted partner for all your mortgage needs, providing expert guidance and seamless online services.",
+      "Access hundreds of mortgage solutions through our nationwide lending network. Compare loan options, secure competitive interest rates, and close on time.",
     images: ["/og-image.jpeg"],
-  },
-  alternates: {
-    canonical: "/",
   },
   robots: {
     index: true,
@@ -51,6 +57,9 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
 };
@@ -64,11 +73,12 @@ const organizationSchema = {
       name: "MyLoanDesk",
       legalName:
         "Secured Horizon Financial Group, Inc. / Secured Horizon Mortgage Group, Inc.",
+      alternateName: "Secured Horizon Financial Group, Inc.",
       url: "https://www.myloandesk.com",
       logo: "https://www.myloandesk.com/assets/new-logo.png",
       image: "https://www.myloandesk.com/assets/new-logo.png",
       description:
-        "Access hundreds of mortgage solutions through our nationwide lending network. Compare loan options, secure competitive interest rates, and close on time.",
+        "MyLoanDesk is a nationwide mortgage brokerage offering conventional, government, and investor loan programs, comparing 100+ lenders on behalf of each client.",
       telephone: "+1-305-891-6500",
       faxNumber: "+1-855-794-7611",
       email: "info@myloandesk.com",
@@ -80,6 +90,7 @@ const organizationSchema = {
         postalCode: "33181",
         addressCountry: "US",
       },
+      areaServed: "US",
       identifier: [
         {
           "@type": "PropertyValue",
@@ -89,7 +100,12 @@ const organizationSchema = {
         {
           "@type": "PropertyValue",
           name: "Company NMLS ID",
-          value: "314226, 1444825",
+          value: "314226",
+        },
+        {
+          "@type": "PropertyValue",
+          name: "Company NMLS ID",
+          value: "1444825",
         },
       ],
       priceRange: "$$",
@@ -129,7 +145,8 @@ export default function RootLayout({
       className={`${geistSans.className} h-full antialiased bg-cream`}
     >
       <head>
-        <Script
+        {/* Render JSON-LD via native script tag for server-rendered HTML delivery */}
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(organizationSchema),
@@ -150,21 +167,7 @@ export default function RootLayout({
         {/* LeadConnector AI Chatbot Widget */}
         <ChatbotWidget />
 
-        {/* Microsoft Clarity */}
-        {/* <Script
-          id="microsoft-clarity"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function(c,l,a,r,i,t,y){
-                  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-                  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-                  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-              })(window, document, "clarity", "script", "xxjjkwpvdd");
-            `,
-          }}
-        /> */}
-
+        {/* Google Tag Manager */}
         <GoogleTagManager
           gtmId={process.env.NEXT_PUBLIC_GTM_ID || "GTM-KQ5H354K"}
         />
