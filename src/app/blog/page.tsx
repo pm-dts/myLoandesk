@@ -1,28 +1,98 @@
 import { MoreVertical, BookOpen, ArrowRight } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";
+import BreadcrumbSchema from "@/components/site/utils/BreadcrumbScripts";
 
 export const metadata: Metadata = {
-  title: "MyLoanDesk Blog | Mortgage Insights & Market Updates",
+  title: "Mortgage Insights & Market Updates | MyLoanDesk Blog",
   description:
-    "Stay informed with MyLoanDesk's blog. Explore market updates, negotiation strategies, and mortgage insights to navigate the housing market with confidence.",
+    "Stay informed with MyLoanDesk's blog. Explore Florida housing market updates, winning multi-offer strategies, and FHA vs. conventional mortgage comparisons.",
+  alternates: {
+    canonical: "https://www.myloandesk.com/blog/",
+  },
   openGraph: {
-    title: "MyLoanDesk Blog | Mortgage Insights & Market Updates",
+    title: "Mortgage Insights & Market Updates | MyLoanDesk Blog",
     description:
       "Stay informed with MyLoanDesk's blog. Explore market updates, negotiation strategies, and mortgage insights to navigate the housing market with confidence.",
     type: "website",
-    url: "/blog",
+    url: "https://www.myloandesk.com/blog/",
+    siteName: "MyLoanDesk",
+    locale: "en_US",
+    images: [
+      {
+        url: "/og-image.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "MyLoanDesk Blog - Mortgage Insights",
+      },
+    ],
   },
-  alternates: {
-    canonical: "/blog/",
+  twitter: {
+    card: "summary_large_image",
+    title: "Mortgage Insights & Market Updates | MyLoanDesk Blog",
+    description:
+      "Stay informed with MyLoanDesk's blog. Explore market updates, negotiation strategies, and mortgage insights to navigate the housing market with confidence.",
+    images: ["/og-image.jpeg"],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
+const blogListSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://www.myloandesk.com/blog/#webpage",
+      url: "https://www.myloandesk.com/blog/",
+      name: "MyLoanDesk Blog | Mortgage Insights & Market Updates",
+      description:
+        "Market updates, negotiation strategies, and transparent mortgage breakdowns to help you navigate the housing market with confidence.",
+      isPartOf: {
+        "@type": "WebSite",
+        "@id": "https://www.myloandesk.com/#website",
+      },
+      publisher: {
+        "@id": "https://www.myloandesk.com/#organization",
+      },
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://www.myloandesk.com/blog/#itemlist",
+      name: "Latest Mortgage & Market Articles",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          url: "https://www.myloandesk.com/blog/1",
+          name: 'Winning the "Multi-Offer" War in Florida',
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          url: "https://www.myloandesk.com/blog/2",
+          name: "FHA vs. Conventional in the Florida Market",
+        },
+      ],
+    },
+  ],
+};
+
 export default function Blog() {
+  const breadcrumbItems = [
+    { name: "Home", url: "/" },
+    { name: "Blog", url: "/blog" },
+  ];
+
   // Mock data based on the provided image and mortgage theme
   const posts = [
     {
@@ -49,12 +119,21 @@ export default function Blog() {
 
   return (
     <main className="min-h-screen bg-primary-bg pt-32 pb-24">
+      {/* Structural SEO Breadcrumbs & Schema */}
+      <BreadcrumbSchema items={breadcrumbItems} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(blogListSchema),
+        }}
+      />
+
       <div className="max-w-5xl mx-auto px-6 lg:px-10">
         {/* Page Header */}
         <div className="mb-16 lg:mb-20">
           <div className="text-[10px] uppercase tracking-[0.25em] text-brand-orange font-semibold mb-5 flex items-center gap-2">
             <BookOpen size={14} strokeWidth={2.5} />
-            Resources & Insights
+            Resources &amp; Insights
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display text-ink leading-[1.05] tracking-tight mb-6">
             MyLoanDesk.com Blog
@@ -80,6 +159,7 @@ export default function Blog() {
                 <img
                   src={post.image}
                   alt={post.title}
+                  loading="lazy"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </Link>
@@ -114,7 +194,7 @@ export default function Blog() {
                   </p>
                 </Link>
 
-                {/* Subtle 'Read More' indicating link */}
+                {/* 'Read More' Link */}
                 <Link
                   href={`/blog/${post.id}`}
                   className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-moss-deep w-fit hover:text-brand-orange transition-colors focus-ring"
@@ -127,7 +207,7 @@ export default function Blog() {
           ))}
         </div>
 
-        {/* Pagination / Load More (Optional) */}
+        {/* Pagination / Load More */}
         <div className="mt-16 flex justify-center">
           <button className="px-6 py-3 border border-line rounded-full text-sm font-medium text-ink hover:border-moss-deep hover:text-moss-deep transition-colors focus-ring">
             Load more articles

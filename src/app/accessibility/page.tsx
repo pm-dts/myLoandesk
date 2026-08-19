@@ -9,6 +9,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import BreadcrumbSchema from "@/components/site/utils/BreadcrumbScripts";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -19,26 +20,115 @@ const fraunces = Fraunces({
 export const metadata: Metadata = {
   title: "Accessibility Statement | MyLoanDesk",
   description:
-    "MyLoanDesk is committed to providing a website that is accessible and usable by as many people as possible, including individuals with disabilities.",
+    "MyLoanDesk is committed to providing a website that is accessible and usable by as many people as possible, including individuals with disabilities, adhering to WCAG guidelines.",
   alternates: {
-    canonical: "/accessibility/",
+    canonical: "https://www.myloandesk.com/accessibility/",
   },
   openGraph: {
     title: "Accessibility Statement | MyLoanDesk",
     description:
-      "MyLoanDesk is committed to providing a website that is accessible and usable by as many people as possible, including individuals with disabilities.",
+      "MyLoanDesk is committed to providing a website that is accessible and usable by as many people as possible, including individuals with disabilities, adhering to WCAG guidelines.",
     type: "website",
-    url: "/accessibility",
+    url: "https://www.myloandesk.com/accessibility/",
+    siteName: "MyLoanDesk",
+    locale: "en_US",
+    images: [
+      {
+        url: "/og-image.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "MyLoanDesk - Accessibility Statement",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Accessibility Statement | MyLoanDesk",
+    description:
+      "MyLoanDesk is committed to providing a website that is accessible and usable by as many people as possible, adhering to WCAG accessibility guidelines.",
+    images: ["/og-image.jpeg"],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
+const accessibilityPageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.myloandesk.com/accessibility/#webpage",
+      url: "https://www.myloandesk.com/accessibility/",
+      name: "Accessibility Statement | MyLoanDesk",
+      description:
+        "MyLoanDesk's commitment to web accessibility and usability standards based on Web Content Accessibility Guidelines (WCAG).",
+      isPartOf: {
+        "@type": "WebSite",
+        "@id": "https://www.myloandesk.com/#website",
+      },
+      about: {
+        "@id": "https://www.myloandesk.com/#organization",
+      },
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.myloandesk.com/accessibility/#faq",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "What accessibility standards does MyLoanDesk follow?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "MyLoanDesk aims to follow generally recognized accessibility best practices, including guidance provided by the Web Content Accessibility Guidelines (WCAG).",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How can I request assistance or report an accessibility barrier?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "If you experience difficulty accessing any part of MyLoanDesk.com, you can reach our team via email at info@myloandesk.com or by phone at (305) 891-6500 to receive alternative assistance[cite: 2].",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Are third-party mortgage tools and calculators covered by this statement?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "While MyLoanDesk encourages technology partners and third-party service providers to ensure user-friendly, accessible experiences, third-party content and external integrations may operate outside our direct control.",
+          },
+        },
+      ],
+    },
+  ],
+};
+
 export default function AccessibilityPage() {
+  const breadcrumbItems = [
+    { name: "Home", url: "/" },
+    { name: "Accessibility", url: "/accessibility" },
+  ];
+
   return (
     <main className="min-h-screen bg-primary-bg py-12 sm:py-20 text-ink">
+      {/* Structural SEO Breadcrumbs & Schema */}
+      <BreadcrumbSchema items={breadcrumbItems} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(accessibilityPageSchema),
+        }}
+      />
+
       <div className="max-w-4xl mx-auto px-6 lg:px-8">
         <Link
           href="/"
@@ -204,7 +294,7 @@ export default function AccessibilityPage() {
                       href="tel:3058916500"
                       className="font-medium text-ink hover:text-brand-orange transition-colors"
                     >
-                      (305) 891-6500
+                      (305) 891-6500[cite: 2]
                     </a>
                   </div>
                 </div>
