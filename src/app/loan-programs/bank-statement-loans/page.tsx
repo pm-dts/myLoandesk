@@ -10,11 +10,11 @@ import {
   ArrowRight,
   BadgeDollarSign,
   FileCheck,
-  TrendingUp,
   ShieldCheck,
   PlayCircle,
 } from "lucide-react";
 
+import BreadcrumbSchema from "@/components/site/utils/BreadcrumbScripts";
 import BankStatementCalculator from "@/components/site/LoanPrograms/BankStatementLoans/BankStatementCalculator";
 
 const fraunces = Fraunces({
@@ -24,31 +24,154 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
-  title: "Bank Statement Loans - Qualify With Deposits | MyLoanDesk",
+  title: "Bank Statement Mortgages for Self-Employed Borrowers | MyLoanDesk",
   description:
-    "Self-employed or business owner? Qualify for a mortgage using 12 or 24 months of bank deposits instead of tax returns or W-2s.",
+    "Self-employed or business owner? Qualify for a residential or investment property mortgage using 12 or 24 months of personal or business bank deposits instead of tax returns.",
+  alternates: {
+    canonical: "https://www.myloandesk.com/loan-programs/bank-statement-loans/",
+  },
   openGraph: {
-    title: "Bank Statement Loans for Self-Employed Borrowers | MyLoanDesk",
+    title: "Bank Statement Mortgages for Self-Employed Borrowers | MyLoanDesk",
     description:
       "Qualify with your bank deposits, not your tax returns. Designed for business owners, 1099 earners, and freelancers.",
     type: "website",
-    url: "/loan-programs/bank-statement-loans",
+    url: "https://www.myloandesk.com/loan-programs/bank-statement-loans/",
+    siteName: "MyLoanDesk",
+    locale: "en_US",
+    images: [
+      {
+        url: "/og-image.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Bank Statement Loans for Self-Employed - MyLoanDesk",
+      },
+    ],
   },
-  alternates: {
-    canonical: "/loan-programs/bank-statement-loans/",
+  twitter: {
+    card: "summary_large_image",
+    title: "Bank Statement Mortgages for Self-Employed Borrowers | MyLoanDesk",
+    description:
+      "Qualify with your bank deposits, not your tax returns. Designed for business owners, 1099 earners, and freelancers.",
+    images: ["/og-image.jpeg"],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
+};
+
+const bankStatementSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id":
+        "https://www.myloandesk.com/loan-programs/bank-statement-loans/#webpage",
+      url: "https://www.myloandesk.com/loan-programs/bank-statement-loans/",
+      name: "Bank Statement Loans | MyLoanDesk",
+      description:
+        "Comprehensive guide and deposit calculation tools for self-employed bank statement mortgage programs.",
+      isPartOf: {
+        "@type": "WebSite",
+        "@id": "https://www.myloandesk.com/#website",
+      },
+      about: {
+        "@id": "https://www.myloandesk.com/#organization",
+      },
+    },
+    {
+      "@type": "FinancialProduct",
+      "@id":
+        "https://www.myloandesk.com/loan-programs/bank-statement-loans/#product",
+      name: "Bank Statement Mortgage Loan",
+      description:
+        "A Non-QM mortgage program that qualifies self-employed borrowers using 12 to 24 months of business or personal bank deposits without tax returns.",
+      provider: {
+        "@id": "https://www.myloandesk.com/#organization",
+      },
+      category: "MortgageLoan",
+    },
+    {
+      "@type": "FAQPage",
+      "@id":
+        "https://www.myloandesk.com/loan-programs/bank-statement-loans/#faq",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Do I need to be self-employed to qualify for a bank statement loan?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Generally yes. Bank statement mortgage programs are specifically structured for self-employed individuals, 1099 contractors, freelancers, and business owners who write off expenses on their tax returns.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can I use both personal and business bank statements?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. Lenders accept either 12 to 24 months of personal statements (typically calculated at 100% of eligible deposits) or business statements (where an expense factor, typically around 50%, is applied).",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How are monthly fluctuations in income handled?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Lenders average all qualifying deposits over the 12 or 24-month timeframe to determine a stable monthly qualifying income, meaning occasional seasonal dips won't automatically disqualify you.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do large one-time deposits count as qualifying income?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Large one-time deposits may be counted depending on the loan program and clear documentation showing the funds originated from regular business revenue.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What is the minimum credit score required for bank statement loans?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Most bank statement programs accept credit scores starting at 620, with optimal terms and higher LTV ratios available for scores above 700.",
+          },
+        },
+      ],
+    },
+  ],
 };
 
 const VIDEO_URL =
   "https://myloandesk-assets.s3.eu-north-1.amazonaws.com/Bank+Statment_1080p_caption.mp4";
 
 export default function BankStatementLoansPage() {
+  const breadcrumbItems = [
+    { name: "Home", url: "/" },
+    { name: "Loan Programs", url: "/loan-programs" },
+    {
+      name: "Bank Statement Loans",
+      url: "/loan-programs/bank-statement-loans",
+    },
+  ];
+
   return (
     <main className="min-h-screen bg-primary-bg pt-6 pb-12 sm:pt-8 sm:pb-16 lg:pt-10 lg:pb-24 text-ink">
+      {/* Structural SEO Breadcrumbs & Schema */}
+      <BreadcrumbSchema items={breadcrumbItems} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(bankStatementSchema),
+        }}
+      />
+
       {/* --- HERO SECTION --- */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 mb-16 sm:mb-24">
         <div className="relative bg-moss-deep text-cream rounded-[32px] overflow-hidden p-8 sm:p-12 lg:p-16">

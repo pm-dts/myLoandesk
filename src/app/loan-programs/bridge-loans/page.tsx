@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import BridgeCalculator from "@/components/site/LoanPrograms/BridgeLoans/BridgeCalculator";
+import BreadcrumbSchema from "@/components/site/utils/BreadcrumbScripts";
 
 export const metadata: Metadata = {
   title:
@@ -8,15 +9,33 @@ export const metadata: Metadata = {
   description:
     "Bridge loans for residential buy-before-you-sell transitions and commercial property acquisitions or repositioning. Close in days with interest-only options and flexible terms.",
   alternates: {
-    canonical: "/loan-programs/bridge-loans/",
+    canonical: "https://www.myloandesk.com/loan-programs/bridge-loans/",
   },
   openGraph: {
     title:
       "Bridge Loans: Fast, Flexible Residential & Commercial Financing | MyLoanDesk",
     description:
       "Short-term bridge financing for residential and commercial real estate. Move fast, bypass contingencies, and secure property before permanent financing is in place.",
-    url: "/loan-programs/bridge-loans/",
+    url: "https://www.myloandesk.com/loan-programs/bridge-loans/",
+    siteName: "MyLoanDesk",
+    locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/og-image.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Bridge Loans - MyLoanDesk",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "Bridge Loans: Fast, Flexible Residential & Commercial Financing | MyLoanDesk",
+    description:
+      "Short-term bridge financing for residential and commercial real estate. Close quickly with flexible terms.",
+    images: ["/og-image.jpeg"],
   },
   robots: {
     index: true,
@@ -24,63 +43,105 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
 };
 
-const jsonLd = {
+const bridgePageSchema = {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
+  "@graph": [
     {
-      "@type": "Question",
-      name: "Do I need to sell my current home before getting a residential bridge loan?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "No — that is the primary purpose of a bridge loan. It allows you to access equity in your current home to fund your next purchase before the sale closes.",
+      "@type": "WebPage",
+      "@id": "https://www.myloandesk.com/loan-programs/bridge-loans/#webpage",
+      url: "https://www.myloandesk.com/loan-programs/bridge-loans/",
+      name: "Bridge Loans | MyLoanDesk",
+      description:
+        "Fast and flexible short-term bridge financing for residential and commercial real estate transactions.",
+      isPartOf: {
+        "@type": "WebSite",
+        "@id": "https://www.myloandesk.com/#website",
+      },
+      about: {
+        "@id": "https://www.myloandesk.com/#organization",
       },
     },
     {
-      "@type": "Question",
-      name: "Can a bridge loan be used for a property that needs renovation?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, particularly on the commercial side. Bridge loans are commonly used to fund the acquisition and renovation of value-add properties before refinancing into permanent debt once stabilized.",
+      "@type": "FinancialProduct",
+      "@id": "https://www.myloandesk.com/loan-programs/bridge-loans/#product",
+      name: "Residential & Commercial Bridge Loans",
+      description:
+        "Short-term gap financing enabling homeowners and commercial real estate investors to close quickly before securing permanent financing or selling an existing property.",
+      provider: {
+        "@id": "https://www.myloandesk.com/#organization",
       },
+      category: "BridgeLoan",
     },
     {
-      "@type": "Question",
-      name: "What's the difference between a bridge loan and a hard money loan?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "While both are short-term and asset-focused, bridge loans are typically structured for a clear transition (sale, refinance, or stabilization) with a defined exit strategy, whereas hard money loans are used broadly across short-turn financing including fix-and-flips.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How do I pay off a bridge loan?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Most bridge loans are paid off through one of three exit strategies: sale of the acquired property, refinance into permanent long-term financing, or (for residential) the sale of your previous home.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is a bridge loan more expensive than a conventional loan?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Generally, yes. Rates and fees are higher than conventional financing because of the short duration, speed of execution, and underwriting flexibility. The trade-off allows buyers and investors to execute time-sensitive opportunities without contingencies.",
-      },
+      "@type": "FAQPage",
+      "@id": "https://www.myloandesk.com/loan-programs/bridge-loans/#faq",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Do I need to sell my current home before getting a residential bridge loan?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "No — that is the primary purpose of a bridge loan. It allows you to access equity in your current home to fund your next purchase before the sale closes.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can a bridge loan be used for a property that needs renovation?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, particularly on the commercial side. Bridge loans are commonly used to fund the acquisition and renovation of value-add properties before refinancing into permanent debt once stabilized.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What's the difference between a bridge loan and a hard money loan?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "While both are short-term and asset-focused, bridge loans are typically structured for a clear transition (sale, refinance, or stabilization) with a defined exit strategy, whereas hard money loans are used broadly across short-turn financing including fix-and-flips.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How do I pay off a bridge loan?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Most bridge loans are paid off through one of three exit strategies: sale of the acquired property, refinance into permanent long-term financing, or (for residential) the sale of your previous home.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Is a bridge loan more expensive than a conventional loan?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Generally, yes. Rates and fees are higher than conventional financing because of the short duration, speed of execution, and underwriting flexibility. The trade-off allows buyers and investors to execute time-sensitive opportunities without contingencies.",
+          },
+        },
+      ],
     },
   ],
 };
 
 export default function BridgeLoansPage() {
+  const breadcrumbItems = [
+    { name: "Home", url: "/" },
+    { name: "Loan Programs", url: "/loan-programs" },
+    { name: "Bridge Loans", url: "/loan-programs/bridge-loans" },
+  ];
+
   return (
     <div className="min-h-screen bg-[#EDEAE2] text-[#55524C] antialiased">
+      {/* Structural SEO Breadcrumbs & Schema */}
+      <BreadcrumbSchema items={breadcrumbItems} />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(bridgePageSchema) }}
       />
 
       <section className="mx-auto max-w-[900px] bg-[#FBF8F2] px-[22px] py-8 sm:px-14 sm:py-[44px] sm:pb-[60px]">

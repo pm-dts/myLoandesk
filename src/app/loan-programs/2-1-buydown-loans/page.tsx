@@ -15,6 +15,7 @@ import {
   PlayCircle,
 } from "lucide-react";
 
+import BreadcrumbSchema from "@/components/site/utils/BreadcrumbScripts";
 import BuydownCalculator from "@/components/site/LoanPrograms/2-1-BuydownLoans/2-1-BuydownCalculator";
 
 const fraunces = Fraunces({
@@ -24,31 +25,151 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
-  title: "2/1 Buydown - Lower Your Rate for the First Two Years | MyLoanDesk",
+  title:
+    "2/1 Buydown Mortgage Loans - Lower Your Rate for 2 Years | MyLoanDesk",
   description:
-    "Ease into your mortgage payment. Start at a reduced interest rate for years 1 and 2 before stepping up to the permanent note rate.",
+    "Ease into your mortgage payments with a 2/1 temporary buydown. Enjoy interest rates 2% lower in year 1 and 1% lower in year 2, funded via seller or builder credits.",
+  alternates: {
+    canonical: "https://www.myloandesk.com/loan-programs/2-1-buydown-loans/",
+  },
   openGraph: {
     title: "2/1 Buydown Mortgage Program | MyLoanDesk",
     description:
       "Lower your mortgage payment for the first two years. Funded by sellers, builders, or lenders as a payment subsidy.",
     type: "website",
-    url: "/loan-programs/2-1-buydown-loans",
+    url: "https://www.myloandesk.com/loan-programs/2-1-buydown-loans/",
+    siteName: "MyLoanDesk",
+    locale: "en_US",
+    images: [
+      {
+        url: "/og-image.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "2/1 Buydown Mortgage Program - MyLoanDesk",
+      },
+    ],
   },
-  alternates: {
-    canonical: "/loan-programs/2-1-buydown-loans/",
+  twitter: {
+    card: "summary_large_image",
+    title: "2/1 Buydown Mortgage Program | MyLoanDesk",
+    description:
+      "Lower your mortgage payment for the first two years. Funded by sellers, builders, or lenders as a payment subsidy.",
+    images: ["/og-image.jpeg"],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
+};
+
+const buydownPageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id":
+        "https://www.myloandesk.com/loan-programs/2-1-buydown-loans/#webpage",
+      url: "https://www.myloandesk.com/loan-programs/2-1-buydown-loans/",
+      name: "2/1 Buydown Mortgage Loans | MyLoanDesk",
+      description:
+        "Comprehensive guide and payment savings calculator for 2/1 temporary rate buydown mortgage programs.",
+      isPartOf: {
+        "@type": "WebSite",
+        "@id": "https://www.myloandesk.com/#website",
+      },
+      about: {
+        "@id": "https://www.myloandesk.com/#organization",
+      },
+    },
+    {
+      "@type": "FinancialProduct",
+      "@id":
+        "https://www.myloandesk.com/loan-programs/2-1-buydown-loans/#product",
+      name: "2/1 Buydown Mortgage Loan",
+      description:
+        "A fixed-rate mortgage with temporary rate subsidies lowering effective interest rates by 2% in year one and 1% in year two.",
+      provider: {
+        "@id": "https://www.myloandesk.com/#organization",
+      },
+      category: "MortgageLoan",
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.myloandesk.com/loan-programs/2-1-buydown-loans/#faq",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Do I need to qualify at the reduced rate or the full note rate?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Most programs require you to qualify at the full note rate, since that's the rate you'll eventually pay. This ensures the payment is sustainable once the buydown period ends.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What happens if I refinance or sell before the two years are up?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Any unused buydown funds held in escrow are typically applied to reduce your remaining loan principal balance upon payoff or refinance.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Is a 2/1 buydown the same as an adjustable-rate mortgage (ARM)?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "No. Your underlying mortgage is a standard fixed-rate loan. Only the effective payment in years 1 and 2 is subsidized via escrow funds; the interest rate does not fluctuate with financial markets.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Who typically pays for the 2/1 buydown?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "A 2/1 buydown is most commonly funded as an upfront seller or home builder credit concession, though lenders and buyers can also provide the subsidy.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can I combine a 2/1 buydown with Conventional, FHA, and VA loans?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. 2/1 temporary buydowns can be structured across Conventional, FHA, and VA home loan programs subject to specific lender and agency concession limits.",
+          },
+        },
+      ],
+    },
+  ],
 };
 
 const VIDEO_URL =
   "https://myloandesk-assets.s3.eu-north-1.amazonaws.com/Lower+Your+Mortgage+Payment+During+Your+First+Two+Years+of+Homeownership_1080p_caption.mp4";
 
 export default function TwoOneBuydownPage() {
+  const breadcrumbItems = [
+    { name: "Home", url: "/" },
+    { name: "Loan Programs", url: "/loan-programs" },
+    { name: "2/1 Buydown Loans", url: "/loan-programs/2-1-buydown-loans" },
+  ];
+
   return (
     <main className="min-h-screen bg-primary-bg pt-6 pb-12 sm:pt-8 sm:pb-16 lg:pt-10 lg:pb-24 text-ink">
+      {/* Structural SEO Breadcrumbs & Schema */}
+      <BreadcrumbSchema items={breadcrumbItems} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buydownPageSchema),
+        }}
+      />
+
       {/* --- HERO SECTION --- */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 mb-16 sm:mb-24">
         <div className="relative bg-moss-deep text-cream rounded-[32px] overflow-hidden p-8 sm:p-12 lg:p-16">
