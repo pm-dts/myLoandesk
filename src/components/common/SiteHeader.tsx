@@ -349,14 +349,14 @@ export const Header: React.FC = () => {
               Call or Text <Phone size={14} />
             </a>
 
-            <Link
+            {/* <Link
               href="https://chatgpt.com/g/g-6989ac7406b08191ba66dc0aa143e1d6-ask-a-mortgage-broker-myloandesk"
               target="_blank"
               onClick={trackAskAIBroker}
               className="border border-brand-orange bg-brand-orange text-white px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-wider flex items-center justify-between hover:bg-orange-600 transition-colors shadow-sm"
             >
               Ask AI Broker <HelpCircle size={14} />
-            </Link>
+            </Link> */}
           </div>
         </div>
       </nav>
