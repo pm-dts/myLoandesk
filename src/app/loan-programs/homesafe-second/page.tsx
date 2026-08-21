@@ -381,13 +381,7 @@ export default function HomeSafeSecondPage() {
                 Depending on program requirements and your individual
                 circumstances, qualified homeowners may be able to access
                 $50,000 to $1 million of their available{" "}
-                <Link
-                  href="/loan-programs/heloc-loans"
-                  className="text-brand-orange underline hover:no-underline"
-                >
-                  home equity options
-                </Link>
-                .
+                <span className="text-brand-orange">home equity options</span>.
               </p>
               <p className="text-xs text-ink-2 font-medium mb-2">
                 The amount available depends on factors such as:
@@ -539,14 +533,14 @@ export default function HomeSafeSecondPage() {
                     Age 55+
                   </span>
                 </div>
-                <div className="p-3.5 bg-cream/40 rounded-xl border border-line/60 flex items-center justify-between">
+                {/* <div className="p-3.5 bg-cream/40 rounded-xl border border-line/60 flex items-center justify-between">
                   <span className="text-xs sm:text-sm font-semibold text-ink">
                     Washington
                   </span>
                   <span className="text-xs sm:text-sm font-bold text-moss-deep">
                     Age 60+
                   </span>
-                </div>
+                </div> */}
                 <div className="p-3.5 bg-cream/40 rounded-xl border border-line/60 flex items-center justify-between">
                   <span className="text-xs sm:text-sm font-semibold text-ink">
                     Texas
@@ -707,13 +701,7 @@ export default function HomeSafeSecondPage() {
           </h2>
           <div className="space-y-4 text-sm sm:text-base text-ink-2 leading-relaxed max-w-4xl">
             <p>
-              A{" "}
-              <Link
-                href="/loan-programs/fha-streamline-refinance"
-                className="text-brand-orange underline hover:no-underline"
-              >
-                cash-out refinance
-              </Link>{" "}
+              A <span className="text-brand-orange">cash-out refinance</span>{" "}
               replaces your existing first mortgage with an entirely new
               mortgage.
             </p>
