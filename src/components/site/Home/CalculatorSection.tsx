@@ -48,7 +48,10 @@ const CustomSlider = ({
   onChange: (val: number) => void;
   valueDisplay: string;
 }) => {
-  const percentage = ((value - min) / (max - min)) * 100;
+  const range = max - min;
+  const rawPercentage = range === 0 ? 0 : ((value - min) / range) * 100;
+  const percentage = Math.max(0, Math.min(100, rawPercentage));
+
   return (
     <div className="mb-6">
       <div className="flex justify-between items-center mb-2">
@@ -585,7 +588,12 @@ const HelocCalculator = () => {
         min={100000}
         max={2000000}
         step={5000}
-        onChange={setHomeValue}
+        onChange={(v) => {
+          setHomeValue(v);
+          if (mortgageBalance > v) {
+            setMortgageBalance(v);
+          }
+        }}
         valueDisplay={formatCurrency(homeValue)}
       />
       <CustomSlider
@@ -630,11 +638,13 @@ const CalculatorModal = ({
   title,
   isOpen,
   onClose,
+  onReset,
   children,
 }: {
   title: string;
   isOpen: boolean;
   onClose: () => void;
+  onReset: () => void;
   children: React.ReactNode;
 }) => {
   if (!isOpen) return null;
@@ -663,21 +673,34 @@ const CalculatorModal = ({
         className="w-full max-w-lg bg-white rounded-2xl shadow-2xl overflow-hidden animate-in zoom-in-95 duration-200 max-h-[95vh] flex flex-col"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex items-center justify-between px-8 py-6 border-b border-gray-100 shrink-0">
-          <h2 className={`text-3xl text-gray-900 ${fraunces.className}`}>
+        <div className="flex items-center justify-between px-6 sm:px-8 py-6 border-b border-gray-100 shrink-0">
+          <h2
+            className={`text-2xl sm:text-3xl text-gray-900 ${fraunces.className} pr-2`}
+          >
             {title}
           </h2>
-          <button
-            onClick={onClose}
-            className="p-1 text-gray-400 hover:text-gray-700 transition-colors"
-          >
-            <X size={24} />
-          </button>
+          <div className="flex items-center gap-2 sm:gap-4 shrink-0">
+            <button
+              onClick={onReset}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-semibold text-gray-500 hover:text-[#FF6B00] hover:bg-[#FFF4ED] transition-colors"
+              title="Reset Calculator"
+            >
+              <RefreshCw size={16} />
+              <span className="hidden sm:inline">Reset</span>
+            </button>
+            <button
+              onClick={onClose}
+              className="p-1.5 text-gray-400 hover:text-gray-700 bg-gray-50 hover:bg-gray-200 rounded-full transition-colors"
+              title="Close"
+            >
+              <X size={20} />
+            </button>
+          </div>
         </div>
 
-        <div className="px-8 py-6 overflow-y-auto">{children}</div>
+        <div className="px-6 sm:px-8 py-6 overflow-y-auto">{children}</div>
 
-        <div className="px-8 py-6 border-t border-gray-100 text-center bg-gray-50 shrink-0">
+        <div className="px-6 sm:px-8 py-6 border-t border-gray-100 text-center bg-gray-50 shrink-0">
           <p className="text-gray-500 text-sm mb-4">
             Want to lock in this scenario?
           </p>
@@ -697,6 +720,7 @@ const CalculatorModal = ({
 
 export default function CalculatorsHub() {
   const [activeCalc, setActiveCalc] = useState<string | null>(null);
+  const [resetKey, setResetKey] = useState<number>(0);
   const pathname = usePathname();
 
   const calculators = [
@@ -754,6 +778,16 @@ export default function CalculatorsHub() {
     });
 
     setActiveCalc(calc.id);
+    setResetKey(0); // Ensure key resets on open
+  };
+
+  const handleClose = () => {
+    setActiveCalc(null);
+    setResetKey(0);
+  };
+
+  const handleReset = () => {
+    setResetKey((prev) => prev + 1); // Triggers unmount and remount of component via key
   };
 
   const currentCalc = calculators.find((c) => c.id === activeCalc);
@@ -781,8 +815,9 @@ export default function CalculatorsHub() {
           {calculators.map((calc) => (
             <button
               key={calc.id}
+              id={`calculator-${calc.id}`}
               onClick={() => handleOpenCalculator(calc)}
-              className="flex items-center justify-between bg-white p-6 md:p-8 rounded-[24px] shadow-sm hover:shadow-md hover:scale-[1.01] transition-all duration-200 group text-left border border-white hover:border-gray-100"
+              className="flex items-center justify-between bg-white p-6 md:p-8 rounded-[24px] shadow-sm hover:shadow-md hover:scale-[1.01] transition-all duration-200 group text-left border border-white hover:border-gray-100 scroll-mt-60"
             >
               <div className="flex items-center gap-5">
                 <div className="w-14 h-14 rounded-full bg-[#FFF4ED] flex items-center justify-center text-[#FF6B00] shrink-0 group-hover:scale-110 transition-transform">
@@ -808,9 +843,10 @@ export default function CalculatorsHub() {
       <CalculatorModal
         title={currentCalc?.title || ""}
         isOpen={!!activeCalc}
-        onClose={() => setActiveCalc(null)}
+        onClose={handleClose}
+        onReset={handleReset}
       >
-        {currentCalc?.component}
+        <div key={resetKey}>{currentCalc?.component}</div>
       </CalculatorModal>
     </section>
   );
