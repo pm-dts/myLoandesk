@@ -128,13 +128,13 @@ export default function ReverseMortgageSection() {
             >
               Read More <ArrowRight size={14} />
             </button>
-            <Link
+            {/* <Link
               href="/reverse-mortgage"
               className="flex-1 py-3 bg-primary-bg hover:bg-cream border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
             >
               Program Page{" "}
               <ExternalLink size={14} className="text-brand-orange" />
-            </Link>
+            </Link> */}
           </div>
 
           <LoanDetailModal
@@ -306,13 +306,13 @@ export default function ReverseMortgageSection() {
             >
               Read More <ArrowRight size={14} />
             </button>
-            <Link
+            {/* <Link
               href="/reverse-mortgage"
               className="flex-1 py-3 bg-primary-bg hover:bg-cream border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
             >
               Program Page{" "}
               <ExternalLink size={14} className="text-brand-orange" />
-            </Link>
+            </Link> */}
           </div>
 
           <LoanDetailModal
@@ -441,13 +441,13 @@ export default function ReverseMortgageSection() {
             >
               Read More <ArrowRight size={14} />
             </button>
-            <Link
+            {/* <Link
               href="/reverse-mortgage"
               className="flex-1 py-3 bg-primary-bg hover:bg-cream border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
             >
               Program Page{" "}
               <ExternalLink size={14} className="text-brand-orange" />
-            </Link>
+            </Link> */}
           </div>
 
           <LoanDetailModal
@@ -564,13 +564,13 @@ export default function ReverseMortgageSection() {
             >
               Read More <ArrowRight size={14} />
             </button>
-            <Link
+            {/* <Link
               href="/reverse-mortgage"
               className="flex-1 py-3 bg-primary-bg hover:bg-cream border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
             >
               Program Page{" "}
               <ExternalLink size={14} className="text-brand-orange" />
-            </Link>
+            </Link> */}
           </div>
 
           <LoanDetailModal
