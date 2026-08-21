@@ -16,6 +16,7 @@ import {
 
 import BreadcrumbSchema from "@/components/site/utils/BreadcrumbScripts";
 import HelocCalculator from "@/components/site/LoanPrograms/HelocLoans/HelocCalculator";
+import OpenChatReusableBtn from "@/components/site/LoanPrograms/ReverseMortgage/OpenChatReusableBtn";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -223,19 +224,16 @@ export default function HomeEquityHelocPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
+              <OpenChatReusableBtn
+                loanProgram="Home Equity Loans & HELOCs"
+                text="Explore My Home Equity Options"
+              />
               <Link
-                href="/get-quote"
-                className="btn-shine bg-brand-orange text-primary-bg px-8 py-4 rounded-full font-semibold text-sm sm:text-base hover:bg-orange-600 transition-colors shadow-sm flex items-center justify-center gap-2 text-center"
-              >
-                Explore My Home Equity Options
-                <ArrowRight size={18} />
-              </Link>
-              <a
-                href="#calculator"
+                href="/#calculator-heloc"
                 className="bg-cream/10 border border-cream/20 text-primary-bg px-8 py-4 rounded-full font-semibold text-sm sm:text-base hover:bg-cream/20 transition-colors flex items-center justify-center gap-2 text-center"
               >
                 Calculate Available Equity
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -421,13 +419,11 @@ export default function HomeEquityHelocPage() {
                 </ul>
               </div>
 
-              <Link
-                href="/get-quote"
-                className="btn-shine bg-brand-orange text-primary-bg py-3 px-6 rounded-full font-semibold text-xs sm:text-sm text-center flex items-center justify-center gap-2"
-              >
-                Explore Home Equity Loan Options
-                <ArrowRight size={16} />
-              </Link>
+              <OpenChatReusableBtn
+                className="py-2.5"
+                loanProgram="Home Equity Loans & HELOCs"
+                text=" Explore Home Equity Loan Options"
+              />
             </div>
           </div>
         </div>
@@ -747,13 +743,10 @@ export default function HomeEquityHelocPage() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="/get-quote"
-              className="btn-shine bg-brand-orange text-primary-bg px-8 py-4 rounded-full font-semibold text-sm sm:text-base hover:bg-orange-600 transition-colors shadow-sm flex items-center justify-center gap-2 w-full sm:w-auto"
-            >
-              Get My Home Equity Options
-              <ArrowRight size={18} />
-            </Link>
+            <OpenChatReusableBtn
+              loanProgram="Home Equity Loans & HELOCs"
+              text="Get My Home Equity Options"
+            />
           </div>
         </div>
       </section>
