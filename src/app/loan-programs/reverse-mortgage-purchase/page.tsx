@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import BreadcrumbSchema from "@/components/site/utils/BreadcrumbScripts";
 import OpenChatReusableBtn from "@/components/site/LoanPrograms/ReverseMortgage/OpenChatReusableBtn";
+import PurchaseEstimateLeadForm from "@/components/site/LoanPrograms/ReverseMortgage/PurchaseEstimateLeadForm";
 
 export const metadata: Metadata = {
   title: "Reverse Mortgage for Purchase | Buy Your Next Home",
@@ -509,29 +510,8 @@ export default function ReverseMortgagePurchasePage() {
       {/* --- EXAMPLE & COMPARISONS --- */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 mb-16 sm:mb-24">
         {/* Example Box */}
-        <div className="bg-cream/40 border border-line p-8 rounded-3xl mb-12 max-w-4xl mx-auto text-center">
-          <h3 className="text-lg font-bold text-ink mb-4">Example</h3>
-          <p className="text-sm sm:text-base text-ink-2 leading-relaxed mb-4">
-            Suppose you&apos;re considering purchasing a $600,000 home.
-          </p>
-          <p className="text-sm sm:text-base text-ink-2 leading-relaxed mb-6">
-            Instead of paying the entire $600,000 in cash, you may be able to
-            contribute a portion of the purchase price and finance the remaining
-            eligible amount with a reverse mortgage.
-          </p>
-          <p className="text-sm font-semibold text-moss-deep mb-6">
-            Your actual required investment must be calculated specifically for
-            you.
-          </p>
-          {/* Primary CTA 2 */}
-          <Link
-            href="/get-quote"
-            className="btn-shine bg-brand-orange text-primary-bg px-8 py-4 rounded-full font-semibold text-sm sm:text-base hover:bg-orange-600 transition-colors shadow-sm inline-flex items-center justify-center gap-2"
-          >
-            Calculate My Estimated Purchase Options
-            <Calculator size={18} />
-          </Link>
-        </div>
+
+        <PurchaseEstimateLeadForm />
 
         <div className="grid lg:grid-cols-2 gap-10">
           {/* Comparison 1: All Cash */}
