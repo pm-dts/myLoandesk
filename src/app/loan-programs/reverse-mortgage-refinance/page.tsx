@@ -12,6 +12,7 @@ import {
   Percent,
 } from "lucide-react";
 import BreadcrumbSchema from "@/components/site/utils/BreadcrumbScripts";
+import OpenChatReusableBtn from "@/components/site/LoanPrograms/ReverseMortgage/OpenChatReusableBtn";
 
 export const metadata: Metadata = {
   title: "Reverse Mortgage Refinance | Access Your Home Equity",
@@ -260,13 +261,10 @@ export default function ReverseMortgageRefinancePage() {
 
             {/* Primary CTA 1 */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/get-quote"
-                className="btn-shine bg-brand-orange text-primary-bg px-8 py-4 rounded-full font-semibold text-sm sm:text-base hover:bg-orange-600 transition-colors shadow-sm flex items-center justify-center gap-2 text-center"
-              >
-                See If I Qualify
-                <ArrowRight size={18} />
-              </Link>
+              <OpenChatReusableBtn
+                loanProgram="Reverse Mortgage Refinance"
+                text="See If I Qualify"
+              />
               <Link
                 href="/calendar"
                 className="bg-cream/10 border border-cream/20 text-primary-bg px-8 py-4 rounded-full font-semibold text-sm sm:text-base hover:bg-cream/20 transition-colors flex items-center justify-center gap-2 text-center"
@@ -660,13 +658,10 @@ export default function ReverseMortgageRefinancePage() {
 
         {/* Primary CTA 2 */}
         <div className="flex flex-col sm:flex-row gap-4">
-          <Link
-            href="/get-quote"
-            className="btn-shine bg-brand-orange text-primary-bg px-8 py-4 rounded-full font-semibold text-sm sm:text-base hover:bg-orange-600 transition-colors shadow-sm flex items-center justify-center gap-2 text-center"
-          >
-            See If I Qualify
-            <ArrowRight size={18} />
-          </Link>
+          <OpenChatReusableBtn
+            loanProgram="Reverse Mortgage Refinance"
+            text="See If I Qualify"
+          />
           <Link
             href="/calendar"
             className="bg-primary-bg border border-line text-ink px-8 py-4 rounded-full font-semibold text-sm sm:text-base hover:bg-cream/50 transition-colors flex items-center justify-center gap-2 text-center"
@@ -1082,13 +1077,10 @@ export default function ReverseMortgageRefinancePage() {
 
             {/* Primary CTA 3 */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4">
-              <Link
-                href="/get-quote"
-                className="btn-shine bg-brand-orange text-primary-bg px-8 py-4 rounded-full font-semibold text-sm sm:text-base hover:bg-orange-600 transition-colors shadow-sm flex items-center justify-center gap-2 w-full sm:w-auto"
-              >
-                See If I Qualify
-                <ArrowRight size={18} />
-              </Link>
+              <OpenChatReusableBtn
+                loanProgram="Reverse Mortgage Refinance"
+                text="See If I Qualify"
+              />
               <Link
                 href="/calendar"
                 className="bg-transparent border border-primary-bg text-primary-bg px-8 py-4 rounded-full font-semibold text-sm sm:text-base hover:bg-white/10 transition-colors flex items-center justify-center gap-2 w-full sm:w-auto"

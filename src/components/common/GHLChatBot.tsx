@@ -4,9 +4,52 @@ import { useEffect } from "react";
 import Script from "next/script";
 import { sendGTMEvent } from "@next/third-parties/google";
 
+declare global {
+  interface Window {
+    leadConnector?: {
+      chatWidget?: {
+        openWidget: () => void;
+        closeWidget: () => void;
+        isActive: () => boolean;
+      };
+    };
+  }
+}
+
+// ---------------------------------------------------------
+// EXPORTABLE UTILITY FUNCTION
+// Call this from anywhere in your app to open the chat
+// ---------------------------------------------------------
+export const openChatbotWidget = () => {
+  if (typeof window === "undefined") return;
+
+  // If the widget is already loaded, open it immediately
+  if (window.leadConnector?.chatWidget?.openWidget) {
+    window.leadConnector.chatWidget.openWidget();
+    return;
+  }
+
+  // Fallback: If clicked while the script is still downloading,
+  // poll every 250ms for up to 10 seconds.
+  let attempts = 0;
+  const intervalId = setInterval(() => {
+    attempts++;
+    if (window.leadConnector?.chatWidget?.openWidget) {
+      window.leadConnector.chatWidget.openWidget();
+      clearInterval(intervalId);
+    } else if (attempts >= 40) {
+      clearInterval(intervalId);
+      console.warn("LeadConnector chat widget failed to load.");
+    }
+  }, 250);
+};
+
+// ---------------------------------------------------------
+// MAIN WIDGET COMPONENT
+// ---------------------------------------------------------
 export default function ChatbotWidget() {
-  // Listen for LeadConnector Chatbot postMessages (opens, interactions, lead submissions)
   useEffect(() => {
+    // PostMessage handler for analytics
     const handleMessage = (event: MessageEvent) => {
       if (
         !event.origin.includes("leadconnectorhq.com") &&
@@ -50,19 +93,20 @@ export default function ChatbotWidget() {
     };
 
     window.addEventListener("message", handleMessage);
-    return () => window.removeEventListener("message", handleMessage);
+
+    return () => {
+      window.removeEventListener("message", handleMessage);
+    };
   }, []);
 
   return (
     <>
-      {/* LeadConnector AI Chatbot Widget */}
       <Script
         src="https://widgets.leadconnectorhq.com/loader.js"
         data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
         data-widget-id="6a70d6eaf84104f943ccc5a4"
         strategy="lazyOnload"
         onLoad={() => {
-          // Track that the chatbot widget loaded successfully
           sendGTMEvent({
             event: "chat_widget_loaded",
             category: "chat_engagement",

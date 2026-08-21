@@ -14,6 +14,7 @@ import {
   TrendingUp,
 } from "lucide-react";
 import BreadcrumbSchema from "@/components/site/utils/BreadcrumbScripts";
+import OpenChatReusableBtn from "@/components/site/LoanPrograms/ReverseMortgage/OpenChatReusableBtn";
 
 export const metadata: Metadata = {
   title: "Reverse Mortgage for Purchase | Buy Your Next Home",
@@ -274,13 +275,10 @@ export default function ReverseMortgagePurchasePage() {
 
             {/* Primary CTA 1 */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/get-quote"
-                className="btn-shine bg-brand-orange text-primary-bg px-8 py-4 rounded-full font-semibold text-sm sm:text-base hover:bg-orange-600 transition-colors shadow-sm flex items-center justify-center gap-2 text-center"
-              >
-                See How Much Home I Could Buy
-                <ArrowRight size={18} />
-              </Link>
+              <OpenChatReusableBtn
+                loanProgram="Reverse Mortgage for Purchase"
+                text="See How Much Home I Could Buy"
+              />
               <Link
                 href="/calendar"
                 className="bg-cream/10 border border-cream/20 text-primary-bg px-8 py-4 rounded-full font-semibold text-sm sm:text-base hover:bg-cream/20 transition-colors flex items-center justify-center gap-2 text-center"
@@ -1144,13 +1142,10 @@ export default function ReverseMortgagePurchasePage() {
 
             {/* Primary CTA 3 */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4">
-              <Link
-                href="/get-quote"
-                className="btn-shine bg-brand-orange text-primary-bg px-8 py-4 rounded-full font-semibold text-sm sm:text-base hover:bg-orange-600 transition-colors shadow-sm flex items-center justify-center gap-2 w-full sm:w-auto"
-              >
-                See My Purchase Options
-                <ArrowRight size={18} />
-              </Link>
+              <OpenChatReusableBtn
+                loanProgram="Reverse Mortgage for Purchase"
+                text="See My Purchase Options"
+              />
               <Link
                 href="/calendar"
                 className="bg-primary-bg border border-line text-ink px-8 py-4 rounded-full font-semibold text-sm sm:text-base hover:bg-cream/50 transition-colors flex items-center justify-center gap-2 w-full sm:w-auto"
