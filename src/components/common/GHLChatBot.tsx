@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import Script from "next/script";
 import { sendGTMEvent } from "@next/third-parties/google";
+import { usePathname } from "next/navigation";
 
 declare global {
   interface Window {
@@ -46,8 +47,11 @@ export const openChatbotWidget = () => {
 
 // ---------------------------------------------------------
 // MAIN WIDGET COMPONENT
+// Place this once in your root layout.tsx
 // ---------------------------------------------------------
 export default function ChatbotWidget() {
+  const pathname = usePathname(); // Get the current page route
+
   useEffect(() => {
     // PostMessage handler for analytics
     const handleMessage = (event: MessageEvent) => {
@@ -61,6 +65,7 @@ export default function ChatbotWidget() {
       try {
         const data = event.data;
 
+        // Track when the widget is opened
         if (
           data === "lc_chat_widget_opened" ||
           data?.event === "chat_opened" ||
@@ -70,9 +75,11 @@ export default function ChatbotWidget() {
             event: "chat_widget_opened",
             category: "chat_engagement",
             label: "LeadConnector AI Chatbot",
+            page_path: pathname || window.location.pathname,
           });
         }
 
+        // Track when a lead is submitted
         const isChatSubmitted =
           data === "lc_chat_widget_submitted" ||
           data?.event === "chat_submitted" ||
@@ -85,6 +92,7 @@ export default function ChatbotWidget() {
             form_name: "ai_chat_widget",
             category: "lead_generation",
             label: "LeadConnector AI Chatbot Lead",
+            page_path: pathname || window.location.pathname, // Tells GA4/GTM exactly which page the lead came from
           });
         }
       } catch (err) {
@@ -97,7 +105,7 @@ export default function ChatbotWidget() {
     return () => {
       window.removeEventListener("message", handleMessage);
     };
-  }, []);
+  }, [pathname]); // Re-bind if the pathname changes so we always have the correct URL
 
   return (
     <>
