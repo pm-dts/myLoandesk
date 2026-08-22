@@ -12,6 +12,7 @@ import { sendGTMEvent } from "@next/third-parties/google";
 import { useForm } from "@tanstack/react-form";
 import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
+import toast, { Toaster } from "react-hot-toast";
 
 export default function PurchaseEstimateLeadForm() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -61,7 +62,6 @@ export default function PurchaseEstimateLeadForm() {
       };
 
       try {
-        // IMPORTANT: Replace this URL with your actual GHL Inbound Webhook URL
         const GHL_WEBHOOK_URL =
           "https://services.leadconnectorhq.com/hooks/Lv5oqPcJ6MZsszgssznB/webhook-trigger/887691f4-5a09-4378-a530-81d108534ce9";
 
@@ -76,19 +76,31 @@ export default function PurchaseEstimateLeadForm() {
         if (!response.ok)
           throw new Error(`HTTP error! status: ${response.status}`);
 
-        // Simulating network request
-        // await new Promise((resolve) => setTimeout(resolve, 1200));
-
         sendGTMEvent({
           event: "lead_submitted_hecm_purchase",
           category: "lead_generation",
           label: "HECM Purchase Estimate Request",
         });
 
+        toast.success("Purchase estimate request submitted successfully!", {
+          style: {
+            borderRadius: "12px",
+            background: "#1a1a1a",
+            color: "#fff",
+            fontSize: "14px",
+          },
+          iconTheme: {
+            primary: "#F97316",
+            secondary: "#fff",
+          },
+        });
+
         setIsSuccess(true);
       } catch (error) {
         console.error("Error submitting form:", error);
-        alert("There was an issue submitting your request. Please try again.");
+        toast.error(
+          "There was an issue submitting your request. Please try again.",
+        );
       } finally {
         setIsSubmitting(false);
       }
@@ -123,7 +135,6 @@ export default function PurchaseEstimateLeadForm() {
 
     const currentValues = form.state.values;
 
-    // Check if the form is dirty (user has typed something)
     const isDirty =
       currentValues.purchasePrice.trim() !== "" ||
       currentValues.borrowerAge.trim() !== "" ||
@@ -146,6 +157,7 @@ export default function PurchaseEstimateLeadForm() {
 
   return (
     <>
+      <Toaster position="top-right" />
       {/* Target Section */}
       <div className="bg-[#FAF9F6] border border-[#E5E0D8] p-8 md:p-12 rounded-3xl mb-12 max-w-4xl mx-auto text-center shadow-sm">
         <h3 className="text-xl font-bold text-[#1a1a1a] mb-4">Example</h3>
@@ -178,11 +190,11 @@ export default function PurchaseEstimateLeadForm() {
         >
           {/* Inner Modal Container */}
           <div
-            className="relative w-full max-w-xl bg-white rounded-2xl shadow-2xl flex flex-col max-h-[95vh] animate-in zoom-in-95 duration-300"
+            className="relative w-full max-w-xl bg-white rounded-2xl shadow-2xl flex flex-col max-h-[95vh] animate-in zoom-in-95 duration-300 overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal Header */}
-            <div className="flex items-center justify-between px-6 py-5 border-b border-gray-100 shrink-0">
+            <div className="flex items-center justify-between px-6 py-5 border-b border-gray-100 shrink-0 bg-white">
               <h3 className="text-xl font-bold text-gray-900">
                 Purchase Estimate Request
               </h3>
@@ -199,20 +211,20 @@ export default function PurchaseEstimateLeadForm() {
             <div className="p-6 overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-gray-50 [&::-webkit-scrollbar-thumb]:bg-gray-300 hover:[&::-webkit-scrollbar-thumb]:bg-gray-400 [&::-webkit-scrollbar-thumb]:rounded-full transition-colors">
               {isSuccess ? (
                 <div className="text-center py-10 px-4 animate-in fade-in zoom-in duration-300">
-                  <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <CheckCircle2 size={32} />
+                  <div className="w-16 h-16 bg-[#FFF4ED] border border-[#FFE4D6] text-[#F97316] rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm">
+                    <CheckCircle2 size={36} strokeWidth={2.2} />
                   </div>
                   <h4 className="text-2xl font-bold text-gray-900 mb-4">
                     Request Received!
                   </h4>
                   <p className="text-gray-600 leading-relaxed max-w-sm mx-auto mb-8">
-                    Thanks — we'll run your personalized purchase estimate using
-                    HUD's official calculator and follow up with you within 24
-                    hours.
+                    Thanks — we&apos;ll run your personalized purchase estimate
+                    using HUD&apos;s official calculator and follow up with you
+                    within 24 hours.
                   </p>
                   <button
                     onClick={closeModal}
-                    className="text-gray-500 hover:text-gray-800 font-medium underline underline-offset-4"
+                    className="w-full sm:w-auto min-w-[200px] bg-[#F97316] text-white px-8 py-3 rounded-xl font-bold text-sm hover:bg-[#EA580C] transition-colors shadow-md"
                   >
                     Close Window
                   </button>
@@ -228,7 +240,7 @@ export default function PurchaseEstimateLeadForm() {
                 >
                   <p className="text-sm text-gray-600 mb-6">
                     Please provide a few details so our team can accurately run
-                    your scenario using HUD's official HECM guidelines.
+                    your scenario using HUD&apos;s official HECM guidelines.
                   </p>
 
                   {/* Loan Details Grid */}
@@ -275,7 +287,7 @@ export default function PurchaseEstimateLeadForm() {
                               htmlFor={field.name}
                               className="block text-sm font-medium text-gray-700 mb-1"
                             >
-                              Youngest Borrower's Age
+                              Youngest Borrower&apos;s Age
                             </label>
                             <input
                               type="number"
@@ -443,30 +455,33 @@ export default function PurchaseEstimateLeadForm() {
               )}
             </div>
 
-            {/* Warning Dialog Overlay (Appears inside the main modal) */}
+            {/* Themed Warning Dialog Overlay */}
             {showCloseWarning && (
-              <div className="absolute inset-0 z-50 flex items-center justify-center bg-white/80 backdrop-blur-sm rounded-2xl animate-in fade-in duration-200">
-                <div className="bg-white border border-gray-200 shadow-xl rounded-xl p-6 max-w-sm w-full mx-4 text-center animate-in zoom-in-95 duration-200">
-                  <div className="w-12 h-12 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <AlertTriangle size={24} />
+              <div className="absolute inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm p-4 animate-in fade-in duration-200">
+                <div className="bg-[#FAF9F6] border border-[#FFE4D6] shadow-2xl rounded-2xl p-6 sm:p-7 max-w-sm w-full mx-4 text-center animate-in zoom-in-95 duration-200">
+                  <div className="w-14 h-14 bg-[#FFF4ED] border border-[#FFE4D6] text-[#F97316] rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm">
+                    <AlertTriangle size={26} strokeWidth={2.2} />
                   </div>
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">
-                    Unsaved Changes
+
+                  <h4 className="text-xl font-bold text-gray-900 mb-2">
+                    Unsaved Information
                   </h4>
-                  <p className="text-sm text-gray-600 mb-6">
-                    Are you sure you want to close this form? Your progress will
+
+                  <p className="text-sm text-gray-600 leading-relaxed mb-6">
+                    Are you sure you want to exit? The details you entered will
                     be lost.
                   </p>
-                  <div className="flex gap-3 justify-center">
+
+                  <div className="flex flex-col sm:flex-row gap-2.5 justify-center">
                     <button
                       onClick={() => setShowCloseWarning(false)}
-                      className="px-4 py-2 text-sm font-semibold text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors w-full"
+                      className="w-full sm:flex-1 py-2.5 px-4 text-sm font-semibold text-white bg-[#F97316] hover:bg-[#EA580C] rounded-xl transition-colors shadow-sm"
                     >
                       Keep Editing
                     </button>
                     <button
                       onClick={confirmClose}
-                      className="px-4 py-2 text-sm font-semibold text-white bg-red-600 hover:bg-red-700 rounded-lg transition-colors w-full"
+                      className="w-full sm:flex-1 py-2.5 px-4 text-sm font-semibold text-gray-700 bg-white hover:bg-gray-100 border border-[#E5E0D8] rounded-xl transition-colors"
                     >
                       Discard
                     </button>
