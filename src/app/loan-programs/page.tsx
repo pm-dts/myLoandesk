@@ -71,13 +71,10 @@ const loanProgramsSchema = {
       description:
         "Comprehensive directory of residential, commercial, portfolio, and alternative documentation mortgage loan programs.",
       isPartOf: {
-        "@type": "WebSite",
         "@id": "https://www.myloandesk.com/#website",
       },
-      about: {
-        "@type": "FinancialService",
+      publisher: {
         "@id": "https://www.myloandesk.com/#organization",
-        name: "MyLoanDesk",
       },
       mainEntity: {
         "@id": "https://www.myloandesk.com/loan-programs/#programlist",
@@ -91,128 +88,225 @@ const loanProgramsSchema = {
         {
           "@type": "ListItem",
           position: 1,
-          name: "Conventional Mortgages",
-          url: "https://www.myloandesk.com/loan-programs/conventional-loans",
+          item: {
+            "@type": "WebPage",
+            "@id":
+              "https://www.myloandesk.com/loan-programs/conventional-loans",
+            name: "Conventional Mortgages",
+            url: "https://www.myloandesk.com/loan-programs/conventional-loans",
+          },
         },
         {
           "@type": "ListItem",
           position: 2,
-          name: "FHA Loans",
-          url: "https://www.myloandesk.com/loan-programs/fha-loans",
+          item: {
+            "@type": "WebPage",
+            "@id": "https://www.myloandesk.com/loan-programs/fha-loans",
+            name: "FHA Loans",
+            url: "https://www.myloandesk.com/loan-programs/fha-loans",
+          },
         },
         {
           "@type": "ListItem",
           position: 3,
-          name: "FHA Streamline Refinance",
-          url: "https://www.myloandesk.com/loan-programs/fha-streamline-refinance",
+          item: {
+            "@type": "WebPage",
+            "@id":
+              "https://www.myloandesk.com/loan-programs/fha-streamline-refinance",
+            name: "FHA Streamline Refinance",
+            url: "https://www.myloandesk.com/loan-programs/fha-streamline-refinance",
+          },
         },
         {
           "@type": "ListItem",
           position: 4,
-          name: "FHA Alternative Income Documentation",
-          url: "https://www.myloandesk.com/loan-programs/fha-alternative-documentation",
+          item: {
+            "@type": "WebPage",
+            "@id":
+              "https://www.myloandesk.com/loan-programs/fha-alternative-documentation",
+            name: "FHA Alternative Income Documentation",
+            url: "https://www.myloandesk.com/loan-programs/fha-alternative-documentation",
+          },
         },
         {
           "@type": "ListItem",
           position: 5,
-          name: "VA Loans",
-          url: "https://www.myloandesk.com/loan-programs/va-loans",
+          item: {
+            "@type": "WebPage",
+            "@id": "https://www.myloandesk.com/loan-programs/va-loans",
+            name: "VA Loans",
+            url: "https://www.myloandesk.com/loan-programs/va-loans",
+          },
         },
         {
           "@type": "ListItem",
           position: 6,
-          name: "Jumbo & Super Jumbo Loans",
-          url: "https://www.myloandesk.com/loan-programs/jumbo-loans",
+          item: {
+            "@type": "WebPage",
+            "@id": "https://www.myloandesk.com/loan-programs/jumbo-loans",
+            name: "Jumbo & Super Jumbo Loans",
+            url: "https://www.myloandesk.com/loan-programs/jumbo-loans",
+          },
         },
         {
           "@type": "ListItem",
           position: 7,
-          name: "2/1 Buydown Loans",
-          url: "https://www.myloandesk.com/loan-programs/2-1-buydown-loans",
+          item: {
+            "@type": "WebPage",
+            "@id": "https://www.myloandesk.com/loan-programs/2-1-buydown-loans",
+            name: "2/1 Buydown Loans",
+            url: "https://www.myloandesk.com/loan-programs/2-1-buydown-loans",
+          },
         },
         {
           "@type": "ListItem",
           position: 8,
-          name: "Bank Statement Loans",
-          url: "https://www.myloandesk.com/loan-programs/bank-statement-loans",
+          item: {
+            "@type": "WebPage",
+            "@id":
+              "https://www.myloandesk.com/loan-programs/bank-statement-loans",
+            name: "Bank Statement Loans",
+            url: "https://www.myloandesk.com/loan-programs/bank-statement-loans",
+          },
         },
         {
           "@type": "ListItem",
           position: 9,
-          name: "DSCR Investment Property Loans",
-          url: "https://www.myloandesk.com/loan-programs/dscr-investment-property-loans",
+          item: {
+            "@type": "WebPage",
+            "@id":
+              "https://www.myloandesk.com/loan-programs/dscr-investment-property-loans",
+            name: "DSCR Investment Property Loans",
+            url: "https://www.myloandesk.com/loan-programs/dscr-investment-property-loans",
+          },
         },
         {
           "@type": "ListItem",
           position: 10,
-          name: "Bridge Loans",
-          url: "https://www.myloandesk.com/loan-programs/bridge-loans",
+          item: {
+            "@type": "WebPage",
+            "@id": "https://www.myloandesk.com/loan-programs/bridge-loans",
+            name: "Bridge Loans",
+            url: "https://www.myloandesk.com/loan-programs/bridge-loans",
+          },
         },
         {
           "@type": "ListItem",
           position: 11,
-          name: "Bridge to Sale Loans",
-          url: "https://www.myloandesk.com/loan-programs/bridge-to-sale-loans",
+          item: {
+            "@type": "WebPage",
+            "@id":
+              "https://www.myloandesk.com/loan-programs/bridge-to-sale-loans",
+            name: "Bridge to Sale Loans",
+            url: "https://www.myloandesk.com/loan-programs/bridge-to-sale-loans",
+          },
         },
         {
           "@type": "ListItem",
           position: 12,
-          name: "Fix and Flip Loans",
-          url: "https://www.myloandesk.com/loan-programs/fix-and-flip-loans",
+          item: {
+            "@type": "WebPage",
+            "@id":
+              "https://www.myloandesk.com/loan-programs/fix-and-flip-loans",
+            name: "Fix and Flip Loans",
+            url: "https://www.myloandesk.com/loan-programs/fix-and-flip-loans",
+          },
         },
         {
           "@type": "ListItem",
           position: 13,
-          name: "Construction Loans",
-          url: "https://www.myloandesk.com/loan-programs/construction-loans",
+          item: {
+            "@type": "WebPage",
+            "@id":
+              "https://www.myloandesk.com/loan-programs/construction-loans",
+            name: "Construction Loans",
+            url: "https://www.myloandesk.com/loan-programs/construction-loans",
+          },
         },
         {
           "@type": "ListItem",
           position: 14,
-          name: "Home Equity Loans & HELOCs",
-          url: "https://www.myloandesk.com/loan-programs/heloc-loans",
+          item: {
+            "@type": "WebPage",
+            "@id": "https://www.myloandesk.com/loan-programs/heloc-loans",
+            name: "Home Equity Loans & HELOCs",
+            url: "https://www.myloandesk.com/loan-programs/heloc-loans",
+          },
         },
         {
           "@type": "ListItem",
           position: 15,
-          name: "Commercial Real Estate Loans",
-          url: "https://www.myloandesk.com/loan-programs/commercial-real-estate-loans",
+          item: {
+            "@type": "WebPage",
+            "@id":
+              "https://www.myloandesk.com/loan-programs/commercial-real-estate-loans",
+            name: "Commercial Real Estate Loans",
+            url: "https://www.myloandesk.com/loan-programs/commercial-real-estate-loans",
+          },
         },
         {
           "@type": "ListItem",
           position: 16,
-          name: "SBA Business Loans",
-          url: "https://www.myloandesk.com/loan-programs/sba-business-loans",
+          item: {
+            "@type": "WebPage",
+            "@id":
+              "https://www.myloandesk.com/loan-programs/sba-business-loans",
+            name: "SBA Business Loans",
+            url: "https://www.myloandesk.com/loan-programs/sba-business-loans",
+          },
         },
         {
           "@type": "ListItem",
           position: 17,
-          name: "ITIN Loans",
-          url: "https://www.myloandesk.com/loan-programs/itin-loans",
+          item: {
+            "@type": "WebPage",
+            "@id": "https://www.myloandesk.com/loan-programs/itin-loans",
+            name: "ITIN Loans",
+            url: "https://www.myloandesk.com/loan-programs/itin-loans",
+          },
         },
         {
           "@type": "ListItem",
           position: 18,
-          name: "Foreign National & International Buyer Loans",
-          url: "https://www.myloandesk.com/loan-programs/foreign-national-loans",
+          item: {
+            "@type": "WebPage",
+            "@id":
+              "https://www.myloandesk.com/loan-programs/foreign-national-loans",
+            name: "Foreign National & International Buyer Loans",
+            url: "https://www.myloandesk.com/loan-programs/foreign-national-loans",
+          },
         },
         {
           "@type": "ListItem",
           position: 19,
-          name: "Medical Professional Loan Programs",
-          url: "https://www.myloandesk.com/loan-programs/medical-professional-loans",
+          item: {
+            "@type": "WebPage",
+            "@id":
+              "https://www.myloandesk.com/loan-programs/medical-professional-loans",
+            name: "Medical Professional Loan Programs",
+            url: "https://www.myloandesk.com/loan-programs/medical-professional-loans",
+          },
         },
         {
           "@type": "ListItem",
           position: 20,
-          name: "Property Financing in Portugal",
-          url: "https://www.myloandesk.com/loan-programs/portugal-property-financing",
+          item: {
+            "@type": "WebPage",
+            "@id":
+              "https://www.myloandesk.com/loan-programs/portugal-property-financing",
+            name: "Property Financing in Portugal",
+            url: "https://www.myloandesk.com/loan-programs/portugal-property-financing",
+          },
         },
         {
           "@type": "ListItem",
           position: 21,
-          name: "Reverse Mortgage Programs",
-          url: "https://www.myloandesk.com/reverse-mortgage",
+          item: {
+            "@type": "WebPage",
+            "@id": "https://www.myloandesk.com/reverse-mortgage",
+            name: "Reverse Mortgage Programs",
+            url: "https://www.myloandesk.com/reverse-mortgage",
+          },
         },
       ],
     },
