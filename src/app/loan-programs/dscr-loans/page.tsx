@@ -8,15 +8,14 @@ export const metadata: Metadata = {
   description:
     "Grow your real estate portfolio without personal income verification. Qualify for DSCR investment property financing based on property rental cash flow.",
   alternates: {
-    canonical:
-      "https://www.myloandesk.com/loan-programs/dscr-investment-property-loans/",
+    canonical: "https://www.myloandesk.com/loan-programs/dscr-loans/",
   },
   openGraph: {
     title: "DSCR Investment Property Loans | MyLoanDesk",
     description:
       "Qualify for investment property financing based on property rental cash flow instead of personal income tax returns.",
     type: "website",
-    url: "https://www.myloandesk.com/loan-programs/dscr-investment-property-loans/",
+    url: "https://www.myloandesk.com/loan-programs/dscr-loans/",
     siteName: "MyLoanDesk",
     locale: "en_US",
     images: [

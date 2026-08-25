@@ -9,15 +9,14 @@ export const metadata: Metadata = {
   description:
     "Refinance your existing FHA loan with reduced documentation and, in most cases, no new appraisal. Use our free calculator to see your potential monthly savings before you apply.",
   alternates: {
-    canonical:
-      "https://www.myloandesk.com/loan-programs/fha-streamline-refinance/",
+    canonical: "https://www.myloandesk.com/loan-programs/fha-streamline-loans/",
   },
   openGraph: {
     title:
       "FHA Streamline Refinance — Lower Your Rate, Less Paperwork | MyLoanDesk",
     description:
       "If you already have an FHA loan, a Streamline Refinance can lower your rate with reduced documentation and often no new appraisal. Estimate your savings with our free calculator.",
-    url: "https://www.myloandesk.com/loan-programs/fha-streamline-refinance/",
+    url: "https://www.myloandesk.com/loan-programs/fha-streamline-loans/",
     siteName: "MyLoanDesk",
     locale: "en_US",
     type: "website",

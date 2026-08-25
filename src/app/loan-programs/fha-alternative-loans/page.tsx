@@ -9,13 +9,13 @@ export const metadata: Metadata = {
     "FHA loan options for wage earners and self-employed borrowers whose income doesn't fit a standard file — up to 96.5% financing using VOE or profit & loss documentation instead of typical income paperwork.",
   alternates: {
     canonical:
-      "https://www.myloandesk.com/loan-programs/fha-alternative-documentation/",
+      "https://www.myloandesk.com/loan-programs/fha-alternative-loans/",
   },
   openGraph: {
     title: "FHA Alternative Income Documentation Programs | MyLoanDesk",
     description:
       "Up to 96.5% FHA financing for wage earners and self-employed borrowers whose income doesn't fit a standard file. Learn about VOE and profit & loss documentation options.",
-    url: "https://www.myloandesk.com/loan-programs/fha-alternative-documentation/",
+    url: "https://www.myloandesk.com/loan-programs/fha-alternative-loans/",
     siteName: "MyLoanDesk",
     locale: "en_US",
     type: "website",
