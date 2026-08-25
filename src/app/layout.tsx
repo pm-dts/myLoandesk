@@ -63,7 +63,7 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "MortgageBroker",
+      "@type": ["Organization", "FinancialService", "MortgageBroker"],
       "@id": "https://www.myloandesk.com/#organization",
       name: "MyLoanDesk",
       legalName:
