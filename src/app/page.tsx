@@ -33,13 +33,13 @@ export const metadata: Metadata = {
   description:
     "Access hundreds of mortgage solutions through our nationwide lending network. Compare loan options, negotiate competitive rates, and close in as little as 10–28 days.",
   alternates: {
-    canonical: "/",
+    canonical: "https://www.myloandesk.com/",
   },
   openGraph: {
     title: "MyLoanDesk | Compare Wholesale Mortgage Rates & Home Loan Options",
     description:
       "Access hundreds of mortgage solutions through our nationwide lending network. We compare options, negotiate competitive rates, and manage every step.",
-    url: "/",
+    url: "https://www.myloandesk.com/",
     type: "website",
     images: [
       {

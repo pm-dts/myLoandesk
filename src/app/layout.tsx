@@ -17,21 +17,16 @@ const geistSans = Geist({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.myloandesk.com"),
   title: "MyLoanDesk | Compare Wholesale Mortgage Rates & Home Loan Options",
-  // title: {
-  //   default:
-  //     "MyLoanDesk | Compare Wholesale Mortgage Rates & Home Loan Options",
-  //   // template: "%s | MyLoanDesk",
-  // },
   description:
     "MyLoanDesk is your trusted mortgage brokerage. We compare 100+ lenders to secure competitive interest rates and custom financing solutions from application to closing.",
   alternates: {
-    canonical: "/",
+    canonical: "https://www.myloandesk.com/",
   },
   openGraph: {
     title: "MyLoanDesk - Your Trusted Mortgage Partner",
     description:
       "Access hundreds of mortgage solutions through our nationwide lending network. Compare loan options, secure competitive interest rates, and close on time.",
-    url: "/",
+    url: "https://www.myloandesk.com/",
     siteName: "MyLoanDesk",
     locale: "en_US",
     type: "website",
@@ -68,7 +63,7 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["Organization", "FinancialService", "MortgageBroker"],
+      "@type": "MortgageBroker",
       "@id": "https://www.myloandesk.com/#organization",
       name: "MyLoanDesk",
       legalName:
@@ -111,11 +106,11 @@ const organizationSchema = {
       priceRange: "$$",
       aggregateRating: {
         "@type": "AggregateRating",
-        ratingValue: "4.9",
-        bestRating: "5",
-        worstRating: "1",
-        ratingCount: "2300",
-        reviewCount: "2300",
+        ratingValue: 4.9,
+        bestRating: 5,
+        worstRating: 1,
+        ratingCount: 2300,
+        reviewCount: 2300,
       },
       sameAs: [
         "https://youtube.com/@MyLoanDeskMortgage",

@@ -67,7 +67,7 @@ const loanProgramsSchema = {
       "@type": "CollectionPage",
       "@id": "https://www.myloandesk.com/loan-programs/#webpage",
       url: "https://www.myloandesk.com/loan-programs/",
-      name: "Loan Programs | MyLoanDesk",
+      name: "Wholesale Mortgage & Commercial Loan Programs | MyLoanDesk",
       description:
         "Comprehensive directory of residential, commercial, portfolio, and alternative documentation mortgage loan programs.",
       isPartOf: {
@@ -75,7 +75,12 @@ const loanProgramsSchema = {
         "@id": "https://www.myloandesk.com/#website",
       },
       about: {
+        "@type": "FinancialService",
         "@id": "https://www.myloandesk.com/#organization",
+        name: "MyLoanDesk",
+      },
+      mainEntity: {
+        "@id": "https://www.myloandesk.com/loan-programs/#programlist",
       },
     },
     {

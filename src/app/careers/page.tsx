@@ -111,7 +111,7 @@ const careersPageSchema = {
           name: "What loan programs do MyLoanDesk originators have access to?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Our originators have access to wholesale lenders providing Conventional, FHA, VA, DSCR, Jumbo, Commercial Real Estate, SBA, and Bridge financing options[cite: 1, 4, 6, 8, 10, 11].",
+            text: "Our originators have access to wholesale lenders providing Conventional, FHA, VA, DSCR, Jumbo, Commercial Real Estate, SBA, and Bridge financing options",
           },
         },
         {
