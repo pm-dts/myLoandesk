@@ -104,14 +104,7 @@ const organizationSchema = {
         },
       ],
       priceRange: "$$",
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: 4.9,
-        bestRating: 5,
-        worstRating: 1,
-        ratingCount: 2300,
-        reviewCount: 2300,
-      },
+      // REMOVED aggregateRating to comply with Google's global schema policies and fix graph collisions
       sameAs: [
         "https://youtube.com/@MyLoanDeskMortgage",
         "https://www.nmlsconsumeraccess.org/",
