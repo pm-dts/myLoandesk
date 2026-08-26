@@ -11,12 +11,12 @@ import {
   ArrowRight,
   PlayCircle,
   Shield,
-  Link as LinkIcon,
   ExternalLink,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import LoanProgramButton from "../utils/LoanProgramButton";
 import { Fraunces } from "next/font/google";
+import { useTranslations } from "next-intl";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -28,11 +28,13 @@ function LoanDetailModal({
   isOpen,
   onClose,
   title,
+  closeLabel = "Close dialog",
   children,
 }: {
   isOpen: boolean;
   onClose: () => void;
   title: string;
+  closeLabel?: string;
   children: React.ReactNode;
 }) {
   useEffect(() => {
@@ -66,7 +68,7 @@ function LoanDetailModal({
           <button
             onClick={onClose}
             className="bg-line/40 hover:bg-line/80 text-ink p-2 rounded-full transition-colors"
-            aria-label="Close dialog"
+            aria-label={closeLabel}
           >
             <X size={20} />
           </button>
@@ -80,9 +82,11 @@ function LoanDetailModal({
 function VideoModal({
   videoInfo,
   onClose,
+  closeLabel = "Close video",
 }: {
   videoInfo: { src: string; title: string } | null;
   onClose: () => void;
+  closeLabel?: string;
 }) {
   useEffect(() => {
     if (videoInfo) document.body.style.overflow = "hidden";
@@ -107,7 +111,7 @@ function VideoModal({
           <button
             onClick={onClose}
             className="bg-black/50 hover:bg-black/80 text-white p-2 rounded-full transition-colors"
-            aria-label="Close video"
+            aria-label={closeLabel}
           >
             <X size={20} />
           </button>
@@ -124,7 +128,16 @@ function VideoModal({
   );
 }
 
-export default function HomeEquitySection() {
+interface HomeEquitySectionProps {
+  locale?: string;
+}
+
+export default function HomeEquitySection({
+  locale = "en",
+}: HomeEquitySectionProps) {
+  const t = useTranslations("LoanPrograms.HomeEquitySection");
+  const isEs = locale === "es";
+
   const [activeModal, setActiveModal] = useState<string | null>(null);
   const [activeVideo, setActiveVideo] = useState<{
     src: string;
@@ -134,6 +147,16 @@ export default function HomeEquitySection() {
   const closeModal = () => setActiveModal(null);
   const closeVideo = () => setActiveVideo(null);
 
+  const getLocalizedHref = (path: string) => (isEs ? `/es${path}` : path);
+
+  const fhaBenefits = t.raw("fha_203k.benefits") as string[];
+  const fhaProperties = t.raw("fha_203k.properties") as string[];
+  const streamlineBenefits = t.raw("streamline.benefits") as string[];
+  const helocBestFor = t.raw("heloc.line_of_credit.best_for") as string[];
+  const helocBenefits = t.raw("heloc.line_of_credit.benefits") as string[];
+  const homeLoanBestFor = t.raw("heloc.loan.best_for") as string[];
+  const homeLoanBenefits = t.raw("heloc.loan.benefits") as string[];
+
   return (
     <section className="max-w-7xl mx-auto px-6 lg:px-10 mb-20" id="home-equity">
       <h2
@@ -142,7 +165,7 @@ export default function HomeEquitySection() {
           fraunces.className,
         )}
       >
-        Rehab, Refinances & Home Equity Lines
+        {t("heading")}
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -157,7 +180,7 @@ export default function HomeEquitySection() {
                 <FileText size={22} strokeWidth={1.8} />
               </div>
               <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2 py-1 rounded">
-                Rehab Matrix
+                {t("fha_203k.tag")}
               </span>
             </div>
             <h3
@@ -166,12 +189,10 @@ export default function HomeEquitySection() {
                 fraunces.className,
               )}
             >
-              FHA 203(k) Rehab Loans
+              {t("fha_203k.title")}
             </h3>
             <p className="text-sm text-ink-2 leading-relaxed line-clamp-3">
-              FHA's 203(k) program provides an affordable, stable single-loan
-              solution combining the property purchase or refinance alongside
-              the direct calculated costs of required structural upgrades.
+              {t("fha_203k.description")}
             </p>
           </div>
           <div className="mt-auto pt-4">
@@ -179,54 +200,47 @@ export default function HomeEquitySection() {
               onClick={() => setActiveModal("fha-203k")}
               className="w-full py-3 bg-cream hover:bg-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-2 transition-all"
             >
-              Read More <ArrowRight size={14} />
+              {t("common.read_more")} <ArrowRight size={14} />
             </button>
           </div>
 
           <LoanDetailModal
             isOpen={activeModal === "fha-203k"}
             onClose={closeModal}
-            title="FHA 203(k) Rehab Loans"
+            title={t("fha_203k.modal_title")}
+            closeLabel={t("common.close_dialog")}
           >
             <div>
               <p className="text-sm text-ink-2 leading-relaxed mb-4">
-                FHA's 203(k) program provides an affordable, stable single-loan
-                solution combining the property purchase or refinance alongside
-                the direct calculated costs of required structural upgrades.
+                {t("fha_203k.description")}
               </p>
               <div className="space-y-4 mb-6 text-xs text-ink-2">
                 <div>
                   <h4 className="font-semibold text-ink mb-1">
-                    Benefits include:
+                    {t("fha_203k.benefits_heading")}
                   </h4>
                   <ul className="list-disc list-inside space-y-1">
-                    <li>FHA programmatic guidelines apply</li>
-                    <li>Ability to leverage future value after upgrades</li>
-                    <li>Low structural down-payment options</li>
-                    <li>Flexible credit qualifying frameworks</li>
-                    <li>Fully assumable infrastructure for future buyers</li>
-                    <li>
-                      Eligible across 1-4 unit properties, PUDs, and condos
-                    </li>
+                    {fhaBenefits.map((item, idx) => (
+                      <li key={idx}>{item}</li>
+                    ))}
                   </ul>
                 </div>
                 <div>
                   <h4 className="font-semibold text-ink mb-1">
-                    Eligible properties include:
+                    {t("fha_203k.properties_heading")}
                   </h4>
                   <ul className="list-disc list-inside space-y-1">
-                    <li>Attached and detached single family residences</li>
-                    <li>Multi-unit 2-4 property maps</li>
+                    {fhaProperties.map((item, idx) => (
+                      <li key={idx}>{item}</li>
+                    ))}
                   </ul>
                 </div>
                 <div>
                   <h4 className="font-semibold text-ink mb-1">
-                    Eligible Improvements:
+                    {t("fha_203k.improvements_heading")}
                   </h4>
                   <p className="italic bg-line/20 p-2 rounded">
-                    Structural additions, kitchen/bath remodeling, finished
-                    basements, decks, roofing, energy upgrades, and
-                    accessibility improvements.
+                    {t("fha_203k.improvements_text")}
                   </p>
                 </div>
               </div>
@@ -246,7 +260,7 @@ export default function HomeEquitySection() {
                 <RefreshCw size={22} strokeWidth={1.8} />
               </div>
               <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2 py-1 rounded">
-                Refinance Desk
+                {t("refinance.tag")}
               </span>
             </div>
             <h3
@@ -255,12 +269,10 @@ export default function HomeEquitySection() {
                 fraunces.className,
               )}
             >
-              Refinance Options
+              {t("refinance.title")}
             </h3>
             <p className="text-sm text-ink-2 leading-relaxed line-clamp-3">
-              Lock in structural savings, consolidate high-interest debt, get
-              cash out for renovations, or accelerate your wealth roadmap by
-              paying off your mortgage sooner.
+              {t("refinance.description")}
             </p>
           </div>
           <div className="mt-auto pt-4">
@@ -268,56 +280,41 @@ export default function HomeEquitySection() {
               onClick={() => setActiveModal("refinance")}
               className="w-full py-3 bg-cream hover:bg-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-2 transition-all"
             >
-              Read More <ArrowRight size={14} />
+              {t("common.read_more")} <ArrowRight size={14} />
             </button>
           </div>
 
           <LoanDetailModal
             isOpen={activeModal === "refinance"}
             onClose={closeModal}
-            title="Refinance Options"
+            title={t("refinance.modal_title")}
+            closeLabel={t("common.close_dialog")}
           >
             <div>
               <div className="space-y-4 text-xs text-ink-2 mb-6 leading-relaxed">
                 <div>
                   <h4 className="font-semibold text-ink text-sm mb-1">
-                    Lower Your Monthly Payments
+                    {t("refinance.sections.lower_payments.title")}
                   </h4>
-                  <p>
-                    Lock in structural savings by shifting from a volatile ARM
-                    array or a high fixed-rate mortgage into historically steady
-                    long-term single tiers.
-                  </p>
+                  <p>{t("refinance.sections.lower_payments.description")}</p>
                 </div>
                 <div>
                   <h4 className="font-semibold text-ink text-sm mb-1">
-                    Get Cash Out
+                    {t("refinance.sections.cash_out.title")}
                   </h4>
-                  <p>
-                    Leverage the clear equity position built inside your
-                    property to clear tuition, fund structural renovations, or
-                    execute essential capital changes seamlessly.
-                  </p>
+                  <p>{t("refinance.sections.cash_out.description")}</p>
                 </div>
                 <div>
                   <h4 className="font-semibold text-ink text-sm mb-1">
-                    Consolidate Your Debt
+                    {t("refinance.sections.consolidate.title")}
                   </h4>
-                  <p>
-                    Pay off high-interest unsecured positions by leveraging
-                    lower mortgage interest rates, significantly expanding
-                    monthly liquidity parameters.
-                  </p>
+                  <p>{t("refinance.sections.consolidate.description")}</p>
                 </div>
                 <div>
                   <h4 className="font-semibold text-ink text-sm mb-1">
-                    Paying it off Sooner
+                    {t("refinance.sections.pay_sooner.title")}
                   </h4>
-                  <p>
-                    Accelerate your net wealth roadmap by condensing standard
-                    configurations into 15-year tracks, cutting total long-term
-                    interest costs dramatically.
-                  </p>
+                  <p>{t("refinance.sections.pay_sooner.description")}</p>
                 </div>
               </div>
             </div>
@@ -336,7 +333,7 @@ export default function HomeEquitySection() {
                 <Shield size={22} strokeWidth={1.8} />
               </div>
               <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2.5 py-1 rounded-md">
-                Streamline Refi
+                {t("streamline.tag")}
               </span>
             </div>
             <h3
@@ -345,29 +342,26 @@ export default function HomeEquitySection() {
                 fraunces.className,
               )}
             >
-              FHA Streamline Refinance
+              {t("streamline.title")}
             </h3>
             <p className="text-sm text-ink-2 leading-relaxed line-clamp-3">
-              If you hold a current FHA mortgage in good standing, an FHA
-              Streamline Refinance represents a highly efficient path to
-              lowering interest rates and payment obligations.
+              {t("streamline.description")}
             </p>
           </div>
 
-          {/* Card Action Buttons with Link to Dedicated Page */}
           <div className="mt-auto pt-4 flex flex-col sm:flex-row gap-2">
             <button
               onClick={() => setActiveModal("streamline")}
               className="flex-1 py-3 bg-cream hover:bg-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
             >
-              Read More <ArrowRight size={14} />
+              {t("common.read_more")} <ArrowRight size={14} />
             </button>
 
             <Link
-              href="/loan-programs/fha-streamline-loans"
+              href={getLocalizedHref("/loan-programs/fha-streamline-loans")}
               className="flex-1 py-3 bg-primary-bg hover:bg-cream border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
             >
-              Program Page{" "}
+              {t("common.program_page")}{" "}
               <ExternalLink size={14} className="text-brand-orange" />
             </Link>
           </div>
@@ -375,25 +369,18 @@ export default function HomeEquitySection() {
           <LoanDetailModal
             isOpen={activeModal === "streamline"}
             onClose={closeModal}
-            title="FHA Streamline Refinance"
+            title={t("streamline.modal_title")}
+            closeLabel={t("common.close_dialog")}
           >
             <div>
               <p className="text-sm text-ink-2 leading-relaxed mb-4">
-                If you hold a current FHA mortgage in good standing, an FHA
-                Streamline Refinance represents a highly efficient path to
-                lowering interest rates and payment obligations.
+                {t("streamline.description")}
               </p>
               <p className="text-xs font-medium text-ink mb-2">
-                Benefits include:
+                {t("streamline.benefits_heading")}
               </p>
               <ul className="space-y-3 mb-6">
-                {[
-                  "Property appraisal usually not required",
-                  "Minimal processing documentation requirements",
-                  "Streamlined underwriting timeline frameworks",
-                  "Ability to easily adjust your core term lengths",
-                  "Minimal out-of-pocket transactional costs",
-                ].map((benefit, idx) => (
+                {streamlineBenefits.map((benefit, idx) => (
                   <li
                     key={idx}
                     className="flex items-center gap-2.5 text-xs text-ink-2"
@@ -407,23 +394,21 @@ export default function HomeEquitySection() {
                 ))}
               </ul>
 
-              {/* Direct Program Page Link Box inside Modal */}
               <div className="mb-6 p-4 bg-cream/40 border border-line rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-3">
                 <div>
                   <div className="text-xs font-semibold text-ink uppercase tracking-wider">
-                    Want to estimate your refinance savings?
+                    {t("streamline.callout_title")}
                   </div>
                   <p className="text-xs text-ink-2">
-                    Check your net tangible benefit and calculate your estimated
-                    new monthly payment.
+                    {t("streamline.callout_desc")}
                   </p>
                 </div>
                 <Link
-                  href="/loan-programs/fha-streamline-loans"
+                  href={getLocalizedHref("/loan-programs/fha-streamline-loans")}
                   onClick={closeModal}
                   className="btn-shine bg-brand-orange text-white px-5 py-2.5 rounded-full text-xs font-semibold flex items-center gap-1.5 shrink-0 hover:bg-orange-600 transition-colors"
                 >
-                  Visit Full Program Page <ArrowRight size={14} />
+                  {t("streamline.callout_button")} <ArrowRight size={14} />
                 </Link>
               </div>
             </div>
@@ -442,7 +427,7 @@ export default function HomeEquitySection() {
                 <Landmark size={22} strokeWidth={1.8} />
               </div>
               <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2 py-1 rounded">
-                Equity Access
+                {t("heloc.tag")}
               </span>
             </div>
             <h3
@@ -451,89 +436,76 @@ export default function HomeEquitySection() {
                 fraunces.className,
               )}
             >
-              Home Equity Solutions
+              {t("heloc.title")}
             </h3>
             <p className="text-sm font-semibold text-brand-orange mb-3">
-              Unlock the Value in Your Home Without Selling It
+              {t("heloc.subtitle")}
             </p>
             <p className="text-sm text-ink-2 leading-relaxed line-clamp-3 max-w-3xl">
-              Whether you need ongoing access to funds or a one-time lump sum,
-              MyLoanDesk offers competitive home equity financing designed
-              around your goals.
+              {t("heloc.description")}
             </p>
           </div>
 
-          {/* Card Action Buttons with Direct Link to Dedicated Page */}
           <div className="mt-auto pt-4 flex flex-col sm:flex-row gap-3 max-w-lg">
             <button
               onClick={() =>
                 setActiveVideo({
                   src: "https://myloandesk-assets.s3.eu-north-1.amazonaws.com/HELOC+%E2%80%93+Access+the+Equity+in+Your+Home+Without+Refinancing_1080p_caption.mp4",
-                  title: "Home Equity Solutions",
+                  title: t("heloc.title"),
                 })
               }
               className="flex-1 py-3 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5 transition-all"
             >
-              <PlayCircle size={14} /> See How It Works
+              <PlayCircle size={14} /> {t("heloc.video_button")}
             </button>
 
             <button
               onClick={() => setActiveModal("heloc")}
               className="flex-1 py-3 bg-cream hover:bg-moss-deep hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
             >
-              Read More <ArrowRight size={14} />
+              {t("common.read_more")} <ArrowRight size={14} />
             </button>
 
             <Link
-              href="/loan-programs/heloc-loans"
+              href={getLocalizedHref("/loan-programs/heloc-loans")}
               className="flex-1 py-3 bg-primary-bg hover:bg-cream border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
             >
-              Program Page{" "}
+              {t("common.program_page")}{" "}
               <ExternalLink size={14} className="text-brand-orange" />
             </Link>
           </div>
 
-          {/* Loan Detail Modal with Direct Page Callout */}
           <LoanDetailModal
             isOpen={activeModal === "heloc"}
             onClose={closeModal}
-            title="Home Equity Solutions"
+            title={t("heloc.modal_title")}
+            closeLabel={t("common.close_dialog")}
           >
             <div>
               <p className="text-sm font-semibold text-brand-orange mb-4">
-                Unlock the Value in Your Home Without Selling It
+                {t("heloc.subtitle")}
               </p>
               <p className="text-sm text-ink-2 leading-relaxed mb-8 max-w-3xl">
-                Whether you need ongoing access to funds or a one-time lump sum,
-                MyLoanDesk offers competitive home equity financing designed
-                around your goals.
+                {t("heloc.description")}
               </p>
 
-              {/* Stacked Long-Column Content */}
               <div className="space-y-8 text-xs text-ink-2 mb-8">
                 {/* HELOC Section */}
                 <div className="border-b border-line pb-8">
                   <h4 className="font-bold text-ink mb-2 text-base sm:text-lg">
-                    Home Equity Line of Credit (HELOC)
+                    {t("heloc.line_of_credit.title")}
                   </h4>
                   <p className="text-xs sm:text-sm text-ink-2 mb-4 leading-relaxed max-w-3xl">
-                    A HELOC gives you a revolving line of credit that lets you
-                    borrow only what you need, when you need it.
+                    {t("heloc.line_of_credit.desc")}
                   </p>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 bg-cream/30 p-5 rounded-2xl border border-line/60">
                     <div>
                       <h5 className="font-semibold text-ink mb-2.5 text-xs sm:text-sm">
-                        Best For:
+                        {t("heloc.line_of_credit.best_for_title")}
                       </h5>
                       <ul className="space-y-2">
-                        {[
-                          "Home improvements",
-                          "Debt consolidation",
-                          "Education expenses",
-                          "Investment opportunities",
-                          "Emergency funds",
-                        ].map((item, idx) => (
+                        {helocBestFor.map((item, idx) => (
                           <li
                             key={idx}
                             className="flex items-start gap-2 leading-tight"
@@ -547,16 +519,10 @@ export default function HomeEquitySection() {
 
                     <div>
                       <h5 className="font-semibold text-ink mb-2.5 text-xs sm:text-sm">
-                        Benefits:
+                        {t("heloc.line_of_credit.benefits_title")}
                       </h5>
                       <ul className="space-y-2">
-                        {[
-                          "Borrow up to $1,000,000*",
-                          "Interest paid only on funds used",
-                          "Flexible repayment options",
-                          "Fast approvals",
-                          "No appraisal in many cases",
-                        ].map((item, idx) => (
+                        {helocBenefits.map((item, idx) => (
                           <li
                             key={idx}
                             className="flex items-start gap-2 leading-tight"
@@ -573,25 +539,19 @@ export default function HomeEquitySection() {
                 {/* Home Equity Loan Section */}
                 <div className="border-b border-line pb-8">
                   <h4 className="font-bold text-ink mb-2 text-base sm:text-lg">
-                    Home Equity Loan (Second Mortgage)
+                    {t("heloc.loan.title")}
                   </h4>
                   <p className="text-xs sm:text-sm text-ink-2 mb-4 leading-relaxed max-w-3xl">
-                    Receive a one-time lump sum while keeping your existing
-                    first mortgage and interest rate.
+                    {t("heloc.loan.desc")}
                   </p>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 bg-cream/30 p-5 rounded-2xl border border-line/60">
                     <div>
                       <h5 className="font-semibold text-ink mb-2.5 text-xs sm:text-sm">
-                        Best For:
+                        {t("heloc.loan.best_for_title")}
                       </h5>
                       <ul className="space-y-2">
-                        {[
-                          "Large renovations",
-                          "Major purchases",
-                          "Debt consolidation",
-                          "Real estate investing",
-                        ].map((item, idx) => (
+                        {homeLoanBestFor.map((item, idx) => (
                           <li
                             key={idx}
                             className="flex items-start gap-2 leading-tight"
@@ -605,16 +565,10 @@ export default function HomeEquitySection() {
 
                     <div>
                       <h5 className="font-semibold text-ink mb-2.5 text-xs sm:text-sm">
-                        Benefits:
+                        {t("heloc.loan.benefits_title")}
                       </h5>
                       <ul className="space-y-2">
-                        {[
-                          "Fixed interest rate",
-                          "Predictable monthly payments",
-                          "Keep your current first mortgage",
-                          "Fast approvals",
-                          "Borrow substantial equity",
-                        ].map((item, idx) => (
+                        {homeLoanBenefits.map((item, idx) => (
                           <li
                             key={idx}
                             className="flex items-start gap-2 leading-tight"
@@ -632,39 +586,51 @@ export default function HomeEquitySection() {
               {/* Responsive Comparison Section */}
               <div className="bg-cream/50 border border-line rounded-2xl p-5 sm:p-6 mb-8">
                 <h4 className="font-bold text-ink text-sm sm:text-base mb-4 text-center">
-                  Which Option Is Right For You?
+                  {t("heloc.comparison.heading")}
                 </h4>
                 <div className="overflow-x-auto min-w-full">
                   <table className="w-full text-xs text-left border-collapse">
                     <thead>
                       <tr className="border-b border-line text-ink">
-                        <th className="py-2.5 px-3 font-bold w-1/2">HELOC</th>
                         <th className="py-2.5 px-3 font-bold w-1/2">
-                          Home Equity Loan
+                          {t("heloc.comparison.th_heloc")}
+                        </th>
+                        <th className="py-2.5 px-3 font-bold w-1/2">
+                          {t("heloc.comparison.th_loan")}
                         </th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-line/60 text-ink-2">
                       <tr>
-                        <td className="py-2.5 px-3">Revolving credit line</td>
-                        <td className="py-2.5 px-3">One-time lump sum</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2.5 px-3">Borrow as needed</td>
                         <td className="py-2.5 px-3">
-                          Receive all funds at closing
+                          {t("heloc.comparison.r1_heloc")}
+                        </td>
+                        <td className="py-2.5 px-3">
+                          {t("heloc.comparison.r1_loan")}
                         </td>
                       </tr>
                       <tr>
-                        <td className="py-2.5 px-3">Variable rate</td>
-                        <td className="py-2.5 px-3">Fixed rate</td>
+                        <td className="py-2.5 px-3">
+                          {t("heloc.comparison.r2_heloc")}
+                        </td>
+                        <td className="py-2.5 px-3">
+                          {t("heloc.comparison.r2_loan")}
+                        </td>
                       </tr>
                       <tr>
                         <td className="py-2.5 px-3">
-                          Great for ongoing projects
+                          {t("heloc.comparison.r3_heloc")}
                         </td>
                         <td className="py-2.5 px-3">
-                          Great for one-time expenses
+                          {t("heloc.comparison.r3_loan")}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="py-2.5 px-3">
+                          {t("heloc.comparison.r4_heloc")}
+                        </td>
+                        <td className="py-2.5 px-3">
+                          {t("heloc.comparison.r4_loan")}
                         </td>
                       </tr>
                     </tbody>
@@ -675,12 +641,10 @@ export default function HomeEquitySection() {
               {/* Get Expert Advice Section */}
               <div className="mb-6">
                 <h4 className="font-bold text-ink text-sm mb-1">
-                  Get Expert Advice
+                  {t("heloc.expert_heading")}
                 </h4>
                 <p className="text-xs sm:text-sm text-ink-2 leading-relaxed max-w-3xl">
-                  Not sure which option fits your needs? Our mortgage
-                  specialists will help you compare your options and recommend
-                  the financing solution that's right for you.
+                  {t("heloc.expert_desc")}
                 </p>
               </div>
 
@@ -688,19 +652,18 @@ export default function HomeEquitySection() {
               <div className="mb-6 p-4 bg-cream/40 border border-line rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-3">
                 <div>
                   <div className="text-xs font-semibold text-ink uppercase tracking-wider">
-                    Want to calculate your estimated CLTV &amp; compare options?
+                    {t("heloc.callout_title")}
                   </div>
                   <p className="text-xs text-ink-2">
-                    Explore full HELOC vs. Home Equity Loan guidelines and use
-                    our interactive equity calculator.
+                    {t("heloc.callout_desc")}
                   </p>
                 </div>
                 <Link
-                  href="/loan-programs/heloc-loans"
+                  href={getLocalizedHref("/loan-programs/heloc-loans")}
                   onClick={closeModal}
                   className="btn-shine bg-brand-orange text-white px-5 py-2.5 rounded-full text-xs font-semibold flex items-center gap-1.5 shrink-0 hover:bg-orange-600 transition-colors"
                 >
-                  Visit Full Program Page <ArrowRight size={14} />
+                  {t("heloc.callout_button")} <ArrowRight size={14} />
                 </Link>
               </div>
             </div>
@@ -710,7 +673,11 @@ export default function HomeEquitySection() {
         </div>
       </div>
 
-      <VideoModal videoInfo={activeVideo} onClose={closeVideo} />
+      <VideoModal
+        videoInfo={activeVideo}
+        onClose={closeVideo}
+        closeLabel={t("common.close_video")}
+      />
     </section>
   );
 }

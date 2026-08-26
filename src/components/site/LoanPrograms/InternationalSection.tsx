@@ -1,11 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Landmark, X, ArrowRight, ExternalLink } from "lucide-react";
 import Link from "next/link";
+import { Landmark, X, ArrowRight, ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
 import LoanProgramButton from "@/components/site/utils/LoanProgramButton";
 import { Fraunces } from "next/font/google";
+import { useTranslations } from "next-intl";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -20,11 +21,13 @@ function LoanDetailModal({
   isOpen,
   onClose,
   title,
+  closeLabel = "Close dialog",
   children,
 }: {
   isOpen: boolean;
   onClose: () => void;
   title: string;
+  closeLabel?: string;
   children: React.ReactNode;
 }) {
   useEffect(() => {
@@ -60,7 +63,7 @@ function LoanDetailModal({
           <button
             onClick={onClose}
             className="bg-line/40 hover:bg-line/80 text-ink p-2 rounded-full transition-colors"
-            aria-label="Close dialog"
+            aria-label={closeLabel}
           >
             <X size={20} />
           </button>
@@ -73,10 +76,22 @@ function LoanDetailModal({
   );
 }
 
-export default function InternationalCustomSection() {
+interface InternationalCustomSectionProps {
+  locale?: string;
+}
+
+export default function InternationalCustomSection({
+  locale = "en",
+}: InternationalCustomSectionProps) {
   const [activeModal, setActiveModal] = useState<string | null>(null);
+  const t = useTranslations("LoanPrograms.InternationalCustomSection");
+  const isEs = locale === "es";
 
   const closeModal = () => setActiveModal(null);
+  const getLocalizedHref = (path: string) => (isEs ? `/es${path}` : path);
+
+  const residentialList = t.raw("portugal.residential_list") as string[];
+  const commercialList = t.raw("portugal.commercial_list") as string[];
 
   return (
     <section
@@ -89,7 +104,7 @@ export default function InternationalCustomSection() {
           fraunces.className,
         )}
       >
-        International & Custom Footprints
+        {t("heading")}
       </h2>
 
       {/* Grid updated to gap-6 matching the fixed card layout */}
@@ -105,7 +120,7 @@ export default function InternationalCustomSection() {
                 <Landmark size={22} strokeWidth={1.8} />
               </div>
               <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2 py-1 rounded">
-                European desk
+                {t("portugal.tag")}
               </span>
             </div>
             <h3
@@ -114,16 +129,13 @@ export default function InternationalCustomSection() {
                 fraunces.className,
               )}
             >
-              Property Financing in Portugal
+              {t("portugal.title")}
             </h3>
             <p className="text-xs font-bold text-ink mb-2 line-clamp-1">
-              Residential, Commercial and Construction Loans
+              {t("portugal.subtitle")}
             </p>
             <p className="text-xs text-ink-2 leading-relaxed line-clamp-3">
-              Whether you are buying a home, investing in commercial real
-              estate, or developing a new project, we help qualified borrowers
-              explore financing options through our network of lenders in
-              Portugal.
+              {t("portugal.card_description")}
             </p>
           </div>
 
@@ -133,15 +145,17 @@ export default function InternationalCustomSection() {
               onClick={() => setActiveModal("portugal")}
               className="flex-1 py-3 bg-cream hover:bg-brand-orange hover:border-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
             >
-              Read More <ArrowRight size={14} />
+              {t("common.read_more")} <ArrowRight size={14} />
             </button>
 
             {/* Direct Page Link in Card */}
             <Link
-              href="/loan-programs/portugal-property-financing"
+              href={getLocalizedHref(
+                "/loan-programs/portugal-property-financing",
+              )}
               className="flex-1 py-3 bg-primary-bg hover:bg-cream border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
             >
-              Program Page{" "}
+              {t("common.program_page")}{" "}
               <ExternalLink size={14} className="text-brand-orange" />
             </Link>
           </div>
@@ -149,37 +163,27 @@ export default function InternationalCustomSection() {
           <LoanDetailModal
             isOpen={activeModal === "portugal"}
             onClose={closeModal}
-            title="Property Financing in Portugal"
+            title={t("portugal.modal_title")}
+            closeLabel={t("common.close_dialog")}
           >
             <div>
               <p className="text-xs font-bold text-ink mb-3">
-                Residential, Commercial and Construction Loans
+                {t("portugal.subtitle")}
               </p>
               <p className="text-xs text-ink-2 leading-relaxed mb-4">
-                Whether you are buying a home, investing in commercial real
-                estate, or developing a new project, we help qualified borrowers
-                explore financing options through our network of lenders in
-                Portugal.
+                {t("portugal.intro_p")}
               </p>
 
               <p className="text-xs font-bold text-ink mb-3">
-                Residential Loans
+                {t("portugal.residential_title")}
               </p>
 
               <p className="text-xs text-ink-2 leading-relaxed mb-4">
-                Mortgage solutions may be available for residents,
-                non-residents, foreign nationals and international buyers
-                purchasing:
+                {t("portugal.residential_intro")}
               </p>
 
               <ul className="space-y-2 mb-4">
-                {[
-                  "Primary residences",
-                  "Second homes and vacation properties",
-                  "Apartments and villas",
-                  "Residential investment properties",
-                  "New-build homes",
-                ].map((item, index) => (
+                {residentialList.map((item, index) => (
                   <li
                     key={index}
                     className="flex items-start gap-2 text-xs text-ink/90 leading-normal"
@@ -191,23 +195,15 @@ export default function InternationalCustomSection() {
               </ul>
 
               <p className="text-xs font-bold text-ink mb-3">
-                Commercial Loans
+                {t("portugal.commercial_title")}
               </p>
 
               <p className="text-xs text-ink-2 leading-relaxed mb-4">
-                We assist investors, business owners and developers seeking
-                financing for:
+                {t("portugal.commercial_intro")}
               </p>
 
               <ul className="space-y-2 mb-4">
-                {[
-                  "Apartment and multifamily buildings",
-                  "Hotels and hospitality properties",
-                  "Retail, office and mixed-use properties",
-                  "Warehouses and industrial facilities",
-                  "Property acquisitions and refinancing",
-                  "Commercial investment projects",
-                ].map((item, index) => (
+                {commercialList.map((item, index) => (
                   <li
                     key={index}
                     className="flex items-start gap-2 text-xs text-ink/90 leading-normal"
@@ -219,30 +215,30 @@ export default function InternationalCustomSection() {
               </ul>
 
               <p className="text-xs font-bold text-ink mb-3">
-                Construction and Development Loans
+                {t("portugal.construction_title")}
               </p>
               <p className="text-xs text-ink-2 leading-relaxed mb-6">
-                Financing may also be available for ground-up construction,
-                renovation, and development projects.
+                {t("portugal.construction_intro")}
               </p>
 
               {/* Direct Program Page Link Box inside Modal */}
               <div className="mb-6 p-4 bg-cream/40 border border-line rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-3">
                 <div>
                   <div className="text-xs font-semibold text-ink uppercase tracking-wider">
-                    Looking for EUR mortgage calculators & guidelines?
+                    {t("portugal.callout_title")}
                   </div>
                   <p className="text-xs text-ink-2">
-                    Estimate monthly euro payments, review non-resident deposit
-                    rules, and check Golden Visa clarifications.
+                    {t("portugal.callout_desc")}
                   </p>
                 </div>
                 <Link
-                  href="/loan-programs/portugal-property-financing"
+                  href={getLocalizedHref(
+                    "/loan-programs/portugal-property-financing",
+                  )}
                   onClick={closeModal}
                   className="btn-shine bg-brand-orange text-white px-5 py-2.5 rounded-full text-xs font-semibold flex items-center gap-1.5 shrink-0 hover:bg-orange-600 transition-colors"
                 >
-                  Visit Full Program Page <ArrowRight size={14} />
+                  {t("portugal.callout_button")} <ArrowRight size={14} />
                 </Link>
               </div>
             </div>

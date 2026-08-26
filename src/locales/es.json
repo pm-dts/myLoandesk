@@ -2091,5 +2091,1009 @@
       "faq_q4_question": "¿Cómo puedo recibir fondos de una hipoteca reversa?",
       "faq_q4_answer": "Los fondos pueden recibirse como pago único inicial, mensualidades, una línea de crédito en crecimiento o una combinación personalizada."
     }
+  },
+  "LoanPrograms": {
+    "meta": {
+      "title": "Programas de Préstamos Hipotecarios Mayoristas y Comerciales | MyLoanDesk",
+      "description": "Explore diversos programas de préstamos residenciales, comerciales, DSCR, Jumbo, FHA, VA, hipotecas reversas, SBA y propiedades internacionales en más de 100 prestamistas mayoristas.",
+      "og_title": "Programas de Préstamos Hipotecarios Mayoristas y Comerciales | MyLoanDesk",
+      "og_description": "Explore diversos programas de préstamos residenciales, comerciales, DSCR, Jumbo, FHA, VA, hipotecas reversas, SBA y propiedades internacionales en más de 100 prestamistas mayoristas.",
+      "og_alt": "Programas de Préstamos de MyLoanDesk",
+      "twitter_title": "Programas de Préstamos Hipotecarios Mayoristas y Comerciales | MyLoanDesk",
+      "twitter_description": "Compare programas hipotecarios residenciales, comerciales, para inversores y especializados con opciones de suscripción personalizadas."
+    },
+    "breadcrumbs": {
+      "home": "Inicio",
+      "loan_programs": "Programas de Préstamos"
+    },
+    "hero": {
+      "heading_start": "Nuestros Programas de",
+      "heading_italic": "Préstamos",
+      "p1": "Somos expertos en Préstamos Residenciales y Comerciales, especializándonos en Préstamos de Cartera.",
+      "p2": "Ofrecemos una amplia gama de programas hipotecarios residenciales y comerciales Convencionales, Jumbo y de Cartera para prestatarios con necesidades únicas que los grandes bancos estándar suelen rechazar.",
+      "p3": "También atendemos a clientes que buscan un prestamista para preaprobar propiedades únicas que tal vez no cumplan con los requisitos hipotecarios típicos.",
+      "p4": "My Loan Desk es su solución integral para todas sus necesidades hipotecarias. Nos especializamos en ayudar a compradores que tienen dificultades para obtener una preaprobación bajo los estándares crediticios convencionales."
+    },
+    "footer_disclaimer": {
+      "p1": "* Las tasas y programas son ilustraciones sujetas a cambios sin previo aviso. Estos cálculos no constituyen una Estimación de Préstamo oficial ni un compromiso vinculante de concesión. La calificación está sujeta a verificación de activos financieros y perfiles de crédito.",
+      "p2": "MyLoanDesk.com es una entidad crediticia independiente y no está afiliada al HUD, FHA, VA, USDA ni a ninguna agencia federal. Cumplimos estrictamente con las normas de Igualdad de Oportunidades de Vivienda.",
+      "p3": "Secured Horizon Mortgage Group, Inc. NMLS 314226, 1444825 (www.nmlsconsumeraccess.org) | (305) 891-6500 | 1801 NE 123 St, Suite 314, North Miami, FL 33181."
+    },
+    "schema": {
+      "webpage_name": "Programas de Préstamos Hipotecarios Mayoristas y Comerciales | MyLoanDesk",
+      "webpage_description": "Directorio completo de programas de préstamos hipotecarios residenciales, comerciales, de cartera y de documentación alternativa.",
+      "itemlist_name": "Programas de Financiamiento e Hipotecas Disponibles",
+      "faq_q1_question": "¿Qué diferencia a los programas de préstamos de MyLoanDesk de los bancos minoristas estándar?",
+      "faq_q1_answer": "A diferencia de un solo banco con pautas rígidas, MyLoanDesk opera como una correduría independiente asociada con más de 100 prestamistas mayoristas, lo que nos permite aprobar perfiles de ingresos no tradicionales, carteras de inversión, propiedades comerciales y escenarios especializados.",
+      "faq_q2_question": "¿Puedo calificar para una hipoteca si trabajo por cuenta propia o no cuento con historial de declaraciones de impuestos?",
+      "faq_q2_answer": "Sí. Ofrecemos programas de documentación alternativa, incluidos préstamos por Estados de Cuenta Bancarios, verificación de Ganancias y Pérdidas (P&L), programas 1099 y préstamos DSCR que no dependen de declaraciones de impuestos personales.",
+      "faq_q3_question": "¿Cuál es el pago inicial mínimo en sus opciones de préstamos residenciales?",
+      "faq_q3_answer": "Los pagos iniciales mínimos van desde el 0% para veteranos elegibles a través de préstamos VA, hasta el 3% para compradores convencionales de primera vivienda y el 3.5% para programas FHA estándar o de documentación alternativa."
+    },
+    "HomeEquitySection": {
+      "heading": "Renovación, Refinanciamientos y Líneas de Crédito sobre el Capital",
+      "common": {
+        "read_more": "Leer Más",
+        "program_page": "Página del Programa",
+        "close_dialog": "Cerrar cuadro de diálogo",
+        "close_video": "Cerrar video"
+      },
+      "fha_203k": {
+        "tag": "Matriz de Renovación",
+        "title": "Préstamos de Renovación FHA 203(k)",
+        "description": "El programa 203(k) de la FHA ofrece una solución de préstamo único accesible que combina la compra o el refinanciamiento de la propiedad junto con los costos calculados de las mejoras estructurales necesarias.",
+        "modal_title": "Préstamos de Renovación FHA 203(k)",
+        "benefits_heading": "Los beneficios incluyen:",
+        "benefits": [
+          "Se aplican las pautas del programa FHA",
+          "Capacidad de aprovechar el valor futuro después de las mejoras",
+          "Opciones de pago inicial estructural bajo",
+          "Criterios flexibles de calificación crediticia",
+          "Hipoteca asumible para futuros compradores",
+          "Elegible para propiedades de 1 a 4 unidades, PUDs y condominios"
+        ],
+        "properties_heading": "Propiedades elegibles incluyen:",
+        "properties": [
+          "Residencias unifamiliares adosadas e independientes",
+          "Propiedades multifamiliares de 2 a 4 unidades"
+        ],
+        "improvements_heading": "Mejoras Elegibles:",
+        "improvements_text": "Ampliaciones estructurales, remodelación de cocina/baño, sótanos terminados, terrazas, techos, mejoras de eficiencia energética y adaptaciones de accesibilidad."
+      },
+      "refinance": {
+        "tag": "Mesa de Refinanciamiento",
+        "title": "Opciones de Refinanciamiento",
+        "description": "Asegure ahorros mensuales, consolide deudas de alto interés, obtenga dinero en efectivo para renovaciones o acelere la amortización de su hipoteca.",
+        "modal_title": "Opciones de Refinanciamiento",
+        "sections": {
+          "lower_payments": {
+            "title": "Reduzca sus Pagos Mensuales",
+            "description": "Consiga ahorros constantes cambiando de una tasa ajustable volátil o una hipoteca de tasa fija alta a plazos fijos estables a largo plazo."
+          },
+          "cash_out": {
+            "title": "Retiro de Efectivo (Cash-Out)",
+            "description": "Aproveche el capital acumulado en su propiedad para pagar estudios, financiar remodelaciones o atender compromisos financieros importantes."
+          },
+          "consolidate": {
+            "title": "Consolide sus Deudas",
+            "description": "Liquide deudas no garantizadas de alto interés aprovechando tasas hipotecarias más bajas y mejorando significativamente su liquidez mensual."
+          },
+          "pay_sooner": {
+            "title": "Pague su Hipoteca Más Rápido",
+            "description": "Acelere su patrimonio neto reduciendo su plazo a 15 años, recortando drásticamente el costo total de intereses a largo plazo."
+          }
+        }
+      },
+      "streamline": {
+        "tag": "Refinanciamiento Streamline",
+        "title": "Refinanciamiento FHA Streamline",
+        "description": "Si tiene una hipoteca FHA al día, el programa FHA Streamline representa una vía altamente eficiente para reducir sus tasas de interés y pagos mensuales.",
+        "modal_title": "Refinanciamiento FHA Streamline",
+        "benefits_heading": "Los beneficios incluyen:",
+        "benefits": [
+          "Por lo general no se requiere tasación de la propiedad",
+          "Requisitos mínimos de documentación",
+          "Procesamiento y suscripción rápidos",
+          "Flexibilidad para ajustar el plazo del préstamo",
+          "Costos de cierre de bolsillo mínimos"
+        ],
+        "callout_title": "¿Desea calcular sus ahorros de refinanciamiento?",
+        "callout_desc": "Verifique su beneficio tangible neto y calcule su nuevo pago mensual estimado.",
+        "callout_button": "Ver Página del Programa"
+      },
+      "heloc": {
+        "tag": "Acceso al Capital",
+        "title": "Soluciones de Capital de la Vivienda",
+        "subtitle": "Libere el Valor de su Casa sin Necesidad de Venderla",
+        "description": "Ya sea que necesite acceso continuo a fondos o una suma global única, MyLoanDesk ofrece financiamiento de capital diseñado a la medida de sus metas.",
+        "video_button": "Vea Cómo Funciona",
+        "modal_title": "Soluciones de Capital de la Vivienda",
+        "line_of_credit": {
+          "title": "Línea de Crédito sobre el Capital (HELOC)",
+          "desc": "Un HELOC le brinda una línea de crédito rotativa que le permite retirar solo lo que necesita, cuando lo necesita.",
+          "best_for_title": "Ideal Para:",
+          "best_for": [
+            "Mejoras en el hogar",
+            "Consolidación de deudas",
+            "Gastos de educación",
+            "Oportunidades de inversión",
+            "Fondos para emergencias"
+          ],
+          "benefits_title": "Beneficios:",
+          "benefits": [
+            "Préstamos de hasta $1,000,000*",
+            "Intereses únicamente sobre los fondos utilizados",
+            "Opciones flexibles de pago",
+            "Aprobaciones ágiles",
+            "Sin tasación en muchos casos"
+          ]
+        },
+        "loan": {
+          "title": "Préstamo sobre el Capital de la Vivienda (Segunda Hipoteca)",
+          "desc": "Reciba una suma global fija en un solo pago conservando su primera hipoteca y su tasa de interés actual.",
+          "best_for_title": "Ideal Para:",
+          "best_for": [
+            "Renovaciones importantes",
+            "Compras grandes",
+            "Consolidación de deudas",
+            "Inversiones inmobiliarias"
+          ],
+          "benefits_title": "Beneficios:",
+          "benefits": [
+            "Tasa de interés fija",
+            "Pagos mensuales predecibles",
+            "Conserva su primera hipoteca actual",
+            "Aprobaciones rápidas",
+            "Permite acceder a un monto significativo de capital"
+          ]
+        },
+        "comparison": {
+          "heading": "¿Cuál Opción es la Correcta para Usted?",
+          "th_heloc": "HELOC",
+          "th_loan": "Préstamo sobre el Capital",
+          "r1_heloc": "Línea de crédito rotativa",
+          "r1_loan": "Suma global en un solo pago",
+          "r2_heloc": "Retira según lo necesite",
+          "r2_loan": "Recibe todos los fondos al cierre",
+          "r3_heloc": "Tasa variable",
+          "r3_loan": "Tasa fija",
+          "r4_heloc": "Excelente para proyectos continuos",
+          "r4_loan": "Excelente para gastos puntuales únicos"
+        },
+        "expert_heading": "Obtenga Asesoría de Expertos",
+        "expert_desc": "¿No está seguro de qué opción se adapta mejor? Nuestros especialistas hipotecarios le ayudarán a comparar alternativas y recomendar la solución adecuada.",
+        "callout_title": "¿Desea calcular su CLTV estimado y comparar opciones?",
+        "callout_desc": "Explore las directrices completas de HELOC vs. Préstamo sobre el Capital y utilice nuestra calculadora de capital interactiva.",
+        "callout_button": "Ver Página del Programa"
+      }
+    },
+    "RealEstateInvestmentSection": {
+      "heading": "Préstamos para Inversión en Bienes Raíces",
+      "common": {
+        "read_more": "Leer Más",
+        "program_page": "Página del Programa",
+        "close_dialog": "Cerrar cuadro de diálogo",
+        "apply_now": "Solicitar Ahora",
+        "contact_us_now": "Contáctenos Ahora"
+      },
+      "dscr": {
+        "tag": "Inversionista",
+        "title": "Préstamos DSCR para Propiedades de Inversión",
+        "subtitle": "Haga Crecer su Portafolio Inmobiliario Sin Verificación de Ingresos Personales",
+        "card_description": "Un préstamo por Cobertura del Servicio de la Deuda (DSCR) está diseñado específicamente para inversionistas. En lugar de calificar según sus ingresos personales o declaraciones de impuestos...",
+        "modal_title": "Préstamos DSCR para Propiedades de Inversión",
+        "p1": "Un préstamo por Cobertura del Servicio de la Deuda (DSCR) está diseñado específicamente para inversionistas inmobiliarios. En lugar de calificar según sus ingresos personales, empleo o declaraciones de impuestos, el préstamo se basa principalmente en la capacidad de la propiedad para generar ingresos por alquiler.",
+        "p2": "Ya sea que compre su primera propiedad de inversión, amplíe su portafolio o refinancie un alquiler existente, un préstamo DSCR ofrece una solución de financiamiento flexible que mantiene el enfoque en su inversión y no en sus finanzas personales.",
+        "why_title": "¿Por Qué Elegir un Préstamo DSCR?",
+        "why_list": [
+          "Califique principalmente según los ingresos por alquiler de la propiedad",
+          "No se requiere verificación de ingresos personales para calificar*",
+          "No se requieren declaraciones de impuestos, W-2s ni recibos de pago en muchos casos*",
+          "Opciones disponibles para compra, refinanciamiento o refinanciamiento con retiro de efectivo",
+          "Programas de préstamos a tasa fija y ajustable",
+          "Financiamiento para viviendas unifamiliares, condominios, townhomes y propiedades de inversión de 2 a 4 unidades",
+          "Disponible tanto para inversionistas nuevos como experimentados",
+          "Muchos programas permiten financiamiento a nombre de una LLC u otra entidad comercial",
+          "Montos de préstamo competitivos con suscripción flexible"
+        ],
+        "who_title": "¿Para Quién es un Préstamo DSCR?",
+        "who_intro": "Un préstamo DSCR puede ser una excelente opción si usted es:",
+        "who_list": [
+          "Un inversionista inmobiliario construyendo patrimonio a largo plazo",
+          "Trabajador independiente y prefiere no documentar ingresos personales",
+          "Alguien que expande su portafolio de propiedades de alquiler",
+          "Inversionista en propiedades de alquiler a corto o largo plazo",
+          "Un extranjero que compra propiedades de inversión en EE. UU. a través de programas elegibles"
+        ],
+        "grow_title": "Invierta de Forma Inteligente. Crezca Más Rápido.",
+        "grow_p": "Con acceso a una amplia red de prestamistas DSCR, MyLoanDesk puede ayudarle a comparar opciones de préstamos diseñadas para adaptarse a su estrategia de inversión. Le guiaremos en cada paso para asegurar un financiamiento que respalde sus metas a largo plazo.",
+        "ready_title": "¿Listo para financiar su próxima propiedad de inversión?",
+        "ready_desc": "Comuníquese hoy con MyLoanDesk para explorar sus opciones de préstamos DSCR y obtener una precalificación.",
+        "callout_title": "¿Desea calcular su índice DSCR exacto?",
+        "callout_desc": "Utilice nuestro calculador interactivo de flujo de caja y consulte los requisitos de calificación completos.",
+        "callout_button": "Ver Página del Programa",
+        "disclaimer_title": "Descargo de Responsabilidad del Programa",
+        "disclaimer_text": "Las directrices del programa, la elegibilidad de la propiedad, los montos de los préstamos, los requisitos de reserva y la documentación varían según el prestamista. No todos los solicitantes o propiedades calificarán. Se aplican requisitos de ingresos por alquiler y flujo de efectivo de la propiedad. Términos y disponibilidad sujetos a cambios sin previo aviso."
+      },
+      "fix_and_flip": {
+        "tag": "Inversionista",
+        "title": "Préstamos Fix & Flip",
+        "subtitle": "Financiamiento Rápido y Flexible para Inversionistas Inmobiliarios",
+        "card_description": "Ya sea que esté renovando su primera propiedad de inversión o administrando múltiples proyectos al año, un préstamo Fix & Flip le proporciona el capital necesario para comprar, renovar y revender...",
+        "modal_title": "Préstamos Fix & Flip",
+        "p1": "Ya sea que esté renovando su primera propiedad de inversión o administrando múltiples proyectos al año, un préstamo Fix & Flip le proporciona el financiamiento necesario para adquirir, remodelar y revender propiedades residenciales con total confianza.",
+        "p2": "Estos préstamos a corto plazo están diseñados específicamente para inversionistas inmobiliarios, ofreciendo aprobaciones rápidas y financiamiento tanto para la adquisición como para los costos de remodelación elegibles, permitiéndole concentrarse en maximizar su retorno de inversión.",
+        "why_title": "¿Por Qué Elegir un Préstamo Fix & Flip?",
+        "why_list": [
+          "Financiamiento tanto para la compra de la propiedad como para los costos de renovación elegibles",
+          "Aprobaciones rápidas y cierres ágiles para competir con compradores en efectivo",
+          "Financiamiento a corto plazo adaptado a proyectos de renovación y reventa",
+          "Montos de préstamo basados en el Valor Después de Reparaciones (ARV) proyectado",
+          "Financiamiento para viviendas unifamiliares, condominios, townhomes y propiedades de 2 a 4 unidades",
+          "Disponible para inversionistas principiantes y con experiencia",
+          "Posibilidad de manejar múltiples proyectos simultáneos para prestatarios calificados",
+          "Proceso de solicitud simplificado con asesoría crediticia dedicada"
+        ],
+        "who_title": "¿Para Quién es un Préstamo Fix & Flip?",
+        "who_intro": "Un préstamo Fix & Flip puede ser una excelente elección si usted busca:",
+        "who_list": [
+          "Comprar propiedades para renovar y revender con rapidez",
+          "Expandir su negocio de inversión inmobiliaria",
+          "Financiamiento ágil para asegurar oportunidades competitivas",
+          "Renovar propiedades en dificultades o con potencial de valor agregado",
+          "Construir un portafolio de inversión inmobiliaria rentable"
+        ],
+        "profit_title": "Actúe Rápido. Renueve. Obtenga Ganancias.",
+        "profit_p": "El éxito en la inversión inmobiliaria depende de la rapidez y de un financiamiento confiable. En MyLoanDesk, trabajamos con una red de prestamistas especializados para ayudarle a obtener financiamiento competitivo y flexible adaptado a su plan de inversión.",
+        "ready_title": "¿Listo para financiar su próximo proyecto?",
+        "ready_desc": "Comuníquese hoy con MyLoanDesk para explorar sus opciones de préstamos Fix & Flip y precalificar.",
+        "callout_title": "¿Desea calcular su margen de ganancia y ratio ARV?",
+        "callout_desc": "Explore las directrices completas de fix & flip y utilice nuestro estimador de rentabilidad interactivo.",
+        "callout_button": "Ver Página del Programa",
+        "disclaimer_title": "Descargo de Responsabilidad del Programa",
+        "disclaimer_text": "Las directrices del programa, montos de préstamo, límites de préstamo a valor, requisitos de ARV, desembolsos de renovación y calificaciones varían según el prestamista. No todos los solicitantes o propiedades calificarán. Términos y disponibilidad sujetos a cambios sin previo aviso."
+      },
+      "construction": {
+        "tag": "Construcción",
+        "title": "Préstamos para Construcción",
+        "subtitle": "Financie la Casa de sus Sueños o su Próximo Proyecto de Desarrollo",
+        "card_description": "Ya sea que esté construyendo una casa personalizada, desarrollando una comunidad residencial o edificando propiedades de inversión, MyLoanDesk ofrece préstamos flexibles para construcción desde cero...",
+        "modal_title": "Préstamos de Construcción desde Cero",
+        "p1": "Ya sea que construya una casa personalizada, desarrolle una comunidad residencial o edifique propiedades de inversión, MyLoanDesk ofrece préstamos flexibles de construcción desde cero diseñados para hacer realidad su proyecto.",
+        "p2": "Desde la compra del terreno hasta el certificado final de ocupación, le ayudaremos a obtener un financiamiento adaptado al tamaño, alcance y cronograma de su obra.",
+        "why_title": "¿Por Qué Elegir un Préstamo para Construcción?",
+        "why_list": [
+          "Financia la adquisición de terrenos, costos de construcción y gastos aprobados del proyecto",
+          "Disponible para viviendas de ocupación principal, segundas residencias y propiedades de inversión",
+          "Financiamiento de construcción a permanente en muchos programas, eliminando la necesidad de un segundo cierre",
+          "Pagos de solo interés durante la fase de obra en muchos programas",
+          "Fondos liberados mediante desembolsos programados a medida que se completan los hitos",
+          "Opciones flexibles para prestatarios individuales, constructores independientes y desarrolladores residenciales",
+          "Montos de préstamo competitivos y suscripción adaptada a su proyecto",
+          "Financiamiento para viviendas unifamiliares, residencias de lujo y desarrollos inmobiliarios"
+        ],
+        "who_title": "¿Para Quién es un Préstamo de Construcción?",
+        "who_intro": "Un préstamo de construcción puede ser la solución adecuada si usted está:",
+        "who_list": [
+          "Construyendo su residencia principal a medida",
+          "Edificando una casa vacacional o segunda vivienda",
+          "Desarrollando viviendas para reventa",
+          "Construyendo propiedades de inversión en alquiler",
+          "Desarrollando múltiples viviendas o subdivisiones residenciales",
+          "Trabajando como constructor experimentado o propietario-constructor calificado"
+        ],
+        "build_title": "Construya con Confianza",
+        "build_p": "El financiamiento de obras requiere experiencia y el socio prestamista adecuado. En MyLoanDesk, colaboramos con una amplia red de prestamistas para brindarle un respaldo crediticio a la medida de su proyecto. Desde la planificación inicial hasta la entrega final de la obra, estamos aquí para guiarle.",
+        "ready_title": "¿Listo para iniciar la obra?",
+        "ready_desc": "Comuníquese hoy con MyLoanDesk para hablar sobre su proyecto de construcción y explorar las opciones de financiamiento disponibles.",
+        "callout_title": "¿Desea calcular su presupuesto de construcción y cronograma de desembolsos?",
+        "callout_desc": "Explore las directrices completas para préstamos de construcción y utilice nuestro estimador de presupuesto interactivo.",
+        "callout_button": "Ver Página del Programa",
+        "disclaimer_title": "Descargo de Responsabilidad del Programa",
+        "disclaimer_text": "Las directrices del programa, elegibilidad del terreno, calificaciones del prestatario, montos, cronogramas de desembolso, reservas de interés y requisitos varían según el prestamista. No todos los solicitantes o proyectos calificarán. Términos y disponibilidad sujetos a cambios sin previo aviso."
+      },
+      "bridge": {
+        "tag": "Corto Plazo",
+        "title": "Préstamos Puente",
+        "subtitle": "Financiamiento a Corto Plazo para Cubrir la Transición",
+        "card_description": "Un préstamo puente ofrece financiamiento rápido a corto plazo cuando el tiempo es crítico. Ya sea que compre una nueva propiedad antes de vender la actual o aproveche una oportunidad de inversión...",
+        "modal_title": "Préstamos Puente",
+        "p1": "Un préstamo puente brinda financiamiento rápido y a corto plazo cuando el tiempo es fundamental. Ya sea que compre una nueva propiedad antes de vender la actual, adquiera una oportunidad de inversión o espere financiamiento a largo plazo, un préstamo puente le brinda acceso inmediato al capital que necesita.",
+        "p2": "Diseñados para brindar rapidez y flexibilidad, los préstamos puente le permiten actuar con agilidad en mercados competitivos sin perder oportunidades clave.",
+        "highlights_title": "Puntos Destacados del Programa",
+        "highlights": [
+          "Compre una nueva propiedad antes de vender la actual",
+          "Aprobaciones rápidas y desembolsos ágiles para prestatarios calificados",
+          "Financiamiento a corto plazo con opciones de pago flexibles",
+          "Disponible para propiedades residenciales y comerciales",
+          "Financiamiento para residencias principales, segundas viviendas, propiedades de inversión y proyectos fix-and-flip",
+          "Utilice el capital existente de su propiedad para fortalecer su capacidad de compra",
+          "Opciones de pago de solo interés en programas seleccionados",
+          "Transición hacia financiamiento permanente o venta de la propiedad"
+        ],
+        "ideal_title": "Ideal Para",
+        "ideal": [
+          "Propietarios que compran antes de vender",
+          "Inversionistas inmobiliarios",
+          "Proyectos de remodelación y reventa (Fix-and-flip)",
+          "Adquisiciones de inmuebles con alta demanda",
+          "Transacciones con límites estrictos de tiempo",
+          "Desarrolladores en espera de financiamiento a largo plazo"
+        ],
+        "opportunity_title": "Actúe Rápido Cuando Llegue la Oportunidad",
+        "opportunity_p": "En el mercado actual, esperar por financiamiento tradicional puede significar perder la propiedad ideal. MyLoanDesk trabaja con una red de prestamistas que ofrecen soluciones de préstamos puente flexibles para ayudarle a cerrar con rapidez y hacer una transición impecable a su plan financiero a largo plazo.",
+        "need_fast_title": "¿Necesita financiamiento rápido?",
+        "need_fast_desc": "Comuníquese hoy con MyLoanDesk para conocer cómo un préstamo puente puede ayudarle a avanzar con seguridad."
+      }
+    },
+    "CommercialFinancingSection": {
+      "heading": "Soluciones de Financiamiento Comercial",
+      "common": {
+        "read_more": "Leer Más",
+        "program_page": "Página del Programa",
+        "close_dialog": "Cerrar cuadro de diálogo",
+        "contact_for_details": "Contáctenos Ahora para más detalles"
+      },
+      "cre": {
+        "tag": "Propiedad Comercial",
+        "title": "Préstamos para Bienes Raíces Comerciales",
+        "subtitle": "Soluciones de Financiamiento para Empresas, Inversionistas y Desarrolladores",
+        "card_description": "Ya sea que compre, refinancie, construya o amplíe bienes raíces comerciales, MyLoanDesk le brinda acceso a una amplia red de prestamistas comerciales.",
+        "modal_title": "Préstamos para Bienes Raíces Comerciales",
+        "p1": "Ya sea que compre, refinancie, construya o amplíe bienes raíces comerciales, MyLoanDesk ofrece acceso a una amplia red de prestamistas comerciales con financiamiento adaptado a sus objetivos empresariales y de inversión.",
+        "p2": "Desde propiedades ocupadas por el propietario hasta proyectos de inversión y desarrollo a gran escala, le ayudaremos a obtener el financiamiento adecuado con tasas competitivas, estructuras flexibles y asesoría personalizada en cada paso.",
+        "properties_title": "Propiedades Comerciales que Financiamos",
+        "properties_list": [
+          "Edificios de Oficinas",
+          "Centros Comerciales / Plazas",
+          "Propiedades Multifamiliares y Apartamentos",
+          "Desarrollos de Uso Mixto",
+          "Instalaciones Industriales y Bodegas",
+          "Hoteles y Moteles",
+          "Edificios Médicos y Profesionales",
+          "Restaurantes y Propiedades de Hospitalidad",
+          "Instalaciones de Autoalmacenamiento (Self-Storage)",
+          "Adquisición y Desarrollo de Terrenos",
+          "Proyectos de Construcción desde Cero"
+        ],
+        "solutions_title": "Soluciones de Préstamos Comerciales",
+        "solutions_list": [
+          "Compra de Propiedad",
+          "Refinanciamiento Comercial",
+          "Refinanciamiento con Retiro de Efectivo",
+          "Financiamiento para Construcción desde Cero",
+          "Préstamos Puente",
+          "Préstamos SBA",
+          "Préstamos de Cartera"
+        ],
+        "callout_title": "¿Desea calcular pagos comerciales y ratio LTV?",
+        "callout_desc": "Calcule costos mensuales, compare condiciones SBA 7(a)/504 vs. convencionales y conozca opciones para propiedades de uso especial.",
+        "callout_button": "Ver Página del Programa",
+        "why_title": "¿Por Qué Elegir MyLoanDesk?",
+        "why_list": [
+          "Acceso a una amplia red de prestamistas comerciales",
+          "Financiamiento para propiedades de uso propio e inversión",
+          "Tasas competitivas y estructuras crediticias flexibles",
+          "Soluciones para adquisiciones, refinanciamientos, desarrollo y expansión",
+          "Asesoría experta desde la solicitud hasta el cierre"
+        ],
+        "ready_title": "¿Listo para financiar su próximo proyecto comercial?",
+        "ready_desc": "Ya sea que adquiera su primera propiedad comercial o expanda un portafolio inmobiliario establecido, MyLoanDesk le ayuda a encontrar la solución de financiamiento adecuada."
+      },
+      "equipment": {
+        "tag": "Crecimiento de Capital",
+        "title": "Financiamiento de Equipamiento",
+        "subtitle": "Financie la Maquinaria y Equipos que su Negocio Necesita para Crecer",
+        "card_description": "Ya sea que compre equipo nuevo, reemplace maquinaria obsoleta o amplíe sus operaciones, MyLoanDesk ofrece soluciones flexibles de financiamiento de equipos...",
+        "modal_title": "Financiamiento de Equipamiento",
+        "p1": "Ya sea que adquiera equipo nuevo, reemplace maquinaria obsoleta o amplíe operaciones, MyLoanDesk ofrece financiamiento flexible diseñado para hacer crecer su negocio mientras preserva su capital de trabajo.",
+        "p2": "Con opciones de financiamiento competitivas y aprobaciones rápidas, puede obtener el equipo necesario sin comprometer sus reservas de efectivo.",
+        "why_title": "¿Por Qué Elegir Financiamiento de Equipos?",
+        "why_list": [
+          "Financiamiento de equipo nuevo o usado",
+          "Preserva el capital de trabajo para la operativa diaria",
+          "Tasas competitivas y plazos de pago flexibles",
+          "Aprobaciones ágiles y desembolso rápido para prestatarios calificados",
+          "Hasta 100% de financiamiento disponible para equipos elegibles",
+          "Disponible para una amplia variedad de industrias y sectores"
+        ],
+        "equipment_title": "Equipos que Podemos Ayudar a Financiar",
+        "equipment_list": [
+          "Maquinaria de Construcción",
+          "Maquinaria de Manufactura",
+          "Equipo Médico y Dental",
+          "Equipamiento de Restaurante",
+          "Vehículos Comerciales",
+          "Mobiliario y Tecnología de Oficina",
+          "Maquinaria Agrícola",
+          "Equipos Industriales y de Almacén"
+        ],
+        "forward_title": "Mantenga su Negocio en Constante Avance",
+        "forward_desc": "El equipamiento adecuado aumenta la productividad, optimiza la eficiencia y apoya el crecimiento sostenible. MyLoanDesk trabaja con especialistas en financiamiento de equipos para ofrecerle una solución adaptada a sus necesidades.",
+        "ready_title": "¿Listo para financiar su próxima adquisición de equipo?",
+        "ready_desc": "Comuníquese hoy con MyLoanDesk para explorar sus opciones de financiamiento de maquinaria y equipos."
+      },
+      "business_lines": {
+        "tag": "Acceso a Liquidez",
+        "title": "Líneas de Crédito Empresariales",
+        "subtitle": "Asegure acceso rápido a reservas rotativas de capital de trabajo.",
+        "card_description": "Mantener una liquidez estratégica protege sus operaciones frente a imprevistos. Utilice fondos rotativos programáticos únicamente cuando se presenten necesidades específicas...",
+        "modal_title": "Líneas de Crédito Empresariales",
+        "p1": "Mantener liquidez estratégica blinda las operaciones contra presiones imprevistas. Despliegue fondos rotativos flexibles solo cuando surjan necesidades concretas de asignación, protegiendo sus canales de rentabilidad neta.",
+        "features_title": "Características Operativas:",
+        "features_list": [
+          "· El acceso rotativo facilita una gestión fluida de nómina",
+          "· Pague intereses estrictamente sobre el saldo de capital utilizado",
+          "· Requisitos mínimos de documentación inicial"
+        ],
+        "use_cases_title": "Casos de Uso y Asignación de Capital:",
+        "use_cases_list": [
+          "Cubrir brechas estacionales de flujo de caja y compras masivas de inventario",
+          "Aprovechar descuentos por volumen inmediatos de proveedores",
+          "Financiar actualizaciones de equipos e iniciativas de expansión bajo demanda",
+          "Estructuras de líneas garantizadas y no garantizadas disponibles según los ingresos de la empresa"
+        ]
+      },
+      "working_capital": {
+        "tag": "Operaciones",
+        "title": "Capital de Trabajo",
+        "subtitle": "Soluciones líquidas personalizadas según las métricas de crecimiento empresarial.",
+        "card_description": "Potencie la capacidad de compra por temporada o aproveche ventanas de adquisición de inventario por volumen mediante estructuras de capital de trabajo a medida...",
+        "modal_title": "Capital de Trabajo",
+        "modal_subtitle": "Soluciones líquidas personalizadas según las métricas de crecimiento de su empresa con total transparencia y cumplimiento normativo.",
+        "p1": "Potencie la capacidad de compra en temporada o aproveche oportunidades de adquisición de inventario de alto volumen mediante estructuras de capital de trabajo adaptadas a la trayectoria de ingresos de su empresa.",
+        "params_title": "Parámetros de Capital:",
+        "params_list": [
+          "· Montos de financiamiento de hasta $2,000,000",
+          "· Plazos flexibles de 6 a 24 meses",
+          "· Estructuras de comisiones transparentes y claras"
+        ]
+      },
+      "franchise": {
+        "tag": "Franquicias",
+        "title": "Financiamiento para Franquicias",
+        "subtitle": "Matrices integrales de capitalización diseñadas para expansiones individuales y multiunidad.",
+        "card_description": "Acelere los plazos de apertura de locales o actualice modelos de equipamiento en redes multiunidad con financiamiento de franquicias a medida...",
+        "modal_title": "Financiamiento para Franquicias",
+        "p1": "Acelere los cronogramas de apertura de tiendas o renueve el equipamiento en redes multiunidad mediante esquemas de préstamos para franquicias diseñados según los estándares específicos de su marca.",
+        "highlights_title": "Aspectos Destacados del Financiamiento:",
+        "highlights_list": [
+          "· Tiempos de determinación crediticia rápidos",
+          "· Acceso a capital de hasta $500k dinámicamente",
+          "· Opciones de amortización diferida o estacional integradas"
+        ]
+      },
+      "commercial_loans": {
+        "tag": "Escala Comercial",
+        "title": "Préstamos Comerciales",
+        "card_description": "Estructuramos opciones de nivel institucional para clases de activos convencionales: Multifamiliares, Uso Mixto, Bodegas/Industriales, Oficinas y Plazas Comerciales.",
+        "modal_title": "Préstamos Comerciales",
+        "p1": "Estructuramos opciones de nivel institucional para las clases de activos tradicionales: Multifamiliares, Uso Mixto, Espacios Industriales/Almacenes, Oficinas y Plazas Comerciales.",
+        "sba_title": "Sistemas de Garantía SBA 7(a)",
+        "sba_desc": "Aproveche el respaldo de agencias federales para obtener líneas de adquisición de activos esenciales de hasta $2,000,000 con esquemas de amortización altamente convenientes."
+      }
+    },
+    "SBABusinessSection": {
+      "heading": "Préstamos SBA y Comerciales",
+      "common": {
+        "read_more": "Leer Más",
+        "program_page": "Página del Programa",
+        "close_dialog": "Cerrar cuadro de diálogo"
+      },
+      "sba": {
+        "tag": "Crecimiento Empresarial",
+        "title": "Préstamos Comerciales SBA",
+        "subtitle": "Financiamiento Accesible para Impulsar el Crecimiento de su Negocio",
+        "card_description": "Ya sea que inicie un nuevo negocio, amplíe operaciones, adquiera equipos o compre una empresa existente, los préstamos SBA ofrecen financiamiento flexible respaldado por la Administración de Pequeñas Empresas de EE. UU. con montos de hasta $5M.",
+        "modal_title": "Préstamos Comerciales SBA",
+        "p1_part1": "Ya sea que inicie un nuevo negocio, expanda operaciones, compre bienes raíces comerciales u obtenga una empresa existente, los ",
+        "p1_bold": "Préstamos SBA",
+        "p1_part2": " ofrecen financiamiento flexible respaldado por la Administración de Pequeñas Empresas de EE. UU.",
+        "p2": "Diseñados para facilitar el acceso al capital, los préstamos SBA suelen ofrecer pagos iniciales más bajos, plazos de pago más extensos y tasas de interés competitivas en comparación con muchos préstamos comerciales convencionales.",
+        "used_for_title": "Los Programas de Préstamos SBA se Pueden Utilizar Para",
+        "used_for_list": [
+          "Comprar o expandir un negocio",
+          "Adquirir bienes raíces comerciales ocupados por el propietario",
+          "Adquisiciones de empresas",
+          "Compra de maquinaria y equipamiento",
+          "Capital de trabajo",
+          "Financiamiento de inventario",
+          "Renovaciones y mejoras comerciales",
+          "Refinanciamiento de deudas",
+          "Financiamiento de franquicias"
+        ],
+        "why_title": "¿Por Qué Elegir un Préstamo SBA?",
+        "why_list": [
+          "Tasas de interés competitivas",
+          "Requisitos de pago inicial más bajos que muchos préstamos tradicionales",
+          "Plazos de pago más largos para optimizar el flujo de efectivo",
+          "Financiamiento para empresas emergentes, en crecimiento y consolidadas",
+          "Montos de préstamo adaptables a una gran variedad de necesidades comerciales",
+          "Opciones de financiamiento flexibles ajustadas a sus objetivos"
+        ],
+        "ideal_title": "Ideal Para",
+        "ideal_list": [
+          "Dueños de pequeñas empresas",
+          "Emprendedores",
+          "Propietarios de franquicias",
+          "Prácticas profesionales",
+          "Negocios minoristas y restaurantes",
+          "Empresas de manufactura",
+          "Compañías de servicios",
+          "Propietarios-ocupantes de inmuebles comerciales"
+        ],
+        "callout_title": "¿Desea calcular pagos y explorar opciones de préstamo?",
+        "callout_desc": "Estime costos mensuales con nuestra calculadora de tasa Prime de WSJ en tiempo real y revise las directrices completas de la SBA.",
+        "callout_button": "Ver Página del Programa",
+        "build_title": "Construya su Empresa con Confianza",
+        "build_desc": "Ya sea que adquiera su primera propiedad comercial, se traslade a una nueva ubicación o invierta en el futuro de su empresa, MyLoanDesk le acompaña en cada etapa del proceso de préstamo SBA, desde la solicitud hasta el cierre.",
+        "ready_title": "¿Listo para hacer crecer su negocio?",
+        "ready_desc": "Comuníquese hoy con MyLoanDesk para explorar sus opciones de financiamiento SBA y encontrar el préstamo idóneo para su empresa."
+      }
+    },
+    "InternationalCustomSection": {
+      "heading": "Financiamiento Internacional y a la Medida",
+      "common": {
+        "read_more": "Leer Más",
+        "program_page": "Página del Programa",
+        "close_dialog": "Cerrar cuadro de diálogo"
+      },
+      "portugal": {
+        "tag": "Mesa Europea",
+        "title": "Financiamiento Inmobiliario en Portugal",
+        "subtitle": "Préstamos Residenciales, Comerciales y de Construcción",
+        "card_description": "Ya sea que compre una vivienda, invierta en bienes raíces comerciales o desarrolle un nuevo proyecto, ayudamos a prestatarios calificados a explorar opciones de financiamiento a través de nuestra red de prestamistas en Portugal.",
+        "modal_title": "Financiamiento Inmobiliario en Portugal",
+        "intro_p": "Ya sea que compre una vivienda, invierta en bienes raíces comerciales o desarrolle un nuevo proyecto, ayudamos a prestatarios calificados a explorar opciones de financiamiento a través de nuestra red de prestamistas en Portugal.",
+        "residential_title": "Préstamos Residenciales",
+        "residential_intro": "Pueden haber soluciones hipotecarias disponibles para residentes, no residentes, ciudadanos extranjeros y compradores internacionales que adquieran:",
+        "residential_list": [
+          "Residencias principales",
+          "Segundas viviendas y propiedades vacacionales",
+          "Apartamentos y villas",
+          "Propiedades residenciales de inversión",
+          "Viviendas de obra nueva"
+        ],
+        "commercial_title": "Préstamos Comerciales",
+        "commercial_intro": "Asistimos a inversionistas, dueños de negocios y desarrolladores que buscan financiamiento para:",
+        "commercial_list": [
+          "Edificios de apartamentos y multifamiliares",
+          "Hoteles y propiedades de hospitalidad",
+          "Inmuebles comerciales, oficinas y de uso mixto",
+          "Almacenes y naves industriales",
+          "Adquisición y refinanciamiento de propiedades",
+          "Proyectos de inversión comercial"
+        ],
+        "construction_title": "Préstamos para Construcción y Desarrollo",
+        "construction_intro": "También puede haber financiamiento disponible para obras desde cero, remodelaciones y proyectos de desarrollo.",
+        "callout_title": "¿Busca calculadoras y directrices para hipotecas en EUR?",
+        "callout_desc": "Estime sus pagos mensuales en euros, revise las reglas de depósito para no residentes y consulte aclaraciones sobre la Golden Visa.",
+        "callout_button": "Ver Página del Programa"
+      }
+    },
+    "ResidentialProgramsSection": {
+      "heading": "Programas Residenciales y Especializados",
+      "common": {
+        "read_more": "Leer Más",
+        "program_page": "Página del Programa",
+        "see_how_it_works": "Vea Cómo Funciona",
+        "close_dialog": "Cerrar cuadro de diálogo",
+        "close_video": "Cerrar video",
+        "apply_now": "Solicitar Ahora"
+      },
+      "conventional": {
+        "tag": "Residencial",
+        "title": "Préstamos Convencionales",
+        "card_description": "Los préstamos convencionales son una de las opciones de financiamiento más populares para comprar o refinanciar una vivienda. A diferencia de los préstamos FHA, VA o USDA, no están respaldados por el gobierno y ofrecen condiciones flexibles para prestatarios calificados.",
+        "modal_title": "Préstamos Convencionales",
+        "p1": "Los préstamos convencionales son una de las opciones de financiamiento más populares para comprar o refinanciar una vivienda. A diferencia de los préstamos FHA, VA o USDA, las hipotecas convencionales no están aseguradas ni garantizadas por una agencia gubernamental y pueden brindar financiamiento flexible para prestatarios calificados.",
+        "box_title": "Opciones de Financiamiento Flexibles",
+        "box_p1": "Los préstamos convencionales pueden estar disponibles con pagos iniciales desde el 3% para prestatarios elegibles. No siempre se requiere un pago inicial del 20%, aunque puede aplicarse un seguro hipotecario privado (PMI) al pagar menos del 20%.",
+        "box_p2": "La calificación depende de factores como el historial crediticio, ingresos, activos, relación deuda-ingreso, tipo de propiedad y el perfil general del préstamo.",
+        "box_p3": "El financiamiento convencional puede estar disponible para residencias principales, segundas viviendas y propiedades de inversión."
+      },
+      "jumbo": {
+        "tag": "Especificación de Cartera",
+        "title": "Préstamos Jumbo",
+        "card_description": "Las viviendas excepcionales merecen un financiamiento excepcional. Nuestros programas de préstamos Jumbo están diseñados para propiedades de lujo, bienes de alto valor y prestatarios exigentes que buscan un servicio personalizado de primer nivel.",
+        "modal_title": "Préstamos Jumbo",
+        "p1": "Las viviendas excepcionales merecen un financiamiento excepcional.",
+        "p2": "Nuestros programas de préstamos Jumbo están diseñados para viviendas de lujo, propiedades de alto valor y prestatarios exigentes que esperan un servicio personalizado de primer nivel de principio a fin. Ya sea que compre una residencia principal, una segunda vivienda o una propiedad de inversión, le brindamos acceso a algunas de las tasas más competitivas de la industria, suscripción flexible y soluciones financieras a la medida.",
+        "p3": "En MyLoanDesk, comprendemos que los prestatarios de alto patrimonio suelen tener perfiles financieros complejos. Desde profesionales independientes y dueños de empresas hasta ejecutivos, inversionistas y extranjeros, nuestro equipo experimentado colabora con una amplia red de prestamistas jumbo líderes para estructurar financiamiento adaptado a sus necesidades.",
+        "ideal_title": "Ideal Para:",
+        "ideal_list": [
+          "Viviendas de lujo y de alto valor",
+          "Montos de préstamo superiores al límite convencional",
+          "Prestatarios independientes y de alto patrimonio neto",
+          "Estructuras complejas de ingresos o activos",
+          "Propiedades principales, vacacionales y de inversión"
+        ],
+        "callout_title": "¿Desea estimar pagos y ver las 5 vías de calificación?",
+        "callout_desc": "Explore opciones Jumbo con extractos bancarios, agotamiento de activos, compradores extranjeros y DSCR.",
+        "callout_button": "Ver Página del Programa",
+        "closing_statement": "Experimente la diferencia de un servicio de nivel conserje con tasas competitivas, términos excepcionales y una experiencia crediticia diseñada a su medida."
+      },
+      "fha": {
+        "tag": "Respaldo Gubernamental",
+        "title": "Préstamos FHA",
+        "card_description": "Los préstamos FHA son una excelente opción para compradores que cuentan con ahorros moderados para el pago inicial y necesitan flexibilidad en las directrices de calificación.",
+        "modal_title": "Préstamos FHA",
+        "lead": "Financiamiento de Vivienda Accesible con tan solo 3.5% de Pago Inicial",
+        "p1": "Los préstamos FHA son una excelente opción para compradores que no disponen de mucho efectivo para el pago inicial y requieren flexibilidad en las directrices crediticias. Los beneficios incluyen:",
+        "benefits": [
+          "Pago inicial bajo de tan solo 3.5%",
+          "La mayoría de los costos de cierre y comisiones pueden incluirse en el préstamo",
+          "Seguro hipotecario mensual accesible",
+          "Sin límites máximos de ingresos (sujeto a normas del inversionista)",
+          "Sin requisitos de reservas de efectivo si cumple con las pautas FHA",
+          "Puntaje FICO mínimo de 620 (con normas de inversionistas)",
+          "No se requiere historial de arrendador",
+          "Se aceptan fondos de regalo familiar",
+          "Se permiten créditos del vendedor para gastos de cierre",
+          "Se aceptan cosignatarios no ocupantes para ayudar a calificar",
+          "Disponibles a tasa fija y con tasa ajustable (ARM)"
+        ],
+        "callout_title": "¿Desea comparar tasas detalladas y usar la calculadora?",
+        "callout_desc": "Explore las directrices completas de la FHA, costos de seguro hipotecario (MIP) y calcule su pago inicial.",
+        "callout_button": "Ver Página del Programa"
+      },
+      "fha_alt_docs": {
+        "tag": "Calificación Flexible",
+        "title": "Documentación Alternativa FHA",
+        "card_description": "No todos los ingresos encajan perfectamente en la revisión estándar de la FHA. Estas opciones financian hasta el 96.5% del valor de compra mediante verificación VOE o P&L.",
+        "modal_title": "Documentación Alternativa de Ingresos FHA",
+        "lead": "Cuando sus ingresos no se ajustan a un trámite estándar, aún puede haber un camino con la FHA.",
+        "p1": "No todos los ingresos de los prestatarios calificados encajan en la revisión documental estándar de la FHA. Los asalariados con estructuras de pago no tradicionales o dueños de negocios cuyas declaraciones reflejan deducciones importantes siguen siendo prestatarios sólidos. Estas opciones financian hasta el 96.5% del precio de compra utilizando vías alternativas pero totalmente documentadas para verificar sus ingresos.",
+        "highlights": [
+          "Programa FHA VOE para asalariados W-2 verificado directamente con su empleador",
+          "Programa FHA P&L para trabajadores independientes que califican con estados de pérdidas y ganancias sin declaraciones fiscales",
+          "Financiamiento de hasta el 96.5% (pago inicial de tan solo 3.5%)",
+          "El 100% del pago inicial puede provenir de fondos de regalo familiar elegibles",
+          "Disponible para residencias principales de 1 a 4 unidades",
+          "Puntajes de crédito mínimos desde 580 (VOE) y 640 (P&L)"
+        ],
+        "callout_title": "¿Desea conocer las directrices de los programas VOE vs. P&L?",
+        "callout_desc": "Compare condiciones, revise puntajes mínimos y verifique los límites locales de préstamos FHA.",
+        "callout_button": "Ver Página del Programa"
+      },
+      "buydown": {
+        "tag": "Residencial",
+        "title": "Hipoteca con Reducción 2/1 (Buydown)",
+        "card_description": "Comprar una casa es emocionante, pero los primeros años conllevan gastos adicionales como mudanza, muebles y remodelaciones.",
+        "modal_title": "Hipoteca con Reducción 2/1 (Buydown)",
+        "lead": "Reduzca su Pago Hipotecario Durante sus Primeros Dos Años de Propiedad",
+        "p1": "Comprar una vivienda es emocionante, pero los primeros años también traen consigo nuevos gastos como costos de mudanza, muebles, mejoras en el hogar y necesidades familiares en crecimiento. Una hipoteca 2/1 Buydown está diseñada para facilitar esa transición reduciendo su pago hipotecario mensual durante los primeros dos años del préstamo. El pago reducido se financia a través de un subsidio temporal, generalmente pagado por el vendedor o constructor como parte de la transacción.",
+        "how_title": "¿Cómo Funciona?",
+        "how_intro": "Supongamos que su tasa de interés permanente es del 6.50%:",
+        "how_y1_label": "Año 1:",
+        "how_y1_text": "Su pago se calcula con una tasa del 4.50%",
+        "how_y2_label": "Año 2:",
+        "how_y2_text": "Su pago se calcula con una tasa del 5.50%",
+        "how_y3_label": "Año 3 en Adelante:",
+        "how_y3_text": "Su pago regresa a la tasa fija permanente del 6.50%",
+        "how_summary": "Esto le brinda un valioso alivio en los pagos durante los primeros dos años, manteniendo la seguridad de una hipoteca de tasa fija.",
+        "benefits_title": "Beneficios",
+        "benefits": [
+          "Pagos mensuales más bajos durante los primeros dos años",
+          "Mantiene una hipoteca de tasa fija: no es un préstamo de tasa ajustable",
+          "Mayor flexibilidad financiera al instalarse en su nuevo hogar",
+          "Las concesiones del vendedor o constructor pueden usarse para financiar la reducción temporal",
+          "Ideal para compradores que esperan aumentos de ingresos o que planean refinanciar si las condiciones del mercado mejoran"
+        ],
+        "who_title": "¿Quién Debería Considerar un 2/1 Buydown?",
+        "who_intro": "Este programa puede ser ideal para:",
+        "who_list": [
+          "Compradores de primera vivienda",
+          "Compradores que adquieren una casa de obra nueva",
+          "Compradores que negocian concesiones con el vendedor",
+          "Familias que esperan mayores ingresos en los próximos años",
+          "Cualquiera que busque reducir sus costos iniciales de vivienda"
+        ],
+        "things_to_know_title": "Aspectos a Saber:",
+        "things_to_know_text": "Un 2/1 Buydown reduce temporalmente su pago mensual, no su tasa de interés permanente. Usted califica según la tasa total de la nota y, tras los primeros dos años, su pago se ajusta a la cuota fija regular establecida al cierre.",
+        "help_title": "Permita que MyLoanDesk le Asesore",
+        "help_p1": "En MyLoanDesk, revisaremos sus metas financieras, le explicaremos todas las opciones disponibles y determinaremos si un 2/1 Buydown es la estrategia adecuada. Si hay concesiones del vendedor disponibles, estructuraremos el préstamo para maximizar sus ahorros sin perder de vista sus objetivos a largo plazo.",
+        "help_p2": "Reduzca sus pagos hoy. Construya su futuro con total confianza.",
+        "callout_title": "¿Desea comparar tasas detalladas y usar la calculadora?",
+        "callout_desc": "Explore las directrices completas del 2/1 Buydown y calcule sus cifras exactas de ahorro.",
+        "callout_button": "Ver Página del Programa"
+      },
+      "bank_statement": {
+        "tag": "Trabajadores Independientes",
+        "title": "Préstamos por Estados de Cuenta para Independientes",
+        "subtitle": "Califique con sus Estados de Cuenta Bancarios en Lugar de Declaraciones de Impuestos",
+        "card_description": "Los programas tradicionales suelen basarse en declaraciones de impuestos. Para muchos trabajadores independientes, las deducciones reducen el ingreso gravable, dificultando la calificación convencional.",
+        "modal_title": "Préstamos por Estados de Cuenta Bancarios",
+        "modal_subtitle": "Califique con sus Estados de Cuenta Bancarios en Lugar de Declaraciones de Impuestos",
+        "p1": "Los programas hipotecarios tradicionales suelen basarse en declaraciones de impuestos para determinar los ingresos. Para muchos prestatarios independientes, las deducciones comerciales reducen significativamente el ingreso imponible, dificultando calificar para un préstamo convencional.",
+        "p2": "Un préstamo por estados de cuenta bancarios ofrece una alternativa que permite a los prestatarios calificar utilizando sus extractos bancarios personales o comerciales en lugar de declaraciones de impuestos.",
+        "p3": "Ya sea dueño de un negocio, contratista independiente, consultor, profesional freelance o emprendedor, este programa está diseñado para ofrecer financiamiento flexible que refleje mejor su flujo de caja real.",
+        "highlights_title": "Aspectos Destacados del Programa:",
+        "highlights": [
+          "No se requieren declaraciones de impuestos",
+          "Califique con 12 o 24 meses de estados de cuenta personales o comerciales",
+          "Disponible para trabajadores con al menos 2 años de actividad independiente",
+          "Opciones de compra, refinanciamiento o refinanciamiento con retiro de efectivo",
+          "Residencias principales, segundas viviendas y propiedades de inversión",
+          "Montos de préstamo desde límites conformes hasta financiamiento jumbo",
+          "Pautas crediticias flexibles",
+          "Tasas fijas y ajustables competitivas"
+        ],
+        "who_title": "¿Quién Puede Beneficiarse?",
+        "who_intro": "Este programa puede ser ideal para:",
+        "who_list": [
+          "Dueños de pequeñas empresas",
+          "Contratistas independientes",
+          "Consultores",
+          "Trabajadores freelance",
+          "Profesionales inmobiliarios",
+          "Profesionales médicos en práctica privada",
+          "Vendedores comisionistas",
+          "Cualquier trabajador independiente cuyas declaraciones no reflejen con precisión sus ingresos reales"
+        ],
+        "why_box_title": "¿Por Qué Elegir MyLoanDesk?",
+        "why_box_text": "En MyLoanDesk, entendemos las particularidades financieras de los trabajadores independientes. Nuestros especialistas colaboran con una amplia red de prestamistas para encontrar soluciones crediticias adaptadas a la estructura de su negocio e ingresos.",
+        "closing_note": "Si le han dicho que no califica a través del financiamiento tradicional, un préstamo por estados de cuenta puede ser la solución que estaba buscando.",
+        "contact_prompt": "Comuníquese hoy con MyLoanDesk para una revisión personalizada y descubra las opciones hipotecarias a su disposición.",
+        "callout_title": "¿Desea calcular su ingreso de calificación?",
+        "callout_desc": "Explore las directrices completas de estados de cuenta de 12/24 meses y utilice nuestra calculadora de ingresos.",
+        "callout_button": "Ver Página del Programa"
+      },
+      "hybrid": {
+        "tag": "Tasas Ajustables (ARM)",
+        "title": "Préstamos Híbridos",
+        "card_description": "Combine la estabilidad inicial de una tasa fija con las oportunidades de ahorro de una hipoteca de tasa ajustable (ARM) mediante un préstamo híbrido.",
+        "modal_title": "Préstamos Híbridos",
+        "p1": "Combine la estabilidad inicial de una tasa fija con las oportunidades de ahorro de una hipoteca de tasa ajustable (ARM) mediante un préstamo híbrido con período fijo.",
+        "p2": "Un préstamo híbrido ofrece un período con tasa fija (generalmente 3, 5, 7 o 10 años) con ajustes anuales posteriores, comúnmente expresado como un ARM 3/1, 5/1, 7/1 o 10/1. El primer número indica los años de tasa fija, mientras que el segundo señala la frecuencia anual de ajuste posterior.",
+        "p3": "La ventaja primordial es asegurar una tasa inicial más baja que las opciones fijas estándar a 30 años, siendo ideal si planea mudarse o vender durante la primera década.",
+        "highlight_box": "Los préstamos híbridos son ideales para compradores que buscan precios competitivos de ARM combinados con protección inicial de tasa durante varios años."
+      },
+      "va": {
+        "tag": "Atención a Veteranos",
+        "title": "Préstamos VA",
+        "card_description": "Los préstamos garantizados por el Departamento de Asuntos de los Veteranos (VA) se otorgan a veteranos elegibles para la compra de vivienda sin requerir pago inicial.",
+        "modal_title": "Préstamos VA",
+        "p1": "Los préstamos garantizados por el Departamento de Asuntos de los Veteranos (VA) se otorgan a través de prestamistas para la compra de vivienda, protegiendo al prestamista en caso de incumplimiento.",
+        "lead": "En la mayoría de los casos, no se requiere pago inicial y el prestatario obtiene tasas de interés sumamente competitivas. Otros beneficios incluyen:",
+        "benefits": [
+          "Tasas de interés negociables.",
+          "Costos de cierre altamente competitivos y a menudo más bajos que otros financiamientos.",
+          "Sin requisito de seguro hipotecario privado (PMI).",
+          "Derecho a prepagar el préstamo sin penalizaciones.",
+          "La hipoteca puede ser asumida por un comprador calificado al vender la propiedad.",
+          "Asesoría y asistencia para veteranos que atraviesen dificultades financieras."
+        ],
+        "callout_title": "¿Desea comparar tasas detalladas y usar la calculadora?",
+        "callout_desc": "Estime su tarifa de financiamiento VA y calcule pagos mensuales sin pago inicial.",
+        "callout_button": "Ver Página del Programa"
+      },
+      "bridge": {
+        "tag": "Soluciones de Liquidez",
+        "title": "Préstamos Puente Privados",
+        "subtitle": "Financiamiento Rápido y Flexible para Transiciones Residenciales y Comerciales",
+        "card_description": "Los préstamos puente privados brindan financiamiento a corto plazo cuando las hipotecas tradicionales son lentas, cubriendo el lapso entre transacciones.",
+        "modal_title": "Préstamos Puente Privados",
+        "modal_subtitle": "Financiamiento Rápido y Flexible para Bienes Raíces Residenciales y Comerciales",
+        "p1": "Los préstamos puente privados ofrecen financiamiento ágil y a corto plazo cuando las opciones hipotecarias tradicionales no se ajustan. Ya sea que compre antes de vender, invierta, renueve o necesite cerrar con rapidez, le ayudamos a estructurar financiamiento adaptado a su caso.",
+        "ideal_title": "Ideal Para:",
+        "ideal_list": [
+          "Comprar antes de vender (transiciones residenciales)",
+          "Ofertas de compra no contingentes en mercados competitivos",
+          "Adquisiciones comerciales antes de su estabilización",
+          "Financiamiento de mejoras de capital y valor agregado",
+          "Cierres rápidos en plazos de 7 a 14 días"
+        ],
+        "strategic_title": "Ventajas Estratégicas:",
+        "strategic_p1": "La aprobación se basa en el valor del activo inmobiliario y su capital acumulado, en lugar de largas verificaciones de ingresos, brindando la rapidez necesaria para aprovechar oportunidades o cumplir plazos 1031.",
+        "strategic_p2": "Con plazos flexibles de 6 a 24 meses y esquemas de pago de solo interés, el financiamiento puente actúa como una solución temporal confiable hasta obtener el financiamiento definitivo o concretar la venta.",
+        "callout_title": "¿Desea estimar sus pagos y condiciones de préstamo puente?",
+        "callout_desc": "Explore las directrices completas de préstamos puente y utilice nuestro estimador interactivo.",
+        "callout_button": "Ver Página del Programa"
+      },
+      "bridge_to_sale": {
+        "tag": "Transiciones",
+        "title": "Préstamos Puente para Venta",
+        "subtitle": "Compre su próxima casa antes de vender la actual.",
+        "card_description": "Un préstamo Puente para Venta le da acceso al capital de su vivienda, permitiéndole comprar su próxima propiedad sin esperar a vender la actual.",
+        "modal_title": "Préstamos Puente para Venta",
+        "modal_subtitle": "Compre su próxima casa antes de vender la actual.",
+        "p1": "Un préstamo Puente para Venta le brinda acceso a la plusvalía de su vivienda, permitiéndole adquirir su siguiente propiedad sin esperar a vender la actual. Alcance sus metas a su propio ritmo sin el estrés de coordinar dos cierres simultáneos.",
+        "highlights_title": "Aspectos Destacados del Programa:",
+        "highlights": [
+          "Financiamiento de hasta 12 meses con pagos de solo interés",
+          "Acceso al capital antes de vender su propiedad actual",
+          "Opciones flexibles de calificación de ingresos",
+          "Opciones sin pagos mensuales disponibles para prestatarios calificados",
+          "Aprobaciones ágiles y cierres simplificados"
+        ],
+        "strategic_title": "Ventajas Estratégicas:",
+        "strategic_p1": "Presentar ofertas de compra no contingentes le otorga una ventaja competitiva decisiva. En lugar de apresurarse a aceptar una oferta baja por su propiedad actual, dispondrá del tiempo necesario para comercializarla con éxito y maximizar su valor de reventa.",
+        "strategic_p2": "Una vez vendida su vivienda original, los ingresos netos se aplican directamente a liquidar el saldo del préstamo puente sin penalizaciones por pago anticipado, realizando una transición fluida a su hipoteca a largo plazo.",
+        "callout_title": "¿Desea calcular su capacidad estimada de préstamo puente?",
+        "callout_desc": "Explore los requisitos completos y use nuestra calculadora de capital interactiva.",
+        "callout_button": "Ver Página del Programa"
+      },
+      "international": {
+        "tag": "Internacional",
+        "title": "Compradores Internacionales",
+        "card_description": "Comprar una propiedad en los Estados Unidos es más accesible de lo que piensa, ya sea para vacaciones, inversión o una futura mudanza.",
+        "modal_title": "Sección para Compradores Internacionales",
+        "lead": "Financiamiento de Vivienda en EE. UU. para Compradores Internacionales",
+        "p1": "Comprar una propiedad en Estados Unidos es más fácil de lo que cree. Ya sea que busque una casa vacacional, un inmueble de inversión o planifique mudarse, MyLoanDesk ofrece soluciones de financiamiento diseñadas para compradores internacionales.",
+        "who_title": "Atendemos a:",
+        "who_list": [
+          "Ciudadanos Extranjeros",
+          "No Residentes en EE. UU.",
+          "Titulares de Visas",
+          "Inversionistas Internacionales"
+        ],
+        "available_title": "Financiamiento Disponible Para:",
+        "available_list": [
+          "Viviendas Vacacionales",
+          "Propiedades de Inversión",
+          "Residencias Principales",
+          "Condominios",
+          "Viviendas Unifamiliares"
+        ],
+        "why_title": "¿Por Qué Elegir MyLoanDesk?",
+        "why_list": [
+          "Acceso a más de 100 programas de préstamos",
+          "Preaprobaciones ágiles",
+          "Opciones de financiamiento competitivas",
+          "Acompañamiento integral durante todo el proceso",
+          "Cierres remotos disponibles para múltiples transacciones"
+        ],
+        "ready_title": "¿Listo para comprar una propiedad en los Estados Unidos?",
+        "ready_desc": "Comuníquese hoy con MyLoanDesk para analizar sus opciones de financiamiento y precalificar.",
+        "callout_title": "¿Desea calcular su pago inicial para comprar en EE. UU.?",
+        "callout_desc": "Explore las directrices completas para extranjeros y use nuestra calculadora interactiva.",
+        "callout_button": "Ver Página del Programa"
+      },
+      "itin": {
+        "tag": "Sin Número de Seguro Social",
+        "title": "Préstamos Hipotecarios con ITIN",
+        "card_description": "Si presenta sus impuestos en EE. UU. utilizando un Número de Identificación Personal del Contribuyente (ITIN), aún puede calificar para una hipoteca.",
+        "modal_title": "Préstamos Hipotecarios con ITIN",
+        "lead": "Compre una Vivienda sin Número de Seguro Social",
+        "p1_part1": "Si presenta sus impuestos en EE. UU. con un ",
+        "p1_bold": "Número de Identificación Personal del Contribuyente (ITIN)",
+        "p1_part2": ", aún puede calificar para una hipoteca. MyLoanDesk trabaja con prestamistas que ofrecen soluciones diseñadas específicamente para prestatarios con ITIN.",
+        "who_title": "Este Programa Puede Ser Adecuado Para:",
+        "who_list": [
+          "Contribuyentes con ITIN",
+          "Compradores de primera vivienda",
+          "Trabajadores independientes",
+          "Extranjeros residentes en EE. UU.",
+          "Prestatarios sin Número de Seguro Social"
+        ],
+        "benefits_title": "Beneficios",
+        "benefits": [
+          "Compra de residencia principal",
+          "No se requiere Número de Seguro Social",
+          "Opciones de financiamiento competitivas",
+          "Documentación de ingresos flexible con prestamistas seleccionados",
+          "Asesoría personalizada en cada paso del proceso"
+        ],
+        "reqs_title": "Requisitos Típicos",
+        "reqs_list": [
+          "ITIN vigente",
+          "Identificación oficial con foto o pasaporte",
+          "Comprobante de ingresos",
+          "Declaraciones de impuestos de EE. UU. (cuando sea requerido)",
+          "Pago inicial y fondos disponibles para el cierre",
+          "Historial crediticio o crédito alternativo, según el programa"
+        ],
+        "ready_title": "¿Listo para convertirse en propietario?",
+        "ready_desc": "Comuníquese hoy con MyLoanDesk para explorar sus opciones hipotecarias con ITIN y verificar su calificación.",
+        "callout_title": "¿Desea calcular su pago inicial con ITIN?",
+        "callout_desc": "Explore los requisitos completos de ITIN y utilice nuestra calculadora hipotecaria interactiva.",
+        "callout_button": "Ver Página del Programa"
+      },
+      "eep": {
+        "tag": "Capital Ganado EEP",
+        "title": "Dream Home Builder (EEP)",
+        "subtitle": "Un Camino Más Inteligente del Alquiler a la Propiedad",
+        "card_description": "¿Aún no está listo para una hipoteca tradicional? El programa Dream Home Builder Earned Equity Program (EEP) ofrece una vía alternativa hacia la titularidad de su vivienda.",
+        "modal_title": "Dream Home Builder (EEP)",
+        "modal_subtitle": "Un Camino Más Inteligente del Alquiler a la Propiedad",
+        "p1": "¿Aún no está preparado para una hipoteca tradicional? El programa Dream Home Builder Earned Equity Program (EEP) brinda a compradores calificados una alternativa para alcanzar la casa propia.",
+        "p2": "En lugar de permanecer en un alquiler tradicional, el programa permite a los participantes ocupar una vivienda unifamiliar mientras acumulan capital ganado y se preparan para la transición al financiamiento hipotecario permanente.",
+        "how_title": "¿Cómo Funciona?",
+        "steps": [
+          {
+            "step": "1. Calificación Inicial",
+            "desc": "Revisamos sus ingresos, crédito y perfil financiero para determinar la elegibilidad en el programa."
+          },
+          {
+            "step": "2. Selección de la Vivienda",
+            "desc": "Los participantes pueden elegir una vivienda unifamiliar que cumpla con los requisitos del programa."
+          },
+          {
+            "step": "3. Mudanza y Acumulación de Capital",
+            "desc": "Ocupe la vivienda bajo el esquema EEP mientras acumula capital ganado según los términos estipulados."
+          },
+          {
+            "step": "4. Preparación Crediticia",
+            "desc": "Utilice el período del programa para fortalecer su perfil crediticio y preparar el financiamiento permanente."
+          },
+          {
+            "step": "5. Compra Definitiva",
+            "desc": "Al calificar para el financiamiento, se completa la transición del EEP a la compra definitiva de la vivienda."
+          }
+        ],
+        "highlights_title": "Puntos Destacados del Programa",
+        "highlights": [
+          {
+            "title": "Hasta 96.5% LTV",
+            "desc": "Parámetros de financiamiento alineados con las directrices de la FHA."
+          },
+          {
+            "title": "Límites Alineados a la FHA",
+            "desc": "Los límites del programa siguen los límites de préstamos por condado de la FHA."
+          },
+          {
+            "title": "Puntajes de Crédito desde 580",
+            "desc": "Los solicitantes por debajo de 580 pueden evaluarse caso por caso."
+          },
+          {
+            "title": "Documentación Flexible",
+            "desc": "Las opciones incluyen documentación completa, extractos bancarios e ingresos 1099."
+          },
+          {
+            "title": "Apto para Independientes",
+            "desc": "Opciones de ingresos alternativos para dueños de negocios y contratistas independientes."
+          },
+          {
+            "title": "Opciones con ITIN y DACA",
+            "desc": "Vías adicionales disponibles para solicitantes elegibles con ITIN o DACA."
+          }
+        ],
+        "who_title": "¿Para Quién es Este Programa?",
+        "who_p1": "Dream Home Builder es una solución idónea si desea ser propietario pero necesita tiempo o flexibilidad antes de calificar para una hipoteca tradicional.",
+        "who_p2": "Es especialmente útil para inquilinos, trabajadores independientes, asalariados 1099, compradores reconstruyendo su crédito y prestatarios con ITIN que no cumplen con los requisitos convencionales hoy.",
+        "cta_box_title": "Deje de Solo Alquilar. Comience a Construir su Patrimonio.",
+        "cta_box_desc": "No necesita esperar a que todo sea perfecto para iniciar el camino a la casa propia. En MyLoanDesk evaluaremos su situación para determinar si Dream Home Builder u otro programa ofrece la vía adecuada.",
+        "disclaimer_title": "Descargo de Responsabilidad del Programa:",
+        "disclaimer_text": "La disponibilidad y elegibilidad están sujetas a directrices aplicables, suscripción, requisitos de la propiedad y términos del programa. La participación no garantiza la aprobación hipotecaria futura ni la titularidad de la propiedad."
+      },
+      "doctor": {
+        "tag": "Profesionales Médicos",
+        "title": "Programa para Profesionales de la Salud",
+        "subtitle": "SOLUCIONES HIPOTECARIAS ESPECIALIZADAS PARA EL SECTOR MÉDICO",
+        "card_description": "Ha invertido años en su carrera. Nuestro programa ofrece financiamiento especializado para profesionales de la salud con alto apalancamiento y sin PMI en préstamos elegibles...",
+        "modal_title": "Programa para Profesionales de la Salud",
+        "modal_subtitle": "SOLUCIONES HIPOTECARIAS ESPECIALIZADAS PARA EL SECTOR MÉDICO",
+        "p1": "Ha dedicado años a forjar su carrera médica y su hipoteca debe reconocerlo. Nuestro programa ofrece financiamiento diseñado según las necesidades del sector salud, incluyendo alto financiamiento, exención de PMI en préstamos elegibles y suscripción flexible.",
+        "highlights_title": "PUNTOS DESTACADOS DEL PROGRAMA:",
+        "highlights": [
+          "Hasta 100% de financiamiento para prestatarios calificados",
+          "Sin Seguro Hipotecario Privado (PMI) en préstamos elegibles",
+          "Montos de préstamo de hasta $2 millones",
+          "Tratamiento flexible de préstamos estudiantiles",
+          "Opciones a tasa fija y de tasa ajustable (ARM)",
+          "Disponible para compra y refinanciamiento de residencia principal"
+        ],
+        "eligible_title": "PROFESIONALES ELEGIBLES:",
+        "eligible_list": [
+          "• Médicos Generales y Especialistas (MD)",
+          "• Doctores en Medicina Osteopática (DO)",
+          "• Odontólogos (DDS, DMD)",
+          "• Farmacéuticos (PharmD)",
+          "• Veterinarios (DVM/VMD)",
+          "• Podólogos (DPM)",
+          "• Enfermeros Anestesistas Certificados (CRNA)"
+        ],
+        "eligible_note": "Otros profesionales de la salud pueden calificar. La elegibilidad y términos varían según el prestamista.",
+        "why_title": "¿POR QUÉ ELEGIR MYLOANDESK?",
+        "why_desc": "Los profesionales médicos suelen tener perfiles financieros singulares: desde deudas estudiantiles considerables hasta un crecimiento acelerado de ingresos al inicio de su carrera. MyLoanDesk le ayuda a comparar opciones especializadas de múltiples fuentes para encontrar el financiamiento idóneo.",
+        "callout_title": "¿Desea calcular el impacto de sus préstamos estudiantiles en su DTI?",
+        "callout_desc": "Explore las directrices completas del préstamo médico y use nuestra calculadora especializada de DTI.",
+        "callout_button": "Ver Página del Programa",
+        "disclaimer_title": "Descargo de Responsabilidad del Programa:",
+        "disclaimer_text": "La disponibilidad del programa, límites de financiamiento, profesiones elegibles y directrices de suscripción varían según el prestamista y la calificación del prestatario. No todos los solicitantes calificarán.",
+        "explore_button": "Explore sus Opciones de Préstamo Médico"
+      }
+    }
   }
 }

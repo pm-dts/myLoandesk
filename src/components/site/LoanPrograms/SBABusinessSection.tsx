@@ -6,6 +6,7 @@ import { Shield, X, ArrowRight, ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
 import LoanProgramButton from "@/components/site/utils/LoanProgramButton";
 import { Fraunces } from "next/font/google";
+import { useTranslations } from "next-intl";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -20,11 +21,13 @@ function LoanDetailModal({
   isOpen,
   onClose,
   title,
+  closeLabel = "Close dialog",
   children,
 }: {
   isOpen: boolean;
   onClose: () => void;
   title: string;
+  closeLabel?: string;
   children: React.ReactNode;
 }) {
   useEffect(() => {
@@ -58,7 +61,7 @@ function LoanDetailModal({
           <button
             onClick={onClose}
             className="bg-line/40 hover:bg-line/80 text-ink p-2 rounded-full transition-colors"
-            aria-label="Close dialog"
+            aria-label={closeLabel}
           >
             <X size={20} />
           </button>
@@ -69,10 +72,23 @@ function LoanDetailModal({
   );
 }
 
-export default function SBABusinessSection() {
+interface SBABusinessSectionProps {
+  locale?: string;
+}
+
+export default function SBABusinessSection({
+  locale = "en",
+}: SBABusinessSectionProps) {
   const [activeModal, setActiveModal] = useState<string | null>(null);
+  const t = useTranslations("LoanPrograms.SBABusinessSection");
+  const isEs = locale === "es";
 
   const closeModal = () => setActiveModal(null);
+  const getLocalizedHref = (path: string) => (isEs ? `/es${path}` : path);
+
+  const usedForList = t.raw("sba.used_for_list") as string[];
+  const whyList = t.raw("sba.why_list") as string[];
+  const idealList = t.raw("sba.ideal_list") as string[];
 
   return (
     <section
@@ -85,7 +101,7 @@ export default function SBABusinessSection() {
           fraunces.className,
         )}
       >
-        SBA and Business Loans
+        {t("heading")}
       </h2>
 
       {/* Grid updated to gap-6 matching the fixed card layout */}
@@ -101,7 +117,7 @@ export default function SBABusinessSection() {
                 <Shield size={22} strokeWidth={1.8} />
               </div>
               <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2.5 py-1 rounded-md">
-                Business Growth
+                {t("sba.tag")}
               </span>
             </div>
             <h3
@@ -110,16 +126,13 @@ export default function SBABusinessSection() {
                 fraunces.className,
               )}
             >
-              SBA Business Loans
+              {t("sba.title")}
             </h3>
             <h4 className="font-medium text-ink text-sm mb-2 line-clamp-1">
-              Affordable Financing to Help Your Business Grow
+              {t("sba.subtitle")}
             </h4>
             <p className="text-sm text-ink-2 leading-relaxed line-clamp-3 max-w-4xl">
-              Whether you&apos;re starting a new business, expanding operations,
-              purchasing equipment, or acquiring an existing company, SBA loans
-              offer flexible financing backed by the U.S. Small Business
-              Administration with loan amounts up to $5M.
+              {t("sba.card_description")}
             </p>
           </div>
 
@@ -129,14 +142,14 @@ export default function SBABusinessSection() {
               onClick={() => setActiveModal("sba-business")}
               className="flex-1 py-3 bg-cream hover:bg-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
             >
-              Read More <ArrowRight size={14} />
+              {t("common.read_more")} <ArrowRight size={14} />
             </button>
 
             <Link
-              href="/loan-programs/sba-business-loans"
+              href={getLocalizedHref("/loan-programs/sba-business-loans")}
               className="flex-1 py-3 bg-primary-bg hover:bg-cream border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
             >
-              Program Page{" "}
+              {t("common.program_page")}{" "}
               <ExternalLink size={14} className="text-brand-orange" />
             </Link>
           </div>
@@ -144,44 +157,28 @@ export default function SBABusinessSection() {
           <LoanDetailModal
             isOpen={activeModal === "sba-business"}
             onClose={closeModal}
-            title="SBA Business Loans"
+            title={t("sba.modal_title")}
+            closeLabel={t("common.close_dialog")}
           >
             <div>
-              <h4 className="font-medium text-ink mb-3">
-                Affordable Financing to Help Your Business Grow
-              </h4>
+              <h4 className="font-medium text-ink mb-3">{t("sba.subtitle")}</h4>
 
               <p className="text-sm text-ink-2 leading-relaxed mb-2">
-                Whether you&apos;re starting a new business, expanding
-                operations, purchasing commercial real estate, or acquiring an
-                existing company, <span className="font-bold"> SBA Loans</span>{" "}
-                offer flexible financing backed by the U.S. Small Business
-                Administration.
+                {t("sba.p1_part1")}
+                <span className="font-bold">{t("sba.p1_bold")}</span>
+                {t("sba.p1_part2")}
               </p>
               <p className="text-sm text-ink-2 leading-relaxed mb-6">
-                Designed to make capital more accessible, SBA loans often
-                provide lower down payments, longer repayment terms, and
-                competitive interest rates compared to many conventional
-                business loans.
+                {t("sba.p2")}
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-6">
                 <div>
                   <h4 className="font-medium text-ink mb-3">
-                    SBA Loan Programs Can Be Used For
+                    {t("sba.used_for_title")}
                   </h4>
                   <ul className="space-y-2">
-                    {[
-                      "Purchasing or expanding a business",
-                      "Buying owner-occupied commercial real estate",
-                      "Business acquisitions",
-                      "Equipment and machinery purchases",
-                      "Working capital",
-                      "Inventory financing",
-                      "Business renovations and improvements",
-                      "Debt refinancing",
-                      "Franchise financing",
-                    ].map((item, index) => (
+                    {usedForList.map((item, index) => (
                       <li
                         key={index}
                         className="flex items-start gap-2 text-xs text-ink/90 leading-normal"
@@ -195,17 +192,10 @@ export default function SBABusinessSection() {
 
                 <div>
                   <h4 className="font-medium text-ink mb-3">
-                    Why Choose an SBA Loan?
+                    {t("sba.why_title")}
                   </h4>
                   <ul className="space-y-2">
-                    {[
-                      "Competitive interest rates",
-                      "Lower down payment requirements than many conventional loans",
-                      "Longer repayment terms to help improve cash flow",
-                      "Financing for startups, growing businesses, and established companies",
-                      "Loan amounts available for a wide range of business needs",
-                      "Flexible financing options tailored to your goals",
-                    ].map((item, index) => (
+                    {whyList.map((item, index) => (
                       <li
                         key={index}
                         className="flex items-start gap-2 text-xs text-ink/90 leading-normal"
@@ -218,18 +208,11 @@ export default function SBABusinessSection() {
                 </div>
               </div>
 
-              <h4 className="font-medium text-ink mb-3 mt-6">Ideal For</h4>
+              <h4 className="font-medium text-ink mb-3 mt-6">
+                {t("sba.ideal_title")}
+              </h4>
               <ul className="space-y-2 mb-6">
-                {[
-                  "Small business owners",
-                  "Entrepreneurs",
-                  "Franchise owners",
-                  "Professional practices",
-                  "Retail and restaurant businesses",
-                  "Manufacturers",
-                  "Service companies",
-                  "Commercial property owner-occupants",
-                ].map((item, index) => (
+                {idealList.map((item, index) => (
                   <li
                     key={index}
                     className="flex items-start gap-2 text-xs text-ink/90 leading-normal"
@@ -244,41 +227,34 @@ export default function SBABusinessSection() {
               <div className="mb-6 p-4 bg-cream/40 border border-line rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-3">
                 <div>
                   <div className="text-xs font-semibold text-ink uppercase tracking-wider">
-                    Want to calculate payments & explore loan options?
+                    {t("sba.callout_title")}
                   </div>
-                  <p className="text-xs text-ink-2">
-                    Estimate monthly costs with our live WSJ Prime rate
-                    calculator and review full SBA guidelines.
-                  </p>
+                  <p className="text-xs text-ink-2">{t("sba.callout_desc")}</p>
                 </div>
                 <Link
-                  href="/loan-programs/sba-business-loans"
+                  href={getLocalizedHref("/loan-programs/sba-business-loans")}
                   onClick={closeModal}
                   className="btn-shine bg-brand-orange text-white px-5 py-2.5 rounded-full text-xs font-semibold flex items-center gap-1.5 shrink-0 hover:bg-orange-600 transition-colors"
                 >
-                  Visit Full Program Page <ArrowRight size={14} />
+                  {t("sba.callout_button")} <ArrowRight size={14} />
                 </Link>
               </div>
 
               <h4 className="font-medium text-ink mb-3 mt-6">
-                Build Your Business With Confidence
+                {t("sba.build_title")}
               </h4>
               <p className="text-sm text-ink-2 leading-relaxed mb-6">
-                Whether you&apos;re purchasing your first commercial property,
-                expanding to a new location, or investing in your company&apos;s
-                future, MyLoanDesk can help you navigate the SBA loan process
-                from application through closing.
+                {t("sba.build_desc")}
               </p>
             </div>
 
             <div className="pt-4 border-t border-line">
               <p className="text-xs mb-4 text-ink-2">
                 <span className="font-bold text-ink">
-                  Ready to grow your business?
+                  {t("sba.ready_title")}
                 </span>
                 <br />
-                Contact MyLoanDesk today to explore your SBA financing options
-                and find the loan that&apos;s right for your business.
+                {t("sba.ready_desc")}
               </p>
               <LoanProgramButton loan_type="SBA Business" />
             </div>

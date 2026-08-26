@@ -15,6 +15,7 @@ import {
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Fraunces } from "next/font/google";
+import { useTranslations } from "next-intl";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -29,11 +30,13 @@ function LoanDetailModal({
   isOpen,
   onClose,
   title,
+  closeLabel = "Close dialog",
   children,
 }: {
   isOpen: boolean;
   onClose: () => void;
   title: string;
+  closeLabel?: string;
   children: React.ReactNode;
 }) {
   useEffect(() => {
@@ -67,7 +70,7 @@ function LoanDetailModal({
           <button
             onClick={onClose}
             className="bg-line/40 hover:bg-line/80 text-ink p-2 rounded-full transition-colors"
-            aria-label="Close dialog"
+            aria-label={closeLabel}
           >
             <X size={20} />
           </button>
@@ -78,10 +81,37 @@ function LoanDetailModal({
   );
 }
 
-export default function CommercialFinancingSection() {
+interface CommercialFinancingSectionProps {
+  locale?: string;
+}
+
+export default function CommercialFinancingSection({
+  locale = "en",
+}: CommercialFinancingSectionProps) {
   const [activeModal, setActiveModal] = useState<string | null>(null);
+  const t = useTranslations("LoanPrograms.CommercialFinancingSection");
+  const isEs = locale === "es";
 
   const closeModal = () => setActiveModal(null);
+  const getLocalizedHref = (path: string) => (isEs ? `/es${path}` : path);
+
+  const crePropertiesList = t.raw("cre.properties_list") as string[];
+  const creSolutionsList = t.raw("cre.solutions_list") as string[];
+  const creWhyList = t.raw("cre.why_list") as string[];
+
+  const equipmentWhyList = t.raw("equipment.why_list") as string[];
+  const equipmentList = t.raw("equipment.equipment_list") as string[];
+
+  const businessLinesFeatures = t.raw(
+    "business_lines.features_list",
+  ) as string[];
+  const businessLinesUseCases = t.raw(
+    "business_lines.use_cases_list",
+  ) as string[];
+
+  const workingCapitalParams = t.raw("working_capital.params_list") as string[];
+
+  const franchiseHighlights = t.raw("franchise.highlights_list") as string[];
 
   return (
     <section
@@ -94,7 +124,7 @@ export default function CommercialFinancingSection() {
           fraunces.className,
         )}
       >
-        Commercial Financing Solutions
+        {t("heading")}
       </h2>
 
       {/* Grid with uniform card heights */}
@@ -110,7 +140,7 @@ export default function CommercialFinancingSection() {
                 <Shield size={22} strokeWidth={1.8} />
               </div>
               <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2.5 py-1 rounded-md">
-                Commercial Property
+                {t("cre.tag")}
               </span>
             </div>
             <h3
@@ -119,15 +149,13 @@ export default function CommercialFinancingSection() {
                 fraunces.className,
               )}
             >
-              Commercial Real Estate Loans
+              {t("cre.title")}
             </h3>
             <h4 className="font-medium text-ink text-sm mb-2 line-clamp-1">
-              Financing Solutions for Businesses, Investors &amp; Developers
+              {t("cre.subtitle")}
             </h4>
             <p className="text-sm text-ink-2 leading-relaxed line-clamp-3">
-              Whether you&apos;re purchasing, refinancing, constructing, or
-              expanding commercial real estate, MyLoanDesk provides access to a
-              broad network of commercial lenders.
+              {t("cre.card_description")}
             </p>
           </div>
 
@@ -137,14 +165,16 @@ export default function CommercialFinancingSection() {
               onClick={() => setActiveModal("commercial-real-estate")}
               className="flex-1 py-3 bg-cream hover:bg-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
             >
-              Read More <ArrowRight size={14} />
+              {t("common.read_more")} <ArrowRight size={14} />
             </button>
 
             <Link
-              href="/loan-programs/commercial-real-estate-loans"
+              href={getLocalizedHref(
+                "/loan-programs/commercial-real-estate-loans",
+              )}
               className="flex-1 py-3 bg-primary-bg hover:bg-cream border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
             >
-              Program Page{" "}
+              {t("common.program_page")}{" "}
               <ExternalLink size={14} className="text-brand-orange" />
             </Link>
           </div>
@@ -152,43 +182,24 @@ export default function CommercialFinancingSection() {
           <LoanDetailModal
             isOpen={activeModal === "commercial-real-estate"}
             onClose={closeModal}
-            title="Commercial Real Estate Loans"
+            title={t("cre.modal_title")}
+            closeLabel={t("common.close_dialog")}
           >
             <div>
-              <h4 className="font-medium text-ink mb-3">
-                Financing Solutions for Businesses, Investors &amp; Developers
-              </h4>
+              <h4 className="font-medium text-ink mb-3">{t("cre.subtitle")}</h4>
 
               <p className="text-sm text-ink-2 leading-relaxed mb-2">
-                Whether you&apos;re purchasing, refinancing, constructing, or
-                expanding commercial real estate, MyLoanDesk provides access to
-                a broad network of commercial lenders offering financing
-                tailored to your business and investment goals.
+                {t("cre.p1")}
               </p>
               <p className="text-sm text-ink-2 leading-relaxed mb-6">
-                From owner-occupied properties to large-scale investment and
-                development projects, we&apos;ll help you secure the right
-                financing with competitive rates, flexible loan structures, and
-                personalized guidance every step of the way.
+                {t("cre.p2")}
               </p>
 
               <h4 className="font-medium text-ink mb-3">
-                Commercial Properties We Finance
+                {t("cre.properties_title")}
               </h4>
               <ul className="space-y-2 mb-6">
-                {[
-                  "Office Buildings",
-                  "Retail Centers",
-                  "Apartment & Multifamily Properties",
-                  "Mixed-Use Developments",
-                  "Industrial & Warehouse Facilities",
-                  "Hotels & Motels",
-                  "Medical & Professional Buildings",
-                  "Restaurants & Hospitality Properties",
-                  "Self-Storage Facilities",
-                  "Land Acquisition & Development",
-                  "Ground-Up Construction Projects",
-                ].map((item, index) => (
+                {crePropertiesList.map((item, index) => (
                   <li
                     key={index}
                     className="flex items-start gap-2 text-xs text-ink/90 leading-normal"
@@ -200,18 +211,10 @@ export default function CommercialFinancingSection() {
               </ul>
 
               <h4 className="font-medium text-ink mb-3">
-                Commercial Loan Solutions
+                {t("cre.solutions_title")}
               </h4>
               <ul className="space-y-2 mb-6">
-                {[
-                  "Property Purchase",
-                  "Commercial Refinancing",
-                  "Cash-Out Refinancing",
-                  "Ground-Up Construction Financing",
-                  "Bridge Loans",
-                  "SBA Loans",
-                  "Portfolio Loans",
-                ].map((item, index) => (
+                {creSolutionsList.map((item, index) => (
                   <li
                     key={index}
                     className="flex items-start gap-2 text-xs text-ink/90 leading-normal"
@@ -225,33 +228,26 @@ export default function CommercialFinancingSection() {
               <div className="mb-6 p-4 bg-cream/40 border border-line rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-3">
                 <div>
                   <div className="text-xs font-semibold text-ink uppercase tracking-wider">
-                    Want to calculate CRE payments &amp; LTV?
+                    {t("cre.callout_title")}
                   </div>
-                  <p className="text-xs text-ink-2">
-                    Estimate monthly costs, explore SBA 7(a)/504 vs.
-                    conventional terms, and check special-use property options.
-                  </p>
+                  <p className="text-xs text-ink-2">{t("cre.callout_desc")}</p>
                 </div>
                 <Link
-                  href="/loan-programs/commercial-real-estate-loans"
+                  href={getLocalizedHref(
+                    "/loan-programs/commercial-real-estate-loans",
+                  )}
                   onClick={closeModal}
                   className="btn-shine bg-brand-orange text-white px-5 py-2.5 rounded-full text-xs font-semibold flex items-center gap-1.5 shrink-0 hover:bg-orange-600 transition-colors"
                 >
-                  Visit Full Program Page <ArrowRight size={14} />
+                  {t("cre.callout_button")} <ArrowRight size={14} />
                 </Link>
               </div>
 
               <h4 className="font-medium text-ink mb-3">
-                Why Choose MyLoanDesk?
+                {t("cre.why_title")}
               </h4>
               <ul className="space-y-2 mb-6">
-                {[
-                  "Access to a broad network of commercial lenders",
-                  "Financing for owner-occupied and investment properties",
-                  "Competitive rates and flexible loan structures",
-                  "Solutions for acquisitions, refinancing, development, and expansion",
-                  "Experienced guidance from application through closing",
-                ].map((item, index) => (
+                {creWhyList.map((item, index) => (
                   <li
                     key={index}
                     className="flex items-start gap-2 text-xs text-ink/90 leading-normal"
@@ -263,20 +259,18 @@ export default function CommercialFinancingSection() {
               </ul>
 
               <h4 className="font-medium text-ink mb-3">
-                Ready to finance your next commercial project?
+                {t("cre.ready_title")}
               </h4>
               <p className="text-sm text-ink-2 leading-relaxed mb-6">
-                Whether you&apos;re acquiring your first commercial property or
-                expanding an established real estate portfolio, MyLoanDesk can
-                help you find the financing solution that fits your goals.
+                {t("cre.ready_desc")}
               </p>
             </div>
             <div className="flex flex-col gap-3 mt-6">
               <Link
-                href="/get-quote"
+                href={getLocalizedHref("/get-quote")}
                 className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
               >
-                Contact Us Now for more details
+                {t("common.contact_for_details")}
               </Link>
             </div>
           </LoanDetailModal>
@@ -293,7 +287,7 @@ export default function CommercialFinancingSection() {
                 <Briefcase size={22} strokeWidth={1.8} />
               </div>
               <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2.5 py-1 rounded-md">
-                Capital Growth
+                {t("equipment.tag")}
               </span>
             </div>
             <h3
@@ -302,15 +296,13 @@ export default function CommercialFinancingSection() {
                 fraunces.className,
               )}
             >
-              Equipment Financing
+              {t("equipment.title")}
             </h3>
             <h4 className="font-medium text-ink text-sm mb-2 line-clamp-1">
-              Finance the Equipment Your Business Needs to Grow
+              {t("equipment.subtitle")}
             </h4>
             <p className="text-sm text-ink-2 leading-relaxed line-clamp-3">
-              Whether you&apos;re purchasing new equipment, replacing outdated
-              machinery, or expanding your operations, MyLoanDesk offers
-              flexible equipment financing solutions...
+              {t("equipment.card_description")}
             </p>
           </div>
           <div className="mt-auto pt-4">
@@ -318,83 +310,32 @@ export default function CommercialFinancingSection() {
               onClick={() => setActiveModal("equipment")}
               className="w-full py-3 bg-cream hover:bg-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-2 transition-all"
             >
-              Read More <ArrowRight size={14} />
+              {t("common.read_more")} <ArrowRight size={14} />
             </button>
           </div>
 
           <LoanDetailModal
             isOpen={activeModal === "equipment"}
             onClose={closeModal}
-            title="Equipment Financing"
+            title={t("equipment.modal_title")}
+            closeLabel={t("common.close_dialog")}
           >
             <div>
               <h4 className="font-medium text-ink mb-3">
-                Finance the Equipment Your Business Needs to Grow
+                {t("equipment.subtitle")}
               </h4>
               <p className="text-sm text-ink-2 leading-relaxed mb-2">
-                Whether you&apos;re purchasing new equipment, replacing outdated
-                machinery, or expanding your operations, MyLoanDesk offers
-                flexible equipment financing solutions designed to help your
-                business grow while preserving valuable working capital.
+                {t("equipment.p1")}
               </p>
               <p className="text-sm text-ink-2 leading-relaxed mb-6">
-                With competitive financing options and fast approvals, you can
-                acquire the equipment you need without tying up your cash
-                reserves.
+                {t("equipment.p2")}
               </p>
 
               <h4 className="font-semibold text-ink text-xs mb-2">
-                Why Choose Equipment Financing?
+                {t("equipment.why_title")}
               </h4>
               <ul className="space-y-1.5 mb-6 text-xs text-ink/90">
-                <li className="flex items-start gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-1.5 shrink-0" />
-                  <span>Finance new or used equipment</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-1.5 shrink-0" />
-                  <span>
-                    Preserve working capital for day-to-day operations
-                  </span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-1.5 shrink-0" />
-                  <span>Competitive rates and flexible repayment terms</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-1.5 shrink-0" />
-                  <span>
-                    Fast approvals and funding for qualified borrowers
-                  </span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-1.5 shrink-0" />
-                  <span>
-                    Up to 100% financing available for eligible equipment
-                  </span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-1.5 shrink-0" />
-                  <span>
-                    Available for a wide range of industries and business types
-                  </span>
-                </li>
-              </ul>
-
-              <h4 className="font-semibold text-ink text-xs mb-2">
-                Equipment We Can Help Finance
-              </h4>
-              <ul className="space-y-1.5 mb-6 text-xs text-ink/90">
-                {[
-                  "Construction Equipment",
-                  "Manufacturing Machinery",
-                  "Medical & Dental Equipment",
-                  "Restaurant Equipment",
-                  "Commercial Vehicles",
-                  "Office Furniture & Technology",
-                  "Agricultural Equipment",
-                  "Warehouse & Industrial Equipment",
-                ].map((item, index) => (
+                {equipmentWhyList.map((item, index) => (
                   <li key={index} className="flex items-start gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-1.5 shrink-0" />
                     <span>{item}</span>
@@ -403,30 +344,38 @@ export default function CommercialFinancingSection() {
               </ul>
 
               <h4 className="font-semibold text-ink text-xs mb-2">
-                Keep Your Business Moving Forward
+                {t("equipment.equipment_title")}
+              </h4>
+              <ul className="space-y-1.5 mb-6 text-xs text-ink/90">
+                {equipmentList.map((item, index) => (
+                  <li key={index} className="flex items-start gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-1.5 shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <h4 className="font-semibold text-ink text-xs mb-2">
+                {t("equipment.forward_title")}
               </h4>
               <p className="text-xs text-ink-2 leading-relaxed mb-6">
-                The right equipment can improve productivity, increase
-                efficiency, and support long-term growth. MyLoanDesk works with
-                a network of equipment financing specialists to help you secure
-                a financing solution that fits your business needs.
+                {t("equipment.forward_desc")}
               </p>
 
               <p className="text-xs mb-4 text-ink-2">
                 <span className="font-bold text-ink">
-                  Ready to finance your next equipment purchase?
+                  {t("equipment.ready_title")}
                 </span>
                 <br />
-                Contact MyLoanDesk today to explore your equipment financing
-                options.
+                {t("equipment.ready_desc")}
               </p>
             </div>
             <div className="flex flex-col gap-3 mt-6">
               <Link
-                href="/get-quote"
+                href={getLocalizedHref("/get-quote")}
                 className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
               >
-                Contact Us Now for more details
+                {t("common.contact_for_details")}
               </Link>
             </div>
           </LoanDetailModal>
@@ -443,7 +392,7 @@ export default function CommercialFinancingSection() {
                 <Landmark size={22} strokeWidth={1.8} />
               </div>
               <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2.5 py-1 rounded-md">
-                Liquidity Access
+                {t("business_lines.tag")}
               </span>
             </div>
             <h3
@@ -452,15 +401,13 @@ export default function CommercialFinancingSection() {
                 fraunces.className,
               )}
             >
-              Business Lines of Credit
+              {t("business_lines.title")}
             </h3>
             <p className="text-xs font-bold uppercase tracking-wider text-moss-deep mb-2 line-clamp-1">
-              Secure quick access to floating working capital reserves smoothly.
+              {t("business_lines.subtitle")}
             </p>
             <p className="text-sm text-ink-2 leading-relaxed line-clamp-3">
-              Maintaining strategic liquidity shields operations from unexpected
-              overhead pressures. Deploy flexible programmatic revolving funds
-              only when specific allocation needs present...
+              {t("business_lines.card_description")}
             </p>
           </div>
           <div className="mt-auto pt-4">
@@ -468,66 +415,49 @@ export default function CommercialFinancingSection() {
               onClick={() => setActiveModal("business-lines")}
               className="w-full py-3 bg-cream hover:bg-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-2 transition-all"
             >
-              Read More <ArrowRight size={14} />
+              {t("common.read_more")} <ArrowRight size={14} />
             </button>
           </div>
 
           <LoanDetailModal
             isOpen={activeModal === "business-lines"}
             onClose={closeModal}
-            title="Business Lines of Credit"
+            title={t("business_lines.modal_title")}
+            closeLabel={t("common.close_dialog")}
           >
             <div>
               <p className="text-xs font-bold uppercase tracking-wider text-moss-deep mb-2">
-                Secure quick access to floating working capital reserves
-                smoothly.
+                {t("business_lines.subtitle")}
               </p>
               <div className="text-sm text-ink-2 space-y-4 mb-6 leading-relaxed">
-                <p>
-                  Maintaining strategic liquidity shields operations from
-                  unexpected overhead pressures. Deploy flexible programmatic
-                  revolving funds only when specific allocation needs present
-                  themselves, protecting net profitability channels.
-                </p>
+                <p>{t("business_lines.p1")}</p>
                 <div className="bg-line/30 p-3 rounded-lg text-xs space-y-1">
                   <h4 className="font-semibold text-ink">
-                    Operational Features:
+                    {t("business_lines.features_title")}
                   </h4>
-                  <p>· Revolving access coordinates fluid payroll management</p>
-                  <p>· Pay interest strictly on deployed capital balances</p>
-                  <p>· Minimal document setup configuration metrics</p>
+                  {businessLinesFeatures.map((f, i) => (
+                    <p key={i}>{f}</p>
+                  ))}
                 </div>
 
                 <div className="bg-[#f0ece1]/50 p-4 rounded-xl border border-line/50 text-xs space-y-2">
                   <h4 className="font-semibold text-ink text-[11px] uppercase tracking-wider">
-                    Capital Deployment &amp; Use Cases:
+                    {t("business_lines.use_cases_title")}
                   </h4>
                   <ul className="list-disc list-inside space-y-1 text-[11px] text-ink-2 leading-relaxed">
-                    <li>
-                      Bridge seasonal cash flow gaps and bulk inventory
-                      purchases
-                    </li>
-                    <li>
-                      Take advantage of immediate supplier volume discounts
-                    </li>
-                    <li>
-                      Fund equipment upgrades and expansion initiatives on
-                      demand
-                    </li>
-                    <li>
-                      Unsecured and secured line structures available based on
-                      business revenue
-                    </li>
+                    {businessLinesUseCases.map((uc, i) => (
+                      <li key={i}>{uc}</li>
+                    ))}
                   </ul>
                 </div>
               </div>
             </div>
             <div className="flex flex-col gap-3 mt-6">
               <Link
-                href="/get-quote"
+                href={getLocalizedHref("/get-quote")}
                 className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
               >
-                Contact Us Now for more details
+                {t("common.contact_for_details")}
               </Link>
             </div>
           </LoanDetailModal>
@@ -544,7 +474,7 @@ export default function CommercialFinancingSection() {
                 <RefreshCw size={22} strokeWidth={1.8} />
               </div>
               <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2.5 py-1 rounded-md">
-                Operations Stack
+                {t("working_capital.tag")}
               </span>
             </div>
             <h3
@@ -553,15 +483,13 @@ export default function CommercialFinancingSection() {
                 fraunces.className,
               )}
             >
-              Working Capital
+              {t("working_capital.title")}
             </h3>
             <p className="text-xs font-medium italic text-ink-2 mb-2 line-clamp-1">
-              Customized liquid solutions tailored to enterprise growth metrics.
+              {t("working_capital.subtitle")}
             </p>
             <p className="text-sm text-ink-2 leading-relaxed line-clamp-3">
-              Empower seasonal purchase capacity or capitalize on high-volume
-              inventory procurement windows via tailored working capital
-              structures...
+              {t("working_capital.card_description")}
             </p>
           </div>
           <div className="mt-auto pt-4">
@@ -569,43 +497,38 @@ export default function CommercialFinancingSection() {
               onClick={() => setActiveModal("working-capital")}
               className="w-full py-3 bg-cream hover:bg-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-2 transition-all"
             >
-              Read More <ArrowRight size={14} />
+              {t("common.read_more")} <ArrowRight size={14} />
             </button>
           </div>
 
           <LoanDetailModal
             isOpen={activeModal === "working-capital"}
             onClose={closeModal}
-            title="Working Capital"
+            title={t("working_capital.modal_title")}
+            closeLabel={t("common.close_dialog")}
           >
             <div>
               <p className="text-xs font-medium italic text-ink-2 mb-4">
-                Customized liquid solutions tailored to enterprise growth
-                metrics with complete compliance transparency.
+                {t("working_capital.modal_subtitle")}
               </p>
               <div className="text-sm text-ink-2 space-y-4 mb-6 leading-relaxed">
-                <p>
-                  Empower seasonal purchase capacity or capitalize on
-                  high-volume inventory procurement windows via tailored working
-                  capital structures built to map business revenue trajectories
-                  perfectly.
-                </p>
+                <p>{t("working_capital.p1")}</p>
                 <div className="bg-[#f0ece1]/50 p-3 rounded-lg text-xs space-y-1 border border-line">
                   <h4 className="font-semibold text-ink">
-                    Capital Parameters:
+                    {t("working_capital.params_title")}
                   </h4>
-                  <p>· Funding footprints extending up to $2,000,000</p>
-                  <p>· Flexible 6 to 24-month term lengths</p>
-                  <p>· Clean structural fee frameworks</p>
+                  {workingCapitalParams.map((p, i) => (
+                    <p key={i}>{p}</p>
+                  ))}
                 </div>
               </div>
             </div>
             <div className="flex flex-col gap-3 mt-6">
               <Link
-                href="/get-quote"
+                href={getLocalizedHref("/get-quote")}
                 className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
               >
-                Contact Us Now for more details
+                {t("common.contact_for_details")}
               </Link>
             </div>
           </LoanDetailModal>
@@ -622,7 +545,7 @@ export default function CommercialFinancingSection() {
                 <Key size={22} strokeWidth={1.8} />
               </div>
               <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2.5 py-1 rounded-md">
-                Franchise Desk
+                {t("franchise.tag")}
               </span>
             </div>
             <h3
@@ -631,16 +554,13 @@ export default function CommercialFinancingSection() {
                 fraunces.className,
               )}
             >
-              Franchise Financing Solutions
+              {t("franchise.title")}
             </h3>
             <p className="text-xs font-semibold text-brand-orange mb-2 line-clamp-1">
-              Comprehensive capitalization matrices built for single and
-              multi-unit expansions.
+              {t("franchise.subtitle")}
             </p>
             <p className="text-sm text-ink-2 leading-relaxed line-clamp-3">
-              Accelerate standard store timelines or update equipment models
-              across multi-unit frameworks with custom franchise lending
-              setups...
+              {t("franchise.card_description")}
             </p>
           </div>
           <div className="mt-auto pt-4">
@@ -648,42 +568,38 @@ export default function CommercialFinancingSection() {
               onClick={() => setActiveModal("franchise")}
               className="w-full py-3 bg-cream hover:bg-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-2 transition-all"
             >
-              Read More <ArrowRight size={14} />
+              {t("common.read_more")} <ArrowRight size={14} />
             </button>
           </div>
 
           <LoanDetailModal
             isOpen={activeModal === "franchise"}
             onClose={closeModal}
-            title="Franchise Financing Solutions"
+            title={t("franchise.modal_title")}
+            closeLabel={t("common.close_dialog")}
           >
             <div>
               <p className="text-xs font-semibold text-brand-orange mb-4">
-                Comprehensive capitalization matrices built for single and
-                multi-unit expansions.
+                {t("franchise.subtitle")}
               </p>
               <div className="text-sm text-ink-2 space-y-4 mb-6 leading-relaxed">
-                <p>
-                  Accelerate standard store timelines or update equipment models
-                  across multi-unit frameworks with custom franchise lending
-                  setups engineered around specific brand benchmarks.
-                </p>
+                <p>{t("franchise.p1")}</p>
                 <div className="bg-line/30 p-3 rounded-lg text-xs space-y-1">
                   <h4 className="font-semibold text-ink">
-                    Financing Highlights:
+                    {t("franchise.highlights_title")}
                   </h4>
-                  <p>· Rapid credit determination timelines</p>
-                  <p>· Capitalization access up to $500k dynamically</p>
-                  <p>· Seasonal or deferred amortization options built-in</p>
+                  {franchiseHighlights.map((h, i) => (
+                    <p key={i}>{h}</p>
+                  ))}
                 </div>
               </div>
             </div>
             <div className="flex flex-col gap-3 mt-6">
               <Link
-                href="/get-quote"
+                href={getLocalizedHref("/get-quote")}
                 className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
               >
-                Contact Us Now for more details
+                {t("common.contact_for_details")}
               </Link>
             </div>
           </LoanDetailModal>
@@ -700,7 +616,7 @@ export default function CommercialFinancingSection() {
                 <Building size={22} strokeWidth={1.8} />
               </div>
               <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2.5 py-1 rounded-md">
-                Commercial Scale
+                {t("commercial_loans.tag")}
               </span>
             </div>
             <h3
@@ -709,12 +625,10 @@ export default function CommercialFinancingSection() {
                 fraunces.className,
               )}
             >
-              Commercial Loans
+              {t("commercial_loans.title")}
             </h3>
             <p className="text-sm text-ink-2 leading-relaxed line-clamp-4">
-              We structure institutional-level options spanning standard asset
-              classes: Multifamily, Mixed-Use, Warehouse/Industrial footprints,
-              Office properties, and Retail strip centers.
+              {t("commercial_loans.card_description")}
             </p>
           </div>
           <div className="mt-auto pt-4">
@@ -722,40 +636,33 @@ export default function CommercialFinancingSection() {
               onClick={() => setActiveModal("commercial")}
               className="w-full py-3 bg-cream hover:bg-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-2 transition-all"
             >
-              Read More <ArrowRight size={14} />
+              {t("common.read_more")} <ArrowRight size={14} />
             </button>
           </div>
 
           <LoanDetailModal
             isOpen={activeModal === "commercial"}
             onClose={closeModal}
-            title="Commercial Loans"
+            title={t("commercial_loans.modal_title")}
+            closeLabel={t("common.close_dialog")}
           >
             <div>
               <div className="text-sm text-ink-2 space-y-4 mb-6 leading-relaxed">
-                <p>
-                  We structure institutional-level options spanning standard
-                  asset classes: Multifamily, Mixed-Use, Warehouse/Industrial
-                  footprints, Office properties, and Retail strip centers.
-                </p>
+                <p>{t("commercial_loans.p1")}</p>
                 <div className="p-3 bg-line/20 rounded-xl border border-line">
                   <h4 className="font-bold text-ink text-xs mb-1">
-                    SBA 7(a) Guaranty Systems
+                    {t("commercial_loans.sba_title")}
                   </h4>
-                  <p className="text-xs">
-                    Leverage core agency backing parameters to secure essential
-                    asset purchase lines reaching up to $2,000,000 with highly
-                    favorable amortized structures.
-                  </p>
+                  <p className="text-xs">{t("commercial_loans.sba_desc")}</p>
                 </div>
               </div>
             </div>
             <div className="flex flex-col gap-3 mt-6">
               <Link
-                href="/get-quote"
+                href={getLocalizedHref("/get-quote")}
                 className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
               >
-                Contact Us Now for more details
+                {t("common.contact_for_details")}
               </Link>
             </div>
           </LoanDetailModal>

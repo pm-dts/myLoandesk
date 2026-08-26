@@ -6,6 +6,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import LoanProgramButton from "@/components/site/utils/LoanProgramButton";
 import { Fraunces } from "next/font/google";
+import { useTranslations } from "next-intl";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -20,11 +21,13 @@ function LoanDetailModal({
   isOpen,
   onClose,
   title,
+  closeLabel = "Close dialog",
   children,
 }: {
   isOpen: boolean;
   onClose: () => void;
   title: string;
+  closeLabel?: string;
   children: React.ReactNode;
 }) {
   useEffect(() => {
@@ -58,7 +61,7 @@ function LoanDetailModal({
           <button
             onClick={onClose}
             className="bg-line/40 hover:bg-line/80 text-ink p-2 rounded-full transition-colors"
-            aria-label="Close dialog"
+            aria-label={closeLabel}
           >
             <X size={20} />
           </button>
@@ -69,10 +72,28 @@ function LoanDetailModal({
   );
 }
 
-export default function RealEstateInvestmentSection() {
+interface RealEstateInvestmentSectionProps {
+  locale?: string;
+}
+
+export default function RealEstateInvestmentSection({
+  locale = "en",
+}: RealEstateInvestmentSectionProps) {
   const [activeModal, setActiveModal] = useState<string | null>(null);
+  const t = useTranslations("LoanPrograms.RealEstateInvestmentSection");
+  const isEs = locale === "es";
 
   const closeModal = () => setActiveModal(null);
+  const getLocalizedHref = (path: string) => (isEs ? `/es${path}` : path);
+
+  const dscrWhyList = t.raw("dscr.why_list") as string[];
+  const dscrWhoList = t.raw("dscr.who_list") as string[];
+
+  const fixFlipWhyList = t.raw("fix_and_flip.why_list") as string[];
+  const fixFlipWhoList = t.raw("fix_and_flip.who_list") as string[];
+
+  const constructionWhyList = t.raw("construction.why_list") as string[];
+  const constructionWhoList = t.raw("construction.who_list") as string[];
 
   return (
     <section
@@ -85,10 +106,9 @@ export default function RealEstateInvestmentSection() {
           fraunces.className,
         )}
       >
-        Real Estate Investment Loans
+        {t("heading")}
       </h2>
 
-      {/* Grid updated to gap-6 matching the fixed card layout */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {/* 1. DSCR Financing */}
         <div
@@ -101,7 +121,7 @@ export default function RealEstateInvestmentSection() {
                 <Shield size={22} strokeWidth={1.8} />
               </div>
               <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2 py-1 rounded">
-                Investor
+                {t("dscr.tag")}
               </span>
             </div>
             <h3
@@ -110,78 +130,56 @@ export default function RealEstateInvestmentSection() {
                 fraunces.className,
               )}
             >
-              DSCR Investment Property Loans
+              {t("dscr.title")}
             </h3>
             <h4 className="font-medium text-ink text-sm mb-2 line-clamp-2">
-              Grow Your Real Estate Portfolio Without Personal Income
-              Verification
+              {t("dscr.subtitle")}
             </h4>
             <p className="text-sm text-ink-2 leading-relaxed line-clamp-3">
-              A Debt Service Coverage Ratio (DSCR) Loan is designed specifically
-              for real estate investors. Instead of qualifying based on your
-              personal income, employment, or tax returns...
+              {t("dscr.card_description")}
             </p>
           </div>
 
-          {/* Card Action Buttons with Direct Link to Dedicated Page */}
           <div className="mt-auto pt-4 flex flex-col gap-2">
             <button
               onClick={() => setActiveModal("dscr")}
               className="flex-1 py-3 bg-cream hover:bg-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
             >
-              Read More <ArrowRight size={14} />
+              {t("common.read_more")} <ArrowRight size={14} />
             </button>
 
             <Link
-              href="/loan-programs/dscr-loans"
+              href={getLocalizedHref("/loan-programs/dscr-loans")}
               className="flex-1 py-3 bg-primary-bg hover:bg-cream border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
             >
-              Program Page{" "}
+              {t("common.program_page")}{" "}
               <ExternalLink size={14} className="text-brand-orange" />
             </Link>
           </div>
 
-          {/* Loan Detail Modal with Direct Page Callout */}
           <LoanDetailModal
             isOpen={activeModal === "dscr"}
             onClose={closeModal}
-            title="DSCR Investment Property Loans"
+            title={t("dscr.modal_title")}
+            closeLabel={t("common.close_dialog")}
           >
             <div>
               <h4 className="font-medium text-ink mb-3">
-                Grow Your Real Estate Portfolio Without Personal Income
-                Verification
+                {t("dscr.subtitle")}
               </h4>
 
               <p className="text-sm text-ink-2 leading-relaxed mb-2">
-                A Debt Service Coverage Ratio (DSCR) Loan is designed
-                specifically for real estate investors. Instead of qualifying
-                based on your personal income, employment, or tax returns, the
-                loan is primarily based on the property's ability to generate
-                rental income.
+                {t("dscr.p1")}
               </p>
               <p className="text-sm text-ink-2 leading-relaxed mb-6">
-                Whether you're purchasing your first investment property,
-                expanding your portfolio, or refinancing an existing rental, a
-                DSCR loan offers a flexible financing solution that keeps the
-                focus on your investment-not your personal finances.
+                {t("dscr.p2")}
               </p>
 
               <h4 className="font-medium text-ink mb-3">
-                Why Choose a DSCR Loan?
+                {t("dscr.why_title")}
               </h4>
               <ul className="space-y-2 mb-6">
-                {[
-                  "Qualify primarily based on the property's rental income",
-                  "No personal income verification required for qualifying*",
-                  "No tax returns, W-2s, or pay stubs required in many cases*",
-                  "Purchase, refinance, or cash-out refinance options available",
-                  "Fixed and adjustable-rate loan programs",
-                  "Finance single-family homes, condos, townhomes, and 2-4 unit investment properties",
-                  "Available to both new and experienced real estate investors",
-                  "Many programs allow financing in an LLC or other business entity",
-                  "Competitive loan amounts with flexible underwriting",
-                ].map((item, index) => (
+                {dscrWhyList.map((item, index) => (
                   <li
                     key={index}
                     className="flex items-start gap-2 text-xs text-ink/90 leading-normal"
@@ -193,19 +191,13 @@ export default function RealEstateInvestmentSection() {
               </ul>
 
               <h4 className="font-medium text-ink mb-3">
-                Who Is a DSCR Loan For?
+                {t("dscr.who_title")}
               </h4>
               <p className="text-sm text-ink-2 leading-relaxed mb-2">
-                A DSCR loan may be an excellent option if you are:
+                {t("dscr.who_intro")}
               </p>
               <ul className="space-y-2 mb-6">
-                {[
-                  "A real estate investor building long-term wealth",
-                  "Self-employed and prefer not to document personal income",
-                  "Expanding your rental property portfolio",
-                  "Investing in short-term or long-term rental properties",
-                  "A foreign national purchasing U.S. investment property through eligible programs",
-                ].map((item, index) => (
+                {dscrWhoList.map((item, index) => (
                   <li
                     key={index}
                     className="flex items-start gap-2 text-xs text-ink/90 leading-normal"
@@ -217,55 +209,42 @@ export default function RealEstateInvestmentSection() {
               </ul>
 
               <h4 className="font-medium text-ink mb-3">
-                Invest Smarter. Grow Faster.
+                {t("dscr.grow_title")}
               </h4>
               <p className="text-sm text-ink-2 leading-relaxed mb-6">
-                With access to a broad network of DSCR lenders, MyLoanDesk can
-                help you compare loan options designed to fit your investment
-                strategy. We'll guide you through the process and help you
-                secure financing that supports your long-term real estate goals.
+                {t("dscr.grow_p")}
               </p>
 
               <p className="text-xs mb-4 text-ink-2">
                 <span className="font-bold text-ink">
-                  Ready to finance your next investment property?
+                  {t("dscr.ready_title")}
                 </span>
                 <br />
-                Contact MyLoanDesk today to explore your DSCR loan options and
-                get pre-qualified.
+                {t("dscr.ready_desc")}
               </p>
 
-              {/* Direct Program Page Link Box inside Modal */}
               <div className="mb-6 p-4 bg-cream/40 border border-line rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-3">
                 <div>
                   <div className="text-xs font-semibold text-ink uppercase tracking-wider">
-                    Want to calculate your exact DSCR ratio?
+                    {t("dscr.callout_title")}
                   </div>
-                  <p className="text-xs text-ink-2">
-                    Use our interactive cash-flow estimator and view full
-                    qualification requirements.
-                  </p>
+                  <p className="text-xs text-ink-2">{t("dscr.callout_desc")}</p>
                 </div>
                 <Link
-                  href="/loan-programs/dscr-loans"
+                  href={getLocalizedHref("/loan-programs/dscr-loans")}
                   onClick={closeModal}
                   className="btn-shine bg-brand-orange text-white px-5 py-2.5 rounded-full text-xs font-semibold flex items-center gap-1.5 shrink-0 hover:bg-orange-600 transition-colors"
                 >
-                  Visit Full Program Page <ArrowRight size={14} />
+                  {t("dscr.callout_button")} <ArrowRight size={14} />
                 </Link>
               </div>
 
-              {/* Disclaimer */}
               <div className="p-3 bg-line/20 rounded-xl border border-line mb-4">
                 <h4 className="font-bold text-ink text-xs mb-1">
-                  Program Disclaimer
+                  {t("dscr.disclaimer_title")}
                 </h4>
                 <p className="text-[10px] text-ink-2">
-                  Program guidelines, property eligibility, loan amounts,
-                  reserve requirements, and documentation requirements vary by
-                  lender. Not all applicants or properties will qualify. Rental
-                  income and property cash flow requirements apply. Terms and
-                  availability are subject to change without notice.
+                  {t("dscr.disclaimer_text")}
                 </p>
               </div>
 
@@ -285,7 +264,7 @@ export default function RealEstateInvestmentSection() {
                 <Shield size={22} strokeWidth={1.8} />
               </div>
               <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2 py-1 rounded">
-                Investor
+                {t("fix_and_flip.tag")}
               </span>
             </div>
             <h3
@@ -294,75 +273,56 @@ export default function RealEstateInvestmentSection() {
                 fraunces.className,
               )}
             >
-              Fix &amp; Flip Loans
+              {t("fix_and_flip.title")}
             </h3>
             <h4 className="font-medium text-ink text-sm mb-2 line-clamp-2">
-              Fast, Flexible Financing for Real Estate Investors
+              {t("fix_and_flip.subtitle")}
             </h4>
             <p className="text-sm text-ink-2 leading-relaxed line-clamp-3">
-              Whether you&apos;re renovating your first investment property or
-              managing multiple projects each year, a Fix &amp; Flip Loan
-              provides the financing you need to purchase, renovate, and
-              resell...
+              {t("fix_and_flip.card_description")}
             </p>
           </div>
 
-          {/* Card Action Buttons with Direct Link to Dedicated Page */}
           <div className="mt-auto pt-4 flex flex-col gap-2">
             <button
               onClick={() => setActiveModal("fix-flip")}
               className="flex-1 py-3 bg-cream hover:bg-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
             >
-              Read More <ArrowRight size={14} />
+              {t("common.read_more")} <ArrowRight size={14} />
             </button>
 
             <Link
-              href="/loan-programs/fix-and-flip-loans"
+              href={getLocalizedHref("/loan-programs/fix-and-flip-loans")}
               className="flex-1 py-3 bg-primary-bg hover:bg-cream border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
             >
-              Program Page{" "}
+              {t("common.program_page")}{" "}
               <ExternalLink size={14} className="text-brand-orange" />
             </Link>
           </div>
 
-          {/* Loan Detail Modal with Direct Page Callout */}
           <LoanDetailModal
             isOpen={activeModal === "fix-flip"}
             onClose={closeModal}
-            title="Fix & Flip Loans"
+            title={t("fix_and_flip.modal_title")}
+            closeLabel={t("common.close_dialog")}
           >
             <div>
               <h4 className="font-medium text-ink mb-3">
-                Fast, Flexible Financing for Real Estate Investors
+                {t("fix_and_flip.subtitle")}
               </h4>
 
               <p className="text-sm text-ink-2 leading-relaxed mb-2">
-                Whether you&apos;re renovating your first investment property or
-                managing multiple projects each year, a Fix &amp; Flip Loan
-                provides the financing you need to purchase, renovate, and
-                resell residential properties with confidence.
+                {t("fix_and_flip.p1")}
               </p>
               <p className="text-sm text-ink-2 leading-relaxed mb-6">
-                These short-term loans are designed specifically for real estate
-                investors, offering fast approvals and financing for both the
-                property acquisition and eligible renovation costs—so you can
-                focus on maximizing your return on investment.
+                {t("fix_and_flip.p2")}
               </p>
 
               <h4 className="font-medium text-ink mb-3">
-                Why Choose a Fix &amp; Flip Loan?
+                {t("fix_and_flip.why_title")}
               </h4>
               <ul className="space-y-2 mb-6">
-                {[
-                  "Finance both the property purchase and eligible renovation costs",
-                  "Fast approvals and quick closings to help you compete with cash buyers",
-                  "Short-term financing tailored for renovation and resale projects",
-                  "Loan amounts based on the property's projected After-Repair Value (ARV)",
-                  "Finance single-family homes, condos, townhomes, and 2-4 unit properties",
-                  "Available for both first-time and experienced real estate investors",
-                  "Multiple simultaneous projects available for qualified borrowers",
-                  "Streamlined application process with dedicated lending support",
-                ].map((item, index) => (
+                {fixFlipWhyList.map((item, index) => (
                   <li
                     key={index}
                     className="flex items-start gap-2 text-xs text-ink/90 leading-normal"
@@ -374,19 +334,13 @@ export default function RealEstateInvestmentSection() {
               </ul>
 
               <h4 className="font-medium text-ink mb-3">
-                Who Is a Fix &amp; Flip Loan For?
+                {t("fix_and_flip.who_title")}
               </h4>
               <p className="text-sm text-ink-2 leading-relaxed mb-2">
-                A Fix &amp; Flip Loan may be an excellent choice if you are:
+                {t("fix_and_flip.who_intro")}
               </p>
               <ul className="space-y-2 mb-6">
-                {[
-                  "Purchasing properties to renovate and resell",
-                  "Expanding your real estate investment business",
-                  "Looking for fast financing to secure competitive opportunities",
-                  "Renovating distressed or value-add properties",
-                  "Building a long-term real estate investment portfolio",
-                ].map((item, index) => (
+                {fixFlipWhoList.map((item, index) => (
                   <li
                     key={index}
                     className="flex items-start gap-2 text-xs text-ink/90 leading-normal"
@@ -398,56 +352,44 @@ export default function RealEstateInvestmentSection() {
               </ul>
 
               <h4 className="font-medium text-ink mb-3">
-                Move Quickly. Renovate. Profit.
+                {t("fix_and_flip.profit_title")}
               </h4>
               <p className="text-sm text-ink-2 leading-relaxed mb-6">
-                Successful real estate investing depends on speed and reliable
-                financing. At MyLoanDesk, we work with a network of experienced
-                investment property lenders to help you secure competitive Fix
-                &amp; Flip financing with the flexibility to match your
-                investment strategy.
+                {t("fix_and_flip.profit_p")}
               </p>
 
               <p className="text-xs mb-4 text-ink-2">
                 <span className="font-bold text-ink">
-                  Ready to fund your next project?
+                  {t("fix_and_flip.ready_title")}
                 </span>
                 <br />
-                Contact MyLoanDesk today to explore your Fix &amp; Flip loan
-                options and get pre-qualified.
+                {t("fix_and_flip.ready_desc")}
               </p>
 
-              {/* Direct Program Page Link Box inside Modal */}
               <div className="mb-6 p-4 bg-cream/40 border border-line rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-3">
                 <div>
                   <div className="text-xs font-semibold text-ink uppercase tracking-wider">
-                    Want to calculate your deal margin &amp; ARV ratio?
+                    {t("fix_and_flip.callout_title")}
                   </div>
                   <p className="text-xs text-ink-2">
-                    Explore complete fix &amp; flip guidelines and use our
-                    interactive deal estimator.
+                    {t("fix_and_flip.callout_desc")}
                   </p>
                 </div>
                 <Link
-                  href="/loan-programs/fix-and-flip-loans"
+                  href={getLocalizedHref("/loan-programs/fix-and-flip-loans")}
                   onClick={closeModal}
                   className="btn-shine bg-brand-orange text-white px-5 py-2.5 rounded-full text-xs font-semibold flex items-center gap-1.5 shrink-0 hover:bg-orange-600 transition-colors"
                 >
-                  Visit Full Program Page <ArrowRight size={14} />
+                  {t("fix_and_flip.callout_button")} <ArrowRight size={14} />
                 </Link>
               </div>
 
-              {/* Disclaimer */}
               <div className="p-3 bg-line/20 rounded-xl border border-line mb-4">
                 <h4 className="font-bold text-ink text-xs mb-1">
-                  Program Disclaimer
+                  {t("fix_and_flip.disclaimer_title")}
                 </h4>
                 <p className="text-[10px] text-ink-2">
-                  Program guidelines, loan amounts, loan-to-value limits,
-                  After-Repair Value (ARV) requirements, renovation funding, and
-                  borrower qualifications vary by lender. Not all applicants or
-                  properties will qualify. Terms and availability are subject to
-                  change without notice.
+                  {t("fix_and_flip.disclaimer_text")}
                 </p>
               </div>
 
@@ -467,7 +409,7 @@ export default function RealEstateInvestmentSection() {
                 <Shield size={22} strokeWidth={1.8} />
               </div>
               <span className="text-[10px] uppercase font-mono tracking-widest text-ink-2 bg-line/30 px-2 py-1 rounded">
-                Construction
+                {t("construction.tag")}
               </span>
             </div>
             <h3
@@ -476,73 +418,56 @@ export default function RealEstateInvestmentSection() {
                 fraunces.className,
               )}
             >
-              Construction Loans
+              {t("construction.title")}
             </h3>
             <h4 className="font-medium text-ink text-sm mb-2 line-clamp-2">
-              Finance Your Dream Home or Next Development Project
+              {t("construction.subtitle")}
             </h4>
             <p className="text-sm text-ink-2 leading-relaxed line-clamp-3">
-              Whether you&apos;re building a custom home, developing a
-              residential community, or constructing investment properties,
-              MyLoanDesk offers flexible Ground-Up Construction Loans...
+              {t("construction.card_description")}
             </p>
           </div>
 
-          {/* Card Action Buttons with Direct Link to Dedicated Page */}
           <div className="mt-auto pt-4 flex flex-col gap-2">
             <button
               onClick={() => setActiveModal("ground-up")}
               className="flex-1 py-3 bg-cream hover:bg-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
             >
-              Read More <ArrowRight size={14} />
+              {t("common.read_more")} <ArrowRight size={14} />
             </button>
 
             <Link
-              href="/loan-programs/construction-loans"
+              href={getLocalizedHref("/loan-programs/construction-loans")}
               className="flex-1 py-3 bg-primary-bg hover:bg-cream border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-1.5 transition-all"
             >
-              Program Page{" "}
+              {t("common.program_page")}{" "}
               <ExternalLink size={14} className="text-brand-orange" />
             </Link>
           </div>
 
-          {/* Loan Detail Modal with Direct Page Callout */}
           <LoanDetailModal
             isOpen={activeModal === "ground-up"}
             onClose={closeModal}
-            title="Ground-Up Construction Loans"
+            title={t("construction.modal_title")}
+            closeLabel={t("common.close_dialog")}
           >
             <div>
               <h4 className="font-medium text-ink mb-3">
-                Finance Your Dream Home or Next Development Project
+                {t("construction.subtitle")}
               </h4>
 
               <p className="text-sm text-ink-2 leading-relaxed mb-2">
-                Whether you&apos;re building a custom home, developing a
-                residential community, or constructing investment properties,
-                MyLoanDesk offers flexible Ground-Up Construction Loans designed
-                to help bring your vision to life.
+                {t("construction.p1")}
               </p>
               <p className="text-sm text-ink-2 leading-relaxed mb-6">
-                From purchasing the land to the final certificate of occupancy,
-                we&apos;ll help you secure financing tailored to your
-                project&apos;s size, scope, and timeline.
+                {t("construction.p2")}
               </p>
 
               <h4 className="font-medium text-ink mb-3">
-                Why Choose a Ground-Up Construction Loan?
+                {t("construction.why_title")}
               </h4>
               <ul className="space-y-2 mb-6">
-                {[
-                  "Finance land acquisition, construction costs, and approved project expenses",
-                  "Available for owner-occupied homes, second homes, and investment properties",
-                  "Construction-to-permanent financing available with many programs, eliminating the need for a second closing",
-                  "Interest-only payments during the construction phase on many loan programs",
-                  "Funds released in scheduled draws as construction milestones are completed",
-                  "Flexible loan options for individual borrowers, custom home builders, and residential developers",
-                  "Competitive loan amounts and underwriting tailored to your project",
-                  "Financing available for single-family homes, custom residences, and residential developments",
-                ].map((item, index) => (
+                {constructionWhyList.map((item, index) => (
                   <li
                     key={index}
                     className="flex items-start gap-2 text-xs text-ink/90 leading-normal"
@@ -554,21 +479,13 @@ export default function RealEstateInvestmentSection() {
               </ul>
 
               <h4 className="font-medium text-ink mb-3">
-                Who Is a Ground-Up Construction Loan For?
+                {t("construction.who_title")}
               </h4>
               <p className="text-sm text-ink-2 leading-relaxed mb-2">
-                A Ground-Up Construction Loan may be the right solution if you
-                are:
+                {t("construction.who_intro")}
               </p>
               <ul className="space-y-2 mb-6">
-                {[
-                  "Building a custom primary residence",
-                  "Constructing a vacation or second home",
-                  "Developing spec homes for resale",
-                  "Building investment properties",
-                  "Developing multiple homes or residential subdivisions",
-                  "An experienced builder or a qualified owner-builder",
-                ].map((item, index) => (
+                {constructionWhoList.map((item, index) => (
                   <li
                     key={index}
                     className="flex items-start gap-2 text-xs text-ink/90 leading-normal"
@@ -580,60 +497,44 @@ export default function RealEstateInvestmentSection() {
               </ul>
 
               <h4 className="font-medium text-ink mb-3">
-                Build With Confidence
+                {t("construction.build_title")}
               </h4>
               <p className="text-sm text-ink-2 leading-relaxed mb-6">
-                Construction financing requires experience and the right lending
-                partner. At MyLoanDesk, we work with a broad network of
-                construction lenders to help you secure financing that matches
-                your project&apos;s goals. From the initial planning stages
-                through final completion—and, when available, permanent
-                financing—we&apos;re here to guide you every step of the way.
+                {t("construction.build_p")}
               </p>
 
               <p className="text-xs mb-4 text-ink-2">
                 <span className="font-bold text-ink">
-                  Ready to break ground?
+                  {t("construction.ready_title")}
                 </span>
                 <br />
-                Contact MyLoanDesk today to discuss your construction project
-                and explore the financing options available for your next build.
+                {t("construction.ready_desc")}
               </p>
 
-              {/* Direct Program Page Link Box inside Modal */}
               <div className="mb-6 p-4 bg-cream/40 border border-line rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-3">
                 <div>
                   <div className="text-xs font-semibold text-ink uppercase tracking-wider">
-                    Want to calculate your construction budget &amp; draw
-                    schedule?
+                    {t("construction.callout_title")}
                   </div>
                   <p className="text-xs text-ink-2">
-                    Explore complete construction loan guidelines and use our
-                    interactive budget estimator.
+                    {t("construction.callout_desc")}
                   </p>
                 </div>
                 <Link
-                  href="/loan-programs/construction-loans"
+                  href={getLocalizedHref("/loan-programs/construction-loans")}
                   onClick={closeModal}
                   className="btn-shine bg-brand-orange text-white px-5 py-2.5 rounded-full text-xs font-semibold flex items-center gap-1.5 shrink-0 hover:bg-orange-600 transition-colors"
                 >
-                  Visit Full Program Page <ArrowRight size={14} />
+                  {t("construction.callout_button")} <ArrowRight size={14} />
                 </Link>
               </div>
 
-              {/* Disclaimer */}
               <div className="p-3 bg-line/20 rounded-xl border border-line mb-4">
                 <h4 className="font-bold text-ink text-xs mb-1">
-                  Program Disclaimer
+                  {t("construction.disclaimer_title")}
                 </h4>
                 <p className="text-[10px] text-ink-2">
-                  Program guidelines, land eligibility, borrower qualifications,
-                  loan amounts, draw schedules, interest reserves, loan-to-value
-                  limits, and documentation requirements vary by lender. Not all
-                  applicants or construction projects will qualify.
-                  Construction-to-permanent financing is available through
-                  select programs. Terms and availability are subject to change
-                  without notice.
+                  {t("construction.disclaimer_text")}
                 </p>
               </div>
 
@@ -641,147 +542,6 @@ export default function RealEstateInvestmentSection() {
             </div>
           </LoanDetailModal>
         </div>
-
-        {/* 4. Bridge Loans (Commented out in original prompt, formatted identically) */}
-        {/* <div
-          id="bridge-loans"
-          className="scroll-mt-36 bg-primary-bg p-8 border border-line rounded-3xl flex flex-col justify-between h-[420px] transition-colors duration-300 hover:bg-cream/40"
-        >
-          <div>
-            <div className="flex items-center justify-between mb-6">
-              <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-brand-orange/10 text-brand-orange shrink-0">
-                <Shield size={22} strokeWidth={1.8} />
-              </div>
-            </div>
-            <h3
-              className={cn(
-                "text-2xl font-medium text-ink mb-3",
-                fraunces.className,
-              )}
-            >
-              Bridge Loans
-            </h3>
-            <h4 className="font-medium text-ink text-sm mb-2 line-clamp-2">
-              Short-Term Financing to Bridge the Gap
-            </h4>
-            <p className="text-sm text-ink-2 leading-relaxed line-clamp-3">
-              A Bridge Loan provides fast, short-term financing when timing is
-              critical. Whether you're purchasing a new property before selling
-              your current one, acquiring an investment opportunity...
-            </p>
-          </div>
-          <div className="mt-auto pt-4">
-            <button
-              onClick={() => setActiveModal("bridge-loans")}
-              className="w-full py-3 bg-cream hover:bg-brand-orange hover:text-white border border-line rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-2 transition-all"
-            >
-              Read More <ArrowRight size={14} />
-            </button>
-          </div>
-
-          <LoanDetailModal
-            isOpen={activeModal === "bridge-loans"}
-            onClose={closeModal}
-            title="Bridge Loans"
-          >
-            <div>
-              <h4 className="font-medium text-ink mb-3">
-                Short-Term Financing to Bridge the Gap
-              </h4>
-
-              <p className="text-sm text-ink-2 leading-relaxed mb-2">
-                A <span className="font-bold"> Bridge Loan</span> provides fast,
-                short-term financing when timing is critical. Whether you're
-                purchasing a new property before selling your current one,
-                acquiring an investment opportunity, or waiting for long-term
-                financing, a bridge loan gives you immediate access to the
-                capital you need.
-              </p>
-              <p className="text-sm text-ink-2 leading-relaxed mb-6">
-                Designed for speed and flexibility, bridge loans help you act
-                quickly in competitive markets without missing valuable
-                opportunities.
-              </p>
-
-              <h4 className="font-medium text-ink mb-3">Program Highlights</h4>
-              <ul className="space-y-2 mb-6">
-                {[
-                  "Purchase a new property before selling your current one",
-                  "Fast approvals and expedited funding for qualified borrowers",
-                  "Short-term financing with flexible repayment options",
-                  "Available for residential and many commercial properties",
-                  "Finance primary residences, second homes, investment properties, and fix-and-flip projects",
-                  "Use existing property equity to strengthen your purchasing power",
-                  "Interest-only payment options available with select programs",
-                  "Bridge to permanent financing or property sale",
-                ].map((item, index) => (
-                  <li
-                    key={index}
-                    className="flex items-start gap-2 text-xs text-ink/90 leading-normal"
-                  >
-                    <span className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-1.5 shrink-0" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <h4 className="font-medium text-ink mb-3">Ideal For</h4>
-              <ul className="space-y-2 mb-6">
-                {[
-                  "Homeowners buying before selling",
-                  "Real estate investors",
-                  "Fix-and-flip projects",
-                  "Property acquisitions",
-                  "Time-sensitive transactions",
-                  "Developers awaiting permanent financing",
-                ].map((item, index) => (
-                  <li
-                    key={index}
-                    className="flex items-start gap-2 text-xs text-ink/90 leading-normal"
-                  >
-                    <span className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-1.5 shrink-0" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <h4 className="font-medium text-ink mb-3">
-                Move Quickly When Opportunity Knocks
-              </h4>
-              <p className="text-sm text-ink-2 leading-relaxed mb-6">
-                In today's competitive market, waiting for traditional financing
-                can mean losing the perfect property. MyLoanDesk works with a
-                network of lenders offering flexible bridge loan solutions to
-                help you close quickly and transition smoothly to your long-term
-                financing strategy.
-              </p>
-
-              <p className="text-xs mb-4 text-ink-2">
-                <span className="font-bold text-ink">Need financing fast?</span>
-                <br />
-                Contact MyLoanDesk today to learn how a bridge loan can help you
-                move forward with confidence.
-              </p>
-
-              <div className="flex flex-col gap-3 mt-4">
-                <a
-                  href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full py-3.5 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-bold tracking-wide flex items-center justify-center gap-2 transition-all shadow-sm"
-                >
-                  Apply Now <ArrowRight size={14} />
-                </a>
-                <Link
-                  href="/get-quote"
-                  className="w-full py-3.5 bg-cream hover:bg-brand-orange hover:text-primary-bg border border-line hover:border-brand-orange rounded-xl text-xs font-medium text-ink flex items-center justify-center transition-all"
-                >
-                  Contact Us Now
-                </Link>
-              </div>
-            </div>
-          </LoanDetailModal>
-        </div> */}
       </div>
     </section>
   );
