@@ -1,6 +1,6 @@
-import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages, setRequestLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
+import enMessages from "@/locales/en.json";
 import SiteHeader from "@/components/common/SiteHeader";
 import SiteFooter from "@/components/common/SiteFooter";
 import VideoGreetingWidget from "@/components/site/Home/AIVideo";
@@ -8,31 +8,16 @@ import WhatsappWidgetButton from "@/components/site/utils/WhatsappWidgetButton";
 import ChatbotWidget from "@/components/common/GHLChatBot";
 import { GoogleTagManager } from "@next/third-parties/google";
 
-// EXCLUDE "en" here so [locale] does not capture /en or overwrite root routes
-const secondaryLocales = ["es"];
-
-export function generateStaticParams() {
-  return secondaryLocales.map((locale) => ({ locale }));
-}
-
-export default async function SecondaryLocaleLayout({
+export default function EnglishLayout({
   children,
-  params,
 }: {
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
 }) {
-  const { locale } = await params;
-
-  if (!secondaryLocales.includes(locale)) {
-    notFound();
-  }
-
-  setRequestLocale(locale);
-  const messages = await getMessages({ locale });
+  // Explicitly set locale for static export on root routes
+  setRequestLocale("en");
 
   return (
-    <NextIntlClientProvider locale={locale} messages={messages}>
+    <NextIntlClientProvider locale="en" messages={enMessages}>
       <SiteHeader />
       <main className="flex-1">{children}</main>
       <SiteFooter />
