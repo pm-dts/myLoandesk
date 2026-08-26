@@ -712,5 +712,358 @@
       "webpage_description": "Programe una consulta directa con nuestro equipo experto en originación de préstamos para explorar soluciones hipotecarias personalizadas.",
       "reservation_name": "Cita de Consulta Hipotecaria"
     }
+  },
+  "CookiePolicy": {
+    "meta": {
+      "title": "Política de Cookies | MyLoanDesk",
+      "description": "Esta Política de Cookies explica cómo MyLoanDesk utiliza cookies y tecnologías de seguimiento similares cuando visita nuestro sitio web, calculadoras hipotecarias, portal de clientes y servicios en línea relacionados.",
+      "og_title": "Política de Cookies | MyLoanDesk",
+      "og_description": "Esta Política de Cookies explica cómo MyLoanDesk utiliza cookies y tecnologías similares cuando visita nuestro sitio web, páginas de destino, calculadoras hipotecarias, portal de clientes y servicios en línea relacionados.",
+      "og_alt": "Política de Cookies de MyLoanDesk",
+      "twitter_title": "Política de Cookies | MyLoanDesk",
+      "twitter_description": "Conozca cómo MyLoanDesk utiliza cookies y tecnologías de seguimiento para mejorar su experiencia de usuario y proteger los servicios hipotecarios."
+    },
+    "breadcrumbs": {
+      "home": "Inicio",
+      "cookie_policy": "Política de Cookies"
+    },
+    "badge": "Legal y Cumplimiento",
+    "heading": "Política de Cookies",
+    "effective_date_label": "Fecha de Entrada en Vigor:",
+    "effective_date_value": "25 de Julio de 2026",
+    "intro_p1": "Esta Política de Cookies explica cómo MyLoanDesk (\"MyLoanDesk\", \"nosotros\" o \"nuestro\") utiliza cookies y tecnologías similares cuando visita nuestro sitio web, páginas de destino, calculadoras de hipotecas, portal de clientes y servicios en línea relacionados.",
+    "intro_p2": "Esta Política de Cookies debe leerse junto con nuestra Política de Privacidad y Términos y Condiciones.",
+    "intro_p3": "Al continuar utilizando nuestro sitio web, usted acepta nuestro uso de cookies como se describe en esta Política, excepto donde la ley aplicable requiera su consentimiento y usted elija lo contrario a través de nuestras preferencias de cookies.",
+    "toc_title": "Contenido",
+    "toc": {
+      "s1": "1. ¿Qué Son las Cookies?",
+      "s2": "2. Por Qué Usamos Cookies",
+      "s3": "3. Tipos de Cookies que Usamos",
+      "s4": "4. Cookies de Terceros",
+      "s5": "5. Cookies de Solicitud de Hipoteca",
+      "s6": "6. Tecnologías de IA y Chat",
+      "s7": "7. Consentimiento de Cookies",
+      "s8": "8. Gestión de Cookies",
+      "s9": "9. No Rastrear (Do Not Track)",
+      "s10": "10. Visitantes Internacionales",
+      "s11": "11. Actualizaciones de Esta Política",
+      "s12": "12. Contáctenos",
+      "s13": "Ejemplo de Banner de Cookies"
+    },
+    "inquiries_card": {
+      "title": "Consultas y Preguntas",
+      "description": "Si tiene preguntas sobre esta Política de Cookies, comuníquese con nosotros directamente."
+    },
+    "sections": {
+      "s1": {
+        "title": "1. ¿Qué Son las Cookies?",
+        "p1": "Las cookies son pequeños archivos de texto que se almacenan en su computadora, teléfono inteligente, tableta u otro dispositivo cuando visita un sitio web.",
+        "p2": "Las cookies ayudan a los sitios web a:",
+        "list": [
+          "Recordar sus preferencias",
+          "Mejorar el rendimiento del sitio web",
+          "Proporcionar una mejor experiencia de navegación",
+          "Analizar el tráfico del sitio web",
+          "Mejorar la seguridad del sitio web",
+          "Personalizar contenido y anuncios"
+        ],
+        "p3": "Las cookies normalmente no contienen información que lo identifique directamente. Sin embargo, las cookies pueden vincularse a información personal que usted proporcione voluntariamente a través de nuestro sitio web."
+      },
+      "s2": {
+        "title": "2. Por Qué Usamos Cookies",
+        "intro": "MyLoanDesk utiliza cookies para:",
+        "list": [
+          "Operar nuestro sitio web de manera eficiente",
+          "Recordar sus preferencias",
+          "Mejorar la funcionalidad del sitio web",
+          "Mantener la seguridad",
+          "Analizar el comportamiento del visitante",
+          "Mejorar las calculadoras de hipotecas",
+          "Guardar formularios parcialmente completados (donde esté disponible)",
+          "Prevenir el fraude",
+          "Medir el rendimiento publicitario",
+          "Mejorar la experiencia del cliente"
+        ]
+      },
+      "s3": {
+        "title": "3. Tipos de Cookies que Usamos",
+        "sub_a_title": "A. Cookies Esenciales",
+        "sub_a_p1": "Estas cookies son necesarias para que el sitio web funcione correctamente.",
+        "sub_a_p2": "Los ejemplos incluyen:",
+        "sub_a_list": [
+          "Autenticación de inicio de sesión",
+          "Verificación de seguridad",
+          "Prevención de fraude",
+          "Envío de formularios",
+          "Gestión de sesiones",
+          "Equilibrio de carga del sitio web"
+        ],
+        "sub_a_p3": "Sin estas cookies, ciertas partes de nuestro sitio web pueden no funcionar correctamente.",
+        "sub_a_p4": "Estas cookies no se pueden desactivar a través de nuestro sitio web.",
+        "sub_b_title": "B. Cookies Funcionales",
+        "sub_b_p1": "Estas cookies recuerdan las elecciones que usted hace, incluyendo:",
+        "sub_b_list": [
+          "Idioma preferido",
+          "Región",
+          "Configuración de calculadoras",
+          "Preferencias guardadas",
+          "Ajustes de accesibilidad"
+        ],
+        "sub_b_p2": "Estas cookies mejoran su experiencia de navegación pero no son estrictamente necesarias.",
+        "sub_c_title": "C. Cookies de Análisis",
+        "sub_c_p1": "Las cookies de análisis nos ayudan a comprender cómo los visitantes interactúan con nuestro sitio web.",
+        "sub_c_p2": "La información recopilada puede incluir:",
+        "sub_c_list": [
+          "Páginas visitadas",
+          "Tiempo de permanencia en las páginas",
+          "Fuentes de tráfico",
+          "Tipo de dispositivo",
+          "Tipo de navegador",
+          "Resolución de pantalla",
+          "Rutas de navegación",
+          "Actividad de clics",
+          "Rendimiento del sitio web"
+        ],
+        "sub_c_p3": "Utilizamos esta información para mejorar el sitio web y la experiencia del usuario.",
+        "sub_c_p4": "Los proveedores de análisis pueden incluir:",
+        "sub_c_providers": [
+          "Google Analytics",
+          "Microsoft Clarity",
+          "Google Search Console",
+          "Otras plataformas de análisis de sitios web"
+        ],
+        "sub_c_p5": "Los datos de análisis generalmente se agrupan y no identifican directamente a usuarios individuales.",
+        "sub_d_title": "D. Cookies Publicitarias",
+        "sub_d_p1": "Las cookies publicitarias ayudan a medir la efectividad de las campañas de marketing y pueden usarse para mostrar anuncios que sean más relevantes para sus intereses.",
+        "sub_d_p2": "Estas cookies pueden ser colocadas por:",
+        "sub_d_list": [
+          "Google Ads",
+          "Meta (Facebook e Instagram)",
+          "LinkedIn",
+          "YouTube",
+          "Microsoft Advertising",
+          "Otros socios publicitarios"
+        ],
+        "sub_d_p3": "Estos proveedores pueden reconocer su navegador en diferentes sitios web.",
+        "sub_e_title": "E. Cookies de Rendimiento",
+        "sub_e_p1": "Las cookies de rendimiento nos ayudan a entender:",
+        "sub_e_list": [
+          "Velocidad del sitio web",
+          "Errores de carga",
+          "Problemas técnicos",
+          "Compatibilidad del navegador",
+          "Rendimiento del dispositivo"
+        ],
+        "sub_e_p2": "Estas cookies ayudan a mejorar la fiabilidad y el rendimiento."
+      },
+      "s4": {
+        "title": "4. Cookies de Terceros",
+        "p1": "Algunas cookies son colocadas por servicios de terceros integrados en nuestro sitio web.",
+        "p2": "Estos pueden incluir:",
+        "list": [
+          "Google",
+          "Microsoft",
+          "Meta",
+          "LinkedIn",
+          "YouTube",
+          "Vimeo",
+          "Calendly",
+          "GoHighLevel / LeadConnector",
+          "Twilio",
+          "Proveedores de chat en vivo",
+          "Calculadoras de hipotecas",
+          "Mapas incrustados",
+          "Proveedores de alojamiento de video"
+        ],
+        "p3": "Cada tercero opera bajo sus propias políticas de privacidad y cookies. Le recomendamos revisar esas políticas antes de utilizar sus servicios."
+      },
+      "s5": {
+        "title": "5. Cookies de Solicitud de Hipoteca",
+        "p1": "Cuando inicia una consulta o solicitud de hipoteca, las cookies pueden almacenar temporalmente información necesaria para:",
+        "list": [
+          "Mantener su sesión activa",
+          "Guardar su progreso",
+          "Mantener la seguridad de la solicitud",
+          "Evitar envíos duplicados",
+          "Mejorar la confiabilidad"
+        ],
+        "p2": "Estas cookies ayudan a garantizar que su solicitud se pueda completar de manera eficiente."
+      },
+      "s6": {
+        "title": "6. Tecnologías de IA y Chat",
+        "p1": "Si se comunica con un asistente de IA o un chat en vivo en nuestro sitio web, se pueden usar cookies para:",
+        "list": [
+          "Mantener su conversación",
+          "Recordar mensajes anteriores durante su sesión",
+          "Mejorar la funcionalidad del chatbot",
+          "Analizar el rendimiento del servicio al cliente"
+        ],
+        "p2": "Las interacciones de chat también pueden almacenarse de acuerdo con nuestra Política de Privacidad."
+      },
+      "s7": {
+        "title": "7. Consentimiento de Cookies",
+        "p1": "Dependiendo de su ubicación, se le puede presentar un banner de cookies cuando visite nuestro sitio web por primera vez. Puede optar por:",
+        "list": [
+          "Aceptar Todas las Cookies",
+          "Rechazar Cookies No Esenciales",
+          "Personalizar Preferencias de Cookies"
+        ],
+        "p2": "Sus selecciones generalmente se pueden cambiar más adelante a través del enlace de preferencias de cookies disponible en nuestro sitio web."
+      },
+      "s8": {
+        "title": "8. Gestión de Cookies",
+        "p1": "La mayoría de los navegadores web le permiten:",
+        "list": [
+          "Ver cookies",
+          "Eliminar cookies",
+          "Bloquear cookies",
+          "Limitar cookies de terceros",
+          "Recibir notificaciones antes de que se almacenen cookies"
+        ],
+        "p2": "Tenga en cuenta que deshabilitar ciertas cookies puede afectar la funcionalidad del sitio web.",
+        "p3": "Para obtener orientación específica del navegador, consulte la documentación de ayuda de su navegador."
+      },
+      "s9": {
+        "title": "9. No Rastrear (Do Not Track)",
+        "p1": "Algunos navegadores web ofrecen una configuración de \"No Rastrear\" (DNT).",
+        "p2": "Debido a que no existe un estándar universalmente aceptado para responder a las señales DNT, es posible que nuestro sitio web no responda a todas esas solicitudes. Aún puede administrar las cookies a través de la configuración de su navegador o nuestra herramienta de preferencias de cookies cuando esté disponible."
+      },
+      "s10": {
+        "title": "10. Visitantes Internacionales",
+        "p1": "Los visitantes ubicados en el Espacio Económico Europeo (EEE), el Reino Unido, Suiza u otras jurisdicciones con leyes de privacidad aplicables pueden tener derechos adicionales con respecto a las cookies y las tecnologías de seguimiento.",
+        "p2": "Cuando lo exija la ley, obtenemos su consentimiento antes de colocar cookies no esenciales en su dispositivo."
+      },
+      "s11": {
+        "title": "11. Actualizaciones de Esta Política de Cookies",
+        "p1": "Podemos actualizar esta Política de Cookies de vez en cuando para reflejar cambios en la tecnología, requisitos legales o nuestras prácticas comerciales.",
+        "p2": "La versión revisada se publicará en esta página con una Fecha de Entrada en Vigor actualizada."
+      },
+      "s12": {
+        "title": "12. Contáctenos",
+        "p1": "Si tiene preguntas sobre esta Política de Cookies o nuestro uso de cookies, contáctenos:",
+        "company": "MyLoanDesk",
+        "website_label": "Sitio Web:",
+        "website_val": "https://www.myloandesk.com",
+        "email_label": "Correo Electrónico:",
+        "email_val": "info@myloandesk.com",
+        "phone_label": "Teléfono:",
+        "phone_val": "3058916500",
+        "address_label": "Dirección Postal:",
+        "address_val": "1801 NE 123 St, Ste 314\nNorth Miami, FL 33181"
+      },
+      "s13": {
+        "title": "Ejemplo de Banner de Cookies",
+        "intro": "Cuando los visitantes llegan por primera vez al sitio web de MyLoanDesk, pueden ver un aviso similar al siguiente:",
+        "box_heading": "Valoramos su privacidad.",
+        "box_body": "MyLoanDesk utiliza cookies y tecnologías similares para mejorar el rendimiento del sitio web, recordar sus preferencias, analizar el tráfico y personalizar su experiencia. Puede aceptar todas las cookies, rechazar las cookies no esenciales o personalizar sus preferencias en cualquier momento.",
+        "box_buttons_label": "Botones:",
+        "box_buttons": [
+          "Aceptar Todo",
+          "Rechazar No Esenciales",
+          "Personalizar Preferencias"
+        ]
+      }
+    },
+    "schema": {
+      "webpage_name": "Política de Cookies | MyLoanDesk",
+      "webpage_description": "Divulgación oficial de política de cookies y tecnología de seguimiento para los servicios hipotecarios y plataformas digitales de MyLoanDesk.",
+      "faq_q1_question": "¿Por qué MyLoanDesk utiliza cookies?",
+      "faq_q1_answer": "MyLoanDesk utiliza cookies y tecnologías similares para garantizar la seguridad esencial del sitio, autenticar sesiones de usuario en los portales de clientes, recordar preferencias de usuario, calcular escenarios hipotecarios precisos y analizar el rendimiento web.",
+      "faq_q2_question": "¿Puedo administrar o desactivar las cookies en MyLoanDesk?",
+      "faq_q2_answer": "Sí. Puede administrar o desactivar las cookies a través de la configuración de su navegador web. Tenga en cuenta que deshabilitar las cookies esenciales puede afectar la funcionalidad de herramientas interactivas, portales de clientes y sesiones de cálculo."
+    }
+  },
+  "EmailCommunication": {
+    "meta": {
+      "title": "Política de Correo y Comunicación | MyLoanDesk",
+      "description": "Esta Política de Correo y Comunicación describe cómo MyLoanDesk utiliza el correo electrónico para comunicarse con clientes y socios comerciales, incluyendo seguridad, limitaciones y mejores prácticas.",
+      "og_title": "Política de Correo y Comunicación | MyLoanDesk",
+      "og_description": "Esta Política de Correo y Comunicación describe cómo MyLoanDesk utiliza el correo electrónico para comunicarse con clientes y socios comerciales, incluyendo seguridad, limitaciones y mejores prácticas.",
+      "og_alt": "Política de Correo y Comunicación de MyLoanDesk",
+      "twitter_title": "Política de Correo y Comunicación | MyLoanDesk",
+      "twitter_description": "Conozca los estándares de comunicación y correo electrónico de MyLoanDesk, prácticas de seguridad y políticas de divulgación electrónica."
+    },
+    "breadcrumbs": {
+      "home": "Inicio",
+      "email_policy": "Política de Correo y Comunicación"
+    },
+    "heading": "Política de Correo Electrónico y Comunicación",
+    "intro_p1": "MyLoanDesk.com (\"nosotros\" o \"nuestro\") utiliza el correo electrónico para comunicarse de manera eficiente con clientes y socios comerciales. Esta Política describe nuestras prácticas con respecto al uso del correo electrónico, seguridad y limitaciones.",
+    "intro_p2": "Al proporcionar su dirección de correo electrónico o interactuar con nosotros electrónicamente, usted acepta los términos de esta Política, así como nuestra Política de Privacidad y Términos de Uso.",
+    "sections": {
+      "s1": {
+        "title": "1. Naturaleza de la Comunicación por Correo Electrónico",
+        "list": [
+          "El correo electrónico puede ser conveniente, pero los mensajes pueden ser breves, informales o retrasarse.",
+          "Los correos electrónicos no siempre reflejan el alcance total de nuestras comunicaciones con usted.",
+          "Todos los asuntos oficiales del préstamo deben confirmarse por escrito firmado (electrónica o físicamente)."
+        ]
+      },
+      "s2": {
+        "title": "2. Recepción de su Correo Electrónico",
+        "list": [
+          "Enviarnos un correo electrónico no constituye una notificación de ningún asunto urgente.",
+          "Los filtros de correo no deseado o los errores del sistema pueden retrasar o bloquear la recepción de su correo.",
+          "Para asuntos urgentes, llámenos directamente y continúe con una confirmación por escrito."
+        ]
+      },
+      "s3": {
+        "title": "3. Seguridad y Monitoreo",
+        "list": [
+          "El correo electrónico se transmite por Internet, lo cual no es completamente seguro.",
+          "Los correos electrónicos pueden perderse, interceptarse, retrasarse o alterarse.",
+          "Evite enviar información personal confidencial (SSN, números de cuenta) por correo electrónico."
+        ]
+      },
+      "s4": {
+        "title": "4. Virus y Responsabilidad",
+        "list": [
+          "Aunque tomamos medidas para prevenir virus, no podemos garantizar que nuestros correos estén libres de ellos.",
+          "Es su responsabilidad escanear todos los correos electrónicos y archivos adjuntos antes de abrirlos.",
+          "Renunciamos a toda responsabilidad por cualquier pérdida o daño causado por código malicioso, virus o contenido de correo alterado."
+        ]
+      },
+      "s5": {
+        "title": "5. Descargo de Responsabilidad sobre Firma Electrónica",
+        "list": [
+          "Los correos electrónicos nuestros no constituyen una firma electrónica ni un acuerdo legalmente vinculante a menos que se indique explícitamente.",
+          "Los correos electrónicos no son una oferta de aprobación de préstamo, bloqueo de tasa de interés o compromiso a menos que reciba un acuerdo formal firmado por nuestra parte."
+        ]
+      },
+      "s6": {
+        "title": "6. Confidencialidad",
+        "list": [
+          "Los correos electrónicos que involucren a nuestros equipos Legal o de Cumplimiento pueden contener información privilegiada.",
+          "Si recibe un correo electrónico por error, notifíquenos de inmediato y elimínelo.",
+          "Queda prohibido el uso, reproducción o distribución no autorizados de información confidencial."
+        ]
+      },
+      "s7": {
+        "title": "7. Cancelar Suscripción o Exclusión Voluntaria",
+        "list": [
+          "Puede optar por no recibir correos electrónicos promocionales o de marketing en cualquier momento haciendo clic en el enlace \"Cancelar suscripción\" proporcionado en el mensaje.",
+          "No es posible cancelar la suscripción a correos transaccionales o informativos relacionados con su préstamo o cuenta, ya que son necesarios para prestar nuestros servicios."
+        ]
+      },
+      "s8": {
+        "title": "8. Disposiciones Generales",
+        "governing_law_label": "Ley Aplicable:",
+        "governing_law_text": "Esta política se rige por las leyes del Estado de California. Todas las disputas deben resolverse exclusivamente en los tribunales estatales o federales ubicados en Santa Clara, California.",
+        "equal_housing_label": "Prestamista de Igualdad de Vivienda:",
+        "equal_housing_text": "Cumplimos con la Ley de Igualdad de Oportunidades de Crédito (ECOA) y no discriminamos por motivos de raza, color, religión, origen nacional, sexo, estado civil, estatus militar, edad o recepción de asistencia pública.",
+        "reservation_label": "Reserva de Derechos:",
+        "reservation_text": "Todo el contenido de nuestros correos electrónicos, llamadas y mensajes de texto es confidencial y propietario. Su reproducción o distribución requiere nuestro consentimiento previo por escrito."
+      }
+    },
+    "schema": {
+      "webpage_name": "Política de Correo y Comunicación | MyLoanDesk",
+      "webpage_description": "Política oficial de MyLoanDesk sobre comunicaciones electrónicas, seguridad de correo electrónico y descargos de responsabilidad de firma electrónica.",
+      "faq_q1_question": "¿Los correos electrónicos de MyLoanDesk se consideran compromisos de préstamo legalmente vinculantes?",
+      "faq_q1_answer": "No. Los correos electrónicos de MyLoanDesk no constituyen una firma electrónica, aprobación de préstamo ni compromiso de bloqueo de tasa de interés a menos que vayan acompañados de un acuerdo formal y firmado por escrito.",
+      "faq_q2_question": "¿Puedo enviar documentos financieros confidenciales (como SSN o números de cuenta) por correo electrónico?",
+      "faq_q2_answer": "La transmisión de correo electrónico estándar no está completamente cifrada. Para proteger su privacidad, evite transmitir información confidencial como números de Seguro Social o credenciales bancarias por correo electrónico sin cifrar; utilice en su lugar nuestro portal seguro de clientes.",
+      "faq_q3_question": "¿Cómo puedo darme de baja de los correos electrónicos de marketing de MyLoanDesk?",
+      "faq_q3_answer": "Puede optar por no recibir correos promocionales o de marketing en cualquier momento haciendo clic en el enlace 'Cancelar suscripción' en la parte inferior del correo. Las comunicaciones transaccionales y de servicio sobre una solicitud activa se mantendrán activas según lo exige la ley."
+    }
   }
 }

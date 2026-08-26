@@ -709,5 +709,358 @@
       "webpage_description": "Schedule a direct consultation with our expert loan origination team to explore personalized mortgage solutions.",
       "reservation_name": "Mortgage Consultation Appointment"
     }
+  },
+  "CookiePolicy": {
+    "meta": {
+      "title": "Cookie Policy | MyLoanDesk",
+      "description": "This Cookie Policy explains how MyLoanDesk uses cookies and similar tracking technologies when you visit our website, mortgage calculators, customer portal, and related online services.",
+      "og_title": "Cookie Policy | MyLoanDesk",
+      "og_description": "This Cookie Policy explains how MyLoanDesk uses cookies and similar technologies when you visit our website, landing pages, mortgage calculators, customer portal, and related online services.",
+      "og_alt": "MyLoanDesk Cookie Policy",
+      "twitter_title": "Cookie Policy | MyLoanDesk",
+      "twitter_description": "Learn how MyLoanDesk uses cookies and tracking technologies to improve your user experience and secure mortgage services."
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "cookie_policy": "Cookie Policy"
+    },
+    "badge": "Legal & Compliance",
+    "heading": "Cookie Policy",
+    "effective_date_label": "Effective Date:",
+    "effective_date_value": "July 25, 2026",
+    "intro_p1": "This Cookie Policy explains how MyLoanDesk (\"MyLoanDesk,\" \"we,\" \"our,\" or \"us\") uses cookies and similar technologies when you visit our website, landing pages, mortgage calculators, customer portal, and related online services.",
+    "intro_p2": "This Cookie Policy should be read together with our Privacy Policy and Terms & Conditions.",
+    "intro_p3": "By continuing to use our website, you consent to our use of cookies as described in this Policy, except where your consent is required by applicable law and you choose otherwise through our cookie preferences.",
+    "toc_title": "Contents",
+    "toc": {
+      "s1": "1. What Are Cookies?",
+      "s2": "2. Why We Use Cookies",
+      "s3": "3. Types of Cookies We Use",
+      "s4": "4. Third-Party Cookies",
+      "s5": "5. Mortgage Application Cookies",
+      "s6": "6. AI and Chat Technologies",
+      "s7": "7. Cookie Consent",
+      "s8": "8. Managing Cookies",
+      "s9": "9. Do Not Track",
+      "s10": "10. International Visitors",
+      "s11": "11. Updates to This Cookie Policy",
+      "s12": "12. Contact Us",
+      "s13": "Cookie Banner Example"
+    },
+    "inquiries_card": {
+      "title": "Inquiries and Questions",
+      "description": "If you have questions regarding this Cookie Policy, reach out to us directly."
+    },
+    "sections": {
+      "s1": {
+        "title": "1. What Are Cookies?",
+        "p1": "Cookies are small text files that are stored on your computer, smartphone, tablet, or other device when you visit a website.",
+        "p2": "Cookies help websites:",
+        "list": [
+          "Remember your preferences",
+          "Improve website performance",
+          "Provide a better browsing experience",
+          "Analyze website traffic",
+          "Enhance website security",
+          "Personalize content and advertisements"
+        ],
+        "p3": "Cookies do not normally contain information that directly identifies you. However, cookies may be linked to personal information that you voluntarily provide through our website."
+      },
+      "s2": {
+        "title": "2. Why We Use Cookies",
+        "intro": "MyLoanDesk uses cookies to:",
+        "list": [
+          "Operate our website efficiently",
+          "Remember your preferences",
+          "Improve website functionality",
+          "Maintain security",
+          "Analyze visitor behavior",
+          "Improve mortgage calculators",
+          "Save partially completed forms (where available)",
+          "Prevent fraud",
+          "Measure advertising performance",
+          "Improve customer experience"
+        ]
+      },
+      "s3": {
+        "title": "3. Types of Cookies We Use",
+        "sub_a_title": "A. Essential Cookies",
+        "sub_a_p1": "These cookies are necessary for the website to function properly.",
+        "sub_a_p2": "Examples include:",
+        "sub_a_list": [
+          "Login authentication",
+          "Security verification",
+          "Fraud prevention",
+          "Form submissions",
+          "Session management",
+          "Website load balancing"
+        ],
+        "sub_a_p3": "Without these cookies, certain parts of our website may not function correctly.",
+        "sub_a_p4": "These cookies cannot be disabled through our website.",
+        "sub_b_title": "B. Functional Cookies",
+        "sub_b_p1": "These cookies remember choices you make, including:",
+        "sub_b_list": [
+          "Preferred language",
+          "Region",
+          "Calculator settings",
+          "Saved preferences",
+          "Accessibility settings"
+        ],
+        "sub_b_p2": "These cookies improve your browsing experience but are not strictly necessary.",
+        "sub_c_title": "C. Analytics Cookies",
+        "sub_c_p1": "Analytics cookies help us understand how visitors use our website.",
+        "sub_c_p2": "Information collected may include:",
+        "sub_c_list": [
+          "Pages viewed",
+          "Time spent on pages",
+          "Traffic sources",
+          "Device type",
+          "Browser type",
+          "Screen resolution",
+          "Navigation paths",
+          "Click activity",
+          "Website performance"
+        ],
+        "sub_c_p3": "We use this information to improve the website and user experience.",
+        "sub_c_p4": "Analytics providers may include:",
+        "sub_c_providers": [
+          "Google Analytics",
+          "Microsoft Clarity",
+          "Google Search Console",
+          "Other website analytics platforms"
+        ],
+        "sub_c_p5": "Analytics data is generally aggregated and does not directly identify individual users.",
+        "sub_d_title": "D. Advertising Cookies",
+        "sub_d_p1": "Advertising cookies help measure the effectiveness of marketing campaigns and may be used to display advertisements that are more relevant to your interests.",
+        "sub_d_p2": "These cookies may be placed by:",
+        "sub_d_list": [
+          "Google Ads",
+          "Meta (Facebook and Instagram)",
+          "LinkedIn",
+          "YouTube",
+          "Microsoft Advertising",
+          "Other advertising partners"
+        ],
+        "sub_d_p3": "These providers may recognize your browser across different websites.",
+        "sub_e_title": "E. Performance Cookies",
+        "sub_e_p1": "Performance cookies help us understand:",
+        "sub_e_list": [
+          "Website speed",
+          "Loading errors",
+          "Technical issues",
+          "Browser compatibility",
+          "Device performance"
+        ],
+        "sub_e_p2": "These cookies help improve reliability and performance."
+      },
+      "s4": {
+        "title": "4. Third-Party Cookies",
+        "p1": "Some cookies are placed by third-party services integrated with our website.",
+        "p2": "These may include:",
+        "list": [
+          "Google",
+          "Microsoft",
+          "Meta",
+          "LinkedIn",
+          "YouTube",
+          "Vimeo",
+          "Calendly",
+          "GoHighLevel / LeadConnector",
+          "Twilio",
+          "Live chat providers",
+          "Mortgage calculators",
+          "Embedded maps",
+          "Video hosting providers"
+        ],
+        "p3": "Each third party operates under its own privacy and cookie policies. We encourage you to review those policies before using their services."
+      },
+      "s5": {
+        "title": "5. Mortgage Application Cookies",
+        "p1": "When you begin a mortgage inquiry or application, cookies may temporarily store information necessary to:",
+        "list": [
+          "Keep you signed in during your session",
+          "Save your progress",
+          "Maintain application security",
+          "Prevent duplicate submissions",
+          "Improve reliability"
+        ],
+        "p2": "These cookies help ensure your application can be completed efficiently."
+      },
+      "s6": {
+        "title": "6. AI and Chat Technologies",
+        "p1": "If you communicate with an AI assistant or live chat on our website, cookies may be used to:",
+        "list": [
+          "Maintain your conversation",
+          "Remember previous messages during your session",
+          "Improve chatbot functionality",
+          "Analyze customer service performance"
+        ],
+        "p2": "Chat interactions may also be stored in accordance with our Privacy Policy."
+      },
+      "s7": {
+        "title": "7. Cookie Consent",
+        "p1": "Depending on your location, you may be presented with a cookie banner when you first visit our website. You may choose to:",
+        "list": [
+          "Accept All Cookies",
+          "Reject Non-Essential Cookies",
+          "Customize Cookie Preferences"
+        ],
+        "p2": "Your selections can generally be changed later through the cookie preferences link available on our website."
+      },
+      "s8": {
+        "title": "8. Managing Cookies",
+        "p1": "Most web browsers allow you to:",
+        "list": [
+          "View cookies",
+          "Delete cookies",
+          "Block cookies",
+          "Limit third-party cookies",
+          "Receive notifications before cookies are stored"
+        ],
+        "p2": "Please note that disabling certain cookies may affect website functionality.",
+        "p3": "For browser-specific guidance, refer to your browser's help documentation."
+      },
+      "s9": {
+        "title": "9. Do Not Track",
+        "p1": "Some web browsers offer a \"Do Not Track\" (DNT) setting.",
+        "p2": "Because there is no universally accepted standard for responding to DNT signals, our website may not respond to all such requests. You may still manage cookies through your browser settings or our cookie preferences tool where available."
+      },
+      "s10": {
+        "title": "10. International Visitors",
+        "p1": "Visitors located in the European Economic Area (EEA), the United Kingdom, Switzerland, or other jurisdictions with applicable privacy laws may have additional rights regarding cookies and tracking technologies.",
+        "p2": "Where required by law, we obtain your consent before placing non-essential cookies on your device."
+      },
+      "s11": {
+        "title": "11. Updates to This Cookie Policy",
+        "p1": "We may update this Cookie Policy from time to time to reflect changes in technology, legal requirements, or our business practices.",
+        "p2": "The revised version will be posted on this page with an updated Effective Date."
+      },
+      "s12": {
+        "title": "12. Contact Us",
+        "p1": "If you have questions about this Cookie Policy or our use of cookies, please contact us:",
+        "company": "MyLoanDesk",
+        "website_label": "Website:",
+        "website_val": "https://www.myloandesk.com",
+        "email_label": "Email:",
+        "email_val": "info@myloandesk.com",
+        "phone_label": "Phone:",
+        "phone_val": "3058916500",
+        "address_label": "Mailing Address:",
+        "address_val": "1801 NE 123 St, Ste 314\nNorth Miami, FL 33181"
+      },
+      "s13": {
+        "title": "Cookie Banner Example",
+        "intro": "When visitors first arrive on the MyLoanDesk website, they may see a notice similar to the following:",
+        "box_heading": "We value your privacy.",
+        "box_body": "MyLoanDesk uses cookies and similar technologies to improve website performance, remember your preferences, analyze traffic, and personalize your experience. You can accept all cookies, reject non-essential cookies, or customize your preferences at any time.",
+        "box_buttons_label": "Buttons:",
+        "box_buttons": [
+          "Accept All",
+          "Reject Non-Essential",
+          "Customize Preferences"
+        ]
+      }
+    },
+    "schema": {
+      "webpage_name": "Cookie Policy | MyLoanDesk",
+      "webpage_description": "Official cookie policy and tracking technology disclosure for MyLoanDesk mortgage services and digital platforms.",
+      "faq_q1_question": "Why does MyLoanDesk use cookies?",
+      "faq_q1_answer": "MyLoanDesk uses cookies and similar technologies to ensure essential site security, authenticate user sessions on customer portals, remember user preferences, calculate accurate mortgage scenarios, and analyze web performance.",
+      "faq_q2_question": "Can I manage or disable cookies on MyLoanDesk?",
+      "faq_q2_answer": "Yes. You can manage or disable cookies through your web browser settings. Note that disabling essential cookies may impact the functionality of interactive tools, customer portals, and calculator sessions."
+    }
+  },
+  "EmailCommunication": {
+    "meta": {
+      "title": "Email & Communication Policy | MyLoanDesk",
+      "description": "This Email & Communication Policy outlines how MyLoanDesk uses email to communicate with clients and business partners, including security, limitations, and best practices.",
+      "og_title": "Email & Communication Policy | MyLoanDesk",
+      "og_description": "This Email & Communication Policy outlines how MyLoanDesk uses email to communicate with clients and business partners, including security, limitations, and best practices.",
+      "og_alt": "MyLoanDesk Email & Communication Policy",
+      "twitter_title": "Email & Communication Policy | MyLoanDesk",
+      "twitter_description": "Learn about MyLoanDesk's email and communication standards, security practices, and electronic disclosure policies."
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "email_policy": "Email & Communication Policy"
+    },
+    "heading": "Email & Communication Policy",
+    "intro_p1": "MyLoanDesk.com (“us,” “we,” or “our”) uses email to communicate efficiently with clients and business partners. This Policy outlines our practices regarding email use, security, and limitations.",
+    "intro_p2": "By providing your email address or engaging with us electronically, you consent to the terms of this Policy, as well as our Privacy Policy and Terms of Use.",
+    "sections": {
+      "s1": {
+        "title": "1. Nature of Email Communication",
+        "list": [
+          "Email can be convenient, but messages may be brief, informal, or delayed.",
+          "Emails do not always reflect the full scope of our communications with you.",
+          "All official loan matters must be confirmed in signed writing (electronically or physically)."
+        ]
+      },
+      "s2": {
+        "title": "2. Receipt of Your Email",
+        "list": [
+          "Sending us an email does not constitute notice of any urgent matter.",
+          "Spam filters or system errors may delay or block receipt of your email.",
+          "For time-sensitive issues, call us directly and follow up with a written confirmation."
+        ]
+      },
+      "s3": {
+        "title": "3. Security & Monitoring",
+        "list": [
+          "Email is transmitted over the internet, which is not fully secure.",
+          "Emails may be lost, intercepted, delayed, or altered.",
+          "Avoid sending personal information (SSN, account numbers) by email."
+        ]
+      },
+      "s4": {
+        "title": "4. Viruses & Liability",
+        "list": [
+          "While we take steps to prevent viruses, we cannot guarantee our emails are virus-free.",
+          "It is your responsibility to scan all emails and attachments before opening.",
+          "We disclaim liability for any loss or damage caused by malicious code, viruses, or altered email content."
+        ]
+      },
+      "s5": {
+        "title": "5. Electronic Signature Disclaimer",
+        "list": [
+          "Emails from us do not constitute an electronic signature or legally binding agreement unless explicitly stated.",
+          "Emails are not an offer of loan approval, interest rate lock, or commitment unless you receive a formal, signed agreement from us."
+        ]
+      },
+      "s6": {
+        "title": "6. Confidentiality",
+        "list": [
+          "Emails involving our Legal or Compliance teams may contain privileged information.",
+          "If you receive an email in error, notify us immediately and delete it.",
+          "Unauthorized use, reproduction, or distribution of confidential information is prohibited."
+        ]
+      },
+      "s7": {
+        "title": "7. Unsubscribe or Opt-Out",
+        "list": [
+          "You may opt out of promotional or marketing emails at any time by clicking the “Unsubscribe” link provided in the message.",
+          "Transactional or informational emails related to your loan or account cannot be unsubscribed from, as they are necessary for providing our services."
+        ]
+      },
+      "s8": {
+        "title": "8. General Provisions",
+        "governing_law_label": "Governing Law:",
+        "governing_law_text": "This policy is governed by the laws of the State of California. All disputes must be resolved exclusively in the state or federal courts located in Santa Clara, California.",
+        "equal_housing_label": "Equal Housing Lender:",
+        "equal_housing_text": "We comply with the Equal Credit Opportunity Act (ECOA) and do not discriminate based on race, color, religion, national origin, sex, marital status, military status, age, or public assistance status.",
+        "reservation_label": "Reservation of Rights:",
+        "reservation_text": "All content in our emails, calls, and text messages is proprietary. Reproduction or distribution requires our prior written consent."
+      }
+    },
+    "schema": {
+      "webpage_name": "Email & Communication Policy | MyLoanDesk",
+      "webpage_description": "MyLoanDesk's official policy on electronic communications, email security, and electronic signature disclaimers.",
+      "faq_q1_question": "Are emails from MyLoanDesk considered legally binding loan commitments?",
+      "faq_q1_answer": "No. Emails from MyLoanDesk do not constitute an electronic signature, loan approval, or interest rate lock commitment unless accompanied by a formal, signed written agreement.",
+      "faq_q2_question": "Can I send sensitive financial documents (like SSNs or account numbers) via email?",
+      "faq_q2_answer": "Standard email transmission is not fully encrypted. To protect your privacy, avoid transmitting sensitive personal information like Social Security numbers or banking credentials via unencrypted email; use our secure client portal instead.",
+      "faq_q3_question": "How can I opt out of marketing emails from MyLoanDesk?",
+      "faq_q3_answer": "You may opt out of promotional or marketing emails at any time by clicking the 'Unsubscribe' link at the bottom of the email. Transactional and servicing communications regarding an active loan application remain active as required by law."
+    }
   }
 }
