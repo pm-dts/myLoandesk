@@ -623,5 +623,94 @@
         "read_time": "3 min de lectura"
       }
     }
+  },
+  "Careers": {
+    "meta": {
+      "title": "Carreras de Oficial de Préstamos Hipotecarios | Únase a MyLoanDesk",
+      "description": "Explore oportunidades de carrera para oficiales de préstamos con licencia en MyLoanDesk. Acceda a programas creativos de préstamos residenciales y comerciales, compensación competitiva y apoyo para el crecimiento.",
+      "og_title": "Carreras de Oficial de Préstamos Hipotecarios | Únase a MyLoanDesk",
+      "og_description": "Explore oportunidades de carrera para oficiales de préstamos con licencia en MyLoanDesk. Acceda a programas creativos de préstamos residenciales y comerciales, compensación competitiva y apoyo para el crecimiento.",
+      "og_alt": "Carreras en MyLoanDesk",
+      "twitter_title": "Carreras de Oficial de Préstamos Hipotecarios | Únase a MyLoanDesk",
+      "twitter_description": "Explore oportunidades de carrera para oficiales de préstamos con licencia en MyLoanDesk. Acceda a programas creativos de préstamos residenciales y comerciales, compensación competitiva y apoyo para el crecimiento."
+    },
+    "breadcrumbs": {
+      "home": "Inicio",
+      "careers": "Carreras"
+    },
+    "hero": {
+      "badge": "Oportunidades de Empleo Hipotecario",
+      "headline": "Carreras en MyLoanDesk.com",
+      "subheadline": "Únase a una empresa hipotecaria que le abre todas las puertas para atender mejor a sus clientes.",
+      "cta_button": "Envíenos su currículum",
+      "card_badge": "¡Los Oficiales de Préstamos Aplican Aquí!",
+      "card_text_start": "Creando trayectorias profesionales desafiantes y",
+      "card_text_italic": "gratificantes",
+      "card_text_end": "en la originación de préstamos."
+    },
+    "why_join": {
+      "badge": "01 — Por Qué Unirse a Nosotros",
+      "heading": "Hacemos todo lo posible por nuestro equipo",
+      "p1": "En MyLoanDesk.com, hacemos todo lo posible para crear trayectorias profesionales desafiantes y gratificantes en la originación de préstamos para personas con una amplia variedad de habilidades profesionales, intereses y experiencia.",
+      "p2": "Nos impulsa el compromiso de brindar un servicio al cliente de primer nivel, precios competitivos, tiempos de respuesta consistentes y una variedad de soluciones de préstamos para nuestros clientes residenciales y comerciales.",
+      "item1_title": "Productos de Préstamo Destacados",
+      "item1_description": "Nuestra impresionante gama de productos de préstamos creativos y personalizados para clientes residenciales y comerciales es lo que nos distingue de otros prestamistas hipotecarios.",
+      "item2_title": "Apoyo y Oportunidades de Crecimiento",
+      "item2_description": "Brindamos a nuestros talentosos oficiales de préstamos apoyo y oportunidades de crecimiento para ayudar a elevar su alcance profesional."
+    },
+    "blueprint": {
+      "mission_title": "Nuestra Misión",
+      "mission_description": "Nos enorgullecemos de ser el recurso de préstamos y la empresa hipotecaria digital número 1 a nivel mundial, ofreciendo soluciones de financiamiento creativas para clientes que pueden necesitar más apoyo y recursos de los que pueden proporcionar las empresas hipotecarias tradicionales.",
+      "vision_title": "Nuestra Visión",
+      "vision_description": "Nuestra visión es empoderar a nuestros clientes y al equipo de oficiales de préstamos ofreciendo una amplia variedad de productos crediticios que se adaptan a la singularidad de todas y cada una de las situaciones. Nos esforzamos por ser el prestamista de confianza en el que puede contar cuando necesita financiamiento para compras residenciales y comerciales."
+    },
+    "form_section": {
+      "badge": "02 — Siéntese en el escritorio",
+      "heading_start": "¿Listo para Unirse a",
+      "heading_italic": "Nuestro Equipo?",
+      "subheading": "¿Le parece esto algo de lo que le gustaría formar parte? Buscamos originadores de préstamos de alto rendimiento para unirse a nuestro equipo y crecer juntos.",
+      "form_title": "Formulario de Solicitud de Empleo"
+    },
+    "images_alt": {
+      "team": "Equipo colaborativo de MyLoanDesk trabajando en el escritorio",
+      "meeting": "Originadores de préstamos reunidos en una discusión corporativa"
+    },
+    "schema": {
+      "webpage_name": "Carreras de Oficial de Préstamos Hipotecarios | Únase a MyLoanDesk",
+      "webpage_description": "Oportunidades de carrera y contratación de originadores de préstamos en la correduría hipotecaria MyLoanDesk.",
+      "job_title": "Originador de Préstamos Hipotecarios / Oficial de Préstamos",
+      "job_description": "MyLoanDesk busca originadores de préstamos hipotecarios con licencia y de alto rendimiento para estructurar soluciones de préstamos residenciales, comerciales y Non-QM.",
+      "faq_q1_question": "¿A qué programas de préstamos tienen acceso los originadores de MyLoanDesk?",
+      "faq_q1_answer": "Nuestros originadores tienen acceso a prestamistas mayoristas que ofrecen opciones de financiamiento Convencional, FHA, VA, DSCR, Jumbo, Bienes Raíces Comerciales, SBA y Puente",
+      "faq_q2_question": "¿Cómo pueden los originadores de préstamos enviar una solicitud para unirse a MyLoanDesk?",
+      "faq_q2_answer": "Los oficiales de préstamos con licencia pueden enviar su currículum directamente utilizando el formulario de solicitud de empleo integrado en nuestra página de carreras."
+    }
+  },
+  "Calendar": {
+    "meta": {
+      "title": "Reserve una Consulta Hipotecaria | MyLoanDesk",
+      "description": "Programe una consulta directa con nuestro equipo experto en originación de préstamos. Elija un horario conveniente para hablar sobre financiamiento, preaprobación y opciones hipotecarias.",
+      "og_title": "Reserve una Consulta Hipotecaria | MyLoanDesk",
+      "og_description": "Programe una consulta directa con nuestro equipo experto en originación de préstamos. Elija un horario conveniente para hablar sobre financiamiento y opciones hipotecarias.",
+      "og_alt": "Reserve una Consulta - MyLoanDesk",
+      "twitter_title": "Reserve una Consulta Hipotecaria | MyLoanDesk",
+      "twitter_description": "Programe una consulta directa con nuestro equipo experto en originación de préstamos. Elija un horario conveniente para hablar sobre sus opciones hipotecarias."
+    },
+    "breadcrumbs": {
+      "home": "Inicio",
+      "calendar": "Reservar Consulta"
+    },
+    "hero": {
+      "badge": "Mesa de Programación Directa",
+      "headline_start": "Reserve una Consulta",
+      "headline_italic": "Con Nosotros",
+      "subheadline": "Seleccione el horario que mejor se adapte a su agenda para hablar directamente con nuestro equipo de especialistas en préstamos."
+    },
+    "disclaimer": "La conexión del calendario está totalmente cifrada. Todas las citas generan instantáneamente invitaciones privadas de calendario y enlaces de reunión.",
+    "schema": {
+      "webpage_name": "Reserve una Consulta Hipotecaria | MyLoanDesk",
+      "webpage_description": "Programe una consulta directa con nuestro equipo experto en originación de préstamos para explorar soluciones hipotecarias personalizadas.",
+      "reservation_name": "Cita de Consulta Hipotecaria"
+    }
   }
 }

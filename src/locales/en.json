@@ -620,5 +620,94 @@
         "read_time": "3 min read"
       }
     }
+  },
+  "Careers": {
+    "meta": {
+      "title": "Mortgage Loan Officer Careers | Join MyLoanDesk",
+      "description": "Explore career opportunities for licensed loan officers at MyLoanDesk. Access creative residential and commercial loan programs, competitive compensation, and growth support.",
+      "og_title": "Mortgage Loan Officer Careers | Join MyLoanDesk",
+      "og_description": "Explore career opportunities for licensed loan officers at MyLoanDesk. Access creative residential and commercial loan programs, competitive compensation, and growth support.",
+      "og_alt": "Careers at MyLoanDesk",
+      "twitter_title": "Mortgage Loan Officer Careers | Join MyLoanDesk",
+      "twitter_description": "Explore career opportunities for licensed loan officers at MyLoanDesk. Access creative residential and commercial loan programs, competitive compensation, and growth support."
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "careers": "Careers"
+    },
+    "hero": {
+      "badge": "Mortgage Job Opportunities",
+      "headline": "Careers at MyLoanDesk.com",
+      "subheadline": "Join a mortgage company that opens every door for you to serve your clients better.",
+      "cta_button": "Send us your resume",
+      "card_badge": "Loan Officers Apply Here!",
+      "card_text_start": "Creating challenging and",
+      "card_text_italic": "rewarding",
+      "card_text_end": "career paths in loan origination."
+    },
+    "why_join": {
+      "badge": "01 — Why Join Us",
+      "heading": "We go to great lengths for our team",
+      "p1": "At MyLoanDesk.com, we go to great lengths to create challenging and rewarding career paths in loan origination for individuals with a wide variety of professional skills, interests, and experience.",
+      "p2": "We're driven by the commitment to provide white glove customer service, competitive pricing, consistent turn-times and a variety of loan solutions for our residential and commercial clients.",
+      "item1_title": "Standout Loan Products",
+      "item1_description": "Our impressive range of creative and outside-the-box loan products for residential and commercial clients is what makes us stand out from other mortgage lenders.",
+      "item2_title": "Support & Growth Opportunities",
+      "item2_description": "We provide our talented loan officers with support and growth opportunities to help elevate their professional reach."
+    },
+    "blueprint": {
+      "mission_title": "Our Mission",
+      "mission_description": "We pride ourselves on being the #1 lending resource and digital mortgage company worldwide, offering creative financing solutions for clients who may need more support and resources than traditional mortgage companies can provide.",
+      "vision_title": "Our Vision",
+      "vision_description": "Our vision is to empower our clients and team of loan officers by offering a wide variety of loan products that will cater to the uniqueness of any and every situation. We strive to be the go-to lender you can trust and count on when you need financing for residential and commercial purchases."
+    },
+    "form_section": {
+      "badge": "02 — Sit down at the desk",
+      "heading_start": "Ready to Join",
+      "heading_italic": "Our Team?",
+      "subheading": "Does this sound like something you want to be a part of? We're looking for high-producing loan originators to join our team and scale together.",
+      "form_title": "Careers Application Form"
+    },
+    "images_alt": {
+      "team": "MyLoanDesk collaborative team working at desk",
+      "meeting": "Loan originators sitting down having a corporate discussion"
+    },
+    "schema": {
+      "webpage_name": "Mortgage Loan Officer Careers | Join MyLoanDesk",
+      "webpage_description": "Career and loan originator hiring opportunities at MyLoanDesk mortgage brokerage.",
+      "job_title": "Mortgage Loan Originator / Loan Officer",
+      "job_description": "MyLoanDesk is looking for licensed, high-producing mortgage loan originators to structure residential, commercial, and non-QM loan solutions.",
+      "faq_q1_question": "What loan programs do MyLoanDesk originators have access to?",
+      "faq_q1_answer": "Our originators have access to wholesale lenders providing Conventional, FHA, VA, DSCR, Jumbo, Commercial Real Estate, SBA, and Bridge financing options",
+      "faq_q2_question": "How can loan originators submit an application to join MyLoanDesk?",
+      "faq_q2_answer": "Licensed loan officers can submit their resume directly using the embedded careers application form on our careers page."
+    }
+  },
+  "Calendar": {
+    "meta": {
+      "title": "Book a Mortgage Consultation | MyLoanDesk",
+      "description": "Schedule a direct consultation with our expert loan origination team. Choose a convenient time to discuss your home financing, pre-approval, and mortgage options.",
+      "og_title": "Book a Mortgage Consultation | MyLoanDesk",
+      "og_description": "Schedule a direct consultation with our expert loan origination team. Choose a convenient time to discuss your home financing and mortgage options.",
+      "og_alt": "Book a Consultation - MyLoanDesk",
+      "twitter_title": "Book a Mortgage Consultation | MyLoanDesk",
+      "twitter_description": "Schedule a direct consultation with our expert loan origination team. Choose a convenient time to discuss your mortgage options."
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "calendar": "Book Consultation"
+    },
+    "hero": {
+      "badge": "Direct Scheduling Desk",
+      "headline_start": "Book a Consultation",
+      "headline_italic": "With Us",
+      "subheadline": "Select a time that works best for your schedule to speak directly with our origination talent team."
+    },
+    "disclaimer": "Calendar connection is heavily encrypted. All appointments instantly generate private calendar invites and diagnostic meeting links.",
+    "schema": {
+      "webpage_name": "Book a Mortgage Consultation | MyLoanDesk",
+      "webpage_description": "Schedule a direct consultation with our expert loan origination team to explore personalized mortgage solutions.",
+      "reservation_name": "Mortgage Consultation Appointment"
+    }
   }
 }
