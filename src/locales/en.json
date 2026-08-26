@@ -517,5 +517,79 @@
         "answer": "Yes. In addition to standard W-2 financing, we specialize in non-QM and alternative documentation programs such as Bank Statement loans, Profit & Loss qualification, Asset Depletion, and Foreign National programs."
       }
     }
+  },
+  "Accessibility": {
+    "meta": {
+      "title": "Accessibility Statement | MyLoanDesk",
+      "description": "MyLoanDesk is committed to providing a website that is accessible and usable by as many people as possible, including individuals with disabilities, adhering to WCAG guidelines."
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "accessibility": "Accessibility"
+    },
+    "back_to_home": "Back to Homepage",
+    "title": "Accessibility Statement",
+    "last_updated": "Last Updated: August 14, 2026",
+    "lead": "MyLoanDesk is committed to providing a website that is accessible and usable by as many people as possible, including individuals with disabilities.",
+    "commitment": {
+      "title": "Our Commitment to Accessibility",
+      "p1": "We are continually working to improve the accessibility and usability of MyLoanDesk.com and strive to follow generally recognized accessibility practices, including guidance provided by the Web Content Accessibility Guidelines (WCAG).",
+      "p2": "Our goal is to provide all visitors with convenient access to mortgage information, loan program information, educational resources, calculators, videos, forms, and other services available through our website."
+    },
+    "efforts": {
+      "title": "Our Accessibility Efforts",
+      "intro": "As part of our ongoing efforts, we aim to:",
+      "list": [
+        "Provide clear and consistent website navigation.",
+        "Use properly structured headings and page content.",
+        "Provide alternative text for meaningful images where appropriate.",
+        "Maintain appropriate contrast between text and backgrounds.",
+        "Support keyboard navigation where reasonably possible.",
+        "Use clear labels, instructions, and error messages on website forms.",
+        "Support browser text resizing and zoom functionality.",
+        "Provide captions or other accessible alternatives for video content where appropriate.",
+        "Design website features with accessibility and usability in mind.",
+        "Periodically review the website for potential accessibility improvements."
+      ]
+    },
+    "improvements": {
+      "title": "Ongoing Improvements",
+      "p1": "Accessibility is an ongoing process. MyLoanDesk continues to evaluate its website and make improvements as technologies, accessibility standards, and best practices evolve.",
+      "p2": "While we strive to make MyLoanDesk.com accessible to all users, some content, features, documents, integrations, or third-party services may not yet be fully accessible with every assistive technology.",
+      "p3": "If you experience difficulty accessing any part of our website, please contact us. We will make reasonable efforts to provide the information or assistance you need through an alternative method."
+    },
+    "third_party": {
+      "title": "Third-Party Content and Services",
+      "p1": "MyLoanDesk.com may contain links to third-party websites or use third-party services, including scheduling systems, forms, calculators, videos, application systems, or other technology.",
+      "p2": "MyLoanDesk does not control the accessibility of third-party websites and services. However, we encourage our service providers and technology partners to provide accessible and user-friendly experiences."
+    },
+    "assistance": {
+      "title": "Need Assistance?",
+      "p1": "If you have difficulty accessing information, using a feature, completing a form, or otherwise navigating MyLoanDesk.com because of a disability, please contact us.",
+      "email_label": "Email",
+      "phone_label": "Phone",
+      "p2": "When contacting us, please identify the webpage or feature you were attempting to use and describe the accessibility issue you encountered. This information will help us investigate the issue and provide assistance.",
+      "p3": "We welcome accessibility feedback and will make reasonable efforts to address accessibility concerns in a timely manner."
+    },
+    "standards": {
+      "title": "Accessibility Standards",
+      "p1": "Our accessibility efforts are guided by generally recognized web accessibility practices, including the Web Content Accessibility Guidelines (WCAG).",
+      "p2": "We continue to evaluate MyLoanDesk.com and make accessibility improvements where appropriate.",
+      "note": "This Accessibility Statement may be updated periodically to reflect changes to our website, technology, or accessibility practices."
+    },
+    "faq_schema": {
+      "q1": {
+        "question": "What accessibility standards does MyLoanDesk follow?",
+        "answer": "MyLoanDesk aims to follow generally recognized accessibility best practices, including guidance provided by the Web Content Accessibility Guidelines (WCAG)."
+      },
+      "q2": {
+        "question": "How can I request assistance or report an accessibility barrier?",
+        "answer": "If you experience difficulty accessing any part of MyLoanDesk.com, you can reach our team via email at info@myloandesk.com or by phone at (305) 891-6500 to receive alternative assistance."
+      },
+      "q3": {
+        "question": "Are third-party mortgage tools and calculators covered by this statement?",
+        "answer": "While MyLoanDesk encourages technology partners and third-party service providers to ensure user-friendly, accessible experiences, third-party content and external integrations may operate outside our direct control."
+      }
+    }
   }
 }

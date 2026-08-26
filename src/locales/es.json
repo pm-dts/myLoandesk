@@ -520,5 +520,79 @@
         "answer": "Sí. Además del financiamiento estándar W-2, nos especializamos en programas Non-QM y de documentación alternativa como préstamos por Extractos Bancarios, calificación por Ganancias y Pérdidas (P&L), Agotamiento de Activos y programas para Extranjeros."
       }
     }
+  },
+  "Accessibility": {
+    "meta": {
+      "title": "Declaración de Accesibilidad | MyLoanDesk",
+      "description": "MyLoanDesk se compromete a proporcionar un sitio web accesible y utilizable para la mayor cantidad de personas posible, incluidas las personas con discapacidades, siguiendo las pautas de WCAG."
+    },
+    "breadcrumbs": {
+      "home": "Inicio",
+      "accessibility": "Accesibilidad"
+    },
+    "back_to_home": "Volver a la Página Principal",
+    "title": "Declaración de Accesibilidad",
+    "last_updated": "Última Actualización: 14 de Agosto de 2026",
+    "lead": "MyLoanDesk se compromete a proporcionar un sitio web que sea accesible y utilizable por la mayor cantidad de personas posible, incluidas aquellas con discapacidades.",
+    "commitment": {
+      "title": "Nuestro Compromiso con la Accesibilidad",
+      "p1": "Trabajamos continuamente para mejorar la accesibilidad y usabilidad de MyLoanDesk.com y nos esforzamos por seguir las mejores prácticas generalmente reconocidas, incluidas las directrices de las Pautas de Accesibilidad para el Contenido Web (WCAG).",
+      "p2": "Nuestro objetivo es proporcionar a todos los visitantes un acceso conveniente a información hipotecaria, programas de préstamos, recursos educativos, calculadoras, videos, formularios y otros servicios disponibles en nuestro sitio web."
+    },
+    "efforts": {
+      "title": "Nuestros Esfuerzos de Accesibilidad",
+      "intro": "Como parte de nuestros esfuerzos continuos, buscamos:",
+      "list": [
+        "Proporcionar una navegación clara y consistente en el sitio web.",
+        "Utilizar encabezados y contenido debidamente estructurados.",
+        "Ofrecer texto alternativo para imágenes significativas cuando corresponda.",
+        "Mantener un contraste adecuado entre el texto y los fondos.",
+        "Permitir la navegación por teclado donde sea razonablemente posible.",
+        "Usar etiquetas, instrucciones y mensajes de error claros en los formularios del sitio web.",
+        "Admitir el cambio de tamaño del texto y la función de zoom del navegador.",
+        "Proporcionar subtítulos u otras alternativas accesibles para el contenido de video cuando sea apropiado.",
+        "Diseñar las características del sitio web teniendo en cuenta la accesibilidad y la facilidad de uso.",
+        "Revisar periódicamente el sitio web para identificar posibles mejoras de accesibilidad."
+      ]
+    },
+    "improvements": {
+      "title": "Mejoras Continuas",
+      "p1": "La accesibilidad es un proceso continuo. MyLoanDesk continúa evaluando su sitio web e implementando mejoras a medida que evolucionan las tecnologías, los estándares de accesibilidad y las mejores prácticas.",
+      "p2": "Si bien nos esforzamos para que MyLoanDesk.com sea accesible para todos los usuarios, es posible que parte del contenido, funciones, documentos, integraciones o servicios de terceros aún no sean totalmente accesibles con todas las tecnologías de asistencia.",
+      "p3": "Si experimenta alguna dificultad para acceder a cualquier parte de nuestro sitio web, comuníquese con nosotros. Haremos esfuerzos razonables para brindarle la información o asistencia que necesita a través de un método alternativo."
+    },
+    "third_party": {
+      "title": "Contenido y Servicios de Terceros",
+      "p1": "MyLoanDesk.com puede contener enlaces a sitios web de terceros o utilizar servicios de terceros, incluidos sistemas de programación, formularios, calculadoras, videos, sistemas de solicitud u otra tecnología.",
+      "p2": "MyLoanDesk no controla la accesibilidad de sitios web y servicios de terceros. Sin embargo, alentamos a nuestros proveedores de servicios y socios tecnológicos a ofrecer experiencias accesibles y fáciles de usar."
+    },
+    "assistance": {
+      "title": "¿Necesita Asistencia?",
+      "p1": "Si tiene dificultades para acceder a información, utilizar una función, completar un formulario o navegar por MyLoanDesk.com debido a una discapacidad, comuníquese con nosotros.",
+      "email_label": "Correo Electrónico",
+      "phone_label": "Teléfono",
+      "p2": "Al comunicarse con nosotros, identifique la página web o función que intentaba utilizar y describa el problema de accesibilidad que encontró. Esta información nos ayudará a investigar la situación y brindarle asistencia.",
+      "p3": "Agradecemos los comentarios sobre accesibilidad y haremos esfuerzos razonables para abordar las inquietudes de manera oportuna."
+    },
+    "standards": {
+      "title": "Estándares de Accesibilidad",
+      "p1": "Nuestros esfuerzos de accesibilidad están guiados por las prácticas de accesibilidad web generalmente reconocidas, incluidas las Pautas de Accesibilidad para el Contenido Web (WCAG).",
+      "p2": "Continuamos evaluando MyLoanDesk.com e implementando mejoras de accesibilidad cuando corresponda.",
+      "note": "Esta Declaración de Accesibilidad se puede actualizar periódicamente para reflejar cambios en nuestro sitio web, tecnología o prácticas de accesibilidad."
+    },
+    "faq_schema": {
+      "q1": {
+        "question": "¿Qué estándares de accesibilidad sigue MyLoanDesk?",
+        "answer": "MyLoanDesk tiene como objetivo seguir las mejores prácticas de accesibilidad generalmente reconocidas, incluidas las directrices de las Pautas de Accesibilidad para el Contenido Web (WCAG)."
+      },
+      "q2": {
+        "question": "¿Cómo puedo solicitar asistencia o reportar una barrera de accesibilidad?",
+        "answer": "Si experimenta dificultades para acceder a cualquier parte de MyLoanDesk.com, puede comunicarse con nuestro equipo por correo electrónico a info@myloandesk.com o por teléfono al (305) 891-6500 para recibir asistencia alternativa."
+      },
+      "q3": {
+        "question": "¿Las herramientas y calculadoras hipotecarias de terceros están cubiertas por esta declaración?",
+        "answer": "Si bien MyLoanDesk alienta a los socios tecnológicos y proveedores de servicios externos a garantizar experiencias accesibles, el contenido y las integraciones de terceros pueden operar fuera de nuestro control directo."
+      }
+    }
   }
 }
