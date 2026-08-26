@@ -1062,5 +1062,238 @@
       "faq_q3_question": "How can I opt out of marketing emails from MyLoanDesk?",
       "faq_q3_answer": "You may opt out of promotional or marketing emails at any time by clicking the 'Unsubscribe' link at the bottom of the email. Transactional and servicing communications regarding an active loan application remain active as required by law."
     }
+  },
+  "GetQuote": {
+    "meta": {
+      "title": "Get a Mortgage Quote | MyLoanDesk",
+      "description": "Get a personalized mortgage quote from MyLoanDesk. Fill out our short form and a mortgage specialist will review your goals and contact you with the best available options.",
+      "og_title": "Get a Mortgage Quote | MyLoanDesk",
+      "og_description": "Get a personalized mortgage quote from MyLoanDesk. Fill out our short form and a mortgage specialist will review your goals and contact you with the best available options.",
+      "og_alt": "Get a Mortgage Quote - MyLoanDesk",
+      "twitter_title": "Get a Mortgage Quote | MyLoanDesk",
+      "twitter_description": "Get a personalized mortgage quote from MyLoanDesk. Compare custom rates and loan terms across 100+ wholesale lenders."
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "get_quote": "Get a Quote"
+    },
+    "heading": "Let's Find the Right Mortgage Option.",
+    "subheading": "Complete this short form and a MyLoanDesk mortgage specialist will personally review your goals and contact you with the best available options.",
+    "features": [
+      "Purchase, Refinance, Investment & Specialty Loan Programs",
+      "No credit pull to get started",
+      "Personal follow-up from a MyLoan Desk mortgage specialist"
+    ],
+    "form": {
+      "full_name_label": "Full Name *",
+      "full_name_placeholder": "John Doe",
+      "full_name_required": "Full name is required",
+      "email_label": "Email *",
+      "email_placeholder": "you@example.com",
+      "email_required": "Email is required",
+      "email_invalid": "Invalid email address",
+      "phone_label": "Phone (optional)",
+      "loan_type_label": "Loan Type *",
+      "loan_type_select": "Select option",
+      "loan_type_required": "Please select a loan type",
+      "loan_types": {
+        "purchase": "Purchase",
+        "refinance": "Refinance",
+        "cash_out": "Cash-out Refinance",
+        "investment": "Investment Property"
+      },
+      "price_labels": {
+        "default": "Purchase Price or Estimated Property Value",
+        "purchase": "Purchase Price",
+        "refinance": "Estimated Property Value",
+        "optional_suffix": "(optional)"
+      },
+      "price_placeholder": "$0",
+      "notes_label": "Complete this short form and a MyLoanDesk specialist will contact you with your best financing options..",
+      "notes_placeholder": "Self-employed, investment property, foreign income, previous credit challenges, or any other details that may help us better understand your situation.",
+      "submit_button": "Get My Loan Options",
+      "submitting_button": "Processing...",
+      "disclaimer": "Your information is secure, confidential, and never shared. No obligation and no credit pull to get started."
+    },
+    "modal": {
+      "title": "Thank You!",
+      "p1": "Thank you for your inquiry. A MyLoanDesk loan specialist will contact you shortly.",
+      "p2_prefix": "If you need immediate assistance, you can also call or text us at",
+      "p2_phone": "(305) 891-6500",
+      "close_button": "Close"
+    },
+    "toast": {
+      "loading": "Submitting your request...",
+      "success": "Request submitted successfully.",
+      "error": "There was an issue submitting your request. Please try again."
+    },
+    "schema": {
+      "webpage_name": "Get a Mortgage Quote | MyLoanDesk",
+      "webpage_description": "Request a personalized mortgage quote across residential, commercial, and investment property loan programs.",
+      "product_name": "Mortgage Loan Quote",
+      "faq_q1_question": "Does requesting a quote impact my credit score?",
+      "faq_q1_answer": "No. Initial rate quotes and scenario consultations do not require a hard credit pull.",
+      "faq_q2_question": "How quickly will I receive my mortgage quote?",
+      "faq_q2_answer": "Once you submit your scenario details, a dedicated mortgage specialist will review your goals and reach out with pricing and program options within one business day."
+    }
+  },
+  "GetStarted": {
+    "meta": {
+      "title": "Get Started | MyLoanDesk",
+      "description": "Answer a few quick questions to discover the best residential, commercial, and investment mortgage programs for your financial situation.",
+      "og_title": "Get Started | MyLoanDesk",
+      "og_description": "Answer a few quick questions to discover the best mortgage programs for your situation.",
+      "og_alt": "Get Started - MyLoanDesk",
+      "twitter_title": "Get Started | MyLoanDesk",
+      "twitter_description": "Find the right mortgage program in minutes with our fast online questionnaire."
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "get_started": "Get Started"
+    },
+    "hero": {
+      "badge": "FIND THE RIGHT MORTGAGE FOR YOU",
+      "headline": "Let’s Find Your Best Loan Options",
+      "subheadline": "Answer a few quick questions and we’ll help identify loan programs that may fit your goals."
+    },
+    "progress": {
+      "step": "Step {current} of {total}",
+      "completed": "Completed",
+      "complete_pct": "{percent}% Complete"
+    },
+    "controls": {
+      "back": "Back",
+      "continue": "Continue",
+      "not_sure": "I'm not sure",
+      "secure_title": "Secure & Confidential",
+      "secure_subtitle": "Your information is protected."
+    },
+    "steps": {
+      "step1": {
+        "title": "What would you like to do?",
+        "subtitle": "Choose the option that best matches your goal.",
+        "options": {
+          "buy": "Buy a Home",
+          "refinance": "Refinance My Mortgage",
+          "equity": "Access Home Equity",
+          "investment": "Buy an Investment Property",
+          "commercial": "Finance a Commercial Property",
+          "renovate": "Build or Renovate"
+        }
+      },
+      "step2": {
+        "title": "How will the property be used?",
+        "subtitle": "This helps us narrow down the right loan programs.",
+        "options": {
+          "primary": "Primary Residence",
+          "second": "Second / Vacation Home",
+          "investment": "Investment Property",
+          "commercial": "Commercial Property",
+          "not_sure": "Not Sure Yet"
+        }
+      },
+      "step3": {
+        "title": "Where are you in the process?",
+        "subtitle": "No pressure — choose whichever fits best.",
+        "options": {
+          "exploring": "Just Exploring",
+          "shopping": "Shopping for a Property",
+          "found": "I Found a Property",
+          "under_contract": "Under Contract",
+          "own": "I Already Own the Property"
+        }
+      },
+      "step4": {
+        "title": "What is the approximate property value?",
+        "subtitle": "An estimate is fine.",
+        "label": "Property value or purchase price",
+        "placeholder": "500000"
+      },
+      "step5": {
+        "title": "What is your estimated down payment?",
+        "subtitle": "Use the slider to select your target down payment percentage.",
+        "label": "Down Payment",
+        "est_label": "Est. Amount"
+      },
+      "step6": {
+        "title": "How do you earn your income?",
+        "subtitle": "We offer programs for many different income situations.",
+        "options": {
+          "w2": "W-2 Employee",
+          "self_employed": "Self-Employed",
+          "contractor": "1099",
+          "investor": "Real Estate Investor",
+          "retired": "Retired",
+          "other": "Other"
+        }
+      },
+      "step7": {
+        "title": "How would you describe your credit?",
+        "subtitle": "An estimate is all we need.",
+        "options": {
+          "tier_740": "740+",
+          "tier_700": "700–739",
+          "tier_660": "660–699",
+          "tier_below": "Below 660",
+          "not_sure": "I'm Not Sure"
+        }
+      },
+      "step8": {
+        "title": "See Your Loan Options",
+        "subtitle": "Enter your contact information and a MyLoanDesk mortgage professional can review your answers.",
+        "first_name": "First Name",
+        "last_name": "Last Name",
+        "email": "Email",
+        "phone": "Phone",
+        "state_label": "Property State",
+        "state_placeholder": "Select state",
+        "states": {
+          "florida": "Florida",
+          "texas": "Texas",
+          "california": "California",
+          "other": "Other"
+        },
+        "consent": "By checking this box, I consent to be contacted by MyLoanDesk regarding my mortgage inquiry via phone, text, or email at the details provided. I understand that consent is not a condition of purchase.",
+        "submit_button": "SEE MY LOAN OPTIONS",
+        "submitting_button": "PROCESSING...",
+        "disclaimer": "Submission does not constitute a loan application, approval, or commitment to lend."
+      }
+    },
+    "success": {
+      "title": "Thank You{name}!",
+      "subtitle": "Your inquiry has been successfully submitted.",
+      "description": "A MyLoanDesk mortgage professional will review your information and contact you shortly to discuss financing options that may fit your goals.",
+      "immediate_title": "Need immediate assistance?",
+      "call_or_text": "Call or text",
+      "phone_number": "(305) 891-6500",
+      "contact_button": "Contact Us Now",
+      "schedule_button": "Schedule A Call"
+    },
+    "value_props": {
+      "experts": {
+        "title": "Trusted Experts",
+        "sub": "Mortgage professionals"
+      },
+      "fast": {
+        "title": "Fast & Easy",
+        "sub": "Takes about 60 seconds"
+      },
+      "programs": {
+        "title": "Many Programs",
+        "sub": "Options for every situation"
+      },
+      "obligation": {
+        "title": "No Obligation",
+        "sub": "Explore your options safely"
+      }
+    },
+    "schema": {
+      "webpage_name": "Get Started | MyLoanDesk",
+      "webpage_description": "Quick online qualification questionnaire to match borrowers with wholesale loan programs.",
+      "faq_q1_question": "How long does the questionnaire take to complete?",
+      "faq_q1_answer": "The get-started questionnaire takes approximately two to three minutes to complete.",
+      "faq_q2_question": "Will completing this form trigger a hard credit inquiry?",
+      "faq_q2_answer": "No. Filling out the initial questionnaire does not pull your credit or affect your credit score."
+    }
   }
 }

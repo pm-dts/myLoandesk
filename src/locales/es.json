@@ -1065,5 +1065,238 @@
       "faq_q3_question": "¿Cómo puedo darme de baja de los correos electrónicos de marketing de MyLoanDesk?",
       "faq_q3_answer": "Puede optar por no recibir correos promocionales o de marketing en cualquier momento haciendo clic en el enlace 'Cancelar suscripción' en la parte inferior del correo. Las comunicaciones transaccionales y de servicio sobre una solicitud activa se mantendrán activas según lo exige la ley."
     }
+  },
+  "GetQuote": {
+    "meta": {
+      "title": "Obtenga una Cotización Hipotecaria | MyLoanDesk",
+      "description": "Obtenga una cotización hipotecaria personalizada de MyLoanDesk. Complete nuestro breve formulario y un especialista revisará sus objetivos y le presentará las mejores opciones.",
+      "og_title": "Obtenga una Cotización Hipotecaria | MyLoanDesk",
+      "og_description": "Obtenga una cotización hipotecaria personalizada de MyLoanDesk. Complete nuestro breve formulario y un especialista revisará sus objetivos y le presentará las mejores opciones.",
+      "og_alt": "Cotización Hipotecaria - MyLoanDesk",
+      "twitter_title": "Obtenga una Cotización Hipotecaria | MyLoanDesk",
+      "twitter_description": "Obtenga una cotización hipotecaria personalizada de MyLoanDesk. Compare tasas y plazos personalizados en más de 100 prestamistas mayoristas."
+    },
+    "breadcrumbs": {
+      "home": "Inicio",
+      "get_quote": "Obtener Cotización"
+    },
+    "heading": "Encontremos la Opción Hipotecaria Correcta.",
+    "subheading": "Complete este breve formulario y un especialista hipotecario de MyLoanDesk revisará personalmente sus objetivos y se comunicará con las mejores opciones disponibles.",
+    "features": [
+      "Programas de Préstamos para Compra, Refinanciamiento, Inversión y Especializados",
+      "Sin verificación de crédito dura para comenzar",
+      "Seguimiento personalizado de un especialista hipotecario de MyLoanDesk"
+    ],
+    "form": {
+      "full_name_label": "Nombre Completo *",
+      "full_name_placeholder": "Juan Pérez",
+      "full_name_required": "El nombre completo es obligatorio",
+      "email_label": "Correo Electrónico *",
+      "email_placeholder": "usted@ejemplo.com",
+      "email_required": "El correo electrónico es obligatorio",
+      "email_invalid": "Dirección de correo electrónico no válida",
+      "phone_label": "Teléfono (opcional)",
+      "loan_type_label": "Tipo de Préstamo *",
+      "loan_type_select": "Seleccione una opción",
+      "loan_type_required": "Por favor seleccione un tipo de préstamo",
+      "loan_types": {
+        "purchase": "Compra",
+        "refinance": "Refinanciamiento",
+        "cash_out": "Refinanciamiento con Retiro de Efectivo",
+        "investment": "Propiedad de Inversión"
+      },
+      "price_labels": {
+        "default": "Precio de Compra o Valor Estimado de la Propiedad",
+        "purchase": "Precio de Compra",
+        "refinance": "Valor Estimado de la Propiedad",
+        "optional_suffix": "(opcional)"
+      },
+      "price_placeholder": "$0",
+      "notes_label": "Complete este breve formulario y un especialista de MyLoanDesk se comunicará con sus mejores opciones de financiamiento.",
+      "notes_placeholder": "Trabajador independiente, propiedad de inversión, ingresos extranjeros, desafíos crediticios previos o cualquier otro detalle que nos ayude a comprender su situación.",
+      "submit_button": "Obtener mis Opciones de Préstamo",
+      "submitting_button": "Procesando...",
+      "disclaimer": "Su información es segura, confidencial y nunca se comparte. Sin compromiso ni verificación de crédito para comenzar."
+    },
+    "modal": {
+      "title": "¡Gracias!",
+      "p1": "Gracias por su consulta. Un especialista en préstamos de MyLoanDesk se comunicará con usted en breve.",
+      "p2_prefix": "Si necesita asistencia inmediata, también puede llamarnos o enviarnos un mensaje de texto al",
+      "p2_phone": "(305) 891-6500",
+      "close_button": "Cerrar"
+    },
+    "toast": {
+      "loading": "Enviando su solicitud...",
+      "success": "Solicitud enviada con éxito.",
+      "error": "Hubo un problema al enviar su solicitud. Por favor intente de nuevo."
+    },
+    "schema": {
+      "webpage_name": "Obtenga una Cotización Hipotecaria | MyLoanDesk",
+      "webpage_description": "Solicite una cotización hipotecaria personalizada para programas de préstamos residenciales, comerciales y de inversión.",
+      "product_name": "Cotización de Préstamo Hipotecario",
+      "faq_q1_question": "¿Solicitar una cotización afecta mi puntaje de crédito?",
+      "faq_q1_answer": "No. Las cotizaciones de tasas iniciales y las consultas de escenarios no requieren una verificación crediticia dura.",
+      "faq_q2_question": "¿Qué tan rápido recibiré mi cotización hipotecaria?",
+      "faq_q2_answer": "Una vez que envíe los detalles de su escenario, un especialista hipotecario dedicado revisará sus objetivos y se comunicará con las opciones de programas y precios dentro de un día hábil."
+    }
+  },
+  "GetStarted": {
+    "meta": {
+      "title": "Comenzar | MyLoanDesk",
+      "description": "Responda unas breves preguntas para descubrir los mejores programas de hipotecas residenciales, comerciales y de inversión para su situación financiera.",
+      "og_title": "Comenzar | MyLoanDesk",
+      "og_description": "Responda unas breves preguntas para descubrir los mejores programas de hipotecas para su situación.",
+      "og_alt": "Comenzar - MyLoanDesk",
+      "twitter_title": "Comenzar | MyLoanDesk",
+      "twitter_description": "Encuentre el programa hipotecario adecuado en minutos con nuestro rápido cuestionario en línea."
+    },
+    "breadcrumbs": {
+      "home": "Inicio",
+      "get_started": "Comenzar"
+    },
+    "hero": {
+      "badge": "ENCUENTRE LA HIPOTECA ADECUADA PARA USTED",
+      "headline": "Encontremos sus Mejores Opciones de Préstamo",
+      "subheadline": "Responda unas breves preguntas y le ayudaremos a identificar los programas de préstamos que mejor se adapten a sus objetivos."
+    },
+    "progress": {
+      "step": "Paso {current} de {total}",
+      "completed": "Completado",
+      "complete_pct": "{percent}% Completado"
+    },
+    "controls": {
+      "back": "Atrás",
+      "continue": "Continuar",
+      "not_sure": "No estoy seguro",
+      "secure_title": "Seguro y Confidencial",
+      "secure_subtitle": "Su información está protegida."
+    },
+    "steps": {
+      "step1": {
+        "title": "¿Qué le gustaría hacer?",
+        "subtitle": "Elija la opción que mejor coincida con su objetivo.",
+        "options": {
+          "buy": "Comprar una Vivienda",
+          "refinance": "Refinanciar mi Hipoteca",
+          "equity": "Acceder al Capital de mi Vivienda",
+          "investment": "Comprar Propiedad de Inversión",
+          "commercial": "Financiar Propiedad Comercial",
+          "renovate": "Construir o Renovar"
+        }
+      },
+      "step2": {
+        "title": "¿Cómo se utilizará la propiedad?",
+        "subtitle": "Esto nos ayuda a filtrar los programas de préstamo correctos.",
+        "options": {
+          "primary": "Residencia Principal",
+          "second": "Segunda Vivienda / Vacacional",
+          "investment": "Propiedad de Inversión",
+          "commercial": "Propiedad Comercial",
+          "not_sure": "Aún no estoy seguro"
+        }
+      },
+      "step3": {
+        "title": "¿En qué etapa del proceso se encuentra?",
+        "subtitle": "Sin compromisos — elija la que mejor se adapte.",
+        "options": {
+          "exploring": "Solo Explorando",
+          "shopping": "Buscando Propiedad",
+          "found": "Encontré una Propiedad",
+          "under_contract": "Bajo Contrato",
+          "own": "Ya soy Dueño de la Propiedad"
+        }
+      },
+      "step4": {
+        "title": "¿Cuál es el valor aproximado de la propiedad?",
+        "subtitle": "Una estimación es suficiente.",
+        "label": "Valor de la propiedad o precio de compra",
+        "placeholder": "500000"
+      },
+      "step5": {
+        "title": "¿Cuál es su pago inicial (enganche) estimado?",
+        "subtitle": "Use la barra para seleccionar el porcentaje de pago inicial deseado.",
+        "label": "Pago Inicial",
+        "est_label": "Monto Estimado"
+      },
+      "step6": {
+        "title": "¿Cómo percibe sus ingresos?",
+        "subtitle": "Ofrecemos programas para múltiples perfiles de ingresos.",
+        "options": {
+          "w2": "Empleado W-2",
+          "self_employed": "Trabajador Independiente",
+          "contractor": "Contratista 1099",
+          "investor": "Inversionista de Bienes Raíces",
+          "retired": "Jubilado",
+          "other": "Otro"
+        }
+      },
+      "step7": {
+        "title": "¿Cómo describiría su historial crediticio?",
+        "subtitle": "Solo necesitamos una estimación.",
+        "options": {
+          "tier_740": "740+",
+          "tier_700": "700–739",
+          "tier_660": "660–699",
+          "tier_below": "Menos de 660",
+          "not_sure": "No estoy seguro"
+        }
+      },
+      "step8": {
+        "title": "Vea sus Opciones de Préstamo",
+        "subtitle": "Ingrese su información de contacto para que un profesional hipotecario de MyLoanDesk pueda revisar sus respuestas.",
+        "first_name": "Nombre",
+        "last_name": "Apellido",
+        "email": "Correo Electrónico",
+        "phone": "Teléfono",
+        "state_label": "Estado de la Propiedad",
+        "state_placeholder": "Seleccione estado",
+        "states": {
+          "florida": "Florida",
+          "texas": "Texas",
+          "california": "California",
+          "other": "Otro"
+        },
+        "consent": "Al marcar esta casilla, doy mi consentimiento para ser contactado por MyLoanDesk respecto a mi consulta hipotecaria mediante llamada, mensaje de texto o correo a los datos proporcionados. Entiendo que el consentimiento no es una condición de compra.",
+        "submit_button": "VER MIS OPCIONES DE PRÉSTAMO",
+        "submitting_button": "PROCESANDO...",
+        "disclaimer": "El envío no constituye una solicitud de préstamo formal, aprobación ni compromiso de financiamiento."
+      }
+    },
+    "success": {
+      "title": "¡Gracias{name}!",
+      "subtitle": "Su consulta ha sido enviada con éxito.",
+      "description": "Un profesional hipotecario de MyLoanDesk revisará su información y se comunicará con usted en breve para evaluar las opciones de financiamiento adecuadas.",
+      "immediate_title": "¿Necesita asistencia inmediata?",
+      "call_or_text": "Llamar o texto al",
+      "phone_number": "(305) 891-6500",
+      "contact_button": "Contáctenos Ahora",
+      "schedule_button": "Agendar una Llamada"
+    },
+    "value_props": {
+      "experts": {
+        "title": "Expertos Confiables",
+        "sub": "Profesionales hipotecarios"
+      },
+      "fast": {
+        "title": "Rápido y Sencillo",
+        "sub": "Toma unos 60 segundos"
+      },
+      "programs": {
+        "title": "Múltiples Programas",
+        "sub": "Opciones para cada situación"
+      },
+      "obligation": {
+        "title": "Sin Compromiso",
+        "sub": "Explore opciones con seguridad"
+      }
+    },
+    "schema": {
+      "webpage_name": "Comenzar | MyLoanDesk",
+      "webpage_description": "Cuestionario rápido de calificación en línea para conectar a prestatarios con programas de préstamos mayoristas.",
+      "faq_q1_question": "¿Cuánto tiempo se tarda en completar el cuestionario?",
+      "faq_q1_answer": "El cuestionario inicial toma aproximadamente de dos a tres minutos en completarse.",
+      "faq_q2_question": "¿Completar este formulario generará una consulta dura en mi crédito?",
+      "faq_q2_answer": "No. Llenar el cuestionario inicial no realiza una verificación crediticia dura ni afecta su puntaje de crédito."
+    }
   }
 }

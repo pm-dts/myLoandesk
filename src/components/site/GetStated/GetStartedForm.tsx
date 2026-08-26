@@ -5,6 +5,8 @@ import { sendGTMEvent } from "@next/third-parties/google";
 import { Fraunces } from "next/font/google";
 import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
+import { useTranslations } from "next-intl";
+import Link from "next/link";
 import {
   Home,
   RefreshCw,
@@ -16,7 +18,6 @@ import {
   Circle,
   Star,
   Lock,
-  Phone,
   ChevronRight,
   ArrowLeft,
   ShieldCheck,
@@ -35,7 +36,14 @@ const fraunces = Fraunces({
 
 const TOTAL_STEPS = 8;
 
-export default function GetStartedForm() {
+interface GetStartedFormProps {
+  locale?: string;
+}
+
+export default function GetStartedForm({ locale = "en" }: GetStartedFormProps) {
+  const t = useTranslations("GetStarted");
+  const isEs = locale === "es";
+
   const [currentStep, setCurrentStep] = useState(1);
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -47,6 +55,7 @@ export default function GetStartedForm() {
       sendGTMEvent({
         event: "get_started_questionnaire_started",
         category: "engagement",
+        locale,
       });
       setAnswers((prev) => ({ ...prev, _startedTracked: "true" }));
     }
@@ -55,14 +64,15 @@ export default function GetStartedForm() {
       sendGTMEvent({
         event: "get_started_questionnaire_completed",
         category: "engagement",
+        locale,
       });
       setAnswers((prev) => ({ ...prev, _completedTracked: "true" }));
     }
-  }, [currentStep, answers]);
+  }, [currentStep, answers, locale]);
 
   const handleSelect = (name: string, value: string) => {
     setAnswers((prev) => ({ ...prev, [name]: value }));
-    setTimeout(() => goNext(), 200); // Slight delay for UX
+    setTimeout(() => goNext(), 200);
   };
 
   const handleInputChange = (
@@ -90,6 +100,7 @@ export default function GetStartedForm() {
     const payload = {
       source: "MyLoanDesk Website",
       form_name: "Get Started Questionnaire",
+      locale,
       ...answers,
     };
 
@@ -107,12 +118,12 @@ export default function GetStartedForm() {
         event: "get_started_survey_lead_submitted",
         category: "conversion",
         label: "Get Started Form",
+        locale,
       });
       setShowSuccess(true);
       window.scrollTo({ top: 0, behavior: "smooth" });
     } catch (error) {
       console.error("Error submitting lead to GHL:", error);
-      // Fallback success screen even if webhook fails, to prevent UX block
       setShowSuccess(true);
       window.scrollTo({ top: 0, behavior: "smooth" });
     } finally {
@@ -124,13 +135,16 @@ export default function GetStartedForm() {
     ? 100
     : Math.round((currentStep / TOTAL_STEPS) * 100);
 
+  const homeStartHref = isEs ? "/es/#start" : "/#start";
+  const calendarHref = isEs ? "/es/calendar" : "/calendar";
+
   return (
     <div className="min-h-screen bg-primary-bg flex flex-col font-sans text-ink">
       <main className="flex-1 w-full max-w-[960px] mx-auto px-4 sm:px-6 py-8 sm:py-12">
         {/* Hero Area */}
         <div className="text-center mb-8">
           <div className="text-[11px] sm:text-[13px] tracking-[0.25em] text-brand-orange font-semibold uppercase mb-3">
-            FIND THE RIGHT MORTGAGE FOR YOU
+            {t("hero.badge")}
           </div>
           <h1
             className={cn(
@@ -138,11 +152,10 @@ export default function GetStartedForm() {
               fraunces.className,
             )}
           >
-            Let’s Find Your Best Loan Options
+            {t("hero.headline")}
           </h1>
           <p className="text-sm sm:text-base text-ink-2 max-w-2xl mx-auto leading-relaxed">
-            Answer a few quick questions and we’ll help identify loan programs
-            that may fit your goals.
+            {t("hero.subheadline")}
           </p>
         </div>
 
@@ -151,10 +164,15 @@ export default function GetStartedForm() {
           <div className="flex justify-between text-xs sm:text-sm font-semibold uppercase tracking-wider text-ink-2 mb-3">
             <strong>
               {showSuccess
-                ? "Completed"
-                : `Step ${currentStep} of ${TOTAL_STEPS}`}
+                ? t("progress.completed")
+                : t("progress.step", {
+                    current: currentStep,
+                    total: TOTAL_STEPS,
+                  })}
             </strong>
-            <span className="text-brand-orange">{progressPct}% Complete</span>
+            <span className="text-brand-orange">
+              {t("progress.complete_pct", { percent: progressPct })}
+            </span>
           </div>
           <div className="h-2.5 w-full bg-line/60 rounded-full overflow-hidden">
             <div
@@ -181,47 +199,47 @@ export default function GetStartedForm() {
                 fraunces.className,
               )}
             >
-              Thank You{answers.firstName ? `, ${answers.firstName}` : ""}!
+              {t("success.title", {
+                name: answers.firstName ? `, ${answers.firstName}` : "",
+              })}
             </h2>
 
             <p className="text-sm sm:text-base font-semibold text-moss-deep mb-4">
-              Your inquiry has been successfully submitted.
+              {t("success.subtitle")}
             </p>
 
             <p className="text-sm sm:text-base text-ink-2 leading-relaxed mb-6 max-w-lg">
-              A MyLoanDesk mortgage professional will review your information
-              and contact you shortly to discuss financing options that may fit
-              your goals.
+              {t("success.description")}
             </p>
 
             <div className="bg-primary-bg border border-line rounded-2xl p-5 mb-8 w-full max-w-md shadow-xs">
               <div className="text-xs font-semibold uppercase tracking-wider text-ink-2 mb-1">
-                Need immediate assistance?
+                {t("success.immediate_title")}
               </div>
               <div className="text-sm sm:text-base font-medium text-ink">
-                Call or text{" "}
+                {t("success.call_or_text")}{" "}
                 <a
                   href="tel:3058916500"
                   className="font-bold text-brand-orange hover:underline"
                 >
-                  (305) 891-6500
+                  {t("success.phone_number")}
                 </a>
               </div>
             </div>
 
             <div className="flex flex-col sm:flex-row w-full max-w-md gap-4">
-              <a
-                href="/#start"
+              <Link
+                href={homeStartHref}
                 className="flex-1 flex items-center justify-center h-[54px] bg-primary-bg border border-line text-ink rounded-full font-semibold text-sm sm:text-base hover:bg-cream transition-colors"
               >
-                Contact Us Now
-              </a>
-              <a
-                href="/calendar"
+                {t("success.contact_button")}
+              </Link>
+              <Link
+                href={calendarHref}
                 className="btn-shine flex-1 flex items-center justify-center h-[54px] bg-brand-orange text-primary-bg rounded-full font-semibold text-sm sm:text-base hover:bg-orange-600 transition-colors shadow-sm"
               >
-                Schedule A Call
-              </a>
+                {t("success.schedule_button")}
+              </Link>
             </div>
           </div>
         ) : (
@@ -241,22 +259,46 @@ export default function GetStartedForm() {
                     fraunces.className,
                   )}
                 >
-                  What would you like to do?
+                  {t("steps.step1.title")}
                 </h2>
                 <p className="text-center text-sm text-ink-2 mb-8">
-                  Choose the option that best matches your goal.
+                  {t("steps.step1.subtitle")}
                 </p>
                 <div className="grid gap-3 max-w-2xl mx-auto">
                   {[
-                    { icon: Home, label: "Buy a Home" },
-                    { icon: RefreshCw, label: "Refinance My Mortgage" },
-                    { icon: CircleDollarSign, label: "Access Home Equity" },
-                    { icon: Building, label: "Buy an Investment Property" },
-                    { icon: Building2, label: "Finance a Commercial Property" },
-                    { icon: Hammer, label: "Build or Renovate" },
+                    {
+                      icon: Home,
+                      key: "buy",
+                      label: t("steps.step1.options.buy"),
+                    },
+                    {
+                      icon: RefreshCw,
+                      key: "refinance",
+                      label: t("steps.step1.options.refinance"),
+                    },
+                    {
+                      icon: CircleDollarSign,
+                      key: "equity",
+                      label: t("steps.step1.options.equity"),
+                    },
+                    {
+                      icon: Building,
+                      key: "investment",
+                      label: t("steps.step1.options.investment"),
+                    },
+                    {
+                      icon: Building2,
+                      key: "commercial",
+                      label: t("steps.step1.options.commercial"),
+                    },
+                    {
+                      icon: Hammer,
+                      key: "renovate",
+                      label: t("steps.step1.options.renovate"),
+                    },
                   ].map((opt) => (
                     <button
-                      key={opt.label}
+                      key={opt.key}
                       type="button"
                       onClick={() => handleSelect("goal", opt.label)}
                       className={cn(
@@ -292,18 +334,18 @@ export default function GetStartedForm() {
                     fraunces.className,
                   )}
                 >
-                  How will the property be used?
+                  {t("steps.step2.title")}
                 </h2>
                 <p className="text-center text-sm text-ink-2 mb-8">
-                  This helps us narrow down the right loan programs.
+                  {t("steps.step2.subtitle")}
                 </p>
                 <div className="grid gap-3 max-w-2xl mx-auto">
                   {[
-                    "Primary Residence",
-                    "Second / Vacation Home",
-                    "Investment Property",
-                    "Commercial Property",
-                    "Not Sure Yet",
+                    t("steps.step2.options.primary"),
+                    t("steps.step2.options.second"),
+                    t("steps.step2.options.investment"),
+                    t("steps.step2.options.commercial"),
+                    t("steps.step2.options.not_sure"),
                   ].map((label) => (
                     <button
                       key={label}
@@ -338,18 +380,18 @@ export default function GetStartedForm() {
                     fraunces.className,
                   )}
                 >
-                  Where are you in the process?
+                  {t("steps.step3.title")}
                 </h2>
                 <p className="text-center text-sm text-ink-2 mb-8">
-                  No pressure — choose whichever fits best.
+                  {t("steps.step3.subtitle")}
                 </p>
                 <div className="grid gap-3 max-w-2xl mx-auto">
                   {[
-                    "Just Exploring",
-                    "Shopping for a Property",
-                    "I Found a Property",
-                    "Under Contract",
-                    "I Already Own the Property",
+                    t("steps.step3.options.exploring"),
+                    t("steps.step3.options.shopping"),
+                    t("steps.step3.options.found"),
+                    t("steps.step3.options.under_contract"),
+                    t("steps.step3.options.own"),
                   ].map((label) => (
                     <button
                       key={label}
@@ -384,14 +426,14 @@ export default function GetStartedForm() {
                     fraunces.className,
                   )}
                 >
-                  What is the approximate property value?
+                  {t("steps.step4.title")}
                 </h2>
                 <p className="text-center text-sm text-ink-2 mb-8">
-                  An estimate is fine.
+                  {t("steps.step4.subtitle")}
                 </p>
                 <div className="max-w-[500px] mx-auto mb-6">
                   <label className="block text-xs font-semibold uppercase tracking-wider text-ink-2 mb-2">
-                    Property value or purchase price
+                    {t("steps.step4.label")}
                   </label>
                   <div className="relative">
                     <span className="absolute left-5 top-1/2 -translate-y-1/2 text-ink-2 font-semibold text-lg">
@@ -402,17 +444,19 @@ export default function GetStartedForm() {
                       name="propertyValue"
                       value={answers.propertyValue || ""}
                       onChange={handleInputChange}
-                      placeholder="500000"
+                      placeholder={t("steps.step4.placeholder")}
                       className="w-full h-[64px] pl-12 pr-6 rounded-2xl border border-line bg-primary-bg focus:border-brand-orange focus:ring-1 focus:ring-brand-orange text-lg font-medium outline-none transition-all shadow-sm"
                     />
                   </div>
                 </div>
                 <button
                   type="button"
-                  onClick={() => handleSelect("propertyValue", "Not Sure")}
+                  onClick={() =>
+                    handleSelect("propertyValue", t("controls.not_sure"))
+                  }
                   className="block mx-auto text-brand-orange font-semibold text-sm hover:underline"
                 >
-                  I'm not sure
+                  {t("controls.not_sure")}
                 </button>
               </div>
             )}
@@ -429,10 +473,10 @@ export default function GetStartedForm() {
                     fraunces.className,
                   )}
                 >
-                  What is your estimated down payment?
+                  {t("steps.step5.title")}
                 </h2>
                 <p className="text-center text-sm text-ink-2 mb-8">
-                  Use the slider to select your target down payment percentage.
+                  {t("steps.step5.subtitle")}
                 </p>
 
                 <div className="max-w-[500px] mx-auto mb-6">
@@ -440,19 +484,18 @@ export default function GetStartedForm() {
                     <div className="flex justify-between items-end mb-8">
                       <div>
                         <label className="block text-xs font-semibold uppercase tracking-wider text-ink-2 mb-1">
-                          Down Payment
+                          {t("steps.step5.label")}
                         </label>
                         <div className="text-4xl font-light text-brand-orange">
                           {answers.downPaymentPercent || "20"}%
                         </div>
                       </div>
 
-                      {/* Show calculated dollar amount if property value is a valid number */}
                       {answers.propertyValue &&
                         !isNaN(Number(answers.propertyValue)) && (
                           <div className="text-right">
                             <label className="block text-xs font-semibold uppercase tracking-wider text-ink-2 mb-1">
-                              Est. Amount
+                              {t("steps.step5.est_label")}
                             </label>
                             <div className="text-xl font-medium text-ink">
                               $
@@ -486,11 +529,11 @@ export default function GetStartedForm() {
                   <button
                     type="button"
                     onClick={() =>
-                      handleSelect("downPaymentPercent", "Not Sure")
+                      handleSelect("downPaymentPercent", t("controls.not_sure"))
                     }
                     className="block mx-auto text-brand-orange font-semibold text-sm hover:underline"
                   >
-                    I'm not sure
+                    {t("controls.not_sure")}
                   </button>
                 </div>
               </div>
@@ -508,19 +551,19 @@ export default function GetStartedForm() {
                     fraunces.className,
                   )}
                 >
-                  How do you earn your income?
+                  {t("steps.step6.title")}
                 </h2>
                 <p className="text-center text-sm text-ink-2 mb-8">
-                  We offer programs for many different income situations.
+                  {t("steps.step6.subtitle")}
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
                   {[
-                    "W-2 Employee",
-                    "Self-Employed",
-                    "1099",
-                    "Real Estate Investor",
-                    "Retired",
-                    "Other",
+                    t("steps.step6.options.w2"),
+                    t("steps.step6.options.self_employed"),
+                    t("steps.step6.options.contractor"),
+                    t("steps.step6.options.investor"),
+                    t("steps.step6.options.retired"),
+                    t("steps.step6.options.other"),
                   ].map((label) => (
                     <button
                       key={label}
@@ -554,18 +597,18 @@ export default function GetStartedForm() {
                     fraunces.className,
                   )}
                 >
-                  How would you describe your credit?
+                  {t("steps.step7.title")}
                 </h2>
                 <p className="text-center text-sm text-ink-2 mb-8">
-                  An estimate is all we need.
+                  {t("steps.step7.subtitle")}
                 </p>
                 <div className="grid gap-3 max-w-2xl mx-auto">
                   {[
-                    "740+",
-                    "700–739",
-                    "660–699",
-                    "Below 660",
-                    "I'm Not Sure",
+                    t("steps.step7.options.tier_740"),
+                    t("steps.step7.options.tier_700"),
+                    t("steps.step7.options.tier_660"),
+                    t("steps.step7.options.tier_below"),
+                    t("steps.step7.options.not_sure"),
                   ].map((label) => (
                     <button
                       key={label}
@@ -600,17 +643,16 @@ export default function GetStartedForm() {
                     fraunces.className,
                   )}
                 >
-                  See Your Loan Options
+                  {t("steps.step8.title")}
                 </h2>
                 <p className="text-center text-sm text-ink-2 mb-8">
-                  Enter your contact information and a MyLoanDesk mortgage
-                  professional can review your answers.
+                  {t("steps.step8.subtitle")}
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-6 text-left">
                   <div>
                     <label className="block text-xs font-semibold uppercase tracking-wider text-ink-2 mb-2">
-                      First Name
+                      {t("steps.step8.first_name")}
                     </label>
                     <input
                       required
@@ -621,7 +663,7 @@ export default function GetStartedForm() {
                   </div>
                   <div>
                     <label className="block text-xs font-semibold uppercase tracking-wider text-ink-2 mb-2">
-                      Last Name
+                      {t("steps.step8.last_name")}
                     </label>
                     <input
                       required
@@ -632,7 +674,7 @@ export default function GetStartedForm() {
                   </div>
                   <div className="sm:col-span-2">
                     <label className="block text-xs font-semibold uppercase tracking-wider text-ink-2 mb-2">
-                      Email
+                      {t("steps.step8.email")}
                     </label>
                     <input
                       required
@@ -644,7 +686,7 @@ export default function GetStartedForm() {
                   </div>
                   <div className="sm:col-span-2">
                     <label className="block text-xs font-semibold uppercase tracking-wider text-ink-2 mb-2">
-                      Phone
+                      {t("steps.step8.phone")}
                     </label>
                     <PhoneInput
                       defaultCountry="us"
@@ -662,7 +704,7 @@ export default function GetStartedForm() {
                   </div>
                   <div className="sm:col-span-2">
                     <label className="block text-xs font-semibold uppercase tracking-wider text-ink-2 mb-2">
-                      Property State
+                      {t("steps.step8.state_label")}
                     </label>
                     <select
                       required
@@ -670,11 +712,21 @@ export default function GetStartedForm() {
                       onChange={handleInputChange}
                       className="w-full h-12 px-4 rounded-xl border border-line bg-primary-bg focus:border-brand-orange outline-none transition-all appearance-none cursor-pointer"
                     >
-                      <option value="">Select state</option>
-                      <option value="Florida">Florida</option>
-                      <option value="Texas">Texas</option>
-                      <option value="California">California</option>
-                      <option value="Other">Other</option>
+                      <option value="">
+                        {t("steps.step8.state_placeholder")}
+                      </option>
+                      <option value="Florida">
+                        {t("steps.step8.states.florida")}
+                      </option>
+                      <option value="Texas">
+                        {t("steps.step8.states.texas")}
+                      </option>
+                      <option value="California">
+                        {t("steps.step8.states.california")}
+                      </option>
+                      <option value="Other">
+                        {t("steps.step8.states.other")}
+                      </option>
                     </select>
                   </div>
                 </div>
@@ -686,10 +738,7 @@ export default function GetStartedForm() {
                     className="mt-0.5 w-4 h-4 rounded text-brand-orange focus:ring-brand-orange"
                   />
                   <span className="leading-relaxed">
-                    By checking this box, I consent to be contacted by
-                    MyLoanDesk regarding my mortgage inquiry via phone, text, or
-                    email at the details provided. I understand that consent is
-                    not a condition of purchase.
+                    {t("steps.step8.consent")}
                   </span>
                 </label>
 
@@ -698,13 +747,14 @@ export default function GetStartedForm() {
                   type="submit"
                   className="btn-shine w-full h-[58px] bg-brand-orange text-primary-bg rounded-full font-semibold text-base sm:text-lg flex items-center justify-center gap-2 hover:bg-orange-600 transition-all disabled:opacity-70 shadow-sm"
                 >
-                  {isSubmitting ? "PROCESSING..." : "SEE MY LOAN OPTIONS"}{" "}
+                  {isSubmitting
+                    ? t("steps.step8.submitting_button")
+                    : t("steps.step8.submit_button")}{" "}
                   {!isSubmitting && <ArrowRight size={20} />}
                 </button>
 
                 <p className="text-center text-[11px] text-ink-2/80 mt-4 leading-relaxed max-w-sm mx-auto">
-                  Submission does not constitute a loan application, approval,
-                  or commitment to lend.
+                  {t("steps.step8.disclaimer")}
                 </p>
               </div>
             )}
@@ -720,17 +770,16 @@ export default function GetStartedForm() {
                     currentStep === 1 && "invisible",
                   )}
                 >
-                  <ArrowLeft size={18} /> Back
+                  <ArrowLeft size={18} /> {t("controls.back")}
                 </button>
 
-                {/* Only show 'Continue' manually if inputting text on steps 4/5 */}
                 {(currentStep === 4 || currentStep === 5) && (
                   <button
                     type="button"
                     onClick={goNext}
                     className="bg-moss-deep text-cream px-6 py-3 rounded-full font-semibold flex items-center gap-2 hover:bg-moss-darker transition-all shadow-sm"
                   >
-                    Continue <ArrowRight size={16} />
+                    {t("controls.continue")} <ArrowRight size={16} />
                   </button>
                 )}
               </div>
@@ -741,10 +790,10 @@ export default function GetStartedForm() {
               <Lock size={18} />
               <div className="text-left leading-tight">
                 <span className="block font-semibold text-xs text-ink uppercase tracking-wider">
-                  Secure &amp; Confidential
+                  {t("controls.secure_title")}
                 </span>
                 <span className="text-[11px]">
-                  Your information is protected.
+                  {t("controls.secure_subtitle")}
                 </span>
               </div>
             </div>
@@ -756,23 +805,23 @@ export default function GetStartedForm() {
           {[
             {
               icon: ShieldCheck,
-              title: "Trusted Experts",
-              sub: "Mortgage professionals",
+              title: t("value_props.experts.title"),
+              sub: t("value_props.experts.sub"),
             },
             {
               icon: Clock,
-              title: "Fast & Easy",
-              sub: "Takes about 60 seconds",
+              title: t("value_props.fast.title"),
+              sub: t("value_props.fast.sub"),
             },
             {
               icon: LayoutGrid,
-              title: "Many Programs",
-              sub: "Options for every situation",
+              title: t("value_props.programs.title"),
+              sub: t("value_props.programs.sub"),
             },
             {
               icon: Heart,
-              title: "No Obligation",
-              sub: "Explore your options safely",
+              title: t("value_props.obligation.title"),
+              sub: t("value_props.obligation.sub"),
             },
           ].map((vp, i) => (
             <div
