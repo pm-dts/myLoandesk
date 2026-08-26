@@ -1,0 +1,127 @@
+{
+  "Home": {
+    "Hero": {
+      "headline_start": "Su hipoteca tiene su propio",
+      "headline_italic": "escritorio",
+      "headline_end": "dedicado.",
+      "subheadline": "Acceda a cientos de soluciones hipotecarias a través de nuestra red crediticia nacional. Comparamos sus opciones, negociamos tasas competitivas y gestionamos cada detalle desde la solicitud hasta el cierre.",
+      "cta_apply": "Iniciar su solicitud",
+      "cta_calculator": "Pruebe Nuestras Calculadoras",
+      "rating_score": "4.9 / 5",
+      "rating_subtitle": "de más de 2,300 préstamos cerrados"
+    },
+    "RatesWidget": {
+      "title": "Tasas Hipotecarias Promedio en EE. UU.",
+      "disclaimer": "Las tasas mostradas son promedios del mercado nacional provistos únicamente con fines informativos y no constituyen un compromiso de financiamiento ni una oferta de préstamo. Su tasa de interés y APR real variarán según su puntaje de crédito, monto del préstamo, relación préstamo-valor, tipo de propiedad, programa de préstamo y otros factores de evaluación.",
+      "quote_label": "Contáctenos para obtener su cotización personalizada",
+      "quote_button": "Obtener Mi Tasa Hipotecaria Personalizada",
+      "quote_description": "Complete este breve formulario y un especialista hipotecario de MyLoanDesk comparará las opciones de nuestra red nacional de prestamistas para ofrecerle tasas personalizadas y soluciones financieras adaptadas a sus metas."
+    },
+    "Stats": {
+      "funded_value": 2.4,
+      "funded_prefix": "$",
+      "funded_suffix": "B+",
+      "funded_label": "Financiado para familias desde 1995",
+      "loans_value": 12400,
+      "loans_suffix": "+",
+      "loans_label": "Préstamos completados",
+      "days_value": 23,
+      "days_suffix": " días",
+      "days_label": "Tiempo promedio desde la solicitud hasta las llaves",
+      "rating_value": 4.9,
+      "rating_suffix": "/5",
+      "rating_label": "Calificación promedio de clientes cerrados"
+    },
+    "Process": {
+      "section_badge": "03 — Cómo funciona",
+      "heading_start": "4 pasos.",
+      "heading_italic": "Sin",
+      "heading_end": "laberintos.",
+      "subheading": "No lo transferiremos entre diferentes departamentos. El agente que lo precalifica es el mismo que estará a su lado en la mesa de cierre.",
+      "step1": {
+        "badge": "5 min",
+        "title": "Precalifíquese",
+        "description": "Complete una solicitud rápida o hable con nosotros por teléfono. Compararemos múltiples prestamistas y le recomendaremos las mejores opciones, sin consultas duras a su crédito y sin compromiso."
+      },
+      "step2": {
+        "badge": "24–48 hrs",
+        "title": "Compare ofertas",
+        "description": "Buscamos entre más de 100 prestamistas para encontrar sus mejores alternativas hipotecarias y se las presentamos en una comparación clara y directa."
+      },
+      "step3": {
+        "badge": "Mismo día",
+        "title": "Avance con su opción",
+        "description": "Seleccione su programa preferido, asegure su tasa de interés y nosotros nos encargaremos de los trámites manteniéndolo informado en cada momento."
+      },
+      "step4": {
+        "badge": "15-28 días",
+        "title": "Cierre con Confianza",
+        "description": "Coordinaremos cada detalle con el prestamista, la compañía de títulos y todas las partes involucradas para garantizar un cierre puntual y sin problemas."
+      }
+    },
+    "Why": {
+      "section_badge": "04 — Por qué myloandesk",
+      "heading_start": "Nos sentamos de",
+      "heading_italic": "su",
+      "heading_end": "lado del escritorio. No del prestamista.",
+      "subheading": "La mayoría de los oficiales de préstamo trabajan para un solo banco y le venden solo sus productos. Nosotros trabajamos para usted y comparamos más de 20 prestamistas para encontrar la opción perfecta.",
+      "testimonial_quote": "\"Me llamaron un domingo para asegurar una tasa antes de que abrieran los mercados el lunes. Ese es el tipo de respaldo que uno necesita.\"",
+      "testimonial_author": "— Marisol T., cerró en su primera casa en Miami",
+      "features": {
+        "independent": {
+          "title": "Independientes, no cautivos",
+          "description": "No dependemos de la nómina de ningún banco específico. Nuestra compensación no cambia según el préstamo que elija."
+        },
+        "transparent": {
+          "title": "Tarifas transparentes",
+          "description": "Todos los costos se revelan por adelantado y por escrito. Cero cargos sorpresa o comisiones ocultas al momento de cerrar."
+        },
+        "direct_line": {
+          "title": "Línea directa con su agente",
+          "description": "Un número real, una persona real. Incluyendo noches y fines de semana. Sin centros de llamadas automatizados."
+        },
+        "fast_close": {
+          "title": "Cierre en 10-28 días",
+          "description": "Nuestro promedio es de 18 días, mientras que el promedio de la industria es de 47 días."
+        }
+      }
+    },
+    "Stories": {
+      "section_badge": "05 — Historias de éxito",
+      "heading_start": "Cierres reales.",
+      "heading_italic": "Personas",
+      "heading_end": "reales.",
+      "subheading": "Miles de familias han confiado en nuestro equipo. Aquí le presentamos algunas de sus historias."
+    },
+    "FAQ": {
+      "q1": {
+        "question": "¿En qué se diferencian de un oficial de préstamos de un banco tradicional?",
+        "answer": "Un banco solo puede ofrecer los productos hipotecarios específicos de su propia entidad. En MyLoanDesk trabajamos con múltiples prestamistas mayoristas, dándole acceso a una gama más amplia de programas de préstamos, tasas de interés competitivas y criterios de aprobación más flexibles. Comparamos ofertas en su nombre para encontrar la hipoteca que mejor se adapte a sus objetivos financieros, no solo la que un único banco tenga disponible."
+      },
+      "q2": {
+        "question": "¿Cuánto dinero necesito para el pago inicial (down payment)?",
+        "answer": "Los requisitos de pago inicial varían según el programa de préstamo. Algunos préstamos convencionales requieren tan solo un 3% de inicial, mientras que los veteranos elegibles pueden calificar con 0% de inicial mediante préstamos VA. También existen programas de asistencia para el pago inicial destinados a compradores de primera vivienda. Le ayudaremos a explorar todas las opciones disponibles según su perfil."
+      },
+      "q3": {
+        "question": "¿Para cuánto dinero puedo calificar?",
+        "answer": "La cantidad que puede calificar depende de factores como sus ingresos, activos, historial de crédito, deudas actuales, pago inicial disponible y el tipo de préstamo que solicite. La forma más rápida de saberlo es mediante una precalificación gratuita. Analizaremos su situación financiera y le daremos un estimado personalizado para que busque su propiedad con total seguridad."
+      },
+      "q4": {
+        "question": "¿Cuáles son los costos de cierre de una hipoteca?",
+        "answer": "Los costos de cierre varían según el programa, el tipo de propiedad, el monto financiado y sus calificaciones. Pueden incluir tarifas de originación, tasación (appraisal), servicios de título, impuestos prepagados, seguros y tarifas de registro gubernamental. Antes de comprometerse, recibirá un Estimado de Préstamo (Loan Estimate) detallado que desglosa cada cargo con total transparencia."
+      },
+      "q5": {
+        "question": "¿Qué tan rápido pueden cerrar un préstamo?",
+        "answer": "Cada caso es único, pero muchas de nuestras hipotecas se cierran en un período de 14 a 30 días, dependiendo del programa, los tiempos de la tasación y la rapidez con la que se provean los documentos requeridos. Nuestro equipo trabaja de manera proactiva para mantener el proceso ágil y eficiente hasta el día del cierre."
+      },
+      "q6": {
+        "question": "¿Comparar opciones afectará mi puntaje de crédito?",
+        "answer": "No. Los modelos de calificación crediticia reconocen que los compradores comparan ofertas hipotecarias. Las consultas de crédito relacionadas con hipotecas realizadas dentro de una ventana de tiempo corta se agrupan y se tratan como una sola consulta para fines de puntaje. Comparar le permite encontrar una mejor tasa y ahorrar miles de dólares."
+      },
+      "q7": {
+        "question": "¿Qué pasa si mi puntaje de crédito no es excelente?",
+        "answer": "No asuma que no puede calificar. Trabajamos con una amplia variedad de prestamistas mayoristas que ofrecen programas especializados para diversos perfiles de crédito (incluyendo FHA y programas de ingresos no tradicionales). Si aún no está listo hoy, le guiaremos sobre los pasos específicos para mejorar su perfil crediticio."
+      }
+    }
+  }
+}

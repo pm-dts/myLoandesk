@@ -1,0 +1,127 @@
+{
+  "Home": {
+    "Hero": {
+      "headline_start": "Your mortgage gets a",
+      "headline_italic": "desk",
+      "headline_end": "of its own.",
+      "subheadline": "Access hundreds of mortgage solutions through our nationwide lending network. We compare your options, negotiate competitive rates, and handle every detail from application to closing.",
+      "cta_apply": "Start your application",
+      "cta_calculator": "Try Our Calculators",
+      "rating_score": "4.9 / 5",
+      "rating_subtitle": "from 2,300+ closed loans"
+    },
+    "RatesWidget": {
+      "title": "Average US Mortgage Rates",
+      "disclaimer": "Rates shown are national average market rates provided for informational purposes only and are not a commitment to lend or a loan offer. Your actual interest rate and APR will vary based on credit score, loan amount, loan-to-value ratio, occupancy, property type, loan program, discount points, and other underwriting factors.",
+      "quote_label": "Contact us for your personalized quote",
+      "quote_button": "Get Your Personalized Mortgage Rate",
+      "quote_description": "Complete this short form and a MyLoanDesk mortgage specialist will compare loan options from our nationwide lending network and contact you with personalized rates and financing solutions tailored to your goals."
+    },
+    "Stats": {
+      "funded_value": 2.4,
+      "funded_prefix": "$",
+      "funded_suffix": "B+",
+      "funded_label": "Funded for families since 1995",
+      "loans_value": 12400,
+      "loans_suffix": "+",
+      "loans_label": "Loans completed",
+      "days_value": 23,
+      "days_suffix": " days",
+      "days_label": "Average time from application to keys",
+      "rating_value": 4.9,
+      "rating_suffix": "/5",
+      "rating_label": "Average rating from closed clients"
+    },
+    "Process": {
+      "section_badge": "03 — How it works",
+      "heading_start": "4 steps.",
+      "heading_italic": "No",
+      "heading_end": "maze.",
+      "subheading": "You won't get bounced between departments. The broker who pre-qualifies you is the broker at your closing table.",
+      "step1": {
+        "badge": "5 min",
+        "title": "Get pre-qualified",
+        "description": "Complete a quick application or talk with us by phone. We'll compare multiple lenders and recommend the best mortgage options for you—with no hard credit inquiry and no obligation."
+      },
+      "step2": {
+        "badge": "24–48 hrs",
+        "title": "Compare offers",
+        "description": "We search 100+ lenders to find your best mortgage options and present them in a simple side-by-side comparison."
+      },
+      "step3": {
+        "badge": "Same day",
+        "title": "Move Forward",
+        "description": "Choose your preferred loan option, lock your rate, and we'll handle the paperwork while keeping you informed throughout the process."
+      },
+      "step4": {
+        "badge": "15-28 days",
+        "title": "Close with Confidence",
+        "description": "We'll coordinate every detail with your lender, title company, and all parties involved to ensure a smooth, on-time closing."
+      }
+    },
+    "Why": {
+      "section_badge": "04 — Why myloandesk",
+      "heading_start": "We sit on",
+      "heading_italic": "your",
+      "heading_end": "side of the desk. Not the lender's.",
+      "subheading": "Most loan officers work for one bank and sell you that bank's products. We work for you — and shop 20+ lenders to find the right fit. Here's what that actually means.",
+      "testimonial_quote": "\"They called me back on a Sunday to lock a rate before markets opened Monday. That's the kind of desk you want.\"",
+      "testimonial_author": "— Marisol T., closed on her first home in Miami",
+      "features": {
+        "independent": {
+          "title": "Independent, not captive",
+          "description": "We're not on any single lender's payroll. Our pay doesn't change based on which loan you pick."
+        },
+        "transparent": {
+          "title": "Transparent fees",
+          "description": "Every cost is disclosed up front — in writing. No last-minute junk fees at the closing table."
+        },
+        "direct_line": {
+          "title": "Your broker's direct line",
+          "description": "A real phone number, a real person. Evenings and weekends included. No call centers, ever."
+        },
+        "fast_close": {
+          "title": "Close in 10-28 days",
+          "description": "Our average is 18 days — industry average is 47."
+        }
+      }
+    },
+    "Stories": {
+      "section_badge": "05 — Stories from the desk",
+      "heading_start": "Real closings.",
+      "heading_italic": "Real",
+      "heading_end": "people.",
+      "subheading": "A few thousand families have sat at our desk. Here are three of them."
+    },
+    "FAQ": {
+      "q1": {
+        "question": "How are you different from a bank's loan officer?",
+        "answer": "A bank can only offer the mortgage products available through that bank. At MyLoan Desk, we work with multiple lenders, giving you access to a wider range of loan programs, competitive interest rates, and flexible underwriting options. We compare offers on your behalf to help you find the mortgage that best fits your financial goals-not just the one a single bank has available."
+      },
+      "q2": {
+        "question": "How much do I need for a down payment?",
+        "answer": "Down payment requirements vary by loan program. Some loans require as little as 3% down, while eligible veterans may qualify for 0% down through VA loans. There are also down payment assistance programs available for many first-time homebuyers. We'll help you explore the options that best fit your financial situation."
+      },
+      "q3": {
+        "question": "How much can I qualify for?",
+        "answer": "The amount you qualify for depends on several factors, including your income, assets, credit history, existing debts, down payment, and the type of loan you're applying for. The fastest way to find out is through a free pre-approval. We'll review your financial situation and provide a personalized estimate so you can shop for a home with confidence."
+      },
+      "q4": {
+        "question": "What are the closing costs on a mortgage?",
+        "answer": "Closing costs vary based on the loan program, property, loan amount, and your individual qualifications. They may include lender fees, appraisal, title services, government recording fees, prepaid taxes and insurance, and other third-party costs. Before you commit to a loan, you'll receive a detailed Loan Estimate that clearly outlines every fee, so you'll know exactly what to expect. In many cases, lender credits or seller concessions can help reduce your out-of-pocket costs."
+      },
+      "q5": {
+        "question": "How fast can you close?",
+        "answer": "Every loan is different, but many mortgages can close in as little as 14 to 30 days, depending on the loan program, appraisal timing, and how quickly required documents are provided. Our team works proactively with borrowers, real estate agents, and lenders to keep your loan moving efficiently from application to closing."
+      },
+      "q6": {
+        "question": "Will shopping around hurt my credit score?",
+        "answer": "No. Credit scoring models recognize that borrowers often compare mortgage offers before choosing a lender. Multiple mortgage-related credit inquiries made within a short shopping period are generally treated as a single inquiry for scoring purposes. Comparing loan options can help you find a better rate and potentially save thousands over the life of your mortgage."
+      },
+      "q7": {
+        "question": "What if my credit isn't great?",
+        "answer": "Don't assume you won't qualify. We work with a variety of lenders offering programs for borrowers with different credit profiles. Depending on your situation, there may be options available even if your credit score isn't perfect. If you're not ready today, we'll help you understand what steps could improve your chances of qualifying in the future."
+      }
+    }
+  }
+}

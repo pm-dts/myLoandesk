@@ -9,7 +9,6 @@ import {
   PlayCircle,
   MessageCircle,
   Phone,
-  HelpCircle,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -17,6 +16,7 @@ import { sendGTMEvent } from "@next/third-parties/google";
 import { usePathname } from "next/navigation";
 
 import brandLogo from "@/assets/logo-cropped.png";
+import LanguageSwitcher from "@/components/common/LanguageSwitcher";
 
 const loanLinks = [
   { name: "Conventional Loans", href: "/loan-programs#conventional" },
@@ -129,15 +129,6 @@ export const Header: React.FC = () => {
     });
   };
 
-  const trackAskAIBroker = () => {
-    sendGTMEvent({
-      event: "ask_ai_broker_clicked",
-      category: "engagement",
-      label: "Header ChatGPT AI Broker",
-      page_path: pathname || "/",
-    });
-  };
-
   const trackQuoteClick = (source: string) => {
     sendGTMEvent({
       event: "get_quote_button_clicked",
@@ -215,7 +206,7 @@ export const Header: React.FC = () => {
               />
             </Link>
 
-            {/* Transparent bridge area to keep hover active between the link and the dropdown */}
+            {/* Transparent bridge area */}
             <div
               className={`absolute left-0 top-full h-4 w-full ${
                 isDropdownOpen ? "block" : "hidden"
@@ -306,10 +297,14 @@ export const Header: React.FC = () => {
         </div>
 
         {/* --- Action Button Deck --- */}
-        <div className="flex items-center gap-6 shrink-0 relative z-20">
+        <div className="flex items-center gap-4 shrink-0 relative z-20">
+          {/* Desktop Language Switcher */}
+          <div className="shrink-0">
+            <LanguageSwitcher />
+          </div>
+
           {/* Phone and Quote Column */}
           <div className="flex flex-col items-center justify-center">
-            {/* Phone link with dedicated clickable container */}
             <a
               href="tel:3058916500"
               onClick={() => trackPhoneClick("Desktop Header Phone Link")}
@@ -348,27 +343,18 @@ export const Header: React.FC = () => {
             >
               Call or Text <Phone size={14} />
             </a>
-
-            {/* <Link
-              href="https://chatgpt.com/g/g-6989ac7406b08191ba66dc0aa143e1d6-ask-a-mortgage-broker-myloandesk"
-              target="_blank"
-              onClick={trackAskAIBroker}
-              className="border border-brand-orange bg-brand-orange text-white px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-wider flex items-center justify-between hover:bg-orange-600 transition-colors shadow-sm"
-            >
-              Ask AI Broker <HelpCircle size={14} />
-            </Link> */}
           </div>
         </div>
       </nav>
 
       {/* --- MOBILE NAVIGATION --- */}
       <div className="lg:hidden flex flex-col w-full bg-primary-bg">
-        {/* Row 1: Top branding bar */}
-        <div className="relative h-24 px-4 flex items-center justify-center border-b border-line/30">
+        {/* Row 1: Top branding bar with menu and language switch */}
+        <div className="relative h-24 px-4 flex items-center justify-between border-b border-line/30">
           {/* Menu Button */}
           <button
             onClick={toggleMobileMenu}
-            className="absolute left-4 w-11 h-11 flex items-center justify-center rounded-full border border-line text-ink-2 bg-cream/40 focus-ring z-20"
+            className="w-11 h-11 flex items-center justify-center rounded-full border border-line text-ink-2 bg-cream/40 focus-ring z-20"
             aria-label="Toggle Menu"
             aria-expanded={isMobileMenuOpen}
           >
@@ -388,6 +374,11 @@ export const Header: React.FC = () => {
               priority
             />
           </Link>
+
+          {/* Mobile Language Switcher */}
+          <div className="z-20">
+            <LanguageSwitcher />
+          </div>
         </div>
 
         {/* Row 2: Secondary Action Button Line */}
