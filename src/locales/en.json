@@ -591,5 +591,34 @@
         "answer": "While MyLoanDesk encourages technology partners and third-party service providers to ensure user-friendly, accessible experiences, third-party content and external integrations may operate outside our direct control."
       }
     }
+  },
+  "Blog": {
+    "meta": {
+      "title": "Mortgage Insights & Market Updates | MyLoanDesk Blog",
+      "description": "Stay informed with MyLoanDesk's blog. Explore Florida housing market updates, winning multi-offer strategies, and FHA vs. conventional mortgage comparisons."
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "blog": "Blog"
+    },
+    "badge": "Resources & Insights",
+    "heading": "MyLoanDesk.com Blog",
+    "subheading": "Market updates, negotiation strategies, and transparent mortgage breakdowns to help you navigate the housing market with confidence.",
+    "read_article": "Read article",
+    "load_more": "Load more articles",
+    "posts": {
+      "post_1": {
+        "title": "Winning the \"Multi-Offer\" War in Florida",
+        "excerpt": "Using a high-trust pre-approval as a weapon in competitive markets. If you've looked at a home in Tampa, Orlando, or South Florida recently, you know the reality: you aren't the only buyer putting in an offer. Here is how to make yours stand out.",
+        "date": "May 26",
+        "read_time": "1 min read"
+      },
+      "post_2": {
+        "title": "FHA vs. Conventional in the Florida Market",
+        "excerpt": "A comparison to help local buyers choose the right path. When you're ready to make a move, one of the first technical forks in the road is deciding between an FHA...",
+        "date": "May 25",
+        "read_time": "3 min read"
+      }
+    }
   }
 }

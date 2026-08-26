@@ -594,5 +594,34 @@
         "answer": "Si bien MyLoanDesk alienta a los socios tecnológicos y proveedores de servicios externos a garantizar experiencias accesibles, el contenido y las integraciones de terceros pueden operar fuera de nuestro control directo."
       }
     }
+  },
+  "Blog": {
+    "meta": {
+      "title": "Perspectivas Hipotecarias y Mercado | Blog de MyLoanDesk",
+      "description": "Manténgase informado con el blog de MyLoanDesk. Explore actualizaciones del mercado de Florida, estrategias en ofertas múltiples y comparaciones entre préstamos FHA y convencionales."
+    },
+    "breadcrumbs": {
+      "home": "Inicio",
+      "blog": "Blog"
+    },
+    "badge": "Recursos y Perspectivas",
+    "heading": "Blog de MyLoanDesk.com",
+    "subheading": "Actualizaciones del mercado, estrategias de negociación y análisis hipotecarios transparentes para ayudarle a navegar el mercado inmobiliario con confianza.",
+    "read_article": "Leer artículo",
+    "load_more": "Cargar más artículos",
+    "posts": {
+      "post_1": {
+        "title": "Ganando la Guerra de Ofertas Múltiples en Florida",
+        "excerpt": "Uso de una preaprobación sólida en mercados competitivos. Si ha buscado una casa en Tampa, Orlando o el sur de Florida, conoce la realidad: no es el único comprador haciendo una oferta. Así es como puede destacar la suya.",
+        "date": "26 de mayo",
+        "read_time": "1 min de lectura"
+      },
+      "post_2": {
+        "title": "FHA vs. Convencional en el Mercado de Florida",
+        "excerpt": "Una comparación para ayudar a los compradores locales a elegir el camino correcto. Al tomar la decisión de comprar, una de las primeras encrucijadas técnicas es elegir entre un préstamo FHA...",
+        "date": "25 de mayo",
+        "read_time": "3 min de lectura"
+      }
+    }
   }
 }
