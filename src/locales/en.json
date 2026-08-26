@@ -1719,5 +1719,370 @@
         "error": "There was an issue submitting your referral. Please try again."
       }
     }
+  },
+  "SecureDocumentUpload": {
+    "meta": {
+      "title": "Secure Document Upload | MyLoanDesk",
+      "description": "Upload your financial documents securely through MyLoanDesk's encrypted document portal. Ensure your sensitive information is protected while we assist you with your mortgage needs.",
+      "og_title": "Secure Document Upload | MyLoanDesk",
+      "og_description": "Upload your financial documents securely through MyLoanDesk's encrypted document portal. Ensure your sensitive information is protected while we assist you with your mortgage needs.",
+      "og_alt": "MyLoanDesk Secure Document Portal",
+      "twitter_title": "Secure Document Upload | MyLoanDesk",
+      "twitter_description": "Upload your financial documents securely through MyLoanDesk's encrypted document portal."
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "secure_upload": "Secure Document Upload"
+    },
+    "heading": "Secure Document Portal",
+    "subheading": "Please upload your required financial documents. Your data is encrypted and handled with full security.",
+    "form_title": "Secure Document Upload Form",
+    "sidebar": {
+      "title": "Secure & Encrypted",
+      "description": "Your documents are protected. We never store your data on local unsecure devices."
+    },
+    "schema": {
+      "webpage_name": "Secure Document Upload | MyLoanDesk",
+      "webpage_description": "Encrypted document upload portal for securely submitting mortgage, financial, and income verification files."
+    }
+  },
+  "TermsConditions": {
+    "meta": {
+      "title": "Terms & Conditions | MyLoanDesk",
+      "description": "Please read these Terms & Conditions carefully before using our Services. By accessing or using our website, you agree to be bound by these Terms.",
+      "og_title": "Terms & Conditions | MyLoanDesk",
+      "og_description": "Please read these Terms & Conditions carefully before using our Services. By accessing or using our website, you agree to be bound by these Terms.",
+      "og_alt": "MyLoanDesk Terms and Conditions",
+      "twitter_title": "Terms & Conditions | MyLoanDesk",
+      "twitter_description": "Review the Terms & Conditions for accessing and using the MyLoanDesk website and lending services."
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "terms_conditions": "Terms & Conditions"
+    },
+    "badge": "Legal & Compliance",
+    "heading": "Terms & Conditions",
+    "effective_date_label": "Effective Date:",
+    "effective_date_value": "July 25, 2022",
+    "intro_p1": "Welcome to MyLoanDesk (\"Company,\" \"we,\" \"our,\" or \"us\"). These Terms & Conditions (\"Terms\") govern your access to and use of our website, services, tools, mortgage calculators, CRM systems, AI assistants, lead forms, and related digital platforms (collectively, the \"Services\").",
+    "intro_p2": "By accessing or using our Services, you agree to be bound by these Terms. If you do not agree, you must discontinue use immediately.",
+    "toc_title": "Contents",
+    "toc": {
+      "s1": "1. Introduction",
+      "s2": "2. Nature of Our Services",
+      "s3": "3. No Financial or Legal Advice",
+      "s4": "4. Eligibility",
+      "s5": "5. User Responsibilities",
+      "s6": "6. Lead Submission & Communication Consent",
+      "s7": "7. Third-Party Services",
+      "s8": "8. Mortgage Disclaimer",
+      "s9": "9. AI Tools",
+      "s10": "10. Intellectual Property",
+      "s11": "11. Limitation of Liability",
+      "s12": "12. No Guarantees",
+      "s13": "13. Privacy & Cookies",
+      "s14": "14. Termination",
+      "s15": "15. Changes",
+      "s16": "16. Governing Law",
+      "s17": "17. Contact",
+      "s18": "18. Equal Housing Opportunity",
+      "s19": "19. Final Agreement"
+    },
+    "inquiries_card": {
+      "title": "Inquiries and Questions",
+      "description": "If you have questions regarding these Terms & Conditions, reach out to us directly."
+    },
+    "sections": {
+      "s1": {
+        "title": "1. Introduction",
+        "p1": "Welcome to MyLoanDesk (\"Company,\" \"we,\" \"our,\" or \"us\").",
+        "p2": "These Terms & Conditions (\"Terms\") govern your access to and use of our website, services, tools, mortgage calculators, CRM systems, AI assistants, lead forms, and related digital platforms (collectively, the \"Services\").",
+        "p3": "By accessing or using our Services, you agree to be bound by these Terms. If you do not agree, you must discontinue use immediately."
+      },
+      "s2": {
+        "title": "2. Nature of Our Services",
+        "p1": "MyLoanDesk provides mortgage-related technology, lead generation services, customer relationship management tools, educational content, and communication platforms.",
+        "p2": "We are not a direct lender unless explicitly stated. We may:",
+        "list": [
+          "Connect users with licensed mortgage professionals or lenders",
+          "Provide mortgage-related information and tools",
+          "Facilitate communication between users and third-party providers",
+          "Offer AI-assisted informational responses"
+        ],
+        "p3": "We do not guarantee loan approval, interest rates, or lending outcomes."
+      },
+      "s3": {
+        "title": "3. No Financial or Legal Advice",
+        "p1": "All content is for informational purposes only.",
+        "p2": "Nothing constitutes:",
+        "list": [
+          "Financial advice",
+          "Legal advice",
+          "Tax advice",
+          "Investment advice",
+          "Loan approval or commitment"
+        ],
+        "p3": "Consult a licensed professional before making financial decisions."
+      },
+      "s4": {
+        "title": "4. Eligibility",
+        "p1": "You confirm that:",
+        "list": [
+          "You are at least 18 years old",
+          "You have legal capacity",
+          "Information provided is accurate"
+        ],
+        "p2": "We may refuse service at our discretion."
+      },
+      "s5": {
+        "title": "5. User Responsibilities",
+        "p1": "You agree not to:",
+        "list": [
+          "Submit false information",
+          "Use bots or scraping tools",
+          "Hack or disrupt systems",
+          "Misuse calculators or forms",
+          "Impersonate others",
+          "Use services unlawfully"
+        ]
+      },
+      "s6": {
+        "title": "6. Lead Submission & Communication Consent",
+        "p1": "By submitting your information, you consent to being contacted by:",
+        "list1": ["MyLoanDesk", "Partners, lenders, affiliates"],
+        "p2": "Via:",
+        "list2": [
+          "Phone calls",
+          "SMS/MMS",
+          "Email",
+          "Automated systems",
+          "AI messaging"
+        ],
+        "p3": "Consent is not required for purchase. Opt-out anytime."
+      },
+      "s7": {
+        "title": "7. Third-Party Services",
+        "p1": "We may use:",
+        "list": [
+          "Lenders",
+          "CRM systems",
+          "Analytics tools",
+          "AI systems",
+          "Communication platforms"
+        ],
+        "p2": "We are not responsible for third-party practices."
+      },
+      "s8": {
+        "title": "8. Mortgage Disclaimer",
+        "p1": "We do not guarantee:",
+        "list": ["Loan approval", "Interest rates", "Loan terms"],
+        "p2": "All estimates are informational only."
+      },
+      "s9": {
+        "title": "9. AI Tools",
+        "p1": "AI responses:",
+        "list": [
+          "Are automated",
+          "May be inaccurate",
+          "Do not replace professional advice"
+        ],
+        "p2": "We are not liable for AI-based decisions."
+      },
+      "s10": {
+        "title": "10. Intellectual Property",
+        "p1": "All content is owned by MyLoanDesk and protected by law.",
+        "p2": "No copying or redistribution without permission."
+      },
+      "s11": {
+        "title": "11. Limitation of Liability",
+        "p1": "We are not liable for:",
+        "list": [
+          "Financial loss",
+          "Loan denial",
+          "Data loss",
+          "Business interruption"
+        ],
+        "p2": "Use at your own risk."
+      },
+      "s12": {
+        "title": "12. No Guarantees",
+        "p1": "Services are provided \"as is.\"",
+        "p2": "No guarantees of:",
+        "list": ["Approval", "Rates", "Availability"]
+      },
+      "s13": {
+        "title": "13. Privacy & Cookies",
+        "p1": "Use is governed by our Privacy Policy and Cookie Policy."
+      },
+      "s14": {
+        "title": "14. Termination",
+        "p1": "We may suspend or terminate access at any time."
+      },
+      "s15": {
+        "title": "15. Changes",
+        "p1": "We may update these Terms at any time."
+      },
+      "s16": {
+        "title": "16. Governing Law",
+        "p1": "Governed by applicable jurisdiction laws."
+      },
+      "s17": {
+        "title": "17. Contact",
+        "company": "MyLoanDesk",
+        "website": "https://www.myloandesk.com",
+        "email": "info@myloandesk.com",
+        "phone": "305 891 6500",
+        "address": "1801 NE 123 St #314, N. Miami, FL 33181"
+      },
+      "s18": {
+        "title": "18. Equal Housing Opportunity",
+        "p1": "We comply with fair lending laws and do not discriminate."
+      },
+      "s19": {
+        "title": "19. Final Agreement",
+        "p1": "By using MyLoanDesk, you agree to these Terms."
+      }
+    },
+    "schema": {
+      "webpage_name": "Terms & Conditions | MyLoanDesk",
+      "webpage_description": "Terms and Conditions outlining the rules, obligations, and legal agreements governing the use of MyLoanDesk services."
+    }
+  },
+  "ReverseMortgage": {
+    "meta": {
+      "title": "Reverse Mortgage | MyLoanDesk",
+      "description": "Explore Reverse Mortgage options with MyLoanDesk. Learn how to convert your home equity into financial freedom, with no monthly payments and flexible access to funds.",
+      "og_title": "Reverse Mortgage | MyLoanDesk",
+      "og_description": "Explore Reverse Mortgage options with MyLoanDesk. Learn how to convert your home equity into financial freedom, with no monthly payments and flexible access to funds.",
+      "og_alt": "Reverse Mortgage Programs - MyLoanDesk",
+      "twitter_title": "Reverse Mortgage | MyLoanDesk",
+      "twitter_description": "Convert your home equity into retirement funding and financial freedom with no monthly mortgage payments."
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "reverse_mortgage": "Reverse Mortgage"
+    },
+    "hero": {
+      "badge": "Reverse Mortgage Solutions",
+      "headline": "Turn Your Home Equity Into Financial Freedom.",
+      "subheadline": "A reverse mortgage allows eligible homeowners age 55+* and older to convert a portion of their home equity into tax-free proceeds while continuing to live in and own their home. No monthly mortgage payments are required, provided you continue to pay property taxes, homeowners insurance, applicable HOA dues, and maintain the property.",
+      "cta_button": "Let's Find your Options"
+    },
+    "benefits_section": {
+      "heading": "The Benefits of a Reverse Mortgage",
+      "subheading": "Discover how tapping into your home's equity can provide financial security and peace of mind during your retirement years.",
+      "items": {
+        "no_monthly": {
+          "title": "No Monthly Payments",
+          "description": "No required monthly mortgage payments."
+        },
+        "retain_ownership": {
+          "title": "Retain Ownership",
+          "description": "Remain in the home and retain full ownership."
+        },
+        "flexible_access": {
+          "title": "Flexible Access to Funds",
+          "description": "Access funds as a lump sum, monthly payments, line of credit, or combination."
+        },
+        "eliminate_mortgage": {
+          "title": "Eliminate Current Mortgage",
+          "description": "Pay off an existing mortgage to free up monthly cash flow."
+        },
+        "fha_insured": {
+          "title": "FHA-Insured",
+          "description": "FHA-insured HECM (Home Equity Conversion Mortgage) options available."
+        },
+        "non_recourse": {
+          "title": "Non-Recourse Protection",
+          "description": "You will never owe more than the home is worth when the loan is repaid."
+        },
+        "lifestyle": {
+          "title": "Fund Your Lifestyle",
+          "description": "Use the funds for retirement income, home improvements, healthcare, debt consolidation, or other needs."
+        }
+      },
+      "cta_card": {
+        "title": "Ready to explore your options?",
+        "description": "Speak with one of our specialized reverse mortgage advisors today.",
+        "button": "Contact Us"
+      }
+    },
+    "programs": {
+      "heading": "Reverse Mortgage Programs",
+      "read_more": "Read More",
+      "explore_page": "Explore Full Program Page",
+      "homesafe": {
+        "tag": "Reverse Mortgage",
+        "title": "HomeSafe Second (HELOC Alternative)",
+        "subtitle": "Access Your Equity Without Replacing Your First Mortgage",
+        "description": "HomeSafe Second is a second-lien reverse mortgage designed for eligible homeowners who want to access their home equity while keeping their existing first mortgage in place."
+      },
+      "refinance": {
+        "tag": "Refinance",
+        "title": "Reverse Mortgage Refinance",
+        "subtitle": "Convert Your Home Equity Into Cash",
+        "description": "A Reverse Mortgage Refinance allows you to replace your existing mortgage with a reverse mortgage. Any remaining equity can then be accessed as tax free proceeds, giving you additional financial flexibility while eliminating your required monthly mortgage payment."
+      },
+      "purchase": {
+        "tag": "Home Purchase",
+        "title": "Reverse Mortgage for Purchase",
+        "subtitle": "Buy Your Next Home With No Required Monthly Mortgage Payment",
+        "description": "A reverse mortgage isn't just for homeowners—it can also help you purchase your next primary residence."
+      },
+      "right_for_you": {
+        "tag": "Retirement Planning",
+        "title": "Is a Reverse Mortgage Right for You?",
+        "description": "Every homeowner's situation is unique. That's why we take the time to understand your goals and explain every available option before you make a decision. Whether you're interested in refinancing your current home or purchasing your next one..."
+      }
+    },
+    "form": {
+      "badge": "Reverse Mortgage",
+      "heading": "See If a Reverse Mortgage Is Right For You",
+      "subheading": "Complete this brief inquiry form and a MyLoanDesk reverse mortgage specialist will personally review your goals.",
+      "success_title": "Thank You for Your Inquiry!",
+      "success_desc": "We have received your details. One of our specialized reverse mortgage advisors will reach out to you shortly with tailored guidance.",
+      "submit_another": "Submit another inquiry",
+      "fields": {
+        "name_label": "Full Name *",
+        "name_placeholder": "John Doe",
+        "name_required": "Name is required",
+        "email_label": "Email *",
+        "email_placeholder": "you@example.com",
+        "email_required": "Email is required",
+        "email_invalid": "Valid email required",
+        "zip_label": "Property ZIP (Optional)",
+        "zip_placeholder": "e.g. 33101",
+        "value_label": "Approx. Home Value (Optional)",
+        "value_placeholder": "$500,000",
+        "balance_label": "Mortgage Balance (Optional)",
+        "balance_placeholder": "$150,000",
+        "age_label": "Age of Borrower (Optional)",
+        "age_placeholder": "e.g. 62",
+        "goals_label": "Tell us your goals please (Optional)",
+        "goals_placeholder": "Eliminate monthly mortgage payments, access equity for healthcare/retirement, supplement income, etc."
+      },
+      "submit_button": "Get Reverse Mortgage Guidance",
+      "submitting_button": "Submitting...",
+      "disclaimer": "Your privacy is guaranteed. No hard credit pull required to get started.",
+      "toasts": {
+        "loading": "Submitting your inquiry...",
+        "success": "Inquiry received! A specialist will contact you shortly.",
+        "error": "There was an issue submitting your request. Please try again."
+      }
+    },
+    "schema": {
+      "webpage_name": "Reverse Mortgage Solutions | MyLoanDesk",
+      "webpage_description": "Comprehensive guide and inquiry options for FHA-insured HECM and proprietary reverse mortgage programs for homeowners age 55+.",
+      "product_name": "Reverse Mortgage Loan (HECM & Jumbo)",
+      "product_description": "Home equity conversion financing enabling eligible homeowners age 55 and older to access home equity without monthly mortgage principal and interest payments.",
+      "faq_q1_question": "Do I have to make monthly mortgage payments on a reverse mortgage?",
+      "faq_q1_answer": "No monthly mortgage payments are required as long as you live in the home as your primary residence, keep property taxes and homeowners insurance current, and maintain the property.",
+      "faq_q2_question": "Who retains ownership of the home with a reverse mortgage?",
+      "faq_q2_answer": "You remain on the title and retain full ownership of your home throughout the life of the reverse mortgage.",
+      "faq_q3_question": "What is non-recourse protection on an FHA HECM loan?",
+      "faq_q3_answer": "Non-recourse protection ensures that neither you nor your heirs will ever owe more than the fair market value of the home when the loan is repaid upon sale.",
+      "faq_q4_question": "How can I receive funds from a reverse mortgage?",
+      "faq_q4_answer": "Proceeds can be received as an upfront lump sum, monthly payments, a growing line of credit, or a customized combination of these options."
+    }
   }
 }

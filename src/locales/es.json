@@ -1722,5 +1722,374 @@
         "error": "Hubo un problema al enviar su referencia. Por favor intente de nuevo."
       }
     }
+  },
+  "SecureDocumentUpload": {
+    "meta": {
+      "title": "Carga Segura de Documentos | MyLoanDesk",
+      "description": "Suba sus documentos financieros de forma segura a través del portal cifrado de MyLoanDesk. Garantice la protección de su información confidencial mientras le asistimos con sus necesidades hipotecarias.",
+      "og_title": "Carga Segura de Documentos | MyLoanDesk",
+      "og_description": "Suba sus documentos financieros de forma segura a través del portal cifrado de MyLoanDesk. Garantice la protección de su información confidencial mientras le asistimos con sus necesidades hipotecarias.",
+      "og_alt": "Portal de Carga Segura de Documentos de MyLoanDesk",
+      "twitter_title": "Carga Segura de Documentos | MyLoanDesk",
+      "twitter_description": "Suba sus documentos financieros de forma segura a través del portal cifrado de MyLoanDesk."
+    },
+    "breadcrumbs": {
+      "home": "Inicio",
+      "secure_upload": "Carga Segura de Documentos"
+    },
+    "heading": "Portal Seguro de Documentos",
+    "subheading": "Por favor suba los documentos financieros requeridos. Sus datos están cifrados y se manejan con total seguridad.",
+    "form_title": "Formulario de Carga Segura de Documentos",
+    "sidebar": {
+      "title": "Seguro y Cifrado",
+      "description": "Sus documentos están protegidos. Nunca almacenamos sus datos en dispositivos locales no seguros."
+    },
+    "schema": {
+      "webpage_name": "Carga Segura de Documentos | MyLoanDesk",
+      "webpage_description": "Portal de carga de documentos cifrado para enviar de forma segura archivos de verificación de ingresos, financieros e hipotecarios."
+    }
+  },
+  "TermsConditions": {
+    "meta": {
+      "title": "Términos y Condiciones | MyLoanDesk",
+      "description": "Lea estos Términos y Condiciones detenidamente antes de utilizar nuestros Servicios. Al acceder o utilizar nuestro sitio web, usted acepta estar sujeto a estos Términos.",
+      "og_title": "Términos y Condiciones | MyLoanDesk",
+      "og_description": "Lea estos Términos y Condiciones detenidamente antes de utilizar nuestros Servicios. Al acceder o utilizar nuestro sitio web, usted acepta estar sujeto a estos Términos.",
+      "og_alt": "Términos y Condiciones de MyLoanDesk",
+      "twitter_title": "Términos y Condiciones | MyLoanDesk",
+      "twitter_description": "Revise los Términos y Condiciones para acceder y utilizar el sitio web y los servicios de préstamos de MyLoanDesk."
+    },
+    "breadcrumbs": {
+      "home": "Inicio",
+      "terms_conditions": "Términos y Condiciones"
+    },
+    "badge": "Legal y Cumplimiento",
+    "heading": "Términos y Condiciones",
+    "effective_date_label": "Fecha de Entrada en Vigor:",
+    "effective_date_value": "25 de Julio de 2022",
+    "intro_p1": "Bienvenido a MyLoanDesk (\"Compañía\", \"nosotros\" o \"nuestro\"). Estos Términos y Condiciones (\"Términos\") rigen su acceso y uso de nuestro sitio web, servicios, herramientas, calculadoras hipotecarias, sistemas CRM, asistentes de IA, formularios de clientes potenciales y plataformas digitales relacionadas (colectivamente, los \"Servicios\").",
+    "intro_p2": "Al acceder o utilizar nuestros Servicios, usted acepta estar sujeto a estos Términos. Si no está de acuerdo, debe suspender su uso de inmediato.",
+    "toc_title": "Contenido",
+    "toc": {
+      "s1": "1. Introducción",
+      "s2": "2. Naturaleza de Nuestros Servicios",
+      "s3": "3. Sin Asesoramiento Financiero o Legal",
+      "s4": "4. Elegibilidad",
+      "s5": "5. Responsabilidades del Usuario",
+      "s6": "6. Envío de Datos y Consentimiento",
+      "s7": "7. Servicios de Terceros",
+      "s8": "8. Descargo de Responsabilidad Hipotecario",
+      "s9": "9. Herramientas de IA",
+      "s10": "10. Propiedad Intelectual",
+      "s11": "11. Limitación de Responsabilidad",
+      "s12": "12. Sin Garantías",
+      "s13": "13. Privacidad y Cookies",
+      "s14": "14. Terminación",
+      "s15": "15. Cambios",
+      "s16": "16. Ley Aplicable",
+      "s17": "17. Contacto",
+      "s18": "18. Igualdad de Oportunidades de Vivienda",
+      "s19": "19. Acuerdo Final"
+    },
+    "inquiries_card": {
+      "title": "Consultas y Preguntas",
+      "description": "Si tiene preguntas sobre estos Términos y Condiciones, comuníquese con nosotros directamente."
+    },
+    "sections": {
+      "s1": {
+        "title": "1. Introducción",
+        "p1": "Bienvenido a MyLoanDesk (\"Compañía\", \"nosotros\" o \"nuestro\").",
+        "p2": "Estos Términos y Condiciones (\"Términos\") rigen su acceso y uso de nuestro sitio web, servicios, herramientas, calculadoras hipotecarias, sistemas CRM, asistentes de IA, formularios de clientes potenciales y plataformas digitales relacionadas (colectivamente, los \"Servicios\").",
+        "p3": "Al acceder o utilizar nuestros Servicios, usted acepta estar sujeto a estos Términos. Si no está de acuerdo, debe suspender su uso de inmediato."
+      },
+      "s2": {
+        "title": "2. Naturaleza de Nuestros Servicios",
+        "p1": "MyLoanDesk proporciona tecnología hipotecaria, servicios de generación de prospectos, herramientas de gestión de relaciones con clientes, contenido educativo y plataformas de comunicación.",
+        "p2": "No somos un prestamista directo a menos que se indique explícitamente. Podemos:",
+        "list": [
+          "Conectar a los usuarios con prestamistas o profesionales hipotecarios autorizados",
+          "Proporcionar herramientas e información relacionada con hipotecas",
+          "Facilitar la comunicación entre usuarios y proveedores terceros",
+          "Ofrecer respuestas informativas asistidas por IA"
+        ],
+        "p3": "No garantizamos la aprobación de préstamos, tasas de interés ni resultados crediticios."
+      },
+      "s3": {
+        "title": "3. Sin Asesoramiento Financiero o Legal",
+        "p1": "Todo el contenido tiene fines informativos únicamente.",
+        "p2": "Nada constituye:",
+        "list": [
+          "Asesoramiento financiero",
+          "Asesoramiento legal",
+          "Asesoramiento fiscal",
+          "Asesoramiento de inversión",
+          "Aprobación o compromiso de préstamo"
+        ],
+        "p3": "Consulte a un profesional autorizado antes de tomar decisiones financieras."
+      },
+      "s4": {
+        "title": "4. Elegibilidad",
+        "p1": "Usted confirma que:",
+        "list": [
+          "Tiene al menos 18 años de edad",
+          "Tiene capacidad legal",
+          "La información proporcionada es precisa"
+        ],
+        "p2": "Podemos rechazar el servicio a nuestra discreción."
+      },
+      "s5": {
+        "title": "5. Responsabilidades del Usuario",
+        "p1": "Usted acepta no:",
+        "list": [
+          "Enviar información falsa",
+          "Usar bots o herramientas de extracción de datos",
+          "Hackear o interrumpir sistemas",
+          "Hacer mal uso de calculadoras o formularios",
+          "Suplantar a otros",
+          "Usar los servicios de manera ilegal"
+        ]
+      },
+      "s6": {
+        "title": "6. Envío de Datos y Consentimiento de Comunicación",
+        "p1": "Al enviar su información, usted acepta ser contactado por:",
+        "list1": ["MyLoanDesk", "Socios, prestamistas, afiliados"],
+        "p2": "A través de:",
+        "list2": [
+          "Llamadas telefónicas",
+          "SMS/MMS",
+          "Correo electrónico",
+          "Sistemas automatizados",
+          "Mensajería de IA"
+        ],
+        "p3": "El consentimiento no es obligatorio para compras. Puede darse de baja en cualquier momento."
+      },
+      "s7": {
+        "title": "7. Servicios de Terceros",
+        "p1": "Podemos utilizar:",
+        "list": [
+          "Prestamistas",
+          "Sistemas CRM",
+          "Herramientas de análisis",
+          "Sistemas de IA",
+          "Plataformas de comunicación"
+        ],
+        "p2": "No somos responsables de las prácticas de terceros."
+      },
+      "s8": {
+        "title": "8. Descargo de Responsabilidad Hipotecario",
+        "p1": "No garantizamos:",
+        "list": [
+          "Aprobación de préstamo",
+          "Tasas de interés",
+          "Términos del préstamo"
+        ],
+        "p2": "Todas las estimaciones tienen fines informativos únicamente."
+      },
+      "s9": {
+        "title": "9. Herramientas de IA",
+        "p1": "Las respuestas de IA:",
+        "list": [
+          "Son automatizadas",
+          "Pueden ser inexactas",
+          "No reemplazan el asesoramiento profesional"
+        ],
+        "p2": "No nos hacemos responsables de las decisiones basadas en IA."
+      },
+      "s10": {
+        "title": "10. Propiedad Intelectual",
+        "p1": "Todo el contenido es propiedad de MyLoanDesk y está protegido por ley.",
+        "p2": "No se permite la copia ni la redistribución sin autorización."
+      },
+      "s11": {
+        "title": "11. Limitación de Responsabilidad",
+        "p1": "No somos responsables de:",
+        "list": [
+          "Pérdidas financieras",
+          "Denegación de préstamos",
+          "Pérdida de datos",
+          "Interrupción del negocio"
+        ],
+        "p2": "El uso corre bajo su propio riesgo."
+      },
+      "s12": {
+        "title": "12. Sin Garantías",
+        "p1": "Los servicios se proporcionan \"tal cual\".",
+        "p2": "No hay garantías de:",
+        "list": ["Aprobación", "Tasas", "Disponibilidad"]
+      },
+      "s13": {
+        "title": "13. Privacidad y Cookies",
+        "p1": "El uso está regido por nuestra Política de Privacidad y Política de Cookies."
+      },
+      "s14": {
+        "title": "14. Terminación",
+        "p1": "Podemos suspender o terminar el acceso en cualquier momento."
+      },
+      "s15": {
+        "title": "15. Cambios",
+        "p1": "Podemos actualizar estos Términos en cualquier momento."
+      },
+      "s16": {
+        "title": "16. Ley Aplicable",
+        "p1": "Regido por las leyes de la jurisdicción aplicable."
+      },
+      "s17": {
+        "title": "17. Contacto",
+        "company": "MyLoanDesk",
+        "website": "https://www.myloandesk.com",
+        "email": "info@myloandesk.com",
+        "phone": "305 891 6500",
+        "address": "1801 NE 123 St #314, N. Miami, FL 33181"
+      },
+      "s18": {
+        "title": "18. Igualdad de Oportunidades de Vivienda",
+        "p1": "Cumplimos con las leyes de préstamos justos y no discriminamos."
+      },
+      "s19": {
+        "title": "19. Acuerdo Final",
+        "p1": "Al utilizar MyLoanDesk, usted acepta estos Términos."
+      }
+    },
+    "schema": {
+      "webpage_name": "Términos y Condiciones | MyLoanDesk",
+      "webpage_description": "Términos y Condiciones que detallan las reglas, obligaciones y acuerdos legales que rigen el uso de los servicios de MyLoanDesk."
+    }
+  },
+  "ReverseMortgage": {
+    "meta": {
+      "title": "Hipoteca Reversa | MyLoanDesk",
+      "description": "Explore opciones de Hipoteca Reversa con MyLoanDesk. Descubra cómo convertir la plusvalía de su vivienda en libertad financiera, sin pagos mensuales y con acceso flexible a los fondos.",
+      "og_title": "Hipoteca Reversa | MyLoanDesk",
+      "og_description": "Explore opciones de Hipoteca Reversa con MyLoanDesk. Descubra cómo convertir la plusvalía de su vivienda en libertad financiera, sin pagos mensuales y con acceso flexible a los fondos.",
+      "og_alt": "Programas de Hipoteca Reversa - MyLoanDesk",
+      "twitter_title": "Hipoteca Reversa | MyLoanDesk",
+      "twitter_description": "Convierta el capital de su vivienda en financiamiento para el retiro y libertad financiera sin pagos hipotecarios mensuales."
+    },
+    "breadcrumbs": {
+      "home": "Inicio",
+      "reverse_mortgage": "Hipoteca Reversa"
+    },
+    "hero": {
+      "badge": "Soluciones de Hipoteca Reversa",
+      "headline": "Convierta el Capital de su Vivienda en Libertad Financiera.",
+      "subheadline": "Una hipoteca reversa permite a los propietarios elegibles mayores de 55 años* convertir una parte de su plusvalía en dinero libre de impuestos mientras continúan viviendo y siendo dueños de su casa. No se requieren pagos hipotecarios mensuales, siempre que mantenga al día los impuestos a la propiedad, el seguro de vivienda, cuotas de HOA aplicables y el mantenimiento del inmueble.",
+      "cta_button": "Descubra sus Opciones"
+    },
+    "benefits_section": {
+      "heading": "Los Beneficios de una Hipoteca Reversa",
+      "subheading": "Descubra cómo acceder al capital de su vivienda puede brindarle seguridad financiera y tranquilidad durante sus años de jubilación.",
+      "items": {
+        "no_monthly": {
+          "title": "Sin Pagos Mensuales",
+          "description": "No se requieren pagos hipotecarios mensuales obligatorios."
+        },
+        "retain_ownership": {
+          "title": "Conserva la Propiedad",
+          "description": "Permanezca en la vivienda y mantenga la titularidad total."
+        },
+        "flexible_access": {
+          "title": "Acceso Flexible a Fondos",
+          "description": "Reciba fondos como pago único, mensualidades, línea de crédito o una combinación."
+        },
+        "eliminate_mortgage": {
+          "title": "Elimine su Hipoteca Actual",
+          "description": "Pague una hipoteca existente para liberar flujo de efectivo mensual."
+        },
+        "fha_insured": {
+          "title": "Asegurado por la FHA",
+          "description": "Opciones de HECM (Hipoteca de Conversión del Capital de la Vivienda) aseguradas por la FHA disponibles."
+        },
+        "non_recourse": {
+          "title": "Protección Sin Recurso",
+          "description": "Nunca deberá más de lo que vale la propiedad cuando se liquide el préstamo."
+        },
+        "lifestyle": {
+          "title": "Financie su Estilo de Vida",
+          "description": "Use los fondos para ingresos de jubilación, mejoras del hogar, salud, consolidación de deudas u otras metas."
+        }
+      },
+      "cta_card": {
+        "title": "¿Listo para explorar sus opciones?",
+        "description": "Hable hoy con uno de nuestros asesores especializados en hipotecas reversas.",
+        "button": "Contáctenos"
+      }
+    },
+    "programs": {
+      "heading": "Programas de Hipoteca Reversa",
+      "read_more": "Leer Más",
+      "explore_page": "Explorar Página Completa",
+      "homesafe": {
+        "tag": "Hipoteca Reversa",
+        "title": "HomeSafe Second (Alternativa a HELOC)",
+        "subtitle": "Acceda a su Capital sin Reemplazar su Primera Hipoteca",
+        "description": "HomeSafe Second es una hipoteca reversa en segundo gravamen diseñada para propietarios que desean acceder a su plusvalía manteniendo intacta su hipoteca principal actual."
+      },
+      "refinance": {
+        "tag": "Refinanciamiento",
+        "title": "Refinanciamiento con Hipoteca Reversa",
+        "subtitle": "Convierta la Plusvalía de su Vivienda en Efectivo",
+        "description": "Le permite liquidar su hipoteca actual y reemplazarla por una hipoteca reversa. Cualquier capital restante se puede retirar libre de impuestos, eliminando el pago mensual obligatorio."
+      },
+      "purchase": {
+        "tag": "Compra de Vivienda",
+        "title": "Hipoteca Reversa para Compra",
+        "subtitle": "Compre su Próxima Casa sin Pagos Hipotecarios Mensuales",
+        "description": "Una hipoteca reversa no es solo para quienes ya son propietarios; también le permite comprar su próxima residencia principal sin pagos mensuales obligatorios."
+      },
+      "right_for_you": {
+        "tag": "Planificación para el Retiro",
+        "title": "¿Es una Hipoteca Reversa Adecuada para Usted?",
+        "description": "La situación de cada propietario es única. Por eso nos tomamos el tiempo para comprender sus objetivos y explicarle cada opción disponible antes de que tome una decisión."
+      }
+    },
+    "form": {
+      "badge": "Hipoteca Reversa",
+      "heading": "Vea si una Hipoteca Reversa es Adecuada para Usted",
+      "subheading": "Complete este breve formulario de consulta y un especialista de MyLoanDesk revisará personalmente sus objetivos.",
+      "success_title": "¡Gracias por su Consulta!",
+      "success_desc": "Hemos recibido sus datos. Uno de nuestros asesores especializados se comunicará con usted en breve con orientación personalizada.",
+      "submit_another": "Enviar otra consulta",
+      "fields": {
+        "name_label": "Nombre Completo *",
+        "name_placeholder": "Juan Pérez",
+        "name_required": "El nombre es obligatorio",
+        "email_label": "Correo Electrónico *",
+        "email_placeholder": "usted@ejemplo.com",
+        "email_required": "El correo electrónico es obligatorio",
+        "email_invalid": "Se requiere un correo electrónico válido",
+        "zip_label": "Código Postal de la Propiedad (Opcional)",
+        "zip_placeholder": "ej. 33101",
+        "value_label": "Valor Estimado de la Propiedad (Opcional)",
+        "value_placeholder": "$500,000",
+        "balance_label": "Saldo Hipotecario Actual (Opcional)",
+        "balance_placeholder": "$150,000",
+        "age_label": "Edad del Prestatario (Opcional)",
+        "age_placeholder": "ej. 62",
+        "goals_label": "Cuéntenos sus objetivos (Opcional)",
+        "goals_placeholder": "Eliminar pagos hipotecarios mensuales, acceder al capital para salud/jubilación, complementar ingresos, etc."
+      },
+      "submit_button": "Obtener Asesoría de Hipoteca Reversa",
+      "submitting_button": "Enviando...",
+      "disclaimer": "Su privacidad está garantizada. No se requiere verificación de crédito dura para comenzar.",
+      "toasts": {
+        "loading": "Enviando su consulta...",
+        "success": "¡Consulta recibida! Un especialista se comunicará en breve.",
+        "error": "Hubo un problema al enviar su solicitud. Por favor intente de nuevo."
+      }
+    },
+    "schema": {
+      "webpage_name": "Soluciones de Hipoteca Reversa | MyLoanDesk",
+      "webpage_description": "Guía completa y opciones de consulta para programas de hipotecas reversas HECM aseguradas por la FHA y propietarias para propietarios mayores de 55 años.",
+      "product_name": "Préstamo de Hipoteca Reversa (HECM y Jumbo)",
+      "product_description": "Financiamiento de conversión de capital de vivienda que permite a propietarios elegibles de 55 años o más acceder a su plusvalía sin pagos mensuales de capital e intereses.",
+      "faq_q1_question": "¿Tengo que hacer pagos hipotecarios mensuales en una hipoteca reversa?",
+      "faq_q1_answer": "No se requieren pagos hipotecarios mensuales siempre que viva en la casa como su residencia principal, mantenga al día los impuestos a la propiedad, el seguro de vivienda y mantenga la propiedad.",
+      "faq_q2_question": "¿Quién conserva la propiedad de la vivienda con una hipoteca reversa?",
+      "faq_q2_answer": "Usted permanece en el título y conserva la propiedad total de su casa durante la vigencia de la hipoteca reversa.",
+      "faq_q3_question": "¿Qué es la protección sin recurso en un préstamo FHA HECM?",
+      "faq_q3_answer": "La protección sin recurso garantiza que ni usted ni sus herederos deberán jamás más del valor justo de mercado de la vivienda cuando se cancele el préstamo tras la venta.",
+      "faq_q4_question": "¿Cómo puedo recibir fondos de una hipoteca reversa?",
+      "faq_q4_answer": "Los fondos pueden recibirse como pago único inicial, mensualidades, una línea de crédito en crecimiento o una combinación personalizada."
+    }
   }
 }

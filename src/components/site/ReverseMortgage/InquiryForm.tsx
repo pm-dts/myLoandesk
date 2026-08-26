@@ -13,17 +13,23 @@ import {
   ArrowRight,
 } from "lucide-react";
 import toast, { Toaster } from "react-hot-toast";
-
 import { sendGTMEvent } from "@next/third-parties/google";
 import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 const GHL_REVERSE_MORTGAGE_WEBHOOK_URL =
   "https://services.leadconnectorhq.com/hooks/Lv5oqPcJ6MZsszgssznB/webhook-trigger/0845541f-8c13-4fd2-b311-da2080beade4";
 
-export default function ReverseMortgageForm() {
-  const [isSubmitted, setIsSubmitted] = useState(false);
+interface ReverseMortgageFormProps {
+  locale?: string;
+}
 
+export default function ReverseMortgageForm({
+  locale = "en",
+}: ReverseMortgageFormProps) {
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const pathname = usePathname();
+  const t = useTranslations("ReverseMortgage.form");
 
   const form = useForm({
     defaultValues: {
@@ -36,10 +42,9 @@ export default function ReverseMortgageForm() {
       goals: "",
     },
     onSubmit: async ({ value }) => {
-      const toastId = toast.loading("Submitting your inquiry...");
+      const toastId = toast.loading(t("toasts.loading"));
 
       try {
-        // Post data to GoHighLevel Webhook
         const response = await fetch(GHL_REVERSE_MORTGAGE_WEBHOOK_URL, {
           method: "POST",
           headers: {
@@ -54,6 +59,7 @@ export default function ReverseMortgageForm() {
             current_mortgage_balance: value.currentBalance,
             borrower_age: value.borrowerAge,
             custom_goals: value.goals,
+            locale,
             source: "Website Reverse Mortgage Form",
           }),
         });
@@ -62,15 +68,11 @@ export default function ReverseMortgageForm() {
           throw new Error(`Webhook error: ${response.status}`);
         }
 
-        toast.success(
-          "Inquiry received! A specialist will contact you shortly.",
-          {
-            id: toastId,
-            duration: 5000,
-          },
-        );
+        toast.success(t("toasts.success"), {
+          id: toastId,
+          duration: 5000,
+        });
 
-        // Fire unique GTM event for Reverse Mortgage Form Success
         sendGTMEvent({
           event: "reverse_mortgage_lead_submitted",
           category: "conversion",
@@ -78,8 +80,11 @@ export default function ReverseMortgageForm() {
           currency: "USD",
           value: 1,
           form_name: "Reverse Mortgage Form",
-          page_path: pathname || "/reverse-mortgage",
+          page_path:
+            pathname ||
+            (locale === "es" ? "/es/reverse-mortgage" : "/reverse-mortgage"),
           borrower_age: value.borrowerAge || "not_provided",
+          locale,
         });
 
         setIsSubmitted(true);
@@ -87,21 +92,20 @@ export default function ReverseMortgageForm() {
       } catch (error) {
         console.error("Error submitting to webhook:", error);
 
-        toast.error(
-          "There was an issue submitting your request. Please try again.",
-          {
-            id: toastId,
-            duration: 5000,
-          },
-        );
+        toast.error(t("toasts.error"), {
+          id: toastId,
+          duration: 5000,
+        });
 
-        // Fire unique GTM Error event for Reverse Mortgage Form Failure
         sendGTMEvent({
           event: "reverse_mortgage_form_error",
           category: "error",
           label: "Reverse Mortgage Form Submission Failed",
           form_name: "Reverse Mortgage Form",
-          page_path: pathname || "/reverse-mortgage",
+          page_path:
+            pathname ||
+            (locale === "es" ? "/es/reverse-mortgage" : "/reverse-mortgage"),
+          locale,
           error_message:
             error instanceof Error ? error.message : "Unknown Error",
         });
@@ -112,7 +116,7 @@ export default function ReverseMortgageForm() {
   const formatCurrency = (val: string) => {
     const numeric = val.replace(/\D/g, "");
     if (!numeric) return "";
-    return new Intl.NumberFormat("en-US", {
+    return new Intl.NumberFormat(locale === "es" ? "es-US" : "en-US", {
       style: "currency",
       currency: "USD",
       maximumFractionDigits: 0,
@@ -126,32 +130,29 @@ export default function ReverseMortgageForm() {
       <div className="max-w-3xl w-full mx-auto bg-white rounded-[24px] sm:rounded-[32px] p-6 sm:p-10 lg:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-200">
         <div className="text-center max-w-xl mx-auto mb-8 sm:mb-10">
           <div className="inline-block bg-brand-orange/10 text-brand-orange text-xs font-semibold uppercase tracking-wider px-3.5 py-1.5 rounded-full mb-3">
-            Reverse Mortgage
+            {t("badge")}
           </div>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display font-semibold text-black tracking-tight mb-3">
-            See If a Reverse Mortgage Is Right For You
+            {t("heading")}
           </h2>
           <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed">
-            Complete this brief inquiry form and a MyLoanDesk reverse mortgage
-            specialist will personally review your goals.
+            {t("subheading")}
           </p>
         </div>
 
         {isSubmitted ? (
           <div className="bg-moss-deep/5 border border-moss-deep/20 p-6 sm:p-8 rounded-2xl text-center animate-in fade-in duration-300">
             <h3 className="font-semibold text-lg sm:text-xl text-black mb-2">
-              Thank You for Your Inquiry!
+              {t("success_title")}
             </h3>
             <p className="text-xs sm:text-sm text-gray-600 max-w-md mx-auto mb-6">
-              We have received your details. One of our specialized reverse
-              mortgage advisors will reach out to you shortly with tailored
-              guidance.
+              {t("success_desc")}
             </p>
             <button
               onClick={() => setIsSubmitted(false)}
               className="text-xs font-semibold text-moss-deep underline hover:text-moss-darker"
             >
-              Submit another inquiry
+              {t("submit_another")}
             </button>
           </div>
         ) : (
@@ -165,18 +166,18 @@ export default function ReverseMortgageForm() {
           >
             {/* Required Contact Info Row */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {/* Full Name (Required) */}
+              {/* Full Name */}
               <form.Field
                 name="name"
                 validators={{
                   onChange: ({ value }) =>
-                    !value ? "Name is required" : undefined,
+                    !value ? t("fields.name_required") : undefined,
                 }}
               >
                 {(field) => (
                   <div className="flex flex-col justify-end">
                     <label className="block text-xs font-semibold uppercase tracking-wider text-gray-700 mb-2">
-                      Full Name *
+                      {t("fields.name_label")}
                     </label>
                     <div className="relative">
                       <User
@@ -188,7 +189,7 @@ export default function ReverseMortgageForm() {
                         value={field.state.value}
                         onBlur={field.handleBlur}
                         onChange={(e) => field.handleChange(e.target.value)}
-                        placeholder="John Doe"
+                        placeholder={t("fields.name_placeholder")}
                         className={`w-full pl-12 pr-4 py-3 sm:py-3.5 bg-white border ${
                           field.state.meta.errors.length
                             ? "border-brand-orange"
@@ -205,14 +206,14 @@ export default function ReverseMortgageForm() {
                 )}
               </form.Field>
 
-              {/* Email (Required) */}
+              {/* Email */}
               <form.Field
                 name="email"
                 validators={{
                   onChange: ({ value }) => {
-                    if (!value) return "Email is required";
+                    if (!value) return t("fields.email_required");
                     if (!/\S+@\S+\.\S+/.test(value))
-                      return "Valid email required";
+                      return t("fields.email_invalid");
                     return undefined;
                   },
                 }}
@@ -220,7 +221,7 @@ export default function ReverseMortgageForm() {
                 {(field) => (
                   <div className="flex flex-col justify-end">
                     <label className="block text-xs font-semibold uppercase tracking-wider text-gray-700 mb-2">
-                      Email *
+                      {t("fields.email_label")}
                     </label>
                     <div className="relative">
                       <Mail
@@ -232,7 +233,7 @@ export default function ReverseMortgageForm() {
                         value={field.state.value}
                         onBlur={field.handleBlur}
                         onChange={(e) => field.handleChange(e.target.value)}
-                        placeholder="you@example.com"
+                        placeholder={t("fields.email_placeholder")}
                         className={`w-full pl-12 pr-4 py-3 sm:py-3.5 bg-white border ${
                           field.state.meta.errors.length
                             ? "border-brand-orange"
@@ -252,12 +253,12 @@ export default function ReverseMortgageForm() {
 
             {/* Optional Details Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {/* Property ZIP Code (Optional) */}
+              {/* Property ZIP */}
               <form.Field name="propertyZip">
                 {(field) => (
                   <div className="flex flex-col justify-end h-full">
                     <label className="block text-xs font-semibold uppercase tracking-wider text-gray-700 mb-2">
-                      Property ZIP (Optional)
+                      {t("fields.zip_label")}
                     </label>
                     <div className="relative">
                       <MapPin
@@ -269,7 +270,7 @@ export default function ReverseMortgageForm() {
                         value={field.state.value}
                         onBlur={field.handleBlur}
                         onChange={(e) => field.handleChange(e.target.value)}
-                        placeholder="e.g. 33101"
+                        placeholder={t("fields.zip_placeholder")}
                         className="w-full pl-12 pr-4 py-3 sm:py-3.5 bg-white border border-gray-200 rounded-xl text-black text-sm focus:outline-none focus:border-brand-orange transition-colors placeholder:text-gray-400"
                       />
                     </div>
@@ -277,12 +278,12 @@ export default function ReverseMortgageForm() {
                 )}
               </form.Field>
 
-              {/* Approximate Property Value (Optional) */}
+              {/* Approximate Property Value */}
               <form.Field name="approxValue">
                 {(field) => (
                   <div className="flex flex-col justify-end h-full">
                     <label className="block text-xs font-semibold uppercase tracking-wider text-gray-700 mb-2">
-                      Approx. Home Value (Optional)
+                      {t("fields.value_label")}
                     </label>
                     <div className="relative">
                       <DollarSign
@@ -297,7 +298,7 @@ export default function ReverseMortgageForm() {
                           const formatted = formatCurrency(e.target.value);
                           field.handleChange(formatted);
                         }}
-                        placeholder="$500,000"
+                        placeholder={t("fields.value_placeholder")}
                         className="w-full pl-12 pr-4 py-3 sm:py-3.5 bg-white border border-gray-200 rounded-xl text-black text-sm focus:outline-none focus:border-brand-orange transition-colors placeholder:text-gray-400"
                       />
                     </div>
@@ -305,12 +306,12 @@ export default function ReverseMortgageForm() {
                 )}
               </form.Field>
 
-              {/* Current Mortgage Balance (Optional) */}
+              {/* Current Mortgage Balance */}
               <form.Field name="currentBalance">
                 {(field) => (
                   <div className="flex flex-col justify-end h-full sm:col-span-2 lg:col-span-1">
                     <label className="block text-xs font-semibold uppercase tracking-wider text-gray-700 mb-2">
-                      Mortgage Balance (Optional)
+                      {t("fields.balance_label")}
                     </label>
                     <div className="relative">
                       <DollarSign
@@ -325,7 +326,7 @@ export default function ReverseMortgageForm() {
                           const formatted = formatCurrency(e.target.value);
                           field.handleChange(formatted);
                         }}
-                        placeholder="$150,000"
+                        placeholder={t("fields.balance_placeholder")}
                         className="w-full pl-12 pr-4 py-3 sm:py-3.5 bg-white border border-gray-200 rounded-xl text-black text-sm focus:outline-none focus:border-brand-orange transition-colors placeholder:text-gray-400"
                       />
                     </div>
@@ -334,13 +335,13 @@ export default function ReverseMortgageForm() {
               </form.Field>
             </div>
 
-            {/* Age of Borrower (Optional) */}
+            {/* Age of Borrower */}
             <div className="grid grid-cols-1 gap-4">
               <form.Field name="borrowerAge">
                 {(field) => (
                   <div>
                     <label className="block text-xs font-semibold uppercase tracking-wider text-gray-700 mb-2">
-                      Age of Borrower (Optional)
+                      {t("fields.age_label")}
                     </label>
                     <div className="relative">
                       <Calendar
@@ -352,7 +353,7 @@ export default function ReverseMortgageForm() {
                         value={field.state.value}
                         onBlur={field.handleBlur}
                         onChange={(e) => field.handleChange(e.target.value)}
-                        placeholder="e.g. 62"
+                        placeholder={t("fields.age_placeholder")}
                         className="w-full pl-12 pr-4 py-3 sm:py-3.5 bg-white border border-gray-200 rounded-xl text-black text-sm focus:outline-none focus:border-brand-orange transition-colors placeholder:text-gray-400"
                       />
                     </div>
@@ -361,20 +362,20 @@ export default function ReverseMortgageForm() {
               </form.Field>
             </div>
 
-            {/* Tell us your goals please (Optional) */}
+            {/* Goals */}
             <form.Field name="goals">
               {(field) => (
                 <div>
                   <label className="block text-xs font-semibold uppercase tracking-wider text-gray-700 mb-2 flex items-center gap-1">
-                    <HelpCircle size={14} className="shrink-0" /> Tell us your
-                    goals please (Optional)
+                    <HelpCircle size={14} className="shrink-0" />{" "}
+                    {t("fields.goals_label")}
                   </label>
                   <textarea
                     rows={4}
                     value={field.state.value}
                     onBlur={field.handleBlur}
                     onChange={(e) => field.handleChange(e.target.value)}
-                    placeholder="Eliminate monthly mortgage payments, access equity for healthcare/retirement, supplement income, etc."
+                    placeholder={t("fields.goals_placeholder")}
                     className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-black text-sm focus:outline-none focus:border-brand-orange transition-colors resize-none placeholder:text-gray-400"
                   ></textarea>
                 </div>
@@ -392,16 +393,13 @@ export default function ReverseMortgageForm() {
                     disabled={!canSubmit || isSubmitting}
                     className="w-full bg-brand-orange text-white py-3.5 sm:py-4 rounded-full font-semibold text-sm sm:text-base hover:bg-orange-600 transition-colors shadow-sm flex items-center justify-center gap-2 focus-ring disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    {isSubmitting
-                      ? "Submitting..."
-                      : "Get Reverse Mortgage Guidance"}
+                    {isSubmitting ? t("submitting_button") : t("submit_button")}
                     {!isSubmitting && <ArrowRight size={16} />}
                   </button>
                 )}
               </form.Subscribe>
               <p className="text-[11px] sm:text-xs text-gray-500 text-center mt-3">
-                Your privacy is guaranteed. No hard credit pull required to get
-                started.
+                {t("disclaimer")}
               </p>
             </div>
           </form>
