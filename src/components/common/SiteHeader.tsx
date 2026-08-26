@@ -14,47 +14,45 @@ import Image from "next/image";
 import Link from "next/link";
 import { sendGTMEvent } from "@next/third-parties/google";
 import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 import brandLogo from "@/assets/logo-cropped.png";
 import LanguageSwitcher from "@/components/common/LanguageSwitcher";
 
-const loanLinks = [
-  { name: "Conventional Loans", href: "/loan-programs#conventional" },
-  { name: "FHA Loans", href: "/loan-programs#fha" },
-  { name: "Jumbo Loans", href: "/loan-programs#portfolio" },
-  { name: "Bank Statement Loans", href: "/loan-programs#bank-statement" },
-  { name: "VA Loans", href: "/loan-programs#va" },
-  { name: "Hybrid Loans", href: "/loan-programs#hybrid" },
-  { name: "Private Bridge Loans", href: "/loan-programs#bridge" },
-  { name: "Bridge to Sale", href: "/loan-programs#bridge-to-sale" },
+const loanLinksKeys = [
+  { key: "conventional", href: "/loan-programs#conventional" },
+  { key: "fha", href: "/loan-programs#fha" },
+  { key: "jumbo", href: "/loan-programs#portfolio" },
+  { key: "bank_statement", href: "/loan-programs#bank-statement" },
+  { key: "va", href: "/loan-programs#va" },
+  { key: "hybrid", href: "/loan-programs#hybrid" },
+  { key: "bridge", href: "/loan-programs#bridge" },
+  { key: "bridge_to_sale", href: "/loan-programs#bridge-to-sale" },
+  { key: "international_buyer", href: "/loan-programs#international-buyer" },
+  { key: "buydown_2_1", href: "/loan-programs#buydown-2-1" },
+  { key: "itin", href: "/loan-programs#ITIN-home" },
+  { key: "fha_203k", href: "/loan-programs#fha-203k" },
+  { key: "refinance", href: "/loan-programs#refinance" },
+  { key: "streamline", href: "/loan-programs#streamline" },
+  { key: "heloc", href: "/loan-programs#heloc" },
+  { key: "dscr", href: "/loan-programs#DSCR" },
+  { key: "fix_flip", href: "/loan-programs#fix-flip" },
+  { key: "construction", href: "/loan-programs#ground-up" },
+  { key: "reverse_mortgage", href: "/loan-programs#reverse-mortgage" },
   {
-    name: "International Buyers Section",
-    href: "/loan-programs#international-buyer",
-  },
-  { name: "2/1 Buydown Mortgage", href: "/loan-programs#buydown-2-1" },
-  { name: "ITIN Home Loans", href: "/loan-programs#ITIN-home" },
-  { name: "FHA 203(k) Rehab Loans", href: "/loan-programs#fha-203k" },
-  { name: "Refinance Options", href: "/loan-programs#refinance" },
-  { name: "FHA Streamline Refinance", href: "/loan-programs#streamline" },
-  { name: "HELOC / Equity Lines", href: "/loan-programs#heloc" },
-  { name: "DSCR Investment Property Loans", href: "/loan-programs#DSCR" },
-  { name: "Fix & Flip Loans", href: "/loan-programs#fix-flip" },
-  { name: "Construction Loans", href: "/loan-programs#ground-up" },
-  { name: "Reverse Mortgage", href: "/loan-programs#reverse-mortgage" },
-  {
-    name: "Commercial Real Estate Loans",
+    key: "commercial_real_estate",
     href: "/loan-programs#commercial-real-estate",
   },
-  { name: "Equipment Financing", href: "/loan-programs#equipment" },
-  { name: "Business Lines of Credit", href: "/loan-programs#business-lines" },
-  { name: "Working Capital", href: "/loan-programs#working-capital" },
-  { name: "Franchise Financing", href: "/loan-programs#franchise" },
-  { name: "Commercial Loans", href: "/loan-programs#commercial" },
-  { name: "SBA Business Loans", href: "/loan-programs#sba-business" },
-  { name: "Property Financing in Portugal", href: "/loan-programs#portugal" },
-  { name: "Dream Home Builder (EEP)", href: "/loan-programs#eep" },
-  { name: "Medical Professional Loans", href: "/loan-programs#doctor" },
-];
+  { key: "equipment", href: "/loan-programs#equipment" },
+  { key: "business_lines", href: "/loan-programs#business-lines" },
+  { key: "working_capital", href: "/loan-programs#working-capital" },
+  { key: "franchise", href: "/loan-programs#franchise" },
+  { key: "commercial", href: "/loan-programs#commercial" },
+  { key: "sba_business", href: "/loan-programs#sba-business" },
+  { key: "portugal", href: "/loan-programs#portugal" },
+  { key: "eep", href: "/loan-programs#eep" },
+  { key: "doctor", href: "/loan-programs#doctor" },
+] as const;
 
 export const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -62,7 +60,17 @@ export const Header: React.FC = () => {
   const [isMobileLoanOpen, setIsMobileLoanOpen] = useState(false);
   const [isFlashing, setIsFlashing] = useState(false);
   const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
   const pathname = usePathname();
+  const t = useTranslations("Common.Header");
+  const isEs = pathname === "/es" || pathname?.startsWith("/es/");
+
+  // Dynamic path generator
+  const getLocalizedHref = (path: string) => {
+    if (!isEs) return path;
+    if (path.startsWith("/#")) return `/es${path}`;
+    return `/es${path === "/" ? "" : path}`;
+  };
 
   useEffect(() => {
     const startFlash = setTimeout(() => setIsFlashing(true), 500);
@@ -150,7 +158,6 @@ export const Header: React.FC = () => {
 
   return (
     <header className="sticky top-0 left-0 right-0 z-50 nav-blur border-b border-line bg-primary-bg w-full">
-      {/* Inline styles for the custom neon flash animation */}
       <style
         dangerouslySetInnerHTML={{
           __html: `
@@ -171,8 +178,11 @@ export const Header: React.FC = () => {
 
       {/* --- DESKTOP NAVIGATION --- */}
       <nav className="hidden lg:flex max-w-[1600px] mx-auto pl-2 pr-5 h-36 items-center justify-between gap-3">
-        {/* Desktop Logo Layout */}
-        <Link href="/" className="shrink-0 flex items-center py-2 z-10">
+        {/* Desktop Logo */}
+        <Link
+          href={getLocalizedHref("/")}
+          className="shrink-0 flex items-center py-2 z-10"
+        >
           <Image
             src={brandLogo}
             alt="My Loan Desk Logo"
@@ -193,11 +203,16 @@ export const Header: React.FC = () => {
             onMouseLeave={handleMouseLeaveDropdown}
           >
             <Link
-              href="/loan-programs"
-              onClick={() => trackNavigation("Loan types", "/loan-programs")}
+              href={getLocalizedHref("/loan-programs")}
+              onClick={() =>
+                trackNavigation(
+                  "Loan types",
+                  getLocalizedHref("/loan-programs"),
+                )
+              }
               className="ulink focus-ring flex items-center text-[14px] font-semibold gap-1 cursor-pointer"
             >
-              Loan types
+              {t("nav.loan_types")}
               <ChevronDown
                 size={13}
                 className={`transition-transform duration-300 ${
@@ -206,7 +221,7 @@ export const Header: React.FC = () => {
               />
             </Link>
 
-            {/* Transparent bridge area */}
+            {/* Bridge hover area */}
             <div
               className={`absolute left-0 top-full h-4 w-full ${
                 isDropdownOpen ? "block" : "hidden"
@@ -220,138 +235,157 @@ export const Header: React.FC = () => {
                   : "opacity-0 scale-95 pointer-events-none"
               }`}
             >
-              {loanLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-xs text-ink-2 hover:text-brand-orange hover:bg-cream/40 px-2.5 py-1.5 rounded-lg transition-all"
-                  onClick={() => {
-                    trackNavigation(`Loan Program - ${link.name}`, link.href);
-                    setIsDropdownOpen(false);
-                  }}
-                >
-                  {link.name}
-                </Link>
-              ))}
+              {loanLinksKeys.map((item) => {
+                const localizedLink = getLocalizedHref(item.href);
+                const translatedName = t(`loan_programs.${item.key}`);
+                return (
+                  <Link
+                    key={item.href}
+                    href={localizedLink}
+                    className="text-xs text-ink-2 hover:text-brand-orange hover:bg-cream/40 px-2.5 py-1.5 rounded-lg transition-all"
+                    onClick={() => {
+                      trackNavigation(
+                        `Loan Program - ${translatedName}`,
+                        localizedLink,
+                      );
+                      setIsDropdownOpen(false);
+                    }}
+                  >
+                    {translatedName}
+                  </Link>
+                );
+              })}
             </div>
           </div>
 
           <Link
-            href="/secure-document-upload"
+            href={getLocalizedHref("/secure-document-upload")}
             onClick={() =>
-              trackNavigation("Secure Doc Upload", "/secure-document-upload")
+              trackNavigation(
+                "Secure Doc Upload",
+                getLocalizedHref("/secure-document-upload"),
+              )
             }
             className="ulink focus-ring text-[14px] font-semibold"
           >
-            Secure Doc Upload
+            {t("nav.secure_doc_upload")}
           </Link>
           <Link
-            href="/about-us"
-            onClick={() => trackNavigation("About us", "/about-us")}
+            href={getLocalizedHref("/about-us")}
+            onClick={() =>
+              trackNavigation("About us", getLocalizedHref("/about-us"))
+            }
             className="ulink focus-ring text-[14px] font-semibold"
           >
-            About us
+            {t("nav.about_us")}
           </Link>
           <Link
-            href="/realtors"
-            onClick={() => trackNavigation("Realtors", "/realtors")}
+            href={getLocalizedHref("/realtors")}
+            onClick={() =>
+              trackNavigation("Realtors", getLocalizedHref("/realtors"))
+            }
             className="ulink focus-ring text-[14px] font-semibold"
           >
-            Realtors
+            {t("nav.realtors")}
           </Link>
           <Link
-            href="/careers"
-            onClick={() => trackNavigation("Careers", "/careers")}
+            href={getLocalizedHref("/careers")}
+            onClick={() =>
+              trackNavigation("Careers", getLocalizedHref("/careers"))
+            }
             className="ulink focus-ring text-[14px] font-semibold"
           >
-            Careers
+            {t("nav.careers")}
           </Link>
           <Link
-            href="/calendar"
-            onClick={() => trackNavigation("Our Calendar", "/calendar")}
+            href={getLocalizedHref("/calendar")}
+            onClick={() =>
+              trackNavigation("Our Calendar", getLocalizedHref("/calendar"))
+            }
             className="ulink focus-ring text-[14px] font-semibold"
           >
-            Our Calendar
+            {t("nav.our_calendar")}
           </Link>
           <Link
-            href="/#calculator"
-            onClick={() => trackNavigation("Calculator", "/#calculator")}
+            href={getLocalizedHref("/#calculator")}
+            onClick={() =>
+              trackNavigation("Calculator", getLocalizedHref("/#calculator"))
+            }
             className="ulink focus-ring text-[14px] font-semibold"
           >
-            Mortgage Calculator
+            {t("nav.calculator")}
           </Link>
           <Link
-            href="/#faq"
-            onClick={() => trackNavigation("FAQ", "/#faq")}
+            href={getLocalizedHref("/#faq")}
+            onClick={() => trackNavigation("FAQ", getLocalizedHref("/#faq"))}
             className="ulink focus-ring text-[14px] font-semibold"
           >
-            FAQ
+            {t("nav.faq")}
           </Link>
           <Link
-            href="/blog"
-            onClick={() => trackNavigation("Blog", "/blog")}
+            href={getLocalizedHref("/blog")}
+            onClick={() => trackNavigation("Blog", getLocalizedHref("/blog"))}
             className="ulink focus-ring text-[14px] font-semibold"
           >
-            Blog
+            {t("nav.blog")}
           </Link>
         </div>
 
-        {/* --- Action Button Deck --- */}
+        {/* --- Action Button Deck & Stacked Language Switcher --- */}
         <div className="flex items-center gap-4 shrink-0 relative z-20">
-          {/* Desktop Language Switcher */}
-          <div className="shrink-0">
-            <LanguageSwitcher />
-          </div>
-
-          {/* Phone and Quote Column */}
+          {/* Phone & Quote Column */}
           <div className="flex flex-col items-center justify-center">
             <a
               href="tel:3058916500"
               onClick={() => trackPhoneClick("Desktop Header Phone Link")}
               className="relative z-30 inline-block py-1 text-brand-orange font-bold text-sm underline underline-offset-4 hover:text-orange-600 transition-colors cursor-pointer"
             >
-              Call/Text (305) 891-6500
+              {t("actions.phone_display")}
             </a>
 
             <div className="mt-2.5">
               <Link
-                href="/get-started"
+                href={getLocalizedHref("/get-started")}
                 onClick={() => trackQuoteClick("Desktop Header")}
                 className="btn-shine bg-brand-orange text-white px-5 py-2.5 rounded-full font-bold text-xs flex items-center gap-1.5 uppercase tracking-wider hover:bg-orange-600 transition-colors shadow-sm"
               >
-                Get A Quote <PlayCircle size={16} />
+                {t("actions.get_a_quote")} <PlayCircle size={16} />
               </Link>
             </div>
           </div>
 
-          {/* Stacked Buttons Column */}
-          <div className="flex flex-col gap-1.5 w-[140px]">
+          {/* Right Stack: WhatsApp, Call/Text, and Language Switcher directly underneath */}
+          <div className="flex flex-col gap-1.5 w-[145px]">
             <a
               href="https://wa.me/13058916500"
               target="_blank"
               rel="noopener noreferrer"
               onClick={trackWhatsAppClick}
-              className="border border-[#25D366] text-[#25D366] bg-white px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-wider flex items-center justify-between hover:bg-[#25D366]/10 transition-colors"
+              className="border border-[#25D366] text-[#25D366] bg-white px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-wider flex items-center justify-between hover:bg-[#25D366]/10 transition-colors rounded-sm"
             >
-              Whats App <MessageCircle size={14} />
+              {t("actions.whatsapp")} <MessageCircle size={14} />
             </a>
 
             <a
               href="tel:3058916500"
               onClick={() => trackPhoneClick("Desktop Header Call/Text Button")}
-              className="border border-gray-300 text-brand-orange bg-white px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-wider flex items-center justify-between hover:bg-gray-50 transition-colors"
+              className="border border-gray-300 text-brand-orange bg-white px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-wider flex items-center justify-between hover:bg-gray-50 transition-colors rounded-sm"
             >
-              Call or Text <Phone size={14} />
+              {t("actions.call_or_text")} <Phone size={14} />
             </a>
+
+            {/* Language Switcher positioned underneath */}
+            <div className="flex justify-end pt-0.5">
+              <LanguageSwitcher />
+            </div>
           </div>
         </div>
       </nav>
 
       {/* --- MOBILE NAVIGATION --- */}
       <div className="lg:hidden flex flex-col w-full bg-primary-bg">
-        {/* Row 1: Top branding bar with menu and language switch */}
+        {/* Row 1: Top branding bar */}
         <div className="relative h-24 px-4 flex items-center justify-between border-b border-line/30">
-          {/* Menu Button */}
           <button
             onClick={toggleMobileMenu}
             className="w-11 h-11 flex items-center justify-center rounded-full border border-line text-ink-2 bg-cream/40 focus-ring z-20"
@@ -361,8 +395,10 @@ export const Header: React.FC = () => {
             {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
 
-          {/* Centered Bigger Logo */}
-          <Link href="/" className="shrink-0 flex items-center justify-center">
+          <Link
+            href={getLocalizedHref("/")}
+            className="shrink-0 flex items-center justify-center"
+          >
             <Image
               src={brandLogo}
               alt="My Loan Desk Logo"
@@ -375,7 +411,6 @@ export const Header: React.FC = () => {
             />
           </Link>
 
-          {/* Mobile Language Switcher */}
           <div className="z-20">
             <LanguageSwitcher />
           </div>
@@ -388,14 +423,14 @@ export const Header: React.FC = () => {
             onClick={() => trackPhoneClick("Mobile Subheader Phone Link")}
             className="relative z-30 inline-block py-0.5 text-brand-orange text-center font-bold underline underline-offset-4 hover:text-orange-600 transition-colors"
           >
-            Call/Text (305) 891-6500
+            {t("actions.phone_display")}
           </a>
           <Link
-            href="/get-started"
+            href={getLocalizedHref("/get-started")}
             onClick={() => trackQuoteClick("Mobile Subheader")}
             className="btn-shine w-full bg-brand-orange text-primary-bg py-2 rounded-full text-sm font-semibold tracking-wide flex items-center justify-center transition-colors focus-ring shadow-sm"
           >
-            Get a Quote
+            {t("actions.get_a_quote")}
           </Link>
         </div>
       </div>
@@ -405,83 +440,92 @@ export const Header: React.FC = () => {
         <div className="lg:hidden border-t border-line bg-primary-bg absolute top-full left-0 w-full shadow-2xl max-h-[calc(100vh-11rem)] overflow-y-auto z-50">
           <div className="px-5 py-5 flex flex-col gap-1.5 text-base font-medium text-ink">
             <Link
-              href="/about-us"
-              className="p-3 rounded-xl hover:bg-cream/30 text-sm"
-              onClick={() => {
-                trackNavigation("Mobile About Us", "/about-us");
-                toggleMobileMenu();
-              }}
-            >
-              About us
-            </Link>
-            <Link
-              href="/secure-document-upload"
+              href={getLocalizedHref("/about-us")}
               className="p-3 rounded-xl hover:bg-cream/30 text-sm"
               onClick={() => {
                 trackNavigation(
-                  "Mobile Secure Doc Upload",
-                  "/secure-document-upload",
+                  "Mobile About Us",
+                  getLocalizedHref("/about-us"),
                 );
                 toggleMobileMenu();
               }}
             >
-              Secure Doc Upload
+              {t("nav.about_us")}
             </Link>
-
             <Link
-              href="/realtors"
+              href={getLocalizedHref("/secure-document-upload")}
               className="p-3 rounded-xl hover:bg-cream/30 text-sm"
               onClick={() => {
-                trackNavigation("Mobile Realtors", "/realtors");
+                trackNavigation(
+                  "Mobile Secure Doc Upload",
+                  getLocalizedHref("/secure-document-upload"),
+                );
                 toggleMobileMenu();
               }}
             >
-              Realtors
+              {t("nav.secure_doc_upload")}
             </Link>
 
             <Link
-              href="/careers"
+              href={getLocalizedHref("/realtors")}
               className="p-3 rounded-xl hover:bg-cream/30 text-sm"
               onClick={() => {
-                trackNavigation("Mobile Careers", "/careers");
+                trackNavigation(
+                  "Mobile Realtors",
+                  getLocalizedHref("/realtors"),
+                );
                 toggleMobileMenu();
               }}
             >
-              Careers
+              {t("nav.realtors")}
             </Link>
 
             <Link
-              href="/get-quote"
+              href={getLocalizedHref("/careers")}
+              className="p-3 rounded-xl hover:bg-cream/30 text-sm"
+              onClick={() => {
+                trackNavigation("Mobile Careers", getLocalizedHref("/careers"));
+                toggleMobileMenu();
+              }}
+            >
+              {t("nav.careers")}
+            </Link>
+
+            <Link
+              href={getLocalizedHref("/get-quote")}
               className="p-3 rounded-xl hover:bg-cream/30 text-sm"
               onClick={() => {
                 trackQuoteClick("Mobile Menu Drawer");
                 toggleMobileMenu();
               }}
             >
-              Get A Quote
+              {t("actions.get_a_quote")}
             </Link>
 
             <Link
-              href="/blog"
+              href={getLocalizedHref("/blog")}
               className="p-3 rounded-xl hover:bg-cream/30 text-sm"
               onClick={() => {
-                trackNavigation("Mobile Blog", "/blog");
+                trackNavigation("Mobile Blog", getLocalizedHref("/blog"));
                 toggleMobileMenu();
               }}
             >
-              Blog
+              {t("nav.blog")}
             </Link>
 
             <Link
-              href="/calendar"
+              href={getLocalizedHref("/calendar")}
               className="p-3 rounded-xl hover:bg-cream/30 text-sm flex items-center gap-2 text-brand-orange"
               onClick={() => {
-                trackNavigation("Mobile Calendar", "/calendar");
+                trackNavigation(
+                  "Mobile Calendar",
+                  getLocalizedHref("/calendar"),
+                );
                 toggleMobileMenu();
               }}
             >
               <Calendar size={16} />
-              Our Calendar
+              {t("nav.our_calendar")}
             </Link>
 
             <hr className="border-line my-2" />
@@ -491,7 +535,7 @@ export const Header: React.FC = () => {
                 onClick={() => setIsMobileLoanOpen(!isMobileLoanOpen)}
                 className="w-full p-3 flex items-center justify-between text-xs font-semibold uppercase tracking-wider text-ink-2/70"
               >
-                Loan Programs Options
+                {t("mobile.loan_programs_options")}
                 <ChevronDown
                   size={16}
                   className={`transition-transform duration-200 ${
@@ -502,34 +546,38 @@ export const Header: React.FC = () => {
 
               {isMobileLoanOpen && (
                 <div className="px-3 pb-3 grid grid-cols-1 gap-1 border-t border-line/50 bg-primary-bg pt-2 max-h-64 overflow-y-auto">
-                  {loanLinks.map((link) => (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      className="text-xs text-ink-2 hover:text-brand-orange py-2 px-2 rounded-md hover:bg-cream/40 transition-all"
-                      onClick={() => {
-                        trackNavigation(
-                          `Mobile Loan Program - ${link.name}`,
-                          link.href,
-                        );
-                        toggleMobileMenu();
-                      }}
-                    >
-                      {link.name}
-                    </Link>
-                  ))}
+                  {loanLinksKeys.map((item) => {
+                    const localizedLink = getLocalizedHref(item.href);
+                    const translatedName = t(`loan_programs.${item.key}`);
+                    return (
+                      <Link
+                        key={item.href}
+                        href={localizedLink}
+                        className="text-xs text-ink-2 hover:text-brand-orange py-2 px-2 rounded-md hover:bg-cream/40 transition-all"
+                        onClick={() => {
+                          trackNavigation(
+                            `Mobile Loan Program - ${translatedName}`,
+                            localizedLink,
+                          );
+                          toggleMobileMenu();
+                        }}
+                      >
+                        {translatedName}
+                      </Link>
+                    );
+                  })}
                   <Link
-                    href="/loan-programs"
+                    href={getLocalizedHref("/loan-programs")}
                     className="text-xs text-brand-orange font-semibold p-2 border-t border-line/40 mt-1 flex items-center gap-1"
                     onClick={() => {
                       trackNavigation(
                         "Mobile View All Program Classifications",
-                        "/loan-programs",
+                        getLocalizedHref("/loan-programs"),
                       );
                       toggleMobileMenu();
                     }}
                   >
-                    View All Program Classifications →
+                    {t("mobile.view_all_programs")}
                   </Link>
                 </div>
               )}
@@ -538,29 +586,32 @@ export const Header: React.FC = () => {
             <hr className="border-line my-2" />
 
             <span className="px-3 pt-1 text-[10px] uppercase font-semibold tracking-widest text-ink-2/40">
-              Jump To Section
+              {t("mobile.jump_to_section")}
             </span>
 
             <div className="grid grid-cols-2 gap-1 text-xs">
               <Link
-                href="/#calculator"
+                href={getLocalizedHref("/#calculator")}
                 className="p-3 rounded-xl hover:bg-cream/30"
                 onClick={() => {
-                  trackNavigation("Mobile Calculator Jump", "/#calculator");
+                  trackNavigation(
+                    "Mobile Calculator Jump",
+                    getLocalizedHref("/#calculator"),
+                  );
                   toggleMobileMenu();
                 }}
               >
-                Mortgage Calculator
+                {t("nav.calculator")}
               </Link>
               <Link
-                href="/#faq"
+                href={getLocalizedHref("/#faq")}
                 className="p-3 rounded-xl hover:bg-cream/30"
                 onClick={() => {
-                  trackNavigation("Mobile FAQ Jump", "/#faq");
+                  trackNavigation("Mobile FAQ Jump", getLocalizedHref("/#faq"));
                   toggleMobileMenu();
                 }}
               >
-                FAQ
+                {t("nav.faq")}
               </Link>
             </div>
           </div>

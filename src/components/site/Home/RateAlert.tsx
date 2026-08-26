@@ -22,17 +22,32 @@ import {
 import "react-international-phone/style.css";
 import { sendGTMEvent } from "@next/third-parties/google";
 import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 const DUMMY_GHL_WEBHOOK_URL =
   "https://services.leadconnectorhq.com/hooks/Lv5oqPcJ6MZsszgssznB/webhook-trigger/f80b575c-8a88-4baa-b7c3-4c04f086e090";
 
-export const TailwindPhoneInput = ({ value, onChange, error }: any) => {
+interface TailwindPhoneInputProps {
+  value: string;
+  onChange: (phone: string) => void;
+  error?: boolean;
+  placeholder?: string;
+  defaultCountry?: string;
+}
+
+export const TailwindPhoneInput = ({
+  value,
+  onChange,
+  error,
+  placeholder,
+  defaultCountry = "us",
+}: TailwindPhoneInputProps) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const { inputValue, handlePhoneValueChange, inputRef, country, setCountry } =
     usePhoneInput({
-      defaultCountry: "us",
+      defaultCountry,
       value,
       countries: defaultCountries,
       onChange: (data) => onChange(data.phone),
@@ -72,7 +87,7 @@ export const TailwindPhoneInput = ({ value, onChange, error }: any) => {
           type="tel"
           value={inputValue}
           onChange={handlePhoneValueChange}
-          placeholder="Phone number (optional)"
+          placeholder={placeholder || "Phone number (optional)"}
           className="w-full bg-transparent border-none outline-none text-black text-sm md:text-base px-4 py-3.5 placeholder:text-gray-400"
         />
       </div>
@@ -110,11 +125,16 @@ export const TailwindPhoneInput = ({ value, onChange, error }: any) => {
   );
 };
 
-export default function RateAlert() {
+interface RateAlertProps {
+  locale?: string;
+}
+
+export default function RateAlert({ locale = "en" }: RateAlertProps) {
   const [address, setAddress] = useState("");
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
+  const t = useTranslations("Home.RateAlert");
   const pathname = usePathname();
 
   useEffect(() => {
@@ -138,9 +158,7 @@ export default function RateAlert() {
       goals: "",
     },
     onSubmit: async ({ value }) => {
-      const toastId = toast.loading(
-        "Submitting your property value request...",
-      );
+      const toastId = toast.loading(t("modal.toast_loading"));
 
       try {
         const response = await fetch(DUMMY_GHL_WEBHOOK_URL, {
@@ -157,6 +175,7 @@ export default function RateAlert() {
             current_interest_rate: value.currentRate,
             current_mortgage_balance: value.currentBalance,
             custom_goals: value.goals,
+            locale: locale,
             source: "Website Rate Alert Modal",
           }),
         });
@@ -165,12 +184,11 @@ export default function RateAlert() {
           throw new Error(`Webhook error: ${response.status}`);
         }
 
-        toast.success("Home valuation request submitted successfully!", {
+        toast.success(t("modal.toast_success"), {
           id: toastId,
           duration: 4000,
         });
 
-        // Fire unique GTM Event for Rate Alert & Property Monitor Success
         sendGTMEvent({
           event: "home_valuation_lead_submitted",
           category: "conversion",
@@ -179,24 +197,25 @@ export default function RateAlert() {
           value: 1,
           form_name: "Rate Alert & Property Monitor Form",
           page_path: pathname || "/",
+          locale: locale,
         });
 
         setIsSubmitted(true);
       } catch (error) {
         console.error("Error submitting to webhook:", error);
 
-        toast.error("Issue submitting your request. Please try again.", {
+        toast.error(t("modal.toast_error"), {
           id: toastId,
           duration: 5000,
         });
 
-        // Fire unique GTM Error Event for Rate Alert & Property Monitor Failure
         sendGTMEvent({
           event: "home_valuation_form_error",
           category: "error",
           label: "Rate Alert & Property Monitor Submission Failed",
           form_name: "Rate Alert & Property Monitor Form",
           page_path: pathname || "/",
+          locale: locale,
           error_message:
             error instanceof Error ? error.message : "Unknown Error",
         });
@@ -212,6 +231,7 @@ export default function RateAlert() {
         category: "engagement",
         label: "Address Entered for Home Valuation",
         page_path: pathname || "/",
+        locale: locale,
       });
 
       setIsSubmitted(false);
@@ -225,6 +245,7 @@ export default function RateAlert() {
       category: "engagement",
       label: "Home Valuation Modal Closed",
       page_path: pathname || "/",
+      locale: locale,
     });
 
     setIsDialogOpen(false);
@@ -233,7 +254,7 @@ export default function RateAlert() {
   const formatCurrency = (val: string) => {
     const numeric = val.replace(/\D/g, "");
     if (!numeric) return "";
-    return new Intl.NumberFormat("en-US", {
+    return new Intl.NumberFormat(locale === "es" ? "es-US" : "en-US", {
       style: "currency",
       currency: "USD",
       maximumFractionDigits: 0,
@@ -249,17 +270,15 @@ export default function RateAlert() {
         <div className="max-w-4xl w-full mx-auto flex flex-col items-center text-center">
           <div className="w-full max-w-2xl">
             <h2 className="text-3xl md:text-4xl font-bold text-black uppercase tracking-wide leading-[1.2] mb-4">
-              Monitor Your Home Value & Mortgage Rates
+              {t("title")}
             </h2>
 
             <p className="text-sm md:text-base text-gray-600 leading-relaxed max-w-3xl mb-12">
-              Enter your address to know your estimated property's value and
-              receive alerts when mortgage rates drop.
+              {t("subtitle")}
             </p>
 
             <h3 className="text-lg md:text-xl font-bold text-black mb-6">
-              Set up a personalized rate alert and receive alerts when mortgage
-              rates drop
+              {t("section_callout")}
             </h3>
 
             <form
@@ -275,7 +294,7 @@ export default function RateAlert() {
                   type="text"
                   value={address}
                   onChange={(e) => setAddress(e.target.value)}
-                  placeholder="Enter your property address"
+                  placeholder={t("address_placeholder")}
                   className="w-full pl-12 pr-5 py-4 bg-white border border-gray-200 rounded-xl text-black text-sm md:text-base focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange transition-all shadow-sm"
                   required
                 />
@@ -285,14 +304,14 @@ export default function RateAlert() {
                 type="submit"
                 className="bg-brand-orange text-white px-8 py-3.5 rounded-full font-bold hover:bg-orange-600 transition-colors shadow-sm"
               >
-                Get My Home Value & Rate Alerts
+                {t("cta_button")}
               </button>
             </form>
           </div>
         </div>
       </section>
 
-      {/* --- MODAL DIALOG (WHITE THEME) --- */}
+      {/* --- MODAL DIALOG --- */}
       {isDialogOpen && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/50 backdrop-blur-sm animate-in fade-in duration-200"
@@ -317,29 +336,26 @@ export default function RateAlert() {
                   <Percent size={32} />
                 </div>
                 <h3 className="text-2xl sm:text-3xl font-bold text-black mb-3">
-                  Property Value Request Received!
+                  {t("modal.success_title")}
                 </h3>
                 <p className="text-sm text-gray-600 max-w-md leading-relaxed mb-6">
-                  Thank you! We're preparing your personalized property value
-                  estimate for{" "}
-                  <span className="font-semibold text-black">{address}</span>
-                  .
-                  <br />A MyLoanDesk specialist will review your property and
-                  send you an estimated market value along with recent
-                  comparable sales as soon as it's ready.
+                  {t("modal.success_message_part1")}{" "}
+                  <span className="font-semibold text-black">{address}</span>.
+                  <br />
+                  {t("modal.success_message_part2")}
                 </p>
                 <button
                   onClick={closeDialog}
                   className="bg-brand-orange text-white px-8 py-3 rounded-full font-bold hover:bg-orange-600 transition-colors shadow-sm"
                 >
-                  Done
+                  {t("modal.done_button")}
                 </button>
               </div>
             ) : (
               <div>
                 <div className="mb-6">
                   <span className="text-xs uppercase tracking-wider text-brand-orange font-bold">
-                    Property Address
+                    {t("modal.property_address_label")}
                   </span>
                   <h3 className="text-lg font-semibold text-black line-clamp-1">
                     {address}
@@ -360,13 +376,13 @@ export default function RateAlert() {
                       name="name"
                       validators={{
                         onChange: ({ value }) =>
-                          !value ? "Name is required" : undefined,
+                          !value ? t("modal.name_required") : undefined,
                       }}
                     >
                       {(field) => (
                         <div>
                           <label className="block text-xs font-semibold uppercase tracking-wider text-gray-700 mb-2">
-                            Name *
+                            {t("modal.name_label")}
                           </label>
                           <div className="relative">
                             <User
@@ -380,7 +396,7 @@ export default function RateAlert() {
                               onChange={(e) =>
                                 field.handleChange(e.target.value)
                               }
-                              placeholder="John Doe"
+                              placeholder={t("modal.name_placeholder")}
                               className={`w-full pl-12 pr-4 py-3.5 bg-white border ${
                                 field.state.meta.errors.length
                                   ? "border-brand-orange"
@@ -402,9 +418,9 @@ export default function RateAlert() {
                       name="email"
                       validators={{
                         onChange: ({ value }) => {
-                          if (!value) return "Email is required";
+                          if (!value) return t("modal.email_required");
                           if (!/\S+@\S+\.\S+/.test(value))
-                            return "Valid email is required";
+                            return t("modal.email_invalid");
                           return undefined;
                         },
                       }}
@@ -412,7 +428,7 @@ export default function RateAlert() {
                       {(field) => (
                         <div>
                           <label className="block text-xs font-semibold uppercase tracking-wider text-gray-700 mb-2">
-                            Email *
+                            {t("modal.email_label")}
                           </label>
                           <div className="relative">
                             <Mail
@@ -426,7 +442,7 @@ export default function RateAlert() {
                               onChange={(e) =>
                                 field.handleChange(e.target.value)
                               }
-                              placeholder="you@example.com"
+                              placeholder={t("modal.email_placeholder")}
                               className={`w-full pl-12 pr-4 py-3.5 bg-white border ${
                                 field.state.meta.errors.length
                                   ? "border-brand-orange"
@@ -449,24 +465,26 @@ export default function RateAlert() {
                     {(field) => (
                       <div>
                         <label className="block text-xs font-semibold uppercase tracking-wider text-gray-700 mb-2">
-                          Phone Number (Optional)
+                          {t("modal.phone_label")}
                         </label>
                         <TailwindPhoneInput
                           value={field.state.value}
                           onChange={(val: string) => field.handleChange(val)}
                           error={field.state.meta.errors.length > 0}
+                          placeholder={t("modal.phone_placeholder")}
+                          defaultCountry="us"
                         />
                       </div>
                     )}
                   </form.Field>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    {/* Current Interest Rate (Optional) */}
+                    {/* Current Interest Rate */}
                     <form.Field name="currentRate">
                       {(field) => (
                         <div>
                           <label className="block text-xs font-semibold uppercase tracking-wider text-gray-700 mb-2">
-                            Current Interest Rate (Optional)
+                            {t("modal.rate_label")}
                           </label>
                           <div className="relative">
                             <Percent
@@ -481,7 +499,7 @@ export default function RateAlert() {
                               onChange={(e) =>
                                 field.handleChange(e.target.value)
                               }
-                              placeholder="6.5"
+                              placeholder={t("modal.rate_placeholder")}
                               className="w-full pl-4 pr-10 py-3.5 bg-white border border-gray-200 rounded-xl text-black text-sm focus:outline-none focus:border-brand-orange transition-colors placeholder:text-gray-400"
                             />
                           </div>
@@ -489,12 +507,12 @@ export default function RateAlert() {
                       )}
                     </form.Field>
 
-                    {/* Current Mortgage Balance (Optional) */}
+                    {/* Current Mortgage Balance */}
                     <form.Field name="currentBalance">
                       {(field) => (
                         <div>
                           <label className="block text-xs font-semibold uppercase tracking-wider text-gray-700 mb-2">
-                            Mortgage Balance (Optional)
+                            {t("modal.balance_label")}
                           </label>
                           <div className="relative">
                             <DollarSign
@@ -511,7 +529,7 @@ export default function RateAlert() {
                                 );
                                 field.handleChange(formatted);
                               }}
-                              placeholder="$350,000"
+                              placeholder={t("modal.balance_placeholder")}
                               className="w-full pl-12 pr-4 py-3.5 bg-white border border-gray-200 rounded-xl text-black text-sm focus:outline-none focus:border-brand-orange transition-colors placeholder:text-gray-400"
                             />
                           </div>
@@ -520,19 +538,19 @@ export default function RateAlert() {
                     </form.Field>
                   </div>
 
-                  {/* Tell Us Your Goals (Optional) */}
+                  {/* Tell Us Your Goals */}
                   <form.Field name="goals">
                     {(field) => (
                       <div>
                         <label className="block text-xs font-semibold uppercase tracking-wider text-gray-700 mb-2 flex items-center gap-1">
-                          <HelpCircle size={14} /> Tell Us Your Goals (Optional)
+                          <HelpCircle size={14} /> {t("modal.goals_label")}
                         </label>
                         <textarea
                           rows={3}
                           value={field.state.value}
                           onBlur={field.handleBlur}
                           onChange={(e) => field.handleChange(e.target.value)}
-                          placeholder="Lower monthly payment, cash-out for home improvements, shorter loan term, etc."
+                          placeholder={t("modal.goals_placeholder")}
                           className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-black text-sm focus:outline-none focus:border-brand-orange transition-colors resize-none placeholder:text-gray-400"
                         ></textarea>
                       </div>
@@ -554,8 +572,8 @@ export default function RateAlert() {
                           className="w-full bg-brand-orange text-white py-4 rounded-xl font-bold text-base hover:bg-orange-600 transition-colors shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
                         >
                           {isSubmitting
-                            ? "Loading..."
-                            : "Get My Property Value"}
+                            ? t("modal.submit_loading")
+                            : t("modal.submit_button")}
                         </button>
                       )}
                     </form.Subscribe>

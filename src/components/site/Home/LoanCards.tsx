@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { Home, RefreshCw, X, PlayCircle, ArrowRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 // Modal Component for Video Popup
 function VideoModal({
@@ -53,14 +54,26 @@ function VideoModal({
   );
 }
 
-export default function LoansSection() {
+interface LoansSectionProps {
+  locale?: string;
+}
+
+export default function LoansSection({ locale = "en" }: LoansSectionProps) {
   const router = useRouter();
+  const t = useTranslations("Home.LoanCards");
+  const isEs = locale === "es";
+
   const [activeVideo, setActiveVideo] = useState<{
     src: string;
     title: string;
   } | null>(null);
 
   const closeVideo = () => setActiveVideo(null);
+
+  const forwardHref = isEs
+    ? "/es/loan-programs#resident"
+    : "/loan-programs#resident";
+  const reverseHref = isEs ? "/es/reverse-mortgage" : "/reverse-mortgage";
 
   return (
     <section id="loans" className="py-24 lg:py-32">
@@ -69,21 +82,19 @@ export default function LoansSection() {
         <div className="grid lg:grid-cols-12 gap-10 mb-14">
           <div className="lg:col-span-5">
             <div className="text-[10px] uppercase tracking-[0.25em] text-brand-orange font-semibold mb-5">
-              02 — Loan types
+              {t("section_badge")}
             </div>
             <h2 className="font-display text-4xl lg:text-5xl xl:text-6xl leading-[1.02] tracking-tight font-light text-ink">
-              One desk.{" "}
+              {t("headline_start")}{" "}
               <em className="not-italic font-serif italic text-moss-deep">
-                Every
+                {t("headline_italic")}
               </em>{" "}
-              kind of mortgage.
+              {t("headline_end")}
             </h2>
           </div>
           <div className="lg:col-span-6 lg:col-start-7 flex items-end">
             <p className="text-lg text-ink-2 leading-relaxed">
-              From first-time buyer to seasoned investor, we'll match you to the
-              loan structure that actually fits your life — not the one that's
-              easiest to sell.
+              {t("subheadline")}
             </p>
           </div>
         </div>
@@ -92,7 +103,7 @@ export default function LoansSection() {
         <div className="grid sm:grid-cols-2 gap-6 max-w-7xl mx-auto items-stretch">
           {/* Forward Mortgage Card */}
           <article
-            onClick={() => router.push("/loan-programs#resident")}
+            onClick={() => router.push(forwardHref)}
             className="group bg-cream border border-line rounded-2xl p-7 transition-all duration-300 hover:border-moss-deep/30 hover:shadow-[0_20px_50px_-20px_rgba(15,61,46,0.25)] flex flex-col justify-between cursor-pointer"
           >
             <div>
@@ -100,13 +111,10 @@ export default function LoansSection() {
                 <Home className="text-moss-deep" size={22} strokeWidth={1.8} />
               </div>
               <h3 className="font-display text-2xl mb-2 text-ink group-hover:text-brand-orange transition-colors">
-                Forward Mortgage
+                {t("forward.title")}
               </h3>
               <p className="text-sm text-ink-2 leading-relaxed mb-6">
-                Traditional financing structures including Conventional, FHA,
-                VA, and Jumbo loan programs. Built with flexible terms for
-                purchasing a new property or executing standard refinance
-                options.
+                {t("forward.description")}
               </p>
             </div>
 
@@ -117,22 +125,22 @@ export default function LoansSection() {
                   e.stopPropagation(); // Prevents card navigation
                   setActiveVideo({
                     src: "https://myloandesk-assets.s3.eu-north-1.amazonaws.com/Forward+Mortgage_1080p_caption.mp4",
-                    title: "Forward Mortgage",
+                    title: t("forward.video_title"),
                   });
                 }}
                 className="w-full py-3 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-semibold flex items-center justify-center gap-2 transition-all shadow-sm relative z-10"
               >
-                <PlayCircle size={16} /> See how it's done
+                <PlayCircle size={16} /> {t("forward.video_button")}
               </button>
               <div className="w-full py-3 bg-cream group-hover:bg-moss-deep group-hover:text-white border border-line group-hover:border-moss-deep rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-2 transition-all">
-                Explore Options <ArrowRight size={14} />
+                {t("forward.explore_button")} <ArrowRight size={14} />
               </div>
             </div>
           </article>
 
           {/* Reverse Mortgage Card */}
           <article
-            onClick={() => router.push("/reverse-mortgage")}
+            onClick={() => router.push(reverseHref)}
             className="group bg-cream border border-line rounded-2xl p-7 transition-all duration-300 hover:border-moss-deep/30 hover:shadow-[0_20px_50px_-20px_rgba(15,61,46,0.25)] flex flex-col justify-between cursor-pointer"
           >
             <div>
@@ -144,12 +152,10 @@ export default function LoansSection() {
                 />
               </div>
               <h3 className="font-display text-2xl mb-2 text-ink group-hover:text-brand-orange transition-colors">
-                Reverse Mortgage
+                {t("reverse.title")}
               </h3>
               <p className="text-sm text-ink-2 leading-relaxed mb-6">
-                Tap into home equity without the burden of monthly mortgage
-                payments. Designed exclusively for older homeowners looking to
-                convert home equity into tax-free cash or dynamic credit lines.
+                {t("reverse.description")}
               </p>
             </div>
 
@@ -160,15 +166,15 @@ export default function LoansSection() {
                   e.stopPropagation(); // Prevents card navigation
                   setActiveVideo({
                     src: "https://myloandesk-assets.s3.eu-north-1.amazonaws.com/Reverse+Mortgage+%E2%80%93+Turn+Your+Home+Equity+Into+Financial+Freedom_1080p_caption.mp4",
-                    title: "Reverse Mortgage",
+                    title: t("reverse.video_title"),
                   });
                 }}
                 className="w-full py-3 bg-brand-orange hover:bg-orange-600 text-white rounded-xl text-xs font-semibold flex items-center justify-center gap-2 transition-all shadow-sm relative z-10"
               >
-                <PlayCircle size={16} /> See how it's done
+                <PlayCircle size={16} /> {t("reverse.video_button")}
               </button>
               <div className="w-full py-3 bg-cream group-hover:bg-moss-deep group-hover:text-white border border-line group-hover:border-moss-deep rounded-xl text-xs font-semibold text-ink flex items-center justify-center gap-2 transition-all">
-                Explore Options <ArrowRight size={14} />
+                {t("reverse.explore_button")} <ArrowRight size={14} />
               </div>
             </div>
           </article>

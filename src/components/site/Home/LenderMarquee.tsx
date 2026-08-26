@@ -1,7 +1,8 @@
-import { Fraunces } from "next/font/google";
-import Image from "next/image";
+"use client";
 
-import fundLoanImg from "@/assets/lenders/fund.svg";
+import Image from "next/image";
+import { useTranslations } from "next-intl";
+
 import axosImg from "@/assets/lenders/axos.png";
 import lendImg from "@/assets/lenders/LendSure-Logo-SVG.svg";
 import rocketImg from "@/assets/lenders/www.rocketpro.com_.png";
@@ -18,16 +19,14 @@ import smartImg from "@/assets/lenders/smartfi.png";
 import changeImg from "@/assets/lenders/change.png";
 import acraImg from "@/assets/lenders/acra.png";
 
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
-});
+interface LenderMarqueeProps {
+  locale?: string;
+}
 
-export default function LenderMarquee() {
-  // Map imported images to an array for clean iteration
+export default function LenderMarquee({ locale = "en" }: LenderMarqueeProps) {
+  const t = useTranslations("Home.LenderMarquee");
+
   const lenderLogos = [
-    // { src: fundLoanImg, alt: "Fund Loan" },
     { src: axosImg, alt: "Axos" },
     { src: lendImg, alt: "LendSure" },
     { src: rocketImg, alt: "Rocket Pro" },
@@ -51,7 +50,7 @@ export default function LenderMarquee() {
       id="lenders"
     >
       <p className="uppercase text-sm text-center text-ink-2 tracking-wider mb-8 font-semibold">
-        A sampling of the 100+ lenders we shop on your behalf
+        {t("title")}
       </p>
 
       <div className="relative w-full">

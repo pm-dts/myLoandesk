@@ -15,6 +15,7 @@ import {
   ClipboardCheck,
 } from "lucide-react";
 import { sendGTMEvent } from "@next/third-parties/google";
+import { useTranslations } from "next-intl";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -24,8 +25,8 @@ const fraunces = Fraunces({
 
 // --- REUSABLE UI COMPONENTS ---
 
-const formatCurrency = (val: number) =>
-  new Intl.NumberFormat("en-US", {
+const formatCurrency = (val: number, locale = "en") =>
+  new Intl.NumberFormat(locale === "es" ? "es-US" : "en-US", {
     style: "currency",
     currency: "USD",
     maximumFractionDigits: 0,
@@ -136,7 +137,8 @@ const CustomSelect = ({
 
 // --- INDIVIDUAL CALCULATORS ---
 
-const PurchaseCalculator = () => {
+const PurchaseCalculator = ({ locale }: { locale: string }) => {
+  const t = useTranslations("Home.CalculatorsHub.purchase_calc");
   const [homePrice, setHomePrice] = useState(400000);
   const [downPayment, setDownPayment] = useState(80000);
   const [interestRate, setInterestRate] = useState("6.5");
@@ -152,7 +154,7 @@ const PurchaseCalculator = () => {
   return (
     <>
       <CustomSlider
-        label="Home Price"
+        label={t("home_price")}
         value={homePrice}
         min={50000}
         max={1000000}
@@ -161,43 +163,44 @@ const PurchaseCalculator = () => {
           setHomePrice(v);
           setDownPayment(v * (Number(dpPercent) / 100));
         }}
-        valueDisplay={formatCurrency(homePrice)}
+        valueDisplay={formatCurrency(homePrice, locale)}
       />
       <CustomSlider
-        label="Down Payment"
+        label={t("down_payment")}
         value={downPayment}
         min={0}
         max={homePrice}
         step={1000}
         onChange={setDownPayment}
-        valueDisplay={`${formatCurrency(downPayment)} (${dpPercent}%)`}
+        valueDisplay={`${formatCurrency(downPayment, locale)} (${dpPercent}%)`}
       />
       <div className="grid grid-cols-2 gap-4 mb-8">
         <CustomInput
-          label="Interest Rate (%)"
+          label={t("interest_rate")}
           value={interestRate}
           onChange={setInterestRate}
         />
         <CustomSelect
-          label="Loan Term"
+          label={t("loan_term")}
           value={loanTerm}
           onChange={setLoanTerm}
           options={[
-            { label: "15 Years", value: 15 },
-            { label: "20 Years", value: 20 },
-            { label: "30 Years", value: 30 },
+            { label: t("terms.15"), value: 15 },
+            { label: t("terms.20"), value: 20 },
+            { label: t("terms.30"), value: 30 },
           ]}
         />
       </div>
       <ResultBox
-        label="ESTIMATED P&I PAYMENT"
-        value={`${formatCurrency(payment)}/mo`}
+        label={t("result_label")}
+        value={`${formatCurrency(payment, locale)}/mo`}
       />
     </>
   );
 };
 
-const RefinanceCalculator = () => {
+const RefinanceCalculator = ({ locale }: { locale: string }) => {
+  const t = useTranslations("Home.CalculatorsHub.refinance_calc");
   const [currentPI, setCurrentPI] = useState(2500);
   const [balance, setBalance] = useState(300000);
   const [interestRate, setInterestRate] = useState("5.5");
@@ -216,41 +219,41 @@ const RefinanceCalculator = () => {
   return (
     <>
       <CustomSlider
-        label="Current Monthly P&I"
+        label={t("current_pi")}
         value={currentPI}
         min={500}
         max={10000}
         step={50}
         onChange={setCurrentPI}
-        valueDisplay={formatCurrency(currentPI)}
+        valueDisplay={formatCurrency(currentPI, locale)}
       />
       <CustomSlider
-        label="Remaining Balance"
+        label={t("remaining_balance")}
         value={balance}
         min={10000}
         max={1000000}
         step={1000}
         onChange={setBalance}
-        valueDisplay={formatCurrency(balance)}
+        valueDisplay={formatCurrency(balance, locale)}
       />
       <div className="mb-8 mt-6">
         <CustomInput
-          label="New Estimated Rate (%)"
+          label={t("new_rate")}
           value={interestRate}
           onChange={setInterestRate}
         />
       </div>
       <div className="bg-[#FFF4ED] rounded-xl py-8 px-6 text-center border border-[#FFE4D6]">
         <p className="text-[#FF6B00] text-sm font-bold uppercase tracking-wider mb-2">
-          Monthly Savings
+          {t("savings_label")}
         </p>
         <p className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-4">
-          {formatCurrency(savings)}
+          {formatCurrency(savings, locale)}
         </p>
         <p className="text-gray-500 text-[15px]">
-          Break-even timeline:{" "}
+          {t("breakeven_prefix")}{" "}
           <span className="font-bold text-gray-900">
-            {breakEvenMonths} months
+            {breakEvenMonths} {t("breakeven_suffix")}
           </span>
         </p>
       </div>
@@ -258,7 +261,8 @@ const RefinanceCalculator = () => {
   );
 };
 
-const AffordabilityCalculator = () => {
+const AffordabilityCalculator = ({ locale }: { locale: string }) => {
+  const t = useTranslations("Home.CalculatorsHub.affordability_calc");
   const [income, setIncome] = useState(100000);
   const [downPayment, setDownPayment] = useState(40000);
   const [debt, setDebt] = useState(500);
@@ -279,48 +283,49 @@ const AffordabilityCalculator = () => {
   return (
     <>
       <CustomSlider
-        label="Gross Annual Income"
+        label={t("income")}
         value={income}
         min={30000}
         max={500000}
         step={1000}
         onChange={setIncome}
-        valueDisplay={formatCurrency(income)}
+        valueDisplay={formatCurrency(income, locale)}
       />
       <CustomSlider
-        label="Monthly Debts (Auto, Cards, etc.)"
+        label={t("debts")}
         value={debt}
         min={0}
         max={5000}
         step={50}
         onChange={setDebt}
-        valueDisplay={`${formatCurrency(debt)}/mo`}
+        valueDisplay={`${formatCurrency(debt, locale)}/mo`}
       />
       <CustomSlider
-        label="Available Down Payment"
+        label={t("down_payment")}
         value={downPayment}
         min={0}
         max={200000}
         step={1000}
         onChange={setDownPayment}
-        valueDisplay={formatCurrency(downPayment)}
+        valueDisplay={formatCurrency(downPayment, locale)}
       />
       <CustomInput
-        label="Interest Rate (%)"
+        label={t("interest_rate")}
         value={interestRate}
         onChange={setInterestRate}
       />
       <div className="mt-4">
         <ResultBox
-          label="Max Comfortable Home Price"
-          value={formatCurrency(estimatedHomePrice)}
+          label={t("result_label")}
+          value={formatCurrency(estimatedHomePrice, locale)}
         />
       </div>
     </>
   );
 };
 
-const LoanEligibilityCalculator = () => {
+const LoanEligibilityCalculator = ({ locale }: { locale: string }) => {
+  const t = useTranslations("Home.CalculatorsHub.eligibility_calc");
   const [income, setIncome] = useState(120000);
   const [monthlyDebts, setMonthlyDebts] = useState(600);
   const [targetMortgage, setTargetMortgage] = useState(2500);
@@ -333,65 +338,66 @@ const LoanEligibilityCalculator = () => {
   let statusColor = "";
 
   if (dti <= 36) {
-    statusText = "Excellent (Highly Eligible)";
+    statusText = t("status.excellent");
     statusColor = "text-[#10B981]";
   } else if (dti <= 43) {
-    statusText = "Good (Eligible)";
+    statusText = t("status.good");
     statusColor = "text-[#3B82F6]";
   } else if (dti <= 50) {
-    statusText = "Borderline (May Require Review)";
+    statusText = t("status.borderline");
     statusColor = "text-[#F59E0B]";
   } else {
-    statusText = "High DTI (Difficult to Qualify)";
+    statusText = t("status.high");
     statusColor = "text-[#EF4444]";
   }
 
   return (
     <>
       <CustomSlider
-        label="Gross Annual Income"
+        label={t("income")}
         value={income}
         min={30000}
         max={500000}
         step={1000}
         onChange={setIncome}
-        valueDisplay={formatCurrency(income)}
+        valueDisplay={formatCurrency(income, locale)}
       />
       <CustomSlider
-        label="Current Monthly Debts (Auto, Cards, etc.)"
+        label={t("debts")}
         value={monthlyDebts}
         min={0}
         max={5000}
         step={50}
         onChange={setMonthlyDebts}
-        valueDisplay={`${formatCurrency(monthlyDebts)}/mo`}
+        valueDisplay={`${formatCurrency(monthlyDebts, locale)}/mo`}
       />
       <CustomSlider
-        label="Target Monthly Mortgage Payment"
+        label={t("target_mortgage")}
         value={targetMortgage}
         min={500}
         max={10000}
         step={50}
         onChange={setTargetMortgage}
-        valueDisplay={`${formatCurrency(targetMortgage)}/mo`}
+        valueDisplay={`${formatCurrency(targetMortgage, locale)}/mo`}
       />
 
       <div className="bg-[#FFF4ED] rounded-xl py-6 px-6 text-center border border-[#FFE4D6] mt-8">
         <p className="text-[#FF6B00] text-sm font-bold uppercase tracking-wider mb-2">
-          Estimated Debt-To-Income (DTI)
+          {t("dti_label")}
         </p>
         <p className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-2">
           {dti.toFixed(1)}%
         </p>
         <p className={`text-base font-semibold ${statusColor}`}>
-          Status: {statusText}
+          {t("status_label")} {statusText}
         </p>
       </div>
     </>
   );
 };
 
-const AmortizationCalculator = () => {
+const AmortizationCalculator = ({ locale }: { locale: string }) => {
+  const t = useTranslations("Home.CalculatorsHub.amortization_calc");
   const [loanAmount, setLoanAmount] = useState(350000);
   const [interestRate, setInterestRate] = useState("6.5");
   const [loanTerm, setLoanTerm] = useState(30);
@@ -436,7 +442,7 @@ const AmortizationCalculator = () => {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div className="w-full">
           <label className="block text-[15px] font-medium text-gray-900 mb-2">
-            Loan Amount
+            {t("loan_amount")}
           </label>
           <input
             type="number"
@@ -447,7 +453,7 @@ const AmortizationCalculator = () => {
         </div>
         <div className="w-full">
           <label className="block text-[15px] font-medium text-gray-900 mb-2">
-            Rate (%)
+            {t("rate")}
           </label>
           <input
             type="number"
@@ -459,7 +465,7 @@ const AmortizationCalculator = () => {
         </div>
         <div className="w-full">
           <label className="block text-[15px] font-medium text-gray-900 mb-2">
-            Term (Years)
+            {t("term")}
           </label>
           <select
             value={loanTerm}
@@ -478,15 +484,15 @@ const AmortizationCalculator = () => {
           <table className="w-full text-sm text-left border-collapse">
             <thead className="bg-white text-[#6B7280] sticky top-0 border-b border-gray-200 z-10">
               <tr>
-                <th className="py-4 px-4 font-medium">Year</th>
+                <th className="py-4 px-4 font-medium">{t("table.year")}</th>
                 <th className="py-4 px-4 font-medium text-center">
-                  Principal Paid
+                  {t("table.principal_paid")}
                 </th>
                 <th className="py-4 px-4 font-medium text-center">
-                  Interest Paid
+                  {t("table.interest_paid")}
                 </th>
                 <th className="py-4 px-4 font-medium text-right">
-                  Remaining Balance
+                  {t("table.remaining_balance")}
                 </th>
               </tr>
             </thead>
@@ -495,13 +501,13 @@ const AmortizationCalculator = () => {
                 <tr key={row.year} className="bg-white">
                   <td className="py-4 px-4 text-gray-900">{row.year}</td>
                   <td className="py-4 px-4 text-center text-gray-900">
-                    {formatCurrency(row.principalPaid)}
+                    {formatCurrency(row.principalPaid, locale)}
                   </td>
                   <td className="py-4 px-4 text-center text-gray-900">
-                    {formatCurrency(row.interestPaid)}
+                    {formatCurrency(row.interestPaid, locale)}
                   </td>
                   <td className="py-4 px-4 text-right text-gray-900 font-medium">
-                    {formatCurrency(row.remainingBalance)}
+                    {formatCurrency(row.remainingBalance, locale)}
                   </td>
                 </tr>
               ))}
@@ -513,7 +519,8 @@ const AmortizationCalculator = () => {
   );
 };
 
-const RentVsBuyCalculator = () => {
+const RentVsBuyCalculator = ({ locale }: { locale: string }) => {
+  const t = useTranslations("Home.CalculatorsHub.rent_vs_buy_calc");
   const [rent, setRent] = useState(2500);
   const [homePrice, setHomePrice] = useState(450000);
   const [rentIncrease, setRentIncrease] = useState("3");
@@ -539,43 +546,44 @@ const RentVsBuyCalculator = () => {
   return (
     <>
       <CustomSlider
-        label="Current Monthly Rent"
+        label={t("rent")}
         value={rent}
         min={500}
         max={10000}
         step={50}
         onChange={setRent}
-        valueDisplay={formatCurrency(rent)}
+        valueDisplay={formatCurrency(rent, locale)}
       />
       <CustomSlider
-        label="Targeted Home Price"
+        label={t("home_price")}
         value={homePrice}
         min={50000}
         max={2000000}
         step={5000}
         onChange={setHomePrice}
-        valueDisplay={formatCurrency(homePrice)}
+        valueDisplay={formatCurrency(homePrice, locale)}
       />
       <div className="mb-8 mt-6">
         <CustomInput
-          label="Annual Rent Increase (%)"
+          label={t("rent_increase")}
           value={rentIncrease}
           onChange={setRentIncrease}
         />
       </div>
       <div className="bg-[#FFF4ED] rounded-xl py-8 px-6 text-center border border-[#FFE4D6]">
         <p className="text-[#FF6B00] text-sm font-bold uppercase tracking-wider mb-2">
-          Buying Becomes Cheaper In
+          {t("result_label")}
         </p>
         <p className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight">
-          Year {breakEvenYear}
+          {t("year_prefix")} {breakEvenYear}
         </p>
       </div>
     </>
   );
 };
 
-const HelocCalculator = () => {
+const HelocCalculator = ({ locale }: { locale: string }) => {
+  const t = useTranslations("Home.CalculatorsHub.heloc_calc");
   const [homeValue, setHomeValue] = useState(600000);
   const [mortgageBalance, setMortgageBalance] = useState(350000);
   const maxAvailableEquity = Math.max(0, homeValue * 0.8 - mortgageBalance);
@@ -583,7 +591,7 @@ const HelocCalculator = () => {
   return (
     <>
       <CustomSlider
-        label="Estimated Home Value"
+        label={t("home_value")}
         value={homeValue}
         min={100000}
         max={2000000}
@@ -594,20 +602,20 @@ const HelocCalculator = () => {
             setMortgageBalance(v);
           }
         }}
-        valueDisplay={formatCurrency(homeValue)}
+        valueDisplay={formatCurrency(homeValue, locale)}
       />
       <CustomSlider
-        label="Remaining Mortgage Balance"
+        label={t("balance")}
         value={mortgageBalance}
         min={0}
         max={homeValue}
         step={1000}
         onChange={setMortgageBalance}
-        valueDisplay={formatCurrency(mortgageBalance)}
+        valueDisplay={formatCurrency(mortgageBalance, locale)}
       />
       <ResultBox
-        label="Your Estimated Maximum Available Credit Line"
-        value={formatCurrency(maxAvailableEquity)}
+        label={t("result_label")}
+        value={formatCurrency(maxAvailableEquity, locale)}
       />
     </>
   );
@@ -647,6 +655,7 @@ const CalculatorModal = ({
   onReset: () => void;
   children: React.ReactNode;
 }) => {
+  const t = useTranslations("Home.CalculatorsHub.modal");
   if (!isOpen) return null;
   const navigate = useRouter();
   const pathname = usePathname();
@@ -683,15 +692,15 @@ const CalculatorModal = ({
             <button
               onClick={onReset}
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-semibold text-gray-500 hover:text-[#FF6B00] hover:bg-[#FFF4ED] transition-colors"
-              title="Reset Calculator"
+              title={t("reset")}
             >
               <RefreshCw size={16} />
-              <span className="hidden sm:inline">Reset</span>
+              <span className="hidden sm:inline">{t("reset")}</span>
             </button>
             <button
               onClick={onClose}
               className="p-1.5 text-gray-400 hover:text-gray-700 bg-gray-50 hover:bg-gray-200 rounded-full transition-colors"
-              title="Close"
+              title={t("close")}
             >
               <X size={20} />
             </button>
@@ -701,14 +710,12 @@ const CalculatorModal = ({
         <div className="px-6 sm:px-8 py-6 overflow-y-auto">{children}</div>
 
         <div className="px-6 sm:px-8 py-6 border-t border-gray-100 text-center bg-gray-50 shrink-0">
-          <p className="text-gray-500 text-sm mb-4">
-            Want to lock in this scenario?
-          </p>
+          <p className="text-gray-500 text-sm mb-4">{t("cta_prompt")}</p>
           <button
             onClick={handleClick}
             className="w-full bg-[#FF6B00] text-white py-3.5 rounded-lg font-bold text-lg hover:bg-[#e66000] transition-colors shadow-md"
           >
-            Speak With Us Now
+            {t("cta_button")}
           </button>
         </div>
       </div>
@@ -718,7 +725,12 @@ const CalculatorModal = ({
 
 // --- MAIN HUB COMPONENT ---
 
-export default function CalculatorsHub() {
+interface CalculatorsHubProps {
+  locale?: string;
+}
+
+export default function CalculatorsHub({ locale = "en" }: CalculatorsHubProps) {
+  const t = useTranslations("Home.CalculatorsHub");
   const [activeCalc, setActiveCalc] = useState<string | null>(null);
   const [resetKey, setResetKey] = useState<number>(0);
   const pathname = usePathname();
@@ -726,45 +738,52 @@ export default function CalculatorsHub() {
   const calculators = [
     {
       id: "purchase",
-      title: "Purchase Calculator",
+      title: t("items.purchase.title"),
+      cardLabel: t("items.purchase.card_label"),
       icon: CalcIcon,
-      component: <PurchaseCalculator />,
+      component: <PurchaseCalculator locale={locale} />,
     },
     {
       id: "refinance",
-      title: "Refinance Calculator",
+      title: t("items.refinance.title"),
+      cardLabel: t("items.refinance.card_label"),
       icon: RefreshCw,
-      component: <RefinanceCalculator />,
+      component: <RefinanceCalculator locale={locale} />,
     },
     {
       id: "affordability",
-      title: "Affordability Calculator",
+      title: t("items.affordability.title"),
+      cardLabel: t("items.affordability.card_label"),
       icon: DollarSign,
-      component: <AffordabilityCalculator />,
+      component: <AffordabilityCalculator locale={locale} />,
     },
     {
       id: "eligibility",
-      title: "Loan Eligibility Calculator",
+      title: t("items.eligibility.title"),
+      cardLabel: t("items.eligibility.card_label"),
       icon: ClipboardCheck,
-      component: <LoanEligibilityCalculator />,
+      component: <LoanEligibilityCalculator locale={locale} />,
     },
     {
       id: "amortization",
-      title: "Amortization Calculator",
+      title: t("items.amortization.title"),
+      cardLabel: t("items.amortization.card_label"),
       icon: BarChart2,
-      component: <AmortizationCalculator />,
+      component: <AmortizationCalculator locale={locale} />,
     },
     {
       id: "rentvsbuy",
-      title: "Rent vs Buy Calculator",
+      title: t("items.rentvsbuy.title"),
+      cardLabel: t("items.rentvsbuy.card_label"),
       icon: Home,
-      component: <RentVsBuyCalculator />,
+      component: <RentVsBuyCalculator locale={locale} />,
     },
     {
       id: "heloc",
-      title: "HELOC / Equity Calculator",
+      title: t("items.heloc.title"),
+      cardLabel: t("items.heloc.card_label"),
       icon: HandCoins,
-      component: <HelocCalculator />,
+      component: <HelocCalculator locale={locale} />,
     },
   ];
 
@@ -775,10 +794,11 @@ export default function CalculatorsHub() {
       label: calc.title,
       calculator_id: calc.id,
       page_path: pathname || "/",
+      locale,
     });
 
     setActiveCalc(calc.id);
-    setResetKey(0); // Ensure key resets on open
+    setResetKey(0);
   };
 
   const handleClose = () => {
@@ -787,7 +807,7 @@ export default function CalculatorsHub() {
   };
 
   const handleReset = () => {
-    setResetKey((prev) => prev + 1); // Triggers unmount and remount of component via key
+    setResetKey((prev) => prev + 1);
   };
 
   const currentCalc = calculators.find((c) => c.id === activeCalc);
@@ -798,16 +818,14 @@ export default function CalculatorsHub() {
         {/* Hub Header */}
         <div className="mb-12">
           <p className="text-[#FF6B00] font-bold uppercase tracking-wider text-sm mb-3">
-            See What You Qualify For
+            {t("badge")}
           </p>
           <h2
             className={`text-5xl md:text-6xl text-[#0F2027] mb-4 tracking-tight ${fraunces.className}`}
           >
-            Try Our Mortgage Calculators
+            {t("heading")}
           </h2>
-          <p className="text-lg text-gray-600 max-w-xl">
-            Powerful tools to help you make smarter mortgage decisions.
-          </p>
+          <p className="text-lg text-gray-600 max-w-xl">{t("subheading")}</p>
         </div>
 
         {/* Grid of Calculators */}
@@ -826,8 +844,8 @@ export default function CalculatorsHub() {
                 <h3
                   className={`text-2xl text-[#0F2027] leading-tight font-bold ${fraunces.className}`}
                 >
-                  {calc.title.replace(" Calculator", "")} <br />
-                  Calculator
+                  {calc.cardLabel} <br />
+                  {locale === "es" ? "Calculadora" : "Calculator"}
                 </h3>
               </div>
               <ArrowRight

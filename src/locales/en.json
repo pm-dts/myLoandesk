@@ -1,4 +1,61 @@
 {
+  "Common": {
+    "Header": {
+      "nav": {
+        "loan_types": "Loan types",
+        "secure_doc_upload": "Secure Doc Upload",
+        "about_us": "About us",
+        "realtors": "Realtors",
+        "careers": "Careers",
+        "our_calendar": "Our Calendar",
+        "calculator": "Mortgage Calculator",
+        "faq": "FAQ",
+        "blog": "Blog"
+      },
+      "actions": {
+        "phone_display": "Call/Text (305) 891-6500",
+        "get_a_quote": "Get A Quote",
+        "whatsapp": "Whats App",
+        "call_or_text": "Call or Text"
+      },
+      "mobile": {
+        "loan_programs_options": "Loan Programs Options",
+        "view_all_programs": "View All Program Classifications →",
+        "jump_to_section": "Jump To Section"
+      },
+      "loan_programs": {
+        "conventional": "Conventional Loans",
+        "fha": "FHA Loans",
+        "jumbo": "Jumbo Loans",
+        "bank_statement": "Bank Statement Loans",
+        "va": "VA Loans",
+        "hybrid": "Hybrid Loans",
+        "bridge": "Private Bridge Loans",
+        "bridge_to_sale": "Bridge to Sale",
+        "international_buyer": "International Buyers Section",
+        "buydown_2_1": "2/1 Buydown Mortgage",
+        "itin": "ITIN Home Loans",
+        "fha_203k": "FHA 203(k) Rehab Loans",
+        "refinance": "Refinance Options",
+        "streamline": "FHA Streamline Refinance",
+        "heloc": "HELOC / Equity Lines",
+        "dscr": "DSCR Investment Property Loans",
+        "fix_flip": "Fix & Flip Loans",
+        "construction": "Construction Loans",
+        "reverse_mortgage": "Reverse Mortgage",
+        "commercial_real_estate": "Commercial Real Estate Loans",
+        "equipment": "Equipment Financing",
+        "business_lines": "Business Lines of Credit",
+        "working_capital": "Working Capital",
+        "franchise": "Franchise Financing",
+        "commercial": "Commercial Loans",
+        "sba_business": "SBA Business Loans",
+        "portugal": "Property Financing in Portugal",
+        "eep": "Dream Home Builder (EEP)",
+        "doctor": "Medical Professional Loans"
+      }
+    }
+  },
   "Home": {
     "Hero": {
       "headline_start": "Your mortgage gets a",
@@ -17,6 +74,61 @@
       "quote_button": "Get Your Personalized Mortgage Rate",
       "quote_description": "Complete this short form and a MyLoanDesk mortgage specialist will compare loan options from our nationwide lending network and contact you with personalized rates and financing solutions tailored to your goals."
     },
+    "LoanCards": {
+      "section_badge": "02 — Loan types",
+      "headline_start": "One desk.",
+      "headline_italic": "Every",
+      "headline_end": "kind of mortgage.",
+      "subheadline": "From first-time buyer to seasoned investor, we'll match you to the loan structure that actually fits your life — not the one that's easiest to sell.",
+      "forward": {
+        "title": "Forward Mortgage",
+        "description": "Traditional financing structures including Conventional, FHA, VA, and Jumbo loan programs. Built with flexible terms for purchasing a new property or executing standard refinance options.",
+        "video_title": "Forward Mortgage",
+        "video_button": "See how it's done",
+        "explore_button": "Explore Options"
+      },
+      "reverse": {
+        "title": "Reverse Mortgage",
+        "description": "Tap into home equity without the burden of monthly mortgage payments. Designed exclusively for older homeowners looking to convert home equity into tax-free cash or dynamic credit lines.",
+        "video_title": "Reverse Mortgage",
+        "video_button": "See how it's done",
+        "explore_button": "Explore Options"
+      }
+    },
+    "RateAlert": {
+      "title": "Monitor Your Home Value & Mortgage Rates",
+      "subtitle": "Enter your address to know your estimated property's value and receive alerts when mortgage rates drop.",
+      "section_callout": "Set up a personalized rate alert and receive alerts when mortgage rates drop",
+      "address_placeholder": "Enter your property address",
+      "cta_button": "Get My Home Value & Rate Alerts",
+      "modal": {
+        "property_address_label": "Property Address",
+        "name_label": "Name *",
+        "name_placeholder": "John Doe",
+        "name_required": "Name is required",
+        "email_label": "Email *",
+        "email_placeholder": "you@example.com",
+        "email_required": "Email is required",
+        "email_invalid": "Valid email is required",
+        "phone_label": "Phone Number (Optional)",
+        "phone_placeholder": "Phone number (optional)",
+        "rate_label": "Current Interest Rate (Optional)",
+        "rate_placeholder": "6.5",
+        "balance_label": "Mortgage Balance (Optional)",
+        "balance_placeholder": "$350,000",
+        "goals_label": "Tell Us Your Goals (Optional)",
+        "goals_placeholder": "Lower monthly payment, cash-out for home improvements, shorter loan term, etc.",
+        "submit_loading": "Loading...",
+        "submit_button": "Get My Property Value",
+        "toast_loading": "Submitting your property value request...",
+        "toast_success": "Home valuation request submitted successfully!",
+        "toast_error": "Issue submitting your request. Please try again.",
+        "success_title": "Property Value Request Received!",
+        "success_message_part1": "Thank you! We're preparing your personalized property value estimate for",
+        "success_message_part2": "A MyLoanDesk specialist will review your property and send you an estimated market value along with recent comparable sales as soon as it's ready.",
+        "done_button": "Done"
+      }
+    },
     "Stats": {
       "funded_value": 2.4,
       "funded_prefix": "$",
@@ -31,6 +143,110 @@
       "rating_value": 4.9,
       "rating_suffix": "/5",
       "rating_label": "Average rating from closed clients"
+    },
+    "CalculatorsHub": {
+      "badge": "See What You Qualify For",
+      "heading": "Try Our Mortgage Calculators",
+      "subheading": "Powerful tools to help you make smarter mortgage decisions.",
+      "modal": {
+        "reset": "Reset",
+        "close": "Close",
+        "cta_prompt": "Want to lock in this scenario?",
+        "cta_button": "Speak With Us Now"
+      },
+      "items": {
+        "purchase": {
+          "title": "Purchase Calculator",
+          "card_label": "Purchase"
+        },
+        "refinance": {
+          "title": "Refinance Calculator",
+          "card_label": "Refinance"
+        },
+        "affordability": {
+          "title": "Affordability Calculator",
+          "card_label": "Affordability"
+        },
+        "eligibility": {
+          "title": "Loan Eligibility Calculator",
+          "card_label": "Loan Eligibility"
+        },
+        "amortization": {
+          "title": "Amortization Calculator",
+          "card_label": "Amortization"
+        },
+        "rentvsbuy": {
+          "title": "Rent vs Buy Calculator",
+          "card_label": "Rent vs Buy"
+        },
+        "heloc": {
+          "title": "HELOC / Equity Calculator",
+          "card_label": "HELOC / Equity"
+        }
+      },
+      "purchase_calc": {
+        "home_price": "Home Price",
+        "down_payment": "Down Payment",
+        "interest_rate": "Interest Rate (%)",
+        "loan_term": "Loan Term",
+        "terms": {
+          "15": "15 Years",
+          "20": "20 Years",
+          "30": "30 Years"
+        },
+        "result_label": "ESTIMATED P&I PAYMENT"
+      },
+      "refinance_calc": {
+        "current_pi": "Current Monthly P&I",
+        "remaining_balance": "Remaining Balance",
+        "new_rate": "New Estimated Rate (%)",
+        "savings_label": "Monthly Savings",
+        "breakeven_prefix": "Break-even timeline:",
+        "breakeven_suffix": "months"
+      },
+      "affordability_calc": {
+        "income": "Gross Annual Income",
+        "debts": "Monthly Debts (Auto, Cards, etc.)",
+        "down_payment": "Available Down Payment",
+        "interest_rate": "Interest Rate (%)",
+        "result_label": "Max Comfortable Home Price"
+      },
+      "eligibility_calc": {
+        "income": "Gross Annual Income",
+        "debts": "Current Monthly Debts (Auto, Cards, etc.)",
+        "target_mortgage": "Target Monthly Mortgage Payment",
+        "dti_label": "Estimated Debt-To-Income (DTI)",
+        "status_label": "Status:",
+        "status": {
+          "excellent": "Excellent (Highly Eligible)",
+          "good": "Good (Eligible)",
+          "borderline": "Borderline (May Require Review)",
+          "high": "High DTI (Difficult to Qualify)"
+        }
+      },
+      "amortization_calc": {
+        "loan_amount": "Loan Amount",
+        "rate": "Rate (%)",
+        "term": "Term (Years)",
+        "table": {
+          "year": "Year",
+          "principal_paid": "Principal Paid",
+          "interest_paid": "Interest Paid",
+          "remaining_balance": "Remaining Balance"
+        }
+      },
+      "rent_vs_buy_calc": {
+        "rent": "Current Monthly Rent",
+        "home_price": "Targeted Home Price",
+        "rent_increase": "Annual Rent Increase (%)",
+        "result_label": "Buying Becomes Cheaper In",
+        "year_prefix": "Year"
+      },
+      "heloc_calc": {
+        "home_value": "Estimated Home Value",
+        "balance": "Remaining Mortgage Balance",
+        "result_label": "Your Estimated Maximum Available Credit Line"
+      }
     },
     "Process": {
       "section_badge": "03 — How it works",
@@ -94,34 +310,101 @@
       "subheading": "A few thousand families have sat at our desk. Here are three of them."
     },
     "FAQ": {
-      "q1": {
-        "question": "How are you different from a bank's loan officer?",
-        "answer": "A bank can only offer the mortgage products available through that bank. At MyLoan Desk, we work with multiple lenders, giving you access to a wider range of loan programs, competitive interest rates, and flexible underwriting options. We compare offers on your behalf to help you find the mortgage that best fits your financial goals-not just the one a single bank has available."
+      "section_badge": "06 — Questions on the desk",
+      "headline": "Things people ask before they apply.",
+      "subheading_prefix": "Don't see your question?",
+      "subheading_link": "Ask a broker directly",
+      "subheading_suffix": "— usually a same-day reply.",
+      "widget_title": "Today Average US Mortgage Rates",
+      "rate_labels": {
+        "thirty_year": "30 yr fixed",
+        "fifteen_year": "15 yr fixed",
+        "arm_51": "5/1 ARM"
       },
-      "q2": {
-        "question": "How much do I need for a down payment?",
-        "answer": "Down payment requirements vary by loan program. Some loans require as little as 3% down, while eligible veterans may qualify for 0% down through VA loans. There are also down payment assistance programs available for many first-time homebuyers. We'll help you explore the options that best fit your financial situation."
-      },
-      "q3": {
-        "question": "How much can I qualify for?",
-        "answer": "The amount you qualify for depends on several factors, including your income, assets, credit history, existing debts, down payment, and the type of loan you're applying for. The fastest way to find out is through a free pre-approval. We'll review your financial situation and provide a personalized estimate so you can shop for a home with confidence."
-      },
-      "q4": {
-        "question": "What are the closing costs on a mortgage?",
-        "answer": "Closing costs vary based on the loan program, property, loan amount, and your individual qualifications. They may include lender fees, appraisal, title services, government recording fees, prepaid taxes and insurance, and other third-party costs. Before you commit to a loan, you'll receive a detailed Loan Estimate that clearly outlines every fee, so you'll know exactly what to expect. In many cases, lender credits or seller concessions can help reduce your out-of-pocket costs."
-      },
-      "q5": {
-        "question": "How fast can you close?",
-        "answer": "Every loan is different, but many mortgages can close in as little as 14 to 30 days, depending on the loan program, appraisal timing, and how quickly required documents are provided. Our team works proactively with borrowers, real estate agents, and lenders to keep your loan moving efficiently from application to closing."
-      },
-      "q6": {
-        "question": "Will shopping around hurt my credit score?",
-        "answer": "No. Credit scoring models recognize that borrowers often compare mortgage offers before choosing a lender. Multiple mortgage-related credit inquiries made within a short shopping period are generally treated as a single inquiry for scoring purposes. Comparing loan options can help you find a better rate and potentially save thousands over the life of your mortgage."
-      },
-      "q7": {
-        "question": "What if my credit isn't great?",
-        "answer": "Don't assume you won't qualify. We work with a variety of lenders offering programs for borrowers with different credit profiles. Depending on your situation, there may be options available even if your credit score isn't perfect. If you're not ready today, we'll help you understand what steps could improve your chances of qualifying in the future."
+      "rates_disclaimer": "*Rates shown are national averages provided for informational purposes only and do not constitute a loan offer or commitment to lend. Your actual rate may vary based on credit score, loan amount, LTV, property type, and other factors.",
+      "cta_quote": "Get Your Personalized Mortgage Options",
+      "cta_indices": "View Live Rates Indices",
+      "questions": {
+        "q1": {
+          "question": "How are you different from a bank's loan officer?",
+          "answer": "A bank can only offer the mortgage products available through that bank. At MyLoan Desk, we work with multiple lenders, giving you access to a wider range of loan programs, competitive interest rates, and flexible underwriting options. We compare offers on your behalf to help you find the mortgage that best fits your financial goals-not just the one a single bank has available."
+        },
+        "q2": {
+          "question": "How much do I need for a down payment?",
+          "answer": "Down payment requirements vary by loan program. Some loans require as little as 3% down, while eligible veterans may qualify for 0% down through VA loans. There are also down payment assistance programs available for many first-time homebuyers. We'll help you explore the options that best fit your financial situation."
+        },
+        "q3": {
+          "question": "How much can I qualify for?",
+          "answer": "The amount you qualify for depends on several factors, including your income, assets, credit history, existing debts, down payment, and the type of loan you're applying for. The fastest way to find out is through a free pre-approval. We'll review your financial situation and provide a personalized estimate so you can shop for a home with confidence."
+        },
+        "q4": {
+          "question": "What are the closing costs on a mortgage?",
+          "answer": "Closing costs vary based on the loan program, property, loan amount, and your individual qualifications. They may include lender fees, appraisal, title services, government recording fees, prepaid taxes and insurance, and other third-party costs. Before you commit to a loan, you'll receive a detailed Loan Estimate that clearly outlines every fee, so you'll know exactly what to expect. In many cases, lender credits or seller concessions can help reduce your out-of-pocket costs."
+        },
+        "q5": {
+          "question": "How fast can you close?",
+          "answer": "Every loan is different, but many mortgages can close in as little as 14 to 30 days, depending on the loan program, appraisal timing, and how quickly required documents are provided. Our team works proactively with borrowers, real estate agents, and lenders to keep your loan moving efficiently from application to closing."
+        },
+        "q6": {
+          "question": "Will shopping around hurt my credit score?",
+          "answer": "No. Credit scoring models recognize that borrowers often compare mortgage offers before choosing a lender. Multiple mortgage-related credit inquiries made within a short shopping period are generally treated as a single inquiry for scoring purposes. Comparing loan options can help you find a better rate and potentially save thousands over the life of your mortgage."
+        },
+        "q7": {
+          "question": "What if my credit isn't great?",
+          "answer": "Don't assume you won't qualify. We work with a variety of lenders offering programs for borrowers with different credit profiles. Depending on your situation, there may be options available even if your credit score isn't perfect. If you're not ready today, we'll help you understand what steps could improve your chances of qualifying in the future."
+        }
       }
+    },
+    "PreQualified": {
+      "headline_start": "Your mortgage,",
+      "headline_italic": "handled.",
+      "subheadline": "Five-minute pre-qualification. Personalized mortgage solutions. Your dedicated mortgage expert from application to closing.",
+      "form_title": "Get pre-qualified",
+      "form_subtitle": "Takes about 5 minutes. Soft credit check only.",
+      "fields": {
+        "first_name_placeholder": "First name",
+        "first_name_required": "First name is required",
+        "last_name_placeholder": "Last name",
+        "last_name_required": "Last name is required",
+        "email_placeholder": "Email address",
+        "email_required": "Email is required",
+        "email_invalid": "Invalid email format",
+        "phone_placeholder": "Phone number (optional)",
+        "zip_placeholder": "Property Zip Code",
+        "zip_required": "ZIP is required",
+        "zip_invalid": "Invalid ZIP code",
+        "credit_score_placeholder": "Select your estimated credit score",
+        "credit_score_options": {
+          "opt1": "760+",
+          "opt2": "720–759",
+          "opt3": "680–719",
+          "opt4": "620–679",
+          "opt5": "Below 620",
+          "opt6": "Not Sure"
+        },
+        "loan_purpose_placeholder": "Loan Purpose",
+        "loan_purpose_required": "Please select a loan type",
+        "loan_purposes": {
+          "buy": "Buy a home",
+          "refinance": "Refinance my mortgage",
+          "cash_out": "Cash-out refinance",
+          "investment": "Investment property",
+          "exploring": "Just exploring rates"
+        },
+        "goals_label": "Tell us your Goals",
+        "goals_placeholder": "Briefly describe your goals, timeline, or any questions you'd like us to know."
+      },
+      "submit_button": "Get my Loan Options",
+      "submitting_button": "Submitting...",
+      "security_note": "Your information is secure and never sold.",
+      "toast": {
+        "submitting": "Submitting your application...",
+        "success": "Thank you! A broker will contact you shortly.",
+        "error": "There was an issue submitting your request. Please try again."
+      }
+    },
+    "LenderMarquee": {
+      "title": "A sampling of the 100+ lenders we shop on your behalf"
     }
   }
 }

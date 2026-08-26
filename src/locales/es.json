@@ -1,4 +1,62 @@
 {
+  "Common": {
+    "Header": {
+      "nav": {
+        "loan_types": "Tipos de préstamos",
+        "secure_doc_upload": "Carga Segura de Documentos",
+        "about_us": "Sobre Nosotros",
+        "realtors": "Agentes Inmobiliarios",
+        "careers": "Carreras",
+        "our_calendar": "Nuestro Calendario",
+        "calculator": "Calculadora Hipotecaria",
+        "faq": "Preguntas Frecuentes",
+        "blog": "Blog"
+      },
+      "actions": {
+        "phone_display": "Llamar/Texto (305) 891-6500",
+        "get_a_quote": "Obtener Cotización",
+        "whatsapp": "Whats App",
+        "call_or_text": "Llamar o Texto"
+      },
+      "mobile": {
+        "loan_programs_options": "Opciones de Programas de Préstamos",
+        "view_all_programs": "Ver Todas las Clasificaciones de Programas →",
+        "jump_to_section": "Ir a la Sección"
+      },
+      "loan_programs": {
+        "conventional": "Préstamos Convencionales",
+        "fha": "Préstamos FHA",
+        "jumbo": "Préstamos Jumbo",
+        "bank_statement": "Préstamos con Extractos Bancarios",
+        "va": "Préstamos VA",
+        "hybrid": "Préstamos Híbridos",
+        "bridge": "Préstamos Puente Privados",
+        "bridge_to_sale": "Puente para Venta",
+        "international_buyer": "Compradores Internacionales",
+        "buydown_2_1": "Hipoteca Buydown 2/1",
+        "itin": "Préstamos con ITIN",
+        "fha_203k": "Préstamos de Rehabilitación FHA 203(k)",
+        "refinance": "Opciones de Refinanciamiento",
+        "streamline": "Refinanciamiento FHA Streamline",
+        "heloc": "HELOC / Líneas de Crédito",
+        "dscr": "Préstamos DSCR para Inversionistas",
+        "fix_flip": "Préstamos Fix & Flip",
+        "construction": "Préstamos de Construcción",
+        "reverse_mortgage": "Hipoteca Reversa",
+        "commercial_real_estate": "Bienes Raíces Comerciales",
+        "equipment": "Financiamiento de Equipos",
+        "business_lines": "Líneas de Crédito Comercial",
+        "working_capital": "Capital de Trabajo",
+        "franchise": "Financiamiento de Franquicias",
+        "commercial": "Préstamos Comerciales",
+        "sba_business": "Préstamos SBA para Negocios",
+        "portugal": "Financiamiento en Portugal",
+        "eep": "Constructor de Casa de Ensueño (EEP)",
+        "doctor": "Préstamos para Profesionales Médicos"
+      }
+    }
+  },
+
   "Home": {
     "Hero": {
       "headline_start": "Su hipoteca tiene su propio",
@@ -17,6 +75,62 @@
       "quote_button": "Obtener Mi Tasa Hipotecaria Personalizada",
       "quote_description": "Complete este breve formulario y un especialista hipotecario de MyLoanDesk comparará las opciones de nuestra red nacional de prestamistas para ofrecerle tasas personalizadas y soluciones financieras adaptadas a sus metas."
     },
+    "LoanCards": {
+      "section_badge": "02 — Tipos de préstamos",
+      "headline_start": "Un solo escritorio.",
+      "headline_italic": "Todo",
+      "headline_end": "tipo de hipoteca.",
+      "subheadline": "Desde compradores de primera vivienda hasta inversionistas experimentados, le encontraremos la estructura de préstamo que realmente se adapte a su vida, no la más fácil de vender.",
+      "forward": {
+        "title": "Hipoteca Tradicional (Forward)",
+        "description": "Estructuras de financiamiento tradicionales que incluyen programas Convencionales, FHA, VA y Jumbo. Diseñadas con términos flexibles para comprar una nueva propiedad o refinanciar.",
+        "video_title": "Hipoteca Tradicional",
+        "video_button": "Vea cómo funciona",
+        "explore_button": "Explorar Opciones"
+      },
+      "reverse": {
+        "title": "Hipoteca Reversa (Reverse Mortgage)",
+        "description": "Aproveche el capital acumulado en su vivienda sin la carga de pagos hipotecarios mensuales. Diseñada exclusivamente para propietarios mayores que buscan convertir su plusvalía en dinero libre de impuestos o líneas de crédito.",
+        "video_title": "Hipoteca Reversa",
+        "video_button": "Vea cómo funciona",
+        "explore_button": "Explorar Opciones"
+      }
+    },
+    "RateAlert": {
+      "title": "Monitoree el Valor de su Propiedad y Tasas Hipotecarias",
+      "subtitle": "Ingrese su dirección para conocer el valor estimado de su propiedad y recibir alertas cuando bajen las tasas hipotecarias.",
+      "section_callout": "Configure una alerta de tasa personalizada y reciba notificaciones cuando bajen las tasas hipotecarias",
+      "address_placeholder": "Ingrese la dirección de su propiedad",
+      "cta_button": "Obtener Valor de mi Propiedad y Alertas",
+      "modal": {
+        "property_address_label": "Dirección de la Propiedad",
+        "name_label": "Nombre *",
+        "name_placeholder": "Juan Pérez",
+        "name_required": "El nombre es obligatorio",
+        "email_label": "Correo Electrónico *",
+        "email_placeholder": "usted@ejemplo.com",
+        "email_required": "El correo electrónico es obligatorio",
+        "email_invalid": "Se requiere un correo electrónico válido",
+        "phone_label": "Número de Teléfono (Opcional)",
+        "phone_placeholder": "Número de teléfono (opcional)",
+        "rate_label": "Tasa de Interés Actual (Opcional)",
+        "rate_placeholder": "6.5",
+        "balance_label": "Saldo de Hipoteca (Opcional)",
+        "balance_placeholder": "$350,000",
+        "goals_label": "Cuéntenos sus Objetivos (Opcional)",
+        "goals_placeholder": "Pago mensual más bajo, refinanciamiento con retiro de efectivo, plazo de préstamo más corto, etc.",
+        "submit_loading": "Cargando...",
+        "submit_button": "Obtener el Valor de mi Propiedad",
+        "toast_loading": "Enviando su solicitud de valoración...",
+        "toast_success": "¡Solicitud de valoración enviada con éxito!",
+        "toast_error": "Problema al enviar su solicitud. Inténtelo de nuevo.",
+        "success_title": "¡Solicitud de Valoración Recibida!",
+        "success_message_part1": "¡Gracias! Estamos preparando la estimación personalizada del valor de su propiedad para",
+        "success_message_part2": "Un especialista de MyLoanDesk revisará su propiedad y le enviará el valor de mercado estimado junto con ventas comparables recientes tan pronto como esté listo.",
+        "done_button": "Listo"
+      }
+    },
+
     "Stats": {
       "funded_value": 2.4,
       "funded_prefix": "$",
@@ -31,6 +145,110 @@
       "rating_value": 4.9,
       "rating_suffix": "/5",
       "rating_label": "Calificación promedio de clientes cerrados"
+    },
+    "CalculatorsHub": {
+      "badge": "Vea para qué Califica",
+      "heading": "Pruebe Nuestras Calculadoras Hipotecarias",
+      "subheading": "Herramientas diseñadas para ayudarle a tomar decisiones hipotecarias más inteligentes.",
+      "modal": {
+        "reset": "Restablecer",
+        "close": "Cerrar",
+        "cta_prompt": "¿Desea asegurar este escenario?",
+        "cta_button": "Hable con Nosotros Ahora"
+      },
+      "items": {
+        "purchase": {
+          "title": "Calculadora de Compra",
+          "card_label": "Compra"
+        },
+        "refinance": {
+          "title": "Calculadora de Refinanciamiento",
+          "card_label": "Refinanciamiento"
+        },
+        "affordability": {
+          "title": "Calculadora de Asequibilidad",
+          "card_label": "Asequibilidad"
+        },
+        "eligibility": {
+          "title": "Calculadora de Elegibilidad",
+          "card_label": "Elegibilidad de Préstamo"
+        },
+        "amortization": {
+          "title": "Calculadora de Amortización",
+          "card_label": "Amortización"
+        },
+        "rentvsbuy": {
+          "title": "Calculadora Rentar vs Comprar",
+          "card_label": "Rentar vs Comprar"
+        },
+        "heloc": {
+          "title": "Calculadora HELOC / Plusvalía",
+          "card_label": "HELOC / Plusvalía"
+        }
+      },
+      "purchase_calc": {
+        "home_price": "Precio de la Propiedad",
+        "down_payment": "Pago Inicial (Enganche)",
+        "interest_rate": "Tasa de Interés (%)",
+        "loan_term": "Plazo del Préstamo",
+        "terms": {
+          "15": "15 Años",
+          "20": "20 Años",
+          "30": "30 Años"
+        },
+        "result_label": "PAGO ESTIMADO DE P&I"
+      },
+      "refinance_calc": {
+        "current_pi": "P&I Mensual Actual",
+        "remaining_balance": "Saldo Restante",
+        "new_rate": "Nueva Tasa Estimada (%)",
+        "savings_label": "Ahorro Mensual",
+        "breakeven_prefix": "Punto de equilibrio:",
+        "breakeven_suffix": "meses"
+      },
+      "affordability_calc": {
+        "income": "Ingreso Anual Bruto",
+        "debts": "Deudas Mensuales (Autos, Tarjetas, etc.)",
+        "down_payment": "Pago Inicial Disponible",
+        "interest_rate": "Tasa de Interés (%)",
+        "result_label": "Precio Máximo Cómodo de la Propiedad"
+      },
+      "eligibility_calc": {
+        "income": "Ingreso Anual Bruto",
+        "debts": "Deudas Mensuales Actuales (Autos, Tarjetas, etc.)",
+        "target_mortgage": "Pago Hipotecario Mensual Objetivo",
+        "dti_label": "Relación Deuda-Ingreso Estimada (DTI)",
+        "status_label": "Estado:",
+        "status": {
+          "excellent": "Excelente (Altamente Elegible)",
+          "good": "Bueno (Elegible)",
+          "borderline": "Límite (Puede Requerir Revisión)",
+          "high": "DTI Alto (Difícil de Calificar)"
+        }
+      },
+      "amortization_calc": {
+        "loan_amount": "Monto del Préstamo",
+        "rate": "Tasa (%)",
+        "term": "Plazo (Años)",
+        "table": {
+          "year": "Año",
+          "principal_paid": "Capital Pagado",
+          "interest_paid": "Interés Pagado",
+          "remaining_balance": "Saldo Restante"
+        }
+      },
+      "rent_vs_buy_calc": {
+        "rent": "Alquiler Mensual Actual",
+        "home_price": "Precio Objetivo de la Propiedad",
+        "rent_increase": "Aumento Anual del Alquiler (%)",
+        "result_label": "Comprar se Vuelve Más Económico En",
+        "year_prefix": "Año"
+      },
+      "heloc_calc": {
+        "home_value": "Valor Estimado de la Propiedad",
+        "balance": "Saldo Hipotecario Restante",
+        "result_label": "Línea de Crédito Máxima Estimada Disponible"
+      }
     },
     "Process": {
       "section_badge": "03 — Cómo funciona",
@@ -94,34 +312,102 @@
       "subheading": "Miles de familias han confiado en nuestro equipo. Aquí le presentamos algunas de sus historias."
     },
     "FAQ": {
-      "q1": {
-        "question": "¿En qué se diferencian de un oficial de préstamos de un banco tradicional?",
-        "answer": "Un banco solo puede ofrecer los productos hipotecarios específicos de su propia entidad. En MyLoanDesk trabajamos con múltiples prestamistas mayoristas, dándole acceso a una gama más amplia de programas de préstamos, tasas de interés competitivas y criterios de aprobación más flexibles. Comparamos ofertas en su nombre para encontrar la hipoteca que mejor se adapte a sus objetivos financieros, no solo la que un único banco tenga disponible."
+      "section_badge": "06 — Preguntas frecuentes",
+      "headline": "Lo que la gente pregunta antes de solicitar.",
+      "subheading_prefix": "¿No encuentra su pregunta?",
+      "subheading_link": "Pregunte directamente a un agente",
+      "subheading_suffix": "— respuesta generalmente el mismo día.",
+      "widget_title": "Tasas Hipotecarias Promedio en EE. UU.",
+      "rate_labels": {
+        "thirty_year": "30 años fijo",
+        "fifteen_year": "15 años fijo",
+        "arm_51": "5/1 ARM"
       },
-      "q2": {
-        "question": "¿Cuánto dinero necesito para el pago inicial (down payment)?",
-        "answer": "Los requisitos de pago inicial varían según el programa de préstamo. Algunos préstamos convencionales requieren tan solo un 3% de inicial, mientras que los veteranos elegibles pueden calificar con 0% de inicial mediante préstamos VA. También existen programas de asistencia para el pago inicial destinados a compradores de primera vivienda. Le ayudaremos a explorar todas las opciones disponibles según su perfil."
-      },
-      "q3": {
-        "question": "¿Para cuánto dinero puedo calificar?",
-        "answer": "La cantidad que puede calificar depende de factores como sus ingresos, activos, historial de crédito, deudas actuales, pago inicial disponible y el tipo de préstamo que solicite. La forma más rápida de saberlo es mediante una precalificación gratuita. Analizaremos su situación financiera y le daremos un estimado personalizado para que busque su propiedad con total seguridad."
-      },
-      "q4": {
-        "question": "¿Cuáles son los costos de cierre de una hipoteca?",
-        "answer": "Los costos de cierre varían según el programa, el tipo de propiedad, el monto financiado y sus calificaciones. Pueden incluir tarifas de originación, tasación (appraisal), servicios de título, impuestos prepagados, seguros y tarifas de registro gubernamental. Antes de comprometerse, recibirá un Estimado de Préstamo (Loan Estimate) detallado que desglosa cada cargo con total transparencia."
-      },
-      "q5": {
-        "question": "¿Qué tan rápido pueden cerrar un préstamo?",
-        "answer": "Cada caso es único, pero muchas de nuestras hipotecas se cierran en un período de 14 a 30 días, dependiendo del programa, los tiempos de la tasación y la rapidez con la que se provean los documentos requeridos. Nuestro equipo trabaja de manera proactiva para mantener el proceso ágil y eficiente hasta el día del cierre."
-      },
-      "q6": {
-        "question": "¿Comparar opciones afectará mi puntaje de crédito?",
-        "answer": "No. Los modelos de calificación crediticia reconocen que los compradores comparan ofertas hipotecarias. Las consultas de crédito relacionadas con hipotecas realizadas dentro de una ventana de tiempo corta se agrupan y se tratan como una sola consulta para fines de puntaje. Comparar le permite encontrar una mejor tasa y ahorrar miles de dólares."
-      },
-      "q7": {
-        "question": "¿Qué pasa si mi puntaje de crédito no es excelente?",
-        "answer": "No asuma que no puede calificar. Trabajamos con una amplia variedad de prestamistas mayoristas que ofrecen programas especializados para diversos perfiles de crédito (incluyendo FHA y programas de ingresos no tradicionales). Si aún no está listo hoy, le guiaremos sobre los pasos específicos para mejorar su perfil crediticio."
+      "rates_disclaimer": "*Las tasas mostradas son promedios nacionales provistos únicamente con fines informativos y no constituyen una oferta ni un compromiso de préstamo. Su tasa real puede variar según su puntaje de crédito, monto del préstamo, LTV, tipo de propiedad y otros factores.",
+      "cta_quote": "Obtener Opciones Hipotecarias Personalizadas",
+      "cta_indices": "Ver Índices de Tasas en Vivo",
+      "questions": {
+        "q1": {
+          "question": "¿En qué se diferencian de un oficial de préstamos bancario?",
+          "answer": "Un banco solo puede ofrecer los productos hipotecarios disponibles a través de esa institución. En MyLoanDesk trabajamos con múltiples prestamistas, brindándole acceso a una gama más amplia de programas, tasas competitivas y opciones de suscripción flexibles. Comparamos ofertas en su nombre para encontrar la hipoteca que mejor se adapte a sus objetivos financieros."
+        },
+        "q2": {
+          "question": "¿Cuánto necesito para el pago inicial (enganche)?",
+          "answer": "Los requisitos de pago inicial varían según el programa. Algunos préstamos requieren tan solo un 3% de enganche, mientras que los veteranos elegibles pueden calificar para un 0% de inicial con préstamos VA. También existen programas de asistencia para compradores de primera vivienda."
+        },
+        "q3": {
+          "question": "¿Para cuánto puedo calificar?",
+          "answer": "El monto depende de factores como ingresos, activos, historial crediticio, deudas actuales, pago inicial y el tipo de préstamo solicitado. La forma más rápida de averiguarlo es mediante una precalificación gratuita para evaluar su situación personalizada."
+        },
+        "q4": {
+          "question": "¿Cuáles son los costos de cierre de una hipoteca?",
+          "answer": "Los costos de cierre varían según el programa, la propiedad y sus calificaciones individuales. Incluyen tarifas del prestamista, tasación, servicios de título, tarifas de registro e impuestos prepagados. Recibirá un Estimado de Préstamo (Loan Estimate) detallado antes de comprometerse."
+        },
+        "q5": {
+          "question": "¿Qué tan rápido pueden cerrar?",
+          "answer": "Muchos préstamos pueden cerrarse en un plazo de 14 a 30 días, dependiendo del programa, los tiempos de tasación y la rapidez con la que se proporcione la documentación requerida."
+        },
+        "q6": {
+          "question": "¿Comparar opciones afectará mi puntaje de crédito?",
+          "answer": "No. Los modelos de calificación crediticia reconocen que los prestatarios comparan ofertas hipotecarias. Múltiples consultas realizadas en un período corto se consideran como una sola consulta a efectos del puntaje."
+        },
+        "q7": {
+          "question": "¿Qué pasa si mi crédito no es perfecto?",
+          "answer": "No asuma que no calificará. Trabajamos con una variedad de prestamistas que ofrecen programas para perfiles crediticios flexibles. Si no está listo hoy, le ayudaremos a comprender qué pasos mejorarán sus opciones."
+        }
       }
+    },
+
+    "PreQualified": {
+      "headline_start": "Su hipoteca,",
+      "headline_italic": "resuelta.",
+      "subheadline": "Precalificación en cinco minutos. Soluciones hipotecarias personalizadas. Su experto hipotecario dedicado desde la solicitud hasta el cierre.",
+      "form_title": "Precalifíquese",
+      "form_subtitle": "Toma aproximadamente 5 minutos. Solo revisión de crédito blanda (no afecta su puntaje).",
+      "fields": {
+        "first_name_placeholder": "Nombre",
+        "first_name_required": "El nombre es obligatorio",
+        "last_name_placeholder": "Apellido",
+        "last_name_required": "El apellido es obligatorio",
+        "email_placeholder": "Correo electrónico",
+        "email_required": "El correo electrónico es obligatorio",
+        "email_invalid": "Formato de correo electrónico no válido",
+        "phone_placeholder": "Número de teléfono (opcional)",
+        "zip_placeholder": "Código postal de la propiedad",
+        "zip_required": "El código postal es obligatorio",
+        "zip_invalid": "Código postal no válido",
+        "credit_score_placeholder": "Seleccione su puntaje de crédito estimado",
+        "credit_score_options": {
+          "opt1": "760+",
+          "opt2": "720–759",
+          "opt3": "680–719",
+          "opt4": "620–679",
+          "opt5": "Menos de 620",
+          "opt6": "No estoy seguro"
+        },
+        "loan_purpose_placeholder": "Propósito del préstamo",
+        "loan_purpose_required": "Por favor seleccione un tipo de préstamo",
+        "loan_purposes": {
+          "buy": "Comprar una casa",
+          "refinance": "Refinanciar mi hipoteca",
+          "cash_out": "Refinanciamiento con retiro de efectivo",
+          "investment": "Propiedad de inversión",
+          "exploring": "Solo explorando tasas"
+        },
+        "goals_label": "Cuéntenos sus objetivos",
+        "goals_placeholder": "Describa brevemente sus objetivos, cronograma o cualquier detalle que desee compartir."
+      },
+      "submit_button": "Obtener mis Opciones de Préstamo",
+      "submitting_button": "Enviando...",
+      "security_note": "Su información está protegida y nunca se vende.",
+      "toast": {
+        "submitting": "Enviando su solicitud...",
+        "success": "¡Gracias! Un agente se comunicará con usted en breve.",
+        "error": "Hubo un problema al enviar su solicitud. Por favor intente de nuevo."
+      }
+    },
+    "LenderMarquee": {
+      "title": "Una muestra de los más de 100 prestamistas que comparamos en su nombre"
     }
   }
 }

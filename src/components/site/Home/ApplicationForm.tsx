@@ -1,8 +1,8 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
 import { useForm } from "@tanstack/react-form";
-import toast from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 import { useState, useRef, useEffect } from "react";
 import {
   defaultCountries,
@@ -11,21 +11,34 @@ import {
   usePhoneInput,
 } from "react-international-phone";
 import "react-international-phone/style.css";
-import { ChevronDown } from "lucide-react";
-import { Toaster } from "react-hot-toast";
 import { sendGTMEvent } from "@next/third-parties/google";
 import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 const INBOUND_WEBHOOK_URL =
   "https://services.leadconnectorhq.com/hooks/Lv5oqPcJ6MZsszgssznB/webhook-trigger/10f86bfa-a0f8-4c4e-a551-46e909cb6ab6";
 
-export const TailwindPhoneInput = ({ value, onChange, error }: any) => {
+interface TailwindPhoneInputProps {
+  value: string;
+  onChange: (phone: string) => void;
+  error?: boolean;
+  placeholder?: string;
+  defaultCountry?: string;
+}
+
+export const TailwindPhoneInput = ({
+  value,
+  onChange,
+  error,
+  placeholder,
+  defaultCountry = "us",
+}: TailwindPhoneInputProps) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const { inputValue, handlePhoneValueChange, inputRef, country, setCountry } =
     usePhoneInput({
-      defaultCountry: "us",
+      defaultCountry,
       value,
       countries: defaultCountries,
       onChange: (data) => onChange(data.phone),
@@ -68,7 +81,7 @@ export const TailwindPhoneInput = ({ value, onChange, error }: any) => {
           type="tel"
           value={inputValue}
           onChange={handlePhoneValueChange}
-          placeholder="Phone number (optional)"
+          placeholder={placeholder || "Phone number (optional)"}
           className="w-full bg-transparent border-none outline-none text-sm px-4 py-3 placeholder:text-ink-2/40"
         />
       </div>
@@ -107,8 +120,13 @@ export const TailwindPhoneInput = ({ value, onChange, error }: any) => {
   );
 };
 
-export default function PreQualified() {
+interface PreQualifiedProps {
+  locale?: string;
+}
+
+export default function PreQualified({ locale = "en" }: PreQualifiedProps) {
   const pathname = usePathname();
+  const t = useTranslations("Home.PreQualified");
 
   // Initialize TanStack Form
   const form = useForm({
@@ -123,11 +141,9 @@ export default function PreQualified() {
       objective: "",
     },
     onSubmit: async ({ value }) => {
-      // Create a loading toast that we will update upon success or failure
-      const toastId = toast.loading("Submitting your application...");
+      const toastId = toast.loading(t("toast.submitting"));
 
       try {
-        // Send the data to the GHL Inbound Webhook
         const response = await fetch(INBOUND_WEBHOOK_URL, {
           method: "POST",
           headers: {
@@ -142,6 +158,7 @@ export default function PreQualified() {
             custom_credit_score: value.estimatedCreditScore,
             custom_loan_type: value.loanType,
             custom_notes: value.objective,
+            locale: locale,
             source: "Website Pre-Qualified Form",
           }),
         });
@@ -150,15 +167,12 @@ export default function PreQualified() {
           throw new Error(`Webhook error: ${response.status}`);
         }
 
-        console.log("Application successfully submitted to GHL:", value);
-
-        // Update the loading toast to a success message
-        toast.success("Thank you! A broker will contact you shortly.", {
+        toast.success(t("toast.success"), {
           id: toastId,
           duration: 5000,
         });
 
-        // Fire unique GTM event for Pre-Qualified Form Success
+        // Fire GTM event for conversion tracking
         sendGTMEvent({
           event: "pre_qualified_lead_submitted",
           category: "conversion",
@@ -169,28 +183,25 @@ export default function PreQualified() {
           credit_score: value.estimatedCreditScore,
           form_name: "Pre-Qualified Form",
           page_path: pathname || "/",
+          locale: locale,
         });
 
         form.reset();
       } catch (error) {
         console.error("Error submitting to webhook:", error);
 
-        // Update the loading toast to an error message
-        toast.error(
-          "There was an issue submitting your request. Please try again.",
-          {
-            id: toastId,
-            duration: 5000,
-          },
-        );
+        toast.error(t("toast.error"), {
+          id: toastId,
+          duration: 5000,
+        });
 
-        // Fire unique GTM Error event for Pre-Qualified Form Failure
         sendGTMEvent({
           event: "pre_qualified_form_error",
           category: "error",
           label: "Pre-Qualified Form Submission Failed",
           form_name: "Pre-Qualified Form",
           page_path: pathname || "/",
+          locale: locale,
           error_message:
             error instanceof Error ? error.message : "Unknown Error",
         });
@@ -211,14 +222,13 @@ export default function PreQualified() {
             {/* Left Column: Copy */}
             <div className="lg:col-span-7">
               <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.04] tracking-tight font-light text-primary-bg">
-                Your mortgage,{" "}
+                {t("headline_start")}{" "}
                 <em className="not-italic font-serif italic text-primary-bg">
-                  handled.
+                  {t("headline_italic")}
                 </em>
               </h2>
               <p className="mt-6 text-lg text-primary-bg/75 max-w-xl leading-relaxed">
-                Five-minute pre-qualification. Personalized mortgage solutions.
-                Your dedicated mortgage expert from application to closing.
+                {t("subheadline")}
               </p>
             </div>
 
@@ -233,10 +243,10 @@ export default function PreQualified() {
                 className="bg-primary-bg text-ink rounded-2xl p-6 shadow-2xl"
               >
                 <div className="text-sm font-semibold mb-1">
-                  Get pre-qualified
+                  {t("form_title")}
                 </div>
                 <div className="text-xs text-ink-2 mb-5">
-                  Takes about 5 minutes. Soft credit check only.
+                  {t("form_subtitle")}
                 </div>
 
                 <div className="space-y-3">
@@ -246,14 +256,14 @@ export default function PreQualified() {
                       name="firstName"
                       validators={{
                         onChange: ({ value }) =>
-                          !value ? "First name is required" : undefined,
+                          !value ? t("fields.first_name_required") : undefined,
                       }}
                     >
                       {(field) => (
                         <div>
                           <input
                             type="text"
-                            placeholder="First name"
+                            placeholder={t("fields.first_name_placeholder")}
                             value={field.state.value}
                             onChange={(e) => field.handleChange(e.target.value)}
                             onBlur={field.handleBlur}
@@ -277,14 +287,14 @@ export default function PreQualified() {
                       name="lastName"
                       validators={{
                         onChange: ({ value }) =>
-                          !value ? "Last name is required" : undefined,
+                          !value ? t("fields.last_name_required") : undefined,
                       }}
                     >
                       {(field) => (
                         <div>
                           <input
                             type="text"
-                            placeholder="Last name"
+                            placeholder={t("fields.last_name_placeholder")}
                             value={field.state.value}
                             onChange={(e) => field.handleChange(e.target.value)}
                             onBlur={field.handleBlur}
@@ -309,9 +319,9 @@ export default function PreQualified() {
                     name="email"
                     validators={{
                       onChange: ({ value }) => {
-                        if (!value) return "Email is required";
+                        if (!value) return t("fields.email_required");
                         if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value))
-                          return "Invalid email format";
+                          return t("fields.email_invalid");
                         return undefined;
                       },
                     }}
@@ -320,7 +330,7 @@ export default function PreQualified() {
                       <div>
                         <input
                           type="email"
-                          placeholder="Email address"
+                          placeholder={t("fields.email_placeholder")}
                           value={field.state.value}
                           onChange={(e) => field.handleChange(e.target.value)}
                           onBlur={field.handleBlur}
@@ -339,7 +349,7 @@ export default function PreQualified() {
                     )}
                   </form.Field>
 
-                  {/* Optional International Phone Field */}
+                  {/* Optional Phone Field */}
                   <form.Field name="phone">
                     {(field) => (
                       <div>
@@ -347,6 +357,8 @@ export default function PreQualified() {
                           value={field.state.value}
                           onChange={(val: string) => field.handleChange(val)}
                           error={field.state.meta.errors.length > 0}
+                          placeholder={t("fields.phone_placeholder")}
+                          defaultCountry="us"
                         />
                       </div>
                     )}
@@ -357,9 +369,9 @@ export default function PreQualified() {
                     name="zipCode"
                     validators={{
                       onChange: ({ value }) => {
-                        if (!value) return "ZIP is required";
+                        if (!value) return t("fields.zip_required");
                         if (!/^\d{5}(-\d{4})?$/.test(value))
-                          return "Invalid ZIP code";
+                          return t("fields.zip_invalid");
                         return undefined;
                       },
                     }}
@@ -368,7 +380,7 @@ export default function PreQualified() {
                       <div>
                         <input
                           type="text"
-                          placeholder="Property Zip Code"
+                          placeholder={t("fields.zip_placeholder")}
                           value={field.state.value}
                           onChange={(e) => field.handleChange(e.target.value)}
                           onBlur={field.handleBlur}
@@ -404,14 +416,26 @@ export default function PreQualified() {
                           } focus-ring`}
                         >
                           <option value="" disabled>
-                            Select your estimated credit score
+                            {t("fields.credit_score_placeholder")}
                           </option>
-                          <option value="760+">760+</option>
-                          <option value="720–759">720–759</option>
-                          <option value="680–719">680–719</option>
-                          <option value="620–679">620–679</option>
-                          <option value="Below 620">Below 620</option>
-                          <option value="Not Sure">Not Sure</option>
+                          <option value="760+">
+                            {t("fields.credit_score_options.opt1")}
+                          </option>
+                          <option value="720–759">
+                            {t("fields.credit_score_options.opt2")}
+                          </option>
+                          <option value="680–719">
+                            {t("fields.credit_score_options.opt3")}
+                          </option>
+                          <option value="620–679">
+                            {t("fields.credit_score_options.opt4")}
+                          </option>
+                          <option value="Below 620">
+                            {t("fields.credit_score_options.opt5")}
+                          </option>
+                          <option value="Not Sure">
+                            {t("fields.credit_score_options.opt6")}
+                          </option>
                         </select>
                       </div>
                     )}
@@ -422,7 +446,7 @@ export default function PreQualified() {
                     name="loanType"
                     validators={{
                       onChange: ({ value }) =>
-                        !value ? "Please select a loan type" : undefined,
+                        !value ? t("fields.loan_purpose_required") : undefined,
                     }}
                   >
                     {(field) => (
@@ -440,20 +464,22 @@ export default function PreQualified() {
                           } focus-ring`}
                         >
                           <option value="" disabled>
-                            Loan Purpose
+                            {t("fields.loan_purpose_placeholder")}
                           </option>
-                          <option value="buy a home">Buy a home</option>
+                          <option value="buy a home">
+                            {t("fields.loan_purposes.buy")}
+                          </option>
                           <option value="refinance my mortgage">
-                            Refinance my mortgage
+                            {t("fields.loan_purposes.refinance")}
                           </option>
                           <option value="cash-out refinance">
-                            Cash-out refinance
+                            {t("fields.loan_purposes.cash_out")}
                           </option>
                           <option value="investment property">
-                            Investment property
+                            {t("fields.loan_purposes.investment")}
                           </option>
                           <option value="just exploring rates">
-                            Just exploring rates
+                            {t("fields.loan_purposes.exploring")}
                           </option>
                         </select>
                         {field.state.meta.errors.length > 0 && (
@@ -470,11 +496,11 @@ export default function PreQualified() {
                     {(field) => (
                       <div>
                         <label className="block text-xs font-medium text-ink-2 uppercase tracking-wider mb-1.5">
-                          Tell us you Goals
+                          {t("fields.goals_label")}
                         </label>
                         <input
                           type="text"
-                          placeholder="Briefly describe your goals, timeline, or any questions you'd like us to know."
+                          placeholder={t("fields.goals_placeholder")}
                           value={field.state.value}
                           onChange={(e) => field.handleChange(e.target.value)}
                           onBlur={field.handleBlur}
@@ -485,7 +511,7 @@ export default function PreQualified() {
                   </form.Field>
                 </div>
 
-                {/* Submit Button mapping Form State */}
+                {/* Submit Button */}
                 <form.Subscribe
                   selector={(state) => [state.canSubmit, state.isSubmitting]}
                 >
@@ -495,7 +521,9 @@ export default function PreQualified() {
                       disabled={!canSubmit}
                       className="btn-shine mt-5 w-full bg-moss-deep text-primary-bg py-3.5 rounded-xl text-sm font-medium hover:bg-moss-darker transition-colors flex items-center justify-center gap-2 focus-ring disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                      {isSubmitting ? "Submitting..." : "Get my Loan Options"}
+                      {isSubmitting
+                        ? t("submitting_button")
+                        : t("submit_button")}
                       {!isSubmitting && (
                         <ArrowRight size={14} strokeWidth={2} />
                       )}
@@ -504,7 +532,7 @@ export default function PreQualified() {
                 </form.Subscribe>
 
                 <div className="text-[10px] text-ink-2 text-center mt-3">
-                  Your information is secure and never sold.
+                  {t("security_note")}
                 </div>
               </form>
             </div>

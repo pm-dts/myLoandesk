@@ -141,58 +141,58 @@ export default async function HomeView({ locale }: { locale: "en" | "es" }) {
         mainEntity: [
           {
             "@type": "Question",
-            name: tFaq("q1.question"),
+            name: tFaq("questions.q1.question"),
             acceptedAnswer: {
               "@type": "Answer",
-              text: tFaq("q1.answer"),
+              text: tFaq("questions.q1.answer"),
             },
           },
           {
             "@type": "Question",
-            name: tFaq("q2.question"),
+            name: tFaq("questions.q2.question"),
             acceptedAnswer: {
               "@type": "Answer",
-              text: tFaq("q2.answer"),
+              text: tFaq("questions.q2.answer"),
             },
           },
           {
             "@type": "Question",
-            name: tFaq("q3.question"),
+            name: tFaq("questions.q3.question"),
             acceptedAnswer: {
               "@type": "Answer",
-              text: tFaq("q3.answer"),
+              text: tFaq("questions.q3.answer"),
             },
           },
           {
             "@type": "Question",
-            name: tFaq("q4.question"),
+            name: tFaq("questions.q4.question"),
             acceptedAnswer: {
               "@type": "Answer",
-              text: tFaq("q4.answer"),
+              text: tFaq("questions.q4.answer"),
             },
           },
           {
             "@type": "Question",
-            name: tFaq("q5.question"),
+            name: tFaq("questions.q5.question"),
             acceptedAnswer: {
               "@type": "Answer",
-              text: tFaq("q5.answer"),
+              text: tFaq("questions.q5.answer"),
             },
           },
           {
             "@type": "Question",
-            name: tFaq("q6.question"),
+            name: tFaq("questions.q6.question"),
             acceptedAnswer: {
               "@type": "Answer",
-              text: tFaq("q6.answer"),
+              text: tFaq("questions.q6.answer"),
             },
           },
           {
             "@type": "Question",
-            name: tFaq("q7.question"),
+            name: tFaq("questions.q7.question"),
             acceptedAnswer: {
               "@type": "Answer",
-              text: tFaq("q7.answer"),
+              text: tFaq("questions.q7.answer"),
             },
           },
         ],
@@ -354,7 +354,7 @@ export default async function HomeView({ locale }: { locale: "en" | "es" }) {
       </section>
 
       <section>
-        <RateAlert />
+        <RateAlert locale={locale} />
       </section>
 
       <section className="px-6 lg:px-10 border-t border-b border-line py-8">
@@ -403,7 +403,7 @@ export default async function HomeView({ locale }: { locale: "en" | "es" }) {
         </div>
       </section>
 
-      <CalculatorSection />
+      <CalculatorSection locale={locale} />
 
       <section
         id="process"
@@ -644,8 +644,8 @@ export default async function HomeView({ locale }: { locale: "en" | "es" }) {
         </div>
       </section>
 
-      <Faq />
-      <PreQualified />
+      <Faq locale={locale} />
+      <PreQualified locale={locale} />
       <LenderMarquee />
     </main>
   );
