@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { sendGTMEvent } from "@next/third-parties/google";
 import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 import brandLogo from "@/assets/new-logo.png";
 import youTubeIcon from "@/assets/youtube.png";
@@ -11,6 +12,23 @@ import qrImg from "@/assets/qr.avif";
 
 export default function Footer() {
   const pathname = usePathname();
+  const t = useTranslations("Common.Footer");
+  const isEs = pathname === "/es" || pathname?.startsWith("/es/");
+
+  // Helper for internal links to preserve locale
+  const getLocalizedHref = (path: string) => {
+    if (
+      path.startsWith("http://") ||
+      path.startsWith("https://") ||
+      path.startsWith("tel:") ||
+      path.startsWith("mailto:")
+    ) {
+      return path;
+    }
+    if (!isEs) return path;
+    if (path.startsWith("/#")) return `/es${path}`;
+    return `/es${path === "/" ? "" : path}`;
+  };
 
   // Tracking Handlers
   const trackFooterNavigation = (linkName: string, destination: string) => {
@@ -42,6 +60,35 @@ export default function Footer() {
     });
   };
 
+  const internalLinks = [
+    { label: t("links.get_quote"), href: "/get-quote" },
+    {
+      label: t("links.loan_application"),
+      href: "https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/pos#/?loid=c0d569d5-e33a-46d1-a6aa-fa9cab1edea5",
+    },
+    { label: t("links.loan_programs"), href: "/loan-programs" },
+    { label: t("links.our_calendar"), href: "/calendar" },
+    { label: t("links.realtors"), href: "/realtors" },
+    { label: t("links.lenders"), href: "/#lenders" },
+    { label: t("links.careers"), href: "/careers" },
+    { label: t("links.blog"), href: "/blog" },
+    { label: t("links.accessibility"), href: "/accessibility" },
+    { label: t("links.privacy_policy"), href: "/privacy-policy" },
+    { label: t("links.terms_conditions"), href: "/terms-conditions" },
+    { label: t("links.cookies_policy"), href: "/cookies-policy" },
+    {
+      label: t("links.email_communication"),
+      href: "/email-communication",
+    },
+  ];
+
+  const resourceLinks = [
+    { label: t("resources.calculator"), href: "/#calculator" },
+    { label: t("resources.faq"), href: "/#faq" },
+    { label: t("resources.watch_live_rates"), href: "/#live-rates-widget" },
+    { label: t("resources.google_reviews"), href: "/#reviews" },
+  ];
+
   return (
     <footer className="text-ink bg-cream pt-16 pb-12 select-none border-t border-line">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
@@ -50,8 +97,10 @@ export default function Footer() {
           {/* Brand & Socials Column */}
           <div className="md:col-span-2 lg:col-span-4 space-y-4">
             <Link
-              href="/"
-              onClick={() => trackFooterNavigation("Brand Logo Home", "/")}
+              href={getLocalizedHref("/")}
+              onClick={() =>
+                trackFooterNavigation("Brand Logo Home", getLocalizedHref("/"))
+              }
               className="inline-block"
             >
               <Image
@@ -65,14 +114,13 @@ export default function Footer() {
             </Link>
 
             <p className="text-sm leading-relaxed text-ink/75 max-w-sm">
-              Your trusted mortgage partner for conventional, government, and
-              innovative investor loan programs nationwide.
+              {t("brand_tagline")}
             </p>
 
             {/* Social Media Links */}
             <div className="pt-2">
               <div className="text-[10px] uppercase tracking-[0.2em] text-ink/40 font-bold mb-3">
-                Follow Us
+                {t("follow_us")}
               </div>
               <div className="flex items-center gap-3">
                 <a
@@ -103,76 +151,78 @@ export default function Footer() {
           {/* Links Section */}
           <div className="lg:col-span-2">
             <div className="text-[10px] uppercase tracking-[0.2em] text-ink/40 font-bold mb-5">
-              Links
+              {t("sections.links")}
             </div>
             <ul className="grid grid-cols-2 gap-y-3 gap-x-4 sm:block sm:space-y-3 text-sm font-medium">
-              {[
-                { label: "Get a quote", href: "/get-quote" },
-                {
-                  label: "Loan Application",
-                  href: "https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/pos#/?loid=c0d569d5-e33a-46d1-a6aa-fa9cab1edea5",
-                },
-                { label: "Loan Programs", href: "/loan-programs" },
-                { label: "Our Calendar", href: "/calendar" },
-                { label: "Realtors", href: "/realtors" },
-                { label: "Lenders", href: "/#lenders" },
-                { label: "Careers", href: "/careers" },
-                { label: "Blog", href: "/blog" },
-                { label: "Accessibility", href: "/accessibility" },
-                { label: "Privacy Policy", href: "/privacy-policy" },
-                { label: "Terms & Conditions", href: "/terms-conditions" },
-                { label: "Cookies Policy", href: "/cookies-policy" },
-                {
-                  label: "Email & Communication Policy",
-                  href: "/email-communication",
-                },
-              ].map((link, idx) => (
-                <li key={idx}>
-                  <Link
-                    href={link.href}
-                    onClick={() => trackFooterNavigation(link.label, link.href)}
-                    className="text-ink/70 hover:text-brand-orange transition-colors duration-200"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
+              {internalLinks.map((link, idx) => {
+                const targetUrl = getLocalizedHref(link.href);
+                const isExternal = link.href.startsWith("http");
+
+                return (
+                  <li key={idx}>
+                    {isExternal ? (
+                      <a
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() =>
+                          trackFooterNavigation(link.label, link.href)
+                        }
+                        className="text-ink/70 hover:text-brand-orange transition-colors duration-200"
+                      >
+                        {link.label}
+                      </a>
+                    ) : (
+                      <Link
+                        href={targetUrl}
+                        onClick={() =>
+                          trackFooterNavigation(link.label, targetUrl)
+                        }
+                        className="text-ink/70 hover:text-brand-orange transition-colors duration-200"
+                      >
+                        {link.label}
+                      </Link>
+                    )}
+                  </li>
+                );
+              })}
             </ul>
           </div>
 
           {/* Resources Section */}
           <div className="lg:col-span-2">
             <div className="text-[10px] uppercase tracking-[0.2em] text-ink/40 font-bold mb-5">
-              Resources
+              {t("sections.resources")}
             </div>
             <ul className="space-y-3 text-sm font-medium">
-              {[
-                { label: "Calculator", href: "/#calculator" },
-                { label: "FAQ", href: "/#faq" },
-                { label: "Watch Live Rates", href: "/#live-rates-widget" },
-                { label: "Google Reviews", href: "/#reviews" },
-              ].map((link, idx) => (
-                <li key={idx}>
-                  <Link
-                    href={link.href}
-                    onClick={() => trackFooterNavigation(link.label, link.href)}
-                    className="text-ink/70 hover:text-brand-orange transition-colors duration-200"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
+              {resourceLinks.map((link, idx) => {
+                const targetUrl = getLocalizedHref(link.href);
+
+                return (
+                  <li key={idx}>
+                    <Link
+                      href={targetUrl}
+                      onClick={() =>
+                        trackFooterNavigation(link.label, targetUrl)
+                      }
+                      className="text-ink/70 hover:text-brand-orange transition-colors duration-200"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 
           {/* Talk to us Section */}
           <div className="lg:col-span-2">
             <div className="text-[10px] uppercase tracking-[0.2em] text-ink/40 font-bold mb-5">
-              Talk to us
+              {t("sections.talk_to_us")}
             </div>
             <ul className="space-y-3 text-sm font-medium">
               <li>
-                <span>Call: </span>
+                <span>{t("contact.call_label")}</span>
                 <a
                   href="tel:+13058916500"
                   onClick={() =>
@@ -184,7 +234,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <span>Fax: </span>
+                <span>{t("contact.fax_label")}</span>
                 <a
                   href="tel:8557947611"
                   onClick={() => trackFooterContact("Fax", "(855)794-7611")}
@@ -194,7 +244,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <span>Email: </span>
+                <span>{t("contact.email_label")}</span>
                 <a
                   href="mailto:info@myloandesk.com"
                   onClick={() =>
@@ -207,7 +257,7 @@ export default function Footer() {
               </li>
               <li className="text-ink/50 text-xs font-normal pt-1">
                 <p className="text-xs font-semibold text-ink-2 mb-2">
-                  Let's connect on WhatsApp:
+                  {t("contact.whatsapp_label")}
                 </p>
                 <Image
                   src={qrImg}
@@ -216,14 +266,15 @@ export default function Footer() {
                 />
               </li>
               <li className="pt-2">
-                <Link
+                <a
                   href="https://prod.lendingpad.com/secured-horizon-financial-group-inc-202402221458/c0d569d5-e33a-46d1-a6aa-fa9cab1edea5/pos#/"
                   target="_blank"
+                  rel="noopener noreferrer"
                   onClick={trackStartApplication}
                   className="inline-block bg-brand-orange text-primary-bg px-5 py-2.5 rounded-full text-xs font-semibold hover:bg-orange-600 shadow-sm transition-colors duration-200"
                 >
-                  Start application
-                </Link>
+                  {t("contact.start_application")}
+                </a>
               </li>
             </ul>
           </div>
@@ -231,18 +282,14 @@ export default function Footer() {
 
         {/* Bottom Legal & Regulatory Deck */}
         <div className="pt-8 space-y-4 text-[13px] sm:text-sm text-ink/75 leading-relaxed">
-          {/* Licensing & DBA Line */}
           <div className="font-medium text-ink/90 flex flex-wrap items-center gap-x-2 gap-y-1">
-            <span>
-              MyLoanDesk.com is a DBA of Secured Horizon Financial Group, Inc. /
-              Secured Horizon Mortgage Group, Inc.
-            </span>
+            <span>{t("legal.dba")}</span>
           </div>
 
           <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs sm:text-[13px] font-semibold text-ink/85">
-            <span>NMLS #341393 (Individual)</span>
+            <span>{t("legal.nmls_individual")}</span>
             <span>|</span>
-            <span>NMLS #314226, #1444825 (Company)</span>
+            <span>{t("legal.nmls_company")}</span>
             <span>|</span>
             <a
               href="https://www.nmlsconsumeraccess.org/"
@@ -250,27 +297,16 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="text-brand-orange hover:underline"
             >
-              NMLS Consumer Access
+              {t("legal.nmls_consumer_access")}
             </a>
             <span>|</span>
-            <span>Equal Housing Opportunity</span>
+            <span>{t("legal.equal_housing")}</span>
           </div>
 
-          {/* Copyright */}
-          <div className="text-xs text-ink/60 pt-1">
-            © 2026 MyLoanDesk. All rights reserved.
-          </div>
+          <div className="text-xs text-ink/60 pt-1">{t("legal.copyright")}</div>
 
-          {/* Regulatory / Disclaimer Paragraph */}
           <p className="text-sm text-ink/70 leading-normal pt-1">
-            Interest Rates, APRs, and loan programs are illustrations subject to
-            change at any time without notice. These do not constitute a Loan
-            Estimate or Good Faith Estimate for payments and closing costs. Not
-            all applicants will qualify. APR may vary by product type. Consumers
-            are not obligated to use any party mentioned. MyLoanDesk.com is not
-            affiliated with FHA, VA, USDA, or the Federal Government. 1801 NE
-            123rd St, Suite 314, North Miami, FL 33181 | (305) 891-6500.
-            Regulated by the FL Division of Real Estate.
+            {t("legal.disclaimer")}
           </p>
         </div>
       </div>

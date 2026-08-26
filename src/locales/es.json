@@ -54,6 +54,52 @@
         "eep": "Constructor de Casa de Ensueño (EEP)",
         "doctor": "Préstamos para Profesionales Médicos"
       }
+    },
+    "Footer": {
+      "brand_tagline": "Su socio hipotecario de confianza para programas de préstamos convencionales, gubernamentales e innovadores para inversionistas a nivel nacional.",
+      "follow_us": "Síganos",
+      "sections": {
+        "links": "Enlaces",
+        "resources": "Recursos",
+        "talk_to_us": "Contáctenos"
+      },
+      "links": {
+        "get_quote": "Obtener cotización",
+        "loan_application": "Solicitud de Préstamo",
+        "loan_programs": "Programas de Préstamos",
+        "our_calendar": "Nuestro Calendario",
+        "realtors": "Agentes Inmobiliarios",
+        "lenders": "Prestamistas",
+        "careers": "Carreras",
+        "blog": "Blog",
+        "accessibility": "Accesibilidad",
+        "privacy_policy": "Política de Privacidad",
+        "terms_conditions": "Términos y Condiciones",
+        "cookies_policy": "Política de Cookies",
+        "email_communication": "Política de Correo y Comunicación"
+      },
+      "resources": {
+        "calculator": "Calculadora",
+        "faq": "Preguntas Frecuentes",
+        "watch_live_rates": "Ver Tasas en Vivo",
+        "google_reviews": "Reseñas de Google"
+      },
+      "contact": {
+        "call_label": "Llamar: ",
+        "fax_label": "Fax: ",
+        "email_label": "Correo: ",
+        "whatsapp_label": "Conectemos por WhatsApp:",
+        "start_application": "Iniciar solicitud"
+      },
+      "legal": {
+        "dba": "MyLoanDesk.com es un DBA de Secured Horizon Financial Group, Inc. / Secured Horizon Mortgage Group, Inc.",
+        "nmls_individual": "NMLS #341393 (Individual)",
+        "nmls_company": "NMLS #314226, #1444825 (Compañía)",
+        "nmls_consumer_access": "NMLS Consumer Access",
+        "equal_housing": "Igualdad de Oportunidades de Vivienda",
+        "copyright": "© 2026 MyLoanDesk. Todos los derechos reservados.",
+        "disclaimer": "Las tasas de interés, los APR y los programas de préstamos son ilustraciones sujetas a cambios en cualquier momento sin previo aviso. No constituyen una Estimación de Préstamo (Loan Estimate) o Estimación de Buena Fe para pagos y costos de cierre. No todos los solicitantes calificarán. El APR puede variar según el tipo de producto. Los consumidores no están obligados a utilizar ninguna parte mencionada. MyLoanDesk.com no está afiliado a la FHA, VA, USDA ni al Gobierno Federal. 1801 NE 123rd St, Suite 314, North Miami, FL 33181 | (305) 891-6500. Regulado por la División de Bienes Raíces de Florida."
+      }
     }
   },
 
@@ -408,6 +454,71 @@
     },
     "LenderMarquee": {
       "title": "Una muestra de los más de 100 prestamistas que comparamos en su nombre"
+    }
+  },
+  "AboutUs": {
+    "meta": {
+      "title": "Sobre Nosotros | Correduría Hipotecaria MyLoanDesk",
+      "description": "Descubra MyLoanDesk, su correduría hipotecaria independiente de confianza. Conozca nuestra misión, valores y cómo comparamos más de 100 prestamistas mayoristas para ofrecer soluciones de préstamos residenciales y comerciales competitivas."
+    },
+    "breadcrumbs": {
+      "home": "Inicio",
+      "about_us": "Sobre Nosotros"
+    },
+    "hero": {
+      "badge": "Bienvenido a MyLoanDesk.com",
+      "heading": "Soluciones Hipotecarias Residenciales y Comerciales",
+      "subheading": "Acceda a cientos de opciones de préstamos con asesoría personalizada para compras, refinanciamiento, propiedades de inversión, construcción, hipotecas reversas y financiamiento comercial."
+    },
+    "mission": {
+      "heading": "Soluciones Hipotecarias para Cada Situación",
+      "description": "Ya sea que esté comprando, refinanciando, invirtiendo o financiando una propiedad comercial, MyLoanDesk le ayuda a encontrar el préstamo adecuado a través de nuestra extensa red de prestamistas asociados. Desde hipotecas convencionales hasta financiamiento especializado, estamos comprometidos a brindar soluciones personalizadas y un servicio excepcional."
+    },
+    "pledge": {
+      "badge": "Nuestro Compromiso",
+      "quote": "“Ya sea que esté comprando una nueva propiedad o refinanciando una hipoteca existente, MyLoanDesk.com estará a su lado de principio a fin.”",
+      "description": "Asegurando que el proceso sea completamente fluido, organizado y predecible, sin sorpresas inesperadas en el camino."
+    },
+    "values": {
+      "heading": "Obtenga Más de MyLoanDesk.com",
+      "items": {
+        "rates": {
+          "title": "Tasas Competitivas",
+          "description": "Aprovechamos nuestra amplia red de intermediarios independientes para asegurar precios altamente competitivos y estructuras financieras óptimas para su préstamo."
+        },
+        "options": {
+          "title": "Amplia Variedad de Opciones Hipotecarias",
+          "description": "Desde programas convencionales clásicos hasta soluciones de cartera únicas, elija entre un catálogo completo adaptado a sus objetivos."
+        },
+        "answers": {
+          "title": "Respuestas Inmediatas Cuando las Necesita",
+          "description": "Evite la burocracia institucional. Obtenga actualizaciones en tiempo real y respuestas claras y transparentes directamente de expertos reales."
+        }
+      }
+    },
+    "cta": {
+      "heading": "¿Listo para asegurar su estrategia?",
+      "subheading": "Comuníquese hoy con nuestro equipo de suscripción independiente para revisar aprobaciones de escenarios o calcular estimaciones.",
+      "button_speak": "Hable con Nosotros Ahora",
+      "button_rates": "Explorar Tasas en Vivo"
+    },
+    "faq_schema": {
+      "q1": {
+        "question": "¿En qué se diferencia MyLoanDesk de un oficial de préstamos bancario tradicional?",
+        "answer": "Un banco solo puede ofrecer los productos hipotecarios aprobados a través de esa única institución. Como correduría independiente, MyLoanDesk trabaja con más de 100 prestamistas mayoristas, lo que le brinda acceso a una selección más amplia de opciones de préstamo, precios mayoristas y estándares de suscripción flexibles."
+      },
+      "q2": {
+        "question": "¿Qué tipos de programas de préstamos ofrece MyLoanDesk?",
+        "answer": "Ofrecemos una gama completa de opciones de financiamiento que incluyen préstamos Convencionales, FHA, VA, préstamos DSCR para propiedades de inversión, préstamos Jumbo y Super Jumbo, Bienes Raíces Comerciales, préstamos SBA, financiamiento Puente Privado y financiamiento internacional en Portugal."
+      },
+      "q3": {
+        "question": "¿Qué tan rápido puede cerrar un préstamo MyLoanDesk?",
+        "answer": "Muchas hipotecas residenciales estándar se cierran en 14 a 30 días, mientras que nuestros programas de financiamiento especializado y puentes privados pueden cerrarse en tan solo 7 a 14 días, según la documentación y los tiempos de tasación."
+      },
+      "q4": {
+        "question": "¿MyLoanDesk trabaja con prestatarios independientes o no tradicionales?",
+        "answer": "Sí. Además del financiamiento estándar W-2, nos especializamos en programas Non-QM y de documentación alternativa como préstamos por Extractos Bancarios, calificación por Ganancias y Pérdidas (P&L), Agotamiento de Activos y programas para Extranjeros."
+      }
     }
   }
 }

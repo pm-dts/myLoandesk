@@ -54,6 +54,52 @@
         "eep": "Dream Home Builder (EEP)",
         "doctor": "Medical Professional Loans"
       }
+    },
+    "Footer": {
+      "brand_tagline": "Your trusted mortgage partner for conventional, government, and innovative investor loan programs nationwide.",
+      "follow_us": "Follow Us",
+      "sections": {
+        "links": "Links",
+        "resources": "Resources",
+        "talk_to_us": "Talk to us"
+      },
+      "links": {
+        "get_quote": "Get a quote",
+        "loan_application": "Loan Application",
+        "loan_programs": "Loan Programs",
+        "our_calendar": "Our Calendar",
+        "realtors": "Realtors",
+        "lenders": "Lenders",
+        "careers": "Careers",
+        "blog": "Blog",
+        "accessibility": "Accessibility",
+        "privacy_policy": "Privacy Policy",
+        "terms_conditions": "Terms & Conditions",
+        "cookies_policy": "Cookies Policy",
+        "email_communication": "Email & Communication Policy"
+      },
+      "resources": {
+        "calculator": "Calculator",
+        "faq": "FAQ",
+        "watch_live_rates": "Watch Live Rates",
+        "google_reviews": "Google Reviews"
+      },
+      "contact": {
+        "call_label": "Call: ",
+        "fax_label": "Fax: ",
+        "email_label": "Email: ",
+        "whatsapp_label": "Let's connect on WhatsApp:",
+        "start_application": "Start application"
+      },
+      "legal": {
+        "dba": "MyLoanDesk.com is a DBA of Secured Horizon Financial Group, Inc. / Secured Horizon Mortgage Group, Inc.",
+        "nmls_individual": "NMLS #341393 (Individual)",
+        "nmls_company": "NMLS #314226, #1444825 (Company)",
+        "nmls_consumer_access": "NMLS Consumer Access",
+        "equal_housing": "Equal Housing Opportunity",
+        "copyright": "© 2026 MyLoanDesk. All rights reserved.",
+        "disclaimer": "Interest Rates, APRs, and loan programs are illustrations subject to change at any time without notice. These do not constitute a Loan Estimate or Good Faith Estimate for payments and closing costs. Not all applicants will qualify. APR may vary by product type. Consumers are not obligated to use any party mentioned. MyLoanDesk.com is not affiliated with FHA, VA, USDA, or the Federal Government. 1801 NE 123rd St, Suite 314, North Miami, FL 33181 | (305) 891-6500. Regulated by the FL Division of Real Estate."
+      }
     }
   },
   "Home": {
@@ -405,6 +451,71 @@
     },
     "LenderMarquee": {
       "title": "A sampling of the 100+ lenders we shop on your behalf"
+    }
+  },
+  "AboutUs": {
+    "meta": {
+      "title": "About Us | MyLoanDesk Mortgage Brokerage",
+      "description": "Discover MyLoanDesk, your trusted independent mortgage brokerage. Learn about our mission, values, and how we compare 100+ wholesale lenders to deliver competitive residential and commercial loan solutions."
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "about_us": "About Us"
+    },
+    "hero": {
+      "badge": "Welcome to MyLoanDesk.com",
+      "heading": "Residential & Commercial Mortgage Solutions",
+      "subheading": "Access hundreds of lending options with personalized guidance for purchases, refinancing, investment properties, construction, reverse mortgages, and commercial financing."
+    },
+    "mission": {
+      "heading": "Mortgage Solutions for Every Situation",
+      "description": "Whether you're buying, refinancing, investing, or financing a commercial property, MyLoanDesk helps you find the right loan through our extensive network of lending partners. From conventional mortgages to specialized financing, we're committed to delivering personalized solutions and exceptional service."
+    },
+    "pledge": {
+      "badge": "Our Pledge",
+      "quote": "“Whether you’re buying a new property or refinancing an existing mortgage, MyLoanDesk.com will be by your side from start to finish.”",
+      "description": "Making sure that the process is completely painless, organized, and perfectly predictable—without any unexpected surprises along the way."
+    },
+    "values": {
+      "heading": "Get More From MyLoanDesk.com",
+      "items": {
+        "rates": {
+          "title": "Competitive Rates",
+          "description": "We leverage our vast independent broker network to secure highly aggressive pricing and optimal financial structures for your loan."
+        },
+        "options": {
+          "title": "Wide Variety of Mortgage Options",
+          "description": "From classic conventional pathways to unique portfolio solutions, choose from an extensive suite built around your goals."
+        },
+        "answers": {
+          "title": "Immediate Answers When You Need Them",
+          "description": "Skip the institutional bureaucracy. Get real-time updates and clear, transparent answers directly from real experts."
+        }
+      }
+    },
+    "cta": {
+      "heading": "Ready to secure your strategy?",
+      "subheading": "Connect with our independent underwriting desk today to look through scenario approvals or run estimates.",
+      "button_speak": "Speak With Us Now",
+      "button_rates": "Explore Live Rates"
+    },
+    "faq_schema": {
+      "q1": {
+        "question": "How is MyLoanDesk different from a traditional bank loan officer?",
+        "answer": "A bank can only offer the mortgage products approved through that single institution. As an independent brokerage, MyLoanDesk works with over 100 wholesale lenders, giving you access to a broader selection of loan options, wholesale pricing, and flexible underwriting standards."
+      },
+      "q2": {
+        "question": "What types of loan programs does MyLoanDesk offer?",
+        "answer": "We offer a full suite of financing options including Conventional, FHA, VA, DSCR investment property loans, Jumbo & Super Jumbo loans, Commercial Real Estate, SBA loans, Private Bridge financing, and international property financing in Portugal."
+      },
+      "q3": {
+        "question": "How fast can MyLoanDesk close a loan?",
+        "answer": "Many standard residential mortgages close in 14 to 30 days, while our private bridge and specialized financing programs can close in as little as 7 to 14 days depending on documentation and appraisal timing."
+      },
+      "q4": {
+        "question": "Does MyLoanDesk work with self-employed or non-traditional borrowers?",
+        "answer": "Yes. In addition to standard W-2 financing, we specialize in non-QM and alternative documentation programs such as Bank Statement loans, Profit & Loss qualification, Asset Depletion, and Foreign National programs."
+      }
     }
   }
 }
