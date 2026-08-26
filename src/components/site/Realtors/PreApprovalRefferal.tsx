@@ -15,6 +15,7 @@ import "react-international-phone/style.css";
 import { ChevronDown } from "lucide-react";
 import { sendGTMEvent } from "@next/third-parties/google";
 import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -25,13 +26,27 @@ const fraunces = Fraunces({
 const REFERRAL_WEBHOOK_URL =
   "https://services.leadconnectorhq.com/hooks/Lv5oqPcJ6MZsszgssznB/webhook-trigger/14048627-1ba4-4c85-8a57-fc99e211650a";
 
-export const TailwindPhoneInput = ({ value, onChange, error }: any) => {
+interface TailwindPhoneInputProps {
+  value: string;
+  onChange: (phone: string) => void;
+  error?: boolean;
+  placeholder?: string;
+  defaultCountry?: string;
+}
+
+export const TailwindPhoneInput = ({
+  value,
+  onChange,
+  error,
+  placeholder = "Phone number",
+  defaultCountry = "us",
+}: TailwindPhoneInputProps) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const { inputValue, handlePhoneValueChange, inputRef, country, setCountry } =
     usePhoneInput({
-      defaultCountry: "us",
+      defaultCountry,
       value,
       countries: defaultCountries,
       onChange: (data) => onChange(data.phone),
@@ -71,7 +86,7 @@ export const TailwindPhoneInput = ({ value, onChange, error }: any) => {
           type="tel"
           value={inputValue}
           onChange={handlePhoneValueChange}
-          placeholder="Phone number"
+          placeholder={placeholder}
           className="w-full bg-transparent border-none outline-none text-sm px-4 py-3 text-ink placeholder:text-ink-2/40"
         />
       </div>
@@ -109,9 +124,16 @@ export const TailwindPhoneInput = ({ value, onChange, error }: any) => {
   );
 };
 
-export default function ReferralFormSection() {
+interface ReferralFormSectionProps {
+  locale?: string;
+}
+
+export default function ReferralFormSection({
+  locale = "en",
+}: ReferralFormSectionProps) {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const pathname = usePathname();
+  const t = useTranslations("Realtors.ReferralForm");
 
   const form = useForm({
     defaultValues: {
@@ -124,7 +146,7 @@ export default function ReferralFormSection() {
       details: "",
     },
     onSubmit: async ({ value }) => {
-      const toastId = toast.loading("Submitting your referral...");
+      const toastId = toast.loading(t("toasts.loading"));
 
       try {
         const response = await fetch(REFERRAL_WEBHOOK_URL, {
@@ -141,6 +163,7 @@ export default function ReferralFormSection() {
             borrower_email: value.borrowerEmail,
             borrower_phone: value.borrowerPhone,
             custom_notes: value.details,
+            locale,
             source: "Website Realtor Referral Form",
           }),
         });
@@ -149,15 +172,11 @@ export default function ReferralFormSection() {
           throw new Error(`Webhook error: ${response.status}`);
         }
 
-        toast.success(
-          "Referral Received! We'll get your borrower pre-approved.",
-          {
-            id: toastId,
-            duration: 5000,
-          },
-        );
+        toast.success(t("toasts.success"), {
+          id: toastId,
+          duration: 5000,
+        });
 
-        // Fire unique GTM event for Referral Form Success
         sendGTMEvent({
           event: "referral_lead_submitted",
           category: "conversion",
@@ -165,28 +184,28 @@ export default function ReferralFormSection() {
           currency: "USD",
           value: 1,
           form_name: "Referral Form",
-          page_path: pathname || "/referral",
+          page_path:
+            pathname || (locale === "es" ? "/es/realtors" : "/realtors"),
+          locale,
         });
 
         setIsSubmitted(true);
         form.reset();
       } catch (error) {
         console.error("Error submitting referral:", error);
-        toast.error(
-          "There was an issue submitting your referral. Please try again.",
-          {
-            id: toastId,
-            duration: 5000,
-          },
-        );
+        toast.error(t("toasts.error"), {
+          id: toastId,
+          duration: 5000,
+        });
 
-        // Fire unique GTM Error event for Referral Form Failure
         sendGTMEvent({
           event: "referral_form_error",
           category: "error",
           label: "Referral Form Submission Failed",
           form_name: "Referral Form",
-          page_path: pathname || "/referral",
+          page_path:
+            pathname || (locale === "es" ? "/es/realtors" : "/realtors"),
+          locale,
           error_message:
             error instanceof Error ? error.message : "Unknown Error",
         });
@@ -202,7 +221,7 @@ export default function ReferralFormSection() {
       <div className="max-w-3xl mx-auto px-6">
         <div className="text-center mb-14">
           <div className="text-[10px] uppercase tracking-[0.25em] text-[#D4A574] font-semibold mb-4">
-            Benefits of referring your clients to MyLoanDesk
+            {t("badge")}
           </div>
           <h2
             className={cn(
@@ -210,30 +229,23 @@ export default function ReferralFormSection() {
               fraunces.className,
             )}
           >
-            Refer your client for quick pre-approval
+            {t("heading")}
           </h2>
-          <p className="text-sm text-ink-2 mt-2">
-            Receive exclusive, generous benefits when you use the form below to
-            refer your borrowers to us, and we get your clients pre-approved for
-            financing.
-          </p>
+          <p className="text-sm text-ink-2 mt-2">{t("subheading")}</p>
           <p className="text-xs text-ink-2/80 italic mt-1">
-            Please complete the form below, and we'll get your borrower
-            pre-approved!
+            {t("instruction")}
           </p>
         </div>
 
         {isSubmitted ? (
           <div className="bg-moss-deep/5 border border-moss-deep/20 text-moss-deep p-6 rounded-2xl text-center animate-in fade-in zoom-in duration-300">
-            <h3 className="font-semibold text-lg mb-1">Referral Received!</h3>
-            <p className="text-sm text-ink-2">
-              We'll get your borrower pre-approved right away.
-            </p>
+            <h3 className="font-semibold text-lg mb-1">{t("success_title")}</h3>
+            <p className="text-sm text-ink-2">{t("success_desc")}</p>
             <button
               onClick={() => setIsSubmitted(false)}
               className="mt-4 text-xs font-semibold underline text-moss-deep hover:text-moss-darker"
             >
-              Submit another referral
+              {t("submit_another")}
             </button>
           </div>
         ) : (
@@ -246,16 +258,18 @@ export default function ReferralFormSection() {
             className="space-y-6 bg-primary-bg p-8 rounded-3xl border border-line shadow-sm animate-in fade-in duration-300"
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Realtor Name */}
               <form.Field
                 name="realtorName"
                 validators={{
-                  onChange: ({ value }) => (!value ? "Required" : undefined),
+                  onChange: ({ value }) =>
+                    !value ? t("fields.realtor_name_required") : undefined,
                 }}
               >
                 {(field) => (
                   <div>
                     <label className="block text-xs font-medium text-ink-2 uppercase tracking-wider mb-2">
-                      Realtor First & Last Name *
+                      {t("fields.realtor_name_label")}
                     </label>
                     <input
                       value={field.state.value}
@@ -276,16 +290,19 @@ export default function ReferralFormSection() {
                 )}
               </form.Field>
 
+              {/* Realtor Phone */}
               <form.Field name="realtorPhone">
                 {(field) => (
                   <div>
                     <label className="block text-xs font-medium text-ink-2 uppercase tracking-wider mb-2">
-                      Realtor Phone Number (Optional)
+                      {t("fields.realtor_phone_label")}
                     </label>
                     <TailwindPhoneInput
                       value={field.state.value}
                       onChange={(val: string) => field.handleChange(val)}
                       error={field.state.meta.errors.length > 0}
+                      placeholder={t("fields.realtor_phone_placeholder")}
+                      defaultCountry="us"
                     />
                   </div>
                 )}
@@ -293,19 +310,20 @@ export default function ReferralFormSection() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Realtor Email */}
               <form.Field
                 name="realtorEmail"
                 validators={{
                   onChange: ({ value }) =>
                     !value || !/\S+@\S+\.\S+/.test(value)
-                      ? "Valid Email Required"
+                      ? t("fields.realtor_email_required")
                       : undefined,
                 }}
               >
                 {(field) => (
                   <div>
                     <label className="block text-xs font-medium text-ink-2 uppercase tracking-wider mb-2">
-                      Realtor Email *
+                      {t("fields.realtor_email_label")}
                     </label>
                     <input
                       type="email"
@@ -327,16 +345,18 @@ export default function ReferralFormSection() {
                 )}
               </form.Field>
 
+              {/* Borrower Name */}
               <form.Field
                 name="borrowerName"
                 validators={{
-                  onChange: ({ value }) => (!value ? "Required" : undefined),
+                  onChange: ({ value }) =>
+                    !value ? t("fields.borrower_name_required") : undefined,
                 }}
               >
                 {(field) => (
                   <div>
                     <label className="block text-xs font-medium text-ink-2 uppercase tracking-wider mb-2">
-                      Borrower First & Last Name *
+                      {t("fields.borrower_name_label")}
                     </label>
                     <input
                       value={field.state.value}
@@ -359,19 +379,20 @@ export default function ReferralFormSection() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Borrower Email */}
               <form.Field
                 name="borrowerEmail"
                 validators={{
                   onChange: ({ value }) =>
                     !value || !/\S+@\S+\.\S+/.test(value)
-                      ? "Valid Email Required"
+                      ? t("fields.borrower_email_required")
                       : undefined,
                 }}
               >
                 {(field) => (
                   <div>
                     <label className="block text-xs font-medium text-ink-2 uppercase tracking-wider mb-2">
-                      Borrower Email *
+                      {t("fields.borrower_email_label")}
                     </label>
                     <input
                       type="email"
@@ -393,28 +414,31 @@ export default function ReferralFormSection() {
                 )}
               </form.Field>
 
+              {/* Borrower Phone */}
               <form.Field name="borrowerPhone">
                 {(field) => (
                   <div>
                     <label className="block text-xs font-medium text-ink-2 uppercase tracking-wider mb-2">
-                      Borrower Phone Number (Optional)
+                      {t("fields.borrower_phone_label")}
                     </label>
                     <TailwindPhoneInput
                       value={field.state.value}
                       onChange={(val: string) => field.handleChange(val)}
                       error={field.state.meta.errors.length > 0}
+                      placeholder={t("fields.borrower_phone_placeholder")}
+                      defaultCountry="us"
                     />
                   </div>
                 )}
               </form.Field>
             </div>
 
+            {/* Details */}
             <form.Field name="details">
               {(field) => (
                 <div>
                   <label className="block text-xs font-medium text-ink-2 uppercase tracking-wider mb-2">
-                    Let us know more about this borrower, the property, and
-                    their financing needs:
+                    {t("fields.details_label")}
                   </label>
                   <textarea
                     rows={4}
@@ -427,6 +451,7 @@ export default function ReferralFormSection() {
               )}
             </form.Field>
 
+            {/* Submit Button */}
             <form.Subscribe
               selector={(state) => [state.canSubmit, state.isSubmitting]}
             >
@@ -436,7 +461,7 @@ export default function ReferralFormSection() {
                   disabled={!canSubmit || isSubmitting}
                   className="w-full bg-moss-deep text-primary-bg font-medium py-3.5 rounded-full hover:bg-opacity-90 transition focus-ring disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {isSubmitting ? "Submitting Referral..." : "Submit"}
+                  {isSubmitting ? t("submitting_button") : t("submit_button")}
                 </button>
               )}
             </form.Subscribe>

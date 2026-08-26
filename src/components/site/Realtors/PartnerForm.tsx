@@ -15,6 +15,7 @@ import "react-international-phone/style.css";
 import { ChevronDown } from "lucide-react";
 import { sendGTMEvent } from "@next/third-parties/google";
 import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -25,13 +26,27 @@ const fraunces = Fraunces({
 const INBOUND_WEBHOOK_URL =
   "https://services.leadconnectorhq.com/hooks/Lv5oqPcJ6MZsszgssznB/webhook-trigger/e040d77c-6870-485c-89ec-43782e8ae719";
 
-export const TailwindPhoneInput = ({ value, onChange, error }: any) => {
+interface TailwindPhoneInputProps {
+  value: string;
+  onChange: (phone: string) => void;
+  error?: boolean;
+  placeholder?: string;
+  defaultCountry?: string;
+}
+
+export const TailwindPhoneInput = ({
+  value,
+  onChange,
+  error,
+  placeholder = "Phone number",
+  defaultCountry = "us",
+}: TailwindPhoneInputProps) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const { inputValue, handlePhoneValueChange, inputRef, country, setCountry } =
     usePhoneInput({
-      defaultCountry: "us",
+      defaultCountry,
       value,
       countries: defaultCountries,
       onChange: (data) => onChange(data.phone),
@@ -71,7 +86,7 @@ export const TailwindPhoneInput = ({ value, onChange, error }: any) => {
           type="tel"
           value={inputValue}
           onChange={handlePhoneValueChange}
-          placeholder="Phone number"
+          placeholder={placeholder}
           className="w-full bg-transparent border-none outline-none text-sm px-4 py-3 text-ink placeholder:text-ink-2/40"
         />
       </div>
@@ -109,9 +124,16 @@ export const TailwindPhoneInput = ({ value, onChange, error }: any) => {
   );
 };
 
-export default function PartnerFormSection() {
+interface PartnerFormSectionProps {
+  locale?: string;
+}
+
+export default function PartnerFormSection({
+  locale = "en",
+}: PartnerFormSectionProps) {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const pathname = usePathname();
+  const t = useTranslations("Realtors.PartnerForm");
 
   const form = useForm({
     defaultValues: {
@@ -122,7 +144,7 @@ export default function PartnerFormSection() {
       message: "",
     },
     onSubmit: async ({ value }) => {
-      const toastId = toast.loading("Submitting your partnership request...");
+      const toastId = toast.loading(t("toasts.loading"));
 
       try {
         const response = await fetch(INBOUND_WEBHOOK_URL, {
@@ -137,6 +159,7 @@ export default function PartnerFormSection() {
             email: value.email,
             phone: value.phone,
             custom_notes: value.message,
+            locale,
             source: "Website Partner Form",
           }),
         });
@@ -145,12 +168,11 @@ export default function PartnerFormSection() {
           throw new Error(`Webhook error: ${response.status}`);
         }
 
-        toast.success("Request received! We will be in touch shortly.", {
+        toast.success(t("toasts.success"), {
           id: toastId,
           duration: 5000,
         });
 
-        // Fire unique GTM event for Partner Form Success
         sendGTMEvent({
           event: "partner_form_lead_submitted",
           category: "conversion",
@@ -158,28 +180,28 @@ export default function PartnerFormSection() {
           currency: "USD",
           value: 1,
           form_name: "Partner Form",
-          page_path: pathname || "/partner",
+          page_path:
+            pathname || (locale === "es" ? "/es/realtors" : "/realtors"),
+          locale,
         });
 
         setIsSubmitted(true);
         form.reset();
       } catch (error) {
         console.error("Error submitting to webhook:", error);
-        toast.error(
-          "There was an issue submitting your request. Please try again.",
-          {
-            id: toastId,
-            duration: 5000,
-          },
-        );
+        toast.error(t("toasts.error"), {
+          id: toastId,
+          duration: 5000,
+        });
 
-        // Fire unique GTM Error event for Partner Form Failure
         sendGTMEvent({
           event: "partner_form_error",
           category: "error",
           label: "Partner Form Submission Failed",
           form_name: "Partner Form",
-          page_path: pathname || "/partner",
+          page_path:
+            pathname || (locale === "es" ? "/es/realtors" : "/realtors"),
+          locale,
           error_message:
             error instanceof Error ? error.message : "Unknown Error",
         });
@@ -195,7 +217,7 @@ export default function PartnerFormSection() {
       <div className="max-w-3xl mx-auto px-6">
         <div className="text-center mb-14">
           <div className="text-[10px] uppercase tracking-[0.25em] text-brand-orange font-semibold mb-4">
-            Join Our Network
+            {t("badge")}
           </div>
           <h2
             className={cn(
@@ -203,26 +225,20 @@ export default function PartnerFormSection() {
               fraunces.className,
             )}
           >
-            Let's Work Together!
+            {t("heading")}
           </h2>
-          <p className="text-sm text-ink-2 mt-2">
-            Please complete the form below, and we will be in touch.
-          </p>
+          <p className="text-sm text-ink-2 mt-2">{t("subheading")}</p>
         </div>
 
         {isSubmitted ? (
           <div className="bg-moss-deep/5 border border-moss-deep/20 text-moss-deep p-6 rounded-2xl text-center animate-in fade-in zoom-in duration-300">
-            <h3 className="font-semibold text-lg mb-1">
-              Thank you for reaching out!
-            </h3>
-            <p className="text-sm text-ink-2">
-              We've received your form and will be in touch shortly.
-            </p>
+            <h3 className="font-semibold text-lg mb-1">{t("success_title")}</h3>
+            <p className="text-sm text-ink-2">{t("success_desc")}</p>
             <button
               onClick={() => setIsSubmitted(false)}
               className="mt-4 text-xs font-semibold underline text-moss-deep hover:text-moss-darker"
             >
-              Submit another request
+              {t("submit_another")}
             </button>
           </div>
         ) : (
@@ -235,17 +251,18 @@ export default function PartnerFormSection() {
             className="space-y-6 animate-in fade-in duration-300"
           >
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {/* First Name */}
               <form.Field
                 name="firstName"
                 validators={{
                   onChange: ({ value }) =>
-                    !value ? "First name is required" : undefined,
+                    !value ? t("fields.first_name_required") : undefined,
                 }}
               >
                 {(field) => (
                   <div>
                     <label className="block text-xs font-medium text-ink-2 uppercase tracking-wider mb-2">
-                      First Name *
+                      {t("fields.first_name_label")}
                     </label>
                     <input
                       type="text"
@@ -267,17 +284,18 @@ export default function PartnerFormSection() {
                 )}
               </form.Field>
 
+              {/* Last Name */}
               <form.Field
                 name="lastName"
                 validators={{
                   onChange: ({ value }) =>
-                    !value ? "Last name is required" : undefined,
+                    !value ? t("fields.last_name_required") : undefined,
                 }}
               >
                 {(field) => (
                   <div>
                     <label className="block text-xs font-medium text-ink-2 uppercase tracking-wider mb-2">
-                      Last Name *
+                      {t("fields.last_name_label")}
                     </label>
                     <input
                       type="text"
@@ -301,13 +319,14 @@ export default function PartnerFormSection() {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {/* Email */}
               <form.Field
                 name="email"
                 validators={{
                   onChange: ({ value }) => {
-                    if (!value) return "Email is required";
+                    if (!value) return t("fields.email_required");
                     if (!/\S+@\S+\.\S+/.test(value))
-                      return "Valid email is required";
+                      return t("fields.email_invalid");
                     return undefined;
                   },
                 }}
@@ -315,7 +334,7 @@ export default function PartnerFormSection() {
                 {(field) => (
                   <div>
                     <label className="block text-xs font-medium text-ink-2 uppercase tracking-wider mb-2">
-                      Email *
+                      {t("fields.email_label")}
                     </label>
                     <input
                       type="email"
@@ -337,27 +356,31 @@ export default function PartnerFormSection() {
                 )}
               </form.Field>
 
+              {/* Phone */}
               <form.Field name="phone">
                 {(field) => (
                   <div>
                     <label className="block text-xs font-medium text-ink-2 uppercase tracking-wider mb-2">
-                      Phone Number (Optional)
+                      {t("fields.phone_label")}
                     </label>
                     <TailwindPhoneInput
                       value={field.state.value}
                       onChange={(val: string) => field.handleChange(val)}
                       error={field.state.meta.errors.length > 0}
+                      placeholder={t("fields.phone_placeholder")}
+                      defaultCountry="us"
                     />
                   </div>
                 )}
               </form.Field>
             </div>
 
+            {/* Message */}
             <form.Field name="message">
               {(field) => (
                 <div>
                   <label className="block text-xs font-medium text-ink-2 uppercase tracking-wider mb-2">
-                    Let us know how we can be the best lender partner to you:
+                    {t("fields.message_label")}
                   </label>
                   <textarea
                     rows={4}
@@ -370,6 +393,7 @@ export default function PartnerFormSection() {
               )}
             </form.Field>
 
+            {/* Submit Button */}
             <form.Subscribe
               selector={(state) => [state.canSubmit, state.isSubmitting]}
             >
@@ -379,7 +403,7 @@ export default function PartnerFormSection() {
                   disabled={!canSubmit || isSubmitting}
                   className="w-full bg-brand-orange text-primary-bg font-medium py-3.5 rounded-full hover:bg-orange-600 transition focus-ring disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {isSubmitting ? "Submitting..." : "Submit"}
+                  {isSubmitting ? t("submitting_button") : t("submit_button")}
                 </button>
               )}
             </form.Subscribe>

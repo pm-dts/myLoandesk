@@ -1295,5 +1295,429 @@
       "faq_q2_question": "Will completing this form trigger a hard credit inquiry?",
       "faq_q2_answer": "No. Filling out the initial questionnaire does not pull your credit or affect your credit score."
     }
+  },
+  "PrivacyPolicy": {
+    "meta": {
+      "title": "Privacy Policy | MyLoanDesk",
+      "description": "This Privacy Policy outlines how MyLoanDesk collects, uses, shares, and protects your personal information when you visit our website, communicate with us, or use our online services.",
+      "og_title": "Privacy Policy | MyLoanDesk",
+      "og_description": "This Privacy Policy outlines how MyLoanDesk collects, uses, shares, and protects your personal information when you visit our website, communicate with us, or use our online services.",
+      "og_alt": "MyLoanDesk Privacy Policy",
+      "twitter_title": "Privacy Policy | MyLoanDesk",
+      "twitter_description": "Learn how MyLoanDesk collects, uses, and safeguards your personal and financial information."
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "privacy_policy": "Privacy Policy"
+    },
+    "badge": "Legal & Compliance",
+    "heading": "Privacy Policy",
+    "effective_date_label": "Effective Date:",
+    "effective_date_value": "July 25, 2026",
+    "intro_p1": "MyLoanDesk (\"MyLoanDesk,\" \"we,\" \"our,\" or \"us\") values your privacy and is committed to protecting the personal information you share with us. This Privacy Policy explains how we collect, use, disclose, store, and protect your information when you visit our website, communicate with us, request information, apply for financing, or use any of our online services.",
+    "intro_p2": "This Privacy Policy applies to all websites, landing pages, applications, forms, calculators, customer portals, and electronic communications operated by MyLoanDesk and Secured Horizon Financial Group.",
+    "intro_p3": "By accessing or using our website, you acknowledge that you have read and understood this Privacy Policy.",
+    "toc_title": "Contents",
+    "toc": {
+      "s1": "1. Information We Collect",
+      "s2": "2. How We Use Your Information",
+      "s3": "3. Information We Share",
+      "s4": "4. Credit Authorization",
+      "s5": "5. Cookies and Tracking Technologies",
+      "s6": "6. SMS Communications",
+      "s7": "7. AI-Assisted Communications",
+      "s8": "8. Data Security",
+      "s9": "9. Data Retention",
+      "s10": "10. Your Privacy Rights",
+      "s11": "11. California Privacy Rights",
+      "s12": "12. European Privacy Rights (GDPR)",
+      "s13": "13. Children's Privacy",
+      "s14": "14. Third-Party Websites",
+      "s15": "15. Changes to This Privacy Policy",
+      "s16": "16. Contact Us"
+    },
+    "inquiries_card": {
+      "title": "Inquiries and Complaints",
+      "description": "If you have questions about this Privacy Policy or wish to exercise applicable privacy rights, please contact us."
+    },
+    "sections": {
+      "s1": {
+        "title": "1. Information We Collect",
+        "intro": "Depending on the services you request, we may collect the following categories of information:",
+        "personal_title": "Personal Information",
+        "personal_list": [
+          "Full name",
+          "Mailing address",
+          "Email address",
+          "Telephone number",
+          "Date of birth",
+          "Government-issued identification",
+          "Social Security Number or Tax Identification Number (when required)",
+          "Employment information",
+          "Employer name",
+          "Occupation"
+        ],
+        "financial_title": "Financial Information",
+        "financial_intro": "When you inquire about or apply for financing, we may collect:",
+        "financial_list": [
+          "Income",
+          "Assets",
+          "Bank account information",
+          "Existing debts",
+          "Credit obligations",
+          "Property ownership information",
+          "Mortgage balances",
+          "Down payment information",
+          "Financial documentation you voluntarily provide"
+        ],
+        "property_title": "Property Information",
+        "property_list": [
+          "Property address",
+          "Property type",
+          "Estimated property value",
+          "Occupancy status",
+          "Purchase price",
+          "Loan amount requested"
+        ],
+        "technical_title": "Technical Information",
+        "technical_intro": "When you visit our website, we may automatically collect:",
+        "technical_list": [
+          "IP address",
+          "Browser type",
+          "Device type",
+          "Operating system",
+          "Language settings",
+          "Time zone",
+          "Website usage information",
+          "Pages visited",
+          "Referral source",
+          "Session information"
+        ],
+        "communication_title": "Communication Information",
+        "communication_intro": "We maintain records of communications including:",
+        "communication_list": [
+          "Emails",
+          "Phone calls (where permitted by law)",
+          "Text messages",
+          "Chat conversations",
+          "AI assistant conversations",
+          "Contact forms",
+          "Appointment scheduling"
+        ]
+      },
+      "s2": {
+        "title": "2. How We Use Your Information",
+        "intro": "We use your information to:",
+        "list": [
+          "Respond to inquiries",
+          "Evaluate financing opportunities",
+          "Process mortgage applications",
+          "Match borrowers with appropriate lending programs",
+          "Verify identity",
+          "Prevent fraud",
+          "Perform underwriting activities",
+          "Obtain credit reports (when authorized)",
+          "Order appraisals",
+          "Coordinate with title companies",
+          "Communicate loan status",
+          "Improve customer service",
+          "Improve our website",
+          "Analyze website performance",
+          "Meet legal and regulatory requirements",
+          "Protect against fraud and cybersecurity threats"
+        ]
+      },
+      "s3": {
+        "title": "3. Information We Share",
+        "p1": "We do not sell your personal information.",
+        "p2": "We may share your information with trusted service providers as necessary to process your request, including:",
+        "list": [
+          "Wholesale lenders",
+          "Investors",
+          "Mortgage brokers",
+          "Loan processing companies",
+          "Underwriters",
+          "Title companies",
+          "Settlement agents",
+          "Appraisal management companies",
+          "Credit reporting agencies",
+          "Flood certification providers",
+          "Fraud prevention providers",
+          "Identity verification providers",
+          "CRM providers",
+          "Document management providers",
+          "Electronic signature providers",
+          "Payment processors",
+          "Cloud hosting providers",
+          "Legal counsel",
+          "Government agencies when required by law"
+        ],
+        "p3": "Each recipient is expected to protect your information consistent with applicable laws."
+      },
+      "s4": {
+        "title": "4. Credit Authorization",
+        "p1": "When you request mortgage financing, you may authorize us to obtain information necessary to evaluate your request, including:",
+        "list": [
+          "Consumer credit reports",
+          "Employment verification",
+          "Income verification",
+          "Asset verification",
+          "Public records",
+          "Fraud prevention reports"
+        ],
+        "p2": "Additional written authorization may be required before obtaining certain reports."
+      },
+      "s5": {
+        "title": "5. Cookies and Tracking Technologies",
+        "p1": "Our website uses cookies and similar technologies to:",
+        "list1": [
+          "Remember preferences",
+          "Improve website functionality",
+          "Analyze website traffic",
+          "Measure advertising effectiveness",
+          "Detect fraud",
+          "Improve user experience"
+        ],
+        "p2": "We may use services including:",
+        "list2": [
+          "Google Analytics",
+          "Google Tag Manager",
+          "Google Ads",
+          "Microsoft Clarity",
+          "Meta Pixel",
+          "LinkedIn Insight Tag",
+          "CRM tracking technologies",
+          "Marketing automation platforms"
+        ],
+        "p3": "Visitors may adjust cookie preferences through their browser settings or our Cookie Preferences tool where available."
+      },
+      "s6": {
+        "title": "6. SMS Communications",
+        "p1": "If you provide consent, we may send text messages regarding:",
+        "list": [
+          "Appointment reminders",
+          "Loan updates",
+          "Requested documentation",
+          "Customer support",
+          "Follow-up communications"
+        ],
+        "p2": "Message frequency varies. Message and data rates may apply.",
+        "p3": "Reply STOP to unsubscribe. Reply HELP for assistance.",
+        "p4": "Consent to receive text messages is not a condition of obtaining financing."
+      },
+      "s7": {
+        "title": "7. AI-Assisted Communications",
+        "p1": "MyLoanDesk may use artificial intelligence technologies to:",
+        "list": [
+          "Answer general questions",
+          "Schedule appointments",
+          "Route inquiries",
+          "Assist with document collection",
+          "Improve customer service"
+        ],
+        "p2": "AI-generated responses are informational only and do not constitute underwriting decisions, legal advice, financial advice, or loan approval.",
+        "p3": "Whenever appropriate, a licensed mortgage professional will review your request."
+      },
+      "s8": {
+        "title": "8. Data Security",
+        "p1": "We maintain administrative, technical, and physical safeguards designed to protect your information, including:",
+        "list": [
+          "Encryption of sensitive data in transit where supported",
+          "Access controls",
+          "Multi-factor authentication for administrative systems",
+          "Security monitoring",
+          "Regular software updates",
+          "Employee training",
+          "Vendor security assessments where appropriate"
+        ],
+        "p2": "While we use commercially reasonable safeguards, no method of transmission over the Internet or electronic storage is completely secure."
+      },
+      "s9": {
+        "title": "9. Data Retention",
+        "p1": "We retain information only as long as necessary to:",
+        "list": [
+          "Provide requested services",
+          "Complete mortgage transactions",
+          "Meet legal and regulatory obligations",
+          "Resolve disputes",
+          "Enforce agreements",
+          "Maintain business records"
+        ],
+        "p2": "Retention periods may vary depending on applicable federal and state laws."
+      },
+      "s10": {
+        "title": "10. Your Privacy Rights",
+        "p1": "Depending on where you live, you may have the right to:",
+        "list": [
+          "Access your personal information",
+          "Correct inaccurate information",
+          "Request deletion of certain information",
+          "Obtain a copy of your information",
+          "Object to certain processing activities",
+          "Withdraw consent where processing is based on consent"
+        ],
+        "p2": "Some rights are subject to legal exceptions, including record-retention obligations applicable to mortgage transactions."
+      },
+      "s11": {
+        "title": "11. California Privacy Rights",
+        "p1": "Residents of California may have additional rights under the California Consumer Privacy Act (CCPA), as amended by the California Privacy Rights Act (CPRA), including the right to know, access, correct, delete, and limit the use of certain personal information, subject to applicable exceptions.",
+        "p2": "Requests may be submitted using the contact information below."
+      },
+      "s12": {
+        "title": "12. European Privacy Rights (GDPR)",
+        "p1": "Visitors located in the European Economic Area, the United Kingdom, or Switzerland may have additional rights under applicable data protection laws, including the General Data Protection Regulation (GDPR).",
+        "p2": "Where applicable, we process personal information based on one or more lawful bases, including consent, contractual necessity, compliance with legal obligations, or our legitimate interests."
+      },
+      "s13": {
+        "title": "13. Children's Privacy",
+        "p1": "Our services are intended for adults seeking financial services and are not directed to children under the age of 18.",
+        "p2": "We do not knowingly collect personal information from children."
+      },
+      "s14": {
+        "title": "14. Third-Party Websites",
+        "p1": "Our website may contain links to third-party websites. We are not responsible for the privacy practices, content, or security of those websites. We encourage you to review their privacy policies before providing personal information."
+      },
+      "s15": {
+        "title": "15. Changes to This Privacy Policy",
+        "p1": "We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or business operations.",
+        "p2": "The updated version will be posted on this page with a revised Effective Date."
+      },
+      "s16": {
+        "title": "16. Contact Us",
+        "p1": "If you have questions about this Privacy Policy or wish to exercise applicable privacy rights, please contact us:",
+        "company": "MyLoanDesk",
+        "website_label": "Website:",
+        "website_val": "https://www.myloandesk.com",
+        "email_label": "Email:",
+        "email_val": "info@myloandesk.com",
+        "phone_label": "Phone:",
+        "phone_val": "3058916500",
+        "address_label": "Mailing Address:",
+        "address_val": "1801 NE 123 St, Ste 314\nNorth Miami, FL 33181",
+        "ack": "By using the MyLoanDesk website or submitting information to us, you acknowledge that you have read and understood this Privacy Policy."
+      }
+    },
+    "schema": {
+      "webpage_name": "Privacy Policy | MyLoanDesk",
+      "webpage_description": "Privacy Policy detailing the collection, protection, and usage of consumer data by MyLoanDesk."
+    }
+  },
+  "Realtors": {
+    "meta": {
+      "title": "Realtor Partnership Program | MyLoanDesk",
+      "description": "Join MyLoanDesk's Realtor Partnership Program to close loans faster and provide a seamless experience for your clients. Partner with us for networking, marketing support, and more.",
+      "og_title": "Realtor Partnership Program | MyLoanDesk",
+      "og_description": "Join MyLoanDesk's Realtor Partnership Program to close loans faster and provide a seamless experience for your clients. Partner with us for networking, marketing support, and more.",
+      "og_alt": "MyLoanDesk Realtor Partnership Program",
+      "twitter_title": "Realtor Partnership Program | MyLoanDesk",
+      "twitter_description": "Partner with MyLoanDesk for faster loan closings, cobranded marketing support, and seamless communication for real estate agents."
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "realtors": "Realtors"
+    },
+    "hero": {
+      "badge": "Realtor Partnership Program",
+      "headline": "Close Loans Faster with Direct Lender Partnership",
+      "subheadline": "Realtors join us because it's a mutually beneficial opportunity. We go above and beyond to provide clear, timely communication and a smooth transaction experience.",
+      "partner_button": "Partner With Us",
+      "refer_button": "Refer a Client",
+      "card_badge": "MyLoanDesk Partners",
+      "card_quote": "Elevating the home purchase experience together, one client at a time."
+    },
+    "benefits": {
+      "badge": "01 — Benefits",
+      "headline_start": "The benefits of partnering with",
+      "headline_italic": "MyLoanDesk",
+      "cards": {
+        "networking": {
+          "title": "Networking & Referral Opportunities",
+          "description": "Take advantage of sponsoring, co-hosting, or attending our finance and real estate webinars, community and business events to expand your networking reach."
+        },
+        "social": {
+          "title": "Social Media Presence",
+          "description": "Enhance your social media content by sharing our thoughtfully curated content including home buying & financing tips, mortgage 101, local market news and valuable information for your clients."
+        },
+        "cobranded": {
+          "title": "Cobranded Marketing Materials",
+          "description": "Become a known & trusted partner of MyLoanDesk.com with your logo, photo, and contact information included on select print & digital marketing materials."
+        },
+        "faster": {
+          "title": "Close Loans Faster with Direct Lender Partnership",
+          "description": "As your lender partner, we go above and beyond typical expectations to provide clear and timely communication and a smooth transaction experience for your clients."
+        }
+      }
+    },
+    "testimonial": {
+      "badge": "02 — What Our Realtor Partners Say",
+      "quote": "“As a realtor, I have worked with many lenders, but working with My Loan Desk was the best decision. We have a streamlined process, I have consistent market updates and marketing materials to educate my home buyers - and they are always happy to have no surprises and close quickly! I'm grateful to have such a reliable lender partner.”",
+      "author_name": "Lindsey Y.",
+      "author_role": "Realtor Partner"
+    },
+    "schema": {
+      "webpage_name": "Realtor Partnership Program | MyLoanDesk",
+      "webpage_description": "Direct wholesale lender partnership opportunities, cobranded marketing support, and client pre-approval referral pathways for licensed real estate agents.",
+      "service_name": "Realtor Partnership & Referral Program",
+      "service_description": "Collaborative lending program for realtors featuring fast pre-approvals, direct wholesale loan underwriting, cobranded marketing collateral, and co-hosted networking events.",
+      "service_type": "Mortgage Lending Partnership"
+    },
+    "PartnerForm": {
+      "badge": "Join Our Network",
+      "heading": "Let's Work Together!",
+      "subheading": "Please complete the form below, and we will be in touch.",
+      "success_title": "Thank you for reaching out!",
+      "success_desc": "We've received your form and will be in touch shortly.",
+      "submit_another": "Submit another request",
+      "fields": {
+        "first_name_label": "First Name *",
+        "first_name_required": "First name is required",
+        "last_name_label": "Last Name *",
+        "last_name_required": "Last name is required",
+        "email_label": "Email *",
+        "email_required": "Email is required",
+        "email_invalid": "Valid email is required",
+        "phone_label": "Phone Number (Optional)",
+        "phone_placeholder": "Phone number",
+        "message_label": "Let us know how we can be the best lender partner to you:"
+      },
+      "submit_button": "Submit",
+      "submitting_button": "Submitting...",
+      "toasts": {
+        "loading": "Submitting your partnership request...",
+        "success": "Request received! We will be in touch shortly.",
+        "error": "There was an issue submitting your request. Please try again."
+      }
+    },
+    "ReferralForm": {
+      "badge": "Benefits of referring your clients to MyLoanDesk",
+      "heading": "Refer your client for quick pre-approval",
+      "subheading": "Receive exclusive, generous benefits when you use the form below to refer your borrowers to us, and we get your clients pre-approved for financing.",
+      "instruction": "Please complete the form below, and we'll get your borrower pre-approved!",
+      "success_title": "Referral Received!",
+      "success_desc": "We'll get your borrower pre-approved right away.",
+      "submit_another": "Submit another referral",
+      "fields": {
+        "realtor_name_label": "Realtor First & Last Name *",
+        "realtor_name_required": "Required",
+        "realtor_phone_label": "Realtor Phone Number (Optional)",
+        "realtor_phone_placeholder": "Phone number",
+        "realtor_email_label": "Realtor Email *",
+        "realtor_email_required": "Valid Email Required",
+        "borrower_name_label": "Borrower First & Last Name *",
+        "borrower_name_required": "Required",
+        "borrower_email_label": "Borrower Email *",
+        "borrower_email_required": "Valid Email Required",
+        "borrower_phone_label": "Borrower Phone Number (Optional)",
+        "borrower_phone_placeholder": "Phone number",
+        "details_label": "Let us know more about this borrower, the property, and their financing needs:"
+      },
+      "submit_button": "Submit",
+      "submitting_button": "Submitting Referral...",
+      "toasts": {
+        "loading": "Submitting your referral...",
+        "success": "Referral Received! We'll get your borrower pre-approved.",
+        "error": "There was an issue submitting your referral. Please try again."
+      }
+    }
   }
 }

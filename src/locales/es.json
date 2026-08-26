@@ -1298,5 +1298,429 @@
       "faq_q2_question": "¿Completar este formulario generará una consulta dura en mi crédito?",
       "faq_q2_answer": "No. Llenar el cuestionario inicial no realiza una verificación crediticia dura ni afecta su puntaje de crédito."
     }
+  },
+  "PrivacyPolicy": {
+    "meta": {
+      "title": "Política de Privacidad | MyLoanDesk",
+      "description": "Esta Política de Privacidad describe cómo MyLoanDesk recopila, utiliza, comparte y protege su información personal cuando visita nuestro sitio web, se comunica con nosotros o utiliza nuestros servicios en línea.",
+      "og_title": "Política de Privacidad | MyLoanDesk",
+      "og_description": "Esta Política de Privacidad describe cómo MyLoanDesk recopila, utiliza, comparte y protege su información personal cuando visita nuestro sitio web, se comunica con nosotros o utiliza nuestros servicios en línea.",
+      "og_alt": "Política de Privacidad de MyLoanDesk",
+      "twitter_title": "Política de Privacidad | MyLoanDesk",
+      "twitter_description": "Conozca cómo MyLoanDesk recopila, utiliza y protege su información personal y financiera."
+    },
+    "breadcrumbs": {
+      "home": "Inicio",
+      "privacy_policy": "Política de Privacidad"
+    },
+    "badge": "Legal y Cumplimiento",
+    "heading": "Política de Privacidad",
+    "effective_date_label": "Fecha de Entrada en Vigor:",
+    "effective_date_value": "25 de Julio de 2026",
+    "intro_p1": "MyLoanDesk (\"MyLoanDesk\", \"nosotros\" o \"nuestro\") valora su privacidad y se compromete a proteger la información personal que comparte con nosotros. Esta Política de Privacidad explica cómo recopilamos, usamos, divulgamos, almacenamos y protegemos su información cuando visita nuestro sitio web, se comunica con nosotros, solicita información, solicita financiamiento o utiliza cualquiera de nuestros servicios en línea.",
+    "intro_p2": "Esta Política de Privacidad se aplica a todos los sitios web, páginas de destino, aplicaciones, formularios, calculadoras, portales de clientes y comunicaciones electrónicas operadas por MyLoanDesk y Secured Horizon Financial Group.",
+    "intro_p3": "Al acceder o utilizar nuestro sitio web, usted reconoce que ha leído y comprendido esta Política de Privacidad.",
+    "toc_title": "Contenido",
+    "toc": {
+      "s1": "1. Información que Recopilamos",
+      "s2": "2. Cómo Usamos su Información",
+      "s3": "3. Información que Compartimos",
+      "s4": "4. Autorización de Crédito",
+      "s5": "5. Cookies y Tecnologías de Seguimiento",
+      "s6": "6. Comunicaciones por SMS",
+      "s7": "7. Comunicaciones Asistidas por IA",
+      "s8": "8. Seguridad de Datos",
+      "s9": "9. Retención de Datos",
+      "s10": "10. Sus Derechos de Privacidad",
+      "s11": "11. Derechos de Privacidad de California",
+      "s12": "12. Derechos de Privacidad Europeos (GDPR)",
+      "s13": "13. Privacidad de Menores",
+      "s14": "14. Sitios Web de Terceros",
+      "s15": "15. Cambios a Esta Política",
+      "s16": "16. Contáctenos"
+    },
+    "inquiries_card": {
+      "title": "Consultas y Reclamos",
+      "description": "Si tiene preguntas sobre esta Política de Privacidad o desea ejercer los derechos de privacidad correspondientes, comuníquese con nosotros."
+    },
+    "sections": {
+      "s1": {
+        "title": "1. Información que Recopilamos",
+        "intro": "Según los servicios que solicite, podemos recopilar las siguientes categorías de información:",
+        "personal_title": "Información Personal",
+        "personal_list": [
+          "Nombre completo",
+          "Dirección postal",
+          "Correo electrónico",
+          "Número de teléfono",
+          "Fecha de nacimiento",
+          "Identificación oficial emitida por el gobierno",
+          "Número de Seguro Social o Número de Identificación Fiscal (cuando sea requerido)",
+          "Información laboral",
+          "Nombre del empleador",
+          "Ocupación"
+        ],
+        "financial_title": "Información Financiera",
+        "financial_intro": "Cuando consulta o solicita financiamiento, podemos recopilar:",
+        "financial_list": [
+          "Ingresos",
+          "Activos",
+          "Información de cuentas bancarias",
+          "Deudas existentes",
+          "Obligaciones crediticias",
+          "Información de propiedad de bienes inmuebles",
+          "Saldos de hipotecas",
+          "Información del pago inicial (enganche)",
+          "Documentación financiera que proporcione voluntariamente"
+        ],
+        "property_title": "Información de la Propiedad",
+        "property_list": [
+          "Dirección de la propiedad",
+          "Tipo de propiedad",
+          "Valor estimado de la propiedad",
+          "Estado de ocupación",
+          "Precio de compra",
+          "Monto de préstamo solicitado"
+        ],
+        "technical_title": "Información Técnica",
+        "technical_intro": "Cuando visita nuestro sitio web, podemos recopilar automáticamente:",
+        "technical_list": [
+          "Dirección IP",
+          "Tipo de navegador",
+          "Tipo de dispositivo",
+          "Sistema operativo",
+          "Configuración de idioma",
+          "Zona horaria",
+          "Información sobre el uso del sitio web",
+          "Páginas visitadas",
+          "Fuente de referencia",
+          "Información de sesión"
+        ],
+        "communication_title": "Información de Comunicación",
+        "communication_intro": "Mantenemos registros de comunicaciones que incluyen:",
+        "communication_list": [
+          "Correos electrónicos",
+          "Llamadas telefónicas (donde lo permita la ley)",
+          "Mensajes de texto",
+          "Conversaciones de chat",
+          "Conversaciones con asistentes de IA",
+          "Formularios de contacto",
+          "Programación de citas"
+        ]
+      },
+      "s2": {
+        "title": "2. Cómo Usamos su Información",
+        "intro": "Utilizamos su información para:",
+        "list": [
+          "Responder a consultas",
+          "Evaluar oportunidades de financiamiento",
+          "Procesar solicitudes de hipotecas",
+          "Emparejar a prestatarios con programas de préstamos adecuados",
+          "Verificar identidad",
+          "Prevenir fraudes",
+          "Realizar actividades de suscripción",
+          "Obtener informes de crédito (cuando esté autorizado)",
+          "Ordenar tasaciones",
+          "Coordinar con compañías de títulos",
+          "Comunicar el estado del préstamo",
+          "Mejorar el servicio al cliente",
+          "Mejorar nuestro sitio web",
+          "Analizar el rendimiento del sitio web",
+          "Cumplir con requisitos legales y regulatorios",
+          "Proteger contra fraudes y amenazas de ciberseguridad"
+        ]
+      },
+      "s3": {
+        "title": "3. Información que Compartimos",
+        "p1": "No vendemos su información personal.",
+        "p2": "Podemos compartir su información con proveedores de servicios de confianza según sea necesario para procesar su solicitud, incluidos:",
+        "list": [
+          "Prestamistas mayoristas",
+          "Inversionistas",
+          "Corredores de hipotecas",
+          "Compañías de procesamiento de préstamos",
+          "Suscriptores",
+          "Compañías de títulos",
+          "Agentes de liquidación",
+          "Compañías de gestión de tasaciones",
+          "Agencias de informes crediticios",
+          "Proveedores de certificación de inundaciones",
+          "Proveedores de prevención de fraude",
+          "Proveedores de verificación de identidad",
+          "Proveedores de CRM",
+          "Proveedores de gestión documental",
+          "Proveedores de firma electrónica",
+          "Procesadores de pagos",
+          "Proveedores de alojamiento en la nube",
+          "Asesores legales",
+          "Agencias gubernamentales cuando lo exija la ley"
+        ],
+        "p3": "Se espera que cada destinatario proteja su información de acuerdo con las leyes aplicables."
+      },
+      "s4": {
+        "title": "4. Autorización de Crédito",
+        "p1": "Cuando solicita financiamiento hipotecario, puede autorizarnos a obtener la información necesaria para evaluar su solicitud, que incluye:",
+        "list": [
+          "Informes de crédito del consumidor",
+          "Verificación de empleo",
+          "Verificación de ingresos",
+          "Verificación de activos",
+          "Registros públicos",
+          "Informes de prevención de fraude"
+        ],
+        "p2": "Es posible que se requiera una autorización adicional por escrito antes de obtener ciertos informes."
+      },
+      "s5": {
+        "title": "5. Cookies y Tecnologías de Seguimiento",
+        "p1": "Nuestro sitio web utiliza cookies y tecnologías similares para:",
+        "list1": [
+          "Recordar preferencias",
+          "Mejorar la funcionalidad del sitio web",
+          "Analizar el tráfico del sitio web",
+          "Medir la efectividad publicitaria",
+          "Detectar fraudes",
+          "Mejorar la experiencia del usuario"
+        ],
+        "p2": "Podemos utilizar servicios que incluyen:",
+        "list2": [
+          "Google Analytics",
+          "Google Tag Manager",
+          "Google Ads",
+          "Microsoft Clarity",
+          "Meta Pixel",
+          "LinkedIn Insight Tag",
+          "Tecnologías de seguimiento CRM",
+          "Plataformas de automatización de marketing"
+        ],
+        "p3": "Los visitantes pueden ajustar las preferencias de cookies a través de la configuración de su navegador o nuestra herramienta de Preferencias de Cookies cuando esté disponible."
+      },
+      "s6": {
+        "title": "6. Comunicaciones por SMS",
+        "p1": "Si proporciona su consentimiento, podemos enviarle mensajes de texto sobre:",
+        "list": [
+          "Recordatorios de citas",
+          "Actualizaciones del préstamo",
+          "Documentación solicitada",
+          "Atención al cliente",
+          "Comunicaciones de seguimiento"
+        ],
+        "p2": "La frecuencia de los mensajes varía. Pueden aplicarse tarifas de mensajes y datos.",
+        "p3": "Responda STOP para darse de baja. Responda HELP para obtener ayuda.",
+        "p4": "El consentimiento para recibir mensajes de texto no es una condición para obtener financiamiento."
+      },
+      "s7": {
+        "title": "7. Comunicaciones Asistidas por IA",
+        "p1": "MyLoanDesk puede utilizar tecnologías de inteligencia artificial para:",
+        "list": [
+          "Responder preguntas generales",
+          "Programar citas",
+          "Direccionar consultas",
+          "Ayudar con la recolección de documentos",
+          "Mejorar el servicio al cliente"
+        ],
+        "p2": "Las respuestas generadas por IA son solo informativas y no constituyen decisiones de suscripción, asesoramiento legal, financiero ni aprobación de préstamos.",
+        "p3": "Siempre que corresponda, un profesional hipotecario con licencia revisará su solicitud."
+      },
+      "s8": {
+        "title": "8. Seguridad de Datos",
+        "p1": "Mantenemos medidas de seguridad administrativas, técnicas y físicas diseñadas para proteger su información, que incluyen:",
+        "list": [
+          "Cifrado de datos confidenciales en tránsito donde sea compatible",
+          "Controles de acceso",
+          "Autenticación multifactor para sistemas administrativos",
+          "Monitoreo de seguridad",
+          "Actualizaciones periódicas de software",
+          "Capacitación de empleados",
+          "Evaluaciones de seguridad a proveedores cuando corresponda"
+        ],
+        "p2": "Si bien utilizamos medidas de seguridad comercialmente razonables, ningún método de transmisión por Internet o almacenamiento electrónico es 100% seguro."
+      },
+      "s9": {
+        "title": "9. Retención de Datos",
+        "p1": "Conservamos la información solo durante el tiempo necesario para:",
+        "list": [
+          "Prestar los servicios solicitados",
+          "Completar transacciones hipotecarias",
+          "Cumplir con obligaciones legales y regulatorias",
+          "Resolver disputas",
+          "Hacer cumplir acuerdos",
+          "Mantener registros comerciales"
+        ],
+        "p2": "Los períodos de retención pueden variar según las leyes federales y estatales aplicables."
+      },
+      "s10": {
+        "title": "10. Sus Derechos de Privacidad",
+        "p1": "Dependiendo de dónde resida, puede tener derecho a:",
+        "list": [
+          "Acceder a su información personal",
+          "Corregir información inexacta",
+          "Solicitar la eliminación de cierta información",
+          "Obtener una copia de su información",
+          "Oponerse a ciertas actividades de procesamiento",
+          "Retirar el consentimiento cuando el procesamiento se base en él"
+        ],
+        "p2": "Algunos derechos están sujetos a excepciones legales, incluidas las obligaciones de retención de registros aplicables a las transacciones hipotecarias."
+      },
+      "s11": {
+        "title": "11. Derechos de Privacidad de California",
+        "p1": "Los residentes de California pueden tener derechos adicionales bajo la Ley de Privacidad del Consumidor de California (CCPA), modificada por la Ley de Derechos de Privacidad de California (CPRA), incluido el derecho a conocer, acceder, corregir, eliminar y limitar el uso de cierta información personal, sujeto a excepciones aplicables.",
+        "p2": "Las solicitudes pueden enviarse utilizando la información de contacto a continuación."
+      },
+      "s12": {
+        "title": "12. Derechos de Privacidad Europeos (GDPR)",
+        "p1": "Los visitantes ubicados en el Espacio Económico Europeo, el Reino Unido o Suiza pueden tener derechos adicionales bajo las leyes de protección de datos aplicables, incluido el Reglamento General de Protección de Datos (GDPR).",
+        "p2": "Cuando corresponda, procesamos la información personal con base en una o más bases legales, incluido el consentimiento, la necesidad contractual, el cumplimiento de obligaciones legales o nuestros intereses legítimos."
+      },
+      "s13": {
+        "title": "13. Privacidad de Menores",
+        "p1": "Nuestros servicios están destinados a adultos que buscan servicios financieros y no están dirigidos a menores de 18 años.",
+        "p2": "No recopilamos a sabiendas información personal de niños."
+      },
+      "s14": {
+        "title": "14. Sitios Web de Terceros",
+        "p1": "Nuestro sitio web puede contener enlaces a sitios web de terceros. No somos responsables de las prácticas de privacidad, el contenido o la seguridad de esos sitios web. Le recomendamos revisar sus políticas de privacidad antes de proporcionar información personal."
+      },
+      "s15": {
+        "title": "15. Cambios a Esta Política de Privacidad",
+        "p1": "Podemos actualizar esta Política de Privacidad periódicamente para reflejar cambios en nuestras prácticas, tecnología, requisitos legales u operaciones comerciales.",
+        "p2": "La versión actualizada se publicará en esta página con una Fecha de Entrada en Vigor revisada."
+      },
+      "s16": {
+        "title": "16. Contáctenos",
+        "p1": "Si tiene preguntas sobre esta Política de Privacidad o desea ejercer los derechos de privacidad correspondientes, comuníquese con nosotros:",
+        "company": "MyLoanDesk",
+        "website_label": "Sitio Web:",
+        "website_val": "https://www.myloandesk.com",
+        "email_label": "Correo Electrónico:",
+        "email_val": "info@myloandesk.com",
+        "phone_label": "Teléfono:",
+        "phone_val": "3058916500",
+        "address_label": "Dirección Postal:",
+        "address_val": "1801 NE 123 St, Ste 314\nNorth Miami, FL 33181",
+        "ack": "Al utilizar el sitio web de MyLoanDesk o enviarnos información, usted reconoce que ha leído y comprendido esta Política de Privacidad."
+      }
+    },
+    "schema": {
+      "webpage_name": "Política de Privacidad | MyLoanDesk",
+      "webpage_description": "Política de Privacidad que detalla la recopilación, protección y uso de los datos del consumidor por parte de MyLoanDesk."
+    }
+  },
+  "Realtors": {
+    "meta": {
+      "title": "Programa de Asociación para Agentes Inmobiliarios | MyLoanDesk",
+      "description": "Únase al Programa de Asociación de Agentes Inmobiliarios de MyLoanDesk para cerrar préstamos más rápido y brindar una experiencia fluida a sus clientes. Asóciese con nosotros para soporte de marketing, redes y más.",
+      "og_title": "Programa de Asociación para Agentes Inmobiliarios | MyLoanDesk",
+      "og_description": "Únase al Programa de Asociación de Agentes Inmobiliarios de MyLoanDesk para cerrar préstamos más rápido y brindar una experiencia fluida a sus clientes. Asóciese con nosotros para soporte de marketing, redes y más.",
+      "og_alt": "Programa de Asociación para Agentes Inmobiliarios de MyLoanDesk",
+      "twitter_title": "Programa de Asociación para Agentes Inmobiliarios | MyLoanDesk",
+      "twitter_description": "Asóciese con MyLoanDesk para cierres de préstamos más rápidos, soporte de marketing conjunto y comunicación fluida para agentes de bienes raíces."
+    },
+    "breadcrumbs": {
+      "home": "Inicio",
+      "realtors": "Agentes Inmobiliarios"
+    },
+    "hero": {
+      "badge": "Programa de Asociación para Agentes Inmobiliarios",
+      "headline": "Cierre Préstamos Más Rápido con una Asociación de Prestamista Directo",
+      "subheadline": "Los agentes se unen a nosotros porque es una oportunidad mutuamente beneficiosa. Vamos más allá para brindar una comunicación clara y oportuna y una experiencia de transacción sin complicaciones.",
+      "partner_button": "Asóciese con Nosotros",
+      "refer_button": "Recomendar un Cliente",
+      "card_badge": "Socios de MyLoanDesk",
+      "card_quote": "Elevando juntos la experiencia de compra de vivienda, un cliente a la vez."
+    },
+    "benefits": {
+      "badge": "01 — Beneficios",
+      "headline_start": "Los beneficios de asociarse con",
+      "headline_italic": "MyLoanDesk",
+      "cards": {
+        "networking": {
+          "title": "Oportunidades de Redes y Referidos",
+          "description": "Aproveche patrocinar, organizar conjuntamente o asistir a nuestros seminarios web de finanzas y bienes raíces, eventos comunitarios y empresariales para ampliar su alcance de contactos."
+        },
+        "social": {
+          "title": "Presencia en Redes Sociales",
+          "description": "Mejore su contenido en redes sociales compartiendo nuestras publicaciones cuidadosamente seleccionadas, incluidos consejos de compra y financiamiento, conceptos básicos de hipotecas, noticias del mercado local e información valiosa para sus clientes."
+        },
+        "cobranded": {
+          "title": "Materiales de Marketing de Marca Compartida",
+          "description": "Conviértase en un socio confiable y reconocido de MyLoanDesk.com con su logotipo, foto e información de contacto incluidos en materiales de marketing impresos y digitales seleccionados."
+        },
+        "faster": {
+          "title": "Cierre Préstamos Más Rápido con Asociación Directa",
+          "description": "Como su prestamista asociado, superamos las expectativas habituales para ofrecer una comunicación clara y oportuna, asegurando una experiencia de transacción impecable para sus clientes."
+        }
+      }
+    },
+    "testimonial": {
+      "badge": "02 — Lo que Dicen Nuestros Agentes Asociados",
+      "quote": "“Como agente de bienes raíces, he trabajado con muchos prestamistas, pero colaborar con MyLoanDesk fue la mejor decisión. Tenemos un proceso optimizado, actualizaciones consistentes del mercado y materiales educativos para mis compradores de vivienda, ¡y siempre están felices de cerrar rápido y sin sorpresas! Agradezco tener un socio tan confiable.”",
+      "author_name": "Lindsey Y.",
+      "author_role": "Agente Asociada"
+    },
+    "schema": {
+      "webpage_name": "Programa de Asociación para Agentes Inmobiliarios | MyLoanDesk",
+      "webpage_description": "Oportunidades de asociación directa con prestamistas mayoristas, soporte de marketing de marca compartida y canales de referencia de precalificación para agentes de bienes raíces con licencia.",
+      "service_name": "Programa de Asociación y Referidos para Agentes",
+      "service_description": "Programa de préstamos colaborativo para agentes inmobiliarios que ofrece preaprobaciones rápidas, suscripción directa de préstamos mayoristas, material de marketing de marca compartida y eventos de networking organizados conjuntamente.",
+      "service_type": "Asociación de Préstamos Hipotecarios"
+    },
+    "PartnerForm": {
+      "badge": "Únase a Nuestra Red",
+      "heading": "¡Trabajemos Juntos!",
+      "subheading": "Complete el siguiente formulario y nos pondremos en contacto con usted.",
+      "success_title": "¡Gracias por contactarnos!",
+      "success_desc": "Hemos recibido su formulario y nos comunicaremos en breve.",
+      "submit_another": "Enviar otra solicitud",
+      "fields": {
+        "first_name_label": "Nombre *",
+        "first_name_required": "El nombre es obligatorio",
+        "last_name_label": "Apellido *",
+        "last_name_required": "El apellido es obligatorio",
+        "email_label": "Correo Electrónico *",
+        "email_required": "El correo electrónico es obligatorio",
+        "email_invalid": "Se requiere un correo electrónico válido",
+        "phone_label": "Número de Teléfono (Opcional)",
+        "phone_placeholder": "Número de teléfono",
+        "message_label": "Cuéntenos cómo podemos ser el mejor socio prestamista para usted:"
+      },
+      "submit_button": "Enviar",
+      "submitting_button": "Enviando...",
+      "toasts": {
+        "loading": "Enviando su solicitud de asociación...",
+        "success": "¡Solicitud recibida! Nos pondremos en contacto en breve.",
+        "error": "Hubo un problema al enviar su solicitud. Por favor intente de nuevo."
+      }
+    },
+    "ReferralForm": {
+      "badge": "Beneficios de referir a sus clientes a MyLoanDesk",
+      "heading": "Refiera a su cliente para una rápida preaprobación",
+      "subheading": "Reciba beneficios exclusivos y generosos cuando utilice el formulario a continuación para referirnos a sus prestatarios y obtengamos la preaprobación de financiamiento para sus clientes.",
+      "instruction": "¡Complete el siguiente formulario y preaprobaremos a su prestatario!",
+      "success_title": "¡Referencia Recibida!",
+      "success_desc": "Preaprobaremos a su prestatario de inmediato.",
+      "submit_another": "Enviar otra referencia",
+      "fields": {
+        "realtor_name_label": "Nombre y Apellido del Agente *",
+        "realtor_name_required": "Obligatorio",
+        "realtor_phone_label": "Número de Teléfono del Agente (Opcional)",
+        "realtor_phone_placeholder": "Número de teléfono",
+        "realtor_email_label": "Correo Electrónico del Agente *",
+        "realtor_email_required": "Se requiere un correo electrónico válido",
+        "borrower_name_label": "Nombre y Apellido del Prestatario *",
+        "borrower_name_required": "Obligatorio",
+        "borrower_email_label": "Correo Electrónico del Prestatario *",
+        "borrower_email_required": "Se requiere un correo electrónico válido",
+        "borrower_phone_label": "Número de Teléfono del Prestatario (Opcional)",
+        "borrower_phone_placeholder": "Número de teléfono",
+        "details_label": "Cuéntenos más sobre este prestatario, la propiedad y sus necesidades de financiamiento:"
+      },
+      "submit_button": "Enviar",
+      "submitting_button": "Enviando Referencia...",
+      "toasts": {
+        "loading": "Enviando su referencia...",
+        "success": "¡Referencia recibida! Preaprobaremos a su prestatario.",
+        "error": "Hubo un problema al enviar su referencia. Por favor intente de nuevo."
+      }
+    }
   }
 }
