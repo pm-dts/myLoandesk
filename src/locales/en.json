@@ -3088,5 +3088,500 @@
         "explore_button": "Explore Your Medical Professional Loan Options"
       }
     }
+  },
+  "TwoOneBuydown": {
+    "meta": {
+      "title": "2/1 Buydown Mortgage Loans - Lower Your Rate for 2 Years | MyLoanDesk",
+      "description": "Ease into your mortgage payments with a 2/1 temporary buydown. Enjoy interest rates 2% lower in year 1 and 1% lower in year 2, funded via seller or builder credits.",
+      "og_title": "2/1 Buydown Mortgage Program | MyLoanDesk",
+      "og_description": "Lower your mortgage payment for the first two years. Funded by sellers, builders, or lenders as a payment subsidy.",
+      "og_alt": "2/1 Buydown Mortgage Program - MyLoanDesk",
+      "twitter_title": "2/1 Buydown Mortgage Program | MyLoanDesk",
+      "twitter_description": "Lower your mortgage payment for the first two years. Funded by sellers, builders, or lenders as a payment subsidy."
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "loan_programs": "Loan Programs",
+      "buydown": "2/1 Buydown Loans"
+    },
+    "hero": {
+      "badge": "Temporary Rate Subsidy Program",
+      "title_main": "2/1 Buydown",
+      "title_sub": "Lower Your Rate for the First Two Years",
+      "description": "Ease into your mortgage payment. Start at a reduced rate, step up gradually, and give your budget room to breathe while your income (or the rate environment) catches up.",
+      "cta_quote": "See If a 2/1 Buydown Fits Your Loan",
+      "cta_calc": "Calculate My Buydown Savings"
+    },
+    "overview": {
+      "badge": "01 — Overview",
+      "heading": "What Is a 2/1 Buydown?",
+      "p1": "A 2/1 buydown is a temporary rate reduction on your mortgage that lowers your interest rate and your monthly payment — for the first two years of the loan, before stepping up to the permanent note rate in year three.",
+      "points": {
+        "year1_label": "Year 1:",
+        "year1_text": "Rate is 2% below your note rate.",
+        "year2_label": "Year 2:",
+        "year2_text": "Rate is 1% below your note rate.",
+        "year3_label": "Year 3 onward:",
+        "year3_text": "Rate returns to the permanent, fixed note rate for the remaining life of the loan."
+      },
+      "p2": "The buydown is funded upfront — usually by the seller, builder, or lender as a credit held in an escrow-style account that subsidizes your payment during years one and two. Your loan itself is a standard fixed-rate mortgage; only the effective payment in the first two years is reduced.",
+      "example_card": {
+        "title": "How It Works — Example",
+        "subtitle": "On a $500,000 loan at a 6% note rate:",
+        "th_year": "Year",
+        "th_rate": "Effective Rate",
+        "th_payment": "Approx. Monthly P&I",
+        "row1_year": "Year 1",
+        "row1_rate": "4.00%",
+        "row1_payment": "~$2,387",
+        "row2_year": "Year 2",
+        "row2_rate": "5.00%",
+        "row2_payment": "~$2,684",
+        "row3_year": "Year 3+",
+        "row3_rate": "6.00% (note rate)",
+        "row3_payment": "~$2,998",
+        "footnote": "* Figures are illustrative only and will vary based on loan amount, term, and actual rate used for concept purposes, not a quote. The difference between the reduced payments and the full note-rate payment during years 1 and 2 is covered by the buydown funds, not by you."
+      }
+    },
+    "video_section": {
+      "badge": "Video Breakdown",
+      "heading": "See How a 2/1 Buydown Works",
+      "subheading": "Lower your mortgage payment during your first two years of homeownership with this simple, step-by-step breakdown."
+    },
+    "suitability_advantages": {
+      "suitability": {
+        "badge": "02 — Suitability",
+        "heading": "Who a 2/1 Buydown Is For",
+        "items": [
+          "Buyers expecting income growth over the next two years and wanting lower payments now",
+          "Buyers in a high-rate environment who plan to refinance once rates drop",
+          "Buyers negotiating seller or builder concessions who'd rather apply them to rate than price",
+          "First-time homebuyers easing into full mortgage payments gradually",
+          "Buyers who want breathing room during a move, renovation, or transition period"
+        ]
+      },
+      "advantages": {
+        "badge": "03 — Advantages",
+        "heading": "Key Benefits",
+        "items": [
+          "Lower payments in years 1 and 2 — meaningful monthly savings when it matters most",
+          "No change to the loan's structure — it's a standard fixed-rate mortgage underneath",
+          "Can be funded by the seller or builder — often negotiated as part of the purchase, at no cost to the buyer",
+          "No prepayment penalty for paying off early or refinancing — if rates drop, you're not locked in",
+          "Predictable step-up schedule — you know exactly what your payment will be each year going in"
+        ]
+      }
+    },
+    "funding_options": {
+      "badge": "04 — Funding Options",
+      "heading": "Who Typically Funds the Buydown",
+      "cards": {
+        "seller": {
+          "source": "Seller",
+          "desc": "Common in a buyer's market — seller offers the buydown as a concession instead of a price reduction."
+        },
+        "builder": {
+          "source": "Builder",
+          "desc": "New construction builders often offer buydowns as a purchase incentive."
+        },
+        "lender": {
+          "source": "Lender",
+          "desc": "Some lenders offer lender-paid buydowns as a promotional incentive."
+        },
+        "buyer": {
+          "source": "Buyer",
+          "desc": "Buyers can also fund their own buydown out of pocket if desired."
+        }
+      }
+    },
+    "comparison_table": {
+      "badge": "05 — Comparison",
+      "heading": "2/1 Buydown vs. Permanent Rate Buydown (Discount Points)",
+      "th_feature": "Feature",
+      "th_buydown": "2/1 Buydown",
+      "th_points": "Discount Points",
+      "rows": {
+        "duration": {
+          "feature": "Duration",
+          "buydown": "Temporary — 2 years",
+          "points": "Permanent — life of loan"
+        },
+        "reduction": {
+          "feature": "Rate reduction",
+          "buydown": "Steps up over 2 years",
+          "points": "Fixed reduction for entire term"
+        },
+        "best_for": {
+          "feature": "Best for",
+          "buydown": "Short-term payment relief, rate-drop bets",
+          "points": "Buyers keeping the loan long-term"
+        },
+        "cost": {
+          "feature": "Cost structure",
+          "buydown": "Upfront funds held in escrow",
+          "points": "Paid upfront to permanently buy down rate"
+        }
+      }
+    },
+    "requirements_table": {
+      "badge": "06 — Parameters",
+      "heading": "Typical Requirements",
+      "th_factor": "Factor",
+      "th_range": "Typical Range",
+      "rows": {
+        "types": {
+          "factor": "Loan types",
+          "range": "Conventional, FHA, VA (program-dependent)"
+        },
+        "occupancy": {
+          "factor": "Occupancy",
+          "range": "Primary residence most common; some programs allow second homes"
+        },
+        "qualification": {
+          "factor": "Qualification",
+          "range": "Borrower typically must qualify at the note rate, not the bought-down rate"
+        },
+        "source": {
+          "factor": "Funding source",
+          "range": "Seller, builder, lender, or buyer"
+        }
+      },
+      "footnote": "* Exact requirements vary by lender and loan program; these are general industry ranges."
+    },
+    "faq": {
+      "badge": "07 — Clarity",
+      "heading": "Frequently Asked Questions",
+      "items": [
+        {
+          "q": "Do I need to qualify at the reduced rate or the full note rate?",
+          "a": "Most programs require you to qualify at the full note rate, since that's the rate you'll eventually pay. This ensures the payment is sustainable once the buydown period ends."
+        },
+        {
+          "q": "What happens if I refinance or sell before the two years are up?",
+          "a": "Any unused buydown funds are typically applied to your loan balance or, depending on the program, may be forfeited — ask your loan officer how your specific program handles this."
+        },
+        {
+          "q": "Is a 2/1 buydown the same as an adjustable-rate mortgage (ARM)?",
+          "a": "No. Your loan remains fixed-rate for its entire term. Only the effective payment in years 1 and 2 is temporarily reduced through subsidized funds — the rate isn't adjusting based on the market."
+        },
+        {
+          "q": "Can I combine a 2/1 buydown with other rate programs?",
+          "a": "This depends on the lender and loan program — your loan officer can review what can be layered together."
+        },
+        {
+          "q": "Who pays for the buydown?",
+          "a": "It's most commonly negotiated as a seller or builder concession, but lenders and buyers can also fund it depending on the situation."
+        }
+      ]
+    },
+    "bottom_cta": {
+      "heading": "Ready to Ease Into Your Payment?",
+      "subheading": "Talk to a MyLoanDesk loan officer to see if a 2/1 buydown makes sense for your purchase, and what it could save you in the first two years.",
+      "cta_advisor": "Talk to a Loan Officer",
+      "cta_calc": "Calculate My Buydown Savings"
+    },
+    "schema": {
+      "webpage_name": "2/1 Buydown Mortgage Loans | MyLoanDesk",
+      "webpage_description": "Comprehensive guide and payment savings calculator for 2/1 temporary rate buydown mortgage programs.",
+      "product_name": "2/1 Buydown Mortgage Loan",
+      "product_description": "A fixed-rate mortgage with temporary rate subsidies lowering effective interest rates by 2% in year one and 1% in year two.",
+      "faq_q1_question": "Do I need to qualify at the reduced rate or the full note rate?",
+      "faq_q1_answer": "Most programs require you to qualify at the full note rate, since that's the rate you'll eventually pay. This ensures the payment is sustainable once the buydown period ends.",
+      "faq_q2_question": "What happens if I refinance or sell before the two years are up?",
+      "faq_q2_answer": "Any unused buydown funds held in escrow are typically applied to reduce your remaining loan principal balance upon payoff or refinance.",
+      "faq_q3_question": "Is a 2/1 buydown the same as an adjustable-rate mortgage (ARM)?",
+      "faq_q3_answer": "No. Your underlying mortgage is a standard fixed-rate loan. Only the effective payment in years 1 and 2 is subsidized via escrow funds; the interest rate does not fluctuate with financial markets.",
+      "faq_q4_question": "Who typically pays for the 2/1 buydown?",
+      "faq_q4_answer": "A 2/1 buydown is most commonly funded as an upfront seller or home builder credit concession, though lenders and buyers can also provide the subsidy.",
+      "faq_q5_question": "Can I combine a 2/1 buydown with Conventional, FHA, and VA loans?",
+      "faq_q5_answer": "Yes. 2/1 temporary buydowns can be structured across Conventional, FHA, and VA home loan programs subject to specific lender and agency concession limits."
+    },
+    "calculator": {
+      "badge": "Interactive Buydown Estimator",
+      "heading": "Calculate Your 2/1 Buydown Savings",
+      "subheading": "See your exact estimated payment step-up and total savings over the first two years.",
+      "loan_amount_label": "Loan Amount ($)",
+      "loan_amount_placeholder": "e.g. 500000",
+      "note_rate_label": "Permanent Note Rate (%)",
+      "note_rate_placeholder": "7.0",
+      "submit_button": "Calculate Buydown Schedule",
+      "result_subsidy_title": "Estimated 2-Year Total Payment Subsidy",
+      "result_subsidy_note": "This amount is typically funded upfront by the seller, builder, or lender as an escrow credit.",
+      "year1_tag": "Year 1",
+      "year2_tag": "Year 2",
+      "year3_tag": "Year 3+ (Note Rate)",
+      "effective_rate_label": "Effective Rate:",
+      "note_rate_display_label": "Note Rate:",
+      "per_month": "/ mo"
+    }
+  },
+  "BankStatementLoans": {
+    "meta": {
+      "title": "Bank Statement Mortgages for Self-Employed Borrowers | MyLoanDesk",
+      "description": "Self-employed or business owner? Qualify for a residential or investment property mortgage using 12 or 24 months of personal or business bank deposits instead of tax returns.",
+      "og_title": "Bank Statement Mortgages for Self-Employed Borrowers | MyLoanDesk",
+      "og_description": "Qualify with your bank deposits, not your tax returns. Designed for business owners, 1099 earners, and freelancers.",
+      "og_alt": "Bank Statement Loans for Self-Employed - MyLoanDesk",
+      "twitter_title": "Bank Statement Mortgages for Self-Employed Borrowers | MyLoanDesk",
+      "twitter_description": "Qualify with your bank deposits, not your tax returns. Designed for business owners, 1099 earners, and freelancers."
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "loan_programs": "Loan Programs",
+      "bank_statement": "Bank Statement Loans"
+    },
+    "hero": {
+      "badge": "Self-Employed Mortgage Solutions",
+      "title_main": "Bank Statement Loans",
+      "title_sub": "Qualify With Your Deposits, Not Your Tax Returns",
+      "description": "Self-employed? Business owner? Your tax returns don't tell the full story. We qualify you using what actually hits your bank account.",
+      "cta_quote": "Get Your Bank Statement Loan Quote",
+      "cta_calc": "Estimate My Qualifying Income"
+    },
+    "overview": {
+      "badge": "01 — Overview",
+      "heading": "What Is a Bank Statement Loan?",
+      "p1": "A bank statement loan is a mortgage option for self-employed borrowers who don't fit the traditional W-2/tax-return mold. Instead of using your tax returns to verify income — which often understate what self-employed borrowers actually earn after write-offs and deductions — lenders look at 12 or 24 months of personal or business bank statements to calculate qualifying income based on real cash flow.",
+      "p2": "If you write off a lot of expenses to lower your tax liability, your tax returns may show far less income than you actually bring in. Bank statement loans solve that mismatch.",
+      "highlights_title": "Core Highlights",
+      "highlights": {
+        "cash_flow": {
+          "label": "Cash-Flow Focused:",
+          "text": "Uses 12–24 months of consistent bank deposits to calculate true earning power."
+        },
+        "no_tax_returns": {
+          "label": "No Tax Returns:",
+          "text": "Tax write-offs will no longer limit your mortgage purchasing power."
+        },
+        "flexible_accounts": {
+          "label": "Flexible Account Types:",
+          "text": "Personal or business bank statement options available."
+        }
+      }
+    },
+    "video_section": {
+      "badge": "Video Breakdown",
+      "heading": "See How Bank Statement Loans Work",
+      "subheading": "Discover how self-employed borrowers and business owners can qualify for a mortgage using bank deposits instead of tax returns."
+    },
+    "eligibility_advantages": {
+      "eligibility": {
+        "badge": "02 — Eligibility",
+        "heading": "Who Bank Statement Loans Are For",
+        "items": [
+          "Self-employed borrowers and independent contractors",
+          "Business owners (sole proprietors, LLCs, S-corps, partnerships)",
+          "1099 workers",
+          "Gig economy earners with variable income",
+          "Freelancers and consultants",
+          "Anyone whose tax returns don't reflect true earning power due to deductions"
+        ]
+      },
+      "advantages": {
+        "badge": "03 — Advantages",
+        "heading": "Key Benefits",
+        "items": [
+          "No tax returns required — qualify using bank deposits instead",
+          "No W-2s or pay stubs needed",
+          "Personal or business bank statements accepted — most programs allow either",
+          "12 or 24-month statement options — some lenders offer better pricing with 24 months",
+          "Purchase, refinance, and cash-out options available",
+          "Works for a wide range of self-employment structures"
+        ]
+      }
+    },
+    "process": {
+      "badge": "04 — Process",
+      "heading": "How Bank Statement Loan Qualification Works",
+      "steps": [
+        {
+          "step": "1",
+          "title": "Choose Statement Type",
+          "desc": "Personal bank statements or business bank statements — each is calculated differently."
+        },
+        {
+          "step": "2",
+          "title": "Provide 12 or 24 Months",
+          "desc": "Provide 12 or 24 months of statements. Consistency matters more than a single strong month."
+        },
+        {
+          "step": "3",
+          "title": "Income Calculated from Deposits",
+          "desc": "Personal accounts count most deposits. Business accounts apply an expense factor (commonly ~50%)."
+        },
+        {
+          "step": "4",
+          "title": "Average Monthly Income Set",
+          "desc": "Determined income is used just like traditional income to calculate your DTI."
+        }
+      ]
+    },
+    "account_types": {
+      "badge": "05 — Account Types",
+      "heading": "Personal vs. Business Bank Statements",
+      "th_feature": "Feature",
+      "th_personal": "Personal Statements",
+      "th_business": "Business Statements",
+      "rows": {
+        "account": {
+          "feature": "Whose account",
+          "personal": "Borrower's personal account",
+          "business": "Business operating account"
+        },
+        "expense": {
+          "feature": "Expense factor applied",
+          "personal": "Usually none/minimal",
+          "business": "Typically applied (often ~50%, lender-dependent)"
+        },
+        "best_for": {
+          "feature": "Best for",
+          "personal": "Sole owners who pay themselves via personal account",
+          "business": "Businesses with significant deposits and clear ownership"
+        },
+        "documentation": {
+          "feature": "Documentation",
+          "personal": "Bank statements only",
+          "business": "Bank statements + business ownership verification"
+        }
+      }
+    },
+    "requirements_table": {
+      "badge": "06 — Parameters",
+      "heading": "Typical Bank Statement Loan Requirements",
+      "th_factor": "Factor",
+      "th_range": "Typical Range",
+      "rows": {
+        "history": {
+          "factor": "Statement history",
+          "range": "12–24 months"
+        },
+        "down_payment": {
+          "factor": "Down payment",
+          "range": "10–20%+"
+        },
+        "credit_score": {
+          "factor": "Credit score",
+          "range": "620+ (better pricing at 700+)"
+        },
+        "self_employed_history": {
+          "factor": "Self-employment history",
+          "range": "Typically 2 years (some programs allow 1 year)"
+        },
+        "ownership": {
+          "factor": "Ownership requirement",
+          "range": "Usually 25%+ business ownership"
+        },
+        "property_types": {
+          "factor": "Property types",
+          "range": "Primary, second home, investment"
+        }
+      },
+      "footnote": "* Exact requirements vary by lender and loan program; these are general industry ranges."
+    },
+    "comparison_table": {
+      "badge": "07 — Comparison",
+      "heading": "Bank Statement Loans vs. Traditional Income Verification",
+      "th_feature": "Feature",
+      "th_bank_statement": "Bank Statement Loan",
+      "th_traditional": "Traditional (Full Doc) Loan",
+      "rows": {
+        "qualifies": {
+          "feature": "Qualifies on",
+          "bank_statement": "Bank deposits",
+          "traditional": "Tax returns, W-2s, pay stubs"
+        },
+        "best_for": {
+          "feature": "Best for",
+          "bank_statement": "Self-employed, variable income",
+          "traditional": "W-2 employees, stable documented income"
+        },
+        "tax_returns": {
+          "feature": "Tax returns needed",
+          "bank_statement": "No",
+          "traditional": "Yes"
+        },
+        "write_offs": {
+          "feature": "Write-offs hurt qualifying?",
+          "bank_statement": "No",
+          "traditional": "Often yes"
+        },
+        "calc_method": {
+          "feature": "Income calculation",
+          "bank_statement": "Based on cash flow",
+          "traditional": "Based on reported taxable income"
+        }
+      }
+    },
+    "calculator": {
+      "badge": "Income Estimator",
+      "heading": "Estimate Your Qualifying Income",
+      "subheading": "See how much monthly income lenders might use based on your bank deposits.",
+      "account_type_label": "Statement Account Type",
+      "business_statements": "Business Statements",
+      "personal_statements": "Personal Statements",
+      "total_deposits_label": "Total Deposits Over Period ($)",
+      "total_deposits_placeholder": "e.g. 240000",
+      "history_period_label": "Statement History Period",
+      "option_12": "12 Months of Statements",
+      "option_24": "24 Months of Statements",
+      "expense_factor_label": "Estimated Expense Factor (%) — Standard is ~50%",
+      "expense_factor_note": "Lenders typically deduct ~50% for business overhead unless a CPA letter or P&L supports a lower ratio.",
+      "submit_button": "Calculate Estimated Monthly Income",
+      "result_title": "Estimated Monthly Qualifying Income",
+      "per_month": "/ mo",
+      "result_note": "This estimate will be used alongside your existing monthly debt obligations to determine your Debt-to-Income (DTI) ratio."
+    },
+    "faq": {
+      "badge": "08 — Clarity",
+      "heading": "Frequently Asked Questions",
+      "items": [
+        {
+          "q": "Do I need to be self-employed to qualify?",
+          "a": "Generally yes — bank statement loans are designed for self-employed borrowers and business owners, not traditional W-2 employees."
+        },
+        {
+          "q": "What if my income fluctuates month to month?",
+          "a": "That's expected. Lenders average your deposits over the full 12 or 24-month period, so occasional slow months won't disqualify you."
+        },
+        {
+          "q": "Can I use both personal and business statements?",
+          "a": "Some lenders allow a blend depending on how you receive income. Your loan officer can help determine the best fit."
+        },
+        {
+          "q": "Will large one-time deposits count as income?",
+          "a": "Yes, in some cases. Large one-time deposits may be considered depending on the loan program and the source of the funds. Lenders will review the deposit history and documentation to determine whether the funds can be included as qualifying income."
+        },
+        {
+          "q": "Is 24 months of statements always required?",
+          "a": "No — many lenders offer 12-month programs, though 24 months can sometimes result in better pricing."
+        },
+        {
+          "q": "How long do I need to have been self-employed?",
+          "a": "Most programs require 2 years, though some allow as little as 1 year with additional documentation."
+        }
+      ]
+    },
+    "bottom_cta": {
+      "heading": "Ready to See What You Qualify For?",
+      "subheading": "Talk to a MyLoanDesk loan officer to find out which bank statement program fits your income, and how much you could qualify for.",
+      "cta_advisor": "Talk to a Loan Officer",
+      "cta_calc": "Estimate My Qualifying Income"
+    },
+    "schema": {
+      "webpage_name": "Bank Statement Loans | MyLoanDesk",
+      "webpage_description": "Comprehensive guide and deposit calculation tools for self-employed bank statement mortgage programs.",
+      "product_name": "Bank Statement Mortgage Loan",
+      "product_description": "A Non-QM mortgage program that qualifies self-employed borrowers using 12 to 24 months of business or personal bank deposits without tax returns.",
+      "faq_q1_question": "Do I need to be self-employed to qualify for a bank statement loan?",
+      "faq_q1_answer": "Generally yes. Bank statement mortgage programs are specifically structured for self-employed individuals, 1099 contractors, freelancers, and business owners who write off expenses on their tax returns.",
+      "faq_q2_question": "Can I use both personal and business bank statements?",
+      "faq_q2_answer": "Yes. Lenders accept either 12 to 24 months of personal statements (typically calculated at 100% of eligible deposits) or business statements (where an expense factor, typically around 50%, is applied).",
+      "faq_q3_question": "How are monthly fluctuations in income handled?",
+      "faq_q3_answer": "Lenders average all qualifying deposits over the 12 or 24-month timeframe to determine a stable monthly qualifying income, meaning occasional seasonal dips won't automatically disqualify you.",
+      "faq_q4_question": "Do large one-time deposits count as qualifying income?",
+      "faq_q4_answer": "Large one-time deposits may be counted depending on the loan program and clear documentation showing the funds originated from regular business revenue.",
+      "faq_q5_question": "What is the minimum credit score required for bank statement loans?",
+      "faq_q5_answer": "Most bank statement programs accept credit scores starting at 620, with optimal terms and higher LTV ratios available for scores above 700."
+    }
   }
 }

@@ -52,7 +52,7 @@ export async function getHomeMetadata(locale: "en" | "es"): Promise<Metadata> {
     openGraph: {
       title: isEs
         ? "MyLoanDesk | Compare Tasas Hipotecarias y Préstamos en EE. UU."
-        : "MyLoanDesk | Compare Wholesale Mortgage Rates & Home Loan Options",
+        : "MyLoanDesk | Compare Mortgage Rates & Home Loan Options",
       description: isEs
         ? "Acceda a cientos de soluciones hipotecarias a través de nuestra red nacional. Comparamos opciones y gestionamos cada paso."
         : "Access hundreds of mortgage solutions through our nationwide lending network. We compare options, negotiate competitive rates, and manage every step.",

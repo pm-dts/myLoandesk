@@ -3095,5 +3095,500 @@
         "explore_button": "Explore sus Opciones de Préstamo Médico"
       }
     }
+  },
+  "TwoOneBuydown": {
+    "meta": {
+      "title": "Préstamos Hipotecarios con Reducción 2/1 (Buydown) | MyLoanDesk",
+      "description": "Facilite sus pagos hipotecarios con un buydown temporal 2/1. Disfrute de tasas 2% más bajas en el año 1 y 1% más bajas en el año 2, financiadas mediante créditos del vendedor o constructor.",
+      "og_title": "Programa Hipotecario con Reducción 2/1 (Buydown) | MyLoanDesk",
+      "og_description": "Reduzca su pago hipotecario durante los primeros dos años. Financiado por vendedores, constructores o prestamistas como subsidio de pago.",
+      "og_alt": "Programa Hipotecario 2/1 Buydown - MyLoanDesk",
+      "twitter_title": "Programa Hipotecario con Reducción 2/1 (Buydown) | MyLoanDesk",
+      "twitter_description": "Reduzca su pago hipotecario durante los primeros dos años. Financiado por vendedores, constructores o prestamistas como subsidio de pago."
+    },
+    "breadcrumbs": {
+      "home": "Inicio",
+      "loan_programs": "Programas de Préstamos",
+      "buydown": "Préstamos 2/1 Buydown"
+    },
+    "hero": {
+      "badge": "Programa de Subsidio Temporal de Tasa",
+      "title_main": "Reducción 2/1 (Buydown)",
+      "title_sub": "Reduzca su Tasa Durante los Primeros Dos Años",
+      "description": "Inicie con comodidad su pago hipotecario. Comience con una tasa reducida, aumente gradualmente y dé espacio a su presupuesto mientras sus ingresos (o el entorno de tasas) se adaptan.",
+      "cta_quote": "Vea si un Buydown 2/1 se Adapta a su Préstamo",
+      "cta_calc": "Calcular mis Ahorros de Buydown"
+    },
+    "overview": {
+      "badge": "01 — Resumen",
+      "heading": "¿Qué es una Reducción de Tasa 2/1 (Buydown)?",
+      "p1": "Un buydown 2/1 es una reducción temporal de la tasa de su hipoteca que disminuye su interés y su cuota mensual durante los primeros dos años del préstamo, antes de regresar a la tasa permanente de la nota en el año tres.",
+      "points": {
+        "year1_label": "Año 1:",
+        "year1_text": "La tasa es un 2% inferior a la tasa de su nota.",
+        "year2_label": "Año 2:",
+        "year2_text": "La tasa es un 1% inferior a la tasa de su nota.",
+        "year3_label": "Año 3 en adelante:",
+        "year3_text": "La tasa regresa a la tasa fija permanente de la nota por el resto del plazo del préstamo."
+      },
+      "p2": "El buydown se financia por adelantado, generalmente mediante una concesión del vendedor, constructor o prestamista en una cuenta en custodia que subsidia su pago durante los años uno y dos. El préstamo subyacente es una hipoteca estándar de tasa fija; solo se reduce el pago efectivo inicial.",
+      "example_card": {
+        "title": "¿Cómo Funciona? — Ejemplo",
+        "subtitle": "En un préstamo de $500,000 con una tasa de nota del 6%:",
+        "th_year": "Año",
+        "th_rate": "Tasa Efectiva",
+        "th_payment": "P&I Mensual Aprox.",
+        "row1_year": "Año 1",
+        "row1_rate": "4.00%",
+        "row1_payment": "~$2,387",
+        "row2_year": "Año 2",
+        "row2_rate": "5.00%",
+        "row2_payment": "~$2,684",
+        "row3_year": "Año 3+",
+        "row3_rate": "6.00% (tasa de nota)",
+        "row3_payment": "~$2,998",
+        "footnote": "* Las cifras son solo ilustrativas y variarán según el monto, plazo y tasa real. La diferencia entre los pagos reducidos y el pago completo durante los años 1 y 2 está cubierta por los fondos del buydown, no por usted."
+      }
+    },
+    "video_section": {
+      "badge": "Explicación en Video",
+      "heading": "Vea Cómo Funciona un Buydown 2/1",
+      "subheading": "Reduzca su cuota hipotecaria durante sus primeros dos años de propiedad con esta sencilla explicación paso a paso."
+    },
+    "suitability_advantages": {
+      "suitability": {
+        "badge": "02 — Idoneidad",
+        "heading": "¿Para Quién es un Buydown 2/1?",
+        "items": [
+          "Compradores que anticipan aumentos de ingresos en los próximos dos años y buscan pagos reducidos ahora",
+          "Compradores en entornos de tasas elevadas que planean refinanciar cuando las tasas bajen",
+          "Compradores que negocian concesiones del vendedor o constructor y prefieren aplicarlas a la tasa en vez del precio",
+          "Compradores de primera vivienda que desean adaptarse gradualmente a los pagos hipotecarios completos",
+          "Compradores que necesitan alivio financiero durante una mudanza, renovación o período de transición"
+        ]
+      },
+      "advantages": {
+        "badge": "03 — Ventajas",
+        "heading": "Beneficios Clave",
+        "items": [
+          "Pagos más bajos en los años 1 y 2: ahorros mensuales significativos cuando más los necesita",
+          "Sin cambios en la estructura del préstamo: es una hipoteca fija estándar en su base",
+          "Puede ser financiado por el vendedor o constructor: a menudo negociado sin costo para el comprador",
+          "Sin penalización por pago anticipado o refinanciamiento: si las tasas bajan, no queda bloqueado",
+          "Cronograma de pagos predecible: sabe con exactitud cuánto pagará cada año desde el principio"
+        ]
+      }
+    },
+    "funding_options": {
+      "badge": "04 — Opciones de Financiamiento",
+      "heading": "¿Quién Financia Habitualmente el Buydown?",
+      "cards": {
+        "seller": {
+          "source": "Vendedor",
+          "desc": "Frecuente en mercados de compradores: el vendedor ofrece el buydown como concesión en vez de bajar el precio."
+        },
+        "builder": {
+          "source": "Constructor",
+          "desc": "Los constructores de obra nueva suelen ofrecer buydowns como incentivo de compra."
+        },
+        "lender": {
+          "source": "Prestamista",
+          "desc": "Algunos prestamistas ofrecen buydowns financiados como incentivo promocional."
+        },
+        "buyer": {
+          "source": "Comprador",
+          "desc": "Los compradores también pueden financiar su propio buydown de su propio bolsillo si lo prefieren."
+        }
+      }
+    },
+    "comparison_table": {
+      "badge": "05 — Comparación",
+      "heading": "Buydown 2/1 vs. Reducción Permanente de Tasa (Puntos de Descuento)",
+      "th_feature": "Característica",
+      "th_buydown": "Buydown 2/1",
+      "th_points": "Puntos de Descuento",
+      "rows": {
+        "duration": {
+          "feature": "Duración",
+          "buydown": "Temporal — 2 años",
+          "points": "Permanente — vida del préstamo"
+        },
+        "reduction": {
+          "feature": "Reducción de tasa",
+          "buydown": "Aumenta gradualmente en 2 años",
+          "points": "Reducción fija durante todo el plazo"
+        },
+        "best_for": {
+          "feature": "Ideal para",
+          "buydown": "Alivio de pago inicial, expectativa de bajas de tasas",
+          "points": "Compradores que mantendrán el préstamo a largo plazo"
+        },
+        "cost": {
+          "feature": "Estructura de costo",
+          "buydown": "Fondos iniciales mantenidos en custodia",
+          "points": "Pagado por adelantado para reducir permanentemente la tasa"
+        }
+      }
+    },
+    "requirements_table": {
+      "badge": "06 — Parámetros",
+      "heading": "Requisitos Habituales",
+      "th_factor": "Factor",
+      "th_range": "Rango Típico",
+      "rows": {
+        "types": {
+          "factor": "Tipos de préstamo",
+          "range": "Convencional, FHA, VA (según el programa)"
+        },
+        "occupancy": {
+          "factor": "Ocupación",
+          "range": "Residencia principal más común; algunos programas permiten segundas viviendas"
+        },
+        "qualification": {
+          "factor": "Calificación",
+          "range": "El prestatario debe calificar con la tasa de la nota, no con la tasa reducida"
+        },
+        "source": {
+          "factor": "Fuente de fondos",
+          "range": "Vendedor, constructor, prestamista o comprador"
+        }
+      },
+      "footnote": "* Los requisitos exactos varían según el prestamista y programa; estos son rangos generales del sector."
+    },
+    "faq": {
+      "badge": "07 — Claridad",
+      "heading": "Preguntas Frecuentes",
+      "items": [
+        {
+          "q": "¿Debo calificar con la tasa reducida o con la tasa completa de la nota?",
+          "a": "La mayoría de los programas exigen calificar con la tasa completa de la nota, ya que es la que eventualmente pagará. Esto asegura la sostenibilidad de la cuota al terminar el subsidio."
+        },
+        {
+          "q": "¿Qué sucede si refinancio o vendo antes de que pasen los dos años?",
+          "a": "Cualquier fondo no utilizado del buydown generalmente se aplica al saldo de su préstamo o, según el programa, puede liberarse; consulte a su oficial de préstamos sobre su caso."
+        },
+        {
+          "q": "¿Es un buydown 2/1 lo mismo que una hipoteca de tasa ajustable (ARM)?",
+          "a": "No. Su préstamo sigue siendo de tasa fija durante todo el plazo. Solo el pago efectivo de los años 1 y 2 se reduce mediante fondos subsidiados; la tasa no fluctúa con el mercado."
+        },
+        {
+          "q": "¿Puedo combinar un buydown 2/1 con otros programas de tasas?",
+          "a": "Esto depende del prestamista y del programa; su oficial de préstamos puede evaluar qué opciones pueden combinarse."
+        },
+        {
+          "q": "¿Quién paga el buydown?",
+          "a": "Se negocia comúnmente como una concesión del vendedor o constructor, aunque también pueden financiarlo prestamistas y compradores según la operación."
+        }
+      ]
+    },
+    "bottom_cta": {
+      "heading": "¿Listo para Iniciar con Pagos Más Cómodos?",
+      "subheading": "Consulte con un oficial de préstamos de MyLoanDesk para ver si un buydown 2/1 es conveniente para su compra y cuánto podría ahorrar en los dos primeros años.",
+      "cta_advisor": "Hablar con un Oficial de Préstamos",
+      "cta_calc": "Calcular mis Ahorros de Buydown"
+    },
+    "schema": {
+      "webpage_name": "Préstamos Hipotecarios con Reducción 2/1 (Buydown) | MyLoanDesk",
+      "webpage_description": "Guía completa y calculadora de ahorro de pagos para programas de hipotecas con reducción temporal de tasa 2/1.",
+      "product_name": "Préstamo Hipotecario con Reducción 2/1 (Buydown)",
+      "product_description": "Una hipoteca de tasa fija con subsidios temporales que reducen las tasas de interés efectivas en un 2% el primer año y un 1% el segundo año.",
+      "faq_q1_question": "¿Debo calificar con la tasa reducida o con la tasa completa de la nota?",
+      "faq_q1_answer": "La mayoría de los programas exigen calificar con la tasa completa de la nota, ya que es la que eventualmente pagará. Esto asegura la sostenibilidad de la cuota al terminar el subsidio.",
+      "faq_q2_question": "¿Qué sucede si refinancio o vendo antes de que pasen los dos años?",
+      "faq_q2_answer": "Los fondos no utilizados del buydown en custodia generalmente se aplican para reducir el saldo principal restante de su préstamo al liquidar o refinanciar.",
+      "faq_q3_question": "¿Es un buydown 2/1 lo mismo que una hipoteca de tasa ajustable (ARM)?",
+      "faq_q3_answer": "No. Su hipoteca subyacente es un préstamo de tasa fija estándar. Solo el pago efectivo en los años 1 y 2 está subsidiado; la tasa no fluctúa con los mercados financieros.",
+      "faq_q4_question": "¿Quién paga habitualmente el buydown 2/1?",
+      "faq_q4_answer": "Un buydown 2/1 se financia más comúnmente como una concesión de crédito por parte del vendedor o constructor, aunque prestamistas y compradores también pueden aportar el subsidio.",
+      "faq_q5_question": "¿Puedo combinar un buydown 2/1 con préstamos Convencionales, FHA y VA?",
+      "faq_q5_answer": "Sí. Las reducciones temporales 2/1 se pueden estructurar en programas de préstamos para vivienda Convencionales, FHA y VA, según los límites de concesión de cada agencia y prestamista."
+    },
+    "calculator": {
+      "badge": "Estimador Interactivo de Buydown",
+      "heading": "Calcule sus Ahorros con Buydown 2/1",
+      "subheading": "Vea el incremento estimado exacto de sus pagos y los ahorros totales durante los primeros dos años.",
+      "loan_amount_label": "Monto del Préstamo ($)",
+      "loan_amount_placeholder": "ej. 500000",
+      "note_rate_label": "Tasa Permanente de la Nota (%)",
+      "note_rate_placeholder": "7.0",
+      "submit_button": "Calcular Cronograma de Buydown",
+      "result_subsidy_title": "Subsidio Total Estimado de Pagos a 2 Años",
+      "result_subsidy_note": "Este monto generalmente es financiado por adelantado por el vendedor, constructor o prestamista como un crédito en custodia.",
+      "year1_tag": "Año 1",
+      "year2_tag": "Año 2",
+      "year3_tag": "Año 3+ (Tasa de Nota)",
+      "effective_rate_label": "Tasa Efectiva:",
+      "note_rate_display_label": "Tasa de Nota:",
+      "per_month": "/ mes"
+    }
+  },
+  "BankStatementLoans": {
+    "meta": {
+      "title": "Hipotecas por Estados de Cuenta para Independientes | MyLoanDesk",
+      "description": "¿Trabajador independiente o dueño de negocio? Califique para una hipoteca residencial o de inversión usando 12 o 24 meses de depósitos bancarios personales o comerciales en lugar de declaraciones de impuestos.",
+      "og_title": "Hipotecas por Estados de Cuenta para Independientes | MyLoanDesk",
+      "og_description": "Califique con sus depósitos bancarios, no con sus declaraciones de impuestos. Diseñado para dueños de negocios, asalariados 1099 y freelancers.",
+      "og_alt": "Préstamos por Estados de Cuenta para Independientes - MyLoanDesk",
+      "twitter_title": "Hipotecas por Estados de Cuenta para Independientes | MyLoanDesk",
+      "twitter_description": "Califique con sus depósitos bancarios, no con sus declaraciones de impuestos. Diseñado para dueños de negocios, asalariados 1099 y freelancers."
+    },
+    "breadcrumbs": {
+      "home": "Inicio",
+      "loan_programs": "Programas de Préstamos",
+      "bank_statement": "Préstamos por Estados de Cuenta"
+    },
+    "hero": {
+      "badge": "Soluciones Hipotecarias para Independientes",
+      "title_main": "Préstamos por Estados de Cuenta",
+      "title_sub": "Califique con sus Depósitos, No con sus Declaraciones de Impuestos",
+      "description": "¿Trabajador independiente? ¿Dueño de negocio? Sus declaraciones de impuestos no muestran toda la realidad. Le calificamos usando lo que realmente ingresa en su cuenta bancaria.",
+      "cta_quote": "Obtener Cotización de Préstamo por Estados de Cuenta",
+      "cta_calc": "Estimar mi Ingreso de Calificación"
+    },
+    "overview": {
+      "badge": "01 — Resumen",
+      "heading": "¿Qué es un Préstamo por Estados de Cuenta?",
+      "p1": "Un préstamo por estados de cuenta es una opción hipotecaria para prestatarios independientes que no se ajustan al modelo tradicional de formulario W-2 o declaraciones de impuestos. En lugar de utilizar declaraciones tributarias —que suelen reflejar ingresos menores tras aplicar deducciones y gastos de negocio—, los prestamistas evalúan 12 o 24 meses de estados de cuenta personales o comerciales para calcular el ingreso según el flujo de caja real.",
+      "p2": "Si deduce gastos considerables para reducir su carga impositiva, sus declaraciones de impuestos pueden mostrar ingresos muy inferiores a sus ingresos reales. Los préstamos por extractos bancarios resuelven esa discrepancia.",
+      "highlights_title": "Aspectos Principales",
+      "highlights": {
+        "cash_flow": {
+          "label": "Basado en Flujo de Caja:",
+          "text": "Utiliza 12 a 24 meses de depósitos bancarios consistentes para calcular su verdadera capacidad de pago."
+        },
+        "no_tax_returns": {
+          "label": "Sin Declaraciones de Impuestos:",
+          "text": "Las deducciones fiscales ya no limitarán su capacidad de compra hipotecaria."
+        },
+        "flexible_accounts": {
+          "label": "Tipos de Cuenta Flexibles:",
+          "text": "Opciones disponibles con cuentas bancarias personales o comerciales."
+        }
+      }
+    },
+    "video_section": {
+      "badge": "Explicación en Video",
+      "heading": "Vea Cómo Funcionan los Préstamos por Estados de Cuenta",
+      "subheading": "Descubra cómo los trabajadores independientes y dueños de empresas pueden calificar para una hipoteca utilizando depósitos bancarios en lugar de declaraciones de impuestos."
+    },
+    "eligibility_advantages": {
+      "eligibility": {
+        "badge": "02 — Elegibilidad",
+        "heading": "¿Para Quién son los Préstamos por Estados de Cuenta?",
+        "items": [
+          "Trabajadores independientes y contratistas autónomos",
+          "Dueños de empresas (empresas unipersonales, LLC, corporaciones S, sociedades)",
+          "Trabajadores que perciben ingresos bajo formulario 1099",
+          "Profesionales de la economía gig con ingresos variables",
+          "Freelancers y consultores independientes",
+          "Cualquier persona cuyas declaraciones tributarias no reflejen su verdadero poder adquisitivo debido a deducciones"
+        ]
+      },
+      "advantages": {
+        "badge": "03 — Ventajas",
+        "heading": "Beneficios Clave",
+        "items": [
+          "No se requieren declaraciones de impuestos: califique mediante sus depósitos bancarios",
+          "Sin necesidad de formularios W-2 ni recibos de nómina",
+          "Se aceptan extractos bancarios personales o comerciales en la mayoría de los programas",
+          "Opciones de historial de 12 o 24 meses (24 meses suele ofrecer mejores condiciones)",
+          "Disponibles para compras, refinanciamientos y refinanciamientos con retiro de efectivo",
+          "Compatible con una amplia variedad de estructuras empresariales independientes"
+        ]
+      }
+    },
+    "process": {
+      "badge": "04 — Proceso",
+      "heading": "¿Cómo Funciona la Calificación por Estados de Cuenta?",
+      "steps": [
+        {
+          "step": "1",
+          "title": "Seleccione el Tipo de Cuenta",
+          "desc": "Estados de cuenta personales o comerciales: cada uno se calcula de manera diferente."
+        },
+        {
+          "step": "2",
+          "title": "Presente 12 o 24 Meses",
+          "desc": "Presente 12 o 24 meses de extractos. La regularidad de los ingresos es más importante que un solo mes extraordinario."
+        },
+        {
+          "step": "3",
+          "title": "Cálculo de Ingresos por Depósitos",
+          "desc": "Las cuentas personales consideran la mayoría de los depósitos. Las comerciales aplican un factor de gasto (frecuentemente ~50%)."
+        },
+        {
+          "step": "4",
+          "title": "Fijación del Ingreso Mensual Promedio",
+          "desc": "El ingreso determinado se utiliza igual que un ingreso tradicional para calcular su relación deuda-ingreso (DTI)."
+        }
+      ]
+    },
+    "account_types": {
+      "badge": "05 — Tipos de Cuenta",
+      "heading": "Estados de Cuenta Personales vs. Comerciales",
+      "th_feature": "Característica",
+      "th_personal": "Estados de Cuenta Personales",
+      "th_business": "Estados de Cuenta Comerciales",
+      "rows": {
+        "account": {
+          "feature": "Titular de la cuenta",
+          "personal": "Cuenta personal del prestatario",
+          "business": "Cuenta operativa del negocio"
+        },
+        "expense": {
+          "feature": "Factor de gasto aplicado",
+          "personal": "Generalmente nulo o mínimo",
+          "business": "Típicamente aplicado (con frecuencia ~50%, según el prestamista)"
+        },
+        "best_for": {
+          "feature": "Ideal para",
+          "personal": "Propietarios únicos que se pagan mediante cuenta personal",
+          "business": "Empresas con depósitos significativos y estructura de propiedad clara"
+        },
+        "documentation": {
+          "feature": "Documentación",
+          "personal": "Solo estados de cuenta bancarios",
+          "business": "Estados de cuenta + verificación de propiedad del negocio"
+        }
+      }
+    },
+    "requirements_table": {
+      "badge": "06 — Parámetros",
+      "heading": "Requisitos Habituales de Préstamos por Estados de Cuenta",
+      "th_factor": "Factor",
+      "th_range": "Rango Típico",
+      "rows": {
+        "history": {
+          "factor": "Historial de extractos",
+          "range": "12–24 meses"
+        },
+        "down_payment": {
+          "factor": "Pago inicial",
+          "range": "10–20%+"
+        },
+        "credit_score": {
+          "factor": "Puntaje de crédito",
+          "range": "620+ (mejores tasas desde 700+)"
+        },
+        "self_employed_history": {
+          "factor": "Tiempo de trabajo independiente",
+          "range": "Típicamente 2 años (algunos programas admiten 1 año)"
+        },
+        "ownership": {
+          "factor": "Requisito de propiedad empresarial",
+          "range": "Usualmente 25%+ de participación en la empresa"
+        },
+        "property_types": {
+          "factor": "Tipos de propiedad",
+          "range": "Principal, segunda vivienda, inversión"
+        }
+      },
+      "footnote": "* Los requisitos específicos varían según el prestamista y el programa; corresponden a rangos generales del mercado."
+    },
+    "comparison_table": {
+      "badge": "07 — Comparación",
+      "heading": "Préstamos por Estados de Cuenta vs. Verificación Tradicional de Ingresos",
+      "th_feature": "Característica",
+      "th_bank_statement": "Préstamo por Estados de Cuenta",
+      "th_traditional": "Préstamo Tradicional (Documentación Completa)",
+      "rows": {
+        "qualifies": {
+          "feature": "Base de calificación",
+          "bank_statement": "Depósitos bancarios",
+          "traditional": "Declaraciones de impuestos, W-2, recibos de nómina"
+        },
+        "best_for": {
+          "feature": "Ideal para",
+          "bank_statement": "Independientes con ingresos variables",
+          "traditional": "Empleados W-2 con ingresos regulares comprobables"
+        },
+        "tax_returns": {
+          "feature": "¿Requiere declaraciones de impuestos?",
+          "bank_statement": "No",
+          "traditional": "Sí"
+        },
+        "write_offs": {
+          "feature": "¿Las deducciones perjudican la calificación?",
+          "bank_statement": "No",
+          "traditional": "Frecuentemente sí"
+        },
+        "calc_method": {
+          "feature": "Cálculo de ingresos",
+          "bank_statement": "Basado en flujo de caja real",
+          "traditional": "Basado en ingreso neto gravable declarado"
+        }
+      }
+    },
+    "calculator": {
+      "badge": "Estimador de Ingresos",
+      "heading": "Estime su Ingreso de Calificación",
+      "subheading": "Calcule el ingreso mensual estimado que los prestamistas podrían considerar según sus depósitos bancarios.",
+      "account_type_label": "Tipo de Cuenta Bancaria",
+      "business_statements": "Estados de Cuenta Comerciales",
+      "personal_statements": "Estados de Cuenta Personales",
+      "total_deposits_label": "Depósitos Totales en el Período ($)",
+      "total_deposits_placeholder": "ej. 240000",
+      "history_period_label": "Período de Historial de Estados de Cuenta",
+      "option_12": "12 Meses de Extractos",
+      "option_24": "24 Meses de Extractos",
+      "expense_factor_label": "Factor de Gasto Estimado (%) — El estándar es ~50%",
+      "expense_factor_note": "Los prestamistas suelen deducir aproximadamente el 50% por gastos operativos del negocio, salvo que una carta de CPA o estado de pérdidas y ganancias justifique un ratio menor.",
+      "submit_button": "Calcular Ingreso Mensual Estimado",
+      "result_title": "Ingreso Mensual Estimado de Calificación",
+      "per_month": "/ mes",
+      "result_note": "Esta estimación se utilizará junto con sus obligaciones mensuales de deuda para calcular su relación deuda-ingreso (DTI)."
+    },
+    "faq": {
+      "badge": "08 — Claridad",
+      "heading": "Preguntas Frecuentes",
+      "items": [
+        {
+          "q": "¿Debo ser trabajador independiente para calificar?",
+          "a": "Por lo general sí: los préstamos por extractos bancarios están diseñados específicamente para trabajadores autónomos y propietarios de empresas, no para empleados tradicionales bajo W-2."
+        },
+        {
+          "q": "¿Qué sucede si mis ingresos fluctúan mes a mes?",
+          "a": "Es algo habitual. Los prestamistas promedian los depósitos a lo largo de todo el período de 12 o 24 meses, por lo que meses de menor facturación no le descalifican automáticamente."
+        },
+        {
+          "q": "¿Puedo utilizar extractos personales y comerciales al mismo tiempo?",
+          "a": "Algunos prestamistas permiten combinar cuentas según la estructura de sus ingresos. Su oficial de préstamos le indicará la mejor alternativa."
+        },
+        {
+          "q": "¿Los depósitos extraordinarios de una sola vez cuentan como ingreso?",
+          "a": "Sí, en algunos casos. Los depósitos cuantiosos únicos pueden considerarse según el programa y el origen justificado de los fondos mediante la documentación correspondiente."
+        },
+        {
+          "q": "¿Siempre se requieren 24 meses de extractos?",
+          "a": "No: muchos prestamistas ofrecen programas con 12 meses, aunque presentar 24 meses puede dar acceso a tasas más favorables."
+        },
+        {
+          "q": "¿Cuánto tiempo de antigüedad debo tener como independiente?",
+          "a": "La mayoría de los programas exigen 2 años de trayectoria, aunque algunos permiten desde 1 año aportando documentación complementaria."
+        }
+      ]
+    },
+    "bottom_cta": {
+      "heading": "¿Listo para Conocer su Capacidad de Calificación?",
+      "subheading": "Hable con un oficial de préstamos de MyLoanDesk para identificar qué programa por estados de cuenta se adapta mejor a sus ingresos y a cuánto financiamiento puede acceder.",
+      "cta_advisor": "Hablar con un Oficial de Préstamos",
+      "cta_calc": "Estimar mi Ingreso de Calificación"
+    },
+    "schema": {
+      "webpage_name": "Préstamos por Estados de Cuenta | MyLoanDesk",
+      "webpage_description": "Guía completa y herramientas de cálculo de depósitos para programas hipotecarios por extractos bancarios para trabajadores independientes.",
+      "product_name": "Préstamo Hipotecario por Estados de Cuenta",
+      "product_description": "Programa hipotecario Non-QM que califica a prestatarios independientes mediante 12 a 24 meses de depósitos bancarios comerciales o personales sin declaraciones de impuestos.",
+      "faq_q1_question": "¿Debo ser trabajador independiente para calificar a un préstamo por estados de cuenta?",
+      "faq_q1_answer": "Por lo general sí. Los programas hipotecarios por extractos bancarios están estructurados específicamente para trabajadores autónomos, contratistas 1099, freelancers y dueños de empresas que deducen gastos en sus impuestos.",
+      "faq_q2_question": "¿Puedo usar estados de cuenta personales y comerciales?",
+      "faq_q2_answer": "Sí. Los prestamistas aceptan de 12 a 24 meses de extractos personales (generalmente al 100% de depósitos elegibles) o comerciales (donde se aplica un factor de gasto, usualmente de alrededor del 50%).",
+      "faq_q3_question": "¿Cómo se manejan las fluctuaciones mensuales de ingresos?",
+      "faq_q3_answer": "Los prestamistas promedian todos los depósitos calificados durante el período de 12 o 24 meses para fijar un ingreso mensual estable, evitando que bajas temporales descalifiquen al prestatario.",
+      "faq_q4_question": "¿Los depósitos extraordinarios cuentan como ingreso calificado?",
+      "faq_q4_answer": "Los depósitos extraordinarios pueden computarse según el programa de préstamo y la documentación que acredite que proceden de la actividad habitual del negocio.",
+      "faq_q5_question": "¿Cuál es el puntaje de crédito mínimo exigido para préstamos por estados de cuenta?",
+      "faq_q5_answer": "La mayoría de los programas por extractos bancarios admiten puntajes de crédito a partir de 620, con condiciones óptimas y mayores ratios LTV disponibles para puntuaciones superiores a 700."
+    }
   }
 }

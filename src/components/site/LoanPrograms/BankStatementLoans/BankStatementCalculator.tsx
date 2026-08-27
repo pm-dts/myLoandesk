@@ -3,12 +3,19 @@
 import { useState } from "react";
 import { Calculator, DollarSign } from "lucide-react";
 import { sendGTMEvent } from "@next/third-parties/google";
+import { useTranslations } from "next-intl";
+
+interface BankStatementCalculatorProps {
+  pagePath: string;
+  locale?: string;
+}
 
 export default function BankStatementCalculator({
   pagePath,
-}: {
-  pagePath: string;
-}) {
+  locale = "en",
+}: BankStatementCalculatorProps) {
+  const t = useTranslations("BankStatementLoans.calculator");
+
   const [statementType, setStatementType] = useState<"personal" | "business">(
     "business",
   );
@@ -38,9 +45,12 @@ export default function BankStatementCalculator({
         statement_type: statementType,
         calculated_monthly_income: monthlyIncome.toFixed(2),
         page_path: pagePath || "/bank-statement-loans",
+        locale,
       });
     }
   };
+
+  const numberLocale = locale === "es" ? "es-US" : "en-US";
 
   return (
     <section
@@ -50,14 +60,13 @@ export default function BankStatementCalculator({
       <div className="bg-primary-bg border border-line rounded-3xl p-6 sm:p-10 shadow-lg">
         <div className="text-center max-w-xl mx-auto mb-8">
           <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-orange uppercase tracking-wider mb-2">
-            <Calculator size={16} /> Income Estimator
+            <Calculator size={16} /> {t("badge")}
           </div>
           <h3 className="text-2xl sm:text-3xl font-display font-light text-ink">
-            Estimate Your Qualifying Income
+            {t("heading")}
           </h3>
           <p className="text-xs sm:text-sm text-ink-2 mt-2">
-            See how much monthly income lenders might use based on your bank
-            deposits.
+            {t("subheading")}
           </p>
         </div>
 
@@ -65,7 +74,7 @@ export default function BankStatementCalculator({
           {/* Statement Type Radio/Tabs */}
           <div>
             <label className="block text-xs font-semibold uppercase tracking-wider text-ink-2 mb-2 text-center">
-              Statement Account Type
+              {t("account_type_label")}
             </label>
             <div className="grid grid-cols-2 gap-3 max-w-md mx-auto p-1.5 bg-cream/40 border border-line rounded-xl">
               <button
@@ -77,7 +86,7 @@ export default function BankStatementCalculator({
                     : "text-ink hover:text-moss-deep"
                 }`}
               >
-                Business Statements
+                {t("business_statements")}
               </button>
               <button
                 type="button"
@@ -88,7 +97,7 @@ export default function BankStatementCalculator({
                     : "text-ink hover:text-moss-deep"
                 }`}
               >
-                Personal Statements
+                {t("personal_statements")}
               </button>
             </div>
           </div>
@@ -97,7 +106,7 @@ export default function BankStatementCalculator({
             {/* Total Deposits Input */}
             <div>
               <label className="block text-xs font-semibold uppercase tracking-wider text-ink-2 mb-2">
-                Total Deposits Over Period ($)
+                {t("total_deposits_label")}
               </label>
               <div className="relative">
                 <DollarSign
@@ -108,7 +117,7 @@ export default function BankStatementCalculator({
                   type="number"
                   value={totalDeposits}
                   onChange={(e) => setTotalDeposits(e.target.value)}
-                  placeholder="e.g. 240000"
+                  placeholder={t("total_deposits_placeholder")}
                   className="w-full pl-12 pr-4 py-3.5 bg-cream/20 border border-line rounded-xl text-ink text-sm focus:outline-none focus:border-brand-orange transition-colors"
                   required
                 />
@@ -118,15 +127,15 @@ export default function BankStatementCalculator({
             {/* Months Select */}
             <div>
               <label className="block text-xs font-semibold uppercase tracking-wider text-ink-2 mb-2">
-                Statement History Period
+                {t("history_period_label")}
               </label>
               <select
                 value={months}
                 onChange={(e) => setMonths(e.target.value as "12" | "24")}
                 className="w-full px-4 py-3.5 bg-cream/20 border border-line rounded-xl text-ink text-sm focus:outline-none focus:border-brand-orange transition-colors"
               >
-                <option value="12">12 Months of Statements</option>
-                <option value="24">24 Months of Statements</option>
+                <option value="12">{t("option_12")}</option>
+                <option value="24">{t("option_24")}</option>
               </select>
             </div>
           </div>
@@ -135,7 +144,7 @@ export default function BankStatementCalculator({
           {statementType === "business" && (
             <div>
               <label className="block text-xs font-semibold uppercase tracking-wider text-ink-2 mb-2">
-                Estimated Expense Factor (%) — Standard is ~50%
+                {t("expense_factor_label")}
               </label>
               <input
                 type="number"
@@ -148,8 +157,7 @@ export default function BankStatementCalculator({
                 required
               />
               <p className="text-[11px] text-ink-2/70 mt-1.5 italic">
-                Lenders typically deduct ~50% for business overhead unless a CPA
-                letter or P&L supports a lower ratio.
+                {t("expense_factor_note")}
               </p>
             </div>
           )}
@@ -158,25 +166,24 @@ export default function BankStatementCalculator({
             type="submit"
             className="w-full bg-moss-deep text-primary-bg py-3.5 rounded-full font-semibold text-sm sm:text-base hover:bg-moss-darker transition-colors flex items-center justify-center gap-2"
           >
-            Calculate Estimated Monthly Income
+            {t("submit_button")}
           </button>
         </form>
 
         {qualifyingMonthlyIncome !== null && (
           <div className="mt-8 p-6 bg-cream/30 border border-line rounded-2xl text-center animate-in fade-in duration-300">
             <div className="text-xs uppercase tracking-wider text-ink-2 mb-1">
-              Estimated Monthly Qualifying Income
+              {t("result_title")}
             </div>
             <div className="text-4xl font-display font-bold text-moss-deep mb-2">
               $
-              {qualifyingMonthlyIncome.toLocaleString("en-US", {
+              {qualifyingMonthlyIncome.toLocaleString(numberLocale, {
                 maximumFractionDigits: 0,
               })}{" "}
-              / mo
+              {t("per_month")}
             </div>
             <p className="text-xs sm:text-sm text-ink-2 max-w-md mx-auto">
-              This estimate will be used alongside your existing monthly debt
-              obligations to determine your Debt-to-Income (DTI) ratio.
+              {t("result_note")}
             </p>
           </div>
         )}

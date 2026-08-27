@@ -3,8 +3,19 @@
 import { useState } from "react";
 import { Calculator, DollarSign, Percent } from "lucide-react";
 import { sendGTMEvent } from "@next/third-parties/google";
+import { useTranslations } from "next-intl";
 
-export default function BuydownCalculator({ pagePath }: { pagePath: string }) {
+interface BuydownCalculatorProps {
+  pagePath: string;
+  locale?: string;
+}
+
+export default function BuydownCalculator({
+  pagePath,
+  locale = "en",
+}: BuydownCalculatorProps) {
+  const t = useTranslations("TwoOneBuydown.calculator");
+
   const [loanAmount, setLoanAmount] = useState<string>("500000");
   const [noteRate, setNoteRate] = useState<string>("7.0");
   const [calculationResult, setCalculationResult] = useState<{
@@ -68,9 +79,12 @@ export default function BuydownCalculator({ pagePath }: { pagePath: string }) {
         note_rate: rate,
         total_2yr_savings: totalSavings.toFixed(2),
         page_path: pagePath || "/2-1-buydown",
+        locale,
       });
     }
   };
+
+  const numberLocale = locale === "es" ? "es-US" : "en-US";
 
   return (
     <section
@@ -80,14 +94,13 @@ export default function BuydownCalculator({ pagePath }: { pagePath: string }) {
       <div className="bg-primary-bg border border-line rounded-3xl p-6 sm:p-10 shadow-lg">
         <div className="text-center max-w-xl mx-auto mb-8">
           <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-orange uppercase tracking-wider mb-2">
-            <Calculator size={16} /> Interactive Buydown Estimator
+            <Calculator size={16} /> {t("badge")}
           </div>
           <h3 className="text-2xl sm:text-3xl font-display font-light text-ink">
-            Calculate Your 2/1 Buydown Savings
+            {t("heading")}
           </h3>
           <p className="text-xs sm:text-sm text-ink-2 mt-2">
-            See your exact estimated payment step-up and total savings over the
-            first two years.
+            {t("subheading")}
           </p>
         </div>
 
@@ -96,7 +109,7 @@ export default function BuydownCalculator({ pagePath }: { pagePath: string }) {
             {/* Loan Amount Input */}
             <div>
               <label className="block text-xs font-semibold uppercase tracking-wider text-ink-2 mb-2">
-                Loan Amount ($)
+                {t("loan_amount_label")}
               </label>
               <div className="relative">
                 <DollarSign
@@ -107,7 +120,7 @@ export default function BuydownCalculator({ pagePath }: { pagePath: string }) {
                   type="number"
                   value={loanAmount}
                   onChange={(e) => setLoanAmount(e.target.value)}
-                  placeholder="e.g. 500000"
+                  placeholder={t("loan_amount_placeholder")}
                   className="w-full pl-12 pr-4 py-3.5 bg-cream/20 border border-line rounded-xl text-ink text-sm focus:outline-none focus:border-brand-orange transition-colors"
                   required
                 />
@@ -117,7 +130,7 @@ export default function BuydownCalculator({ pagePath }: { pagePath: string }) {
             {/* Note Rate Input */}
             <div>
               <label className="block text-xs font-semibold uppercase tracking-wider text-ink-2 mb-2">
-                Permanent Note Rate (%)
+                {t("note_rate_label")}
               </label>
               <div className="relative">
                 <Percent
@@ -129,7 +142,7 @@ export default function BuydownCalculator({ pagePath }: { pagePath: string }) {
                   step="0.125"
                   value={noteRate}
                   onChange={(e) => setNoteRate(e.target.value)}
-                  placeholder="7.0"
+                  placeholder={t("note_rate_placeholder")}
                   className="w-full pl-4 pr-10 py-3.5 bg-cream/20 border border-line rounded-xl text-ink text-sm focus:outline-none focus:border-brand-orange transition-colors"
                   required
                 />
@@ -141,7 +154,7 @@ export default function BuydownCalculator({ pagePath }: { pagePath: string }) {
             type="submit"
             className="w-full bg-moss-deep text-primary-bg py-3.5 rounded-full font-semibold text-sm sm:text-base hover:bg-moss-darker transition-colors flex items-center justify-center gap-2"
           >
-            Calculate Buydown Schedule
+            {t("submit_button")}
           </button>
         </form>
 
@@ -149,66 +162,65 @@ export default function BuydownCalculator({ pagePath }: { pagePath: string }) {
           <div className="mt-8 p-6 bg-cream/30 border border-line rounded-2xl animate-in fade-in duration-300">
             <div className="text-center mb-6">
               <div className="text-xs uppercase tracking-wider text-ink-2 mb-1">
-                Estimated 2-Year Total Payment Subsidy
+                {t("result_subsidy_title")}
               </div>
               <div className="text-4xl font-display font-bold text-moss-deep">
                 $
-                {calculationResult.totalSavings.toLocaleString("en-US", {
+                {calculationResult.totalSavings.toLocaleString(numberLocale, {
                   maximumFractionDigits: 0,
                 })}
               </div>
               <p className="text-xs text-ink-2 mt-1">
-                This amount is typically funded upfront by the seller, builder,
-                or lender as an escrow credit.
+                {t("result_subsidy_note")}
               </p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 border-t border-line/60 pt-4 text-center">
               <div className="p-3 bg-primary-bg rounded-xl border border-line/50">
                 <div className="text-[11px] uppercase tracking-wider text-brand-orange font-semibold">
-                  Year 1
+                  {t("year1_tag")}
                 </div>
                 <div className="text-xs text-ink-2 mt-0.5">
-                  Effective Rate: {calculationResult.yr1Rate}%
+                  {t("effective_rate_label")} {calculationResult.yr1Rate}%
                 </div>
                 <div className="text-base font-bold text-ink mt-1">
                   ~$
-                  {calculationResult.yr1Payment.toLocaleString("en-US", {
+                  {calculationResult.yr1Payment.toLocaleString(numberLocale, {
                     maximumFractionDigits: 0,
                   })}{" "}
-                  / mo
+                  {t("per_month")}
                 </div>
               </div>
 
               <div className="p-3 bg-primary-bg rounded-xl border border-line/50">
                 <div className="text-[11px] uppercase tracking-wider text-brand-orange font-semibold">
-                  Year 2
+                  {t("year2_tag")}
                 </div>
                 <div className="text-xs text-ink-2 mt-0.5">
-                  Effective Rate: {calculationResult.yr2Rate}%
+                  {t("effective_rate_label")} {calculationResult.yr2Rate}%
                 </div>
                 <div className="text-base font-bold text-ink mt-1">
                   ~$
-                  {calculationResult.yr2Payment.toLocaleString("en-US", {
+                  {calculationResult.yr2Payment.toLocaleString(numberLocale, {
                     maximumFractionDigits: 0,
                   })}{" "}
-                  / mo
+                  {t("per_month")}
                 </div>
               </div>
 
               <div className="p-3 bg-primary-bg rounded-xl border border-line/50">
                 <div className="text-[11px] uppercase tracking-wider text-ink-2 font-semibold">
-                  Year 3+ (Note Rate)
+                  {t("year3_tag")}
                 </div>
                 <div className="text-xs text-ink-2 mt-0.5">
-                  Note Rate: {calculationResult.yr3Rate}%
+                  {t("note_rate_display_label")} {calculationResult.yr3Rate}%
                 </div>
                 <div className="text-base font-bold text-ink mt-1">
                   ~$
-                  {calculationResult.yr3Payment.toLocaleString("en-US", {
+                  {calculationResult.yr3Payment.toLocaleString(numberLocale, {
                     maximumFractionDigits: 0,
                   })}{" "}
-                  / mo
+                  {t("per_month")}
                 </div>
               </div>
             </div>
