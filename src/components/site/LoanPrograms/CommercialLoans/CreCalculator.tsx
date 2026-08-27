@@ -1,8 +1,16 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
-export default function CreCalculator() {
+interface CreCalculatorProps {
+  locale?: string;
+}
+
+export default function CreCalculator({ locale = "en" }: CreCalculatorProps) {
+  const t = useTranslations("CommercialRealEstateLoans.calculator");
+  const numberLocale = locale === "es" ? "es-US" : "en-US";
+
   const [price, setPrice] = useState<string>("");
   const [down, setDown] = useState<string>("15");
   const [rate, setRate] = useState<string>("8.25");
@@ -22,7 +30,11 @@ export default function CreCalculator() {
     !isNaN(numRate) &&
     numRate > 0;
 
-  const fmt = (n: number) => "$" + Math.round(n).toLocaleString("en-US");
+  const fmt = (n: number) =>
+    "$" +
+    Math.round(n).toLocaleString(numberLocale, {
+      maximumFractionDigits: 0,
+    });
 
   const monthlyPandI = (
     loanAmount: number,
@@ -45,26 +57,26 @@ export default function CreCalculator() {
   const getLtvNote = () => {
     if (!isValid) return "";
     if (numDown < 10) {
-      return "Below typical minimums — even SBA-backed programs generally expect at least 10% down.";
+      return t("ltv_note_low");
     } else if (numDown < 20) {
-      return "Within range for SBA-backed programs, which can go as low as 10% down.";
+      return t("ltv_note_sba");
     } else {
-      return "Within range for both SBA-backed and conventional commercial financing.";
+      return t("ltv_note_full");
     }
   };
 
   return (
     <div className="relative overflow-hidden rounded-2xl bg-[#1C1C1C] p-[30px] text-white before:pointer-events-none before:absolute before:-right-[60px] before:-top-[60px] before:h-[200px] before:w-[200px] before:rounded-full before:bg-[radial-gradient(circle,rgba(217,114,44,0.35),transparent_70%)]">
       <div className="relative z-10 font-sans text-xs font-bold uppercase tracking-[0.08em] text-[#D9B896]">
-        CRE Payment &amp; LTV Estimator
+        {t("badge")}
       </div>
       <div className="relative z-10 mb-5 text-[13px] text-[#C9C4B8]">
-        See your estimated payment and loan-to-value.
+        {t("subheading")}
       </div>
 
       <div className="relative z-10 mb-3.5">
         <label className="mb-1.5 block text-[12.5px] font-semibold text-[#C9C4B8]">
-          Property value / purchase price
+          {t("price_label")}
         </label>
         <div className="relative">
           <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 font-sans text-[15px] text-[#8F8A7C]">
@@ -75,7 +87,7 @@ export default function CreCalculator() {
             inputMode="numeric"
             value={price}
             onChange={(e) => setPrice(e.target.value)}
-            placeholder="1,200,000"
+            placeholder={t("price_placeholder")}
             className="w-full rounded-[10px] border border-white/20 bg-white/[0.07] py-3 pl-[30px] pr-3.5 font-sans text-[15px] font-semibold text-white outline-none transition duration-150 placeholder:text-[#6E6A5F] focus:border-[#D9722C] focus:bg-white/10"
           />
         </div>
@@ -84,7 +96,7 @@ export default function CreCalculator() {
       <div className="relative z-10 grid grid-cols-2 gap-3">
         <div className="mb-3.5">
           <label className="mb-1.5 block text-[12.5px] font-semibold text-[#C9C4B8]">
-            Down payment
+            {t("down_label")}
           </label>
           <div className="relative">
             <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 font-sans text-[15px] text-[#8F8A7C]">
@@ -95,14 +107,14 @@ export default function CreCalculator() {
               inputMode="numeric"
               value={down}
               onChange={(e) => setDown(e.target.value)}
-              placeholder="15"
+              placeholder={t("down_placeholder")}
               className="w-full rounded-[10px] border border-white/20 bg-white/[0.07] py-3 pl-[26px] pr-3.5 font-sans text-[15px] font-semibold text-white outline-none transition duration-150 placeholder:text-[#6E6A5F] focus:border-[#D9722C] focus:bg-white/10"
             />
           </div>
         </div>
         <div className="mb-3.5">
           <label className="mb-1.5 block text-[12.5px] font-semibold text-[#C9C4B8]">
-            Est. rate
+            {t("rate_label")}
           </label>
           <div className="relative">
             <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 font-sans text-[15px] text-[#8F8A7C]">
@@ -114,7 +126,7 @@ export default function CreCalculator() {
               inputMode="decimal"
               value={rate}
               onChange={(e) => setRate(e.target.value)}
-              placeholder="8.25"
+              placeholder={t("rate_placeholder")}
               className="w-full rounded-[10px] border border-white/20 bg-white/[0.07] py-3 pl-[26px] pr-3.5 font-sans text-[15px] font-semibold text-white outline-none transition duration-150 placeholder:text-[#6E6A5F] focus:border-[#D9722C] focus:bg-white/10"
             />
           </div>
@@ -123,7 +135,7 @@ export default function CreCalculator() {
 
       <div className="relative z-10 mb-3.5">
         <label className="mb-1.5 block text-[12.5px] font-semibold text-[#C9C4B8]">
-          Amortization
+          {t("amortization_label")}
         </label>
         <select
           value={term}
@@ -131,13 +143,13 @@ export default function CreCalculator() {
           className="w-full rounded-[10px] border border-white/20 bg-white/[0.07] px-3.5 py-3 font-sans text-[15px] font-semibold text-white outline-none transition duration-150 focus:border-[#D9722C] focus:bg-white/10"
         >
           <option value="25" className="bg-[#1C1C1C] text-white">
-            25 years
+            25 {t("years_suffix")}
           </option>
           <option value="20" className="bg-[#1C1C1C] text-white">
-            20 years
+            20 {t("years_suffix")}
           </option>
           <option value="10" className="bg-[#1C1C1C] text-white">
-            10 years
+            10 {t("years_suffix")}
           </option>
         </select>
       </div>
@@ -145,19 +157,20 @@ export default function CreCalculator() {
       {isValid && (
         <div className="relative z-10 mt-5 border-t border-white/15 pt-5 text-[13.5px] text-[#C9C4B8]">
           <div className="flex items-baseline justify-between py-1.5">
-            <span>Loan amount</span>
+            <span>{t("loan_amount_label")}</span>
             <strong className="font-sans text-[15px] font-bold text-white">
               {fmt(loanAmount)}
             </strong>
           </div>
           <div className="mt-1.5 flex items-baseline justify-between border-t border-white/15 pt-3">
-            <span>Est. monthly payment</span>
+            <span>{t("monthly_payment_label")}</span>
             <strong className="font-sans text-[19px] font-bold text-[#F5C89A]">
-              {fmt(payment)}/mo
+              {fmt(payment)}
+              {t("per_month")}
             </strong>
           </div>
           <div className="flex items-baseline justify-between py-1.5">
-            <span>Loan-to-value (LTV)</span>
+            <span>{t("ltv_label")}</span>
             <strong className="font-sans text-[15px] font-bold text-white">
               {ltv.toFixed(0)}%
             </strong>

@@ -3961,5 +3961,562 @@
       "faq_q5_question": "¿En qué se diferencia un préstamo Puente para Venta de un HELOC?",
       "faq_q5_answer": "Mientras que un HELOC es una línea de crédito rotativa tradicional, un préstamo Puente para Venta está diseñado específicamente para la brecha entre comprar y vender, ofreciendo a menudo pagos diferidos y evaluación basada en el valor del activo."
     }
+  },
+  "CommercialRealEstateLoans": {
+    "meta": {
+      "title": "Préstamos para Bienes Raíces Comerciales | MyLoanDesk",
+      "description": "Financiamiento de bienes raíces comerciales desde $350K hasta $10M+, incluidas propiedades de uso especial como hoteles, autoalmacenamiento y gasolineras. Estime su cuota y relación préstamo-valor con nuestra calculadora gratuita.",
+      "og_title": "Préstamos para Bienes Raíces Comerciales | MyLoanDesk",
+      "og_description": "Soluciones de financiamiento para empresas, inversionistas y desarrolladores, incluidas propiedades de uso especial que muchos prestamistas no financian. Estime su cuota con nuestra calculadora gratuita.",
+      "og_alt": "Préstamos para Bienes Raíces Comerciales - MyLoanDesk",
+      "twitter_title": "Préstamos para Bienes Raíces Comerciales | MyLoanDesk",
+      "twitter_description": "Financiamiento de bienes raíces comerciales desde $350K hasta $10M+ en opciones convencionales, SBA y propiedades de uso especial."
+    },
+    "breadcrumbs": {
+      "home": "Inicio",
+      "loan_programs": "Programas de Préstamos",
+      "commercial_real_estate": "Préstamos para Bienes Raíces Comerciales"
+    },
+    "back_to_programs": "Volver a Programas de Préstamos",
+    "title": "Préstamos para Bienes Raíces Comerciales",
+    "hero": {
+      "subtitle": "Soluciones de financiamiento para empresas, inversionistas y desarrolladores.",
+      "description": "Ya sea que compre, refinancie, construya o expanda bienes raíces comerciales, MyLoanDesk ofrece acceso a una amplia red de prestamistas comerciales, incluyendo opciones para propiedades de uso especial que muchos prestamistas descartan, como hoteles, instalaciones de autoalmacenamiento y gasolineras.",
+      "bullet1": "Financiamiento desde $350K hasta $10M+",
+      "bullet2": "Préstamo a valor (LTV) de hasta 90% en programas elegibles",
+      "bullet3": "Propiedades de uso especial consideradas",
+      "disclaimer": "Cálculo estimado únicamente. Asume un préstamo totalmente amortizado durante el plazo ingresado. No incluye impuestos, seguros ni gastos de mantenimiento común (CAM). Los términos finales dependen del tipo de propiedad, finanzas del negocio y el programa específico."
+    },
+    "calculator": {
+      "badge": "Estimador de Pago y LTV para Inmuebles Comerciales",
+      "subheading": "Consulte su pago estimado y la relación préstamo-valor.",
+      "price_label": "Valor de la propiedad / precio de compra",
+      "price_placeholder": "1,200,000",
+      "down_label": "Pago inicial",
+      "down_placeholder": "15",
+      "rate_label": "Tasa estimada",
+      "rate_placeholder": "8.25",
+      "amortization_label": "Amortización",
+      "years_suffix": "años",
+      "loan_amount_label": "Monto del préstamo",
+      "monthly_payment_label": "Pago mensual estimado",
+      "per_month": "/mes",
+      "ltv_label": "Préstamo a valor (LTV)",
+      "ltv_note_low": "Por debajo de los mínimos típicos: incluso los programas respaldados por la SBA suelen exigir al menos un 10% de pago inicial.",
+      "ltv_note_sba": "Dentro del rango para programas respaldados por la SBA, que pueden requerir tan solo un 10% de pago inicial.",
+      "ltv_note_full": "Dentro del rango tanto para programas respaldados por la SBA como para financiamiento comercial convencional."
+    },
+    "what_is": {
+      "title": "¿Qué es el Financiamiento de Bienes Raíces Comerciales?",
+      "p1": "El financiamiento de bienes raíces comerciales abarca préstamos utilizados para comprar, refinanciar o construir inmuebles destinados a fines comerciales: edificios de oficinas, locales comerciales, edificios de uso mixto, propiedades multifamiliares e instalaciones especializadas como hoteles o bodegas de autoalmacenamiento. A diferencia de una hipoteca residencial, estos préstamos se evalúan en función del potencial de ingresos del inmueble y la solidez financiera de la empresa solicitante.",
+      "p2": "Existen distintas alternativas para financiar bienes raíces comerciales, cada una con requisitos específicos de pago inicial, plazo y elegibilidad: desde programas gubernamentales SBA hasta hipotecas comerciales convencionales."
+    },
+    "ways_to_finance": {
+      "title": "Alternativas para Financiar Bienes Raíces Comerciales",
+      "cards": [
+        {
+          "badge": "$350K – $5M · Hasta 25 años",
+          "title": "SBA 7(a)",
+          "desc": "La opción más flexible de la SBA: puede combinar la compra de bienes raíces con costos de adquisición del negocio o capital de trabajo en un solo préstamo."
+        },
+        {
+          "badge": "$350K – $5M · Hasta 10 años",
+          "title": "SBA 504",
+          "desc": "Diseñado específicamente para activos fijos a largo plazo como inmuebles o maquinaria, a menudo con un pago inicial más bajo y un tramo con tasa fija por debajo del mercado."
+        },
+        {
+          "badge": "Variable · Hasta 30 años",
+          "title": "Comercial Convencional / Puente",
+          "desc": "Hipotecas comerciales tradicionales y financiamiento puente para prestatarios que no requieren la intervención de la SBA o necesitan actuar con mayor rapidez."
+        }
+      ]
+    },
+    "how_it_works": {
+      "title": "¿Cómo Funciona el Financiamiento de Bienes Raíces Comerciales?",
+      "steps": [
+        {
+          "step": "1",
+          "title": "Descríbanos la propiedad y la operación.",
+          "desc": "Precio de compra, tipo de inmueble y cómo planea utilizar el espacio."
+        },
+        {
+          "step": "2",
+          "title": "Le conectamos con el programa adecuado.",
+          "desc": "Financiamiento SBA, convencional o puente, según su cronograma y finanzas."
+        },
+        {
+          "step": "3",
+          "title": "Presente su documentación.",
+          "desc": "Estados financieros del negocio, declaraciones financieras personales y detalles del inmueble."
+        },
+        {
+          "step": "4",
+          "title": "Suscripción y tasación.",
+          "desc": "La propiedad y la empresa se evalúan conjuntamente para estructurar las condiciones definitivas."
+        },
+        {
+          "step": "5",
+          "title": "Cierre y desembolso.",
+          "desc": "Firme sus documentos finales; los fondos suelen estar disponibles poco después del cierre."
+        }
+      ]
+    },
+    "special_use": {
+      "title": "Propiedades de Uso Especial que Financiamos",
+      "intro": "Muchos prestamistas evitan las propiedades comerciales de \"propósito especial\" debido a la dificultad de reventa en caso de incumplimiento. MyLoanDesk trabaja con entidades que financian estos activos de manera habitual y no como una excepción:",
+      "tags": [
+        "Hoteles y Moteles",
+        "Autoalmacenamiento",
+        "Gasolineras",
+        "Autolavados",
+        "Restaurantes",
+        "Residencias para Adultos Mayores",
+        "Funerarias",
+        "Campos de Golf",
+        "Consultorios Médicos y Dentales"
+      ]
+    },
+    "highlights": {
+      "title": "Aspectos Destacados del Programa",
+      "subtitle": "Lo que incluye:",
+      "items": [
+        "Financiamiento desde $350,000 hasta más de $10M, según el programa",
+        "Pagos iniciales de tan solo 10% en programas elegibles respaldados por la SBA",
+        "Relación préstamo-valor (LTV) de hasta 90% en programas seleccionados",
+        "Plazos de hasta 25 a 30 años, con múltiples opciones sin pagos globales (balloon)",
+        "Se evalúan propiedades de uso especial y nichos especializados",
+        "Con frecuencia se puede incluir capital de trabajo o costos de remodelación junto con la compra"
+      ]
+    },
+    "advantages": {
+      "title": "Ventajas Estratégicas:",
+      "p1": "Los préstamos comerciales respaldados por la SBA suelen requerir un pago inicial significativamente menor que una hipoteca comercial convencional (a menudo 10% frente al 20-30%), preservando más capital para la operativa de su empresa.",
+      "p2": "Combinar la compra de la empresa, el inmueble comercial y el capital de trabajo en un solo crédito (disponible en ciertas estructuras SBA) simplifica el cierre y el servicio de deuda a largo plazo con una sola cuota mensual.",
+      "p3": "Trabajar con un especialista en propiedades de uso especial es determinante: un prestamista sin experiencia en hoteles o autolavados puede declinar una solicitud que una entidad especializada aprobaría con facilidad."
+    },
+    "who_this_is_for": {
+      "title": "¿Para Quién es Este Financiamiento?",
+      "items": [
+        "Dueños de negocios que adquieren el inmueble donde opera su empresa",
+        "Inversionistas que compran propiedades comerciales o de uso mixto",
+        "Propietarios de negocios de uso especial: hoteles, bodegas, gasolineras y similares",
+        "Compradores que desean financiar la adquisición de una empresa y su inmueble de manera conjunta",
+        "Propietarios que buscan refinanciar una hipoteca comercial existente para obtener mejores condiciones"
+      ]
+    },
+    "comparison": {
+      "title": "SBA 7(a) vs. SBA 504 vs. Financiamiento Convencional",
+      "th_sba7a": "SBA 7(a)",
+      "th_sba504": "SBA 504",
+      "th_conv": "Comercial Convencional",
+      "rows": {
+        "down_payment": {
+          "label": "Pago inicial típico",
+          "sba7a": "Desde 10%",
+          "sba504": "Desde 10%",
+          "conv": "20–30%+"
+        },
+        "loan_amount": {
+          "label": "Monto del préstamo",
+          "sba7a": "Hasta $5M",
+          "sba504": "Hasta $5M (el costo del proyecto puede ser mayor)",
+          "conv": "Varía según el prestamista"
+        },
+        "working_capital": {
+          "label": "¿Permite incluir capital de trabajo?",
+          "sba7a": "Sí",
+          "sba504": "Limitado",
+          "conv": "Típicamente no"
+        },
+        "rate_structure": {
+          "label": "Estructura de tasa",
+          "sba7a": "Variable, vinculada a la tasa Prime",
+          "sba504": "Tramo fijo, frecuentemente por debajo del mercado",
+          "conv": "Variable, puede incluir pago global (balloon)"
+        },
+        "best_for": {
+          "label": "Ideal para",
+          "sba7a": "Combinar compra inmobiliaria con adquisición de negocio o capital de trabajo",
+          "sba504": "Titularidad a largo plazo de inmuebles o maquinaria pesada",
+          "conv": "Prestatarios que no requieren o prefieren evitar la intervención de la SBA"
+        }
+      }
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "items": [
+        {
+          "q": "¿Cuál es la diferencia entre un préstamo SBA 7(a) y un SBA 504 para bienes raíces comerciales?",
+          "a": "Un préstamo SBA 7(a) es más flexible y permite combinar la compra de bienes raíces con costos de adquisición empresarial o capital de trabajo en un solo crédito de hasta $5 millones. Un préstamo SBA 504 está estructurado exclusivamente para activos fijos a largo plazo como inmuebles o equipamiento pesado, con un pago inicial bajo y una porción con tasa fija ventajosa, pero sin tanta flexibilidad para otros gastos operativos."
+        },
+        {
+          "q": "¿Cuánto pago inicial necesito para un préstamo de bienes raíces comerciales?",
+          "a": "Depende del programa. Los créditos comerciales respaldados por la SBA pueden requerir tan solo un 10% de pago inicial, muy por debajo del 20-30% exigido comúnmente en hipotecas comerciales tradicionales. La cifra exacta depende del tipo de propiedad, los balances de su negocio y el programa crediticio seleccionado."
+        },
+        {
+          "q": "¿Puedo obtener financiamiento para una propiedad de uso especial como un hotel o una gasolinera?",
+          "a": "Sí, aunque no todos los prestamistas financian inmuebles de uso especial como hoteles, gasolineras, autolavados, residencias para adultos mayores, restaurantes, funerarias o campos de golf. Al ser más complejos de revender en caso de impago, resulta fundamental acudir a entidades con experiencia comprobada en ese segmento específico."
+        },
+        {
+          "q": "¿Qué relación préstamo-valor (LTV) puedo obtener en bienes raíces comerciales?",
+          "a": "Los préstamos comerciales respaldados por la SBA pueden ofrecer ratios de préstamo-valor de hasta un 90%, sustancialmente superiores al 70-75% habitual de una hipoteca comercial convencional."
+        },
+        {
+          "q": "¿Puedo combinar la compra de un negocio y la de su propiedad inmobiliaria en un solo préstamo?",
+          "a": "En muchos casos sí. Determinadas estructuras de la SBA, especialmente el programa SBA 7(a), permiten financiar de forma conjunta la adquisición de la empresa, el inmueble y el capital de trabajo necesario en una sola operación."
+        },
+        {
+          "q": "¿Existen pagos globales (balloon payments) en préstamos para bienes raíces comerciales?",
+          "a": "Depende de la modalidad. Muchos préstamos comerciales respaldados por la SBA son totalmente amortizables sin pagos globales, mientras que algunas hipotecas comerciales convencionales contemplan un pago global tras un período inicial de tasa fija. Se recomienda verificar la amortización antes de comprometerse."
+        },
+        {
+          "q": "¿Cuánto tiempo toma cerrar un financiamiento de bienes raíces comerciales?",
+          "a": "Los plazos varían según el volumen del préstamo, el tipo de activo y el programa; trabajar con un prestamista con suscripción interna agiliza sustancialmente el proceso frente a los tiempos habituales de la banca tradicional."
+        },
+        {
+          "q": "¿El financiamiento comercial puede incluir fondos para capital de trabajo o remodelaciones?",
+          "a": "Algunos programas, en particular los préstamos SBA 7(a), permiten incorporar capital de trabajo o costos de mejora y remodelación junto con la compra del inmueble, lo cual resulta idóneo al adquirir un activo que requiere acondicionamiento."
+        },
+        {
+          "q": "¿Qué historial crediticio y empresarial necesito para calificar?",
+          "a": "Los requisitos varían por entidad, pero la mayoría evalúa el flujo de caja del negocio, la cobertura del servicio de la deuda, el crédito personal y patrimonio del propietario, así como la antigüedad operativa de la empresa. Un perfil financiero sólido permite acceder a mejores tasas y mayor apalancamiento."
+        }
+      ]
+    },
+    "cta": {
+      "apply_now": "Solicitar Ahora →",
+      "contact_us": "Contáctenos Ahora",
+      "note": "¿Tiene una propiedad o proyecto en mente, incluida una propiedad de uso especial? Comparta los detalles y un oficial de préstamos trazará sus alternativas de financiamiento el mismo día."
+    },
+    "schema": {
+      "webpage_name": "Préstamos para Bienes Raíces Comerciales | MyLoanDesk",
+      "webpage_description": "Guía completa y herramientas de cálculo de deuda para hipotecas de bienes raíces comerciales, préstamos SBA y propiedades de uso especial.",
+      "product_name": "Préstamo para Bienes Raíces Comerciales",
+      "product_description": "Soluciones de financiamiento para propiedades comerciales que abarcan SBA 7(a), SBA 504, deuda comercial convencional y financiamiento puente de hasta $10M+.",
+      "faq_q1_question": "¿Cuál es la diferencia entre un préstamo SBA 7(a) y un SBA 504 para bienes raíces comerciales?",
+      "faq_q1_answer": "Un préstamo SBA 7(a) es más flexible y permite combinar la compra de bienes raíces con costos de adquisición empresarial o capital de trabajo en un solo crédito de hasta $5 millones. Un préstamo SBA 504 está estructurado exclusivamente para activos fijos a largo plazo como inmuebles o equipamiento pesado, con un pago inicial bajo y una porción con tasa fija ventajosa, pero sin tanta flexibilidad para otros gastos operativos.",
+      "faq_q2_question": "¿Cuánto pago inicial necesito para un préstamo de bienes raíces comerciales?",
+      "faq_q2_answer": "Depende del programa. Los créditos comerciales respaldados por la SBA pueden requerir tan solo un 10% de pago inicial, muy por debajo del 20-30% exigido comúnmente en hipotecas comerciales tradicionales. La cifra exacta depende del tipo de propiedad, los balances de su negocio y el programa crediticio seleccionado.",
+      "faq_q3_question": "¿Puedo obtener financiamiento para una propiedad de uso especial como un hotel o una gasolinera?",
+      "faq_q3_answer": "Sí, aunque no todos los prestamistas financian inmuebles de uso especial como hoteles, gasolineras, autolavados, residencias para adultos mayores, restaurantes, funerarias o campos de golf. Al ser más complejos de revender en caso de impago, resulta fundamental acudir a entidades con experiencia comprobada en ese segmento específico.",
+      "faq_q4_question": "¿Qué relación préstamo-valor (LTV) puedo obtener en bienes raíces comerciales?",
+      "faq_q4_answer": "Los préstamos comerciales respaldados por la SBA pueden ofrecer ratios de préstamo-valor de hasta un 90%, sustancialmente superiores al 70-75% habitual de una hipoteca comercial convencional.",
+      "faq_q5_question": "¿Puedo combinar la compra de un negocio y la de su propiedad inmobiliaria en un solo préstamo?",
+      "faq_q5_answer": "En muchos casos sí. Determinadas estructuras de la SBA, especialmente el programa SBA 7(a), permiten financiar de forma conjunta la adquisición de la empresa, el inmueble y el capital de trabajo necesario en una sola operación.",
+      "faq_q6_question": "¿Existen pagos globales (balloon payments) en préstamos para bienes raíces comerciales?",
+      "faq_q6_answer": "Depende de la modalidad. Muchos préstamos comerciales respaldados por la SBA son totalmente amortizables sin pagos globales, mientras que algunas hipotecas comerciales convencionales contemplan un pago global tras un período inicial de tasa fija. Se recomienda verificar la amortización antes de comprometerse.",
+      "faq_q7_question": "¿Cuánto tiempo toma cerrar un financiamiento de bienes raíces comerciales?",
+      "faq_q7_answer": "Los plazos varían según el volumen del préstamo, el tipo de activo y el programa; trabajar con un prestamista con suscripción interna agiliza sustancialmente el proceso frente a los tiempos habituales de la banca tradicional.",
+      "faq_q8_question": "¿El financiamiento comercial puede incluir fondos para capital de trabajo o remodelaciones?",
+      "faq_q8_answer": "Algunos programas, en particular los préstamos SBA 7(a), permiten incorporar capital de trabajo o costos de mejora y remodelación junto con la compra del inmueble, lo cual resulta idóneo al adquirir un activo que requiere acondicionamiento.",
+      "faq_q9_question": "¿Qué historial crediticio y empresarial necesito para calificar?",
+      "faq_q9_answer": "Los requisitos varían por entidad, pero la mayoría evalúa el flujo de caja del negocio, la cobertura del servicio de la deuda, el crédito personal y patrimonio del propietario, así como la antigüedad operativa de la empresa. Un perfil financiero sólido permite acceder a mejores tasas y mayor apalancamiento."
+    }
+  },
+  "ConstructionLoans": {
+    "meta": {
+      "title": "Préstamos para Construcción de Casas a Medida y Desarrollos | MyLoanDesk",
+      "description": "Préstamos de construcción y financiamiento de construcción a permanente para casas personalizadas, construcciones especulativas y pequeños desarrollos. Use nuestra calculadora gratuita para estimar su préstamo y pago inicial antes de presentar su solicitud.",
+      "og_title": "Préstamos para Construcción de Casas a Medida y Desarrollos | MyLoanDesk",
+      "og_description": "Financie la casa de sus sueños o su próximo proyecto inmobiliario con financiamiento de construcción a permanente. Estime su monto, pago inicial y cuotas de solo interés con nuestra calculadora gratuita.",
+      "og_alt": "Préstamos para Construcción - MyLoanDesk",
+      "twitter_title": "Préstamos para Construcción de Casas a Medida y Desarrollos | MyLoanDesk",
+      "twitter_description": "Financie su construcción personalizada con financiamiento de construcción a permanente en un solo cierre."
+    },
+    "breadcrumbs": {
+      "home": "Inicio",
+      "loan_programs": "Programas de Préstamos",
+      "construction_loans": "Préstamos para Construcción"
+    },
+    "back_to_programs": "Volver a Programas de Préstamos",
+    "title": "Préstamos para Construcción",
+    "hero": {
+      "subtitle": "Financie la casa de sus sueños o su próximo proyecto de desarrollo.",
+      "description": "Ya sea que construya una casa personalizada, desarrolle una comunidad residencial o edifique propiedades de inversión, MyLoanDesk ofrece financiamiento de construcción estructurado en función del cronograma de su proyecto, desde el inicio de obra hasta el certificado final de ocupación. Nuestros préstamos de construcción a permanente unifican el financiamiento de la obra y su hipoteca a largo plazo en un solo cierre, evitando calificar dos veces y pagar dos conjuntos de costos de cierre.",
+      "bullet1": "Un solo cierre: la construcción se convierte directamente en su hipoteca definitiva",
+      "bullet2": "Pagos de solo interés durante la fase de obra",
+      "bullet3": "La plusvalía del terreno puede abonarse como parte de su pago inicial",
+      "disclaimer": "Cálculo estimado únicamente, basado en pautas generales de préstamos de construcción (hasta el 80% del costo total del proyecto, con un límite aproximado del 75% del valor completado). El monto final, tasa y condiciones dependerán de la suscripción, el constructor y el proyecto específico."
+    },
+    "calculator": {
+      "badge": "Calculadora de Préstamos para Construcción",
+      "subheading": "Estime el monto de su préstamo y el pago durante la fase de obra.",
+      "land_label": "Costo del terreno / lote (ingrese $0 si ya es propietario libre de gravámenes)",
+      "land_placeholder": "80,000",
+      "build_label": "Presupuesto de construcción / edificación",
+      "build_placeholder": "420,000",
+      "value_label": "Valor estimado completado",
+      "value_placeholder": "620,000",
+      "total_cost": "Costo total del proyecto",
+      "max_loan": "Monto máximo estimado del préstamo",
+      "down_needed": "Pago inicial estimado necesario",
+      "ltc_label": "Relación préstamo-costo (LTC)",
+      "verdict_default": "Ingrese sus números para calcular la estimación",
+      "verdict_low": "Cómodamente dentro de los límites habituales de préstamos para construcción",
+      "verdict_mid": "Cerca de los límites habituales: el pago inicial o el capital del terreno serán determinantes",
+      "verdict_high": "Por encima de los límites habituales: hable con un asesor de préstamos sobre sus opciones"
+    },
+    "what_is": {
+      "title": "¿Qué es un Préstamo para Construcción?",
+      "p1": "Un préstamo para construcción es un financiamiento a corto plazo utilizado para pagar la edificación de una vivienda o proyecto de desarrollo desde los cimientos. En lugar de recibir el monto total al cierre como en una hipoteca tradicional, los fondos se desembolsan en etapas —llamadas giros o ministraciones— a medida que la obra alcanza hitos específicos. Al finalizar la vivienda, la mayoría requiere una hipoteca separada para liquidar el saldo o, mediante un préstamo de construcción a permanente, se convierte automáticamente en una hipoteca convencional a largo plazo en un único cierre.",
+      "p2": "Dado que la garantía (la vivienda terminada) aún no existe al momento del cierre, estos préstamos se evalúan de manera distinta a una hipoteca tradicional: los prestamistas analizan al prestatario, al constructor, los planos y el presupuesto en conjunto."
+    },
+    "how_it_works": {
+      "title": "¿Cómo Funciona el Financiamiento de Construcción?",
+      "steps": [
+        {
+          "step": "1",
+          "title": "Defina sus planos y presupuesto.",
+          "text": "Los prestamistas requerirán planos de construcción detallados, un presupuesto de obra y la información de su constructor."
+        },
+        {
+          "step": "2",
+          "title": "Obtenga la aprobación y cierre.",
+          "text": "La suscripción evalúa su perfil, al constructor y al proyecto en su conjunto; el cierre suele seguir los tiempos de una hipoteca estándar."
+        },
+        {
+          "step": "3",
+          "title": "Los fondos se liberan por ministraciones.",
+          "text": "A medida que la obra supera hitos —cimientos, estructura, instalaciones y acabados—, una inspección confirma el avance y autoriza el siguiente desembolso."
+        },
+        {
+          "step": "4",
+          "title": "Realice pagos de solo interés.",
+          "text": "Durante la edificación, generalmente solo paga intereses sobre los fondos efectivamente desembolsados, no sobre el monto total aprobado."
+        },
+        {
+          "step": "5",
+          "title": "Conversión a hipoteca permanente.",
+          "text": "Una vez finalizada la obra, el préstamo de construcción a permanente se convierte automáticamente en su hipoteca a largo plazo, sin necesidad de un segundo cierre."
+        }
+      ]
+    },
+    "highlights": {
+      "title": "Aspectos Destacados del Programa",
+      "subtitle": "Lo que incluye:",
+      "items": [
+        "Opciones de construcción a permanente que se convierten en hipoteca estándar al finalizar la obra",
+        "Pagos de solo interés durante la fase de construcción",
+        "Cronogramas de desembolsos vinculados a hitos de obra inspeccionados",
+        "Disponible para viviendas a medida, construcciones especulativas y pequeños desarrollos",
+        "Financiamiento para adquisición de terreno disponible si aún no posee el lote",
+        "El capital existente en el terreno puede acreditarse para su pago inicial"
+      ]
+    },
+    "advantages": {
+      "title": "Ventajas Estratégicas:",
+      "p1": "Un préstamo de construcción a permanente implica un solo cierre, no dos; esto ahorra costos de cierre y elimina el riesgo de tener que recalificar para una hipoteca definitiva una vez finalizada la obra, cuando las tasas o su situación financiera pudieran haber cambiado.",
+      "p2": "Los calendarios de desembolso basados en hitos inspeccionados protegen tanto el flujo de caja del constructor como la garantía del prestamista, manteniendo la obra financiada en cada fase sin obligarle a adelantar fondos de su bolsillo.",
+      "p3": "Si ya es propietario del terreno, su plusvalía puede aplicarse al pago inicial requerido, reduciendo la cantidad de efectivo nuevo que debe aportar al proyecto."
+    },
+    "who_this_is_for": {
+      "title": "¿Para Quién son los Préstamos de Construcción?",
+      "items": [
+        "Compradores que construyen una casa a medida en un terreno propio o por adquirir",
+        "Pequeños desarrolladores que construyen viviendas para su venta al concluir la obra",
+        "Inversionistas que edifican nuevas propiedades de alquiler o multifamiliares",
+        "Propietarios de terrenos que desean usar el capital del lote para una nueva edificación",
+        "Compradores que buscan un único cierre en vez de préstamos de construcción y definitivos separados"
+      ]
+    },
+    "comparison": {
+      "title": "Préstamos de Construcción vs. Otras Opciones de Financiamiento",
+      "th_c2p": "Construcción a Permanente",
+      "th_renovation": "Préstamo de Remodelación",
+      "th_conventional": "Hipoteca Convencional",
+      "rows": {
+        "best_for": {
+          "label": "Ideal para",
+          "c2p": "Construir una nueva vivienda desde los cimientos",
+          "renovation": "Remodelar una vivienda existente",
+          "conventional": "Comprar una vivienda ya construida y lista para habitar"
+        },
+        "disbursed": {
+          "label": "Desembolso de fondos",
+          "c2p": "En giros/ministraciones vinculados a hitos de obra",
+          "renovation": "Frecuentemente en giros, según el alcance de la obra",
+          "conventional": "En su totalidad al momento del cierre"
+        },
+        "payment": {
+          "label": "Pagos durante el proyecto",
+          "c2p": "Solo interés sobre los fondos desembolsados",
+          "renovation": "Varía según el programa",
+          "conventional": "N/A — sin fase de obra"
+        },
+        "closings": {
+          "label": "Número de cierres",
+          "c2p": "Uno, si es de construcción a permanente",
+          "renovation": "Uno",
+          "conventional": "Uno"
+        },
+        "collateral": {
+          "label": "Garantía al cierre",
+          "c2p": "Terreno más planos (la casa aún no existe)",
+          "renovation": "Vivienda existente",
+          "conventional": "Vivienda existente"
+        }
+      }
+    },
+    "eligibility": {
+      "title": "Requisitos de Elegibilidad",
+      "items": [
+        "Puntaje de crédito aproximado de 680+ (varía según el prestamista y tipo de proyecto)",
+        "Planos de construcción detallados, especificaciones y presupuesto realista",
+        "Un constructor o contratista general con licencia y debidamente evaluado",
+        "Pago inicial o capital en el terreno, típicamente del 10% al 25% del costo total del proyecto",
+        "Reservas suficientes para cubrir contingencias e incrementos imprevistos de costos"
+      ]
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "items": [
+        {
+          "q": "¿Qué es un préstamo de construcción a permanente?",
+          "a": "Un préstamo de construcción a permanente combina el financiamiento de la obra a corto plazo y su hipoteca a largo plazo en un solo crédito con un único cierre. Una vez completada la casa, el préstamo se convierte automáticamente en una hipoteca estándar, evitando cerrar dos veces y volver a calificar."
+        },
+        {
+          "q": "¿Cuánto pago inicial se requiere para un préstamo de construcción?",
+          "a": "Los requisitos de pago inicial para préstamos de construcción suelen ser más altos que para una hipoteca estándar, situándose comúnmente entre el 10% y el 25% del costo total del proyecto, según el prestamista, el perfil crediticio y si el terreno ya se posee libre de gravámenes."
+        },
+        {
+          "q": "¿Cómo funcionan los desembolsos de un préstamo de construcción?",
+          "a": "En lugar de recibir el monto total por adelantado, los fondos se liberan en etapas vinculadas a hitos completados de la obra (cimientos, estructura, acabados). Un inspector confirma el avance de cada fase antes de liberar el siguiente desembolso."
+        },
+        {
+          "q": "¿Se paga capital durante la construcción?",
+          "a": "La mayoría de los préstamos de construcción son de solo interés durante la fase de obra, calculándose únicamente sobre los fondos efectivamente retirados. Los pagos de capital comienzan una vez que el préstamo se convierte en hipoteca permanente."
+        },
+        {
+          "q": "¿Puedo usar un préstamo de construcción para edificar en un terreno que ya poseo?",
+          "a": "Sí: si ya es dueño del terreno libre de cargas, su valor puede computarse como capital para el requisito de pago inicial, reduciendo el efectivo que debe aportar al cierre."
+        },
+        {
+          "q": "¿Qué puntaje de crédito se necesita para un préstamo de construcción?",
+          "a": "Generalmente se requiere un perfil crediticio más sólido que en una hipoteca estándar, a menudo de 680 o superior, dado que el prestamista financia un proyecto que aún no existe como garantía física. La experiencia del constructor y un presupuesto detallado también fortalecen la solicitud."
+        },
+        {
+          "q": "¿Cuánto tiempo toma cerrar el financiamiento de un préstamo de construcción?",
+          "a": "El cierre inicial de un préstamo de construcción a permanente suele tomar un tiempo similar al de una hipoteca convencional, habitualmente de 30 a 45 días, ya que requiere evaluar al prestatario, al constructor y el proyecto completo."
+        },
+        {
+          "q": "¿Qué sucede si la construcción cuesta más que el presupuesto original?",
+          "a": "Los sobrecostos son frecuentes en obras. Muchos prestamistas exigen una reserva para contingencias dentro del presupuesto inicial y algunos permiten modificaciones del préstamo si los costos suben de forma considerable. Planificar con un margen de contingencia es la mejor manera de prevenir desajustes."
+        }
+      ]
+    },
+    "cta": {
+      "apply_now": "Solicitar Ahora →",
+      "contact_us": "Contáctenos Ahora",
+      "note": "¿Ya tiene planos y un constructor definido? Envíenos los detalles: un oficial de préstamos evaluará sus números el mismo día."
+    },
+    "schema": {
+      "webpage_name": "Préstamos para Construcción | MyLoanDesk",
+      "webpage_description": "Préstamos de construcción y financiamiento de construcción a permanente para casas personalizadas, construcciones especulativas y desarrollos residenciales.",
+      "product_name": "Préstamo de Construcción a Permanente",
+      "product_description": "Financiamiento en un solo cierre que combina fondos de construcción por ministraciones con una hipoteca fija a largo plazo para edificaciones residenciales personalizadas.",
+      "faq_q1_question": "¿Qué es un préstamo de construcción a permanente?",
+      "faq_q1_answer": "Un préstamo de construcción a permanente combina el financiamiento de la obra a corto plazo y su hipoteca a largo plazo en un solo crédito con un único cierre. Una vez completada la casa, el préstamo se convierte automáticamente en una hipoteca estándar, evitando cerrar dos veces y volver a calificar.",
+      "faq_q2_question": "¿Cuánto pago inicial se requiere para un préstamo de construcción?",
+      "faq_q2_answer": "Los requisitos de pago inicial para préstamos de construcción suelen ser más altos que para una hipoteca estándar, situándose comúnmente entre el 10% y el 25% del costo total del proyecto, según el prestamista, el perfil crediticio y si el terreno ya se posee libre de gravámenes.",
+      "faq_q3_question": "¿Cómo funcionan los desembolsos de un préstamo de construcción?",
+      "faq_q3_answer": "En lugar de recibir el monto total por adelantado, los fondos se liberan en etapas vinculadas a hitos completados de la obra (cimientos, estructura, acabados). Un inspector confirma el avance de cada fase antes de liberar el siguiente desembolso.",
+      "faq_q4_question": "¿Se paga capital durante la construcción?",
+      "faq_q4_answer": "La mayoría de los préstamos de construcción son de solo interés durante la fase de obra, calculándose únicamente sobre los fondos efectivamente retirados. Los pagos de capital comienzan una vez que el préstamo se convierte en hipoteca permanente.",
+      "faq_q5_question": "¿Puedo usar un préstamo de construcción para edificar en un terreno que ya poseo?",
+      "faq_q5_answer": "Sí: si ya es dueño del terreno libre de cargas, su valor puede computarse como capital para el requisito de pago inicial, reduciendo el efectivo que debe aportar al cierre.",
+      "faq_q6_question": "¿Qué puntaje de crédito se necesita para un préstamo de construcción?",
+      "faq_q6_answer": "Generalmente se requiere un perfil crediticio más sólido que en una hipoteca estándar, a menudo de 680 o superior, dado que el prestamista financia un proyecto que aún no existe como garantía física. La experiencia del constructor y un presupuesto detallado también fortalecen la solicitud.",
+      "faq_q7_question": "¿Cuánto tiempo toma cerrar el financiamiento de un préstamo de construcción?",
+      "faq_q7_answer": "El cierre inicial de un préstamo de construcción a permanente suele tomar un tiempo similar al de una hipoteca convencional, habitualmente de 30 a 45 días, ya que requiere evaluar al prestatario, al constructor y el proyecto completo.",
+      "faq_q8_question": "¿Qué sucede si la construcción cuesta más que el presupuesto original?",
+      "faq_q8_answer": "Los sobrecostos son frecuentes en obras. Muchos prestamistas exigen una reserva para contingencias dentro del presupuesto inicial y algunos permiten modificaciones del préstamo si los costos suben de forma considerable. Planificar con un margen de contingencia es la mejor manera de prevenir desajustes."
+    }
+  },
+  "DSCRLoans": {
+    "meta": {
+      "title": "Préstamos DSCR para Propiedades de Inversión | MyLoanDesk",
+      "description": "Haga crecer su portafolio inmobiliario sin verificación de ingresos personales. Califique para financiamiento DSCR de propiedades de inversión según el flujo de caja del alquiler.",
+      "og_title": "Préstamos DSCR para Propiedades de Inversión | MyLoanDesk",
+      "og_description": "Califique para financiamiento de propiedades de inversión según el flujo de caja del alquiler en lugar de declaraciones de impuestos personales.",
+      "og_alt": "Préstamos DSCR para Propiedades de Inversión - MyLoanDesk",
+      "twitter_title": "Préstamos DSCR para Propiedades de Inversión | MyLoanDesk",
+      "twitter_description": "Califique para financiamiento de propiedades de inversión según el flujo de caja del alquiler sin declaraciones de impuestos personales."
+    },
+    "breadcrumbs": {
+      "home": "Inicio",
+      "loan_programs": "Programas de Préstamos",
+      "dscr_loans": "Préstamos DSCR para Inversión"
+    },
+    "back_to_programs": "Volver a Programas de Préstamos",
+    "title": "Préstamos DSCR para Propiedades de Inversión",
+    "hero": {
+      "subtitle": "Haga crecer su portafolio inmobiliario sin verificación de ingresos personales.",
+      "description": "Un préstamo por Cobertura del Servicio de la Deuda (DSCR) está diseñado específicamente para inversionistas de bienes raíces. En lugar de calificar según sus ingresos personales, declaraciones de impuestos o historial laboral, los préstamos DSCR evalúan los ingresos por alquiler generados por la propiedad frente a sus propias obligaciones de deuda. Esto permite expandir su cartera sin la carga documental de una hipoteca tradicional.",
+      "bullet1": "Cierre en tan solo 14 días",
+      "bullet2": "Financiamiento para un número ilimitado de propiedades"
+    },
+    "calculator": {
+      "badge": "Calculadora DSCR en Tiempo Real",
+      "subheading": "Ingrese sus números y compruebe si este préstamo se adapta a su inversión.",
+      "rent_label": "Ingreso mensual por alquiler",
+      "rent_placeholder": "2,800",
+      "mode_know": "Conozco mi pago",
+      "mode_estimate": "Estimar por mí",
+      "piti_label": "Pago hipotecario mensual (PITIA est.)",
+      "piti_placeholder": "2,200",
+      "price_label": "Precio de compra",
+      "price_placeholder": "450,000",
+      "down_label": "Pago inicial",
+      "down_placeholder": "25",
+      "rate_label": "Tasa estimada",
+      "rate_placeholder": "7.5",
+      "tax_ins_label": "Impuestos mensuales + seguro + HOA",
+      "tax_ins_placeholder": "450",
+      "breakdown_pi": "Principal e interés est.:",
+      "breakdown_taxes": "+ impuestos/seguro/HOA:",
+      "breakdown_total": "Pago total estimado:",
+      "breakdown_term": "(plazo a 30 años)",
+      "breakdown_empty": "Complete los campos anteriores para calcular su pago",
+      "ratio_title": "Índice de Cobertura del Servicio de la Deuda (DSCR)",
+      "verdict_empty": "Ingrese ambos valores para calcular",
+      "verdict_strong": "Sólido: alta probabilidad de calificar con condiciones estándar",
+      "verdict_qualifies": "Califica: puede influir en la tasa o requisitos de reserva",
+      "verdict_below": "Inferior a 1.0: viable con mayores requisitos de reserva"
+    },
+    "highlights": {
+      "title": "Puntos Destacados del Programa:",
+      "items": [
+        "Sin verificación de ingresos personales ni declaraciones de impuestos requeridas",
+        "Califique según los ingresos por alquiler del inmueble frente al servicio de deuda",
+        "Financiamiento para un número ilimitado de propiedades de inversión",
+        "Disponible para viviendas unifamiliares, multifamiliares y propiedades de alquiler a corto plazo",
+        "Los ratios inferiores a 1.0 pueden calificar con condiciones ajustadas"
+      ]
+    },
+    "advantages": {
+      "title": "Ventajas Estratégicas:",
+      "p1": "Dado que los préstamos DSCR se suscriben en torno al activo y no al prestatario, los inversionistas que poseen múltiples inmuebles —y que muestran ingresos netos reducidos tras deducciones y depreciación— califican con mayor facilidad que a través de préstamos tradicionales.",
+      "p2": "Muchos inversionistas utilizan el financiamiento DSCR para cerrar más rápido y con menos trabas, ya que no se realizan verificaciones de empleo, cálculos de deuda-ingreso (DTI) ni solicitudes de transcripciones fiscales."
+    },
+    "cta": {
+      "apply_now": "Solicitar Ahora →",
+      "contact_us": "Contáctenos Ahora"
+    },
+    "schema": {
+      "webpage_name": "Préstamos DSCR para Propiedades de Inversión | MyLoanDesk",
+      "webpage_description": "Guía completa y calculadora de cobertura del servicio de la deuda para programas hipotecarios DSCR para inversionistas.",
+      "product_name": "Préstamo DSCR para Propiedades de Inversión",
+      "product_description": "Hipoteca Non-QM basada en activos que permite a inversionistas calificar usando el flujo de caja del alquiler en lugar de ingresos personales o transcripciones fiscales.",
+      "faq_q1_question": "¿Qué es un préstamo DSCR y cómo se calcula?",
+      "faq_q1_answer": "Un préstamo por Cobertura del Servicio de la Deuda (DSCR) califica a inversionistas inmobiliarios dividiendo el ingreso bruto por alquiler entre la deuda mensual de la vivienda (capital, intereses, impuestos, seguros y cuotas de HOA). Un ratio de 1.0 significa que el alquiler cubre exactamente el servicio de la deuda.",
+      "faq_q2_question": "¿Se requieren declaraciones de impuestos personales o verificación de empleo?",
+      "faq_q2_answer": "No. El financiamiento DSCR no exige declaraciones de impuestos personales, formularios W-2, recibos de nómina ni cálculos tradicionales de deuda-ingreso (DTI), siendo ideal para trabajadores independientes e inversionistas de cartera.",
+      "faq_q3_question": "¿Puedo financiar un número ilimitado de propiedades de inversión?",
+      "faq_q3_answer": "Sí. A diferencia de los préstamos convencionales de Fannie Mae/Freddie Mac que limitan a 10 las propiedades financiadas por prestatario, los programas DSCR generalmente no imponen límites al número total de propiedades.",
+      "faq_q4_question": "¿Los alquileres a corto plazo (Airbnb / VRBO) califican para préstamos DSCR?",
+      "faq_q4_answer": "Sí. Múltiples programas DSCR admiten ingresos proyectados o históricos de alquileres a corto plazo validados mediante herramientas analíticas como AirDNA o balances operativos a 12 meses.",
+      "faq_q5_question": "¿Puedo calificar si el ratio DSCR es inferior a 1.0?",
+      "faq_q5_answer": "Sí. Ciertos prestamistas disponen de opciones 'sin ratio' o con DSCR menor a 1.0 que cubren déficits de flujo de caja mediante requisitos de pago inicial o reservas de liquidez ligeramente superiores."
+    }
   }
 }

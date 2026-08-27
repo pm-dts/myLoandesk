@@ -3954,5 +3954,562 @@
       "faq_q5_question": "How is a Bridge to Sale loan different from a HELOC?",
       "faq_q5_answer": "While a HELOC is a revolving line of credit requiring ongoing debt qualification, a Bridge to Sale loan is specifically structured for the gap between buying and selling, often offering deferred payments and underwriting centered on asset equity."
     }
+  },
+  "CommercialRealEstateLoans": {
+    "meta": {
+      "title": "Commercial Real Estate Loans | MyLoanDesk",
+      "description": "Commercial real estate financing from $350K to $10M+, including special-use properties like hotels, self-storage, and gas stations. Estimate your payment and loan-to-value with our free calculator.",
+      "og_title": "Commercial Real Estate Loans | MyLoanDesk",
+      "og_description": "Financing solutions for businesses, investors, and developers — including special-use properties many lenders won’t touch. Estimate your payment with our free calculator.",
+      "og_alt": "Commercial Real Estate Loans - MyLoanDesk",
+      "twitter_title": "Commercial Real Estate Loans | MyLoanDesk",
+      "twitter_description": "Commercial real estate financing from $350K to $10M+ across conventional, SBA, and special-use properties."
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "loan_programs": "Loan Programs",
+      "commercial_real_estate": "Commercial Real Estate Loans"
+    },
+    "back_to_programs": "Back to Loan Programs",
+    "title": "Commercial Real Estate Loans",
+    "hero": {
+      "subtitle": "Financing solutions for businesses, investors & developers.",
+      "description": "Whether you're purchasing, refinancing, constructing, or expanding commercial real estate, MyLoanDesk provides access to a broad network of commercial lenders — including options for special-use properties that many lenders won't finance, like hotels, self-storage facilities, and gas stations.",
+      "bullet1": "Financing from $350K to $10M+",
+      "bullet2": "Loan-to-value up to 90% on eligible programs",
+      "bullet3": "Special-use properties considered",
+      "disclaimer": "Estimate only. Assumes a fully amortizing loan at the entered term. Does not include taxes, insurance, or CAM charges. Actual terms depend on property type, business financials, and the specific program."
+    },
+    "calculator": {
+      "badge": "CRE Payment & LTV Estimator",
+      "subheading": "See your estimated payment and loan-to-value.",
+      "price_label": "Property value / purchase price",
+      "price_placeholder": "1,200,000",
+      "down_label": "Down payment",
+      "down_placeholder": "15",
+      "rate_label": "Est. rate",
+      "rate_placeholder": "8.25",
+      "amortization_label": "Amortization",
+      "years_suffix": "years",
+      "loan_amount_label": "Loan amount",
+      "monthly_payment_label": "Est. monthly payment",
+      "per_month": "/mo",
+      "ltv_label": "Loan-to-value (LTV)",
+      "ltv_note_low": "Below typical minimums — even SBA-backed programs generally expect at least 10% down.",
+      "ltv_note_sba": "Within range for SBA-backed programs, which can go as low as 10% down.",
+      "ltv_note_full": "Within range for both SBA-backed and conventional commercial financing."
+    },
+    "what_is": {
+      "title": "What Is Commercial Real Estate Financing?",
+      "p1": "Commercial real estate financing covers loans used to purchase, refinance, or construct property used for business purposes — office buildings, retail space, mixed-use buildings, multifamily properties, and specialized properties like hotels or self-storage facilities. Unlike a residential mortgage, commercial real estate loans are typically underwritten around both the property's income potential and the borrowing business's overall financial strength.",
+      "p2": "Several distinct paths exist to finance commercial real estate, each with different down payment, term, and eligibility tradeoffs — from government-backed SBA programs to conventional commercial mortgages."
+    },
+    "ways_to_finance": {
+      "title": "Ways to Finance Commercial Real Estate",
+      "cards": [
+        {
+          "badge": "$350K – $5M · Up to 25 yrs",
+          "title": "SBA 7(a)",
+          "desc": "The most flexible SBA option — can combine a real estate purchase with business acquisition costs or working capital in one loan."
+        },
+        {
+          "badge": "$350K – $5M · Up to 10 yrs",
+          "title": "SBA 504",
+          "desc": "Built specifically for long-term fixed assets like real estate or equipment, often with a lower down payment and a below-market fixed-rate portion."
+        },
+        {
+          "badge": "Varies · Up to 30 yrs",
+          "title": "Conventional / Bridge CRE",
+          "desc": "Traditional commercial mortgages and bridge financing for borrowers who don't need or want SBA involvement, or need to move faster."
+        }
+      ]
+    },
+    "how_it_works": {
+      "title": "How Commercial Real Estate Financing Works",
+      "steps": [
+        {
+          "step": "1",
+          "title": "Tell us about the property and the deal.",
+          "desc": "Purchase price, property type, and how you plan to use the space."
+        },
+        {
+          "step": "2",
+          "title": "We match you to the right program.",
+          "desc": "SBA, conventional, or bridge financing, based on your timeline and financials."
+        },
+        {
+          "step": "3",
+          "title": "Submit your documentation.",
+          "desc": "Business financials, personal financial statements, and property details."
+        },
+        {
+          "step": "4",
+          "title": "Underwriting and appraisal.",
+          "desc": "The property and the business are evaluated together to structure the final terms."
+        },
+        {
+          "step": "5",
+          "title": "Close and fund.",
+          "desc": "Sign your final documents — funds are typically available shortly after closing."
+        }
+      ]
+    },
+    "special_use": {
+      "title": "Special-Use Properties We Finance",
+      "intro": "Many lenders stay away from \"special purpose\" commercial properties because they can be harder to resell if a loan ever defaults. MyLoanDesk works with lenders who finance these property types as a regular part of their business, not an exception:",
+      "tags": [
+        "Hotels & Motels",
+        "Self-Storage",
+        "Gas Stations",
+        "Car Washes",
+        "Restaurants",
+        "Assisted Living",
+        "Funeral Homes",
+        "Golf Courses",
+        "Medical / Dental Offices"
+      ]
+    },
+    "highlights": {
+      "title": "Program Highlights",
+      "subtitle": "What's included:",
+      "items": [
+        "Financing from $350,000 up to $10M+, depending on the program",
+        "Down payments as low as 10% on eligible SBA-backed programs",
+        "Loan-to-value up to 90% on eligible programs",
+        "Terms up to 25–30 years, with many programs carrying no balloon payment",
+        "Special-use and niche property types considered",
+        "Working capital or renovation costs can often be included alongside the purchase"
+      ]
+    },
+    "advantages": {
+      "title": "Strategic Advantages:",
+      "p1": "SBA-backed commercial real estate loans typically require far less down payment than a conventional commercial mortgage — often 10% versus 20-30% — which keeps more of your capital free for the business itself rather than tied up in the building.",
+      "p2": "Combining a business acquisition, real estate purchase, and working capital into a single loan (available on some SBA structures) simplifies both the closing process and your long-term debt structure — one payment instead of several.",
+      "p3": "Working with a lender or broker experienced in special-use properties matters — a lender unfamiliar with financing a hotel or a car wash may decline a deal that a specialist lender would approve without hesitation."
+    },
+    "who_this_is_for": {
+      "title": "Who This Is For",
+      "items": [
+        "Business owners purchasing the building their business operates from",
+        "Investors acquiring commercial or mixed-use property",
+        "Owners of special-use businesses — hotels, self-storage, gas stations, and similar",
+        "Business buyers who want to finance a business acquisition and its real estate together",
+        "Owners looking to refinance an existing commercial mortgage for better terms"
+      ]
+    },
+    "comparison": {
+      "title": "SBA 7(a) vs. SBA 504 vs. Conventional Financing",
+      "th_sba7a": "SBA 7(a)",
+      "th_sba504": "SBA 504",
+      "th_conv": "Conventional CRE",
+      "rows": {
+        "down_payment": {
+          "label": "Typical down payment",
+          "sba7a": "As low as 10%",
+          "sba504": "As low as 10%",
+          "conv": "20–30%+"
+        },
+        "loan_amount": {
+          "label": "Loan amount",
+          "sba7a": "Up to $5M",
+          "sba504": "Up to $5M (project cost may be higher)",
+          "conv": "Varies by lender"
+        },
+        "working_capital": {
+          "label": "Can include working capital",
+          "sba7a": "Yes",
+          "sba504": "Limited",
+          "conv": "Typically no"
+        },
+        "rate_structure": {
+          "label": "Rate structure",
+          "sba7a": "Variable, tied to prime",
+          "sba504": "Fixed portion, often below market",
+          "conv": "Varies, may include balloon"
+        },
+        "best_for": {
+          "label": "Best for",
+          "sba7a": "Combining real estate with business acquisition or working capital",
+          "sba504": "Long-term ownership of real estate or major equipment",
+          "conv": "Borrowers who don't need or want SBA involvement"
+        }
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "q": "What's the difference between an SBA 7(a) and an SBA 504 loan for commercial real estate?",
+          "a": "An SBA 7(a) loan is more flexible and can combine a real estate purchase with business acquisition costs or working capital in a single loan, typically up to $5 million. An SBA 504 loan is structured specifically for long-term fixed assets like commercial real estate or equipment, often with a lower down payment and a below-market fixed rate on a portion of the loan, but less flexibility to include other business costs."
+        },
+        {
+          "q": "How much down payment do I need for a commercial real estate loan?",
+          "a": "It depends on the program. SBA-backed commercial real estate loans can require as little as 10% down, well below the 20-30% typically required for a conventional commercial mortgage. The exact amount depends on the property type, your business financials, and the specific loan program."
+        },
+        {
+          "q": "Can I get financing for a special-use property like a hotel or gas station?",
+          "a": "Yes, though not every lender finances special-use properties such as hotels, gas stations, car washes, assisted living facilities, restaurants, funeral homes, or golf courses. These properties are often harder to resell if a loan defaults, so it’s worth working with a lender experienced in that specific property type rather than assuming a general commercial lender will approve it."
+        },
+        {
+          "q": "What loan-to-value can I get on commercial real estate?",
+          "a": "SBA-backed commercial real estate loans can offer loan-to-value ratios up to around 90%, meaningfully higher than the 70-75% typically available through a conventional commercial mortgage."
+        },
+        {
+          "q": "Can I combine a business acquisition with a real estate purchase in one loan?",
+          "a": "In many cases, yes. Certain SBA loan structures, particularly the SBA 7(a) program, allow a business acquisition, real estate purchase, and working capital needs to be financed together in a single loan rather than requiring separate financing for each piece."
+        },
+        {
+          "q": "Are there balloon payments on commercial real estate loans?",
+          "a": "It depends on the loan type. Many SBA-backed commercial real estate loans are fully amortizing with no balloon payment, while some conventional commercial mortgages carry a balloon payment after a shorter fixed-rate period. Confirming the amortization structure upfront is worth doing before committing to a program."
+        },
+        {
+          "q": "How long does commercial real estate financing take to close?",
+          "a": "Timelines vary by loan size, property type, and program, but working with a lender that underwrites in-house rather than routing files through multiple external approvals can meaningfully speed up the process compared to a standard bank timeline."
+        },
+        {
+          "q": "Can commercial real estate financing include funds for working capital or renovations?",
+          "a": "Some programs, particularly SBA 7(a) loans, allow working capital or renovation and improvement costs to be included alongside the real estate purchase, which can be useful when acquiring a property that needs work before it’s fully operational."
+        },
+        {
+          "q": "What credit and business history do I need to qualify?",
+          "a": "Requirements vary by program and lender, but most commercial real estate financing looks at business cash flow and debt service coverage, the owner’s personal credit and financial strength, and time in business, among other factors. A stronger financial profile generally unlocks better rates and higher loan-to-value."
+        }
+      ]
+    },
+    "cta": {
+      "apply_now": "Apply Now →",
+      "contact_us": "Contact Us Now",
+      "note": "Have a property or deal in mind — including a special-use property? Share the details and a loan officer will map out your financing options the same day."
+    },
+    "schema": {
+      "webpage_name": "Commercial Real Estate Loans | MyLoanDesk",
+      "webpage_description": "Comprehensive guide and debt calculation tools for commercial real estate mortgages, SBA loans, and special-use properties.",
+      "product_name": "Commercial Real Estate Loan",
+      "product_description": "Commercial property financing solutions spanning SBA 7(a), SBA 504, conventional commercial debt, and bridge financing up to $10M+.",
+      "faq_q1_question": "What's the difference between an SBA 7(a) and an SBA 504 loan for commercial real estate?",
+      "faq_q1_answer": "An SBA 7(a) loan is more flexible and can combine a real estate purchase with business acquisition costs or working capital in a single loan, typically up to $5 million. An SBA 504 loan is structured specifically for long-term fixed assets like commercial real estate or equipment, often with a lower down payment and a below-market fixed rate on a portion of the loan, but less flexibility to include other business costs.",
+      "faq_q2_question": "How much down payment do I need for a commercial real estate loan?",
+      "faq_q2_answer": "It depends on the program. SBA-backed commercial real estate loans can require as little as 10% down, well below the 20-30% typically required for a conventional commercial mortgage. The exact amount depends on the property type, your business financials, and the specific loan program.",
+      "faq_q3_question": "Can I get financing for a special-use property like a hotel or gas station?",
+      "faq_q3_answer": "Yes, though not every lender finances special-use properties such as hotels, gas stations, car washes, assisted living facilities, restaurants, funeral homes, or golf courses. These properties are often harder to resell if a loan defaults, so it’s worth working with a lender experienced in that specific property type rather than assuming a general commercial lender will approve it.",
+      "faq_q4_question": "What loan-to-value can I get on commercial real estate?",
+      "faq_q4_answer": "SBA-backed commercial real estate loans can offer loan-to-value ratios up to around 90%, meaningfully higher than the 70-75% typically available through a conventional commercial mortgage.",
+      "faq_q5_question": "Can I combine a business acquisition with a real estate purchase in one loan?",
+      "faq_q5_answer": "In many cases, yes. Certain SBA loan structures, particularly the SBA 7(a) program, allow a business acquisition, real estate purchase, and working capital needs to be financed together in a single loan rather than requiring separate financing for each piece.",
+      "faq_q6_question": "Are there balloon payments on commercial real estate loans?",
+      "faq_q6_answer": "It depends on the loan type. Many SBA-backed commercial real estate loans are fully amortizing with no balloon payment, while some conventional commercial mortgages carry a balloon payment after a shorter fixed-rate period. Confirming the amortization structure upfront is worth doing before committing to a program.",
+      "faq_q7_question": "How long does commercial real estate financing take to close?",
+      "faq_q7_answer": "Timelines vary by loan size, property type, and program, but working with a lender that underwrites in-house rather than routing files through multiple external approvals can meaningfully speed up the process compared to a standard bank timeline.",
+      "faq_q8_question": "Can commercial real estate financing include funds for working capital or renovations?",
+      "faq_q8_answer": "Some programs, particularly SBA 7(a) loans, allow working capital or renovation and improvement costs to be included alongside the real estate purchase, which can be useful when acquiring a property that needs work before it’s fully operational.",
+      "faq_q9_question": "What credit and business history do I need to qualify?",
+      "faq_q9_answer": "Requirements vary by program and lender, but most commercial real estate financing looks at business cash flow and debt service coverage, the owner’s personal credit and financial strength, and time in business, among other factors. A stronger financial profile generally unlocks better rates and higher loan-to-value."
+    }
+  },
+  "ConstructionLoans": {
+    "meta": {
+      "title": "Construction Loans for Custom Homes & Development | MyLoanDesk",
+      "description": "Construction loans and construction-to-permanent financing for custom homes, spec builds, and small developments. Use our free calculator to estimate your loan amount and down payment before you apply.",
+      "og_title": "Construction Loans for Custom Homes & Development | MyLoanDesk",
+      "og_description": "Finance your dream home or next development project with construction-to-permanent financing. Estimate your loan amount, down payment, and interest-only payments with our free calculator.",
+      "og_alt": "Construction Loans - MyLoanDesk",
+      "twitter_title": "Construction Loans for Custom Homes & Development | MyLoanDesk",
+      "twitter_description": "Finance your custom build with single-close construction-to-permanent financing."
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "loan_programs": "Loan Programs",
+      "construction_loans": "Construction Loans"
+    },
+    "back_to_programs": "Back to Loan Programs",
+    "title": "Construction Loans",
+    "hero": {
+      "subtitle": "Finance your dream home or next development project.",
+      "description": "Whether you're building a custom home, developing a residential community, or constructing investment properties, MyLoanDesk offers construction financing structured around your project's timeline — from groundbreaking to certificate of occupancy. Our construction-to-permanent loans combine your build financing and your long-term mortgage into a single closing, so you're not qualifying twice or paying two sets of closing costs.",
+      "bullet1": "One closing — construction converts straight to your mortgage",
+      "bullet2": "Interest-only payments during the build phase",
+      "bullet3": "Land equity can count toward your down payment",
+      "disclaimer": "Estimate only, based on common construction lending guidelines (up to 80% of total project cost, capped at roughly 75% of completed value). Actual loan amount, rate, and terms depend on underwriting, the builder, and the specific project."
+    },
+    "calculator": {
+      "badge": "Construction Loan Calculator",
+      "subheading": "Estimate your loan amount and build-phase payment.",
+      "land_label": "Land / lot cost (enter $0 if you already own it free and clear)",
+      "land_placeholder": "80,000",
+      "build_label": "Construction / build budget",
+      "build_placeholder": "420,000",
+      "value_label": "Est. completed value",
+      "value_placeholder": "620,000",
+      "total_cost": "Total project cost",
+      "max_loan": "Est. max loan amount",
+      "down_needed": "Est. down payment needed",
+      "ltc_label": "Loan-to-cost ratio",
+      "verdict_default": "Enter your numbers to run the estimate",
+      "verdict_low": "Comfortably within typical construction lending limits",
+      "verdict_mid": "Near typical limits — down payment or land equity will matter",
+      "verdict_high": "Above typical limits — talk to a loan officer about your options"
+    },
+    "what_is": {
+      "title": "What Is a Construction Loan?",
+      "p1": "A construction loan is short-term financing used to pay for building a home or development project from the ground up. Rather than receiving the full loan amount at closing like a traditional mortgage, funds are released in stages — called draws — as construction reaches specific milestones. Once the home is complete, most construction loans either require a separate mortgage to pay off the balance, or, with a construction-to-permanent loan, automatically convert into a standard long-term mortgage at a single closing.",
+      "p2": "Because the collateral (the finished home) doesn't exist yet at the time of closing, construction loans are underwritten differently than a mortgage on an existing property — lenders evaluate the borrower, the builder, the plans, and the budget together."
+    },
+    "how_it_works": {
+      "title": "How Construction Financing Works",
+      "steps": [
+        {
+          "step": "1",
+          "title": "Finalize your plans and budget.",
+          "text": "Lenders will want detailed building plans, a construction budget, and your builder's information."
+        },
+        {
+          "step": "2",
+          "title": "Get approved and close.",
+          "text": "Underwriting evaluates you, your builder, and the project as a whole — closing typically resembles a standard mortgage timeline."
+        },
+        {
+          "step": "3",
+          "title": "Funds are released in draws.",
+          "text": "As construction reaches milestones — foundation, framing, mechanicals, finishes — an inspection confirms progress and the next draw is released."
+        },
+        {
+          "step": "4",
+          "title": "Make interest-only payments.",
+          "text": "During the build, you typically pay interest only on the funds actually drawn, not the full loan amount."
+        },
+        {
+          "step": "5",
+          "title": "Convert to a permanent mortgage.",
+          "text": "Once construction is complete, a construction-to-permanent loan converts automatically into your long-term mortgage — no second closing required."
+        }
+      ]
+    },
+    "highlights": {
+      "title": "Program Highlights",
+      "subtitle": "What's included:",
+      "items": [
+        "Construction-to-permanent options that convert to a standard mortgage at completion",
+        "Interest-only payments during the build phase",
+        "Draw schedules aligned to construction milestones",
+        "Available for custom homes, spec builds, and small residential developments",
+        "Land acquisition financing available if you don't already own the lot",
+        "Existing land equity can be credited toward your down payment"
+      ]
+    },
+    "advantages": {
+      "title": "Strategic Advantages:",
+      "p1": "A construction-to-permanent loan means one closing, not two — saving on closing costs and eliminating the risk of needing to re-qualify for a separate end loan once the home is complete, when rates or your financial picture may have changed.",
+      "p2": "Draw schedules tied to inspected milestones protect both the builder's cash flow and the lender's collateral, keeping the project funded at each stage without requiring you to front costs out of pocket.",
+      "p3": "If you already own the land, its equity can often be credited toward your required down payment — reducing the amount of new cash you need to bring to the project."
+    },
+    "who_this_is_for": {
+      "title": "Who Construction Loans Are For",
+      "items": [
+        "Buyers building a custom home on land they own or are purchasing",
+        "Small developers building spec homes to sell upon completion",
+        "Investors constructing new rental or multifamily properties",
+        "Landowners looking to use their lot's equity toward a new build",
+        "Buyers who want a single closing rather than separate construction and end loans"
+      ]
+    },
+    "comparison": {
+      "title": "Construction Loans vs. Other Financing Options",
+      "th_c2p": "Construction-to-Permanent",
+      "th_renovation": "Renovation Loan",
+      "th_conventional": "Conventional Mortgage",
+      "rows": {
+        "best_for": {
+          "label": "Best for",
+          "c2p": "Building a new home from the ground up",
+          "renovation": "Renovating an existing home",
+          "conventional": "Purchasing a completed, move-in-ready home"
+        },
+        "disbursed": {
+          "label": "Funds disbursed",
+          "c2p": "In draws, tied to construction milestones",
+          "renovation": "Often in draws, tied to renovation scope",
+          "conventional": "In full, at closing"
+        },
+        "payment": {
+          "label": "Payment during project",
+          "c2p": "Interest-only on funds drawn",
+          "renovation": "Varies by program",
+          "conventional": "N/A — no project phase"
+        },
+        "closings": {
+          "label": "Number of closings",
+          "c2p": "One, if construction-to-permanent",
+          "renovation": "One",
+          "conventional": "One"
+        },
+        "collateral": {
+          "label": "Collateral at closing",
+          "c2p": "Land plus plans (home doesn't exist yet)",
+          "renovation": "Existing home",
+          "conventional": "Existing home"
+        }
+      }
+    },
+    "eligibility": {
+      "title": "Eligibility Requirements",
+      "items": [
+        "Credit score of approximately 680+ (varies by lender and project type)",
+        "Detailed construction plans, specifications, and a realistic budget",
+        "A licensed, vetted builder or general contractor",
+        "Down payment or land equity, typically 10–25% of total project cost",
+        "Sufficient reserves to cover contingencies and unexpected cost increases"
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "q": "What is a construction-to-permanent loan?",
+          "a": "A construction-to-permanent loan combines your short-term construction financing and your long-term mortgage into a single loan with a single closing. Once the home is complete, the loan automatically converts into a standard mortgage, so you avoid closing twice and re-qualifying for a separate end loan."
+        },
+        {
+          "q": "How much down payment is required for a construction loan?",
+          "a": "Down payment requirements for construction loans are typically higher than for a standard mortgage, often ranging from 10% to 25% of the total project cost, depending on the lender, the borrower's credit profile, and whether the land is already owned free and clear."
+        },
+        {
+          "q": "How do construction loan draws work?",
+          "a": "Instead of receiving the full loan amount upfront, funds are released in stages called draws, tied to completed construction milestones such as foundation, framing, and finishing. An inspection typically confirms each stage is complete before the next draw is released."
+        },
+        {
+          "q": "Do I pay principal during construction?",
+          "a": "Most construction loans are interest-only during the build phase, and interest is typically charged only on the funds that have actually been drawn, not the full loan amount. Principal payments generally begin once the loan converts to a permanent mortgage after construction is complete."
+        },
+        {
+          "q": "Can I use a construction loan to build on land I already own?",
+          "a": "Yes — if you already own the land free and clear, its value can often be used as equity toward your down payment requirement, which can reduce the amount of cash you need to bring to closing."
+        },
+        {
+          "q": "What credit score is needed for a construction loan?",
+          "a": "Construction loans generally require a stronger credit profile than a standard mortgage, often 680 or higher, since the lender is financing a project that doesn't yet exist as collateral. Builder experience and a detailed budget and plan set can also strengthen an application."
+        },
+        {
+          "q": "How long does construction loan financing take to close?",
+          "a": "Initial closing on a construction-to-permanent loan typically takes a similar timeframe to a conventional mortgage, often 30 to 45 days, since it requires underwriting the borrower, the builder, and the full project plans and budget."
+        },
+        {
+          "q": "What happens if construction costs more than the original budget?",
+          "a": "Cost overruns are common in construction projects. Many lenders require a contingency reserve built into the original budget, and some allow a loan modification if costs increase significantly. Planning a realistic budget with a contingency buffer upfront is the best way to avoid a funding gap mid-project."
+        }
+      ]
+    },
+    "cta": {
+      "apply_now": "Apply Now →",
+      "contact_us": "Contact Us Now",
+      "note": "Already have plans and a builder lined up? Send us the details — a loan officer will walk through your numbers the same day."
+    },
+    "schema": {
+      "webpage_name": "Construction Loans | MyLoanDesk",
+      "webpage_description": "Construction loans and construction-to-permanent financing for custom homes, spec builds, and residential developments.",
+      "product_name": "Construction-to-Permanent Loan",
+      "product_description": "Single-close financing combining short-term construction draw funding with a long-term fixed mortgage for custom residential builds.",
+      "faq_q1_question": "What is a construction-to-permanent loan?",
+      "faq_q1_answer": "A construction-to-permanent loan combines your short-term construction financing and your long-term mortgage into a single loan with a single closing. Once the home is complete, the loan automatically converts into a standard mortgage, so you avoid closing twice and re-qualifying for a separate end loan.",
+      "faq_q2_question": "How much down payment is required for a construction loan?",
+      "faq_q2_answer": "Down payment requirements for construction loans are typically higher than for a standard mortgage, often ranging from 10% to 25% of the total project cost, depending on the lender, the borrower's credit profile, and whether the land is already owned free and clear.",
+      "faq_q3_question": "How do construction loan draws work?",
+      "faq_q3_answer": "Instead of receiving the full loan amount upfront, funds are released in stages called draws, tied to completed construction milestones such as foundation, framing, and finishing. An inspection typically confirms each stage is complete before the next draw is released.",
+      "faq_q4_question": "Do I pay principal during construction?",
+      "faq_q4_answer": "Most construction loans are interest-only during the build phase, and interest is typically charged only on the funds that have actually been drawn, not the full loan amount. Principal payments generally begin once the loan converts to a permanent mortgage after construction is complete.",
+      "faq_q5_question": "Can I use a construction loan to build on land I already own?",
+      "faq_q5_answer": "Yes — if you already own the land free and clear, its value can often be used as equity toward your down payment requirement, which can reduce the amount of cash you need to bring to closing.",
+      "faq_q6_question": "What credit score is needed for a construction loan?",
+      "faq_q6_answer": "Construction loans generally require a stronger credit profile than a standard mortgage, often 680 or higher, since the lender is financing a project that doesn't yet exist as collateral. Builder experience and a detailed budget and plan set can also strengthen an application.",
+      "faq_q7_question": "How long does construction loan financing take to close?",
+      "faq_q7_answer": "Initial closing on a construction-to-permanent loan typically takes a similar timeframe to a conventional mortgage, often 30 to 45 days, since it requires underwriting the borrower, the builder, and the full project plans and budget.",
+      "faq_q8_question": "What happens if construction costs more than the original budget?",
+      "faq_q8_answer": "Cost overruns are common in construction projects. Many lenders require a contingency reserve built into the original budget, and some allow a loan modification if costs increase significantly. Planning a realistic budget with a contingency buffer upfront is the best way to avoid a funding gap mid-project."
+    }
+  },
+  "DSCRLoans": {
+    "meta": {
+      "title": "DSCR Investment Property Loans | MyLoanDesk",
+      "description": "Grow your real estate portfolio without personal income verification. Qualify for DSCR investment property financing based on property rental cash flow.",
+      "og_title": "DSCR Investment Property Loans | MyLoanDesk",
+      "og_description": "Qualify for investment property financing based on property rental cash flow instead of personal income tax returns.",
+      "og_alt": "DSCR Investment Property Loans - MyLoanDesk",
+      "twitter_title": "DSCR Investment Property Loans | MyLoanDesk",
+      "twitter_description": "Qualify for investment property financing based on property rental cash flow without personal tax returns."
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "loan_programs": "Loan Programs",
+      "dscr_loans": "DSCR Investment Property Loans"
+    },
+    "back_to_programs": "Back to Loan Programs",
+    "title": "DSCR Investment Property Loans",
+    "hero": {
+      "subtitle": "Grow your real estate portfolio without personal income verification.",
+      "description": "A Debt Service Coverage Ratio (DSCR) Loan is designed specifically for real estate investors. Instead of qualifying based on your personal income, tax returns, or employment history, DSCR loans qualify based on the rental income a property generates relative to its own debt obligations. That makes it possible to scale your portfolio without the paperwork burden of a traditional mortgage.",
+      "bullet1": "Close in as little as 14 days",
+      "bullet2": "Unlimited properties financed"
+    },
+    "calculator": {
+      "badge": "Live DSCR Calculator",
+      "subheading": "Enter your numbers — see if this loan fits.",
+      "rent_label": "Monthly rental income",
+      "rent_placeholder": "2,800",
+      "mode_know": "I know my payment",
+      "mode_estimate": "Estimate it for me",
+      "piti_label": "Monthly mortgage payment (PITIA est.)",
+      "piti_placeholder": "2,200",
+      "price_label": "Purchase price",
+      "price_placeholder": "450,000",
+      "down_label": "Down payment",
+      "down_placeholder": "25",
+      "rate_label": "Est. rate",
+      "rate_placeholder": "7.5",
+      "tax_ins_label": "Monthly taxes + insurance + HOA",
+      "tax_ins_placeholder": "450",
+      "breakdown_pi": "Est. principal & interest:",
+      "breakdown_taxes": "+ taxes/insurance/HOA:",
+      "breakdown_total": "Total est. payment:",
+      "breakdown_term": "(30-yr term)",
+      "breakdown_empty": "Fill in the fields above to estimate your payment",
+      "ratio_title": "Debt Service Coverage Ratio",
+      "verdict_empty": "Enter both numbers to calculate",
+      "verdict_strong": "Strong — likely to qualify with standard terms",
+      "verdict_qualifies": "Qualifies — may affect rate or reserves",
+      "verdict_below": "Below 1.0 — still possible with more reserves"
+    },
+    "highlights": {
+      "title": "Program Highlights:",
+      "items": [
+        "No personal income or tax return verification required",
+        "Qualify based on the property's rental income versus its debt payments",
+        "Finance an unlimited number of investment properties",
+        "Available for single-family, multifamily, and short-term rental properties",
+        "Ratios below 1.0 may still qualify with adjusted terms"
+      ]
+    },
+    "advantages": {
+      "title": "Strategic Advantages:",
+      "p1": "Because DSCR loans are underwritten around the asset rather than the borrower, investors who own multiple properties — and therefore show complex or low taxable income after depreciation and write-offs — are often able to qualify more easily than through a conventional loan.",
+      "p2": "Many investors use DSCR financing to close faster and with fewer conditions, since there's no employment verification, no debt-to-income calculation, and no tax transcript requests slowing down the loan."
+    },
+    "cta": {
+      "apply_now": "Apply Now →",
+      "contact_us": "Contact Us Now"
+    },
+    "schema": {
+      "webpage_name": "DSCR Investment Property Loans | MyLoanDesk",
+      "webpage_description": "Comprehensive guide and debt coverage ratio calculator for investor DSCR mortgage programs.",
+      "product_name": "DSCR Investment Property Loan",
+      "product_description": "An asset-based Non-QM mortgage allowing real estate investors to qualify using property rental cash flow rather than personal income or tax transcripts.",
+      "faq_q1_question": "What is a DSCR loan and how is it calculated?",
+      "faq_q1_answer": "A Debt Service Coverage Ratio (DSCR) loan qualifies real estate investors based on the property's gross rental income divided by its total monthly housing debt (principal, interest, taxes, insurance, and HOA dues). A ratio of 1.0 means the rent exactly covers the debt obligations.",
+      "faq_q2_question": "Do I need personal tax returns or employment verification for a DSCR loan?",
+      "faq_q2_answer": "No. DSCR financing requires no personal tax returns, W-2s, pay stubs, or traditional debt-to-income (DTI) calculations, making it ideal for self-employed and portfolio real estate investors.",
+      "faq_q3_question": "Can I finance an unlimited number of investment properties?",
+      "faq_q3_answer": "Yes. Unlike conventional Fannie Mae/Freddie Mac loans that cap individual borrowers at 10 financed properties, DSCR loan programs generally place no limits on the total number of properties an investor can finance.",
+      "faq_q4_question": "Can short-term rentals (Airbnb / VRBO) qualify for DSCR loans?",
+      "faq_q4_answer": "Yes. Many DSCR programs allow projected or historical short-term rental revenue verified through market data tools like AirDNA or 12-month operating statements.",
+      "faq_q5_question": "Can I qualify if the DSCR ratio is below 1.0?",
+      "faq_q5_answer": "Yes. Some lenders offer 'no-ratio' or under-1.0 DSCR options that accommodate cash-flow deficits with slightly higher down payment or liquidity reserve requirements."
+    }
   }
 }

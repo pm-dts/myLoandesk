@@ -1,8 +1,16 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
-export default function DscrCalculator() {
+interface DscrCalculatorProps {
+  locale?: string;
+}
+
+export default function DscrCalculator({ locale = "en" }: DscrCalculatorProps) {
+  const t = useTranslations("DSCRLoans.calculator");
+  const numberLocale = locale === "es" ? "es-US" : "en-US";
+
   const [rentInput, setRentInput] = useState<string>("");
   const [pitiMode, setPitiMode] = useState<"know" | "estimate">("know");
 
@@ -49,7 +57,7 @@ export default function DscrCalculator() {
   let barWidth = "0%";
   let barBg = "#D9722C";
   let verdictColor = "#C9C4B8";
-  let verdictText = "Enter both numbers to calculate";
+  let verdictText = t("verdict_empty");
 
   if (ratio !== null) {
     const pct = Math.min((ratio / 1.5) * 100, 100);
@@ -58,15 +66,15 @@ export default function DscrCalculator() {
     if (ratio >= 1.2) {
       barBg = "#4CA85C";
       verdictColor = "#8FD69B";
-      verdictText = "Strong — likely to qualify with standard terms";
+      verdictText = t("verdict_strong");
     } else if (ratio >= 1.0) {
       barBg = "#D9722C";
       verdictColor = "#EFB988";
-      verdictText = "Qualifies — may affect rate or reserves";
+      verdictText = t("verdict_qualifies");
     } else {
       barBg = "#C4453A";
       verdictColor = "#F0A69E";
-      verdictText = "Below 1.0 — still possible with more reserves";
+      verdictText = t("verdict_below");
     }
   }
 
@@ -81,15 +89,15 @@ export default function DscrCalculator() {
       />
 
       <div className="font-sans text-[12px] tracking-[0.08em] uppercase text-[#D9B896] mb-[4px] relative z-10 font-bold">
-        Live DSCR Calculator
+        {t("badge")}
       </div>
       <div className="text-[13px] text-[#C9C4B8] mb-[22px] relative z-10">
-        Enter your numbers — see if this loan fits.
+        {t("subheading")}
       </div>
 
       <div className="mb-[16px] relative z-10">
         <label className="block text-[12.5px] text-[#C9C4B8] mb-[6px] font-semibold">
-          Monthly rental income
+          {t("rent_label")}
         </label>
         <div className="relative">
           <span className="absolute left-[14px] top-1/2 -translate-y-1/2 text-[#8F8A7C] font-sans text-[15px]">
@@ -99,7 +107,7 @@ export default function DscrCalculator() {
             type="number"
             value={rentInput}
             onChange={(e) => setRentInput(e.target.value)}
-            placeholder="2,800"
+            placeholder={t("rent_placeholder")}
             inputMode="numeric"
             className="w-full bg-white/[0.07] border border-white/20 rounded-[10px] py-[12px] pr-[14px] pl-[30px] text-white font-sans text-[15px] font-semibold outline-none focus:border-[#D9722C] focus:bg-white/10 transition-all"
           />
@@ -116,7 +124,7 @@ export default function DscrCalculator() {
               : "bg-transparent text-[#C9C4B8] hover:text-white"
           }`}
         >
-          I know my payment
+          {t("mode_know")}
         </button>
         <button
           type="button"
@@ -127,7 +135,7 @@ export default function DscrCalculator() {
               : "bg-transparent text-[#C9C4B8] hover:text-white"
           }`}
         >
-          Estimate it for me
+          {t("mode_estimate")}
         </button>
       </div>
 
@@ -135,7 +143,7 @@ export default function DscrCalculator() {
         <div>
           <div className="mb-[16px] relative z-10">
             <label className="block text-[12.5px] text-[#C9C4B8] mb-[6px] font-semibold">
-              Monthly mortgage payment (PITIA est.)
+              {t("piti_label")}
             </label>
             <div className="relative">
               <span className="absolute left-[14px] top-1/2 -translate-y-1/2 text-[#8F8A7C] font-sans text-[15px]">
@@ -145,7 +153,7 @@ export default function DscrCalculator() {
                 type="number"
                 value={pitiInput}
                 onChange={(e) => setPitiInput(e.target.value)}
-                placeholder="2,200"
+                placeholder={t("piti_placeholder")}
                 inputMode="numeric"
                 className="w-full bg-white/[0.07] border border-white/20 rounded-[10px] py-[12px] pr-[14px] pl-[30px] text-white font-sans text-[15px] font-semibold outline-none focus:border-[#D9722C] focus:bg-white/10 transition-all"
               />
@@ -156,7 +164,7 @@ export default function DscrCalculator() {
         <div className="space-y-[12px]">
           <div className="relative z-10">
             <label className="block text-[12.5px] text-[#C9C4B8] mb-[6px] font-semibold">
-              Purchase price
+              {t("price_label")}
             </label>
             <div className="relative">
               <span className="absolute left-[14px] top-1/2 -translate-y-1/2 text-[#8F8A7C] font-sans text-[15px]">
@@ -166,7 +174,7 @@ export default function DscrCalculator() {
                 type="number"
                 value={priceInput}
                 onChange={(e) => setPriceInput(e.target.value)}
-                placeholder="450,000"
+                placeholder={t("price_placeholder")}
                 inputMode="numeric"
                 className="w-full bg-white/[0.07] border border-white/20 rounded-[10px] py-[12px] pr-[14px] pl-[30px] text-white font-sans text-[15px] font-semibold outline-none focus:border-[#D9722C] focus:bg-white/10 transition-all"
               />
@@ -176,7 +184,7 @@ export default function DscrCalculator() {
           <div className="grid grid-cols-2 gap-[12px]">
             <div className="relative z-10">
               <label className="block text-[12.5px] text-[#C9C4B8] mb-[6px] font-semibold">
-                Down payment
+                {t("down_label")}
               </label>
               <div className="relative">
                 <span className="absolute left-[14px] top-1/2 -translate-y-1/2 text-[#8F8A7C] font-sans text-[15px]">
@@ -186,7 +194,7 @@ export default function DscrCalculator() {
                   type="number"
                   value={downInput}
                   onChange={(e) => setDownInput(e.target.value)}
-                  placeholder="25"
+                  placeholder={t("down_placeholder")}
                   inputMode="numeric"
                   className="w-full bg-white/[0.07] border border-white/20 rounded-[10px] py-[12px] pr-[14px] pl-[26px] text-white font-sans text-[15px] font-semibold outline-none focus:border-[#D9722C] focus:bg-white/10 transition-all"
                 />
@@ -194,7 +202,7 @@ export default function DscrCalculator() {
             </div>
             <div className="relative z-10">
               <label className="block text-[12.5px] text-[#C9C4B8] mb-[6px] font-semibold">
-                Est. rate
+                {t("rate_label")}
               </label>
               <div className="relative">
                 <span className="absolute left-[14px] top-1/2 -translate-y-1/2 text-[#8F8A7C] font-sans text-[15px]">
@@ -205,7 +213,7 @@ export default function DscrCalculator() {
                   step="0.1"
                   value={rateInput}
                   onChange={(e) => setRateInput(e.target.value)}
-                  placeholder="7.5"
+                  placeholder={t("rate_placeholder")}
                   inputMode="decimal"
                   className="w-full bg-white/[0.07] border border-white/20 rounded-[10px] py-[12px] pr-[14px] pl-[26px] text-white font-sans text-[15px] font-semibold outline-none focus:border-[#D9722C] focus:bg-white/10 transition-all"
                 />
@@ -215,7 +223,7 @@ export default function DscrCalculator() {
 
           <div className="relative z-10">
             <label className="block text-[12.5px] text-[#C9C4B8] mb-[6px] font-semibold">
-              Monthly taxes + insurance + HOA
+              {t("tax_ins_label")}
             </label>
             <div className="relative">
               <span className="absolute left-[14px] top-1/2 -translate-y-1/2 text-[#8F8A7C] font-sans text-[15px]">
@@ -225,7 +233,7 @@ export default function DscrCalculator() {
                 type="number"
                 value={taxInsInput}
                 onChange={(e) => setTaxInsInput(e.target.value)}
-                placeholder="450"
+                placeholder={t("tax_ins_placeholder")}
                 inputMode="numeric"
                 className="w-full bg-white/[0.07] border border-white/20 rounded-[10px] py-[12px] pr-[14px] pl-[30px] text-white font-sans text-[15px] font-semibold outline-none focus:border-[#D9722C] focus:bg-white/10 transition-all"
               />
@@ -235,22 +243,35 @@ export default function DscrCalculator() {
           <div className="font-sans text-[13px] text-[#C9C4B8] bg-white/[0.06] border border-dashed border-white/20 rounded-[10px] p-[12px_14px] mt-[6px] leading-[1.6]">
             {computedPiti > 0 ? (
               <>
-                Est. principal &amp; interest:{" "}
+                {t("breakdown_pi")}{" "}
                 <strong className="text-white">
-                  ${estimatedPI.toFixed(0)}
+                  $
+                  {estimatedPI.toLocaleString(numberLocale, {
+                    maximumFractionDigits: 0,
+                  })}
                 </strong>
                 /mo
-                <br />+ taxes/insurance/HOA:{" "}
-                <strong className="text-white">${taxIns.toFixed(0)}</strong>/mo
                 <br />
-                Total est. payment:{" "}
+                {t("breakdown_taxes")}{" "}
                 <strong className="text-white">
-                  ${computedPiti.toFixed(0)}
+                  $
+                  {taxIns.toLocaleString(numberLocale, {
+                    maximumFractionDigits: 0,
+                  })}
                 </strong>
-                /mo <span className="opacity-70">(30-yr term)</span>
+                /mo
+                <br />
+                {t("breakdown_total")}{" "}
+                <strong className="text-white">
+                  $
+                  {computedPiti.toLocaleString(numberLocale, {
+                    maximumFractionDigits: 0,
+                  })}
+                </strong>
+                /mo <span className="opacity-70">{t("breakdown_term")}</span>
               </>
             ) : (
-              "Fill in the fields above to estimate your payment"
+              t("breakdown_empty")
             )}
           </div>
         </div>
@@ -261,7 +282,7 @@ export default function DscrCalculator() {
           {ratio !== null ? ratio.toFixed(2) : "—"}
         </div>
         <div className="text-[13px] text-[#C9C4B8] mb-[14px]">
-          Debt Service Coverage Ratio
+          {t("ratio_title")}
         </div>
         <div className="h-[8px] bg-white/[0.12] rounded-full overflow-hidden mb-[10px]">
           <div
