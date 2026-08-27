@@ -3,12 +3,19 @@
 import { useState } from "react";
 import { Calculator, DollarSign, Stethoscope } from "lucide-react";
 import { sendGTMEvent } from "@next/third-parties/google";
+import { useTranslations } from "next-intl";
+
+interface MedicalProfessionalCalculatorProps {
+  pagePath: string;
+  locale?: string;
+}
 
 export default function MedicalProfessionalCalculator({
   pagePath,
-}: {
-  pagePath: string;
-}) {
+  locale = "en",
+}: MedicalProfessionalCalculatorProps) {
+  const t = useTranslations("MedicalProfessionalLoans.calculator");
+
   const [grossMonthlyIncome, setGrossMonthlyIncome] = useState<string>("16000");
   const [studentLoanBalance, setStudentLoanBalance] =
     useState<string>("220000");
@@ -49,6 +56,7 @@ export default function MedicalProfessionalCalculator({
         gross_income: income,
         student_loan_balance: studentLoans,
         page_path: pagePath || "/medical-professional-loans",
+        locale,
       });
     }
   };
@@ -61,14 +69,13 @@ export default function MedicalProfessionalCalculator({
       <div className="bg-primary-bg border border-line rounded-3xl p-6 sm:p-10 shadow-lg">
         <div className="text-center max-w-xl mx-auto mb-8">
           <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-orange uppercase tracking-wider mb-2">
-            <Calculator size={16} /> Doctor Loan DTI Estimator
+            <Calculator size={16} /> {t("badge")}
           </div>
           <h3 className="text-2xl sm:text-3xl font-display font-light text-ink">
-            Calculate Your Student Debt DTI Impact
+            {t("heading")}
           </h3>
           <p className="text-xs sm:text-sm text-ink-2 mt-2">
-            See how specialized medical loan underwriting evaluates student loan
-            obligations differently than conventional loans.
+            {t("subheading")}
           </p>
         </div>
 
@@ -77,7 +84,7 @@ export default function MedicalProfessionalCalculator({
             {/* Gross Monthly Income */}
             <div>
               <label className="block text-xs font-semibold uppercase tracking-wider text-ink-2 mb-2">
-                Gross Monthly Income ($)
+                {t("income_label")}
               </label>
               <div className="relative">
                 <DollarSign
@@ -88,7 +95,7 @@ export default function MedicalProfessionalCalculator({
                   type="number"
                   value={grossMonthlyIncome}
                   onChange={(e) => setGrossMonthlyIncome(e.target.value)}
-                  placeholder="16000"
+                  placeholder={t("income_placeholder")}
                   className="w-full pl-12 pr-4 py-3.5 bg-cream/20 border border-line rounded-xl text-ink text-sm focus:outline-none focus:border-brand-orange transition-colors"
                   required
                 />
@@ -98,7 +105,7 @@ export default function MedicalProfessionalCalculator({
             {/* Total Student Loan Balance */}
             <div>
               <label className="block text-xs font-semibold uppercase tracking-wider text-ink-2 mb-2">
-                Total Student Debt ($)
+                {t("student_debt_label")}
               </label>
               <div className="relative">
                 <DollarSign
@@ -109,7 +116,7 @@ export default function MedicalProfessionalCalculator({
                   type="number"
                   value={studentLoanBalance}
                   onChange={(e) => setStudentLoanBalance(e.target.value)}
-                  placeholder="220000"
+                  placeholder={t("student_debt_placeholder")}
                   className="w-full pl-12 pr-4 py-3.5 bg-cream/20 border border-line rounded-xl text-ink text-sm focus:outline-none focus:border-brand-orange transition-colors"
                   required
                 />
@@ -119,7 +126,7 @@ export default function MedicalProfessionalCalculator({
             {/* Other Monthly Debt */}
             <div>
               <label className="block text-xs font-semibold uppercase tracking-wider text-ink-2 mb-2">
-                Other Monthly Debt ($)
+                {t("other_debt_label")}
               </label>
               <div className="relative">
                 <DollarSign
@@ -130,7 +137,7 @@ export default function MedicalProfessionalCalculator({
                   type="number"
                   value={otherMonthlyDebt}
                   onChange={(e) => setOtherMonthlyDebt(e.target.value)}
-                  placeholder="800"
+                  placeholder={t("other_debt_placeholder")}
                   className="w-full pl-12 pr-4 py-3.5 bg-cream/20 border border-line rounded-xl text-ink text-sm focus:outline-none focus:border-brand-orange transition-colors"
                   required
                 />
@@ -142,7 +149,7 @@ export default function MedicalProfessionalCalculator({
             type="submit"
             className="w-full bg-moss-deep text-primary-bg py-3.5 rounded-full font-semibold text-sm sm:text-base hover:bg-moss-darker transition-colors flex items-center justify-center gap-2"
           >
-            <Stethoscope size={18} /> Compare DTI Impact
+            <Stethoscope size={18} /> {t("submit_button")}
           </button>
         </form>
 
@@ -151,7 +158,7 @@ export default function MedicalProfessionalCalculator({
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
               <div className="p-3 bg-primary-bg rounded-xl border border-line/50">
                 <div className="text-[11px] uppercase tracking-wider text-ink-2 font-semibold">
-                  Standard DTI Ratio
+                  {t("standard_dti_label")}
                 </div>
                 <div className="text-xl font-bold text-ink mt-1">
                   {calcResult.standardDti.toFixed(1)}%
@@ -160,7 +167,7 @@ export default function MedicalProfessionalCalculator({
 
               <div className="p-3 bg-primary-bg rounded-xl border border-line/50">
                 <div className="text-[11px] uppercase tracking-wider text-moss-deep font-semibold">
-                  Doctor Loan DTI Ratio
+                  {t("doctor_dti_label")}
                 </div>
                 <div className="text-2xl font-bold text-moss-deep mt-1">
                   {calcResult.specializedDti.toFixed(1)}%
@@ -169,7 +176,7 @@ export default function MedicalProfessionalCalculator({
 
               <div className="p-3 bg-primary-bg rounded-xl border border-line/50">
                 <div className="text-[11px] uppercase tracking-wider text-brand-orange font-semibold">
-                  DTI Headroom Gained
+                  {t("headroom_gained_label")}
                 </div>
                 <div className="text-xl font-bold text-brand-orange mt-1">
                   +{calcResult.dtiSavings.toFixed(1)}%
@@ -178,9 +185,7 @@ export default function MedicalProfessionalCalculator({
             </div>
 
             <p className="text-xs text-ink-2 mt-4 text-center max-w-lg mx-auto">
-              Specialized medical programs calculate deferred or income-driven
-              student loan payments significantly lower than standard 1%
-              guidelines, maximizing your purchasing power.
+              {t("footnote")}
             </p>
           </div>
         )}

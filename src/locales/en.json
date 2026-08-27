@@ -6229,5 +6229,2033 @@
       "faq_q5_question": "Can MyLoanDesk help me determine whether I qualify?",
       "faq_q5_answer": "Yes. Tell us about your income, documentation, and purchase timeline, and our loan origination team will compare programs across our network of specialized ITIN lenders."
     }
+  },
+  "JumboLoans": {
+    "meta": {
+      "title": "Jumbo & Super Jumbo Loans Up to $30M+ | MyLoanDesk",
+      "description": "Jumbo and Super Jumbo financing up to $30 million and beyond, with multiple ways to qualify — full documentation, bank statement, asset depletion, foreign national, and DSCR investment paths. Estimate your payment with our free calculator.",
+      "og_title": "Jumbo & Super Jumbo Loans Up to $30M+ | MyLoanDesk",
+      "og_description": "Exceptional homes deserve exceptional financing. Jumbo and Super Jumbo loans up to $30M+, with multiple qualification paths for complex financial profiles.",
+      "og_alt": "Jumbo and Super Jumbo Loans - MyLoanDesk",
+      "twitter_title": "Jumbo & Super Jumbo Loans Up to $30M+ | MyLoanDesk",
+      "twitter_description": "Jumbo and Super Jumbo mortgage programs up to $30M+ with multiple qualification paths."
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "loan_programs": "Loan Programs",
+      "jumbo_loans": "Jumbo Loans"
+    },
+    "back_to_programs": "Back to Loan Programs",
+    "title": "Jumbo & Super Jumbo Loans",
+    "hero": {
+      "subtitle": "Financing up to $30 million and beyond — with more than one way to qualify.",
+      "description": "Exceptional homes deserve exceptional financing. MyLoanDesk's Jumbo and Super Jumbo programs go well beyond conforming loan limits, with the flexibility to structure your financing around how your wealth actually works — not just a single income documentation path. Whether your income is straightforward, tied up in a business, or held largely in liquid assets, there's likely a way to make the numbers work.",
+      "bullet1": "Financing available up to $30M+",
+      "bullet2": "No PMI, regardless of down payment",
+      "bullet3": "Five distinct ways to qualify",
+      "disclaimer": "Estimate only. Does not include property taxes, insurance, or HOA dues. Reserve suggestions are illustrative and scale with loan size; actual requirements depend on the lender, program, and full financial profile."
+    },
+    "interactive": {
+      "calculator": {
+        "badge": "Jumbo Payment Estimator",
+        "subheading": "See your estimated loan amount and payment.",
+        "purchase_label": "Purchase price",
+        "purchase_placeholder": "4,500,000",
+        "down_label": "Down payment",
+        "down_placeholder": "30",
+        "rate_label": "Est. rate",
+        "rate_placeholder": "6.9",
+        "term_label": "Loan term",
+        "term_30_fixed": "30-year fixed",
+        "term_15_fixed": "15-year fixed",
+        "loan_amount_label": "Loan amount",
+        "monthly_pi_label": "Est. monthly P&I",
+        "per_month": "/mo",
+        "suggested_reserves_label": "Suggested reserves",
+        "tier_conforming": "Within typical conforming range",
+        "tier_jumbo": "Jumbo range",
+        "tier_super_jumbo": "Super Jumbo range",
+        "reserves_scale": {
+          "under_1_5m": "~6 months PITI",
+          "under_5m": "~12 months PITI",
+          "under_15m": "~18–24 months PITI",
+          "over_15m": "24+ months, case-by-case"
+        }
+      },
+      "path_selector": {
+        "tabs": {
+          "full": "Full Documentation",
+          "bank": "Bank Statement",
+          "asset": "Asset Depletion",
+          "foreign": "Foreign National",
+          "dscr": "DSCR Investment"
+        },
+        "full": {
+          "badge": "Traditional Income Documentation",
+          "title": "Full Documentation",
+          "desc": "The traditional route — W-2s, pay stubs, and tax returns document your income directly. For borrowers with straightforward, well-documented income, this path often unlocks the most competitive pricing.",
+          "bullet1": "Best for salaried employees and borrowers with consistent, provable income",
+          "bullet2": "Typically the most competitive rate tier",
+          "bullet3": "Full underwriting of income, assets, and credit history"
+        },
+        "bank": {
+          "badge": "For Business Owners",
+          "title": "Bank Statement Qualification",
+          "desc": "Built for self-employed borrowers whose tax returns understate real cash flow after business deductions. Qualifying income is calculated from 12–24 months of bank deposits instead of tax returns.",
+          "bullet1": "Best for business owners, 1099 contractors, and freelancers",
+          "bullet2": "No tax returns required to qualify",
+          "bullet3": "Personal or business bank statements may be used, depending on the program"
+        },
+        "asset": {
+          "badge": "For High-Net-Worth Borrowers",
+          "title": "Asset Depletion / Asset Utilization",
+          "desc": "Your liquid assets — investment accounts, retirement accounts, and cash — are converted into a qualifying monthly income figure. A strong fit for retirees or borrowers whose wealth is held in assets rather than reflected on a pay stub.",
+          "bullet1": "Best for retirees, investors, and asset-rich, income-light borrowers",
+          "bullet2": "Qualifying income is calculated from eligible liquid assets over a set term",
+          "bullet3": "Little or no reliance on traditional employment income"
+        },
+        "foreign": {
+          "badge": "For International Buyers",
+          "title": "Foreign National Program",
+          "desc": "Designed for international buyers purchasing U.S. property without U.S. credit history or domestic income documentation. Typically requires a larger down payment in exchange for added underwriting flexibility.",
+          "bullet1": "Best for non-U.S. citizens without a U.S. credit file",
+          "bullet2": "Foreign income and asset documentation accepted",
+          "bullet3": "Larger down payment generally required in place of a U.S. credit history"
+        },
+        "dscr": {
+          "badge": "For Investment Properties",
+          "title": "DSCR Investment Qualification",
+          "desc": "Purchasing a luxury rental or investment property above conforming limits? Qualify based on the property's rental income relative to its debt payments, rather than your personal income.",
+          "bullet1": "Best for luxury rental, vacation rental, and investment properties",
+          "bullet2": "No personal income or employment verification required",
+          "bullet3": "Qualification is based on the property's own cash flow"
+        }
+      }
+    },
+    "what_is": {
+      "title": "What Is a Jumbo Loan — and a Super Jumbo Loan?",
+      "p1_part1": "A jumbo loan is any mortgage above the \"conforming\" loan limit set annually by the Federal Housing Finance Agency (FHFA). For 2026, that baseline limit is ",
+      "p1_baseline": "$832,750",
+      "p1_part2": " in most U.S. counties, rising to ",
+      "p1_highcost": "$1,249,125",
+      "p1_part3": " in officially designated high-cost areas. Once a loan amount exceeds that threshold, it falls outside what Fannie Mae and Freddie Mac can purchase, and requires jumbo financing instead.",
+      "p2": "\"Super jumbo\" isn't an official government category — it's industry shorthand for jumbo loans well above the standard jumbo range, generally starting somewhere around $2.5–3 million and extending into eight-figure territory. MyLoanDesk's programs are built to serve this full spectrum, from a $900,000 jumbo purchase up to $30 million and, in select scenarios, beyond."
+    },
+    "five_ways": {
+      "title": "Five Ways to Qualify",
+      "p1": "High-net-worth and complex-income borrowers rarely fit into a single underwriting box — so we don't force one. Select how your financial picture is structured below to see the path likely to fit best."
+    },
+    "how_it_works": {
+      "title": "How Jumbo Financing Works",
+      "steps": [
+        {
+          "step": "1",
+          "title": "Choose your qualification path.",
+          "desc": "We identify which of the five approaches above best fits your financial profile."
+        },
+        {
+          "step": "2",
+          "title": "Structure the scenario.",
+          "desc": "Down payment, reserves, and rate are structured around your loan size and qualification path."
+        },
+        {
+          "step": "3",
+          "title": "Submit documentation.",
+          "desc": "Requirements vary by path, from full tax returns to a simple asset statement."
+        },
+        {
+          "step": "4",
+          "title": "Appraisal and underwriting.",
+          "desc": "High-value properties often use specialized appraisal review given their unique nature."
+        },
+        {
+          "step": "5",
+          "title": "Close.",
+          "desc": "Sign your final documents and close — often with a dedicated point of contact throughout, given the complexity of these transactions."
+        }
+      ]
+    },
+    "highlights": {
+      "title": "Program Highlights",
+      "subtitle": "What's included:",
+      "items": [
+        "Loan amounts from just above conforming limits up to $30M+",
+        "No private mortgage insurance (PMI), regardless of down payment",
+        "Five distinct qualification paths for complex financial profiles",
+        "Interest-only payment options available on select programs",
+        "Financing for primary residences, second homes, and investment properties",
+        "Accommodates income and assets held in trusts, LLCs, and multiple entities",
+        "Non-warrantable condos and unique luxury properties considered case-by-case"
+      ]
+    },
+    "advantages": {
+      "title": "Strategic Advantages:",
+      "p1": "Because jumbo and super jumbo loans aren't sold to Fannie Mae or Freddie Mac, underwriting isn't bound by the same rigid rules as a conforming loan — which is exactly why multiple qualification paths exist. A borrower who wouldn't fit a conventional box on paper may still be an excellent credit risk once assets, business structure, or global income are properly accounted for.",
+      "p2": "Avoiding PMI on a multi-million dollar loan is a meaningful monthly savings compared to a conforming loan with mortgage insurance — on a $5M loan, PMI alone could otherwise represent thousands of dollars a month.",
+      "p3": "For borrowers with wealth spread across trusts, multiple businesses, or international accounts, having a lender that can actually underwrite that complexity — rather than asking you to simplify your finances to fit a form — often makes the difference between approval and a declined file elsewhere."
+    },
+    "who_this_is_for": {
+      "title": "Who This Is For",
+      "items": [
+        "Buyers purchasing above their local conforming loan limit",
+        "Business owners and entrepreneurs with complex or understated tax-return income",
+        "High-net-worth individuals and retirees with substantial liquid assets",
+        "International buyers purchasing U.S. property",
+        "Investors purchasing luxury rental or vacation properties",
+        "Borrowers with income or assets held in trusts or multiple business entities"
+      ]
+    },
+    "down_payment_reserves": {
+      "title": "A Note on Down Payment & Reserves",
+      "p1": "Down payment and reserve requirements on jumbo loans generally scale with loan size and qualification path. As a general guide:",
+      "th_loan_amount": "Loan Amount",
+      "th_guidance": "Typical Reserve Guidance",
+      "rows": [
+        {
+          "amount": "Up to $1.5M",
+          "guidance": "Around 6 months of PITI"
+        },
+        {
+          "amount": "$1.5M – $5M",
+          "guidance": "Around 12 months of PITI"
+        },
+        {
+          "amount": "$5M – $15M",
+          "guidance": "Around 18–24 months of PITI"
+        },
+        {
+          "amount": "$15M+",
+          "guidance": "24+ months, evaluated case-by-case"
+        }
+      ],
+      "footnote": "These figures are illustrative guidance, not a commitment — actual reserve and down payment requirements depend on your qualification path, credit profile, property type, and the specific program."
+    },
+    "comparison": {
+      "title": "Jumbo & Super Jumbo vs. Conforming Financing",
+      "th_conforming": "Conforming Loan",
+      "th_jumbo": "Jumbo Loan",
+      "th_super_jumbo": "Super Jumbo Loan",
+      "rows": {
+        "loan_amount": {
+          "label": "Loan amount",
+          "conforming": "Up to $832,750 ($1,249,125 high-cost)",
+          "jumbo": "Above conforming, up to roughly $2.5–3M",
+          "super_jumbo": "Roughly $2.5–3M up to $30M+"
+        },
+        "pmi": {
+          "label": "PMI required",
+          "conforming": "Often, below 20% down",
+          "jumbo": "No",
+          "super_jumbo": "No"
+        },
+        "paths": {
+          "label": "Qualification paths",
+          "conforming": "Standard income documentation",
+          "jumbo": "Multiple paths available",
+          "super_jumbo": "Multiple paths, often essential"
+        },
+        "sold_to_agency": {
+          "label": "Sold to Fannie/Freddie",
+          "conforming": "Yes",
+          "jumbo": "No — held or sold privately",
+          "super_jumbo": "No — held or sold privately"
+        },
+        "best_for": {
+          "label": "Best for",
+          "conforming": "Typical home purchases within local limits",
+          "jumbo": "Above-average homes in most markets",
+          "super_jumbo": "Luxury and ultra-luxury properties"
+        }
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "q": "What is the difference between a jumbo loan and a super jumbo loan?",
+          "a": "A jumbo loan is any mortgage above the conforming loan limit set annually by the FHFA — $832,750 in most U.S. counties for 2026, and up to $1,249,125 in high-cost areas. A super jumbo loan is an informal term for jumbo loans well above that threshold, typically starting somewhere around $2.5 million to $3 million and extending into eight figures, depending on the lender."
+        },
+        {
+          "q": "Do jumbo loans require private mortgage insurance (PMI)?",
+          "a": "No. Jumbo and super jumbo loans typically don't carry PMI regardless of your down payment, unlike many conforming conventional loans. Lenders manage the added risk of a larger loan through credit, reserve, and down payment requirements instead."
+        },
+        {
+          "q": "Can I qualify for a jumbo loan without providing tax returns?",
+          "a": "In many cases, yes. Alongside traditional full-documentation underwriting, options like bank statement qualification for self-employed borrowers and asset depletion (or asset utilization) qualification for high-net-worth borrowers can allow you to qualify without tax returns being the primary income document."
+        },
+        {
+          "q": "What is asset depletion or asset utilization qualification?",
+          "a": "Asset depletion, also called asset utilization, is a qualification method that converts your liquid assets — such as investment or retirement accounts — into a monthly qualifying income figure, typically by dividing an eligible portion of those assets over a set number of months. It's often used by retirees, high-net-worth individuals, or business owners whose reported income doesn't reflect their true financial strength."
+        },
+        {
+          "q": "How much in reserves do I need for a jumbo or super jumbo loan?",
+          "a": "Reserve requirements generally scale with loan size. Smaller jumbo loans may require around 6 months of principal, interest, taxes, and insurance (PITI) in reserves, while larger super jumbo loans, particularly above $5 million, often require 12 to 24 months or more, depending on the lender and the full financial profile."
+        },
+        {
+          "q": "Can foreign nationals qualify for a jumbo loan in the U.S.?",
+          "a": "Yes, in many cases. Foreign national jumbo programs are designed for international buyers without U.S. credit history or domestic income documentation, typically requiring a larger down payment and additional documentation of foreign income or assets."
+        },
+        {
+          "q": "Can I get a jumbo loan on an investment property?",
+          "a": "Yes. DSCR-based jumbo financing allows investment property purchases to be qualified based on the property's rental income relative to its debt obligations, rather than the borrower's personal income, which can be useful for luxury rental and investment properties above conforming loan limits."
+        },
+        {
+          "q": "What credit score do I need for a jumbo or super jumbo loan?",
+          "a": "Jumbo lending generally expects stronger credit than conforming loans, often a score of 700 or higher, with larger super jumbo loans sometimes expecting 720 or above. Exact requirements vary based on the full loan scenario, including down payment, reserves, and qualification path."
+        },
+        {
+          "q": "Can complex income from trusts, LLCs, or multiple businesses be used to qualify?",
+          "a": "Yes. Jumbo and super jumbo underwriting is often built to accommodate complex financial profiles, including income or assets held in trusts, multiple business entities, LLCs, and other non-traditional structures common among high-net-worth borrowers."
+        }
+      ]
+    },
+    "cta": {
+      "apply_now": "Apply Now →",
+      "contact_us": "Contact Us Now",
+      "note": "Have a complex scenario in mind — a trust, multiple entities, or assets spread across accounts? Share the details and a loan officer will map out the right path the same day."
+    },
+    "schema": {
+      "webpage_name": "Jumbo & Super Jumbo Loans Up to $30M+ | MyLoanDesk",
+      "webpage_description": "Comprehensive guide and calculation tools for Jumbo and Super Jumbo luxury home financing and non-conforming qualification paths.",
+      "product_name": "Jumbo & Super Jumbo Mortgage Loan",
+      "product_description": "High-balance mortgage financing up to $30M+ exceeding conforming limits with flexible qualification methods including full doc, bank statements, asset depletion, and DSCR.",
+      "faq_q1_question": "What is the difference between a jumbo loan and a super jumbo loan?",
+      "faq_q1_answer": "A jumbo loan is any mortgage above the conforming loan limit set annually by the FHFA — $832,750 in most U.S. counties for 2026, and up to $1,249,125 in high-cost areas. A super jumbo loan is an informal term for jumbo loans well above that threshold, typically starting somewhere around $2.5 million to $3 million and extending into eight figures, depending on the lender.",
+      "faq_q2_question": "Do jumbo loans require private mortgage insurance (PMI)?",
+      "faq_q2_answer": "No. Jumbo and super jumbo loans typically don't carry PMI regardless of your down payment, unlike many conforming conventional loans. Lenders manage the added risk of a larger loan through credit, reserve, and down payment requirements instead.",
+      "faq_q3_question": "Can I qualify for a jumbo loan without providing tax returns?",
+      "faq_q3_answer": "In many cases, yes. Alongside traditional full-documentation underwriting, options like bank statement qualification for self-employed borrowers and asset depletion (or asset utilization) qualification for high-net-worth borrowers can allow you to qualify without tax returns being the primary income document.",
+      "faq_q4_question": "What is asset depletion or asset utilization qualification?",
+      "faq_q4_answer": "Asset depletion, also called asset utilization, is a qualification method that converts your liquid assets — such as investment or retirement accounts — into a monthly qualifying income figure, typically by dividing an eligible portion of those assets over a set number of months. It's often used by retirees, high-net-worth individuals, or business owners whose reported income doesn't reflect their true financial strength.",
+      "faq_q5_question": "How much in reserves do I need for a jumbo or super jumbo loan?",
+      "faq_q5_answer": "Reserve requirements generally scale with loan size. Smaller jumbo loans may require around 6 months of principal, interest, taxes, and insurance (PITI) in reserves, while larger super jumbo loans, particularly above $5 million, often require 12 to 24 months or more, depending on the lender and the full financial profile.",
+      "faq_q6_question": "Can foreign nationals qualify for a jumbo loan in the U.S.?",
+      "faq_q6_answer": "Yes, in many cases. Foreign national jumbo programs are designed for international buyers without U.S. credit history or domestic income documentation, typically requiring a larger down payment and additional documentation of foreign income or assets.",
+      "faq_q7_question": "Can I get a jumbo loan on an investment property?",
+      "faq_q7_answer": "Yes. DSCR-based jumbo financing allows investment property purchases to be qualified based on the property's rental income relative to its debt obligations, rather than the borrower's personal income, which can be useful for luxury rental and investment properties above conforming loan limits.",
+      "faq_q8_question": "What credit score do I need for a jumbo or super jumbo loan?",
+      "faq_q8_answer": "Jumbo lending generally expects stronger credit than conforming loans, often a score of 700 or higher, with larger super jumbo loans sometimes expecting 720 or above. Exact requirements vary based on the full loan scenario, including down payment, reserves, and qualification path.",
+      "faq_q9_question": "Can complex income from trusts, LLCs, or multiple businesses be used to qualify?",
+      "faq_q9_answer": "Yes. Jumbo and super jumbo underwriting is often built to accommodate complex financial profiles, including income or assets held in trusts, multiple business entities, LLCs, and other non-traditional structures common among high-net-worth borrowers."
+    }
+  },
+  "MedicalProfessionalLoans": {
+    "meta": {
+      "title": "Medical Professional Loan Programs | MyLoanDesk",
+      "description": "Specialized mortgage programs designed for physicians, dentists, residents, and eligible healthcare professionals. Qualify with student debt or new employment contracts.",
+      "og_title": "Medical Professional Mortgage Solutions | MyLoanDesk",
+      "og_description": "Mortgage programs recognizing the unique earning potential and financial profiles of doctors and medical professionals.",
+      "og_alt": "Medical Professional Loans - MyLoanDesk",
+      "twitter_title": "Medical Professional Mortgage Solutions | MyLoanDesk",
+      "twitter_description": "Mortgage programs recognizing the unique earning potential and financial profiles of doctors and medical professionals."
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "loan_programs": "Loan Programs",
+      "medical_loans": "Medical Professional Loans"
+    },
+    "back_to_programs": "Back to Loan Programs",
+    "title": "Medical Professional Loan Programs",
+    "hero": {
+      "badge": "Specialized Physician & Healthcare Financing",
+      "title_main": "Medical Professional Loan Programs",
+      "title_sub": "Mortgage Solutions Designed for Medical Professionals",
+      "p1": "A strong career doesn't always translate into an easy mortgage approval. Physicians and other medical professionals can have substantial earning potential while carrying student debt, beginning a new position, completing residency, or having limited funds available for a traditional down payment.",
+      "p2": "MyLoanDesk provides access to specialized mortgage programs designed for eligible medical professionals.",
+      "cta_quote": "Explore Medical Professional Loan Options",
+      "cta_calc": "Calculate DTI Impact"
+    },
+    "overview": {
+      "badge": "01 — Overview",
+      "heading": "What Is a Medical Professional Loan?",
+      "p1": "Medical professional mortgage programs are specialized financing options that recognize the unique financial profile of doctors and other eligible healthcare professionals.",
+      "p2": "Depending on the program, lenders may offer flexible qualification guidelines, competitive financing options, or different treatment of certain financial factors compared with standard mortgage programs.",
+      "footnote": "* Eligibility varies significantly by lender and profession.",
+      "side_card": {
+        "title": "Who May Qualify?",
+        "intro": "Depending on the lender, eligible professions may include:",
+        "professions": [
+          "Physicians (MD, DO)",
+          "Dentists & Dental Surgeons (DDS, DMD)",
+          "Veterinarians (DVM)",
+          "Pharmacists (PharmD)",
+          "Optometrists (OD)",
+          "Podiatrists (DPM)",
+          "Certain other licensed medical professionals"
+        ],
+        "residents_note_label": "Residents & Fellows:",
+        "residents_note_text": "Residents, fellows, and newly practicing professionals may also have options with certain lenders."
+      }
+    },
+    "advantages": {
+      "badge": "02 — Advantages",
+      "heading": "Why Medical Professionals Use These Programs",
+      "cards": [
+        {
+          "title": "High Earning, Limited Savings",
+          "desc": "Years of education and training can mean a medical professional begins earning significant income before accumulating a large down payment."
+        },
+        {
+          "title": "Student Loan Debt",
+          "desc": "Student loans can affect qualification under conventional DTI calculations. Specialized programs may evaluate these obligations differently."
+        },
+        {
+          "title": "New Employment",
+          "desc": "Some eligible borrowers may be able to qualify using an employment contract or documented future income, subject to lender requirements."
+        },
+        {
+          "title": "Flexible Financing",
+          "desc": "Certain medical professional programs may offer higher financing levels or other specialized terms for qualifying borrowers."
+        }
+      ]
+    },
+    "contract_underwriting": {
+      "badge": "03 — Contract Underwriting",
+      "heading": "Buying Before You Start Your New Position?",
+      "p1": "You may not necessarily need years of income from your new job before exploring a mortgage.",
+      "p2": "Some programs may consider a signed employment contract or offer letter when the borrower will begin qualifying employment within an acceptable period. We'll review your employment situation and determine which lender guidelines may apply.",
+      "cta_button": "Consult an Advisor"
+    },
+    "comparison": {
+      "badge": "04 — Comparison",
+      "heading": "Medical Professional Loan vs. Conventional Mortgage",
+      "p1": "A conventional mortgage may still be the better choice for some borrowers.",
+      "p2": "That's why MyLoanDesk doesn't assume a specialized medical professional loan is automatically your best option. We can compare available conventional, jumbo, and specialized medical professional programs based on your circumstances.",
+      "side_card": {
+        "title": "Comparison Factors",
+        "student_loan_title": "Student Loan Assessment:",
+        "student_loan_desc": "Standard 1% payment calculation vs. Income-Driven / deferred allowance.",
+        "down_payment_title": "Down Payment Options:",
+        "down_payment_desc": "Standard guidelines vs. specialized low/no-down payment tiers for doctors.",
+        "future_income_title": "Future Income Allowance:",
+        "future_income_desc": "W-2 pay stub requirements vs. signed employment contract approval."
+      }
+    },
+    "value_prop": {
+      "badge": "05 — Value Proposition",
+      "heading": "Why MyLoanDesk?",
+      "p1": "Different lenders define \"medical professional\" differently and offer different qualification requirements.",
+      "p2": "We help you compare programs rather than assuming one lender's program is your only choice.",
+      "side_card": {
+        "title": "Starting residency, relocating, or buying your next home?",
+        "desc": "Explore specialized medical programs tailored around your medical specialty, contract start date, and debt profile.",
+        "cta_button": "Get My Loan Options"
+      }
+    },
+    "calculator": {
+      "badge": "Doctor Loan DTI Estimator",
+      "heading": "Calculate Your Student Debt DTI Impact",
+      "subheading": "See how specialized medical loan underwriting evaluates student loan obligations differently than conventional loans.",
+      "income_label": "Gross Monthly Income ($)",
+      "income_placeholder": "16000",
+      "student_debt_label": "Total Student Debt ($)",
+      "student_debt_placeholder": "220000",
+      "other_debt_label": "Other Monthly Debt ($)",
+      "other_debt_placeholder": "800",
+      "submit_button": "Compare DTI Impact",
+      "standard_dti_label": "Standard DTI Ratio",
+      "doctor_dti_label": "Doctor Loan DTI Ratio",
+      "headroom_gained_label": "DTI Headroom Gained",
+      "footnote": "Specialized medical programs calculate deferred or income-driven student loan payments significantly lower than standard 1% guidelines, maximizing your purchasing power."
+    },
+    "faq": {
+      "badge": "06 — Clarity",
+      "heading": "Medical Professional Loan FAQs",
+      "items": [
+        {
+          "q": "Do medical professional loans require mortgage insurance?",
+          "a": "It depends on the lender, financing level, and program. Certain specialized programs may provide alternatives to traditional mortgage-insurance structures."
+        },
+        {
+          "q": "Can residents and fellows qualify?",
+          "a": "Potentially. Some lenders offer programs for eligible residents and fellows."
+        },
+        {
+          "q": "Can I qualify using a new employment contract?",
+          "a": "Certain lenders may permit qualification based on an acceptable employment contract or offer letter, subject to their guidelines."
+        },
+        {
+          "q": "What professions qualify?",
+          "a": "Eligibility varies by lender. Physicians and dentists are commonly included, while some programs extend eligibility to additional healthcare professions."
+        },
+        {
+          "q": "Should I use a medical professional loan or conventional mortgage?",
+          "a": "It depends. Comparing both can help determine which financing structure better fits your goals."
+        }
+      ]
+    },
+    "bottom_cta": {
+      "heading": "Your Career Is Specialized. Your Mortgage Can Be Too.",
+      "cta_button": "Explore My Options",
+      "disclaimer": "Eligibility, financing levels, occupation requirements, loan amounts, rates, terms, and program availability vary by lender and are subject to underwriting and approval."
+    },
+    "schema": {
+      "webpage_name": "Medical Professional Loan Programs | MyLoanDesk",
+      "webpage_description": "Specialized home financing solutions for doctors, dentists, residents, and licensed medical professionals.",
+      "product_name": "Physician & Medical Professional Mortgage Loan",
+      "product_description": "Custom home financing for medical doctors, dentists, and residents offering low-to-no down payments, student debt exclusions, and contract-based income qualification.",
+      "faq_q1_question": "Do medical professional loans require mortgage insurance?",
+      "faq_q1_answer": "It depends on the lender, financing level, and program. Certain specialized programs may provide alternatives to traditional mortgage-insurance structures.",
+      "faq_q2_question": "Can residents and fellows qualify?",
+      "faq_q2_answer": "Potentially. Some lenders offer programs for eligible residents and fellows.",
+      "faq_q3_question": "Can I qualify using a new employment contract?",
+      "faq_q3_answer": "Certain lenders may permit qualification based on an acceptable employment contract or offer letter, subject to their guidelines.",
+      "faq_q4_question": "What professions qualify?",
+      "faq_q4_answer": "Eligibility varies by lender. Physicians and dentists are commonly included, while some programs extend eligibility to additional healthcare professions.",
+      "faq_q5_question": "Should I use a medical professional loan or conventional mortgage?",
+      "faq_q5_answer": "It depends. Comparing both can help determine which financing structure better fits your goals."
+    }
+  },
+  "PortugalLoans": {
+    "meta": {
+      "title": "Property Financing in Portugal for Expats & Foreign Buyers | MyLoanDesk",
+      "description": "Financing for expats and foreign buyers purchasing residential, commercial, or investment property in Portugal. Estimate your Portuguese mortgage payment with our free calculator.",
+      "og_title": "Property Financing in Portugal for Expats & Foreign Buyers | MyLoanDesk",
+      "og_description": "Buying a home, investing in commercial real estate, or developing a new project in Portugal? Explore financing options through our network of lenders in Portugal.",
+      "og_alt": "Portugal Property Financing - MyLoanDesk",
+      "twitter_title": "Property Financing in Portugal for Expats & Foreign Buyers | MyLoanDesk",
+      "twitter_description": "Financing for expats and foreign buyers purchasing residential, commercial, or investment property in Portugal."
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "loan_programs": "Loan Programs",
+      "portugal_financing": "Portugal Property Financing"
+    },
+    "back_to_programs": "Back to Loan Programs",
+    "title": "Property Financing in Portugal",
+    "hero": {
+      "subtitle": "Buying or relocating to Portugal? Financing is more accessible than most expats expect.",
+      "description": "Whether you're buying a home, investing in commercial real estate, or developing a new project, MyLoanDesk helps qualified borrowers explore financing options through our network of lenders in Portugal. Portuguese banks lend openly to foreign buyers — there are no legal restrictions on foreign ownership or foreign borrowing — but the process looks different from a U.S. mortgage, and knowing what to expect makes all the difference.",
+      "bullet1": "Open to both EU and non-EU foreign buyers",
+      "bullet2": "Residential, commercial, and construction financing",
+      "bullet3": "Fixed and variable rate options available",
+      "disclaimer": "Estimate only, in euros. Does not include Portuguese property transfer tax (IMT), stamp duty, notary, or registration costs, which are separate and typically due at signing. Actual terms depend on the bank, your residency status, and your full financial profile."
+    },
+    "calculator": {
+      "badge": "Portugal Mortgage Estimator",
+      "subheading": "See your estimated loan amount and payment (in EUR).",
+      "price_label": "Property price",
+      "price_placeholder": "450,000",
+      "down_label": "Deposit",
+      "down_placeholder": "30",
+      "rate_label": "Est. rate",
+      "rate_placeholder": "4.2",
+      "term_label": "Loan term",
+      "term_years": "years",
+      "loan_amount_label": "Loan amount",
+      "monthly_payment_label": "Est. monthly payment",
+      "per_month": "/mo",
+      "ltv_label": "Loan-to-value (LTV)",
+      "ltv_note_low": "Below the typical minimum deposit for non-resident buyers, usually at least 25–30%.",
+      "ltv_note_mid": "Within the typical range for non-resident financing in Portugal.",
+      "ltv_note_high": "A strong deposit — may unlock more competitive pricing."
+    },
+    "how_it_works_overview": {
+      "title": "How Property Financing Works in Portugal",
+      "p1": "Portuguese banks offer what's called Crédito à Habitação — home loan financing — to both tax residents and non-residents, including American and other foreign buyers. Unlike some countries that restrict foreign ownership, Portugal imposes no special permits or restrictions on international buyers purchasing or financing property.",
+      "p2": "The practical differences for a non-resident borrower come down to a few things: a larger required deposit than a resident would need, more thorough documentation of foreign income and assets, and typically a slightly wider rate spread. The overall process, however, follows the same conventional mortgage market structure — there are no Islamic finance principles or other non-standard frameworks involved, just fixed and variable rate lending similar in concept to a U.S. mortgage, adapted to Portuguese banking practice."
+    },
+    "process": {
+      "title": "How the Process Works",
+      "steps": [
+        {
+          "step": "1",
+          "title": "Get your NIF and a Portuguese bank account.",
+          "desc": "A Portuguese tax number (NIF) and, in most cases, a local bank account are needed before a bank will process your application."
+        },
+        {
+          "step": "2",
+          "title": "Get pre-approved.",
+          "desc": "We help you understand your realistic borrowing power before you commit to a property."
+        },
+        {
+          "step": "3",
+          "title": "Submit documentation.",
+          "desc": "Proof of income, assets, credit history, and identification — foreign income documentation is reviewed carefully."
+        },
+        {
+          "step": "4",
+          "title": "Bank valuation and approval.",
+          "desc": "The bank appraises the property and finalizes your loan terms."
+        },
+        {
+          "step": "5",
+          "title": "Sign at the notary.",
+          "desc": "The final purchase and mortgage are formalized at the \"escritura\" — the official deed signing."
+        }
+      ]
+    },
+    "highlights": {
+      "title": "Program Highlights",
+      "subtitle": "What's included:",
+      "items": [
+        "Financing for residential, commercial, and construction/development projects",
+        "Open to both EU and non-EU foreign nationals",
+        "Fixed, variable (Euribor-indexed), and mixed-rate loan structures available",
+        "Terms extending up to roughly 30 years for younger borrowers",
+        "Financing available to retirees with documented pension income",
+        "Guarantor arrangements available in some scenarios to extend borrowing capacity"
+      ]
+    },
+    "deposit_ltv": {
+      "title": "A Note on Deposit & Loan-to-Value",
+      "p1": "Portuguese banks generally lend a smaller percentage of the purchase price to non-residents than to tax residents. As a general guide:",
+      "th_profile": "Buyer Profile",
+      "th_ltv": "Typical Loan-to-Value",
+      "rows": [
+        {
+          "profile": "Resident, primary residence",
+          "ltv": "Up to 80–90%"
+        },
+        {
+          "profile": "Non-resident, primary or second home",
+          "ltv": "Around 60–75%"
+        },
+        {
+          "profile": "Non-resident, commercial or investment property",
+          "ltv": "Around 50%"
+        }
+      ],
+      "footnote": "These figures are general market guidance, not a commitment — actual loan-to-value depends on the bank, the property, and your full financial profile."
+    },
+    "golden_visa": {
+      "tag": "⚠ Important — Golden Visa Clarification",
+      "p1_part1": "Many buyers researching Portugal still associate property purchases with the country's Golden Visa residency-by-investment program. ",
+      "p1_bold": "That's no longer accurate.",
+      "p1_part2": " Since October 2023, real estate purchases no longer qualify as an investment route for the Golden Visa program — that door closed under Portugal's \"Mais Habitação\" housing law.",
+      "p2": "You can absolutely still buy and finance property in Portugal as a foreign buyer — that hasn't changed. But it will not, by itself, grant you Portuguese residency or a path to the Golden Visa. If residency is part of your goal, that's a separate conversation for an immigration attorney, not something this financing accomplishes on its own. We'd rather tell you that plainly upfront than let a common misconception shape your decision."
+    },
+    "advantages": {
+      "title": "Strategic Advantages:",
+      "p1": "Financing a portion of your purchase rather than paying entirely in cash can free up capital for renovations, furnishing, or simply keeping a larger reserve — leverage can open up better-located or larger properties than a cash-only budget would allow.",
+      "p2": "Working with a broker familiar with the Portuguese non-resident lending process matters — applications from foreign buyers are evaluated a little differently than a typical local file, and knowing how to present income, assets, and documentation in a way Portuguese underwriters expect can meaningfully affect your approval and terms."
+    },
+    "who_this_is_for": {
+      "title": "Who This Is For",
+      "items": [
+        "American and other foreign buyers purchasing a home in Portugal",
+        "Retirees relocating to Portugal with documented pension income",
+        "Second-home buyers looking for a European base",
+        "Investors purchasing rental or commercial property in Portugal",
+        "Buyers developing or renovating property, including construction financing needs"
+      ]
+    },
+    "what_you_need": {
+      "title": "What You'll Likely Need",
+      "items": [
+        "Portuguese tax number (NIF)",
+        "Portuguese bank account",
+        "Valid passport / government ID",
+        "Proof of income (pay stubs, tax returns, or pension statements)",
+        "Recent bank and asset statements",
+        "Credit history documentation from your home country"
+      ]
+    },
+    "comparison": {
+      "title": "Resident vs. Non-Resident Financing",
+      "th_resident": "Portuguese Tax Resident",
+      "th_non_resident": "Non-Resident (Expat/Foreign Buyer)",
+      "rows": {
+        "deposit": {
+          "label": "Typical deposit",
+          "resident": "10–20%",
+          "non_resident": "25–35%+"
+        },
+        "ltv": {
+          "label": "Loan-to-value",
+          "resident": "Up to 80–90%",
+          "non_resident": "Typically 60–75%"
+        },
+        "documentation": {
+          "label": "Documentation",
+          "resident": "Standard local income documentation",
+          "non_resident": "Fuller documentation of foreign income and assets"
+        },
+        "rate_spread": {
+          "label": "Rate spread",
+          "resident": "Standard local pricing",
+          "non_resident": "Often slightly wider"
+        },
+        "nif_required": {
+          "label": "NIF / local bank account required",
+          "resident": "Yes",
+          "non_resident": "Yes"
+        }
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "q": "Can foreigners get a mortgage to buy property in Portugal?",
+          "a": "Yes. Portugal places no legal restrictions on foreign ownership or foreign borrowing, and Portuguese banks regularly lend to both EU and non-EU non-residents. The main practical differences from a resident mortgage are a larger required deposit, more thorough documentation, and typically a somewhat higher rate spread."
+        },
+        {
+          "q": "How much deposit do I need as a non-resident buyer?",
+          "a": "Non-resident buyers should generally expect to put down at least 25-35% of the purchase price, since Portuguese banks typically cap non-resident financing around 60-75% loan-to-value. Some scenarios may allow for a smaller deposit or a higher loan-to-value, depending on the buyer's financial profile and the specific bank."
+        },
+        {
+          "q": "Does buying property in Portugal still qualify me for the Golden Visa?",
+          "a": "No. Since October 2023, real estate purchases no longer qualify as an investment route for Portugal’s Golden Visa program. Property in Portugal can still be purchased and financed by foreign buyers, but it will not, on its own, grant Portuguese residency. Anyone considering the Golden Visa program should speak with an immigration attorney about the current qualifying routes, which no longer include real estate."
+        },
+        {
+          "q": "Do I need a Portuguese bank account or tax number (NIF) to get a mortgage?",
+          "a": "Generally, yes. Most Portuguese lenders require a Portuguese tax identification number (NIF) and, in most cases, a Portuguese bank account to process a mortgage application, both of which can typically be set up before or during the financing process."
+        },
+        {
+          "q": "Can retirees qualify for a mortgage in Portugal?",
+          "a": "Yes, retirees with a documented, regular pension income can generally qualify for a Portuguese mortgage. Loan terms are often structured so the loan is repaid by a certain age, which can shorten the available term for older borrowers, and adding a guarantor is sometimes used to extend borrowing capacity."
+        },
+        {
+          "q": "What’s the difference between fixed and variable rate mortgages in Portugal?",
+          "a": "Portuguese mortgages are commonly offered as either a fixed rate for a set period, or a variable rate tied to Euribor plus a bank spread, which adjusts periodically. Some products also offer a mixed structure, combining a fixed period followed by a variable one."
+        },
+        {
+          "q": "How long can a mortgage term be in Portugal?",
+          "a": "Portuguese mortgage terms can extend up to around 30-40 years for younger borrowers, though most banks require the loan to be fully repaid by a set age, often somewhere between 70 and 80, which effectively shortens the maximum term available to older borrowers."
+        },
+        {
+          "q": "Can I get financing for a commercial or investment property in Portugal?",
+          "a": "Yes, though commercial and investment property financing typically comes with a lower loan-to-value than a primary residence — often around 50% of the purchase price or appraised value, whichever is lower — reflecting the higher risk profile banks assign to non-owner-occupied property."
+        },
+        {
+          "q": "How long does the mortgage approval and closing process take in Portugal?",
+          "a": "Timelines vary, but buyers should generally plan for a longer process than a typical U.S. mortgage, given the additional documentation, valuation, and legal steps involved, including the final signing at a notary (the \"escritura\"). Working with a broker experienced in the Portuguese market can help keep the process moving efficiently."
+        }
+      ]
+    },
+    "cta": {
+      "apply_now": "Apply Now →",
+      "contact_us": "Contact Us Now",
+      "note": "Already have a property in mind, or just starting to explore Portugal? Share the details and a loan officer will walk through your financing options the same day."
+    },
+    "schema": {
+      "webpage_name": "Property Financing in Portugal for Expats & Foreign Buyers | MyLoanDesk",
+      "webpage_description": "Comprehensive guide and mortgage payment calculator for expats, non-residents, and international buyers purchasing property in Portugal.",
+      "product_name": "Portugal International Mortgage & Property Loan",
+      "product_description": "Mortgage financing in Portugal (Crédito à Habitação) for EU and non-EU foreign buyers, expats, and retirees covering residential, commercial, and construction properties.",
+      "faq_q1_question": "Can foreigners get a mortgage to buy property in Portugal?",
+      "faq_q1_answer": "Yes. Portugal places no legal restrictions on foreign ownership or foreign borrowing, and Portuguese banks regularly lend to both EU and non-EU non-residents. The main practical differences from a resident mortgage are a larger required deposit, more thorough documentation, and typically a somewhat higher rate spread.",
+      "faq_q2_question": "How much deposit do I need as a non-resident buyer?",
+      "faq_q2_answer": "Non-resident buyers should generally expect to put down at least 25-35% of the purchase price, since Portuguese banks typically cap non-resident financing around 60-75% loan-to-value. Some scenarios may allow for a smaller deposit or a higher loan-to-value, depending on the buyer's financial profile and the specific bank.",
+      "faq_q3_question": "Does buying property in Portugal still qualify me for the Golden Visa?",
+      "faq_q3_answer": "No. Since October 2023, real estate purchases no longer qualify as an investment route for Portugal’s Golden Visa program. Property in Portugal can still be purchased and financed by foreign buyers, but it will not, on its own, grant Portuguese residency. Anyone considering the Golden Visa program should speak with an immigration attorney about the current qualifying routes, which no longer include real estate.",
+      "faq_q4_question": "Do I need a Portuguese bank account or tax number (NIF) to get a mortgage?",
+      "faq_q4_answer": "Generally, yes. Most Portuguese lenders require a Portuguese tax identification number (NIF) and, in most cases, a Portuguese bank account to process a mortgage application, both of which can typically be set up before or during the financing process.",
+      "faq_q5_question": "Can retirees qualify for a mortgage in Portugal?",
+      "faq_q5_answer": "Yes, retirees with a documented, regular pension income can generally qualify for a Portuguese mortgage. Loan terms are often structured so the loan is repaid by a certain age, which can shorten the available term for older borrowers, and adding a guarantor is sometimes used to extend borrowing capacity.",
+      "faq_q6_question": "What’s the difference between fixed and variable rate mortgages in Portugal?",
+      "faq_q6_answer": "Portuguese mortgages are commonly offered as either a fixed rate for a set period, or a variable rate tied to Euribor plus a bank spread, which adjusts periodically. Some products also offer a mixed structure, combining a fixed period followed by a variable one.",
+      "faq_q7_question": "How long can a mortgage term be in Portugal?",
+      "faq_q7_answer": "Portuguese mortgage terms can extend up to around 30-40 years for younger borrowers, though most banks require the loan to be fully repaid by a set age, often somewhere between 70 and 80, which effectively shortens the maximum term available to older borrowers.",
+      "faq_q8_question": "Can I get financing for a commercial or investment property in Portugal?",
+      "faq_q8_answer": "Yes, though commercial and investment property financing typically comes with a lower loan-to-value than a primary residence — often around 50% of the purchase price or appraised value, whichever is lower — reflecting the higher risk profile banks assign to non-owner-occupied property.",
+      "faq_q9_question": "How long does the mortgage approval and closing process take in Portugal?",
+      "faq_q9_answer": "Timelines vary, but buyers should generally plan for a longer process than a typical U.S. mortgage, given the additional documentation, valuation, and legal steps involved, including the final signing at a notary (the \"escritura\"). Working with a broker experienced in the Portuguese market can help keep the process moving efficiently."
+    }
+  },
+  "ReverseMortgagePurchase": {
+    "meta": {
+      "title": "Reverse Mortgage for Purchase | Buy Your Next Home",
+      "description": "Buy your next home with a reverse mortgage and no required monthly principal and interest mortgage payments.* Learn how HECM for Purchase works.",
+      "og_title": "Reverse Mortgage for Purchase | Buy Your Next Home",
+      "og_description": "Buy your next home with a reverse mortgage and no required monthly principal and interest mortgage payments.* Learn how HECM for Purchase works.",
+      "og_alt": "Older homebuyers exploring a Reverse Mortgage for Purchase to buy their next primary residence",
+      "twitter_title": "Reverse Mortgage for Purchase | Buy Your Next Home",
+      "twitter_description": "Use a reverse mortgage to finance part of your next primary residence while keeping more of your savings available for retirement."
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "loan_programs": "Loan Programs",
+      "reverse_purchase": "Reverse Mortgage for Purchase"
+    },
+    "hero": {
+      "badge": "HECM for Purchase",
+      "title_main": "Reverse Mortgage for Purchase:",
+      "title_sub": "Buy Your Next Home Without Required Monthly Mortgage Payments*",
+      "lead": "Use a reverse mortgage to finance part of your next primary residence while keeping more of your savings available for retirement.",
+      "p1": "A reverse mortgage isn't only for homeowners who want to access equity in a home they already own. Eligible homebuyers can also use a Reverse Mortgage for Purchase to buy their next primary residence.",
+      "p1_link_text": "reverse mortgage",
+      "p2": "Instead of paying 100% cash for the home or taking out a traditional mortgage with required monthly principal and interest payments, you contribute a portion of the purchase price from your own eligible funds and use a reverse mortgage to finance the remaining eligible amount.",
+      "p3_bold": "The result? You can purchase and own your next home without required monthly principal and interest mortgage payments.*",
+      "cta_calc": "See How Much Home I Could Buy",
+      "cta_specialist": "Talk to a Reverse Mortgage Specialist"
+    },
+    "overview": {
+      "badge": "01 — Overview",
+      "heading": "What Is a Reverse Mortgage for Purchase?",
+      "p1": "A Reverse Mortgage for Purchase allows eligible older homebuyers to purchase a primary residence and obtain a reverse mortgage in a single transaction.",
+      "p2": "The FHA-insured version is known as a HECM for Purchase, or Home Equity Conversion Mortgage for Purchase.",
+      "side_card": {
+        "title": "How the Financing Works",
+        "items": [
+          "You provide a required monetary investment toward the purchase.",
+          "The reverse mortgage provides the remaining eligible financing.",
+          "Unlike a traditional mortgage, you are not required to make monthly principal and interest payments on the reverse mortgage* as long as you continue to meet the loan requirements.",
+          "You retain ownership and title to the home."
+        ]
+      }
+    },
+    "the_process": {
+      "badge": "02 — The Process",
+      "heading": "How Does a Reverse Mortgage Purchase Work?",
+      "subheading": "The concept is fairly simple. Here are the steps involved in using a reverse mortgage to buy your next home.",
+      "steps": [
+        {
+          "step": "1",
+          "title": "Choose Your New Home",
+          "desc": "Find a property you want to purchase and occupy as your principal residence."
+        },
+        {
+          "step": "2",
+          "title": "Determine Your Required Investment",
+          "desc": "Your required funds toward the purchase are calculated based on factors including your age, purchase price, appraised value, current interest rates, and reverse mortgage program."
+        },
+        {
+          "step": "3",
+          "title": "Provide Eligible Funds",
+          "desc": "Your required investment may come from eligible sources such as the sale of your current home, savings, investments, or other acceptable funds."
+        },
+        {
+          "step": "4",
+          "title": "Reverse Mortgage Finances the Remaining Eligible Amount",
+          "desc": "The reverse mortgage provides the portion of the purchase price you are eligible to finance."
+        },
+        {
+          "step": "5",
+          "title": "Move Into Your New Home",
+          "desc": "You own the property and do not have required monthly principal and interest mortgage payments on the reverse mortgage.*"
+        }
+      ]
+    },
+    "why_buy": {
+      "heading": "Why Buy a Home With a Reverse Mortgage?",
+      "p1": "For many retirees, the choice isn't simply between paying cash and getting a traditional mortgage. A Reverse Mortgage for Purchase creates another option.",
+      "p2": "Instead of putting all—or most—of your available cash into your next home, you may be able to use a portion of your funds for the purchase and preserve more of your remaining assets for other needs.",
+      "reasons_title": "Homebuyers may consider this strategy when they want to:",
+      "reasons": [
+        "Downsize into a smaller home",
+        "Move closer to children or grandchildren",
+        "Relocate to another city or state",
+        "Move to a warmer climate",
+        "Purchase a newer or more accessible home",
+        "Reduce ongoing housing expenses",
+        "Preserve more retirement savings",
+        "Avoid required monthly principal and interest mortgage payments*",
+        "Increase their home-buying power compared with paying all cash",
+        "Keep additional assets available for future expenses"
+      ],
+      "down_payment_card": {
+        "title": "How Much Do I Need to Put Down?",
+        "p1": "This is one of the most common questions about a Reverse Mortgage for Purchase.",
+        "p2": "There is no single down-payment percentage that applies to every borrower. Your required investment depends on several factors, including:",
+        "factors": [
+          "Your age",
+          "Age of the youngest eligible borrower",
+          "Purchase price",
+          "Appraised value",
+          "Current interest rates",
+          "Reverse mortgage program",
+          "Applicable lending limits",
+          "Property type",
+          "Other program requirements"
+        ],
+        "p3": "Generally, a Reverse Mortgage for Purchase requires a substantial upfront investment from the buyer, but it may be considerably less than purchasing the property entirely with cash."
+      }
+    },
+    "lead_box": {
+      "title": "Example",
+      "p1": "Suppose you're considering purchasing a $600,000 home.",
+      "p2": "Instead of paying the entire $600,000 in cash, you may be able to contribute a portion of the purchase price and finance the remaining eligible amount with a reverse mortgage.",
+      "p3": "Your actual required investment must be calculated specifically for you.",
+      "cta_button": "Calculate My Estimated Purchase Options"
+    },
+    "modal": {
+      "title": "Purchase Estimate Request",
+      "intro": "Please provide a few details so our team can accurately run your scenario using HUD's official HECM guidelines.",
+      "purchase_price_label": "Estimated Home Purchase Price",
+      "borrower_age_label": "Youngest Borrower's Age",
+      "zip_code_label": "Target ZIP Code",
+      "full_name_label": "Full Name",
+      "email_label": "Email Address",
+      "phone_label": "Phone Number",
+      "phone_optional": "(Optional)",
+      "submit_button": "Request My Estimate",
+      "submitting_button": "Submitting...",
+      "privacy_notice": "By submitting this form, you consent to be contacted by our specialists. We value your privacy and keep your information secure.",
+      "success_title": "Request Received!",
+      "success_desc": "Thanks — we'll run your personalized purchase estimate using HUD's official calculator and follow up with you within 24 hours.",
+      "close_window": "Close Window",
+      "toast_success": "Purchase estimate request submitted successfully!",
+      "toast_error": "There was an issue submitting your request. Please try again.",
+      "warning_title": "Unsaved Information",
+      "warning_desc": "Are you sure you want to exit? The details you entered will be lost.",
+      "warning_keep": "Keep Editing",
+      "warning_discard": "Discard"
+    },
+    "strategies": {
+      "all_cash": {
+        "badge": "03 — Payment Strategies",
+        "heading": "Reverse Mortgage Purchase vs. Paying All Cash",
+        "intro": "Imagine you're selling your current home and have substantial cash available for your next purchase. You could put all of that money into the next home. Or you could potentially use a Reverse Mortgage for Purchase.",
+        "th_feature": "Feature",
+        "th_reverse": "Reverse Mortgage for Purchase",
+        "th_cash": "All-Cash Purchase",
+        "rows": {
+          "own_home": {
+            "label": "Own the home",
+            "reverse": "Yes",
+            "cash": "Yes"
+          },
+          "monthly_payment": {
+            "label": "Required monthly principal & interest mortgage payment",
+            "reverse": "No*",
+            "cash": "No"
+          },
+          "uses_all_funds": {
+            "label": "Uses all purchase funds upfront",
+            "reverse": "No",
+            "cash": "Yes"
+          },
+          "keeps_assets": {
+            "label": "Keeps some assets available",
+            "reverse": "Potentially",
+            "cash": "Less cash remains after purchase"
+          },
+          "mortgage_balance": {
+            "label": "Reverse mortgage balance",
+            "reverse": "Yes",
+            "cash": "No mortgage"
+          },
+          "interest_accrues": {
+            "label": "Interest accrues",
+            "reverse": "Yes",
+            "cash": "No"
+          },
+          "taxes_insurance": {
+            "label": "Property taxes & insurance required",
+            "reverse": "Yes",
+            "cash": "Yes"
+          }
+        },
+        "footer": "A reverse mortgage purchase may allow you to preserve more liquid assets, but interest and applicable charges accrue on the reverse mortgage balance over time. Neither approach is automatically better. The right choice depends on your finances, goals, estate plans, and expected length of time in the home."
+      },
+      "traditional_mortgage": {
+        "badge": "04 — Mortgage Types",
+        "heading": "Reverse Mortgage Purchase vs. Traditional Mortgage",
+        "th_feature": "Feature",
+        "th_reverse": "Reverse Mortgage Purchase",
+        "th_traditional": "Traditional Mortgage",
+        "rows": {
+          "monthly_payment": {
+            "label": "Monthly principal & interest payment",
+            "reverse": "Not required*",
+            "traditional": "Required"
+          },
+          "buyer_contributes": {
+            "label": "Buyer contributes funds at closing",
+            "reverse": "Yes - substantial investment",
+            "traditional": "Typically down payment"
+          },
+          "age_req": {
+            "label": "Minimum age requirement",
+            "reverse": "Yes",
+            "traditional": "Generally no"
+          },
+          "ownership": {
+            "label": "Home ownership",
+            "reverse": "You retain title",
+            "traditional": "You retain title"
+          },
+          "interest": {
+            "label": "Interest",
+            "reverse": "Accrues to loan balance",
+            "traditional": "Typically paid monthly"
+          },
+          "balance": {
+            "label": "Loan balance",
+            "reverse": "Generally increases over time",
+            "traditional": "Generally decreases with payments"
+          },
+          "primary_residence": {
+            "label": "Primary residence required",
+            "reverse": "Yes",
+            "traditional": "Depends on loan program"
+          },
+          "taxes_insurance": {
+            "label": "Property taxes & insurance",
+            "reverse": "Borrower responsibility",
+            "traditional": "Borrower responsibility"
+          },
+          "repayment": {
+            "label": "Repayment",
+            "reverse": "Generally upon a maturity event",
+            "traditional": "According to monthly loan schedule"
+          }
+        }
+      }
+    },
+    "buying_power": {
+      "heading": "Could a Reverse Mortgage Increase Your Home-Buying Power?",
+      "highlight": "Potentially.",
+      "p1": "Suppose you plan to spend $400,000 cash on your next home. Rather than purchasing a $400,000 property entirely with cash, a Reverse Mortgage for Purchase may allow you to combine your available funds with reverse mortgage financing and potentially consider a higher-priced home.",
+      "options_intro": "That could give you additional options when looking for:",
+      "options": [
+        "A better location",
+        "A newer property",
+        "A one-story home",
+        "A home with accessibility features",
+        "A property closer to family",
+        "A home in a retirement community",
+        "A property requiring less maintenance"
+      ],
+      "note_p1": "This doesn't mean you should automatically purchase a more expensive home.",
+      "note_p2": "It means a reverse mortgage may give you another way to structure the purchase."
+    },
+    "who_qualifies": {
+      "heading": "Who May Qualify?",
+      "p1": "For an FHA-insured HECM for Purchase, the youngest borrower generally must be at least 62 years old. Borrowers must also meet applicable FHA and lender requirements.",
+      "requirements_intro": "These generally include:",
+      "requirements": [
+        "Purchasing an eligible property",
+        "Occupying the property as a principal residence",
+        "Providing the required monetary investment from eligible sources",
+        "Meeting applicable financial assessment requirements",
+        "Completing HUD-approved reverse mortgage counseling",
+        "Paying property taxes and homeowners insurance",
+        "Maintaining the property",
+        "Meeting applicable FHA and lender requirements"
+      ],
+      "footnote": "Other proprietary reverse mortgage purchase programs may have different requirements."
+    },
+    "property_types": {
+      "heading": "What Types of Homes Can You Purchase?",
+      "intro": "Eligible property types depend on the reverse mortgage program. Depending on applicable requirements, eligible properties may include certain:",
+      "types": [
+        "Single-family homes",
+        "FHA-approved condominium units",
+        "Certain condominium units meeting applicable requirements",
+        "Two-to-four-unit properties when borrower occupancy requirements are satisfied",
+        "Manufactured homes that meet applicable program requirements"
+      ],
+      "footnote_part1": "The property must satisfy the requirements of the specific reverse mortgage program being used. ",
+      "footnote_link": "MyLoanDesk",
+      "footnote_part2": " can review a property before you make an offer to determine whether it appears to meet applicable program requirements."
+    },
+    "funds_and_ownership": {
+      "funds": {
+        "heading": "Where Can the Buyer's Funds Come From?",
+        "p1": "Your required investment must come from acceptable sources under the applicable reverse mortgage program.",
+        "p2": "Depending on program requirements, eligible funds may include:",
+        "sources": [
+          "Proceeds from the sale of your current home",
+          "Checking or savings accounts",
+          "Investment or retirement assets",
+          "Other verified acceptable funds"
+        ],
+        "p3": "Certain restrictions may apply to borrowed funds and other sources.",
+        "p4": "Your mortgage specialist should verify the source of funds before you enter into a purchase transaction."
+      },
+      "ownership": {
+        "heading": "Do You Still Own the Home?",
+        "answer": "Yes.",
+        "p1": "Using a reverse mortgage does not mean giving ownership of your home to the lender.",
+        "p2": "You purchase the property and retain title and ownership, just as you would with another mortgage. The reverse mortgage is a lien against the property.",
+        "note": "You remain responsible for complying with the loan requirements, including paying property taxes, homeowners insurance, applicable HOA charges, and maintaining the home."
+      }
+    },
+    "faq": {
+      "badge": "05 — Clarity",
+      "heading": "Frequently Asked Questions About Reverse Mortgage Purchase",
+      "items": [
+        {
+          "q": "Can I really buy a home with a reverse mortgage?",
+          "a": "Yes. Eligible older homebuyers can use a reverse mortgage to finance part of the purchase of a qualifying primary residence. The FHA-insured program is commonly known as HECM for Purchase."
+        },
+        {
+          "q": "Do I have to make mortgage payments?",
+          "a": "There are no required monthly principal and interest payments on the reverse mortgage* while applicable loan requirements are met. You remain responsible for property taxes, homeowners insurance, applicable HOA charges, property maintenance, and other obligations under the loan."
+        },
+        {
+          "q": "How old do I have to be?",
+          "a": "For an FHA-insured HECM for Purchase, the youngest borrower generally must be at least 62 years old. Certain proprietary reverse mortgage programs may have different age requirements."
+        },
+        {
+          "q": "How much money do I have to put down?",
+          "a": "There is no universal percentage. Your required investment depends on factors such as your age, the home's purchase price and appraised value, current interest rates, and the reverse mortgage program. MyLoanDesk can calculate an estimate based on your actual situation."
+        },
+        {
+          "q": "Can I use money from selling my current home?",
+          "a": "Yes, proceeds from the sale of your existing home may generally be an eligible source for your required investment, subject to applicable documentation and program requirements."
+        },
+        {
+          "q": "Can I buy a second home or vacation home?",
+          "a": "A HECM for Purchase is intended for a home that will be your principal residence. It is not designed to finance a traditional second home or investment property. If you're relocating to a vacation or retirement destination, the new property may potentially qualify if it will actually become your principal residence and all other program requirements are satisfied."
+        },
+        {
+          "q": "Do I still own the home?",
+          "a": "Yes. You retain title and ownership of your home. The reverse mortgage lender does not become the owner of your property."
+        },
+        {
+          "q": "Can I sell the home later?",
+          "a": "Yes. You can sell the property. The reverse mortgage balance is generally repaid from the sale proceeds, with remaining equity belonging to you after satisfying the loan and applicable transaction expenses."
+        },
+        {
+          "q": "What happens to the home when I pass away?",
+          "a": "Your heirs generally have options under the terms of the reverse mortgage. They may choose to repay the loan and retain the property or sell the property and use the proceeds to satisfy the reverse mortgage. Specific requirements and timelines depend on the loan program and circumstances."
+        },
+        {
+          "q": "Can I pay off the reverse mortgage early?",
+          "a": "Generally, yes. Reverse mortgages typically do not require you to keep the loan for a specific number of years, and applicable loan documents govern repayment. Your mortgage specialist can review the specific terms of the program you're considering."
+        },
+        {
+          "q": "Does the loan balance increase over time?",
+          "a": "Generally, yes. Because monthly principal and interest payments are not required, interest and applicable financed charges accrue to the reverse mortgage balance. As the balance increases, the equity remaining in the property may decrease."
+        }
+      ]
+    },
+    "retirement_cta": {
+      "heading": "Thinking About Moving in Retirement?",
+      "p1": "Your next home doesn't necessarily have to be an all-cash purchase. And it doesn't necessarily have to come with another traditional monthly mortgage payment.",
+      "p2_bold": "A Reverse Mortgage for Purchase may provide a third option.",
+      "p3": "You may be able to combine a portion of your available assets with reverse mortgage financing to purchase the home you want while preserving more of your remaining funds.",
+      "moving_title": "That could mean moving:",
+      "moving_reasons": [
+        "Closer to your family.",
+        "Into a smaller home.",
+        "Into a more accessible home.",
+        "To another state.",
+        "Into a home better suited for retirement."
+      ],
+      "moving_footer": "The important part is determining whether the numbers make sense for your situation.",
+      "find_out_heading": "Find Out How Much Home You Could Purchase",
+      "find_out_p1": "If you're considering buying your next home, MyLoanDesk can prepare a personalized Reverse Mortgage for Purchase analysis.",
+      "determine_title": "We'll help you determine:",
+      "determine_items": [
+        "How much you may qualify to finance.",
+        "Approximately how much you may need to bring to closing.",
+        "What purchase price may fit your available funds.",
+        "Whether HECM or another available reverse mortgage program may work for you.",
+        "How a reverse mortgage purchase compares with paying cash or using traditional financing."
+      ],
+      "cta_options": "See My Purchase Options",
+      "cta_specialist": "Talk to a Reverse Mortgage Specialist",
+      "no_obligation": "No obligation. Review the numbers before deciding."
+    },
+    "disclosures": {
+      "title": "Important Disclosures",
+      "p1": "*No required monthly principal and interest mortgage payments are required on a reverse mortgage while applicable loan requirements are met. A reverse mortgage is not a payment-free loan.",
+      "p2": "Borrowers remain responsible for property taxes, homeowners insurance, applicable HOA charges, property maintenance, and compliance with all applicable loan terms. Failure to meet these obligations may cause the loan to become due and payable.",
+      "p3": "Interest and applicable financed charges accrue to the reverse mortgage balance over time, generally increasing the amount owed and reducing remaining home equity.",
+      "p4": "HECM borrowers must meet applicable FHA requirements and complete HUD-approved reverse mortgage counseling.",
+      "p5": "A HECM for Purchase must be used to purchase an eligible property that will serve as the borrower's principal residence. Property and occupancy requirements apply.",
+      "p6": "Reverse mortgage programs, interest rates, required borrower investment, available proceeds, costs, property requirements, and eligibility guidelines are subject to change. Not all borrowers or properties will qualify.",
+      "p7": "MyLoanDesk does not provide tax, legal, investment, or financial-planning advice. Consumers should consult appropriate professionals regarding their individual circumstances."
+    },
+    "schema": {
+      "webpage_name": "Reverse Mortgage for Purchase | Buy Your Next Home",
+      "webpage_description": "Comprehensive guide to using a HECM for Purchase reverse mortgage to buy a new primary residence without required monthly mortgage payments.",
+      "product_name": "Reverse Mortgage for Purchase (HECM for Purchase)",
+      "product_description": "A federally insured reverse mortgage program enabling eligible homebuyers age 62+ to purchase a primary residence by combining their own funds with loan proceeds, requiring no monthly principal and interest payments.",
+      "faq_q1_question": "Can I really buy a home with a reverse mortgage?",
+      "faq_q1_answer": "Yes. Eligible older homebuyers can use a reverse mortgage to finance part of the purchase of a qualifying primary residence. The FHA-insured program is commonly known as HECM for Purchase.",
+      "faq_q2_question": "Do I have to make mortgage payments?",
+      "faq_q2_answer": "There are no required monthly principal and interest payments on the reverse mortgage* while applicable loan requirements are met. You remain responsible for property taxes, homeowners insurance, applicable HOA charges, property maintenance, and other obligations under the loan.",
+      "faq_q3_question": "How old do I have to be?",
+      "faq_q3_answer": "For an FHA-insured HECM for Purchase, the youngest borrower generally must be at least 62 years old. Certain proprietary reverse mortgage programs may have different age requirements.",
+      "faq_q4_question": "How much money do I have to put down?",
+      "faq_q4_answer": "There is no universal percentage. Your required investment depends on factors such as your age, the home's purchase price and appraised value, current interest rates, and the reverse mortgage program. MyLoanDesk can calculate an estimate based on your actual situation.",
+      "faq_q5_question": "Can I use money from selling my current home?",
+      "faq_q5_answer": "Yes, proceeds from the sale of your existing home may generally be an eligible source for your required investment, subject to applicable documentation and program requirements.",
+      "faq_q6_question": "Can I buy a second home or vacation home?",
+      "faq_q6_answer": "A HECM for Purchase is intended for a home that will be your principal residence. It is not designed to finance a traditional second home or investment property. If you're relocating to a vacation or retirement destination, the new property may potentially qualify if it will actually become your principal residence and all other program requirements are satisfied.",
+      "faq_q7_question": "Do I still own the home?",
+      "faq_q7_answer": "Yes. You retain title and ownership of your home. The reverse mortgage lender does not become the owner of your property.",
+      "faq_q8_question": "Can I sell the home later?",
+      "faq_q8_answer": "Yes. You can sell the property. The reverse mortgage balance is generally repaid from the sale proceeds, with remaining equity belonging to you after satisfying the loan and applicable transaction expenses.",
+      "faq_q9_question": "What happens to the home when I pass away?",
+      "faq_q9_answer": "Your heirs generally have options under the terms of the reverse mortgage. They may choose to repay the loan and retain the property or sell the property and use the proceeds to satisfy the reverse mortgage. Specific requirements and timelines depend on the loan program and circumstances.",
+      "faq_q10_question": "Can I pay off the reverse mortgage early?",
+      "faq_q10_answer": "Generally, yes. Reverse mortgages typically do not require you to keep the loan for a specific number of years, and applicable loan documents govern repayment. Your mortgage specialist can review the specific terms of the program you're considering.",
+      "faq_q11_question": "Does the loan balance increase over time?",
+      "faq_q11_answer": "Generally, yes. Because monthly principal and interest payments are not required, interest and applicable financed charges accrue to the reverse mortgage balance. As the balance increases, the equity remaining in the property may decrease."
+    }
+  },
+  "ReverseMortgageRefinance": {
+    "meta": {
+      "title": "Reverse Mortgage Refinance | Access Your Home Equity",
+      "description": "Learn how a reverse mortgage refinance may eliminate your required monthly mortgage payment* and provide access to your home equity.",
+      "og_title": "Reverse Mortgage Refinance | Access Your Home Equity",
+      "og_description": "Learn how a reverse mortgage refinance may eliminate your required monthly mortgage payment* and provide access to your home equity.",
+      "og_alt": "Homeowner reviewing reverse mortgage refinance options to access home equity",
+      "twitter_title": "Reverse Mortgage Refinance | Access Your Home Equity",
+      "twitter_description": "Eliminate your required monthly mortgage payment* and access your home equity with a reverse mortgage refinance."
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "loan_programs": "Loan Programs",
+      "reverse_refinance": "Reverse Mortgage Refinance"
+    },
+    "back_to_programs": "Back to Loan Programs",
+    "title": "Reverse Mortgage Refinance",
+    "hero": {
+      "badge": "Refinance Solutions for Ages 62+",
+      "title_main": "Reverse Mortgage Refinance:",
+      "title_sub": "Turn Your Home Equity Into Financial Flexibility",
+      "lead": "Replace your existing mortgage with a reverse mortgage, eliminate required monthly mortgage payments, and access a portion of your available home equity.",
+      "p1": "If you're 62 or older and have built substantial equity in your home, a reverse mortgage refinance may give you a way to put that equity to work without selling your home.",
+      "p2": "A reverse mortgage can be used to pay off your existing mortgage, potentially eliminate your required monthly mortgage payment, and provide access to additional available equity.",
+      "p3": "Depending on the loan and your eligibility, proceeds may be available as a lump sum, monthly advances, a line of credit, or a combination of available options.",
+      "p4_bold": "You continue to own your home and retain title.",
+      "cta_qualify": "See If I Qualify",
+      "cta_specialist": "Talk to a Reverse Mortgage Specialist"
+    },
+    "overview": {
+      "badge": "01 — Overview",
+      "heading": "How Does a Reverse Mortgage Refinance Work?",
+      "p1": "A traditional mortgage requires you to make monthly principal and interest payments to the lender.",
+      "p2_bold": "A reverse mortgage works differently.",
+      "p3": "When you refinance with a reverse mortgage, proceeds from the new loan are first used to pay off your existing mortgage and other required liens or obligations.",
+      "p4": "If sufficient proceeds remain after satisfying those obligations and applicable closing costs, the remaining funds may be available to you based on the loan program and payment option selected.",
+      "side_card": {
+        "title": "The Result?",
+        "intro": "You may be able to:",
+        "items": [
+          "Pay off your existing mortgage",
+          "Eliminate required monthly principal and interest mortgage payments*",
+          "Access a portion of your home's available equity",
+          "Remain in your home",
+          "Retain ownership and title",
+          "Create additional financial flexibility during retirement"
+        ]
+      }
+    },
+    "distribution": {
+      "badge": "02 — Distribution",
+      "heading": "How Can You Receive Your Reverse Mortgage Funds?",
+      "subheading": "Depending on the reverse mortgage program you select and your eligibility, available proceeds may be structured in several ways.",
+      "cards": [
+        {
+          "title": "Lump Sum",
+          "desc": "Receive eligible available proceeds as a lump-sum distribution, subject to applicable program limitations. This may be useful for homeowners who have a specific financial need or major expense."
+        },
+        {
+          "title": "Monthly Advances",
+          "desc": "You may be able to structure your available proceeds as monthly advances to supplement other sources of retirement income."
+        },
+        {
+          "title": "Line of Credit",
+          "desc": "Eligible borrowers may choose a reverse mortgage line of credit, providing access to available funds when needed. With certain reverse mortgage programs, unused available credit may grow over time according to the terms of the loan."
+        },
+        {
+          "title": "Combination",
+          "desc": "Depending on the program, you may be able to combine available payment options to create a structure that fits your financial needs."
+        }
+      ],
+      "footnote_part1": "Your ",
+      "footnote_link": "MyLoanDesk mortgage specialist",
+      "footnote_part2": " can explain which options are currently available based on your loan program."
+    },
+    "use_cases": {
+      "badge": "03 — Use Cases",
+      "heading": "Why Do Homeowners Refinance Into a Reverse Mortgage?",
+      "subheading": "There isn't one reason that fits every homeowner. Some borrowers want to eliminate an existing mortgage payment. Others want access to additional liquidity or simply want more flexibility during retirement.",
+      "card_title": "Common reasons include:",
+      "reasons": [
+        "Paying off an existing mortgage",
+        "Eliminating required monthly mortgage payments*",
+        "Supplementing retirement cash flow",
+        "Establishing an emergency financial reserve",
+        "Paying off certain higher-interest debts",
+        "Funding home improvements",
+        "Handling unexpected expenses",
+        "Paying medical or long-term care expenses",
+        "Creating a line of credit for future needs",
+        "Helping with major planned expenses",
+        "Remaining in the home longer"
+      ]
+    },
+    "current_mortgage_and_ownership": {
+      "current_mortgage": {
+        "heading": "What Happens to My Current Mortgage?",
+        "p1": "Your existing mortgage generally must be paid off as part of the reverse mortgage transaction. Reverse mortgage proceeds are first applied toward paying off the existing mortgage and other required liens.",
+        "example_title": "Example",
+        "example_p1": "Suppose your home is worth $700,000 and you still owe $150,000 on your current mortgage.",
+        "example_p2": "If you qualify for sufficient reverse mortgage proceeds, a portion would first be used to pay off that $150,000 mortgage.",
+        "example_p3": "Any additional proceeds available after paying required liens, costs, and other obligations may then be available to you according to the terms of your reverse mortgage.",
+        "footnote": "The actual amount available depends on your age, home value, current mortgage balance, interest rates, program limits, property eligibility, and other factors."
+      },
+      "ownership": {
+        "heading": "Do I Still Own My Home?",
+        "answer": "Yes.",
+        "p1": "One of the most common misconceptions about reverse mortgages is that the lender takes ownership of your home.",
+        "p2_bold": "You continue to own your home and retain title.",
+        "p3": "Like any mortgage, the lender has a lien against the property.",
+        "p4": "You remain responsible for meeting the terms of the reverse mortgage, including paying property taxes, homeowners insurance, applicable HOA charges, and maintaining the property."
+      }
+    },
+    "comparison": {
+      "badge": "04 — Program Comparison",
+      "heading": "Reverse Mortgage Refinance vs. Traditional Refinance",
+      "th_feature": "Feature",
+      "th_reverse": "Reverse Mortgage Refinance",
+      "th_traditional": "Traditional Mortgage Refinance",
+      "rows": {
+        "monthly_payment": {
+          "label": "Required monthly principal & interest payment",
+          "reverse": "No*",
+          "traditional": "Yes"
+        },
+        "min_age": {
+          "label": "Minimum age",
+          "reverse": "Generally 62+ for HECM",
+          "traditional": "No reverse-mortgage age requirement"
+        },
+        "existing_mortgage": {
+          "label": "Existing mortgage",
+          "reverse": "Paid off through new loan",
+          "traditional": "Paid off through new loan"
+        },
+        "access_equity": {
+          "label": "Access home equity",
+          "reverse": "Potentially",
+          "traditional": "Potentially"
+        },
+        "monthly_advances": {
+          "label": "Monthly advances available",
+          "reverse": "Depending on program",
+          "traditional": "No"
+        },
+        "line_of_credit": {
+          "label": "Line-of-credit option",
+          "reverse": "Depending on program",
+          "traditional": "Not typically"
+        },
+        "remain_owner": {
+          "label": "Remain owner of home",
+          "reverse": "Yes",
+          "traditional": "Yes"
+        },
+        "loan_balance": {
+          "label": "Loan balance",
+          "reverse": "Generally increases as interest/ charges accrue",
+          "traditional": "Generally decreases as payments are made"
+        },
+        "repayment": {
+          "label": "Repayment",
+          "reverse": "Generally upon a maturity event",
+          "traditional": "Monthly over loan term"
+        }
+      },
+      "footer": "A reverse mortgage isn't automatically better than a traditional refinance. The right option depends on your goals, available equity, current mortgage, age, finances, and how long you expect to remain in your home."
+    },
+    "homesafe_second_comparison": {
+      "heading": "Reverse Mortgage Refinance vs. HomeSafe Second®",
+      "subtitle": "Already have a first mortgage with a low interest rate that you don't want to replace?",
+      "sub_note": "You may have another option.",
+      "intro_part1": "",
+      "intro_link": "HomeSafe Second®",
+      "intro_part2": " is a second-lien reverse mortgage designed for eligible homeowners that may allow you to access equity without refinancing your existing first mortgage.",
+      "refinance_card_title": "Reverse Mortgage Refinance",
+      "refinance_card_desc": "Your existing first mortgage is paid off and replaced by the reverse mortgage.",
+      "homesafe_card_title": "HomeSafe Second®",
+      "homesafe_card_desc": "Your existing first mortgage remains in place, and the reverse mortgage is placed behind it as a second lien.",
+      "footer": "Which approach makes more sense depends on your existing mortgage rate and balance, available equity, age, financial goals, and program eligibility.",
+      "compare_link": "Compare HomeSafe Second®"
+    },
+    "proceeds_and_programs": {
+      "proceeds": {
+        "heading": "How Much Money Can I Receive From a Reverse Mortgage?",
+        "p1": "There isn't one percentage or dollar amount that applies to every homeowner.",
+        "p2": "The amount you may qualify for depends on factors including:",
+        "factors": [
+          "Age of the youngest eligible borrower",
+          "Home value",
+          "Current interest rates",
+          "Existing mortgage balance",
+          "Reverse mortgage program",
+          "Property type",
+          "Property eligibility",
+          "Applicable lending limits",
+          "Financial assessment",
+          "Other program requirements"
+        ],
+        "p3": "Generally, greater home equity and an older borrower age may increase the amount of proceeds available, but individual results vary."
+      },
+      "programs": {
+        "heading": "What Types of Reverse Mortgages Are Available?",
+        "hecm_title": "FHA-Insured HECM",
+        "hecm_p1": "The Home Equity Conversion Mortgage (HECM) is the federally insured reverse mortgage program.",
+        "hecm_p2": "HECMs are generally available to eligible homeowners age 62 and older and are subject to FHA requirements.",
+        "proprietary_title": "Proprietary Reverse Mortgages",
+        "proprietary_p1": "Private or proprietary reverse mortgages may provide additional options for homeowners, particularly those with higher-value properties.",
+        "proprietary_p2": "Certain proprietary programs may have different age, loan amount, property, and eligibility requirements.",
+        "footer": "MyLoanDesk can help you compare available reverse mortgage programs based on your particular situation."
+      }
+    },
+    "qualifications_and_costs": {
+      "qualify": {
+        "heading": "Who May Qualify for a Reverse Mortgage Refinance?",
+        "p1": "Eligibility depends on the specific reverse mortgage program.",
+        "p2": "For an FHA-insured HECM, borrowers generally must:",
+        "requirements": [
+          "Be at least 62 years old",
+          "Use the property as their principal residence",
+          "Have sufficient home equity",
+          "Meet applicable financial assessment requirements",
+          "Remain current on property-related obligations",
+          "Complete required reverse mortgage counseling",
+          "Meet FHA property and program requirements"
+        ],
+        "footnote": "Proprietary reverse mortgage requirements may differ."
+      },
+      "costs": {
+        "heading": "What Costs Are Involved?",
+        "p1": "Reverse mortgages have closing costs, just like traditional mortgages.",
+        "p2": "Depending on the program, costs may include:",
+        "items": [
+          "Origination charges",
+          "Appraisal fees",
+          "Title and settlement charges",
+          "Credit and verification fees",
+          "Recording charges",
+          "Mortgage insurance premiums for applicable FHA HECM loans",
+          "Other permitted third-party closing costs"
+        ],
+        "p3": "Some costs may be financed into the reverse mortgage rather than paid entirely out of pocket, subject to loan terms and available proceeds.",
+        "p4": "Your Loan Estimate and closing documents will provide the actual costs associated with your loan."
+      }
+    },
+    "faq": {
+      "badge": "05 — Clarity",
+      "heading": "Frequently Asked Questions About Reverse Mortgage Refinancing",
+      "items": [
+        {
+          "q": "Can I refinance my current mortgage into a reverse mortgage?",
+          "a": "Yes, if you meet the applicable eligibility requirements and have sufficient reverse mortgage proceeds to satisfy your existing mortgage and other required obligations."
+        },
+        {
+          "q": "Will a reverse mortgage eliminate my mortgage payment?",
+          "a": "A reverse mortgage can pay off your existing mortgage and does not require monthly principal and interest payments on the new reverse mortgage.* You must continue paying property taxes, homeowners insurance, applicable HOA charges, and other required property expenses and comply with the loan terms."
+        },
+        {
+          "q": "Do I have to own my home free and clear?",
+          "a": "No. You can have an existing mortgage. However, your existing mortgage generally must be paid off at closing using reverse mortgage proceeds and/or other funds if necessary."
+        },
+        {
+          "q": "Do I lose ownership of my home?",
+          "a": "No. You retain title and continue to own your home. The reverse mortgage creates a lien against the property, similar to other mortgage loans."
+        },
+        {
+          "q": "Can I sell my home after getting a reverse mortgage?",
+          "a": "Yes. You can sell your home. The reverse mortgage balance is generally repaid from the sale proceeds, and remaining equity belongs to you after satisfying the loan and applicable transaction costs."
+        },
+        {
+          "q": "Can my heirs keep the home?",
+          "a": "Generally, yes. After a maturity event, heirs may have options to repay the reverse mortgage and retain the property, subject to applicable loan terms and program requirements. They may also choose to sell the property and use the proceeds to satisfy the reverse mortgage."
+        },
+        {
+          "q": "Will I ever owe more than my home is worth?",
+          "a": "Reverse mortgages generally include non-recourse protections, subject to applicable program and loan terms. For an FHA-insured HECM, the mortgage insurance provides specific non-recourse protections. Your loan specialist can explain how these provisions apply to your particular reverse mortgage."
+        },
+        {
+          "q": "Is reverse mortgage money taxable?",
+          "a": "Reverse mortgage proceeds are generally considered loan proceeds rather than earned income. However, individual tax circumstances differ. You should consult a qualified tax professional regarding your specific situation rather than relying on mortgage information as tax advice."
+        },
+        {
+          "q": "Does the reverse mortgage balance increase?",
+          "a": "Generally, yes. Because monthly principal and interest payments are not required, * interest, mortgage insurance when applicable, and other financed charges may accrue and increase the loan balance over time. As the balance increases, your remaining home equity may decrease."
+        },
+        {
+          "q": "When does a reverse mortgage become due?",
+          "a": "A reverse mortgage generally becomes due and payable after a maturity event defined by the loan documents, such as when the last applicable borrower permanently leaves the home, sells the property, or fails to meet certain loan obligations. Specific requirements depend on the reverse mortgage program and loan terms."
+        }
+      ]
+    },
+    "should_you_refinance": {
+      "heading": "Should You Refinance Into a Reverse Mortgage?",
+      "intro": "A reverse mortgage can be a powerful financial tool, but it isn't right for everyone. Before deciding, consider questions such as:",
+      "questions": [
+        "How long do you plan to remain in the home?",
+        "How much do you owe on your existing mortgage?",
+        "How much equity have you accumulated?",
+        "How important is eliminating your monthly mortgage payment?",
+        "Do you need cash now or access to funds later?",
+        "Would keeping your existing first mortgage make more sense?",
+        "How will the loan affect the equity remaining for you or your heirs?"
+      ],
+      "p1": "At MyLoanDesk, the goal is to help you compare your options before choosing a loan.",
+      "p2": "That may include a traditional reverse mortgage refinance, HomeSafe Second®, HELOC, home equity loan, or another available mortgage solution.",
+      "moss_box": {
+        "title": "See What Your Home Equity Could Do for You",
+        "desc": "If you're 62 or older and have significant equity in your home, you may have more options than you realize. MyLoanDesk can help you determine:",
+        "items": [
+          "How much you may qualify for.",
+          "Whether your existing mortgage can be paid off.",
+          "How much equity may remain available to you.",
+          "Which reverse mortgage programs may fit your situation.",
+          "Whether refinancing or keeping your existing mortgage makes more sense."
+        ],
+        "footnote": "No obligation. Review your available options before deciding."
+      }
+    },
+    "disclosures": {
+      "title": "Important Disclosures",
+      "p1": "*A reverse mortgage does not require monthly principal and interest mortgage payments while applicable loan requirements are met. It is not a payment-free loan.",
+      "p2": "Borrowers remain responsible for property taxes, homeowners insurance, applicable HOA charges, property maintenance, and compliance with all loan terms. Failure to meet these obligations may cause the loan to become due and payable.",
+      "p3": "Interest and applicable fees accrue to the reverse mortgage balance over time, which generally increases the amount owed and reduces remaining home equity.",
+      "p4": "HECM borrowers must meet applicable FHA requirements and complete HUD-approved reverse mortgage counseling before closing.",
+      "p5": "Reverse mortgage programs, interest rates, available proceeds, costs, property requirements, age requirements, and eligibility are subject to change. Not all borrowers or properties will qualify.",
+      "p6": "MyLoanDesk does not provide tax, legal, or financial-planning advice. Borrowers should consult appropriate professionals regarding their individual circumstances."
+    },
+    "schema": {
+      "webpage_name": "Reverse Mortgage Refinance | Access Your Home Equity",
+      "webpage_description": "Comprehensive guide to refinancing an existing mortgage with a reverse mortgage to eliminate monthly payments and access home equity.",
+      "product_name": "Reverse Mortgage Refinance (HECM)",
+      "product_description": "A reverse mortgage program designed to pay off an existing mortgage, eliminating required monthly mortgage payments, and potentially providing access to remaining home equity.",
+      "faq_q1_question": "Can I refinance my current mortgage into a reverse mortgage?",
+      "faq_q1_answer": "Yes, if you meet the applicable eligibility requirements and have sufficient reverse mortgage proceeds to satisfy your existing mortgage and other required obligations.",
+      "faq_q2_question": "Will a reverse mortgage eliminate my mortgage payment?",
+      "faq_q2_answer": "A reverse mortgage can pay off your existing mortgage and does not require monthly principal and interest payments on the new reverse mortgage.* You must continue paying property taxes, homeowners insurance, applicable HOA charges, and other required property expenses and comply with the loan terms.",
+      "faq_q3_question": "Do I have to own my home free and clear?",
+      "faq_q3_answer": "No. You can have an existing mortgage. However, your existing mortgage generally must be paid off at closing using reverse mortgage proceeds and/or other funds if necessary.",
+      "faq_q4_question": "Do I lose ownership of my home?",
+      "faq_q4_answer": "No. You retain title and continue to own your home. The reverse mortgage creates a lien against the property, similar to other mortgage loans.",
+      "faq_q5_question": "Can I sell my home after getting a reverse mortgage?",
+      "faq_q5_answer": "Yes. You can sell your home. The reverse mortgage balance is generally repaid from the sale proceeds, and remaining equity belongs to you after satisfying the loan and applicable transaction costs.",
+      "faq_q6_question": "Can my heirs keep the home?",
+      "faq_q6_answer": "Generally, yes. After a maturity event, heirs may have options to repay the reverse mortgage and retain the property, subject to applicable loan terms and program requirements. They may also choose to sell the property and use the proceeds to satisfy the reverse mortgage.",
+      "faq_q7_question": "Will I ever owe more than my home is worth?",
+      "faq_q7_answer": "Reverse mortgages generally include non-recourse protections, subject to applicable program and loan terms. For an FHA-insured HECM, the mortgage insurance provides specific non-recourse protections. Your loan specialist can explain how these provisions apply to your particular reverse mortgage.",
+      "faq_q8_question": "Is reverse mortgage money taxable?",
+      "faq_q8_answer": "Reverse mortgage proceeds are generally considered loan proceeds rather than earned income. However, individual tax circumstances differ. You should consult a qualified tax professional regarding your specific situation rather than relying on mortgage information as tax advice.",
+      "faq_q9_question": "Does the reverse mortgage balance increase?",
+      "faq_q9_answer": "Generally, yes. Because monthly principal and interest payments are not required, * interest, mortgage insurance when applicable, and other financed charges may accrue and increase the loan balance over time. As the balance increases, your remaining home equity may decrease.",
+      "faq_q10_question": "When does a reverse mortgage become due?",
+      "faq_q10_answer": "A reverse mortgage generally becomes due and payable after a maturity event defined by the loan documents, such as when the last applicable borrower permanently leaves the home, sells the property, or fails to meet certain loan obligations. Specific requirements depend on the reverse mortgage program and loan terms."
+    }
+  },
+  "SBALoans": {
+    "meta": {
+      "title": "SBA Business Loans — Up to $5M for Growth, Equipment & Acquisitions | MyLoanDesk",
+      "description": "SBA-backed business financing up to $5M for working capital, equipment, business acquisitions, debt refinance, and franchise financing. Estimate your payment with our free calculator.",
+      "og_title": "SBA Business Loans — Up to $5M for Growth, Equipment & Acquisitions | MyLoanDesk",
+      "og_description": "Affordable financing to help your business grow, backed by the U.S. Small Business Administration. Estimate your payment with our free calculator.",
+      "og_alt": "SBA Business Loans - MyLoanDesk",
+      "twitter_title": "SBA Business Loans — Up to $5M for Growth, Equipment & Acquisitions | MyLoanDesk",
+      "twitter_description": "Affordable business financing up to $5M backed by the U.S. Small Business Administration."
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "loan_programs": "Loan Programs",
+      "sba_loans": "SBA Business Loans"
+    },
+    "back_to_programs": "Back to Loan Programs",
+    "title": "SBA Business Loans",
+    "hero": {
+      "subtitle": "Affordable financing to help your business grow.",
+      "description": "Whether you're starting a new business, expanding operations, purchasing equipment, or acquiring an existing company, SBA loans offer flexible financing backed by the U.S. Small Business Administration. The government guaranty behind these loans often makes lower down payments, longer terms, and more competitive rates possible than a conventional business loan.",
+      "bullet1": "Financing up to $5M",
+      "bullet2": "Terms up to 10 years for working capital and equipment",
+      "bullet3": "Flexible use of proceeds",
+      "disclaimer": "Estimate only. SBA 7(a) loans are typically priced at the WSJ Prime Rate plus a lender margin, which varies by loan size and lender. Does not include the one-time SBA guaranty fee — see below. Actual rate and terms depend on underwriting."
+    },
+    "calculator": {
+      "badge": "SBA Payment Estimator",
+      "subheading": "See your estimated monthly payment.",
+      "amount_label": "Loan amount",
+      "amount_placeholder": "350,000",
+      "prime_label": "WSJ Prime Rate",
+      "prime_placeholder": "7.5",
+      "margin_label": "Lender margin",
+      "margin_placeholder": "2.75",
+      "term_label": "Loan purpose / term",
+      "term_10": "Working capital or equipment (10 yrs)",
+      "term_7": "Business acquisition (7 yrs)",
+      "term_5": "General business purpose (5 yrs)",
+      "rate_label": "Est. interest rate",
+      "monthly_payment_label": "Est. monthly payment",
+      "per_month": "/mo"
+    },
+    "what_is": {
+      "title": "What Is an SBA Loan?",
+      "p1": "An SBA loan is a loan made by a private lender, like MyLoanDesk's network of lending partners, and partially guaranteed by the U.S. Small Business Administration. The SBA doesn't lend the money directly — its guaranty reduces the lender's risk, which is what allows SBA loans to offer terms that are often more accessible than a typical conventional business loan: lower down payments, longer repayment terms, and financing for businesses that might not otherwise qualify for conventional credit on their own.",
+      "p2": "The most widely used SBA program is the 7(a) loan, which allows up to $5 million in financing for a broad range of business purposes. Faster, smaller options like SBA Express also exist for businesses that need a quicker decision on a smaller loan amount."
+    },
+    "ways_to_use": {
+      "title": "Ways to Use SBA Financing",
+      "cards": [
+        {
+          "title": "Working Capital",
+          "desc": "Cover payroll, inventory, or day-to-day operating expenses during growth or seasonal fluctuations."
+        },
+        {
+          "title": "Equipment Financing",
+          "desc": "Purchase or replace machinery, vehicles, or technology your business needs to operate or expand."
+        },
+        {
+          "title": "Business Acquisition",
+          "desc": "Buy an existing business, including goodwill and equipment, often with a lower down payment than conventional financing."
+        },
+        {
+          "title": "Debt Refinance",
+          "desc": "Consolidate or refinance existing higher-rate business debt into a single, often lower-cost SBA loan."
+        },
+        {
+          "title": "Franchise Financing",
+          "desc": "Finance the franchise fee, build-out, and startup costs of opening a new franchise location."
+        },
+        {
+          "title": "Lines of Credit",
+          "desc": "SBA CAPLines and similar revolving structures for businesses with fluctuating short-term capital needs."
+        }
+      ],
+      "cre_box": {
+        "title": "Buying commercial property?",
+        "text_part1": "SBA 7(a) and SBA 504 loans can also finance commercial real estate purchases, often with lower down payments than a conventional commercial mortgage. See our ",
+        "link_text": "Commercial Real Estate Loans",
+        "text_part2": " page for details specific to property purchases."
+      }
+    },
+    "how_it_works": {
+      "title": "How SBA Financing Works",
+      "steps": [
+        {
+          "step": "1",
+          "title": "Tell us your goal.",
+          "desc": "Working capital, equipment, an acquisition, or something else — we match you to the right SBA program."
+        },
+        {
+          "step": "2",
+          "title": "Submit your documentation.",
+          "desc": "Business financials, tax returns, and a use-of-proceeds breakdown."
+        },
+        {
+          "step": "3",
+          "title": "Underwriting.",
+          "desc": "Your business's cash flow, credit, and the SBA's eligibility requirements are reviewed together."
+        },
+        {
+          "step": "4",
+          "title": "Approval and closing.",
+          "desc": "Once approved, final loan documents are signed and the loan closes."
+        },
+        {
+          "step": "5",
+          "title": "Funding.",
+          "desc": "Funds are disbursed according to your approved use of proceeds."
+        }
+      ]
+    },
+    "highlights": {
+      "title": "Program Highlights",
+      "subtitle": "What's included:",
+      "items": [
+        "Financing up to $5M through the SBA 7(a) program",
+        "Faster SBA Express option available for loans up to $500,000",
+        "Terms up to 10 years for working capital and equipment, up to 25 years when real estate is involved",
+        "Flexible use of proceeds — working capital, equipment, acquisition, refinance, and more",
+        "Often lower down payments than conventional business financing",
+        "Available to a wide range of industries and business types"
+      ]
+    },
+    "guaranty_fee": {
+      "title": "A Note on the SBA Guaranty Fee",
+      "p1": "Most SBA loans with a term longer than 12 months include a one-time guaranty fee, paid on the SBA-guaranteed portion of the loan. This fee is set and reviewed annually by the SBA and generally scales with loan size — as a general guide:",
+      "th_term": "Loan Term",
+      "th_range": "Typical Guaranty Fee Range",
+      "rows": [
+        {
+          "term": "12 months or less",
+          "range": "Around 0.25% of the guaranteed portion"
+        },
+        {
+          "term": "Over 12 months, up to $1M guaranteed portion",
+          "range": "Around 3.5% of the guaranteed portion"
+        },
+        {
+          "term": "Over 12 months, above $1M guaranteed portion",
+          "range": "Around 3.75% of the guaranteed portion"
+        }
+      ],
+      "footnote": "These figures are general guidance only. The SBA updates its fee schedule annually, and certain borrowers — including some manufacturers and veteran-owned businesses under specific programs — may qualify for reduced or waived fees. Confirm the exact current fee with a loan officer before finalizing your application."
+    },
+    "advantages": {
+      "title": "Strategic Advantages:",
+      "p1": "The SBA's guaranty means lenders can extend credit to businesses that might not qualify for a conventional loan on their own — newer businesses, or those without extensive collateral, often have a real path to financing here that wouldn't otherwise exist.",
+      "p2": "Longer repayment terms than most conventional business loans mean lower monthly payments, which keeps more cash available for actually running and growing the business rather than servicing debt.",
+      "p3": "Because proceeds can often be used flexibly — combining an acquisition, working capital, and even real estate into one loan — SBA financing can simplify what would otherwise be several separate loans into a single, more manageable one."
+    },
+    "who_this_is_for": {
+      "title": "Who SBA Loans Are For",
+      "items": [
+        "Small business owners who don't qualify for conventional financing on their own",
+        "Buyers acquiring an existing business",
+        "Businesses needing working capital through a growth phase or seasonal cycle",
+        "Franchisees opening a new location",
+        "Business owners looking to consolidate or refinance existing higher-cost debt"
+      ]
+    },
+    "eligibility": {
+      "title": "General Eligibility Guidelines",
+      "items": [
+        "Operates as a for-profit business located in the U.S.",
+        "Meets SBA size standards for a \"small business\" in your industry",
+        "Demonstrates the ability to repay from business cash flow",
+        "Owner has invested reasonable equity, and has exhausted other reasonable financing options",
+        "Good personal and business credit history, generally a high-600s credit score or better"
+      ]
+    },
+    "comparison": {
+      "title": "SBA 7(a) vs. SBA Express vs. Conventional Business Loan",
+      "th_7a": "SBA 7(a)",
+      "th_express": "SBA Express",
+      "th_conv": "Conventional Business Loan",
+      "rows": {
+        "max_loan": {
+          "label": "Max loan amount",
+          "sba_7a": "$5M",
+          "sba_express": "$500K",
+          "conv": "Varies by lender"
+        },
+        "approval_speed": {
+          "label": "Approval speed",
+          "sba_7a": "Standard underwriting",
+          "sba_express": "Faster, streamlined",
+          "conv": "Varies by lender"
+        },
+        "guaranty": {
+          "label": "Government guaranty",
+          "sba_7a": "Up to 85%",
+          "sba_express": "Lower guaranty than standard 7(a)",
+          "conv": "None"
+        },
+        "down_payment": {
+          "label": "Typical down payment",
+          "sba_7a": "As low as 10%",
+          "sba_express": "As low as 10%",
+          "conv": "Often higher"
+        },
+        "best_for": {
+          "label": "Best for",
+          "sba_7a": "Larger, flexible-use financing",
+          "sba_express": "Smaller loans needing a fast decision",
+          "conv": "Strong businesses that don't need SBA flexibility"
+        }
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "q": "What can I use an SBA loan for?",
+          "a": "SBA loan proceeds are flexible and can generally be used for working capital, equipment purchases, business acquisitions, debt refinancing, franchise financing, and commercial real estate. The specific program you use can affect which uses are eligible and the maximum term available."
+        },
+        {
+          "q": "How much can I borrow with an SBA loan?",
+          "a": "SBA 7(a) loans, the most widely used SBA program, go up to $5 million. Smaller programs like SBA Express offer faster approval on loans up to $500,000, while SBA microloans are available for smaller amounts, often used by newer or smaller businesses."
+        },
+        {
+          "q": "What is the SBA guaranty fee?",
+          "a": "The SBA guaranty fee is a one-time, government-set fee paid on the guaranteed portion of most SBA loans with a maturity over 12 months, in addition to interest. Fee tiers vary by loan size and are reviewed and published annually by the SBA, so the exact percentage should be confirmed at the time of your application."
+        },
+        {
+          "q": "Do I need collateral for an SBA loan?",
+          "a": "It depends on the loan size and program. Smaller SBA loans may require little to no specific collateral, while larger loans typically require available business or personal assets to be pledged, though the SBA generally won't decline a loan solely for lack of full collateral if the business otherwise qualifies."
+        },
+        {
+          "q": "How long does SBA loan approval take?",
+          "a": "Timelines vary by program and lender. Standard SBA 7(a) loans often take several weeks to a few months, while SBA Express and similarly streamlined programs are designed for faster turnaround, sometimes within days for an initial decision."
+        },
+        {
+          "q": "What is SBA Express and how is it different from a standard 7(a) loan?",
+          "a": "SBA Express is a streamlined version of the 7(a) program offering faster approval turnaround, typically for loans up to $500,000, in exchange for a lower SBA guaranty percentage than a standard 7(a) loan."
+        },
+        {
+          "q": "Can I use an SBA loan to buy an existing business?",
+          "a": "Yes. SBA 7(a) loans are commonly used to finance the purchase of an existing business, including goodwill, equipment, and in some cases real estate associated with the acquisition, often combined into a single loan."
+        },
+        {
+          "q": "What credit score do I need to qualify for an SBA loan?",
+          "a": "SBA lenders generally look for a personal credit score in the high 600s or above, along with a review of business cash flow, time in business, and industry experience. Requirements vary by lender and loan program."
+        },
+        {
+          "q": "Can I use an SBA loan to buy commercial real estate?",
+          "a": "Yes — SBA 7(a) and SBA 504 loans are both commonly used to purchase or refinance commercial real estate, often with lower down payments than a conventional commercial mortgage. See our Commercial Real Estate Loans page for details specific to property purchases."
+        }
+      ]
+    },
+    "cta": {
+      "apply_now": "Apply Now →",
+      "contact_us": "Contact Us Now",
+      "note": "Not sure which SBA program fits your business? Share a few details and a loan officer will map out your options the same day."
+    },
+    "schema": {
+      "webpage_name": "SBA Business Loans — Up to $5M for Growth, Equipment & Acquisitions | MyLoanDesk",
+      "webpage_description": "Comprehensive guide and payment calculator for SBA 7(a), SBA Express, and small business growth loans.",
+      "product_name": "SBA 7(a) & SBA Express Business Loan",
+      "product_description": "Government-guaranteed business loan up to $5M offering extended terms and lower down payments for working capital, equipment, debt consolidation, and business acquisitions.",
+      "faq_q1_question": "What can I use an SBA loan for?",
+      "faq_q1_answer": "SBA loan proceeds are flexible and can generally be used for working capital, equipment purchases, business acquisitions, debt refinancing, franchise financing, and commercial real estate. The specific program you use can affect which uses are eligible and the maximum term available.",
+      "faq_q2_question": "How much can I borrow with an SBA loan?",
+      "faq_q2_answer": "SBA 7(a) loans, the most widely used SBA program, go up to $5 million. Smaller programs like SBA Express offer faster approval on loans up to $500,000, while SBA microloans are available for smaller amounts, often used by newer or smaller businesses.",
+      "faq_q3_question": "What is the SBA guaranty fee?",
+      "faq_q3_answer": "The SBA guaranty fee is a one-time, government-set fee paid on the guaranteed portion of most SBA loans with a maturity over 12 months, in addition to interest. Fee tiers vary by loan size and are reviewed and published annually by the SBA, so the exact percentage should be confirmed at the time of your application.",
+      "faq_q4_question": "Do I need collateral for an SBA loan?",
+      "faq_q4_answer": "It depends on the loan size and program. Smaller SBA loans may require little to no specific collateral, while larger loans typically require available business or personal assets to be pledged, though the SBA generally won't decline a loan solely for lack of full collateral if the business otherwise qualifies.",
+      "faq_q5_question": "How long does SBA loan approval take?",
+      "faq_q5_answer": "Timelines vary by program and lender. Standard SBA 7(a) loans often take several weeks to a few months, while SBA Express and similarly streamlined programs are designed for faster turnaround, sometimes within days for an initial decision.",
+      "faq_q6_question": "What is SBA Express and how is it different from a standard 7(a) loan?",
+      "faq_q6_answer": "SBA Express is a streamlined version of the 7(a) program offering faster approval turnaround, typically for loans up to $500,000, in exchange for a lower SBA guaranty percentage than a standard 7(a) loan.",
+      "faq_q7_question": "Can I use an SBA loan to buy an existing business?",
+      "faq_q7_answer": "Yes. SBA 7(a) loans are commonly used to finance the purchase of an existing business, including goodwill, equipment, and in some cases real estate associated with the acquisition, often combined into a single loan.",
+      "faq_q8_question": "What credit score do I need to qualify for an SBA loan?",
+      "faq_q8_answer": "SBA lenders generally look for a personal credit score in the high 600s or above, along with a review of business cash flow, time in business, and industry experience. Requirements vary by lender and loan program.",
+      "faq_q9_question": "Can I use an SBA loan to buy commercial real estate?",
+      "faq_q9_answer": "Yes — SBA 7(a) and SBA 504 loans are both commonly used to purchase or refinance commercial real estate, often with lower down payments than a conventional commercial mortgage. See our Commercial Real Estate Loans page for details specific to property purchases."
+    }
+  },
+  "VALoans": {
+    "meta": {
+      "title": "VA Loans — Zero Down Payment for Eligible Veterans | MyLoanDesk",
+      "description": "VA loans with 0% down, no monthly mortgage insurance, and competitive rates for eligible veterans, active duty service members, and surviving spouses. Use our free calculator to estimate your VA funding fee before you apply.",
+      "og_title": "VA Loans — Zero Down Payment for Eligible Veterans | MyLoanDesk",
+      "og_description": "Zero down payment, no monthly mortgage insurance, and a benefit you can use again and again. Estimate your VA funding fee with our free calculator.",
+      "og_alt": "VA Loans - MyLoanDesk",
+      "twitter_title": "VA Loans — Zero Down Payment for Eligible Veterans | MyLoanDesk",
+      "twitter_description": "Zero down payment and no monthly mortgage insurance for eligible veterans and service members."
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "loan_programs": "Loan Programs",
+      "va_loans": "VA Loans"
+    },
+    "back_to_programs": "Back to Loan Programs",
+    "title": "VA Loans",
+    "hero": {
+      "subtitle": "Zero down. Zero PMI. Earned through service.",
+      "description": "VA loans give eligible veterans, active duty service members, National Guard and Reserve members, and certain surviving spouses one of the strongest home financing benefits available in the U.S. — the ability to finance up to 100% of a home's purchase price without private mortgage insurance, backed by the U.S. Department of Veterans Affairs.",
+      "bullet1": "No down payment required",
+      "bullet2": "No monthly mortgage insurance",
+      "bullet3": "No maximum loan amount for full entitlement",
+      "disclaimer": "Estimate only, based on 2026 VA funding fee rates. Assumes the funding fee is financed into the loan and a 30-year term. Does not include property taxes, insurance, or HOA dues. Confirm your exact fee and entitlement with a Certificate of Eligibility."
+    },
+    "calculator": {
+      "badge": "VA Funding Fee Calculator",
+      "subheading": "Estimate your funding fee and total loan amount.",
+      "price_label": "Home price",
+      "price_placeholder": "425,000",
+      "down_label": "Down payment",
+      "down_placeholder": "0",
+      "rate_label": "Est. rate",
+      "rate_placeholder": "6.4",
+      "use_type_label": "VA loan use",
+      "use_type_first": "First-time use",
+      "use_type_subsequent": "Subsequent use",
+      "exempt_label": "I receive VA disability compensation (funding fee exempt)",
+      "base_loan_label": "Base loan amount",
+      "fee_label": "VA funding fee",
+      "exempt_text": "Exempt — $0",
+      "total_loan_label": "Total loan amount",
+      "monthly_pi_label": "Est. monthly P&I",
+      "per_month": "/mo"
+    },
+    "what_is": {
+      "title": "What Is a VA Loan?",
+      "p1": "A VA loan is a mortgage guaranteed by the U.S. Department of Veterans Affairs, made available to eligible veterans, active duty service members, National Guard and Reserve members, and certain surviving spouses. The VA doesn't lend the money directly — it guarantees a portion of the loan, which allows approved lenders like MyLoanDesk to offer terms that are difficult to match anywhere else in the mortgage market, most notably zero down payment and no monthly mortgage insurance.",
+      "p2": "In exchange for that guarantee, most VA loans include a one-time VA funding fee, which we break down in detail below — along with who's exempt from paying it entirely."
+    },
+    "how_it_works": {
+      "title": "How VA Financing Works",
+      "steps": [
+        {
+          "step": "1",
+          "title": "Confirm your eligibility.",
+          "desc": "We help pull your Certificate of Eligibility (COE) to confirm your VA entitlement — you don't need to obtain it yourself first."
+        },
+        {
+          "step": "2",
+          "title": "Get pre-approved.",
+          "desc": "We review your credit, income, and debts to confirm your VA buying power."
+        },
+        {
+          "step": "3",
+          "title": "Shop with confidence.",
+          "desc": "A VA pre-approval letter shows sellers you're a serious, qualified buyer."
+        },
+        {
+          "step": "4",
+          "title": "Appraisal and underwriting.",
+          "desc": "VA loans use a VA-specific appraisal to confirm the property meets minimum property requirements."
+        },
+        {
+          "step": "5",
+          "title": "Close on your home.",
+          "desc": "Sign your final documents and close — often with little to no down payment required."
+        }
+      ]
+    },
+    "highlights": {
+      "title": "Program Highlights",
+      "subtitle": "What's included:",
+      "items": [
+        "0% down payment options for eligible borrowers",
+        "No monthly private mortgage insurance (PMI) or MIP, regardless of down payment",
+        "No VA-imposed maximum loan amount for borrowers with full entitlement",
+        "Competitive, often below-market interest rates",
+        "Reusable benefit — entitlement can often be used again for future purchases",
+        "VA IRRRL streamline refinance available for existing VA loan holders",
+        "Available for single-family homes, condos, and 2-4 unit owner-occupied properties"
+      ]
+    },
+    "advantages": {
+      "title": "Strategic Advantages:",
+      "p1": "Skipping a down payment doesn't just lower your cash needed at closing — it also means keeping more savings in reserve, or using those funds toward moving costs, furnishings, or an emergency fund instead of tying it all up in home equity on day one.",
+      "p2": "Because there's no ongoing mortgage insurance, VA borrowers often have a meaningfully lower monthly payment than an FHA or low-down-payment conventional borrower financing the same home — insurance alone can add hundreds of dollars a month on other loan types.",
+      "p3": "The VA funding fee, unlike monthly mortgage insurance, is a one-time cost — and many veterans avoid it entirely through a disability exemption, making VA financing one of the most genuinely cost-effective paths to homeownership available."
+    },
+    "who_this_is_for": {
+      "title": "Who VA Loans Are For",
+      "items": [
+        "Active duty service members meeting minimum service requirements",
+        "Veterans who served the qualifying minimum length of active duty",
+        "National Guard and Reserve members who meet service requirements",
+        "Certain surviving spouses of veterans who died in service or from a service-connected disability",
+        "Buyers who want to avoid a down payment and ongoing mortgage insurance entirely"
+      ]
+    },
+    "funding_fee_rates": {
+      "title": "VA Funding Fee Rates (2026)",
+      "p1": "The VA funding fee scales with your down payment and whether this is your first or a subsequent use of your VA benefit:",
+      "th_down": "Down Payment",
+      "th_first": "First-Time Use",
+      "th_subsequent": "Subsequent Use",
+      "rows": [
+        {
+          "down": "Less than 5%",
+          "first": "2.15%",
+          "subsequent": "3.30%"
+        },
+        {
+          "down": "5% – 9.99%",
+          "first": "1.50%",
+          "subsequent": "1.50%"
+        },
+        {
+          "down": "10% or more",
+          "first": "1.25%",
+          "subsequent": "1.25%"
+        }
+      ],
+      "footnote": "VA IRRRL (streamline) refinances carry a flat 0.50% funding fee regardless of down payment or prior use. Veterans receiving VA disability compensation, Purple Heart recipients on active duty, and certain surviving spouses are generally exempt from the funding fee entirely."
+    },
+    "comparison": {
+      "title": "VA Loans vs. FHA and Conventional Loans",
+      "th_va": "VA Loan",
+      "th_fha": "FHA Loan",
+      "th_conv": "Conventional Loan",
+      "rows": {
+        "down_payment": {
+          "label": "Minimum down payment",
+          "va": "0% for eligible veterans",
+          "fha": "3.5% (with 580+ score)",
+          "conv": "As low as 3%, usually 5%+"
+        },
+        "mortgage_insurance": {
+          "label": "Monthly mortgage insurance",
+          "va": "None",
+          "fha": "Upfront + annual MIP, often for the loan's life",
+          "conv": "PMI, removable around 20% equity"
+        },
+        "fee": {
+          "label": "One-time fee",
+          "va": "VA funding fee (waivable for many)",
+          "fha": "Upfront MIP (1.75%)",
+          "conv": "None, typically"
+        },
+        "max_loan": {
+          "label": "Maximum loan amount",
+          "va": "None, with full entitlement",
+          "fha": "Set by county FHA limits",
+          "conv": "Set by conforming loan limits"
+        },
+        "best_for": {
+          "label": "Best for",
+          "va": "Eligible veterans and service members",
+          "fha": "Buyers with lower credit or smaller down payments",
+          "conv": "Buyers with strong credit and 5%+ down"
+        }
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "q": "Do I have to make a down payment for a VA loan?",
+          "a": "No. Eligible VA borrowers can finance up to 100% of the purchase price with no down payment required, one of the program's signature benefits. A down payment is never required, though making one can reduce your VA funding fee."
+        },
+        {
+          "q": "What is the VA funding fee and how much is it?",
+          "a": "The VA funding fee is a one-time fee that helps sustain the VA loan program, replacing the need for monthly mortgage insurance. For 2026, first-time use with less than 5% down is 2.15% of the loan amount; subsequent use with less than 5% down is 3.30%. Putting 5% or more down lowers the fee to 1.50%, and 10% or more down lowers it to 1.25%, regardless of prior use."
+        },
+        {
+          "q": "Am I exempt from the VA funding fee?",
+          "a": "Veterans receiving VA disability compensation, Purple Heart recipients on active duty, and certain surviving spouses receiving Dependency and Indemnity Compensation (DIC) are typically exempt from the VA funding fee entirely."
+        },
+        {
+          "q": "What is a Certificate of Eligibility (COE) and how do I get one?",
+          "a": "A Certificate of Eligibility is the document that confirms your VA loan entitlement to a lender. It can be requested through the VA's eBenefits portal, by mail, or in many cases pulled directly by your lender during the application process, so you don't need to obtain it yourself beforehand."
+        },
+        {
+          "q": "Can I use my VA loan benefit more than once?",
+          "a": "Yes. VA loan entitlement can typically be reused for future home purchases, including after paying off a prior VA loan or, in many cases, while still carrying one, depending on your remaining entitlement."
+        },
+        {
+          "q": "Is there a maximum VA loan amount?",
+          "a": "For most eligible veterans with full entitlement, there is no VA-imposed maximum loan amount. Lenders may still apply their own underwriting limits for larger loan amounts, but the VA guaranty itself is no longer capped by the county loan limits that applied before 2020."
+        },
+        {
+          "q": "Do VA loans require mortgage insurance?",
+          "a": "No. VA loans do not require monthly private mortgage insurance (PMI) or mortgage insurance premiums (MIP), regardless of down payment. The one-time VA funding fee replaces the need for ongoing mortgage insurance."
+        },
+        {
+          "q": "What is a VA IRRRL (VA Streamline Refinance)?",
+          "a": "A VA Interest Rate Reduction Refinance Loan (IRRRL) is a simplified refinance option for existing VA loan holders, typically requiring less documentation and often no new appraisal or credit underwriting, with a lower funding fee of just 0.50%."
+        },
+        {
+          "q": "Can National Guard and Reserve members use VA loans?",
+          "a": "Yes. National Guard and Reserve members who meet the required service length can qualify for VA loans, and pay the same funding fee rates as active duty service members and veterans."
+        }
+      ]
+    },
+    "cta": {
+      "apply_now": "Apply Now →",
+      "contact_us": "Contact Us Now",
+      "note": "Not sure about your eligibility or entitlement? Reach out — we can help pull your COE and walk through your options the same day."
+    },
+    "schema": {
+      "webpage_name": "VA Loans — Zero Down Payment for Eligible Veterans | MyLoanDesk",
+      "webpage_description": "Comprehensive guide and funding fee calculator for government-guaranteed VA mortgage purchase and refinance programs.",
+      "product_name": "VA Home Loan",
+      "product_description": "A government-guaranteed mortgage loan backed by the U.S. Department of Veterans Affairs offering 100% financing with zero down payment and no monthly mortgage insurance for eligible service members, veterans, and surviving spouses.",
+      "faq_q1_question": "Do I have to make a down payment for a VA loan?",
+      "faq_q1_answer": "No. Eligible VA borrowers can finance up to 100% of the purchase price with no down payment required, one of the program's signature benefits. A down payment is never required, though making one can reduce your VA funding fee.",
+      "faq_q2_question": "What is the VA funding fee and how much is it?",
+      "faq_q2_answer": "The VA funding fee is a one-time fee that helps sustain the VA loan program, replacing the need for monthly mortgage insurance. For 2026, first-time use with less than 5% down is 2.15% of the loan amount; subsequent use with less than 5% down is 3.30%. Putting 5% or more down lowers the fee to 1.50%, and 10% or more down lowers it to 1.25%, regardless of prior use.",
+      "faq_q3_question": "Am I exempt from the VA funding fee?",
+      "faq_q3_answer": "Veterans receiving VA disability compensation, Purple Heart recipients on active duty, and certain surviving spouses receiving Dependency and Indemnity Compensation (DIC) are typically exempt from the VA funding fee entirely.",
+      "faq_q4_question": "What is a Certificate of Eligibility (COE) and how do I get one?",
+      "faq_q4_answer": "A Certificate of Eligibility is the document that confirms your VA loan entitlement to a lender. It can be requested through the VA's eBenefits portal, by mail, or in many cases pulled directly by your lender during the application process, so you don't need to obtain it yourself beforehand.",
+      "faq_q5_question": "Can I use my VA loan benefit more than once?",
+      "faq_q5_answer": "Yes. VA loan entitlement can typically be reused for future home purchases, including after paying off a prior VA loan or, in many cases, while still carrying one, depending on your remaining entitlement.",
+      "faq_q6_question": "Is there a maximum VA loan amount?",
+      "faq_q6_answer": "For most eligible veterans with full entitlement, there is no VA-imposed maximum loan amount. Lenders may still apply their own underwriting limits for larger loan amounts, but the VA guaranty itself is no longer capped by the county loan limits that applied before 2020.",
+      "faq_q7_question": "Do VA loans require mortgage insurance?",
+      "faq_q7_answer": "No. VA loans do not require monthly private mortgage insurance (PMI) or mortgage insurance premiums (MIP), regardless of down payment. The one-time VA funding fee replaces the need for ongoing mortgage insurance.",
+      "faq_q8_question": "What is a VA IRRRL (VA Streamline Refinance)?",
+      "faq_q8_answer": "A VA Interest Rate Reduction Refinance Loan (IRRRL) is a simplified refinance option for existing VA loan holders, typically requiring less documentation and often no new appraisal or credit underwriting, with a lower funding fee of just 0.50%.",
+      "faq_q9_question": "Can National Guard and Reserve members use VA loans?",
+      "faq_q9_answer": "Yes. National Guard and Reserve members who meet the required service length can qualify for VA loans, and pay the same funding fee rates as active duty service members and veterans."
+    }
   }
 }

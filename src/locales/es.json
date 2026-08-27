@@ -6236,5 +6236,2033 @@
       "faq_q5_question": "¿Puede MyLoanDesk ayudarme a determinar si califico?",
       "faq_q5_answer": "Sí. Comparta con nosotros sus ingresos, documentación y cronograma de compra, y nuestro equipo comparará opciones en nuestra red de prestamistas especializados con ITIN."
     }
+  },
+  "JumboLoans": {
+    "meta": {
+      "title": "Préstamos Jumbo y Super Jumbo de Hasta $30M+ | MyLoanDesk",
+      "description": "Financiamiento Jumbo y Super Jumbo de hasta $30 millones y más, con múltiples vías de calificación: documentación completa, extractos bancarios, agotamiento de activos, compradores extranjeros y DSCR. Estime su cuota con nuestra calculadora gratuita.",
+      "og_title": "Préstamos Jumbo y Super Jumbo de Hasta $30M+ | MyLoanDesk",
+      "og_description": "Las propiedades excepcionales merecen un financiamiento excepcional. Préstamos Jumbo y Super Jumbo de hasta $30M+, con diversas alternativas de calificación para perfiles financieros complejos.",
+      "og_alt": "Préstamos Jumbo y Super Jumbo - MyLoanDesk",
+      "twitter_title": "Préstamos Jumbo y Super Jumbo de Hasta $30M+ | MyLoanDesk",
+      "twitter_description": "Programas hipotecarios Jumbo y Super Jumbo de hasta $30M+ con múltiples opciones de calificación."
+    },
+    "breadcrumbs": {
+      "home": "Inicio",
+      "loan_programs": "Programas de Préstamos",
+      "jumbo_loans": "Préstamos Jumbo"
+    },
+    "back_to_programs": "Volver a Programas de Préstamos",
+    "title": "Préstamos Jumbo y Super Jumbo",
+    "hero": {
+      "subtitle": "Financiamiento de hasta $30 millones y más, con más de una vía de calificación.",
+      "description": "Las viviendas excepcionales merecen un financiamiento excepcional. Los programas Jumbo y Super Jumbo de MyLoanDesk superan con creces los límites de los préstamos conformes, ofreciendo la flexibilidad de estructurar su crédito en torno a la forma real en que opera su patrimonio, y no según una única vía documental. Ya sea que sus ingresos sean tradicionales, provengan de una empresa o se concentren en activos líquidos, existe una opción adaptada a sus números.",
+      "bullet1": "Financiamiento disponible de hasta $30M+",
+      "bullet2": "Sin seguro hipotecario privado (PMI), sin importar el enganche",
+      "bullet3": "Cinco vías distintas para calificar",
+      "disclaimer": "Cálculo estimado únicamente. No incluye impuestos a la propiedad, seguros ni cuotas de HOA. Las sugerencias de reservas son ilustrativas y escalan según el monto del préstamo; los requisitos finales dependen del prestamista, el programa y el perfil financiero completo."
+    },
+    "interactive": {
+      "calculator": {
+        "badge": "Estimador de Pagos Jumbo",
+        "subheading": "Consulte su monto de préstamo y pago mensual estimado.",
+        "purchase_label": "Precio de compra",
+        "purchase_placeholder": "4,500,000",
+        "down_label": "Pago inicial",
+        "down_placeholder": "30",
+        "rate_label": "Tasa est.",
+        "rate_placeholder": "6.9",
+        "term_label": "Plazo del préstamo",
+        "term_30_fixed": "Fijo a 30 años",
+        "term_15_fixed": "Fijo a 15 años",
+        "loan_amount_label": "Monto del préstamo",
+        "monthly_pi_label": "P&I mensual est.",
+        "per_month": "/mes",
+        "suggested_reserves_label": "Reservas sugeridas",
+        "tier_conforming": "Dentro del rango conforme habitual",
+        "tier_jumbo": "Rango Jumbo",
+        "tier_super_jumbo": "Rango Super Jumbo",
+        "reserves_scale": {
+          "under_1_5m": "~6 meses de PITI",
+          "under_5m": "~12 meses de PITI",
+          "under_15m": "~18–24 meses de PITI",
+          "over_15m": "24+ meses, caso por caso"
+        }
+      },
+      "path_selector": {
+        "tabs": {
+          "full": "Documentación Completa",
+          "bank": "Estados de Cuenta",
+          "asset": "Agotamiento de Activos",
+          "foreign": "Compradores Extranjeros",
+          "dscr": "Inversión DSCR"
+        },
+        "full": {
+          "badge": "Documentación Tradicional de Ingresos",
+          "title": "Documentación Completa",
+          "desc": "La vía tradicional: formularios W-2, recibos de nómina y declaraciones de impuestos comprueban sus ingresos directamente. Para solicitantes con ingresos regulares y bien documentados, esta opción suele dar acceso a las tasas más competitivas.",
+          "bullet1": "Ideal para empleados asalariados y prestatarios con ingresos estables comprobables",
+          "bullet2": "Típicamente el nivel de tasa más competitivo",
+          "bullet3": "Suscripción completa de ingresos, activos e historial crediticio"
+        },
+        "bank": {
+          "badge": "Para Dueños de Negocios",
+          "title": "Calificación por Estados de Cuenta",
+          "desc": "Diseñado para trabajadores independientes cuyas declaraciones de impuestos subestiman el flujo de caja real tras aplicar deducciones de negocio. El ingreso de calificación se calcula a partir de 12 a 24 meses de depósitos bancarios.",
+          "bullet1": "Ideal para dueños de empresas, contratistas 1099 y profesionales independientes",
+          "bullet2": "Sin necesidad de presentar declaraciones de impuestos para calificar",
+          "bullet3": "Se pueden usar estados de cuenta personales o comerciales, según el programa"
+        },
+        "asset": {
+          "badge": "Para Prestatarios de Alto Patrimonio",
+          "title": "Agotamiento / Utilización de Activos",
+          "desc": "Sus activos líquidos (cuentas de inversión, fondos de jubilación y efectivo) se convierten en un ingreso mensual de calificación. Excelente opción para jubilados o personas cuyo patrimonio reside en activos en lugar de una nómina.",
+          "bullet1": "Ideal para jubilados, inversionistas y prestatarios con alto patrimonio e ingresos declarados bajos",
+          "bullet2": "El ingreso de calificación se calcula a partir de activos líquidos elegibles durante un plazo determinado",
+          "bullet3": "Poca o nula dependencia de ingresos por empleo tradicional"
+        },
+        "foreign": {
+          "badge": "Para Compradores Internacionales",
+          "title": "Programa para Extranjeros",
+          "desc": "Diseñado para compradores internacionales que adquieren propiedades en EE. UU. sin historial de crédito local ni documentación de ingresos nacional. Suele requerir un pago inicial mayor a cambio de flexibilidad de suscripción.",
+          "bullet1": "Ideal para no ciudadanos de EE. UU. sin historial crediticio local",
+          "bullet2": "Se acepta documentación de ingresos y activos en el extranjero",
+          "bullet3": "Generalmente se requiere un pago inicial mayor en reemplazo del historial de crédito en EE. UU."
+        },
+        "dscr": {
+          "badge": "Para Propiedades de Inversión",
+          "title": "Calificación de Inversión DSCR",
+          "desc": "¿Comprará un inmueble de alquiler de lujo o de inversión por encima de los límites conformes? Califique según los ingresos por alquiler de la propiedad frente a sus pagos de deuda, sin depender de sus ingresos personales.",
+          "bullet1": "Ideal para propiedades de alquiler de lujo, rentas vacacionales e inversiones",
+          "bullet2": "No se requiere verificación de ingresos personales ni de empleo",
+          "bullet3": "La calificación se basa en el flujo de caja propio de la propiedad"
+        }
+      }
+    },
+    "what_is": {
+      "title": "¿Qué es un Préstamo Jumbo y un Préstamo Super Jumbo?",
+      "p1_part1": "Un préstamo jumbo es cualquier hipoteca que supera el límite de préstamo \"conforme\" fijado anualmente por la Agencia Federal de Financiamiento de la Vivienda (FHFA). Para 2026, el límite base es de ",
+      "p1_baseline": "$832,750",
+      "p1_part2": " en la mayoría de los condados de EE. UU., alcanzando ",
+      "p1_highcost": "$1,249,125",
+      "p1_part3": " en zonas de alto costo designadas oficialmente. Al sobrepasar dicho umbral, el préstamo no puede ser adquirido por Fannie Mae o Freddie Mac y requiere financiamiento jumbo.",
+      "p2": "\"Super jumbo\" no es una categoría gubernamental formal: es la denominación del sector para créditos jumbo significativamente mayores al rango estándar, empezando usualmente alrededor de los $2.5–3 millones y extendiéndose a cifras de ocho dígitos. Los programas de MyLoanDesk abarcan todo este rango, desde compras jumbo de $900,000 hasta $30 millones y más."
+    },
+    "five_ways": {
+      "title": "Cinco Vías para Calificar",
+      "p1": "Los prestatarios de alto patrimonio e ingresos complejos rara vez encajan en un único esquema rígido de suscripción, por lo que ofrecemos múltiples alternativas. Seleccione a continuación la estructura de su perfil financiero para ver la opción más adecuada."
+    },
+    "how_it_works": {
+      "title": "¿Cómo Funciona el Financiamiento Jumbo?",
+      "steps": [
+        {
+          "step": "1",
+          "title": "Elija su vía de calificación.",
+          "desc": "Identificamos cuál de los cinco enfoques se ajusta mejor a su perfil financiero."
+        },
+        {
+          "step": "2",
+          "title": "Estructure el escenario.",
+          "desc": "El enganche, las reservas y la tasa se configuran según el monto del préstamo y la modalidad elegida."
+        },
+        {
+          "step": "3",
+          "title": "Presente la documentación.",
+          "desc": "Los requisitos varían por vía, desde declaraciones de impuestos completas hasta un extracto de activos."
+        },
+        {
+          "step": "4",
+          "title": "Tasación y suscripción.",
+          "desc": "Las propiedades de alto valor suelen someterse a revisiones de tasación especializadas debido a su singularidad."
+        },
+        {
+          "step": "5",
+          "title": "Cierre.",
+          "desc": "Firme los documentos finales y cierre su operación con un punto de contacto dedicado durante todo el proceso."
+        }
+      ]
+    },
+    "highlights": {
+      "title": "Aspectos Destacados del Programa",
+      "subtitle": "Lo que incluye:",
+      "items": [
+        "Montos de préstamo desde el límite conforme hasta más de $30M",
+        "Sin seguro hipotecario privado (PMI), independientemente del pago inicial",
+        "Cinco vías de calificación distintas para perfiles financieros complejos",
+        "Opciones de pago de solo interés disponibles en programas seleccionados",
+        "Financiamiento para residencias principales, segundas viviendas y propiedades de inversión",
+        "Admite ingresos y activos en fideicomisos, LLCs y múltiples entidades comerciales",
+        "Se evalúan condominios no garantizables y propiedades de lujo únicas caso por caso"
+      ]
+    },
+    "advantages": {
+      "title": "Ventajas Estratégicas:",
+      "p1": "Dado que los préstamos jumbo y super jumbo no se venden a Fannie Mae o Freddie Mac, su evaluación no se rige por las mismas reglas estrictas de un préstamo conforme, motivo por el cual existen diversas vías de calificación. Un prestatario que no encaja en el molde convencional en papel puede representar un excelente perfil de crédito una vez que sus activos, empresas o ingresos globales se evalúan adecuadamente.",
+      "p2": "Evitar el PMI en un crédito multimillonario supone un ahorro mensual significativo frente a un préstamo con seguro hipotecario; en un préstamo de $5M, el PMI representaría miles de dólares al mes.",
+      "p3": "Para prestatarios con patrimonio distribuido en fideicomisos, varias empresas o cuentas internacionales, contar con un prestamista capacitado para evaluar dicha complejidad técnica marca la diferencia entre una aprobación y un rechazo bancario."
+    },
+    "who_this_is_for": {
+      "title": "¿Para Quién es Este Financiamiento?",
+      "items": [
+        "Compradores que adquieren por encima del límite de préstamo conforme local",
+        "Dueños de negocios y emprendedores con ingresos fiscales complejos o deducidos",
+        "Individuos de alto patrimonio y jubilados con importantes activos líquidos",
+        "Compradores internacionales que adquieren propiedades en EE. UU.",
+        "Inversionistas que compran inmuebles de alquiler o vacacionales de lujo",
+        "Prestatarios con ingresos o activos en fideicomisos o múltiples entidades comerciales"
+      ]
+    },
+    "down_payment_reserves": {
+      "title": "Nota sobre el Pago Inicial y las Reservas",
+      "p1": "Los requisitos de pago inicial y reservas en créditos jumbo aumentan en proporción al tamaño del préstamo y la vía de calificación elegida. Como guía general:",
+      "th_loan_amount": "Monto del Préstamo",
+      "th_guidance": "Guía de Reservas Típicas",
+      "rows": [
+        {
+          "amount": "Hasta $1.5M",
+          "guidance": "Aproximadamente 6 meses de PITI"
+        },
+        {
+          "amount": "$1.5M – $5M",
+          "guidance": "Aproximadamente 12 meses de PITI"
+        },
+        {
+          "amount": "$5M – $15M",
+          "guidance": "Aproximadamente 18–24 meses de PITI"
+        },
+        {
+          "amount": "$15M+",
+          "guidance": "24+ meses, evaluado caso por caso"
+        }
+      ],
+      "footnote": "Estas cifras son una referencia ilustrativa y no un compromiso de financiamiento: los requisitos reales dependerán de la vía de calificación, perfil crediticio, tipo de propiedad y programa seleccionado."
+    },
+    "comparison": {
+      "title": "Jumbo y Super Jumbo vs. Financiamiento Conforme",
+      "th_conforming": "Préstamo Conforme",
+      "th_jumbo": "Préstamo Jumbo",
+      "th_super_jumbo": "Préstamo Super Jumbo",
+      "rows": {
+        "loan_amount": {
+          "label": "Monto del préstamo",
+          "conforming": "Hasta $832,750 ($1,249,125 en alto costo)",
+          "jumbo": "Por encima del conforme, hasta aprox. $2.5–3M",
+          "super_jumbo": "Aprox. $2.5–3M hasta $30M+"
+        },
+        "pmi": {
+          "label": "Requiere PMI",
+          "conforming": "Frecuentemente con menos del 20% de enganche",
+          "jumbo": "No",
+          "super_jumbo": "No"
+        },
+        "paths": {
+          "label": "Vías de calificación",
+          "conforming": "Documentación de ingresos estándar",
+          "jumbo": "Múltiples vías disponibles",
+          "super_jumbo": "Múltiples vías, a menudo indispensables"
+        },
+        "sold_to_agency": {
+          "label": "Vendido a Fannie/Freddie",
+          "conforming": "Sí",
+          "jumbo": "No: mantenido o vendido de forma privada",
+          "super_jumbo": "No: mantenido o vendido de forma privada"
+        },
+        "best_for": {
+          "label": "Ideal para",
+          "conforming": "Compras de vivienda típicas dentro de límites locales",
+          "jumbo": "Viviendas de valor superior a la media",
+          "super_jumbo": "Propiedades de lujo y ultralujo"
+        }
+      }
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "items": [
+        {
+          "q": "¿Cuál es la diferencia entre un préstamo jumbo y un préstamo super jumbo?",
+          "a": "Un préstamo jumbo es cualquier hipoteca que supera el límite de préstamo conforme establecido por la FHFA ($832,750 en la mayoría de los condados de EE. UU. para 2026, y hasta $1,249,125 en áreas de alto costo). Super jumbo es un término del sector para préstamos ampliamente superiores a dicho umbral, comenzando alrededor de los $2.5 a $3 millones y extendiéndose a cifras de ocho dígitos."
+        },
+        {
+          "q": "¿Los préstamos jumbo requieren seguro hipotecario privado (PMI)?",
+          "a": "No. Los préstamos jumbo y super jumbo habitualmente no llevan PMI, independientemente de su pago inicial. Los prestamistas gestionan el riesgo mediante requisitos de crédito, reservas y enganche."
+        },
+        {
+          "q": "¿Puedo calificar para un préstamo jumbo sin presentar declaraciones de impuestos?",
+          "a": "En muchos casos sí. Además de la documentación completa tradicional, opciones como estados de cuenta para independientes y agotamiento de activos para personas de alto patrimonio permiten calificar sin que las declaraciones de impuestos sean la fuente principal de comprobación."
+        },
+        {
+          "q": "¿Qué es la calificación por agotamiento o utilización de activos?",
+          "a": "Es un método que convierte sus activos líquidos (cuentas de inversión, fondos de retiro) en un ingreso mensual de calificación dividiendo una porción elegible de dichos fondos en un plazo de meses predeterminado. Lo utilizan frecuentemente jubilados, personas de alto patrimonio o empresarios cuyos ingresos tributarios no reflejan su solvencia real."
+        },
+        {
+          "q": "¿Cuántas reservas necesito para un préstamo jumbo o super jumbo?",
+          "a": "Las reservas aumentan con el monto del préstamo: los créditos menores pueden requerir unos 6 meses de PITI, mientras que préstamos super jumbo mayores a $5 millones suelen requerir de 12 a 24 meses o más, según el perfil del prestatario."
+        },
+        {
+          "q": "¿Los ciudadanos extranjeros pueden calificar para un préstamo jumbo en EE. UU.?",
+          "a": "Sí, en muchos casos. Los programas jumbo para extranjeros están diseñados para compradores internacionales sin historial crediticio en EE. UU. ni ingresos locales, requiriendo generalmente un mayor enganche y documentación de activos o ingresos foráneos."
+        },
+        {
+          "q": "¿Puedo obtener un préstamo jumbo para una propiedad de inversión?",
+          "a": "Sí. El financiamiento jumbo basado en DSCR permite calificar compras de propiedades de inversión según el flujo de caja del alquiler frente a sus obligaciones de deuda, en vez de los ingresos personales del prestatario."
+        },
+        {
+          "q": "¿Qué puntaje de crédito necesito para un préstamo jumbo o super jumbo?",
+          "a": "Se suele exigir un crédito más sólido que en préstamos conformes, habitualmente de 700 o más, y de 720+ en montos super jumbo elevados, según el pago inicial, reservas y vía de calificación."
+        },
+        {
+          "q": "¿Se pueden usar ingresos complejos de fideicomisos, LLCs o múltiples empresas para calificar?",
+          "a": "Sí. La suscripción de créditos jumbo y super jumbo está estructurada para admitir perfiles complejos, incluidos ingresos o activos en fideicomisos, varias entidades comerciales y estructuras no tradicionales frecuentes en patrimonios elevados."
+        }
+      ]
+    },
+    "cta": {
+      "apply_now": "Solicitar Ahora →",
+      "contact_us": "Contáctenos Ahora",
+      "note": "¿Tiene una operación compleja en mente (fideicomiso, múltiples entidades o activos en varias cuentas)? Comparta los detalles y un oficial de préstamos trazará la alternativa adecuada el mismo día."
+    },
+    "schema": {
+      "webpage_name": "Jumbo & Super Jumbo Loans Up to $30M+ | MyLoanDesk",
+      "webpage_description": "Guía completa y herramientas de cálculo para financiamiento de viviendas de lujo Jumbo y Super Jumbo y vías de calificación no conformes.",
+      "product_name": "Préstamo Hipotecario Jumbo y Super Jumbo",
+      "product_description": "Financiamiento hipotecario de alto monto de hasta $30M+ que supera los límites conformes con métodos de calificación flexibles que incluyen doc. completa, estados de cuenta, agotamiento de activos y DSCR.",
+      "faq_q1_question": "¿Cuál es la diferencia entre un préstamo jumbo y un préstamo super jumbo?",
+      "faq_q1_answer": "Un préstamo jumbo es cualquier hipoteca que supera el límite de préstamo conforme establecido por la FHFA ($832,750 en la mayoría de los condados de EE. UU. para 2026, y hasta $1,249,125 en áreas de alto costo). Super jumbo es un término del sector para préstamos ampliamente superiores a dicho umbral, comenzando alrededor de los $2.5 a $3 millones y extendiéndose a cifras de ocho dígitos.",
+      "faq_q2_question": "¿Los préstamos jumbo requieren seguro hipotecario privado (PMI)?",
+      "faq_q2_answer": "No. Los préstamos jumbo y super jumbo habitualmente no llevan PMI, independientemente de su pago inicial. Los prestamistas gestionan el riesgo mediante requisitos de crédito, reservas y enganche.",
+      "faq_q3_question": "¿Puedo calificar para un préstamo jumbo sin presentar declaraciones de impuestos?",
+      "faq_q3_answer": "En muchos casos sí. Además de la documentación completa tradicional, opciones como estados de cuenta para independientes y agotamiento de activos para personas de alto patrimonio permiten calificar sin que las declaraciones de impuestos sean la fuente principal de comprobación.",
+      "faq_q4_question": "¿Qué es la calificación por agotamiento o utilización de activos?",
+      "faq_q4_answer": "Es un método que convierte sus activos líquidos (cuentas de inversión, fondos de retiro) en un ingreso mensual de calificación dividiendo una porción elegible de dichos fondos en un plazo de meses predeterminado. Lo utilizan frecuentemente jubilados, personas de alto patrimonio o empresarios cuyos ingresos tributarios no reflejan su solvencia real.",
+      "faq_q5_question": "¿Cuántas reservas necesito para un préstamo jumbo o super jumbo?",
+      "faq_q5_answer": "Las reservas aumentan con el monto del préstamo: los créditos menores pueden requerir unos 6 meses de PITI, mientras que préstamos super jumbo mayores a $5 millones suelen requerir de 12 a 24 meses o más, según el perfil del prestatario.",
+      "faq_q6_question": "¿Los ciudadanos extranjeros pueden calificar para un préstamo jumbo en EE. UU.?",
+      "faq_q6_answer": "Sí, en muchos casos. Los programas jumbo para extranjeros están diseñados para compradores internacionales sin historial crediticio en EE. UU. ni ingresos locales, requiriendo generalmente un mayor enganche y documentación de activos o ingresos foráneos.",
+      "faq_q7_question": "¿Puedo obtener un préstamo jumbo para una propiedad de inversión?",
+      "faq_q7_answer": "Sí. El financiamiento jumbo basado en DSCR permite calificar compras de propiedades de inversión según el flujo de caja del alquiler frente a sus obligaciones de deuda, en vez de los ingresos personales del prestatario.",
+      "faq_q8_question": "¿Qué puntaje de crédito necesito para un préstamo jumbo o super jumbo?",
+      "faq_q8_answer": "Se suele exigir un crédito más sólido que en préstamos conformes, habitualmente de 700 o más, y de 720+ en montos super jumbo elevados, según el pago inicial, reservas y vía de calificación.",
+      "faq_q9_question": "¿Se pueden usar ingresos complejos de fideicomisos, LLCs o múltiples empresas para calificar?",
+      "faq_q9_answer": "Sí. La suscripción de créditos jumbo y super jumbo está estructurada para admitir perfiles complejos, incluidos ingresos o activos en fideicomisos, varias entidades comerciales y estructuras no tradicionales frecuentes en patrimonios elevados."
+    }
+  },
+  "MedicalProfessionalLoans": {
+    "meta": {
+      "title": "Programas de Préstamos para Profesionales Médicos | MyLoanDesk",
+      "description": "Programas hipotecarios especializados diseñados para médicos, odontólogos, residentes y profesionales de la salud elegibles. Califique con deuda estudiantil o contratos de empleo nuevos.",
+      "og_title": "Soluciones Hipotecarias para Profesionales Médicos | MyLoanDesk",
+      "og_description": "Programas hipotecarios que reconocen el potencial de ingresos y perfiles financieros únicos de médicos y profesionales de la salud.",
+      "og_alt": "Préstamos para Profesionales Médicos - MyLoanDesk",
+      "twitter_title": "Soluciones Hipotecarias para Profesionales Médicos | MyLoanDesk",
+      "twitter_description": "Programas hipotecarios que reconocen el potencial de ingresos y perfiles financieros únicos de médicos y profesionales de la salud."
+    },
+    "breadcrumbs": {
+      "home": "Inicio",
+      "loan_programs": "Programas de Préstamos",
+      "medical_loans": "Préstamos para Profesionales Médicos"
+    },
+    "back_to_programs": "Volver a Programas de Préstamos",
+    "title": "Programas de Préstamos para Profesionales Médicos",
+    "hero": {
+      "badge": "Financiamiento Especializado para Médicos y Salud",
+      "title_main": "Programas de Préstamos para Profesionales Médicos",
+      "title_sub": "Soluciones Hipotecarias Diseñadas para Profesionales Médicos",
+      "p1": "Una carrera profesional sólida no siempre se traduce en una aprobación hipotecaria sencilla. Los médicos y otros profesionales de la salud pueden contar con un alto potencial de ingresos mientras manejan deudas estudiantiles, inician un nuevo puesto, completan su residencia o disponen de ahorros limitados para un enganche convencional.",
+      "p2": "MyLoanDesk ofrece acceso a programas hipotecarios especializados diseñados para profesionales médicos calificados.",
+      "cta_quote": "Explorar Opciones de Préstamo Médico",
+      "cta_calc": "Calcular Impacto en DTI"
+    },
+    "overview": {
+      "badge": "01 — Resumen",
+      "heading": "¿Qué es un Préstamo para Profesionales Médicos?",
+      "p1": "Los programas hipotecarios para profesionales médicos son opciones de financiamiento especializadas que reconocen el perfil financiero particular de doctores y profesionales de la salud elegibles.",
+      "p2": "Dependiendo del programa, los prestamistas pueden ofrecer directrices de calificación flexibles, opciones de financiamiento competitivas o un tratamiento diferenciado para ciertos factores financieros frente a hipotecas estándar.",
+      "footnote": "* La elegibilidad varía notablemente según el prestamista y la especialidad médica.",
+      "side_card": {
+        "title": "¿Quiénes Pueden Calificar?",
+        "intro": "Según el prestamista, las profesiones elegibles pueden incluir:",
+        "professions": [
+          "Médicos (MD, DO)",
+          "Odontólogos y Cirujanos Dentales (DDS, DMD)",
+          "Veterinarios (DVM)",
+          "Farmacéuticos (PharmD)",
+          "Optometristas (OD)",
+          "Podólogos (DPM)",
+          "Otros profesionales médicos con licencia"
+        ],
+        "residents_note_label": "Residentes y Becarios (Fellows):",
+        "residents_note_text": "Los residentes, becarios de especialidad y profesionales de reciente graduación también pueden tener alternativas con ciertos prestamistas."
+      }
+    },
+    "advantages": {
+      "badge": "02 — Ventajas",
+      "heading": "¿Por Qué los Profesionales Médicos Utilizan Estos Programas?",
+      "cards": [
+        {
+          "title": "Altos Ingresos, Ahorros Limitados",
+          "desc": "Años de formación médica pueden hacer que un profesional empiece a generar ingresos sustanciales antes de haber acumulado un gran pago inicial."
+        },
+        {
+          "title": "Deuda por Préstamos Estudiantiles",
+          "desc": "Los créditos estudiantiles pueden afectar la calificación bajo fórmulas DTI convencionales. Los programas especializados evalúan estas obligaciones de forma distinta."
+        },
+        {
+          "title": "Nuevo Empleo",
+          "desc": "Ciertos prestatarios pueden calificar mediante un contrato de trabajo firmado o ingresos futuros documentados, sujeto a las normas del prestamista."
+        },
+        {
+          "title": "Financiamiento Flexible",
+          "desc": "Determinados programas médicos pueden ofrecer niveles más altos de financiamiento u otras condiciones especiales para solicitantes que califican."
+        }
+      ]
+    },
+    "contract_underwriting": {
+      "badge": "03 — Suscripción por Contrato",
+      "heading": "¿Comprará Antes de Iniciar su Nuevo Puesto?",
+      "p1": "No necesariamente necesita años de historial de ingresos en su nuevo trabajo antes de solicitar una hipoteca.",
+      "p2": "Algunos programas pueden evaluar una carta de oferta o contrato de trabajo firmado cuando el prestatario iniciará su labor dentro de un plazo razonable. Evaluaremos su caso para identificar las directrices aplicables.",
+      "cta_button": "Consultar a un Asesor"
+    },
+    "comparison": {
+      "badge": "04 — Comparación",
+      "heading": "Préstamo para Profesionales Médicos vs. Hipoteca Convencional",
+      "p1": "Una hipoteca convencional puede seguir siendo la mejor elección para ciertos solicitantes.",
+      "p2": "Por ello, MyLoanDesk no asume que un préstamo médico sea automáticamente la única opción. Podemos comparar programas convencionales, jumbo y especializados según sus circunstancias.",
+      "side_card": {
+        "title": "Factores de Comparación",
+        "student_loan_title": "Evaluación de Deuda Estudiantil:",
+        "student_loan_desc": "Cálculo estándar del 1% mensual vs. cómputo por plan según ingresos o diferimiento.",
+        "down_payment_title": "Opciones de Pago Inicial:",
+        "down_payment_desc": "Pautas estándar vs. opciones de pago inicial bajo o nulo para médicos.",
+        "future_income_title": "Consideración de Ingresos Futuros:",
+        "future_income_desc": "Exigencia de recibos W-2 vs. aprobación con contrato laboral firmado."
+      }
+    },
+    "value_prop": {
+      "badge": "05 — Propuesta de Valor",
+      "heading": "¿Por Qué Elegir MyLoanDesk?",
+      "p1": "Los distintos prestamistas definen \"profesional médico\" de forma variable y aplican diferentes criterios de calificación.",
+      "p2": "Le ayudamos a comparar programas en lugar de asumir que la oferta de un solo prestamista es su única alternativa.",
+      "side_card": {
+        "title": "¿Inicia residencia, se reubica o compra su próxima casa?",
+        "desc": "Explore programas médicos especializados adaptados a su especialidad, fecha de inicio de contrato y perfil de deuda.",
+        "cta_button": "Ver Opciones de Préstamo"
+      }
+    },
+    "calculator": {
+      "badge": "Estimador DTI para Préstamos Médicos",
+      "heading": "Calcule el Impacto de su Deuda Estudiantil en el DTI",
+      "subheading": "Compruebe cómo la suscripción médica especializada evalúa los préstamos estudiantiles de manera distinta a los préstamos convencionales.",
+      "income_label": "Ingreso Mensual Bruto ($)",
+      "income_placeholder": "16000",
+      "student_debt_label": "Deuda Estudiantil Total ($)",
+      "student_debt_placeholder": "220000",
+      "other_debt_label": "Otras Deudas Mensuales ($)",
+      "other_debt_placeholder": "800",
+      "submit_button": "Comparar Impacto en DTI",
+      "standard_dti_label": "Ratio DTI Estándar",
+      "doctor_dti_label": "Ratio DTI Préstamo Médico",
+      "headroom_gained_label": "Margen DTI Ganado",
+      "footnote": "Los programas médicos especializados calculan los pagos de préstamos estudiantiles diferidos o basados en ingresos a un nivel significativamente menor que la norma estándar del 1%, maximizando su poder adquisitivo."
+    },
+    "faq": {
+      "badge": "06 — Claridad",
+      "heading": "Preguntas Frecuentes sobre Préstamos Médicos",
+      "items": [
+        {
+          "q": "¿Los préstamos para profesionales médicos requieren seguro hipotecario?",
+          "a": "Depende del prestamista, el nivel de financiamiento y el programa. Algunos programas especializados brindan alternativas a las estructuras de seguro hipotecario tradicionales."
+        },
+        {
+          "q": "¿Pueden calificar residentes y becarios (fellows)?",
+          "a": "Potencialmente sí. Varios prestamistas ofrecen programas para residentes y becarios calificados."
+        },
+        {
+          "q": "¿Puedo calificar utilizando un nuevo contrato de trabajo?",
+          "a": "Ciertos prestamistas permiten calificar a partir de un contrato de empleo formal o carta de oferta aceptable, sujeto a sus directrices."
+        },
+        {
+          "q": "¿Qué profesiones son elegibles?",
+          "a": "La elegibilidad varía según el prestamista. Médicos y odontólogos se incluyen habitualmente, mientras que algunos programas abarcan otras profesiones de la salud."
+        },
+        {
+          "q": "¿Debo usar un préstamo para profesionales médicos o una hipoteca convencional?",
+          "a": "Depende de su caso. Comparar ambas alternativas le permitirá determinar qué estructura se adapta mejor a sus objetivos."
+        }
+      ]
+    },
+    "bottom_cta": {
+      "heading": "Su Carrera es Especializada. Su Hipoteca También Puede Serlo.",
+      "cta_button": "Explorar mis Opciones",
+      "disclaimer": "La elegibilidad, niveles de financiamiento, requisitos profesionales, montos de préstamo, tasas, términos y disponibilidad de programas varían según el prestamista y están sujetos a suscripción y aprobación."
+    },
+    "schema": {
+      "webpage_name": "Programas de Préstamos para Profesionales Médicos | MyLoanDesk",
+      "webpage_description": "Soluciones de financiamiento de vivienda especializadas para médicos, odontólogos, residentes y profesionales de la salud con licencia.",
+      "product_name": "Préstamo Hipotecario para Médicos y Profesionales de la Salud",
+      "product_description": "Financiamiento de vivienda a la medida para médicos, odontólogos y residentes con opciones de pago inicial bajo o nulo, exclusiones de deuda estudiantil y calificación por contrato laboral.",
+      "faq_q1_question": "¿Los préstamos para profesionales médicos requieren seguro hipotecario?",
+      "faq_q1_answer": "Depende del prestamista, el nivel de financiamiento y el programa. Algunos programas especializados brindan alternativas a las estructuras de seguro hipotecario tradicionales.",
+      "faq_q2_question": "¿Pueden calificar residentes y becarios (fellows)?",
+      "faq_q2_answer": "Potencialmente sí. Varios prestamistas ofrecen programas para residentes y becarios calificados.",
+      "faq_q3_question": "¿Puedo calificar utilizando un nuevo contrato de trabajo?",
+      "faq_q3_answer": "Ciertos prestamistas permiten calificar a partir de un contrato de empleo formal o carta de oferta aceptable, sujeto a sus directrices.",
+      "faq_q4_question": "¿Qué profesiones son elegibles?",
+      "faq_q4_answer": "La elegibilidad varía según el prestamista. Médicos y odontólogos se incluyen habitualmente, mientras que algunos programas abarcan otras profesiones de la salud.",
+      "faq_q5_question": "¿Debo usar un préstamo para profesionales médicos o una hipoteca convencional?",
+      "faq_q5_answer": "Depende de su caso. Comparar ambas alternativas le permitirá determinar qué estructura se adapta mejor a sus objetivos."
+    }
+  },
+  "PortugalLoans": {
+    "meta": {
+      "title": "Financiamiento de Propiedades en Portugal para Extranjeros | MyLoanDesk",
+      "description": "Financiamiento para expatriados y compradores extranjeros de propiedades residenciales, comerciales o de inversión en Portugal. Estime su pago de hipoteca portuguesa con nuestra calculadora gratuita.",
+      "og_title": "Financiamiento de Propiedades en Portugal para Extranjeros | MyLoanDesk",
+      "og_description": "¿Comprar una casa, invertir en bienes raíces comerciales o desarrollar un nuevo proyecto en Portugal? Explore opciones de financiamiento a través de nuestra red de prestamistas en Portugal.",
+      "og_alt": "Financiamiento de Propiedades en Portugal - MyLoanDesk",
+      "twitter_title": "Financiamiento de Propiedades en Portugal para Extranjeros | MyLoanDesk",
+      "twitter_description": "Financiamiento para expatriados y compradores extranjeros de propiedades residenciales, comerciales o de inversión en Portugal."
+    },
+    "breadcrumbs": {
+      "home": "Inicio",
+      "loan_programs": "Programas de Préstamos",
+      "portugal_financing": "Financiamiento en Portugal"
+    },
+    "back_to_programs": "Volver a Programas de Préstamos",
+    "title": "Financiamiento Inmobiliario en Portugal",
+    "hero": {
+      "subtitle": "¿Compra o se muda a Portugal? El financiamiento es más accesible de lo que la mayoría de los extranjeros espera.",
+      "description": "Ya sea que compre una vivienda, invierta en bienes raíces comerciales o desarrolle un nuevo proyecto, MyLoanDesk ayuda a los prestatarios calificados a explorar opciones de financiamiento mediante nuestra red de entidades en Portugal. Los bancos portugueses prestan activamente a compradores extranjeros (no existen restricciones legales para la propiedad ni para el crédito foráneo), pero el proceso presenta diferencias respecto al sistema estadounidense y saber qué esperar es determinante.",
+      "bullet1": "Disponible tanto para compradores de la UE como extracomunitarios",
+      "bullet2": "Financiamiento residencial, comercial y para construcción",
+      "bullet3": "Opciones de tasa fija y variable disponibles",
+      "disclaimer": "Cálculo estimado únicamente, en euros. No incluye el impuesto municipal sobre transmisiones onerosas de inmuebles (IMT), impuesto de timbre, gastos notariales ni de registro, los cuales se liquidan por separado al firmar. Los términos reales dependen del banco, su estatus de residencia y su perfil financiero completo."
+    },
+    "calculator": {
+      "badge": "Estimador Hipotecario de Portugal",
+      "subheading": "Consulte su monto de préstamo y pago estimado (en EUR).",
+      "price_label": "Precio de la propiedad",
+      "price_placeholder": "450,000",
+      "down_label": "Depósito / Pago inicial",
+      "down_placeholder": "30",
+      "rate_label": "Tasa est.",
+      "rate_placeholder": "4.2",
+      "term_label": "Plazo del préstamo",
+      "term_years": "años",
+      "loan_amount_label": "Monto del préstamo",
+      "monthly_payment_label": "Pago mensual estimado",
+      "per_month": "/mes",
+      "ltv_label": "Préstamo a valor (LTV)",
+      "ltv_note_low": "Por debajo del depósito mínimo habitual para compradores no residentes, que suele ser de al menos 25–30%.",
+      "ltv_note_mid": "Dentro del rango típico para financiamiento de no residentes en Portugal.",
+      "ltv_note_high": "Un depósito elevado: puede dar acceso a tasas y condiciones más competitivas."
+    },
+    "how_it_works_overview": {
+      "title": "¿Cómo Funciona el Financiamiento Inmobiliario en Portugal?",
+      "p1": "Los bancos portugueses ofrecen el denominado Crédito à Habitação (financiamiento hipotecario para vivienda) tanto a residentes fiscales como a no residentes, incluidos compradores estadounidenses e internacionales. A diferencia de países que restringen la titularidad foránea, Portugal no exige permisos especiales ni impone limitaciones a los compradores internacionales para adquirir o financiar inmuebles.",
+      "p2": "Las diferencias prácticas para un no residente se resumen en: un depósito requerido más elevado que el de un residente, una documentación más exhaustiva de los ingresos y activos extranjeros, y generalmente un diferencial (spread) de tasa ligeramente mayor. No obstante, el trámite general sigue la estructura del mercado hipotecario convencional: préstamos a tasa fija y variable equivalentes en concepto a una hipoteca tradicional, adaptados a la normativa bancaria portuguesa."
+    },
+    "process": {
+      "title": "¿Cómo Funciona el Proceso?",
+      "steps": [
+        {
+          "step": "1",
+          "title": "Obtenga su NIF y una cuenta bancaria portuguesa.",
+          "desc": "Se requiere un número de identificación fiscal portugués (NIF) y, casi siempre, una cuenta bancaria local antes de que un banco tramite su solicitud."
+        },
+        {
+          "step": "2",
+          "title": "Obtenga la preaprobación.",
+          "desc": "Le ayudamos a determinar su capacidad real de endeudamiento antes de comprometerse con una propiedad."
+        },
+        {
+          "step": "3",
+          "title": "Presente la documentación.",
+          "desc": "Comprobantes de ingresos, activos, historial crediticio e identificación; los ingresos extranjeros se analizan detalladamente."
+        },
+        {
+          "step": "4",
+          "title": "Tasación bancaria y aprobación formal.",
+          "desc": "El banco tasa el inmueble y emite la oferta con las condiciones finales del préstamo."
+        },
+        {
+          "step": "5",
+          "title": "Firma ante notario.",
+          "desc": "La compraventa y la hipoteca se formalizan en la \"escritura\" pública ante notario."
+        }
+      ]
+    },
+    "highlights": {
+      "title": "Aspectos Destacados del Programa",
+      "subtitle": "Lo que incluye:",
+      "items": [
+        "Financiamiento para proyectos residenciales, comerciales y de construcción/desarrollo",
+        "Abierto a ciudadanos de la Unión Europea y no pertenecientes a la UE",
+        "Estructuras de tasa fija, variable (indexada al Euribor) y mixta disponibles",
+        "Plazos de hasta aproximadamente 30 años para prestatarios jóvenes",
+        "Financiamiento disponible para jubilados con ingresos de pensión comprobables",
+        "Opciones con fiador o garante en ciertos casos para ampliar la capacidad de crédito"
+      ]
+    },
+    "deposit_ltv": {
+      "title": "Nota sobre el Depósito y la Relación Préstamo-Valor (LTV)",
+      "p1": "Los bancos portugueses suelen prestar un porcentaje menor del precio de compra a los no residentes en comparación con los residentes fiscales. Como guía general:",
+      "th_profile": "Perfil del Comprador",
+      "th_ltv": "Préstamo a Valor (LTV) Habitual",
+      "rows": [
+        {
+          "profile": "Residente fiscal, vivienda habitual",
+          "ltv": "Hasta 80–90%"
+        },
+        {
+          "profile": "No residente, primera o segunda vivienda",
+          "ltv": "Aproximadamente 60–75%"
+        },
+        {
+          "profile": "No residente, propiedad comercial o de inversión",
+          "ltv": "Aproximadamente 50%"
+        }
+      ],
+      "footnote": "Estas cifras son orientativas para el mercado y no un compromiso formal; el ratio LTV definitivo depende del banco, la propiedad y su perfil financiero completo."
+    },
+    "golden_visa": {
+      "tag": "⚠ Importante — Aclaración sobre la Golden Visa",
+      "p1_part1": "Muchos compradores que investigan sobre Portugal aún asocian la compra de inmuebles con el programa Golden Visa de residencia por inversión. ",
+      "p1_bold": "Esto ya no es así.",
+      "p1_part2": " Desde octubre de 2023, la compra de bienes raíces dejó de calificar como vía de inversión para el programa Golden Visa bajo la ley de vivienda \"Mais Habitação\" de Portugal.",
+      "p2": "Por supuesto, aún puede comprar y financiar propiedades en Portugal como extranjero: eso no ha cambiado. Sin embargo, la compra por sí sola no le otorgará la residencia portuguesa ni acceso a la Golden Visa. Si la residencia forma parte de su plan, es un tema a tratar con un abogado de inmigración. Preferimos explicárselo con total transparencia para evitar malentendidos habituales."
+    },
+    "advantages": {
+      "title": "Ventajas Estratégicas:",
+      "p1": "Financiar una parte de su compra en lugar de abonarla íntegramente al contado permite preservar capital para reformas, mobiliario o mantener un fondo de reserva mayor; el apalancamiento facilita acceder a mejores ubicaciones o propiedades más amplias.",
+      "p2": "Contar con un asesor experimentado en el mercado portugués para no residentes marca la diferencia: los expedientes de extranjeros se evalúan con criterios propios, y saber estructurar ingresos y documentación bajo las expectativas de los analistas locales agiliza la aprobación y mejora los términos."
+    },
+    "who_this_is_for": {
+      "title": "¿Para Quién es Este Financiamiento?",
+      "items": [
+        "Compradores estadounidenses y extranjeros que adquieren una vivienda en Portugal",
+        "Jubilados que se trasladan a Portugal con ingresos de pensión certificados",
+        "Compradores de segundas residencias que buscan una base en Europa",
+        "Inversionistas que adquieren propiedades comerciales o de alquiler en Portugal",
+        "Compradores que desarrollan o remodelan inmuebles, incluyendo financiamiento para obras"
+      ]
+    },
+    "what_you_need": {
+      "title": "Documentos que Probablemente Necesitará",
+      "items": [
+        "Número de Identificación Fiscal portugués (NIF)",
+        "Cuenta bancaria en Portugal",
+        "Pasaporte válido o documento de identidad oficial",
+        "Comprobante de ingresos (nóminas, declaraciones de impuestos o certificados de pensión)",
+        "Estados de cuenta bancarios y de activos recientes",
+        "Historial crediticio emitido en su país de origen"
+      ]
+    },
+    "comparison": {
+      "title": "Financiamiento para Residentes vs. No Residentes",
+      "th_resident": "Residente Fiscal en Portugal",
+      "th_non_resident": "No Residente (Extranjero / Expatriado)",
+      "rows": {
+        "deposit": {
+          "label": "Depósito típico",
+          "resident": "10–20%",
+          "non_resident": "25–35%+"
+        },
+        "ltv": {
+          "label": "Préstamo a valor (LTV)",
+          "resident": "Hasta 80–90%",
+          "non_resident": "Típicamente 60–75%"
+        },
+        "documentation": {
+          "label": "Documentación",
+          "resident": "Documentación de ingresos local estándar",
+          "non_resident": "Comprobación completa de ingresos y activos en el extranjero"
+        },
+        "rate_spread": {
+          "label": "Diferencial de tasa (spread)",
+          "resident": "Tarifas locales estándar",
+          "non_resident": "Frecuentemente algo mayor"
+        },
+        "nif_required": {
+          "label": "Requiere NIF y cuenta local",
+          "resident": "Sí",
+          "non_resident": "Sí"
+        }
+      }
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "items": [
+        {
+          "q": "¿Pueden los extranjeros obtener una hipoteca para comprar una propiedad en Portugal?",
+          "a": "Sí. Portugal no impone restricciones legales para la propiedad ni para el crédito a extranjeros, y los bancos locales otorgan préstamos habitualmente tanto a ciudadanos de la UE como extracomunitarios. Las principales diferencias respecto a un residente radican en un depósito mayor, documentación más detallada y un diferencial de tasa ligeramente más amplio."
+        },
+        {
+          "q": "¿Cuánto depósito necesito como comprador no residente?",
+          "a": "Los compradores no residentes generalmente deben aportar al menos un 25-35% del precio de compra, ya que las entidades suelen limitar el financiamiento al 60-75% del valor de tasación o compraventa. Dependiendo del perfil financiero del solicitante y del banco, algunos casos pueden acceder a condiciones más favorables."
+        },
+        {
+          "q": "¿Comprar una propiedad en Portugal aún me califica para la Golden Visa?",
+          "a": "No. Desde octubre de 2023, la compra de bienes raíces ya no califica para el programa Golden Visa de Portugal. Los inmuebles pueden seguir comprándose y financiándose sin problemas, pero no otorgan por sí solos la residencia portuguesa."
+        },
+        {
+          "q": "¿Necesito una cuenta bancaria portuguesa o NIF para obtener una hipoteca?",
+          "a": "Por lo general sí. La mayoría de los prestamistas portugueses exige un Número de Identificación Fiscal (NIF) y una cuenta bancaria local para formalizar la solicitud de hipoteca, los cuales pueden gestionarse antes o durante el proceso."
+        },
+        {
+          "q": "¿Pueden los jubilados calificar para una hipoteca en Portugal?",
+          "a": "Sí: los jubilados con ingresos de pensión certificados y periódicos pueden calificar habitualmente. Los plazos suelen fijarse para que el crédito quede liquidado antes de una edad máxima (generalmente entre 70 y 80 años), y a veces se incluye un avalista para ampliar la capacidad crediticia."
+        },
+        {
+          "q": "¿Cuál es la diferencia entre hipotecas de tasa fija y variable en Portugal?",
+          "a": "En Portugal se ofrecen habitualmente hipotecas a tasa fija por un plazo acordado o a tasa variable vinculada al Euribor más el diferencial (spread) del banco, ajustándose periódicamente. También existen estructuras mixtas que combinan ambos esquemas."
+        },
+        {
+          "q": "¿De cuánto tiempo puede ser el plazo de una hipoteca en Portugal?",
+          "a": "Los plazos pueden alcanzar hasta 30-40 años para prestatarios jóvenes, aunque casi todos los bancos exigen que el préstamo esté amortizado en su totalidad antes de cumplir cierta edad (comúnmente entre 70 y 80 años)."
+        },
+        {
+          "q": "¿Puedo financiar una propiedad comercial o de inversión en Portugal?",
+          "a": "Sí, si bien las propiedades comerciales y de inversión suelen contar con un ratio LTV menor que una vivienda habitual (frecuentemente en torno al 50% del precio de compra o tasación, el que resulte menor), debido al perfil de riesgo asignado."
+        },
+        {
+          "q": "¿Cuánto tiempo toma el proceso de aprobación y cierre en Portugal?",
+          "a": "Los plazos varían, pero los compradores deben prever un proceso más extenso que el de una hipoteca estándar en EE. UU. debido a los trámites legales, tasaciones y la firma definitiva en la notaría (\"escritura\"). Contar con asesoría especializada agiliza todo el trámite."
+        }
+      ]
+    },
+    "cta": {
+      "apply_now": "Solicitar Ahora →",
+      "contact_us": "Contáctenos Ahora",
+      "note": "¿Ya tiene una propiedad en mente o apenas comienza a explorar opciones en Portugal? Envíenos los detalles y un oficial de préstamos evaluará sus alternativas el mismo día."
+    },
+    "schema": {
+      "webpage_name": "Property Financing in Portugal for Expats & Foreign Buyers | MyLoanDesk",
+      "webpage_description": "Comprehensive guide and mortgage payment calculator for expats, non-residents, and international buyers purchasing property in Portugal.",
+      "product_name": "Portugal International Mortgage & Property Loan",
+      "product_description": "Mortgage financing in Portugal (Crédito à Habitação) for EU and non-EU foreign buyers, expats, and retirees covering residential, commercial, and construction properties.",
+      "faq_q1_question": "Can foreigners get a mortgage to buy property in Portugal?",
+      "faq_q1_answer": "Yes. Portugal places no legal restrictions on foreign ownership or foreign borrowing, and Portuguese banks regularly lend to both EU and non-EU non-residents. The main practical differences from a resident mortgage are a larger required deposit, more thorough documentation, and typically a somewhat higher rate spread.",
+      "faq_q2_question": "How much deposit do I need as a non-resident buyer?",
+      "faq_q2_answer": "Non-resident buyers should generally expect to put down at least 25-35% of the purchase price, since Portuguese banks typically cap non-resident financing around 60-75% loan-to-value. Some scenarios may allow for a smaller deposit or a higher loan-to-value, depending on the buyer's financial profile and the specific bank.",
+      "faq_q3_question": "Does buying property in Portugal still qualify me for the Golden Visa?",
+      "faq_q3_answer": "No. Since October 2023, real estate purchases no longer qualify as an investment route for Portugal’s Golden Visa program. Property in Portugal can still be purchased and financed by foreign buyers, but it will not, on its own, grant Portuguese residency. Anyone considering the Golden Visa program should speak with an immigration attorney about the current qualifying routes, which no longer include real estate.",
+      "faq_q4_question": "Do I need a Portuguese bank account or tax number (NIF) to get a mortgage?",
+      "faq_q4_answer": "Generally, yes. Most Portuguese lenders require a Portuguese tax identification number (NIF) and, in most cases, a Portuguese bank account to process a mortgage application, both of which can typically be set up before or during the financing process.",
+      "faq_q5_question": "Can retirees qualify for a mortgage in Portugal?",
+      "faq_q5_answer": "Yes, retirees with a documented, regular pension income can generally qualify for a Portuguese mortgage. Loan terms are often structured so the loan is repaid by a certain age, which can shorten the available term for older borrowers, and adding a guarantor is sometimes used to extend borrowing capacity.",
+      "faq_q6_question": "What’s the difference between fixed and variable rate mortgages in Portugal?",
+      "faq_q6_answer": "Portuguese mortgages are commonly offered as either a fixed rate for a set period, or a variable rate tied to Euribor plus a bank spread, which adjusts periodically. Some products also offer a mixed structure, combining a fixed period followed by a variable one.",
+      "faq_q7_question": "How long can a mortgage term be in Portugal?",
+      "faq_q7_answer": "Portuguese mortgage terms can extend up to around 30-40 years for younger borrowers, though most banks require the loan to be fully repaid by a set age, often somewhere between 70 and 80, which effectively shortens the maximum term available to older borrowers.",
+      "faq_q8_question": "Can I get financing for a commercial or investment property in Portugal?",
+      "faq_q8_answer": "Yes, though commercial and investment property financing typically comes with a lower loan-to-value than a primary residence — often around 50% of the purchase price or appraised value, whichever is lower — reflecting the higher risk profile banks assign to non-owner-occupied property.",
+      "faq_q9_question": "How long does the mortgage approval and closing process take in Portugal?",
+      "faq_q9_answer": "Timelines vary, but buyers should generally plan for a longer process than a typical U.S. mortgage, given the additional documentation, valuation, and legal steps involved, including the final signing at a notary (the \"escritura\"). Working with a broker experienced in the Portuguese market can help keep the process moving efficiently."
+    }
+  },
+  "ReverseMortgagePurchase": {
+    "meta": {
+      "title": "Hipoteca Revertida para Compra | Adquiera su Próxima Casa",
+      "description": "Compre su próxima vivienda con una hipoteca revertida sin pagos hipotecarios mensuales obligatorios de principal e intereses.* Conozca cómo funciona HECM for Purchase.",
+      "og_title": "Hipoteca Revertida para Compra | Adquiera su Próxima Casa",
+      "og_description": "Compre su próxima vivienda con una hipoteca revertida sin pagos hipotecarios mensuales obligatorios de principal e intereses.* Conozca cómo funciona HECM for Purchase.",
+      "og_alt": "Compradores de vivienda evaluando una hipoteca revertida para compra para adquirir su próxima residencia principal",
+      "twitter_title": "Hipoteca Revertida para Compra | Adquiera su Próxima Casa",
+      "twitter_description": "Utilice una hipoteca revertida para financiar parte de su próxima residencia principal conservando más ahorros para su jubilación."
+    },
+    "breadcrumbs": {
+      "home": "Inicio",
+      "loan_programs": "Programas de Préstamos",
+      "reverse_purchase": "Hipoteca Revertida para Compra"
+    },
+    "hero": {
+      "badge": "HECM para Compra",
+      "title_main": "Hipoteca Revertida para Compra:",
+      "title_sub": "Compre su Próxima Casa sin Pagos Hipotecarios Mensuales Obligatorios*",
+      "lead": "Utilice una hipoteca revertida para financiar parte de su próxima residencia principal conservando más ahorros disponibles para su jubilación.",
+      "p1": "Una hipoteca revertida no está destinada únicamente a propietarios que desean acceder al capital de su vivienda actual. Los compradores calificados también pueden utilizar una Hipoteca Revertida para Compra al adquirir su próxima residencia principal.",
+      "p1_link_text": "hipoteca revertida",
+      "p2": "En lugar de abonar el 100% en efectivo o solicitar una hipoteca tradicional con pagos mensuales obligatorios de principal e intereses, usted aporta una porción del precio con sus propios fondos elegibles y financia el saldo restante calificado mediante una hipoteca revertida.",
+      "p3_bold": "¿El resultado? Puede comprar y ser propietario de su próxima casa sin pagos hipotecarios mensuales obligatorios de principal e intereses.*",
+      "cta_calc": "Ver Qué Valor de Casa Puedo Comprar",
+      "cta_specialist": "Hablar con un Especialista en Hipotecas Revertidas"
+    },
+    "overview": {
+      "badge": "01 — Resumen",
+      "heading": "¿Qué es una Hipoteca Revertida para Compra?",
+      "p1": "Una Hipoteca Revertida para Compra permite a compradores de mayor edad calificados adquirir una residencia principal y formalizar una hipoteca revertida en una única transacción.",
+      "p2": "La modalidad asegurada por la FHA se conoce formalmente como HECM para Compra (Home Equity Conversion Mortgage for Purchase).",
+      "side_card": {
+        "title": "Cómo Opera el Financiamiento",
+        "items": [
+          "Usted aporta una inversión monetaria requerida para la compra.",
+          "La hipoteca revertida proporciona el financiamiento elegible restante.",
+          "A diferencia de una hipoteca tradicional, no está obligado a realizar pagos mensuales de principal e intereses sobre la hipoteca revertida* mientras cumpla con las condiciones del préstamo.",
+          "Usted conserva la titularidad y propiedad absoluta de la vivienda."
+        ]
+      }
+    },
+    "the_process": {
+      "badge": "02 — El Proceso",
+      "heading": "¿Cómo Funciona una Compra con Hipoteca Revertida?",
+      "subheading": "El concepto es directo y estructurado. Estos son los pasos para adquirir su próxima vivienda mediante una hipoteca revertida.",
+      "steps": [
+        {
+          "step": "1",
+          "title": "Elija su Nueva Vivienda",
+          "desc": "Encuentre la propiedad que desea comprar y habitar como su residencia principal."
+        },
+        {
+          "step": "2",
+          "title": "Determine su Inversión Requerida",
+          "desc": "Los fondos que debe aportar se calculan según su edad, precio de compra, valor de tasación, tasas de interés vigentes y el programa de hipoteca revertida elegido."
+        },
+        {
+          "step": "3",
+          "title": "Aporte Fondos Elegibles",
+          "desc": "Su inversión requerida puede provenir de la venta de su vivienda actual, ahorros, inversiones u otros fondos verificables."
+        },
+        {
+          "step": "4",
+          "title": "Financiamiento del Saldo Elegible Restante",
+          "desc": "La hipoteca revertida cubre la porción del precio de compra que le corresponde financiar."
+        },
+        {
+          "step": "5",
+          "title": "Múdese a su Nuevo Hogar",
+          "desc": "Usted es el propietario del inmueble y no tiene pagos mensuales obligatorios de principal e intereses sobre la hipoteca revertida.*"
+        }
+      ]
+    },
+    "why_buy": {
+      "heading": "¿Por Qué Comprar una Casa con una Hipoteca Revertida?",
+      "p1": "Para muchos jubilados, la elección no se limita a pagar todo al contado o endeudarse con una hipoteca tradicional. Una Hipoteca Revertida para Compra ofrece una tercera alternativa.",
+      "p2": "En lugar de destinar la totalidad (o gran parte) de su capital líquido a la nueva vivienda, puede utilizar una fracción de sus fondos para la compra y preservar el resto de su patrimonio para otros objetivos.",
+      "reasons_title": "Los compradores evalúan esta estrategia cuando desean:",
+      "reasons": [
+        "Mudarse a una vivienda más pequeña (downsizing)",
+        "Estar más cerca de hijos o nietos",
+        "Reubicarse en otra ciudad o estado",
+        "Mudarse a un clima más cálido",
+        "Adquirir una vivienda más nueva o accesible",
+        "Reducir sus gastos fijos periódicos de vivienda",
+        "Preservar un mayor volumen de ahorros para la jubilación",
+        "Evitar pagos hipotecarios mensuales obligatorios de principal e intereses*",
+        "Incrementar su poder de compra inmobiliario frente a una compra en efectivo",
+        "Mantener activos disponibles para eventualidades futuras"
+      ],
+      "down_payment_card": {
+        "title": "¿Cuánto Dinero Necesito Aportar?",
+        "p1": "Esta es una de las preguntas más frecuentes sobre la Hipoteca Revertida para Compra.",
+        "p2": "No existe un porcentaje fijo universal aplicable a todos los solicitantes. Su inversión dependerá de múltiples factores:",
+        "factors": [
+          "Su edad",
+          "Edad del prestatario elegible más joven",
+          "Precio de compra",
+          "Valor de tasación",
+          "Tasas de interés vigentes",
+          "Programa de hipoteca revertida",
+          "Límites de préstamo aplicables",
+          "Tipo de propiedad",
+          "Otros requisitos del programa"
+        ],
+        "p3": "Por lo general, se requiere una inversión inicial significativa por parte del comprador, pero suele ser sustancialmente menor que adquirir la propiedad totalmente en efectivo."
+      }
+    },
+    "lead_box": {
+      "title": "Ejemplo Ilustrativo",
+      "p1": "Suponga que está considerando comprar una vivienda de $600,000.",
+      "p2": "En lugar de desembolsar los $600,000 completos en efectivo, puede aportar una porción del precio y financiar el monto elegible restante mediante una hipoteca revertida.",
+      "p3": "Su inversión requerida real debe calcularse específicamente para su caso.",
+      "cta_button": "Calcular mis Opciones Estimadas de Compra"
+    },
+    "modal": {
+      "title": "Solicitud de Estimación de Compra",
+      "intro": "Por favor proporcione algunos detalles para que nuestro equipo evalúe su escenario con exactitud mediante las pautas oficiales HECM de HUD.",
+      "purchase_price_label": "Precio Estimado de Compra de la Vivienda",
+      "borrower_age_label": "Edad del Prestatario más Joven",
+      "zip_code_label": "Código Postal del Inmueble",
+      "full_name_label": "Nombre Completo",
+      "email_label": "Correo Electrónico",
+      "phone_label": "Número de Teléfono",
+      "phone_optional": "(Opcional)",
+      "submit_button": "Solicitar mi Estimación",
+      "submitting_button": "Enviando...",
+      "privacy_notice": "Al enviar este formulario, usted autoriza a que nuestros especialistas se comuniquen con usted. Valoramos su privacidad y protegemos su información.",
+      "success_title": "¡Solicitud Recibida!",
+      "success_desc": "Gracias. Calcularemos su estimación de compra personalizada con el estimador oficial de HUD y le contactaremos dentro de 24 horas.",
+      "close_window": "Cerrar Ventana",
+      "toast_success": "¡Solicitud de estimación enviada con éxito!",
+      "toast_error": "Ocurrió un problema al enviar su solicitud. Por favor intente nuevamente.",
+      "warning_title": "Información no Guardada",
+      "warning_desc": "¿Está seguro de que desea salir? Se perderán los datos que ha ingresado.",
+      "warning_keep": "Continuar Editando",
+      "warning_discard": "Descartar"
+    },
+    "strategies": {
+      "all_cash": {
+        "badge": "03 — Estrategias de Pago",
+        "heading": "Compra con Hipoteca Revertida vs. Pago Total en Efectivo",
+        "intro": "Imagine que vende su casa actual y dispone de un capital considerable. Podría destinar todo ese dinero a la siguiente vivienda, o estructurar una Hipoteca Revertida para Compra.",
+        "th_feature": "Característica",
+        "th_reverse": "Hipoteca Revertida para Compra",
+        "th_cash": "Compra Total en Efectivo",
+        "rows": {
+          "own_home": {
+            "label": "Propiedad de la vivienda",
+            "reverse": "Sí",
+            "cash": "Sí"
+          },
+          "monthly_payment": {
+            "label": "Pago hipotecario mensual obligatorio de principal e intereses",
+            "reverse": "No*",
+            "cash": "No"
+          },
+          "uses_all_funds": {
+            "label": "Utiliza todos los fondos al inicio",
+            "reverse": "No",
+            "cash": "Sí"
+          },
+          "keeps_assets": {
+            "label": "Conserva activos líquidos disponibles",
+            "reverse": "Potencialmente",
+            "cash": "Menor efectivo tras la compra"
+          },
+          "mortgage_balance": {
+            "label": "Saldo de hipoteca revertida",
+            "reverse": "Sí",
+            "cash": "Sin hipoteca"
+          },
+          "interest_accrues": {
+            "label": "Acumulación de intereses",
+            "reverse": "Sí",
+            "cash": "No"
+          },
+          "taxes_insurance": {
+            "label": "Pago obligatorio de impuestos y seguros",
+            "reverse": "Sí",
+            "cash": "Sí"
+          }
+        },
+        "footer": "Una compra con hipoteca revertida puede permitirle conservar más activos líquidos, pero los intereses y cargos aplicables se acumulan al saldo del préstamo con el tiempo. Ninguna alternativa es superior por definición: la elección adecuada depende de sus finanzas, metas, planes patrimoniales y el tiempo proyectado de estancia en la vivienda."
+      },
+      "traditional_mortgage": {
+        "badge": "04 — Tipos de Hipoteca",
+        "heading": "Compra con Hipoteca Revertida vs. Hipoteca Tradicional",
+        "th_feature": "Característica",
+        "th_reverse": "Hipoteca Revertida para Compra",
+        "th_traditional": "Hipoteca Tradicional",
+        "rows": {
+          "monthly_payment": {
+            "label": "Pago mensual de principal e intereses",
+            "reverse": "No requerido*",
+            "traditional": "Requerido"
+          },
+          "buyer_contributes": {
+            "label": "Aporte de fondos al cierre",
+            "reverse": "Sí: inversión sustancial",
+            "traditional": "Típicamente pago inicial (enganche)"
+          },
+          "age_req": {
+            "label": "Requisito de edad mínima",
+            "reverse": "Sí",
+            "traditional": "Generalmente no"
+          },
+          "ownership": {
+            "label": "Titularidad de la propiedad",
+            "reverse": "Usted conserva el título",
+            "traditional": "Usted conserva el título"
+          },
+          "interest": {
+            "label": "Intereses",
+            "reverse": "Se acumulan al saldo del préstamo",
+            "traditional": "Se abonan mensualmente"
+          },
+          "balance": {
+            "label": "Saldo del préstamo",
+            "reverse": "Generalmente aumenta con el tiempo",
+            "traditional": "Disminuye con los pagos periódicos"
+          },
+          "primary_residence": {
+            "label": "Requisito de residencia principal",
+            "reverse": "Sí",
+            "traditional": "Según el programa"
+          },
+          "taxes_insurance": {
+            "label": "Impuestos y seguros de la propiedad",
+            "reverse": "Responsabilidad del prestatario",
+            "traditional": "Responsabilidad del prestatario"
+          },
+          "repayment": {
+            "label": "Amortización / Liquidación",
+            "reverse": "Al ocurrir un evento de vencimiento",
+            "traditional": "Según calendario mensual del crédito"
+          }
+        }
+      }
+    },
+    "buying_power": {
+      "heading": "¿Podría una Hipoteca Revertida Aumentar su Capacidad de Compra?",
+      "highlight": "Potencialmente.",
+      "p1": "Suponga que tiene previsto destinar $400,000 en efectivo a su próxima vivienda. En vez de comprar una propiedad de $400,000 al contado, una Hipoteca Revertida para Compra le permite combinar sus fondos disponibles con financiamiento revertido para considerar un inmueble de mayor valor.",
+      "options_intro": "Esto le otorga mayores alternativas al buscar:",
+      "options": [
+        "Una mejor ubicación",
+        "Una propiedad de obra más reciente",
+        "Una vivienda de una sola planta",
+        "Una casa con adecuaciones de accesibilidad",
+        "Un inmueble más cercano a sus familiares",
+        "Una vivienda en una comunidad de retiro",
+        "Una propiedad con menor costo de mantenimiento"
+      ],
+      "note_p1": "Esto no significa que deba adquirir automáticamente una vivienda más costosa.",
+      "note_p2": "Significa que una hipoteca revertida le ofrece otra vía para estructurar la compra."
+    },
+    "who_qualifies": {
+      "heading": "¿Quién Puede Calificar?",
+      "p1": "Para un HECM para Compra asegurado por la FHA, el prestatario de menor edad debe tener al menos 62 años. Los solicitantes deben satisfacer las directrices de la FHA y del prestamista.",
+      "requirements_intro": "Estos requisitos generalmente incluyen:",
+      "requirements": [
+        "Comprar una propiedad elegible",
+        "Habitar la vivienda como su residencia principal",
+        "Aportar la inversión monetaria requerida de fuentes elegibles",
+        "Cumplir con la evaluación financiera aplicable",
+        "Completar la asesoría de hipoteca revertida aprobada por HUD",
+        "Pagar impuestos sobre la propiedad y seguro de vivienda",
+        "Mantener el inmueble en buen estado",
+        "Satisfacer las pautas de la FHA y del prestamista"
+      ],
+      "footnote": "Otros programas propietarios de hipoteca revertida para compra pueden manejar requisitos diferentes."
+    },
+    "property_types": {
+      "heading": "¿Qué Tipos de Vivienda Puede Comprar?",
+      "intro": "Los tipos de propiedad admitidos dependen del programa de hipoteca revertida. Según las directrices aplicables, pueden incluir:",
+      "types": [
+        "Viviendas unifamiliares",
+        "Condominios aprobados por la FHA",
+        "Condominios que cumplan con los criterios aplicables",
+        "Propiedades de 2 a 4 unidades cuando se satisface el requisito de ocupación",
+        "Casas manufacturadas que cumplan con los estándares del programa"
+      ],
+      "footnote_part1": "La propiedad debe satisfacer los criterios específicos del programa de hipoteca revertida utilizado. ",
+      "footnote_link": "MyLoanDesk",
+      "footnote_part2": " puede revisar un inmueble antes de que presente una oferta formal para verificar si cumple con los requerimientos."
+    },
+    "funds_and_ownership": {
+      "funds": {
+        "heading": "¿De Dónde Pueden Provenir los Fondos del Comprador?",
+        "p1": "Su inversión requerida debe proceder de fuentes admisibles bajo el programa de hipoteca revertida aplicable.",
+        "p2": "Según las pautas, los fondos elegibles pueden incluir:",
+        "sources": [
+          "Ingresos por la venta de su vivienda actual",
+          "Cuentas corrientes o de ahorros",
+          "Fondos de inversión o activos de jubilación",
+          "Otros fondos verificables aceptables"
+        ],
+        "p3": "Pueden aplicarse restricciones a fondos prestados u otras fuentes.",
+        "p4": "Su especialista hipotecario verificará el origen de los fondos antes de formalizar la compraventa."
+      },
+      "ownership": {
+        "heading": "¿Continúa Siendo el Dueño de la Vivienda?",
+        "answer": "Sí.",
+        "p1": "Utilizar una hipoteca revertida no significa ceder la propiedad de su casa al prestamista.",
+        "p2": "Usted adquiere el inmueble y conserva la titularidad del título de propiedad, exactamente igual que con otra hipoteca. La hipoteca revertida actúa como un gravamen sobre la propiedad.",
+        "note": "Usted sigue siendo responsable de cumplir con las obligaciones del préstamo, tales como pagar impuestos sobre la propiedad, seguro de vivienda, cuotas de HOA y el mantenimiento del inmueble."
+      }
+    },
+    "faq": {
+      "badge": "05 — Claridad",
+      "heading": "Preguntas Frecuentes sobre Hipotecas Revertidas para Compra",
+      "items": [
+        {
+          "q": "¿Realmente puedo comprar una casa con una hipoteca revertida?",
+          "a": "Sí. Los compradores calificados de mayor edad pueden utilizar una hipoteca revertida para financiar parte de la compra de una residencia principal elegible. El programa asegurado por la FHA se conoce formalmente como HECM para Compra."
+        },
+        {
+          "q": "¿Debo hacer pagos hipotecarios mensuales?",
+          "a": "No se exigen pagos mensuales obligatorios de principal e intereses sobre la hipoteca revertida* mientras se cumplan las condiciones del crédito. Usted continúa siendo responsable de pagar impuestos a la propiedad, seguro de vivienda, cuotas de HOA y el mantenimiento del inmueble."
+        },
+        {
+          "q": "¿Qué edad debo tener?",
+          "a": "Para un HECM para Compra asegurado por la FHA, el prestatario de menor edad debe tener al menos 62 años. Determinados programas propietarios de hipoteca revertida pueden manejar requisitos de edad distintos."
+        },
+        {
+          "q": "¿Cuánto dinero debo aportar de enganche?",
+          "a": "No existe un porcentaje universal. La inversión necesaria depende de su edad, el precio de compra, la tasación, las tasas vigentes y el programa de préstamo. MyLoanDesk puede calcular una estimación exacta para su caso."
+        },
+        {
+          "q": "¿Puedo usar el dinero de la venta de mi casa actual?",
+          "a": "Sí, los fondos provenientes de la venta de su vivienda previa son una fuente elegible habitual para su inversión requerida, sujeto a la documentación correspondiente."
+        },
+        {
+          "q": "¿Puedo comprar una segunda vivienda o casa vacacional?",
+          "a": "Un HECM para Compra está diseñado exclusivamente para su residencia principal. No financia segundas residencias ni inmuebles de inversión tradicionales. Si se traslada a un destino vacacional o de jubilación, la nueva vivienda califica si se convierte en su residencia principal y cumple con todos los requisitos."
+        },
+        {
+          "q": "¿Sigo siendo el dueño de la casa?",
+          "a": "Sí. Usted conserva el título y la propiedad exclusiva de su casa. El prestamista no se convierte en propietario de su inmueble."
+        },
+        {
+          "q": "¿Puedo vender la casa en el futuro?",
+          "a": "Sí. Puede vender la propiedad en cualquier momento. El saldo de la hipoteca revertida se liquida con el producto de la venta y la plusvalía restante le pertenece a usted."
+        },
+        {
+          "q": "¿Qué ocurre con la vivienda al fallecer?",
+          "a": "Sus herederos disponen de alternativas claras: pueden liquidar el préstamo para conservar la propiedad o vender el inmueble y saldar la hipoteca revertida con los fondos obtenidos."
+        },
+        {
+          "q": "¿Puedo liquidar la hipoteca revertida por anticipado?",
+          "a": "Por lo general sí. Las hipotecas revertidas no exigen mantener el préstamo durante un número obligatorio de años y no suelen contemplar penalizaciones por pago anticipado."
+        },
+        {
+          "q": "¿El saldo del préstamo aumenta con el tiempo?",
+          "a": "Por lo general sí. Al no requerirse pagos mensuales de principal e intereses, estos se acumulan al saldo de la deuda. Conforme el saldo se incrementa, el capital remanente en la propiedad puede disminuir."
+        }
+      ]
+    },
+    "retirement_cta": {
+      "heading": "¿Está Considerando Mudarse en su Jubilación?",
+      "p1": "Su próxima casa no tiene por qué ser una compra exclusiva en efectivo, ni tampoco exige asumir otra hipoteca tradicional con pagos mensuales fijos.",
+      "p2_bold": "Una Hipoteca Revertida para Compra le brinda una tercera vía.",
+      "p3": "Puede combinar una fracción de sus activos disponibles con financiamiento revertido para adquirir la vivienda que desea mientras preserva sus fondos de reserva.",
+      "moving_title": "Eso podría significar mudarse:",
+      "moving_reasons": [
+        "Más cerca de su familia.",
+        "A una vivienda más pequeña y manejable.",
+        "A una casa con mejor accesibilidad.",
+        "A otro estado.",
+        "A un hogar mejor adaptado para su jubilación."
+      ],
+      "moving_footer": "Lo primordial es verificar si los números se ajustan a su plan de vida.",
+      "find_out_heading": "Conozca Qué Valor de Vivienda Podría Comprar",
+      "find_out_p1": "Si evalúa comprar su próxima vivienda, MyLoanDesk puede elaborar un análisis personalizado de Hipoteca Revertida para Compra.",
+      "determine_title": "Le ayudaremos a determinar:",
+      "determine_items": [
+        "Cuánto monto califica para financiar.",
+        "Aproximadamente cuánto capital necesitará aportar al cierre.",
+        "Qué rango de precio de compra se ajusta a sus fondos disponibles.",
+        "Si HECM u otro programa revertido disponible es el más indicado.",
+        "Cómo se compara la compra con hipoteca revertida frente a pagar al contado o usar financiamiento tradicional."
+      ],
+      "cta_options": "Ver mis Opciones de Compra",
+      "cta_specialist": "Hablar con un Especialista en Hipotecas Revertidas",
+      "no_obligation": "Sin compromiso. Conozca las cifras antes de decidir."
+    },
+    "disclosures": {
+      "title": "Avisos Legales Importantes",
+      "p1": "*No se exigen pagos hipotecarios mensuales de principal e intereses en una hipoteca revertida mientras se cumplan las condiciones del crédito. Una hipoteca revertida no es un préstamo gratuito.",
+      "p2": "Los prestatarios siguen siendo responsables del pago de impuestos a la propiedad, seguro de vivienda, cuotas de HOA aplicables, el mantenimiento del inmueble y el cumplimiento de todas las normas del contrato. El incumplimiento de estas obligaciones puede hacer exigible el préstamo.",
+      "p3": "Los intereses y cargos aplicables se acumulan al saldo de la hipoteca revertida a lo largo del tiempo, aumentando el saldo adeudado y reduciendo la plusvalía restante.",
+      "p4": "Los solicitantes de HECM deben satisfacer los criterios de la FHA y completar una sesión de asesoría certificada por HUD.",
+      "p5": "Un HECM para Compra debe destinarse a una propiedad elegible que funcione como la residencia principal del prestatario. Aplican requisitos de propiedad y ocupación.",
+      "p6": "Los programas de hipoteca revertida, tasas de interés, inversión requerida, montos disponibles, costos y requisitos de elegibilidad están sujetos a cambios. No todos los prestatarios o inmuebles calificarán.",
+      "p7": "MyLoanDesk no brinda asesoría legal, impositiva, de inversiones ni de planificación financiera. Los consumidores deben consultar con los profesionales pertinentes respecto a su situación individual."
+    },
+    "schema": {
+      "webpage_name": "Hipoteca Revertida para Compra | Adquiera su Próxima Casa",
+      "webpage_description": "Guía completa sobre cómo utilizar una hipoteca revertida HECM para Compra para adquirir una nueva residencia principal sin pagos hipotecarios mensuales obligatorios.",
+      "product_name": "Hipoteca Revertida para Compra (HECM for Purchase)",
+      "product_description": "Un programa hipotecario revertido asegurado federalmente que permite a compradores de 62+ años adquirir una residencia principal combinando fondos propios con el crédito sin pagos mensuales de principal e intereses.",
+      "faq_q1_question": "¿Realmente puedo comprar una casa con una hipoteca revertida?",
+      "faq_q1_answer": "Sí. Los compradores calificados de mayor edad pueden utilizar una hipoteca revertida para financiar parte de la compra de una residencia principal elegible. El programa asegurado por la FHA se conoce formalmente como HECM para Compra.",
+      "faq_q2_question": "¿Debo hacer pagos hipotecarios mensuales?",
+      "faq_q2_answer": "No se exigen pagos mensuales obligatorios de principal e intereses sobre la hipoteca revertida* mientras se cumplan las condiciones del crédito. Usted continúa siendo responsable de pagar impuestos a la propiedad, seguro de vivienda, cuotas de HOA y el mantenimiento del inmueble.",
+      "faq_q3_question": "¿Qué edad debo tener?",
+      "faq_q3_answer": "Para un HECM para Compra asegurado por la FHA, el prestatario de menor edad debe tener al menos 62 años. Determinados programas propietarios de hipoteca revertida pueden manejar requisitos de edad distintos.",
+      "faq_q4_question": "¿Cuánto dinero debo aportar de enganche?",
+      "faq_q4_answer": "No existe un porcentaje universal. La inversión necesaria depende de su edad, el precio de compra, la tasación, las tasas vigentes y el programa de préstamo. MyLoanDesk puede calcular una estimación exacta para su caso.",
+      "faq_q5_question": "¿Puedo usar el dinero de la venta de mi casa actual?",
+      "faq_q5_answer": "Sí, los fondos provenientes de la venta de su vivienda previa son una fuente elegible habitual para su inversión requerida, sujeto a la documentación correspondiente.",
+      "faq_q6_question": "¿Puedo comprar una segunda vivienda o casa vacacional?",
+      "faq_q6_answer": "Un HECM para Compra está diseñado exclusivamente para su residencia principal. No financia segundas residencias ni inmuebles de inversión tradicionales. Si se traslada a un destino vacacional o de jubilación, la nueva vivienda califica si se convierte en su residencia principal y cumple con todos los requisitos.",
+      "faq_q7_question": "¿Sigo siendo el dueño de la casa?",
+      "faq_q7_answer": "Sí. Usted conserva el título y la propiedad exclusiva de su casa. El prestamista no se convierte en propietario de su inmueble.",
+      "faq_q8_question": "¿Puedo vender la casa en el futuro?",
+      "faq_q8_answer": "Sí. Puede vender la propiedad en cualquier momento. El saldo de la hipoteca revertida se liquida con el producto de la venta y la plusvalía restante le pertenece a usted.",
+      "faq_q9_question": "¿Qué ocurre con la vivienda al fallecer?",
+      "faq_q9_answer": "Sus herederos disponen de alternativas claras: pueden liquidar el préstamo para conservar la propiedad o vender el inmueble y saldar la hipoteca revertida con los fondos obtenidos.",
+      "faq_q10_question": "¿Puedo liquidar la hipoteca revertida por anticipado?",
+      "faq_q10_answer": "Por lo general sí. Las hipotecas revertidas no exigen mantener el préstamo durante un número obligatorio de años y no suelen contemplar penalizaciones por pago anticipado.",
+      "faq_q11_question": "¿El saldo del préstamo aumenta con el tiempo?",
+      "faq_q11_answer": "Por lo general sí. Al no requerirse pagos mensuales de principal e intereses, estos se acumulan al saldo de la deuda. Conforme el saldo se incrementa, el capital remanente en la propiedad puede disminuir."
+    }
+  },
+  "ReverseMortgageRefinance": {
+    "meta": {
+      "title": "Refinanciamiento con Hipoteca Revertida | Acceda al Capital de su Vivienda",
+      "description": "Descubra cómo un refinanciamiento con hipoteca revertida puede eliminar su pago hipotecario mensual obligatorio* y brindarle acceso al capital de su vivienda.",
+      "og_title": "Refinanciamiento con Hipoteca Revertida | Acceda al Capital de su Vivienda",
+      "og_description": "Descubra cómo un refinanciamiento con hipoteca revertida puede eliminar su pago hipotecario mensual obligatorio* y brindarle acceso al capital de su vivienda.",
+      "og_alt": "Propietario evaluando opciones de refinanciamiento con hipoteca revertida para acceder a su capital",
+      "twitter_title": "Refinanciamiento con Hipoteca Revertida | Acceda al Capital de su Vivienda",
+      "twitter_description": "Elimine su pago hipotecario mensual obligatorio* y acceda al capital de su vivienda con un refinanciamiento de hipoteca revertida."
+    },
+    "breadcrumbs": {
+      "home": "Inicio",
+      "loan_programs": "Programas de Préstamos",
+      "reverse_refinance": "Refinanciamiento con Hipoteca Revertida"
+    },
+    "back_to_programs": "Volver a Programas de Préstamos",
+    "title": "Refinanciamiento con Hipoteca Revertida",
+    "hero": {
+      "badge": "Soluciones de Refinanciamiento para 62+ Años",
+      "title_main": "Refinanciamiento con Hipoteca Revertida:",
+      "title_sub": "Convierta el Capital de su Vivienda en Flexibilidad Financiera",
+      "lead": "Reemplace su hipoteca existente por una hipoteca revertida, elimine los pagos hipotecarios mensuales obligatorios y acceda a una porción del capital disponible de su hogar.",
+      "p1": "Si tiene 62 años o más y ha acumulado una plusvalía sustancial en su vivienda, un refinanciamiento con hipoteca revertida puede ser el camino para poner ese capital a trabajar sin tener que vender su casa.",
+      "p2": "Una hipoteca revertida se utiliza para cancelar su hipoteca actual, eliminar potencialmente su pago mensual obligatorio y brindarle acceso a capital adicional disponible.",
+      "p3": "Según el programa y su elegibilidad, los fondos pueden recibirse como una suma global fija, pagos mensuales periódicos, una línea de crédito o una combinación de las opciones disponibles.",
+      "p4_bold": "Usted continúa siendo dueño de su casa y conserva el título de propiedad.",
+      "cta_qualify": "Ver Si Califico",
+      "cta_specialist": "Hablar con un Especialista en Hipotecas Revertidas"
+    },
+    "overview": {
+      "badge": "01 — Resumen",
+      "heading": "¿Cómo Funciona un Refinanciamiento con Hipoteca Revertida?",
+      "p1": "Una hipoteca tradicional le exige realizar pagos mensuales de principal e intereses a la entidad prestamista.",
+      "p2_bold": "Una hipoteca revertida funciona de manera diferente.",
+      "p3": "Al refinanciar mediante una hipoteca revertida, los fondos del nuevo crédito se destinan en primer lugar a liquidar su hipoteca vigente y otros gravámenes u obligaciones requeridas.",
+      "p4": "Si queda un remanente suficiente tras saldar dichos compromisos y cubrir los gastos de cierre aplicables, los fondos sobrantes quedarán a su disposición según el programa y la modalidad de pago que elija.",
+      "side_card": {
+        "title": "¿El Resultado?",
+        "intro": "Usted puede:",
+        "items": [
+          "Liquidar su hipoteca actual",
+          "Eliminar pagos hipotecarios mensuales obligatorios de principal e intereses*",
+          "Acceder a una porción de la plusvalía disponible de su vivienda",
+          "Permanecer en su hogar",
+          "Conservar la titularidad y propiedad de la vivienda",
+          "Generar mayor flexibilidad financiera durante su jubilación"
+        ]
+      }
+    },
+    "distribution": {
+      "badge": "02 — Distribución",
+      "heading": "¿Cómo Puede Recibir los Fondos de su Hipoteca Revertida?",
+      "subheading": "Según el programa de hipoteca revertida que seleccione y su elegibilidad, los fondos disponibles pueden estructurarse de diversas maneras.",
+      "cards": [
+        {
+          "title": "Suma Global",
+          "desc": "Reciba los fondos disponibles en un solo pago al inicio, sujeto a los límites del programa. Esto resulta idóneo si tiene una necesidad financiera concreta o un gasto mayor planificado."
+        },
+        {
+          "title": "Adelantos Mensuales",
+          "desc": "Puede programar sus fondos disponibles para recibirlos como pagos mensuales periódicos que complementen otras fuentes de ingresos durante su jubilación."
+        },
+        {
+          "title": "Línea de Crédito",
+          "desc": "Los prestatarios elegibles pueden optar por una línea de crédito de hipoteca revertida, disponiendo de fondos solo cuando los necesiten. En ciertos programas, la línea no utilizada puede crecer con el tiempo según las condiciones del contrato."
+        },
+        {
+          "title": "Combinación",
+          "desc": "Según el programa, es posible combinar opciones de pago para estructurar un plan a la medida exacta de sus requerimientos financieros."
+        }
+      ],
+      "footnote_part1": "Su ",
+      "footnote_link": "especialista en hipotecas de MyLoanDesk",
+      "footnote_part2": " puede explicarle qué opciones se encuentran disponibles para su perfil de préstamo."
+    },
+    "use_cases": {
+      "badge": "03 — Casos de Uso",
+      "heading": "¿Por Qué los Propietarios Refinancian Hacia una Hipoteca Revertida?",
+      "subheading": "No existe una sola razón que aplique a todos los propietarios. Algunos buscan eliminar la cuota hipotecaria mensual vigente, mientras que otros desean liquidez complementaria o mayor holgura financiera en su retiro.",
+      "card_title": "Entre las razones más comunes se encuentran:",
+      "reasons": [
+        "Liquidar una hipoteca existente",
+        "Eliminar pagos hipotecarios mensuales obligatorios*",
+        "Complementar el flujo de caja durante la jubilación",
+        "Constituir una reserva financiera para emergencias",
+        "Pagar deudas con tasas de interés más altas",
+        "Financiar mejoras o remodelaciones en el hogar",
+        "Afrontar gastos imprevistos",
+        "Cubrir gastos médicos o de atención a largo plazo",
+        "Abrir una línea de crédito para necesidades futuras",
+        "Financiar proyectos familiares o compras importantes",
+        "Permanecer en el hogar durante más tiempo"
+      ]
+    },
+    "current_mortgage_and_ownership": {
+      "current_mortgage": {
+        "heading": "¿Qué Sucede con mi Hipoteca Actual?",
+        "p1": "Su hipoteca existente generalmente debe liquidarse como parte del refinanciamiento con hipoteca revertida. Los fondos del nuevo crédito se aplican primero a cancelar la hipoteca previa y los gravámenes requeridos.",
+        "example_title": "Ejemplo Ilustrativo",
+        "example_p1": "Suponga que su casa tiene un valor de $700,000 y todavía adeuda $150,000 en su hipoteca actual.",
+        "example_p2": "Si califica para suficientes fondos de hipoteca revertida, una porción se destinará primero a saldar esos $150,000 adeudados.",
+        "example_p3": "Cualquier excedente disponible tras cancelar gravámenes, costos y obligaciones quedará a su disposición según las condiciones pactadas en su hipoteca revertida.",
+        "footnote": "El monto real disponible depende de su edad, valor del inmueble, saldo adeudado, tasas de interés vigentes, límites del programa y criterios de suscripción."
+      },
+      "ownership": {
+        "heading": "¿Sigo Siendo el Dueño de mi Casa?",
+        "answer": "Sí.",
+        "p1": "Uno de los mitos más comunes sobre las hipotecas revertidas es que el prestamista se apropia de la vivienda.",
+        "p2_bold": "Usted continúa siendo dueño de su casa y conserva el título de propiedad.",
+        "p3": "Al igual que con cualquier hipoteca, el prestamista mantiene un gravamen sobre la propiedad como garantía.",
+        "p4": "Usted sigue siendo responsable de cumplir con las obligaciones del préstamo: pagar impuestos a la propiedad, seguro de vivienda, cuotas de HOA y conservar el inmueble en buen estado."
+      }
+    },
+    "comparison": {
+      "badge": "04 — Comparación de Programas",
+      "heading": "Refinanciamiento con Hipoteca Revertida vs. Refinanciamiento Tradicional",
+      "th_feature": "Característica",
+      "th_reverse": "Refinanciamiento con Hipoteca Revertida",
+      "th_traditional": "Refinanciamiento Hipotecario Tradicional",
+      "rows": {
+        "monthly_payment": {
+          "label": "Pago mensual obligatorio de principal e intereses",
+          "reverse": "No*",
+          "traditional": "Sí"
+        },
+        "min_age": {
+          "label": "Edad mínima",
+          "reverse": "Generalmente 62+ para HECM",
+          "traditional": "Sin requisito de edad de hipoteca revertida"
+        },
+        "existing_mortgage": {
+          "label": "Hipoteca existente",
+          "reverse": "Se liquida con el nuevo préstamo",
+          "traditional": "Se liquida con el nuevo préstamo"
+        },
+        "access_equity": {
+          "label": "Acceso al capital de la vivienda",
+          "reverse": "Potencialmente",
+          "traditional": "Potencialmente"
+        },
+        "monthly_advances": {
+          "label": "Disponibilidad de adelantos mensuales",
+          "reverse": "Según el programa",
+          "traditional": "No"
+        },
+        "line_of_credit": {
+          "label": "Opción de línea de crédito",
+          "reverse": "Según el programa",
+          "traditional": "Generalmente no"
+        },
+        "remain_owner": {
+          "label": "Conserva la propiedad del hogar",
+          "reverse": "Sí",
+          "traditional": "Sí"
+        },
+        "loan_balance": {
+          "label": "Saldo del préstamo",
+          "reverse": "Aumenta conforme se acumulan intereses y cargos",
+          "traditional": "Disminuye con los pagos mensuales"
+        },
+        "repayment": {
+          "label": "Liquidación de la deuda",
+          "reverse": "Al ocurrir un evento de vencimiento",
+          "traditional": "Mensualmente durante el plazo acordado"
+        }
+      },
+      "footer": "Una hipoteca revertida no es automáticamente mejor que un refinanciamiento tradicional. La elección adecuada depende de sus objetivos, capital disponible, hipoteca actual, edad, finanzas y el tiempo que planee vivir en su propiedad."
+    },
+    "homesafe_second_comparison": {
+      "heading": "Refinanciamiento con Hipoteca Revertida vs. HomeSafe Second®",
+      "subtitle": "¿Ya tiene una primera hipoteca con una tasa baja que no desea perder?",
+      "sub_note": "Puede tener otra alternativa.",
+      "intro_part1": "",
+      "intro_link": "HomeSafe Second®",
+      "intro_part2": " es una hipoteca revertida en segundo gravamen diseñada para propietarios elegibles que permite disponer de liquidez sin refinanciar su primera hipoteca existente.",
+      "refinance_card_title": "Refinanciamiento con Hipoteca Revertida",
+      "refinance_card_desc": "Su primera hipoteca actual se liquida y es reemplazada en su totalidad por la hipoteca revertida.",
+      "homesafe_card_title": "HomeSafe Second®",
+      "homesafe_card_desc": "Su primera hipoteca existente permanece intacta y la hipoteca revertida se sitúa detrás de ella como un segundo gravamen.",
+      "footer": "La conveniencia de una u otra alternativa depende de la tasa y saldo de su hipoteca vigente, plusvalía disponible, edad, objetivos financieros y pautas de calificación.",
+      "compare_link": "Comparar HomeSafe Second®"
+    },
+    "proceeds_and_programs": {
+      "proceeds": {
+        "heading": "¿Cuánto Dinero Puedo Recibir de una Hipoteca Revertida?",
+        "p1": "No existe un porcentaje o monto fijo aplicable a todos los propietarios por igual.",
+        "p2": "La cantidad para la cual califica depende de factores que incluyen:",
+        "factors": [
+          "Edad del prestatario elegible más joven",
+          "Valor tasado de la vivienda",
+          "Tasas de interés vigentes",
+          "Saldo de la hipoteca existente",
+          "Programa de hipoteca revertida",
+          "Tipo de propiedad",
+          "Elegibilidad del inmueble",
+          "Límites de préstamo aplicables",
+          "Evaluación financiera",
+          "Otros requisitos del programa"
+        ],
+        "p3": "En términos generales, una mayor plusvalía y una edad más avanzada pueden incrementar los fondos disponibles, aunque los resultados varían caso a caso."
+      },
+      "programs": {
+        "heading": "¿Qué Tipos de Hipotecas Revertidas Existen?",
+        "hecm_title": "HECM Asegurado por la FHA",
+        "hecm_p1": "El Home Equity Conversion Mortgage (HECM) es el programa de hipotecas revertidas respaldado y asegurado federalmente por la FHA.",
+        "hecm_p2": "Los HECMs están disponibles para propietarios de 62+ años y se rigen bajo los estándares oficiales de la FHA.",
+        "proprietary_title": "Hipotecas Revertidas Propietarias",
+        "proprietary_p1": "Las hipotecas revertidas privadas o propietarias ofrecen alternativas adicionales, especialmente para inmuebles de alto valor patrimonial.",
+        "proprietary_p2": "Ciertos programas propietarios manejan requisitos diferentes de edad, montos máximos, tipos de propiedad y calificación.",
+        "footer": "MyLoanDesk le ayuda a comparar los programas de hipoteca revertida disponibles según su situación particular."
+      }
+    },
+    "qualifications_and_costs": {
+      "qualify": {
+        "heading": "¿Quiénes Pueden Calificar para un Refinanciamiento con Hipoteca Revertida?",
+        "p1": "La elegibilidad depende del programa específico seleccionado.",
+        "p2": "Para un HECM asegurado por la FHA, los prestatarios generalmente deben:",
+        "requirements": [
+          "Tener al menos 62 años de edad",
+          "Habitar la vivienda como su residencia principal",
+          "Contar con suficiente capital acumulado en la propiedad",
+          "Cumplir con la evaluación financiera aplicable",
+          "Mantenerse al día en las obligaciones de la propiedad",
+          "Completar la sesión de asesoría requerida de hipoteca revertida",
+          "Cumplir con los estándares de la FHA para la propiedad y el programa"
+        ],
+        "footnote": "Los requisitos de programas propietarios pueden variar."
+      },
+      "costs": {
+        "heading": "¿Cuáles son los Costos Involucrados?",
+        "p1": "Las hipotecas revertidas conllevan costos de cierre, al igual que las hipotecas tradicionales.",
+        "p2": "Según el programa, los costos pueden incluir:",
+        "items": [
+          "Comisiones de originación",
+          "Honorarios de tasación",
+          "Gastos de título y liquidación",
+          "Tarifas de crédito y verificación",
+          "Derechos de registro",
+          "Primas de seguro hipotecario para préstamos FHA HECM aplicables",
+          "Otros costos de cierre permitidos de terceros"
+        ],
+        "p3": "Algunos costos pueden financiarse dentro del saldo de la hipoteca revertida en lugar de pagarse al contado, según las condiciones del préstamo.",
+        "p4": "La Estimación del Préstamo (Loan Estimate) y los documentos de cierre detallarán con precisión todos los costos vinculados a su operación."
+      }
+    },
+    "faq": {
+      "badge": "05 — Claridad",
+      "heading": "Preguntas Frecuentes sobre el Refinanciamiento con Hipoteca Revertida",
+      "items": [
+        {
+          "q": "¿Puedo refinanciar mi hipoteca actual con una hipoteca revertida?",
+          "a": "Sí, siempre que cumpla con los requisitos de elegibilidad y los fondos de la hipoteca revertida sean suficientes para liquidar su hipoteca actual y demás obligaciones requeridas."
+        },
+        {
+          "q": "¿Una hipoteca revertida eliminará mi pago hipotecario?",
+          "a": "Una hipoteca revertida cancela su hipoteca previa y no exige pagos mensuales de principal e intereses sobre el nuevo crédito.* Usted continúa siendo responsable de pagar impuestos sobre la propiedad, seguro de vivienda, cuotas de HOA y cumplir con las condiciones del préstamo."
+        },
+        {
+          "q": "¿Debo ser dueño de mi casa libre de deudas?",
+          "a": "No. Puede tener una hipoteca previa. Sin embargo, dicha hipoteca debe liquidarse al cierre utilizando los fondos de la hipoteca revertida u otros recursos si fuera necesario."
+        },
+        {
+          "q": "¿Pierdo la propiedad de mi casa?",
+          "a": "No. Usted conserva el título y la titularidad de su vivienda. La hipoteca revertida genera un gravamen sobre la propiedad, tal como ocurre con cualquier otro préstamo hipotecario."
+        },
+        {
+          "q": "¿Puedo vender mi casa después de obtener una hipoteca revertida?",
+          "a": "Sí. Puede vender su propiedad en cualquier momento. La deuda de la hipoteca revertida se salda con los ingresos de la venta y la plusvalía restante le pertenece a usted."
+        },
+        {
+          "q": "¿Mis herederos pueden conservar la casa?",
+          "a": "Por lo general sí. Al ocurrir un evento de vencimiento, los herederos pueden liquidar la hipoteca revertida para retener el inmueble o venderlo para cancelar el saldo adeudado."
+        },
+        {
+          "q": "¿Llegaré a deber más de lo que vale mi casa?",
+          "a": "Las hipotecas revertidas suelen incluir cláusulas de protección sin recurso (non-recourse). En un HECM asegurado por la FHA, el seguro hipotecario garantiza que ni usted ni sus herederos deban pagar más del valor de mercado de la propiedad al liquidar el préstamo."
+        },
+        {
+          "q": "¿El dinero de una hipoteca revertida paga impuestos?",
+          "a": "Los fondos de una hipoteca revertida se consideran desembolsos de préstamo y no ingresos gravables devengados. No obstante, las situaciones tributarias varían y se recomienda consultar con un asesor fiscal calificado."
+        },
+        {
+          "q": "¿El saldo de la hipoteca revertida aumenta con el tiempo?",
+          "a": "Por lo general sí. Al no exigirse pagos mensuales de principal e intereses,* estos se acumulan al saldo de la deuda junto con los seguros y cargos aplicables, lo que puede reducir el capital remanente en la propiedad."
+        },
+        {
+          "q": "¿Cuándo vence y es exigible una hipoteca revertida?",
+          "a": "El préstamo vence cuando ocurre un evento estipulado en el contrato, como cuando el último prestatario calificado deja permanentemente la vivienda, vende la propiedad o incumple las obligaciones del crédito."
+        }
+      ]
+    },
+    "should_you_refinance": {
+      "heading": "¿Debería Refinanciar Hacia una Hipoteca Revertida?",
+      "intro": "Una hipoteca revertida es una herramienta financiera poderosa, pero no es la indicada para todos. Antes de decidir, considere preguntas como:",
+      "questions": [
+        "¿Cuánto tiempo planea permanecer en su vivienda?",
+        "¿Cuánto adeuda en su hipoteca actual?",
+        "¿Cuánta plusvalía ha acumulado en la propiedad?",
+        "¿Qué tan importante es eliminar su cuota mensual de hipoteca?",
+        "¿Necesita dinero en efectivo ahora o acceso a fondos a futuro?",
+        "¿Tiene más sentido conservar su primera hipoteca actual?",
+        "¿Cómo afectará el crédito al capital remanente para usted o sus herederos?"
+      ],
+      "p1": "En MyLoanDesk, nuestro objetivo es ayudarle a comparar todas sus alternativas antes de tomar una decisión.",
+      "p2": "Esto puede abarcar un refinanciamiento con hipoteca revertida tradicional, HomeSafe Second®, HELOC, préstamos sobre el capital u otras soluciones hipotecarias disponibles.",
+      "moss_box": {
+        "title": "Descubra lo que el Capital de su Casa Puede Hacer por Usted",
+        "desc": "Si tiene 62 años o más y cuenta con un capital significativo en su hogar, dispone de más alternativas de las que imagina. MyLoanDesk le ayuda a determinar:",
+        "items": [
+          "Para cuánto monto puede calificar.",
+          "Si es factible liquidar su hipoteca actual por completo.",
+          "Cuánto capital adicional disponible puede quedar a su favor.",
+          "Qué programas de hipoteca revertida se ajustan a su perfil.",
+          "Si le conviene refinanciar o conservar su hipoteca existente."
+        ],
+        "footnote": "Sin compromiso. Analice las opciones disponibles antes de decidir."
+      }
+    },
+    "disclosures": {
+      "title": "Avisos Legales Importantes",
+      "p1": "*Una hipoteca revertida no requiere pagos mensuales de principal e intereses mientras se cumplan las condiciones del préstamo. No es un crédito gratuito.",
+      "p2": "Los prestatarios continúan siendo responsables de pagar los impuestos sobre la propiedad, el seguro de vivienda, las cuotas de HOA aplicables, el mantenimiento del inmueble y el cumplimiento de todas las normas del contrato. El incumplimiento puede hacer exigible el préstamo.",
+      "p3": "Los intereses y cargos aplicables se acumulan al saldo de la hipoteca revertida con el tiempo, lo que incrementa el saldo adeudado y reduce la plusvalía restante.",
+      "p4": "Los prestatarios de HECM deben cumplir con los criterios de la FHA y completar una sesión de asesoría certificada por HUD antes del cierre.",
+      "p5": "Los programas de hipoteca revertida, tasas de interés, fondos disponibles, costos, requisitos de la propiedad y criterios de edad están sujetos a cambios. No todos los prestatarios o inmuebles calificarán.",
+      "p6": "MyLoanDesk no ofrece asesoría legal, tributaria ni de planificación financiera. Se recomienda consultar con los profesionales pertinentes sobre sus circunstancias personales."
+    },
+    "schema": {
+      "webpage_name": "Refinanciamiento con Hipoteca Revertida | Acceda al Capital de su Vivienda",
+      "webpage_description": "Guía completa para refinanciar una hipoteca existente con una hipoteca revertida para eliminar pagos mensuales y disponer del capital del hogar.",
+      "product_name": "Refinanciamiento con Hipoteca Revertida (HECM)",
+      "product_description": "Un programa de hipoteca revertida diseñado para liquidar una hipoteca existente, eliminar pagos mensuales obligatorios y brindar acceso al capital remanente de la vivienda.",
+      "faq_q1_question": "¿Puedo refinanciar mi hipoteca actual con una hipoteca revertida?",
+      "faq_q1_answer": "Sí, siempre que cumpla con los requisitos de elegibilidad y los fondos de la hipoteca revertida sean suficientes para liquidar su hipoteca actual y demás obligaciones requeridas.",
+      "faq_q2_question": "¿Una hipoteca revertida eliminará mi pago hipotecario?",
+      "faq_q2_answer": "Una hipoteca revertida cancela su hipoteca previa y no exige pagos mensuales de principal e intereses sobre el nuevo crédito.* Usted continúa siendo responsable de pagar impuestos sobre la propiedad, seguro de vivienda, cuotas de HOA y cumplir con las condiciones del préstamo.",
+      "faq_q3_question": "¿Debo ser dueño de mi casa libre de deudas?",
+      "faq_q3_answer": "No. Puede tener una hipoteca previa. Sin embargo, dicha hipoteca debe liquidarse al cierre utilizando los fondos de la hipoteca revertida u otros recursos si fuera necesario.",
+      "faq_q4_question": "¿Pierdo la propiedad de mi casa?",
+      "faq_q4_answer": "No. Usted conserva el título y la titularidad de su vivienda. La hipoteca revertida genera un gravamen sobre la propiedad, tal como ocurre con cualquier otro préstamo hipotecario.",
+      "faq_q5_question": "¿Puedo vender mi casa después de obtener una hipoteca revertida?",
+      "faq_q5_answer": "Sí. Puede vender su propiedad en cualquier momento. La deuda de la hipoteca revertida se salda con los ingresos de la venta y la plusvalía restante le pertenece a usted.",
+      "faq_q6_question": "¿Mis herederos pueden conservar la casa?",
+      "faq_q6_answer": "Por lo general sí. Al ocurrir un evento de vencimiento, los herederos pueden liquidar la hipoteca revertida para retener el inmueble o venderlo para cancelar el saldo adeudado.",
+      "faq_q7_question": "¿Llegaré a deber más de lo que vale mi casa?",
+      "faq_q7_answer": "Las hipotecas revertidas suelen incluir cláusulas de protección sin recurso (non-recourse). En un HECM asegurado por la FHA, el seguro hipotecario garantiza que ni usted ni sus herederos deban pagar más del valor de mercado de la propiedad al liquidar el préstamo.",
+      "faq_q8_question": "¿El dinero de una hipoteca revertida paga impuestos?",
+      "faq_q8_answer": "Los fondos de una hipoteca revertida se consideran desembolsos de préstamo y no ingresos gravables devengados. No obstante, las situaciones tributarias varían y se recomienda consultar con un asesor fiscal calificado.",
+      "faq_q9_question": "¿El saldo de la hipoteca revertida aumenta con el tiempo?",
+      "faq_q9_answer": "Por lo general sí. Al no exigirse pagos mensuales de principal e intereses,* estos se acumulan al saldo de la deuda junto con los seguros y cargos aplicables, lo que puede reducir el capital remanente en la propiedad.",
+      "faq_q10_question": "¿Cuándo vence y es exigible una hipoteca revertida?",
+      "faq_q10_answer": "El préstamo vence cuando ocurre un evento estipulado en el contrato, como cuando el último prestatario calificado deja permanentemente la vivienda, vende la propiedad o incumple las obligaciones del crédito."
+    }
+  },
+  "SBALoans": {
+    "meta": {
+      "title": "Préstamos Comerciales SBA — Hasta $5M para Crecimiento y Equipo | MyLoanDesk",
+      "description": "Financiamiento comercial respaldado por la SBA hasta $5M para capital de trabajo, maquinaria, adquisiciones, refinanciamiento de deuda y franquicias. Estime su cuota con nuestra calculadora gratuita.",
+      "og_title": "Préstamos Comerciales SBA — Hasta $5M para Crecimiento y Equipo | MyLoanDesk",
+      "og_description": "Financiamiento accesible para impulsar su negocio, respaldado por la Administración de Pequeñas Empresas de EE. UU. (SBA). Estime su pago con nuestra calculadora gratuita.",
+      "og_alt": "Préstamos Comerciales SBA - MyLoanDesk",
+      "twitter_title": "Préstamos Comerciales SBA — Hasta $5M para Crecimiento y Equipo | MyLoanDesk",
+      "twitter_description": "Financiamiento comercial accesible hasta $5M respaldado por la Administración de Pequeñas Empresas de EE. UU."
+    },
+    "breadcrumbs": {
+      "home": "Inicio",
+      "loan_programs": "Programas de Préstamos",
+      "sba_loans": "Préstamos Comerciales SBA"
+    },
+    "back_to_programs": "Volver a Programas de Préstamos",
+    "title": "Préstamos Comerciales SBA",
+    "hero": {
+      "subtitle": "Financiamiento accesible para impulsar el crecimiento de su empresa.",
+      "description": "Ya sea que inicie un nuevo negocio, amplíe operaciones, adquiera maquinaria o compre una empresa existente, los préstamos SBA ofrecen financiamiento flexible respaldado por la Administración de Pequeñas Empresas de EE. UU. La garantía gubernamental permite obtener pagos iniciales más bajos, plazos de amortización más largos y tasas más competitivas que las de un crédito comercial convencional.",
+      "bullet1": "Financiamiento de hasta $5M",
+      "bullet2": "Plazos de hasta 10 años para capital de trabajo y equipo",
+      "bullet3": "Uso flexible de los fondos",
+      "disclaimer": "Cálculo estimado únicamente. Los préstamos SBA 7(a) suelen cotizarse a la tasa WSJ Prime más un margen del prestamista, el cual varía según el monto y la entidad. No incluye la comisión de garantía única de la SBA (ver más abajo). La tasa final y los términos dependen de la suscripción."
+    },
+    "calculator": {
+      "badge": "Estimador de Pagos SBA",
+      "subheading": "Consulte su pago mensual estimado.",
+      "amount_label": "Monto del préstamo",
+      "amount_placeholder": "350,000",
+      "prime_label": "Tasa WSJ Prime",
+      "prime_placeholder": "7.5",
+      "margin_label": "Margen del prestamista",
+      "margin_placeholder": "2.75",
+      "term_label": "Propósito del préstamo / plazo",
+      "term_10": "Capital de trabajo o equipo (10 años)",
+      "term_7": "Adquisición de empresa (7 años)",
+      "term_5": "Propósito comercial general (5 años)",
+      "rate_label": "Tasa de interés est.",
+      "monthly_payment_label": "Pago mensual estimado",
+      "per_month": "/mes"
+    },
+    "what_is": {
+      "title": "¿Qué es un Préstamo SBA?",
+      "p1": "Un préstamo SBA es un crédito otorgado por un prestamista privado, como los socios de la red de MyLoanDesk, garantizado parcialmente por la Administración de Pequeñas Empresas de EE. UU. (SBA). La SBA no presta el dinero directamente: su garantía reduce el riesgo del banco, permitiendo ofrecer condiciones más accesibles que un préstamo comercial tradicional: pagos iniciales menores, plazos más amplios y crédito para empresas que no calificarían por la vía convencional.",
+      "p2": "El programa más utilizado es el préstamo SBA 7(a), que financia hasta $5 millones para múltiples propósitos comerciales. También existen opciones más ágiles como SBA Express para negocios que necesitan una decisión rápida sobre montos de hasta $500,000."
+    },
+    "ways_to_use": {
+      "title": "Usos del Financiamiento SBA",
+      "cards": [
+        {
+          "title": "Capital de Trabajo",
+          "desc": "Cubra nóminas, inventario o gastos operativos cotidianos durante etapas de expansión o fluctuaciones estacionales."
+        },
+        {
+          "title": "Financiamiento de Equipo",
+          "desc": "Compre o reemplace maquinaria, vehículos o tecnología que su empresa requiera para operar o crecer."
+        },
+        {
+          "title": "Adquisición de Empresas",
+          "desc": "Compre un negocio existente, incluyendo el fondo de comercio y el equipamiento, con menor pago inicial que en la banca convencional."
+        },
+        {
+          "title": "Refinanciamiento de Deuda",
+          "desc": "Consolide o refinancie pasivos comerciales de mayor costo en un solo crédito SBA con mejores condiciones."
+        },
+        {
+          "title": "Financiamiento de Franquicias",
+          "desc": "Financie la cuota inicial de franquicia, las adecuaciones del local y los costos de apertura de una nueva sucursal."
+        },
+        {
+          "title": "Líneas de Crédito",
+          "desc": "Estructuras rotativas como SBA CAPLines para empresas con requerimientos de liquidez a corto plazo."
+        }
+      ],
+      "cre_box": {
+        "title": "¿Comprará una propiedad comercial?",
+        "text_part1": "Los préstamos SBA 7(a) y SBA 504 también pueden financiar la adquisición de bienes raíces comerciales con pagos iniciales más bajos que una hipoteca comercial convencional. Consulte nuestra página de ",
+        "link_text": "Préstamos para Bienes Raíces Comerciales",
+        "text_part2": " para detalles específicos de compra de inmuebles."
+      }
+    },
+    "how_it_works": {
+      "title": "¿Cómo Funciona el Financiamiento SBA?",
+      "steps": [
+        {
+          "step": "1",
+          "title": "Defina su objetivo.",
+          "desc": "Capital de trabajo, equipo, adquisición u otro propósito: le vinculamos con el programa SBA idóneo."
+        },
+        {
+          "step": "2",
+          "title": "Presente su documentación.",
+          "desc": "Estados financieros de la empresa, declaraciones tributarias y el desglose del uso de fondos."
+        },
+        {
+          "step": "3",
+          "title": "Suscripción y análisis.",
+          "desc": "Se evalúan conjuntamente el flujo de caja del negocio, el historial crediticio y los criterios de la SBA."
+        },
+        {
+          "step": "4",
+          "title": "Aprobación y cierre.",
+          "desc": "Una vez formalizada la aprobación, se firman los contratos finales y se cierra el crédito."
+        },
+        {
+          "step": "5",
+          "title": "Desembolso de fondos.",
+          "desc": "Los recursos se liberan de acuerdo con el plan de inversión y uso de fondos aprobado."
+        }
+      ]
+    },
+    "highlights": {
+      "title": "Aspectos Destacados del Programa",
+      "subtitle": "Lo que incluye:",
+      "items": [
+        "Financiamiento de hasta $5M a través del programa SBA 7(a)",
+        "Opción ágil SBA Express disponible para préstamos de hasta $500,000",
+        "Plazos de hasta 10 años para capital y equipo, y hasta 25 años con bienes raíces",
+        "Uso flexible de fondos: capital de trabajo, maquinaria, adquisición, refinanciamiento y más",
+        "Pagos iniciales habitualmente más reducidos que en financiamiento convencional",
+        "Disponible para una amplia variedad de industrias y modelos de negocio"
+      ]
+    },
+    "guaranty_fee": {
+      "title": "Nota sobre la Comisión de Garantía de la SBA",
+      "p1": "La mayoría de los créditos SBA con plazo mayor a 12 meses incluye una comisión de garantía única sobre la porción garantizada por el gobierno. Esta tarifa la revisa la SBA anualmente y escala según el monto:",
+      "th_term": "Plazo del Préstamo",
+      "th_range": "Rango Típico de la Comisión de Garantía",
+      "rows": [
+        {
+          "term": "12 meses o menos",
+          "range": "Aproximadamente 0.25% de la porción garantizada"
+        },
+        {
+          "term": "Más de 12 meses, hasta $1M garantizado",
+          "range": "Aproximadamente 3.5% de la porción garantizada"
+        },
+        {
+          "term": "Más de 12 meses, más de $1M garantizado",
+          "range": "Aproximadamente 3.75% de la porción garantizada"
+        }
+      ],
+      "footnote": "Estas cifras son solo una guía general. La SBA actualiza su tabla de comisiones cada año y ciertos prestatarios (fabricantes o empresas de veteranos en programas específicos) pueden calificar para reducciones o exenciones. Confirme la comisión exacta con un oficial de préstamos antes de formalizar su solicitud."
+    },
+    "advantages": {
+      "title": "Ventajas Estratégicas:",
+      "p1": "La garantía de la SBA permite a los prestamistas otorgar crédito a empresas que no calificarían por la vía convencional: negocios en crecimiento o sin amplias garantías colaterales encuentran aquí una alternativa real.",
+      "p2": "Plazos de pago más extensos que en los préstamos comerciales convencionales resultan en cuotas mensuales más bajas, preservando flujo de caja para operar y hacer crecer la empresa en lugar de pagar deuda.",
+      "p3": "La flexibilidad de combinar adquisición, capital operativo e inmuebles en un solo crédito simplifica lo que de otro modo requeriría múltiples préstamos independientes."
+    },
+    "who_this_is_for": {
+      "title": "¿Para Quién son los Préstamos SBA?",
+      "items": [
+        "Dueños de pequeñas empresas que no califican para financiamiento comercial convencional",
+        "Compradores que adquieren una empresa en funcionamiento",
+        "Negocios que requieren capital de trabajo en etapas de crecimiento o ciclos estacionales",
+        "Franquiciatarios que abren una nueva ubicación",
+        "Empresarios que buscan consolidar o refinanciar deudas comerciales de alto costo"
+      ]
+    },
+    "eligibility": {
+      "title": "Pautas Generales de Elegibilidad",
+      "items": [
+        "Operar como una empresa con fines de lucro establecida en EE. UU.",
+        "Cumplir con los estándares de tamaño de la SBA para \"pequeña empresa\" en su sector",
+        "Demostrar capacidad de pago a través del flujo de caja del negocio",
+        "El propietario debe haber invertido un patrimonio razonable y agotado otras vías viables",
+        "Buen historial de crédito personal y comercial, generalmente puntaje de 680 o superior"
+      ]
+    },
+    "comparison": {
+      "title": "SBA 7(a) vs. SBA Express vs. Préstamo Comercial Convencional",
+      "th_7a": "SBA 7(a)",
+      "th_express": "SBA Express",
+      "th_conv": "Préstamo Comercial Convencional",
+      "rows": {
+        "max_loan": {
+          "label": "Monto máximo",
+          "sba_7a": "$5M",
+          "sba_express": "$500K",
+          "conv": "Varía según el prestamista"
+        },
+        "approval_speed": {
+          "label": "Velocidad de aprobación",
+          "sba_7a": "Suscripción estándar",
+          "sba_express": "Más rápida y simplificada",
+          "conv": "Varía según el prestamista"
+        },
+        "guaranty": {
+          "label": "Garantía gubernamental",
+          "sba_7a": "Hasta el 85%",
+          "sba_express": "Menor porcentaje que en 7(a) estándar",
+          "conv": "Ninguna"
+        },
+        "down_payment": {
+          "label": "Pago inicial típico",
+          "sba_7a": "Desde 10%",
+          "sba_express": "Desde 10%",
+          "conv": "Frecuentemente mayor"
+        },
+        "best_for": {
+          "label": "Ideal para",
+          "sba_7a": "Financiamiento de mayor monto y uso flexible",
+          "sba_express": "Montos menores que requieren decisión rápida",
+          "conv": "Empresas consolidadas sin necesidad de flexibilidad SBA"
+        }
+      }
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "items": [
+        {
+          "q": "¿Para qué puedo utilizar un préstamo SBA?",
+          "a": "Los fondos de un préstamo SBA son flexibles y pueden destinarse a capital de trabajo, adquisición de equipo, compra de empresas, refinanciamiento de pasivos, franquicias y bienes raíces comerciales."
+        },
+        {
+          "q": "¿Cuánto puedo pedir prestado con un préstamo SBA?",
+          "a": "Los préstamos SBA 7(a), el programa más habitual, alcanzan hasta $5 millones. Modalidades como SBA Express ofrecen respuesta rápida para créditos de hasta $500,000, mientras que los micropréstamos cubren montos menores para empresas jóvenes."
+        },
+        {
+          "q": "¿Qué es la comisión de garantía de la SBA?",
+          "a": "Es una tarifa única fijada por el gobierno que se abona sobre la porción garantizada de los préstamos SBA con vencimiento superior a 12 meses. Sus porcentajes escalan según el monto y son revisados anualmente por la SBA."
+        },
+        {
+          "q": "¿Necesito garantías colaterales para un préstamo SBA?",
+          "a": "Depende del monto y programa. En créditos menores las exigencias colaterales son bajas o nulas, mientras que en préstamos mayores se comprometen activos personales o comerciales disponibles, aunque la falta de garantía total no es motivo de rechazo si el flujo de caja es sólido."
+        },
+        {
+          "q": "¿Cuánto tiempo toma la aprobación de un préstamo SBA?",
+          "a": "Los plazos varían: los préstamos estándar 7(a) suelen demorar de varias semanas a pocos meses, mientras que SBA Express está diseñado para resoluciones iniciales ágiles, a menudo en pocos días."
+        },
+        {
+          "q": "¿Qué es SBA Express y en qué se diferencia del 7(a) estándar?",
+          "a": "SBA Express es una versión simplificada del programa 7(a) que ofrece tiempos de respuesta más veloces para créditos de hasta $500,000, a cambio de un porcentaje de garantía gubernamental menor."
+        },
+        {
+          "q": "¿Puedo usar un préstamo SBA para comprar un negocio existente?",
+          "a": "Sí. El programa SBA 7(a) se utiliza habitualmente para financiar la compra de empresas existentes, incluyendo maquinaria, inventario, fondo de comercio y los inmuebles asociados en un solo crédito."
+        },
+        {
+          "q": "¿Qué puntaje de crédito necesito para calificar a un préstamo SBA?",
+          "a": "Los prestamistas de la SBA buscan generalmente un puntaje personal en torno a los 680 puntos o más, junto con la evaluación del flujo de caja comercial, antigüedad de la empresa y experiencia en la industria."
+        },
+        {
+          "q": "¿Puedo utilizar un préstamo SBA para comprar bienes raíces comerciales?",
+          "a": "Sí: los préstamos SBA 7(a) y SBA 504 son muy utilizados para adquirir o refinanciar inmuebles comerciales, a menudo con pagos iniciales más bajos que una hipoteca comercial convencional."
+        }
+      ]
+    },
+    "cta": {
+      "apply_now": "Solicitar Ahora →",
+      "contact_us": "Contáctenos Ahora",
+      "note": "¿No está seguro de qué programa SBA se adapta mejor a su empresa? Comparta algunos detalles y un oficial de préstamos evaluará sus opciones el mismo día."
+    },
+    "schema": {
+      "webpage_name": "Préstamos Comerciales SBA — Hasta $5M para Crecimiento y Equipo | MyLoanDesk",
+      "webpage_description": "Guía completa y calculadora de pagos para préstamos comerciales SBA 7(a), SBA Express y financiamiento para pequeñas empresas.",
+      "product_name": "Préstamo Comercial SBA 7(a) y SBA Express",
+      "product_description": "Préstamo comercial con garantía gubernamental de hasta $5M con plazos extendidos y pagos iniciales reducidos para capital de trabajo, equipo, consolidación de deudas y compra de empresas.",
+      "faq_q1_question": "¿Para qué puedo utilizar un préstamo SBA?",
+      "faq_q1_answer": "Los fondos de un préstamo SBA son flexibles y pueden destinarse a capital de trabajo, adquisición de equipo, compra de empresas, refinanciamiento de pasivos, franquicias y bienes raíces comerciales.",
+      "faq_q2_question": "¿Cuánto puedo pedir prestado con un préstamo SBA?",
+      "faq_q2_answer": "Los préstamos SBA 7(a), el programa más habitual, alcanzan hasta $5 millones. Modalidades como SBA Express ofrecen respuesta rápida para créditos de hasta $500,000, mientras que los micropréstamos cubren montos menores para empresas jóvenes.",
+      "faq_q3_question": "¿Qué es la comisión de garantía de la SBA?",
+      "faq_q3_answer": "Es una tarifa única fijada por el gobierno que se abona sobre la porción garantizada de los préstamos SBA con vencimiento superior a 12 meses. Sus porcentajes escalan según el monto y son revisados anualmente por la SBA.",
+      "faq_q4_question": "¿Necesito garantías colaterales para un préstamo SBA?",
+      "faq_q4_answer": "Depende del monto y programa. En créditos menores las exigencias colaterales son bajas o nulas, mientras que en préstamos mayores se comprometen activos personales o comerciales disponibles, aunque la falta de garantía total no es motivo de rechazo si el flujo de caja es sólido.",
+      "faq_q5_question": "¿Cuánto tiempo toma la aprobación de un préstamo SBA?",
+      "faq_q5_answer": "Los plazos varían: los préstamos estándar 7(a) suelen demorar de varias semanas a pocos meses, mientras que SBA Express está diseñado para resoluciones iniciales ágiles, a menudo en pocos días.",
+      "faq_q6_question": "¿Qué es SBA Express y en qué se diferencia del 7(a) estándar?",
+      "faq_q6_answer": "SBA Express es una versión simplificada del programa 7(a) que ofrece tiempos de respuesta más veloces para créditos de hasta $500,000, a cambio de un porcentaje de garantía gubernamental menor.",
+      "faq_q7_question": "¿Puedo usar un préstamo SBA para comprar un negocio existente?",
+      "faq_q7_answer": "Sí. El programa SBA 7(a) se utiliza habitualmente para financiar la compra de empresas existentes, incluyendo maquinaria, inventario, fondo de comercio y los inmuebles asociados en un solo crédito.",
+      "faq_q8_question": "¿Qué puntaje de crédito necesito para calificar a un préstamo SBA?",
+      "faq_q8_answer": "Los prestamistas de la SBA buscan generalmente un puntaje personal en torno a los 680 puntos o más, junto con la evaluación del flujo de caja comercial, antigüedad de la empresa y experiencia en la industria.",
+      "faq_q9_question": "¿Puedo utilizar un préstamo SBA para comprar bienes raíces comerciales?",
+      "faq_q9_answer": "Sí: los préstamos SBA 7(a) y SBA 504 son muy utilizados para adquirir o refinanciar inmuebles comerciales, a menudo con pagos iniciales más bajos que una hipoteca comercial convencional."
+    }
+  },
+  "VALoans": {
+    "meta": {
+      "title": "Préstamos VA — Cero Enganche para Veteranos Elegibles | MyLoanDesk",
+      "description": "Préstamos VA con 0% de pago inicial, sin seguro hipotecario mensual y tasas competitivas para veteranos, militares en servicio activo y cónyuges sobrevivientes elegibles. Estime su tarifa de financiamiento VA con nuestra calculadora gratuita.",
+      "og_title": "Préstamos VA — Cero Enganche para Veteranos Elegibles | MyLoanDesk",
+      "og_description": "Cero pago inicial, sin seguro hipotecario mensual y un beneficio reutilizable de por vida. Estime su tarifa de financiamiento VA con nuestra calculadora gratuita.",
+      "og_alt": "Préstamos VA - MyLoanDesk",
+      "twitter_title": "Préstamos VA — Cero Enganche para Veteranos Elegibles | MyLoanDesk",
+      "twitter_description": "Cero pago inicial y sin seguro hipotecario mensual para veteranos y miembros del servicio militar elegibles."
+    },
+    "breadcrumbs": {
+      "home": "Inicio",
+      "loan_programs": "Programas de Préstamos",
+      "va_loans": "Préstamos VA"
+    },
+    "back_to_programs": "Volver a Programas de Préstamos",
+    "title": "Préstamos VA",
+    "hero": {
+      "subtitle": "Cero pago inicial. Cero PMI. Ganado a través de su servicio.",
+      "description": "Los préstamos VA otorgan a veteranos calificados, militares en servicio activo, miembros de la Guardia Nacional y Reserva, y cónyuges sobrevivientes uno de los beneficios de financiamiento de vivienda más sólidos de los EE. UU.: la posibilidad de financiar hasta el 100% del valor de la propiedad sin seguro hipotecario privado, respaldado por el Departamento de Asuntos de Veteranos.",
+      "bullet1": "No se requiere pago inicial (0% de enganche)",
+      "bullet2": "Sin seguro hipotecario mensual",
+      "bullet3": "Sin monto máximo de préstamo con derecho de uso completo",
+      "disclaimer": "Cálculo estimado únicamente, basado en las tasas de tarifas de financiamiento VA para 2026. Asume que la tarifa de financiamiento se financia en el préstamo y un plazo de 30 años. No incluye impuestos a la propiedad, seguros ni cuotas de HOA. Confirme su tarifa exacta y derecho mediante un Certificado de Elegibilidad (COE)."
+    },
+    "calculator": {
+      "badge": "Calculadora de Tarifa de Financiamiento VA",
+      "subheading": "Estime su tarifa de financiamiento y el monto total del préstamo.",
+      "price_label": "Precio de la vivienda",
+      "price_placeholder": "425,000",
+      "down_label": "Pago inicial",
+      "down_placeholder": "0",
+      "rate_label": "Tasa est.",
+      "rate_placeholder": "6.4",
+      "use_type_label": "Uso del préstamo VA",
+      "use_type_first": "Primer uso",
+      "use_type_subsequent": "Uso subsecuente",
+      "exempt_label": "Recibo compensación por discapacidad de la VA (exento de tarifa)",
+      "base_loan_label": "Monto base del préstamo",
+      "fee_label": "Tarifa de financiamiento VA",
+      "exempt_text": "Exento — $0",
+      "total_loan_label": "Monto total del préstamo",
+      "monthly_pi_label": "P&I mensual est.",
+      "per_month": "/mes"
+    },
+    "what_is": {
+      "title": "¿Qué es un Préstamo VA?",
+      "p1": "Un préstamo VA es una hipoteca garantizada por el Departamento de Asuntos de Veteranos de EE. UU. (VA), disponible para veteranos elegibles, militares en servicio activo, reservistas y cónyuges sobrevivientes. El VA no presta el dinero directamente: garantiza una porción del préstamo, permitiendo que prestamistas aprobados como MyLoanDesk ofrezcan condiciones incomparables en el mercado hipotecario, destacando el cero pago inicial y la ausencia de seguro hipotecario mensual.",
+      "p2": "A cambio de esta garantía, la mayoría de los préstamos VA incluye una tarifa única de financiamiento (VA Funding Fee), detallada a continuación junto con las condiciones de exención total."
+    },
+    "how_it_works": {
+      "title": "¿Cómo Funciona el Financiamiento VA?",
+      "steps": [
+        {
+          "step": "1",
+          "title": "Confirme su elegibilidad.",
+          "desc": "Le ayudamos a obtener su Certificado de Elegibilidad (COE) para validar su derecho al beneficio: no necesita tramitarlo previamente por su cuenta."
+        },
+        {
+          "step": "2",
+          "title": "Obtenga la preaprobación.",
+          "desc": "Revisamos su crédito, ingresos y compromisos financieros para definir su capacidad de compra bajo el programa VA."
+        },
+        {
+          "step": "3",
+          "title": "Busque vivienda con total seguridad.",
+          "desc": "Una carta de preaprobación VA demuestra a los vendedores su solvencia y formalidad como comprador calificado."
+        },
+        {
+          "step": "4",
+          "title": "Tasación y suscripción.",
+          "desc": "Se realiza una tasación específica bajo estándares del VA para garantizar que el inmueble cumpla con los requisitos mínimos de habitabilidad."
+        },
+        {
+          "step": "5",
+          "title": "Cierre de su vivienda.",
+          "desc": "Firme sus documentos finales y formalice la compra, habitualmente sin desembolsar dinero para el enganche."
+        }
+      ]
+    },
+    "highlights": {
+      "title": "Aspectos Destacados del Programa",
+      "subtitle": "Lo que incluye:",
+      "items": [
+        "Opciones de 0% de pago inicial para solicitantes calificados",
+        "Sin seguro hipotecario mensual privado (PMI) ni MIP, sin importar el enganche",
+        "Sin límite máximo de préstamo fijado por el VA con derecho de uso completo (full entitlement)",
+        "Tasas de interés competitivas, frecuentemente por debajo del promedio del mercado",
+        "Beneficio reutilizable para futuras adquisiciones de vivienda",
+        "Refinanciamiento ágil VA IRRRL disponible para titulares de préstamos VA actuales",
+        "Disponible para viviendas unifamiliares, condominios y propiedades de 2 a 4 unidades ocupadas por el propietario"
+      ]
+    },
+    "advantages": {
+      "title": "Ventajas Estratégicas:",
+      "p1": "Prescindir del pago inicial no solo reduce el efectivo necesario al cierre, sino que permite mantener intactos sus ahorros de reserva para gastos de mudanza, adecuaciones o fondos de emergencia.",
+      "p2": "Al no existir seguro hipotecario mensual, los prestatarios VA suelen pagar cuotas mensuales significativamente menores que con préstamos FHA o convencionales con bajo enganche, donde el seguro puede sumar cientos de dólares al mes.",
+      "p3": "La tarifa de financiamiento del VA es un costo único, y muchos veteranos con discapacidad de servicio quedan totalmente exentos, consolidando al préstamo VA como una de las vías más económicas hacia la casa propia."
+    },
+    "who_this_is_for": {
+      "title": "¿Para Quién son los Préstamos VA?",
+      "items": [
+        "Militares en servicio activo que cumplen con los requisitos mínimos de servicio",
+        "Veteranos con el tiempo de servicio activo calificado",
+        "Miembros de la Guardia Nacional y Reserva que satisfacen los requisitos de tiempo",
+        "Cónyuges sobrevivientes de veteranos fallecidos en servicio o por causas vinculadas al mismo",
+        "Compradores que desean evitar por completo el pago inicial y el seguro hipotecario mensual"
+      ]
+    },
+    "funding_fee_rates": {
+      "title": "Tarifas de Financiamiento VA (2026)",
+      "p1": "La tarifa de financiamiento del VA se calcula en función del porcentaje de pago inicial y de si se trata del primer uso o de un uso posterior de su derecho:",
+      "th_down": "Pago Inicial",
+      "th_first": "Primer Uso",
+      "th_subsequent": "Uso Subsecuente",
+      "rows": [
+        {
+          "down": "Menos del 5%",
+          "first": "2.15%",
+          "subsequent": "3.30%"
+        },
+        {
+          "down": "5% – 9.99%",
+          "first": "1.50%",
+          "subsequent": "1.50%"
+        },
+        {
+          "down": "10% o más",
+          "first": "1.25%",
+          "subsequent": "1.25%"
+        }
+      ],
+      "footnote": "Los refinanciamientos simplificados VA IRRRL contemplan una tarifa fija del 0.50% sin importar el enganche o usos previos. Los veteranos que reciben compensación por discapacidad del VA, receptores del Corazón Púrpura en activo y cónyuges sobrevivientes elegibles están completamente exentos de este cobro."
+    },
+    "comparison": {
+      "title": "Préstamos VA vs. FHA y Préstamos Convencionales",
+      "th_va": "Préstamo VA",
+      "th_fha": "Préstamo FHA",
+      "th_conv": "Préstamo Convencional",
+      "rows": {
+        "down_payment": {
+          "label": "Pago inicial mínimo",
+          "va": "0% para veteranos elegibles",
+          "fha": "3.5% (con puntaje 580+)",
+          "conv": "Desde 3%, comúnmente 5%+"
+        },
+        "mortgage_insurance": {
+          "label": "Seguro hipotecario mensual",
+          "va": "Ninguno",
+          "fha": "MIP inicial + anual por la vida del préstamo",
+          "conv": "PMI, eliminable al alcanzar ~20% de plusvalía"
+        },
+        "fee": {
+          "label": "Tarifa única",
+          "va": "Tarifa de financiamiento VA (con exenciones)",
+          "fha": "MIP Inicial (1.75%)",
+          "conv": "Ninguna, típicamente"
+        },
+        "max_loan": {
+          "label": "Monto máximo del préstamo",
+          "va": "Sin límite, con derecho completo",
+          "fha": "Fijado por límites FHA del condado",
+          "conv": "Fijado por límites de préstamos conformes"
+        },
+        "best_for": {
+          "label": "Ideal para",
+          "va": "Veteranos y miembros del servicio calificados",
+          "fha": "Compradores con menor crédito o enganche reducido",
+          "conv": "Compradores con buen crédito y 5%+ de enganche"
+        }
+      }
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "items": [
+        {
+          "q": "¿Debo hacer un pago inicial en un préstamo VA?",
+          "a": "No. Los solicitantes calificados pueden financiar hasta el 100% del valor de compra sin aportar enganche. Si bien nunca es obligatorio, aportar un pago inicial voluntario ayuda a reducir la tarifa de financiamiento del VA."
+        },
+        {
+          "q": "¿Qué es la tarifa de financiamiento del VA y a cuánto asciende?",
+          "a": "Es una tarifa única que sostiene el programa y sustituye el seguro hipotecario mensual. Para 2026, el primer uso con menos del 5% de enganche es del 2.15% del préstamo; en usos posteriores es del 3.30%. Aportar entre 5% y 9.99% reduce la tarifa al 1.50%, y aportar 10% o más la baja al 1.25%."
+        },
+        {
+          "q": "¿Estoy exento de pagar la tarifa de financiamiento del VA?",
+          "a": "Los veteranos con compensación por discapacidad del VA, militares en activo con el Corazón Púrpura y cónyuges sobrevivientes calificados que reciben Compensación por Dependencia e Indemnización (DIC) están exentos de pagar esta tarifa."
+        },
+        {
+          "q": "¿Qué es el Certificado de Elegibilidad (COE) y cómo lo obtengo?",
+          "a": "El COE es el documento oficial que certifica su derecho al préstamo ante los prestamistas. Puede solicitarse en el portal eBenefits del VA o tramitarse directamente a través de nuestro equipo durante el proceso de solicitud."
+        },
+        {
+          "q": "¿Puedo utilizar mi beneficio de préstamo VA más de una vez?",
+          "a": "Sí. El derecho al préstamo VA se puede reutilizar tras liquidar un préstamo previo o incluso de manera simultánea en compras posteriores, según el derecho remanente disponible."
+        },
+        {
+          "q": "¿Existe un monto máximo para un préstamo VA?",
+          "a": "Para veteranos con derecho de uso completo no existe un límite máximo fijado por el VA. Los prestamistas aplican sus propios criterios de suscripción para montos elevados, pero el límite por condado fue eliminado por ley."
+        },
+        {
+          "q": "¿Los préstamos VA exigen seguro hipotecario?",
+          "a": "No. Los préstamos VA no conllevan seguro hipotecario privado mensual (PMI) ni primas mensuales de seguro (MIP), ya que la tarifa única de financiamiento respalda la garantía del crédito."
+        },
+        {
+          "q": "¿Qué es un refinanciamiento VA IRRRL (Streamline)?",
+          "a": "El VA Interest Rate Reduction Refinance Loan (IRRRL) es un refinanciamiento simplificado para préstamos VA existentes que reduce tasas y pagos con requisitos mínimos de documentación, sin tasación en la mayoría de los casos y con una tarifa de solo 0.50%."
+        },
+        {
+          "q": "¿Los miembros de la Guardia Nacional y Reserva pueden usar préstamos VA?",
+          "a": "Sí. Los reservistas y miembros de la Guardia Nacional que cumplen con el tiempo de servicio requerido califican bajo las mismas tarifas y condiciones que el personal militar en activo."
+        }
+      ]
+    },
+    "cta": {
+      "apply_now": "Solicitar Ahora →",
+      "contact_us": "Contáctenos Ahora",
+      "note": "¿Tiene dudas sobre su elegibilidad o derecho al beneficio? Contáctenos: le ayudamos a tramitar su COE y revisar sus opciones el mismo día."
+    },
+    "schema": {
+      "webpage_name": "Préstamos VA — Cero Enganche para Veteranos Elegibles | MyLoanDesk",
+      "webpage_description": "Guía completa y calculadora de tarifa de financiamiento para programas de hipotecas de compra y refinanciamiento garantizadas por el VA.",
+      "product_name": "Préstamo Hipotecario VA",
+      "product_description": "Un préstamo hipotecario garantizado por el Departamento de Asuntos de Veteranos de EE. UU. que ofrece financiamiento del 100% con cero pago inicial y sin seguro hipotecario mensual para miembros del servicio, veteranos y cónyuges calificados.",
+      "faq_q1_question": "¿Debo hacer un pago inicial en un préstamo VA?",
+      "faq_q1_answer": "No. Los solicitantes calificados pueden financiar hasta el 100% del valor de compra sin aportar enganche. Si bien nunca es obligatorio, aportar un pago inicial voluntario ayuda a reducir la tarifa de financiamiento del VA.",
+      "faq_q2_question": "¿Qué es la tarifa de financiamiento del VA y a cuánto asciende?",
+      "faq_q2_answer": "Es una tarifa única que sostiene el programa y sustituye el seguro hipotecario mensual. Para 2026, el primer uso con menos del 5% de enganche es del 2.15% del préstamo; en usos posteriores es del 3.30%. Aportar entre 5% y 9.99% reduce la tarifa al 1.50%, y aportar 10% o más la baja al 1.25%.",
+      "faq_q3_question": "¿Estoy exento de pagar la tarifa de financiamiento del VA?",
+      "faq_q3_answer": "Los veteranos con compensación por discapacidad del VA, militares en activo con el Corazón Púrpura y cónyuges sobrevivientes calificados que reciben Compensación por Dependencia e Indemnización (DIC) están exentos de pagar esta tarifa.",
+      "faq_q4_question": "¿Qué es el Certificado de Elegibilidad (COE) y cómo lo obtengo?",
+      "faq_q4_answer": "El COE es el documento oficial que certifica su derecho al préstamo ante los prestamistas. Puede solicitarse en el portal eBenefits del VA o tramitarse directamente a través de nuestro equipo durante el proceso de solicitud.",
+      "faq_q5_question": "¿Puedo utilizar mi beneficio de préstamo VA más de una vez?",
+      "faq_q5_answer": "Sí. El derecho al préstamo VA se puede reutilizar tras liquidar un préstamo previo o incluso de manera simultánea en compras posteriores, según el derecho remanente disponible.",
+      "faq_q6_question": "¿Existe un monto máximo para un préstamo VA?",
+      "faq_q6_answer": "Para veteranos con derecho de uso completo no existe un límite máximo fijado por el VA. Los prestamistas aplican sus propios criterios de suscripción para montos elevados, pero el límite por condado fue eliminado por ley.",
+      "faq_q7_question": "¿Los préstamos VA exigen seguro hipotecario?",
+      "faq_q7_answer": "No. Los préstamos VA no conllevan seguro hipotecario privado mensual (PMI) ni primas mensuales de seguro (MIP), ya que la tarifa única de financiamiento respalda la garantía del crédito.",
+      "faq_q8_question": "¿Qué es un refinanciamiento VA IRRRL (Streamline)?",
+      "faq_q8_answer": "El VA Interest Rate Reduction Refinance Loan (IRRRL) es un refinanciamiento simplificado para préstamos VA existentes que reduce tasas y pagos con requisitos mínimos de documentación, sin tasación en la mayoría de los casos y con una tarifa de solo 0.50%.",
+      "faq_q9_question": "¿Los miembros de la Guardia Nacional y Reserva pueden usar préstamos VA?",
+      "faq_q9_answer": "Sí. Los reservistas y miembros de la Guardia Nacional que cumplen con el tiempo de servicio requerido califican bajo las mismas tarifas y condiciones que el personal militar en activo."
+    }
   }
 }

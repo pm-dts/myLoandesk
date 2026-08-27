@@ -13,8 +13,17 @@ import { useForm } from "@tanstack/react-form";
 import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
 import toast, { Toaster } from "react-hot-toast";
+import { useTranslations } from "next-intl";
 
-export default function PurchaseEstimateLeadForm() {
+interface PurchaseEstimateLeadFormProps {
+  locale?: string;
+}
+
+export default function PurchaseEstimateLeadForm({
+  locale = "en",
+}: PurchaseEstimateLeadFormProps) {
+  const t = useTranslations("ReverseMortgagePurchase");
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -59,6 +68,7 @@ export default function PurchaseEstimateLeadForm() {
         custom_borrower_age: value.borrowerAge,
         source: "HECM_purchase_page",
         tags: "reverse_mortgage_purchase, hecm_estimate_request",
+        locale,
       };
 
       try {
@@ -80,9 +90,10 @@ export default function PurchaseEstimateLeadForm() {
           event: "lead_submitted_hecm_purchase",
           category: "lead_generation",
           label: "HECM Purchase Estimate Request",
+          locale,
         });
 
-        toast.success("Purchase estimate request submitted successfully!", {
+        toast.success(t("modal.toast_success"), {
           style: {
             borderRadius: "12px",
             background: "#1a1a1a",
@@ -98,9 +109,7 @@ export default function PurchaseEstimateLeadForm() {
         setIsSuccess(true);
       } catch (error) {
         console.error("Error submitting form:", error);
-        toast.error(
-          "There was an issue submitting your request. Please try again.",
-        );
+        toast.error(t("modal.toast_error"));
       } finally {
         setIsSubmitting(false);
       }
@@ -112,6 +121,7 @@ export default function PurchaseEstimateLeadForm() {
       event: "hecm_calculator_opened",
       category: "engagement",
       label: "HECM Purchase Estimate Modal",
+      locale,
     });
     setIsModalOpen(true);
   };
@@ -160,25 +170,24 @@ export default function PurchaseEstimateLeadForm() {
       <Toaster position="top-right" />
       {/* Target Section */}
       <div className="bg-[#FAF9F6] border border-[#E5E0D8] p-8 md:p-12 rounded-3xl mb-12 max-w-4xl mx-auto text-center shadow-sm">
-        <h3 className="text-xl font-bold text-[#1a1a1a] mb-4">Example</h3>
+        <h3 className="text-xl font-bold text-[#1a1a1a] mb-4">
+          {t("lead_box.title")}
+        </h3>
         <p className="text-[15px] sm:text-base text-gray-700 leading-relaxed mb-4">
-          Suppose you're considering purchasing a $600,000 home.
+          {t("lead_box.p1")}
         </p>
         <p className="text-[15px] sm:text-base text-gray-700 leading-relaxed mb-6">
-          Instead of paying the entire $600,000 in cash, you may be able to
-          contribute a portion of the purchase price and finance the remaining
-          eligible amount with a reverse mortgage.
+          {t("lead_box.p2")}
         </p>
         <p className="text-[15px] sm:text-base font-bold text-[#1a1a1a] mb-8">
-          Your actual required investment must be calculated specifically for
-          you.
+          {t("lead_box.p3")}
         </p>
 
         <button
           onClick={openModal}
           className="bg-[#F97316] text-white px-8 py-3.5 rounded-full font-semibold text-sm sm:text-base hover:bg-[#EA580C] transition-colors shadow-md inline-flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-[0.98]"
         >
-          Calculate My Estimated Purchase Options <Calculator size={18} />
+          {t("lead_box.cta_button")} <Calculator size={18} />
         </button>
       </div>
 
@@ -196,7 +205,7 @@ export default function PurchaseEstimateLeadForm() {
             {/* Modal Header */}
             <div className="flex items-center justify-between px-6 py-5 border-b border-gray-100 shrink-0 bg-white">
               <h3 className="text-xl font-bold text-gray-900">
-                Purchase Estimate Request
+                {t("modal.title")}
               </h3>
               <button
                 onClick={handleCloseRequest}
@@ -215,18 +224,16 @@ export default function PurchaseEstimateLeadForm() {
                     <CheckCircle2 size={36} strokeWidth={2.2} />
                   </div>
                   <h4 className="text-2xl font-bold text-gray-900 mb-4">
-                    Request Received!
+                    {t("modal.success_title")}
                   </h4>
                   <p className="text-gray-600 leading-relaxed max-w-sm mx-auto mb-8">
-                    Thanks — we&apos;ll run your personalized purchase estimate
-                    using HUD&apos;s official calculator and follow up with you
-                    within 24 hours.
+                    {t("modal.success_desc")}
                   </p>
                   <button
                     onClick={closeModal}
                     className="w-full sm:w-auto min-w-[200px] bg-[#F97316] text-white px-8 py-3 rounded-xl font-bold text-sm hover:bg-[#EA580C] transition-colors shadow-md"
                   >
-                    Close Window
+                    {t("modal.close_window")}
                   </button>
                 </div>
               ) : (
@@ -239,8 +246,7 @@ export default function PurchaseEstimateLeadForm() {
                   className="space-y-5"
                 >
                   <p className="text-sm text-gray-600 mb-6">
-                    Please provide a few details so our team can accurately run
-                    your scenario using HUD&apos;s official HECM guidelines.
+                    {t("modal.intro")}
                   </p>
 
                   {/* Loan Details Grid */}
@@ -254,7 +260,7 @@ export default function PurchaseEstimateLeadForm() {
                               htmlFor={field.name}
                               className="block text-sm font-medium text-gray-700 mb-1"
                             >
-                              Estimated Home Purchase Price
+                              {t("modal.purchase_price_label")}
                             </label>
                             <div className="relative">
                               <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">
@@ -287,7 +293,7 @@ export default function PurchaseEstimateLeadForm() {
                               htmlFor={field.name}
                               className="block text-sm font-medium text-gray-700 mb-1"
                             >
-                              Youngest Borrower&apos;s Age
+                              {t("modal.borrower_age_label")}
                             </label>
                             <input
                               type="number"
@@ -316,7 +322,7 @@ export default function PurchaseEstimateLeadForm() {
                               htmlFor={field.name}
                               className="block text-sm font-medium text-gray-700 mb-1"
                             >
-                              Target ZIP Code
+                              {t("modal.zip_code_label")}
                             </label>
                             <input
                               type="text"
@@ -349,7 +355,7 @@ export default function PurchaseEstimateLeadForm() {
                               htmlFor={field.name}
                               className="block text-sm font-medium text-gray-700 mb-1"
                             >
-                              Full Name
+                              {t("modal.full_name_label")}
                             </label>
                             <input
                               type="text"
@@ -377,7 +383,7 @@ export default function PurchaseEstimateLeadForm() {
                               htmlFor={field.name}
                               className="block text-sm font-medium text-gray-700 mb-1"
                             >
-                              Email Address
+                              {t("modal.email_label")}
                             </label>
                             <input
                               type="email"
@@ -407,9 +413,9 @@ export default function PurchaseEstimateLeadForm() {
                               htmlFor={field.name}
                               className="block text-sm font-medium text-gray-700 mb-1"
                             >
-                              Phone Number{" "}
+                              {t("modal.phone_label")}{" "}
                               <span className="font-normal text-gray-400">
-                                (Optional)
+                                {t("modal.phone_optional")}
                               </span>
                             </label>
                             <div className="flex w-full bg-white border border-gray-300 rounded-lg focus-within:ring-2 focus-within:ring-[#F97316]/50 focus-within:border-[#F97316] transition-all overflow-hidden">
@@ -438,17 +444,15 @@ export default function PurchaseEstimateLeadForm() {
                       className="w-full bg-[#F97316] text-white py-3.5 rounded-xl font-bold text-lg hover:bg-[#EA580C] disabled:bg-orange-300 disabled:cursor-not-allowed transition-colors shadow-md flex items-center justify-center gap-2"
                     >
                       {isSubmitting ? (
-                        "Submitting..."
+                        t("modal.submitting_button")
                       ) : (
                         <>
-                          Request My Estimate <ArrowRight size={20} />
+                          {t("modal.submit_button")} <ArrowRight size={20} />
                         </>
                       )}
                     </button>
                     <p className="text-[11px] text-gray-500 text-center mt-4">
-                      By submitting this form, you consent to be contacted by
-                      our specialists. We value your privacy and keep your
-                      information secure.
+                      {t("modal.privacy_notice")}
                     </p>
                   </div>
                 </form>
@@ -464,12 +468,11 @@ export default function PurchaseEstimateLeadForm() {
                   </div>
 
                   <h4 className="text-xl font-bold text-gray-900 mb-2">
-                    Unsaved Information
+                    {t("modal.warning_title")}
                   </h4>
 
                   <p className="text-sm text-gray-600 leading-relaxed mb-6">
-                    Are you sure you want to exit? The details you entered will
-                    be lost.
+                    {t("modal.warning_desc")}
                   </p>
 
                   <div className="flex flex-col sm:flex-row gap-2.5 justify-center">
@@ -477,13 +480,13 @@ export default function PurchaseEstimateLeadForm() {
                       onClick={() => setShowCloseWarning(false)}
                       className="w-full sm:flex-1 py-2.5 px-4 text-sm font-semibold text-white bg-[#F97316] hover:bg-[#EA580C] rounded-xl transition-colors shadow-sm"
                     >
-                      Keep Editing
+                      {t("modal.warning_keep")}
                     </button>
                     <button
                       onClick={confirmClose}
                       className="w-full sm:flex-1 py-2.5 px-4 text-sm font-semibold text-gray-700 bg-white hover:bg-gray-100 border border-[#E5E0D8] rounded-xl transition-colors"
                     >
-                      Discard
+                      {t("modal.warning_discard")}
                     </button>
                   </div>
                 </div>

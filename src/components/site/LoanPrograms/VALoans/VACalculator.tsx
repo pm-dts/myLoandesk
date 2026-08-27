@@ -1,9 +1,16 @@
-// components/VaCalculator.tsx
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
-export default function VaCalculator() {
+interface VaCalculatorProps {
+  locale?: string;
+}
+
+export default function VaCalculator({ locale = "en" }: VaCalculatorProps) {
+  const t = useTranslations("VALoans.calculator");
+  const numberLocale = locale === "es" ? "es-US" : "en-US";
+
   const [price, setPrice] = useState<string>("");
   const [down, setDown] = useState<string>("0");
   const [rate, setRate] = useState<string>("6.4");
@@ -23,7 +30,11 @@ export default function VaCalculator() {
     !isNaN(numRate) &&
     numRate > 0;
 
-  const fmt = (n: number) => "$" + Math.round(n).toLocaleString("en-US");
+  const fmt = (n: number) =>
+    "$" +
+    Math.round(n).toLocaleString(numberLocale, {
+      maximumFractionDigits: 0,
+    });
 
   const monthlyPandI = (
     loanAmount: number,
@@ -61,15 +72,15 @@ export default function VaCalculator() {
   return (
     <div className="relative overflow-hidden rounded-2xl bg-[#1C1C1C] p-[30px] text-white before:pointer-events-none before:absolute before:-right-[60px] before:-top-[60px] before:h-[200px] before:w-[200px] before:rounded-full before:bg-[radial-gradient(circle,rgba(217,114,44,0.35),transparent_70%)]">
       <div className="relative z-10 font-sans text-xs font-bold uppercase tracking-[0.08em] text-[#D9B896]">
-        VA Funding Fee Calculator
+        {t("badge")}
       </div>
       <div className="relative z-10 mb-5 text-[13px] text-[#C9C4B8]">
-        Estimate your funding fee and total loan amount.
+        {t("subheading")}
       </div>
 
       <div className="relative z-10 mb-3.5">
         <label className="mb-1.5 block text-[12.5px] font-semibold text-[#C9C4B8]">
-          Home price
+          {t("price_label")}
         </label>
         <div className="relative">
           <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 font-sans text-[15px] text-[#8F8A7C]">
@@ -80,7 +91,7 @@ export default function VaCalculator() {
             inputMode="numeric"
             value={price}
             onChange={(e) => setPrice(e.target.value)}
-            placeholder="425,000"
+            placeholder={t("price_placeholder")}
             className="w-full rounded-[10px] border border-white/20 bg-white/[0.07] py-3 pl-[30px] pr-3.5 font-sans text-[15px] font-semibold text-white outline-none transition duration-150 placeholder:text-[#6E6A5F] focus:border-[#D9722C] focus:bg-white/10"
           />
         </div>
@@ -89,7 +100,7 @@ export default function VaCalculator() {
       <div className="relative z-10 grid grid-cols-2 gap-3">
         <div className="mb-3.5">
           <label className="mb-1.5 block text-[12.5px] font-semibold text-[#C9C4B8]">
-            Down payment
+            {t("down_label")}
           </label>
           <div className="relative">
             <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 font-sans text-[15px] text-[#8F8A7C]">
@@ -100,14 +111,14 @@ export default function VaCalculator() {
               inputMode="numeric"
               value={down}
               onChange={(e) => setDown(e.target.value)}
-              placeholder="0"
+              placeholder={t("down_placeholder")}
               className="w-full rounded-[10px] border border-white/20 bg-white/[0.07] py-3 pl-[26px] pr-3.5 font-sans text-[15px] font-semibold text-white outline-none transition duration-150 placeholder:text-[#6E6A5F] focus:border-[#D9722C] focus:bg-white/10"
             />
           </div>
         </div>
         <div className="mb-3.5">
           <label className="mb-1.5 block text-[12.5px] font-semibold text-[#C9C4B8]">
-            Est. rate
+            {t("rate_label")}
           </label>
           <div className="relative">
             <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 font-sans text-[15px] text-[#8F8A7C]">
@@ -119,7 +130,7 @@ export default function VaCalculator() {
               inputMode="decimal"
               value={rate}
               onChange={(e) => setRate(e.target.value)}
-              placeholder="6.4"
+              placeholder={t("rate_placeholder")}
               className="w-full rounded-[10px] border border-white/20 bg-white/[0.07] py-3 pl-[26px] pr-3.5 font-sans text-[15px] font-semibold text-white outline-none transition duration-150 placeholder:text-[#6E6A5F] focus:border-[#D9722C] focus:bg-white/10"
             />
           </div>
@@ -128,7 +139,7 @@ export default function VaCalculator() {
 
       <div className="relative z-10 mb-3.5">
         <label className="mb-1.5 block text-[12.5px] font-semibold text-[#C9C4B8]">
-          VA loan use
+          {t("use_type_label")}
         </label>
         <select
           value={useType}
@@ -136,10 +147,10 @@ export default function VaCalculator() {
           className="w-full rounded-[10px] border border-white/20 bg-white/[0.07] px-3.5 py-3 font-sans text-[15px] font-semibold text-white outline-none transition duration-150 focus:border-[#D9722C] focus:bg-white/10"
         >
           <option value="first" className="bg-[#1C1C1C] text-white">
-            First-time use
+            {t("use_type_first")}
           </option>
           <option value="subsequent" className="bg-[#1C1C1C] text-white">
-            Subsequent use
+            {t("use_type_subsequent")}
           </option>
         </select>
       </div>
@@ -156,34 +167,37 @@ export default function VaCalculator() {
           htmlFor="vaExemptCheck"
           className="m-0 cursor-pointer text-[12.5px] text-[#E3E9F5]"
         >
-          I receive VA disability compensation (funding fee exempt)
+          {t("exempt_label")}
         </label>
       </div>
 
       {isValid && (
         <div className="relative z-10 mt-1.5 border-t border-white/15 pt-4 text-[13.5px] text-[#C9C4B8]">
           <div className="flex items-baseline justify-between py-1.5">
-            <span>Base loan amount</span>
+            <span>{t("base_loan_label")}</span>
             <strong className="font-sans text-[15px] font-bold text-white">
               {fmt(baseLoan)}
             </strong>
           </div>
           <div className="flex items-baseline justify-between py-1.5">
-            <span>VA funding fee ({feePct.toFixed(2)}%)</span>
+            <span>
+              {t("fee_label")} ({feePct.toFixed(2)}%)
+            </span>
             <strong className="font-sans text-[15px] font-bold text-white">
-              {isExempt ? "Exempt — $0" : fmt(feeAmt)}
+              {isExempt ? t("exempt_text") : fmt(feeAmt)}
             </strong>
           </div>
           <div className="mt-1.5 flex items-baseline justify-between border-t border-white/15 pt-3">
-            <span>Total loan amount</span>
+            <span>{t("total_loan_label")}</span>
             <strong className="font-sans text-[19px] font-bold text-[#F5C89A]">
               {fmt(totalLoan)}
             </strong>
           </div>
           <div className="flex items-baseline justify-between py-1.5">
-            <span>Est. monthly P&amp;I</span>
+            <span>{t("monthly_pi_label")}</span>
             <strong className="font-sans text-[15px] font-bold text-white">
-              {fmt(payment)}/mo
+              {fmt(payment)}
+              {t("per_month")}
             </strong>
           </div>
         </div>
