@@ -1,8 +1,18 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
-export default function StreamlineCalculator() {
+interface StreamlineCalculatorProps {
+  locale?: string;
+}
+
+export default function StreamlineCalculator({
+  locale = "en",
+}: StreamlineCalculatorProps) {
+  const t = useTranslations("FHAStreamlineLoans.calculator");
+  const numberLocale = locale === "es" ? "es-US" : "en-US";
+
   const [balance, setBalance] = useState<string>("");
   const [currentRate, setCurrentRate] = useState<string>("");
   const [newRate, setNewRate] = useState<string>("");
@@ -19,7 +29,11 @@ export default function StreamlineCalculator() {
     !isNaN(numNewRate) &&
     numNewRate > 0;
 
-  const fmt = (n: number) => "$" + Math.round(n).toLocaleString("en-US");
+  const fmt = (n: number) =>
+    "$" +
+    Math.round(n).toLocaleString(numberLocale, {
+      maximumFractionDigits: 0,
+    });
 
   const monthlyPandI = (
     loanAmount: number,
@@ -61,23 +75,22 @@ export default function StreamlineCalculator() {
   };
 
   const getVerdictStyle = () => {
-    if (!isCalculable)
-      return { color: "#C9C4B8", text: "Enter your numbers to calculate" };
+    if (!isCalculable) return { color: "#C9C4B8", text: t("verdict_empty") };
     if (savings <= 0) {
       return {
         color: "#F0A69E",
-        text: "This rate doesn't lower your payment — may not meet FHA's net tangible benefit test",
+        text: t("verdict_no_savings"),
       };
     }
     if (pctReduction >= 5) {
       return {
         color: "#8FD69B",
-        text: "Likely meets a typical net tangible benefit threshold",
+        text: t("verdict_strong"),
       };
     }
     return {
       color: "#EFB988",
-      text: "Modest reduction — talk to a loan officer about whether this qualifies",
+      text: t("verdict_modest"),
     };
   };
 
@@ -86,15 +99,15 @@ export default function StreamlineCalculator() {
   return (
     <div className="relative overflow-hidden rounded-2xl bg-[#1C1C1C] p-[30px] text-white before:pointer-events-none before:absolute before:-right-[60px] before:-top-[60px] before:h-[200px] before:w-[200px] before:rounded-full before:bg-[radial-gradient(circle,rgba(217,114,44,0.35),transparent_70%)]">
       <div className="relative z-10 font-sans text-xs font-bold uppercase tracking-[0.08em] text-[#D9B896]">
-        Streamline Savings Calculator
+        {t("badge")}
       </div>
       <div className="relative z-10 mb-5 text-[13px] text-[#C9C4B8]">
-        See your estimated new payment and monthly savings.
+        {t("subheading")}
       </div>
 
       <div className="relative z-10 mb-3.5">
         <label className="mb-1.5 block text-[12.5px] font-semibold text-[#C9C4B8]">
-          Current loan balance
+          {t("balance_label")}
         </label>
         <div className="relative">
           <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 font-sans text-[15px] text-[#8F8A7C]">
@@ -105,7 +118,7 @@ export default function StreamlineCalculator() {
             inputMode="numeric"
             value={balance}
             onChange={(e) => setBalance(e.target.value)}
-            placeholder="310,000"
+            placeholder={t("balance_placeholder")}
             className="w-full rounded-[10px] border border-white/20 bg-white/[0.07] py-3 pl-[30px] pr-3.5 font-sans text-[15px] font-semibold text-white outline-none transition duration-150 placeholder:text-[#6E6A5F] focus:border-[#D9722C] focus:bg-white/10"
           />
         </div>
@@ -114,7 +127,7 @@ export default function StreamlineCalculator() {
       <div className="relative z-10 grid grid-cols-2 gap-3">
         <div className="mb-3.5">
           <label className="mb-1.5 block text-[12.5px] font-semibold text-[#C9C4B8]">
-            Current rate
+            {t("current_rate_label")}
           </label>
           <div className="relative">
             <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 font-sans text-[15px] text-[#8F8A7C]">
@@ -126,14 +139,14 @@ export default function StreamlineCalculator() {
               inputMode="decimal"
               value={currentRate}
               onChange={(e) => setCurrentRate(e.target.value)}
-              placeholder="7.25"
+              placeholder={t("current_rate_placeholder")}
               className="w-full rounded-[10px] border border-white/20 bg-white/[0.07] py-3 pl-[26px] pr-3.5 font-sans text-[15px] font-semibold text-white outline-none transition duration-150 placeholder:text-[#6E6A5F] focus:border-[#D9722C] focus:bg-white/10"
             />
           </div>
         </div>
         <div className="mb-3.5">
           <label className="mb-1.5 block text-[12.5px] font-semibold text-[#C9C4B8]">
-            New est. rate
+            {t("new_rate_label")}
           </label>
           <div className="relative">
             <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 font-sans text-[15px] text-[#8F8A7C]">
@@ -145,7 +158,7 @@ export default function StreamlineCalculator() {
               inputMode="decimal"
               value={newRate}
               onChange={(e) => setNewRate(e.target.value)}
-              placeholder="6.25"
+              placeholder={t("new_rate_placeholder")}
               className="w-full rounded-[10px] border border-white/20 bg-white/[0.07] py-3 pl-[26px] pr-3.5 font-sans text-[15px] font-semibold text-white outline-none transition duration-150 placeholder:text-[#6E6A5F] focus:border-[#D9722C] focus:bg-white/10"
             />
           </div>
@@ -155,15 +168,17 @@ export default function StreamlineCalculator() {
       {isCalculable && (
         <div className="relative z-10 mt-5 border-t border-white/15 pt-5 text-[13.5px] text-[#C9C4B8]">
           <div className="flex items-baseline justify-between py-1.5">
-            <span>Current est. monthly P&amp;I</span>
+            <span>{t("current_pmt_label")}</span>
             <strong className="font-sans text-[15px] font-bold text-white">
-              {fmt(currentPmt)}/mo
+              {fmt(currentPmt)}
+              {t("per_month")}
             </strong>
           </div>
           <div className="flex items-baseline justify-between py-1.5">
-            <span>New est. monthly P&amp;I</span>
+            <span>{t("new_pmt_label")}</span>
             <strong className="font-sans text-[15px] font-bold text-white">
-              {fmt(newPmt)}/mo
+              {fmt(newPmt)}
+              {t("per_month")}
             </strong>
           </div>
         </div>
@@ -174,15 +189,15 @@ export default function StreamlineCalculator() {
           {!isCalculable
             ? "—"
             : savings <= 0
-              ? `${fmt(Math.abs(savings))}/mo`
-              : `${fmt(savings)}/mo`}
+              ? `${fmt(Math.abs(savings))}${t("per_month")}`
+              : `${fmt(savings)}${t("per_month")}`}
         </div>
         <div className="mb-2.5 text-[12.5px] text-[#C9C4B8]">
           {!isCalculable
-            ? "Estimated monthly savings"
+            ? t("est_savings_label")
             : savings <= 0
-              ? "Higher monthly payment"
-              : `${pctReduction.toFixed(1)}% payment reduction`}
+              ? t("higher_payment_label")
+              : `${pctReduction.toFixed(1)}${t("reduction_label")}`}
         </div>
         <div className="mb-2 h-2 overflow-hidden rounded-full bg-white/10">
           <div

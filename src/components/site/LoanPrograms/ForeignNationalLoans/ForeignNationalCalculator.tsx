@@ -3,12 +3,20 @@
 import { useState } from "react";
 import { Calculator, DollarSign, Percent, Globe } from "lucide-react";
 import { sendGTMEvent } from "@next/third-parties/google";
+import { useTranslations } from "next-intl";
+
+interface ForeignNationalCalculatorProps {
+  pagePath: string;
+  locale?: string;
+}
 
 export default function ForeignNationalCalculator({
   pagePath,
-}: {
-  pagePath: string;
-}) {
+  locale = "en",
+}: ForeignNationalCalculatorProps) {
+  const t = useTranslations("ForeignNationalLoans.calculator");
+  const numberLocale = locale === "es" ? "es-US" : "en-US";
+
   const [propertyPrice, setPropertyPrice] = useState<string>("600000");
   const [downPaymentPercent, setDownPaymentPercent] = useState<string>("30");
   const [reserveMonths, setReserveMonths] = useState<string>("12");
@@ -59,6 +67,7 @@ export default function ForeignNationalCalculator({
         target_property_price: price,
         down_payment_percent: downPercent,
         page_path: pagePath || "/foreign-national-loans",
+        locale,
       });
     }
   };
@@ -71,14 +80,13 @@ export default function ForeignNationalCalculator({
       <div className="bg-primary-bg border border-line rounded-3xl p-6 sm:p-10 shadow-lg">
         <div className="text-center max-w-xl mx-auto mb-8">
           <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-orange uppercase tracking-wider mb-2">
-            <Calculator size={16} /> International Buyer Estimator
+            <Calculator size={16} /> {t("badge")}
           </div>
           <h3 className="text-2xl sm:text-3xl font-display font-light text-ink">
-            Estimate Your U.S. Property Financing
+            {t("heading")}
           </h3>
           <p className="text-xs sm:text-sm text-ink-2 mt-2">
-            Calculate your projected down payment requirement, loan balance, and
-            liquidity reserves in USD.
+            {t("subheading")}
           </p>
         </div>
 
@@ -87,7 +95,7 @@ export default function ForeignNationalCalculator({
             {/* Target U.S. Property Price */}
             <div>
               <label className="block text-xs font-semibold uppercase tracking-wider text-ink-2 mb-2 h-8 flex items-end">
-                Property Purchase Price ($ USD)
+                {t("price_label")}
               </label>
               <div className="relative">
                 <DollarSign
@@ -98,7 +106,7 @@ export default function ForeignNationalCalculator({
                   type="number"
                   value={propertyPrice}
                   onChange={(e) => setPropertyPrice(e.target.value)}
-                  placeholder="600000"
+                  placeholder={t("price_placeholder")}
                   className="w-full h-[50px] pl-12 pr-4 bg-cream/20 border border-line rounded-xl text-ink text-sm focus:outline-none focus:border-brand-orange transition-colors"
                   required
                 />
@@ -108,7 +116,7 @@ export default function ForeignNationalCalculator({
             {/* Estimated Down Payment % */}
             <div>
               <label className="block text-xs font-semibold uppercase tracking-wider text-ink-2 mb-2 h-8 flex items-end">
-                Down Payment (%) — Standard ~30%
+                {t("down_label")}
               </label>
               <div className="relative">
                 <Percent
@@ -120,7 +128,7 @@ export default function ForeignNationalCalculator({
                   step="1"
                   value={downPaymentPercent}
                   onChange={(e) => setDownPaymentPercent(e.target.value)}
-                  placeholder="30"
+                  placeholder={t("down_placeholder")}
                   className="w-full h-[50px] pl-4 pr-10 bg-cream/20 border border-line rounded-xl text-ink text-sm focus:outline-none focus:border-brand-orange transition-colors"
                   required
                 />
@@ -130,7 +138,7 @@ export default function ForeignNationalCalculator({
             {/* Required Reserve Months */}
             <div>
               <label className="block text-xs font-semibold uppercase tracking-wider text-ink-2 mb-2 h-8 flex items-end">
-                Asset Reserve Target
+                {t("reserves_label")}
               </label>
               <div className="relative">
                 <Globe
@@ -142,9 +150,9 @@ export default function ForeignNationalCalculator({
                   onChange={(e) => setReserveMonths(e.target.value)}
                   className="w-full h-[50px] pl-12 pr-4 bg-cream/20 border border-line rounded-xl text-ink text-sm focus:outline-none focus:border-brand-orange transition-colors appearance-none cursor-pointer"
                 >
-                  <option value="6">6 Months PITIA Reserves</option>
-                  <option value="12">12 Months PITIA Reserves</option>
-                  <option value="18">18 Months PITIA Reserves</option>
+                  <option value="6">{t("options.months_6")}</option>
+                  <option value="12">{t("options.months_12")}</option>
+                  <option value="18">{t("options.months_18")}</option>
                 </select>
               </div>
             </div>
@@ -154,7 +162,7 @@ export default function ForeignNationalCalculator({
             type="submit"
             className="w-full bg-moss-deep text-primary-bg py-3.5 rounded-full font-semibold text-sm sm:text-base hover:bg-moss-darker transition-colors flex items-center justify-center gap-2"
           >
-            <Globe size={18} /> Calculate Foreign National Loan Terms
+            <Globe size={18} /> {t("submit_button")}
           </button>
         </form>
 
@@ -163,29 +171,35 @@ export default function ForeignNationalCalculator({
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
               <div className="p-3 bg-primary-bg rounded-xl border border-line/50">
                 <div className="text-[11px] uppercase tracking-wider text-ink-2 font-semibold">
-                  Down Payment Needed
+                  {t("down_payment_needed")}
                 </div>
                 <div className="text-xl font-bold text-ink mt-1">
-                  ${calcResult.downPaymentAmount.toLocaleString()}
+                  $
+                  {calcResult.downPaymentAmount.toLocaleString(numberLocale, {
+                    maximumFractionDigits: 0,
+                  })}
                 </div>
               </div>
 
               <div className="p-3 bg-primary-bg rounded-xl border border-line/50">
                 <div className="text-[11px] uppercase tracking-wider text-brand-orange font-semibold">
-                  Estimated Loan Amount
+                  {t("estimated_loan_amount")}
                 </div>
                 <div className="text-xl font-bold text-ink mt-1">
-                  ${calcResult.loanAmount.toLocaleString()}
+                  $
+                  {calcResult.loanAmount.toLocaleString(numberLocale, {
+                    maximumFractionDigits: 0,
+                  })}
                 </div>
               </div>
 
               <div className="p-3 bg-primary-bg rounded-xl border border-line/50">
                 <div className="text-[11px] uppercase tracking-wider text-moss-deep font-semibold">
-                  Target Liquidity Reserve
+                  {t("target_reserve")}
                 </div>
                 <div className="text-xl font-bold text-moss-deep mt-1">
                   $
-                  {calcResult.recommendedReserves.toLocaleString("en-US", {
+                  {calcResult.recommendedReserves.toLocaleString(numberLocale, {
                     maximumFractionDigits: 0,
                   })}
                 </div>
@@ -193,9 +207,7 @@ export default function ForeignNationalCalculator({
             </div>
 
             <p className="text-xs text-ink-2 mt-4 text-center max-w-lg mx-auto">
-              * Foreign national programs generally require 25%–35% down payment
-              and 6–12 months of principal, interest, taxes, and insurance
-              (PITIA) liquid reserves held in foreign or U.S. accounts.
+              {t("footnote")}
             </p>
           </div>
         )}

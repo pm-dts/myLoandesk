@@ -4945,5 +4945,1296 @@
       "faq_q8_question": "Can I use an FHA loan to buy a fixer-upper?",
       "faq_q8_answer": "Yes — the FHA 203(k) rehabilitation loan lets you finance the purchase price and the cost of eligible repairs or renovations in a single loan, based on the property's value after the work is completed, rather than requiring separate financing for the purchase and the renovation."
     }
+  },
+  "FHAStreamlineLoans": {
+    "meta": {
+      "title": "Refinanciamiento FHA Streamline — Baje su Tasa con Menos Trámites | MyLoanDesk",
+      "description": "Refinancie su préstamo FHA existente con documentación reducida y, en la mayoría de los casos, sin nueva tasación. Use nuestra calculadora gratuita para ver sus ahorros mensuales potenciales antes de presentar su solicitud.",
+      "og_title": "Refinanciamiento FHA Streamline — Baje su Tasa con Menos Trámites | MyLoanDesk",
+      "og_description": "Si ya tiene un préstamo FHA, un refinanciamiento Streamline puede reducir su tasa con menos papeleo y con frecuencia sin tasación. Estime sus ahorros con nuestra calculadora gratuita.",
+      "og_alt": "Refinanciamiento FHA Streamline - MyLoanDesk",
+      "twitter_title": "Refinanciamiento FHA Streamline — Baje su Tasa con Menos Trámites | MyLoanDesk",
+      "twitter_description": "Refinancie su préstamo FHA existente con documentación reducida y sin tasación en la mayoría de los casos."
+    },
+    "breadcrumbs": {
+      "home": "Inicio",
+      "loan_programs": "Programas de Préstamos",
+      "fha_streamline": "Refinanciamiento FHA Streamline"
+    },
+    "back_to_programs": "Volver a Programas de Préstamos",
+    "title": "Refinanciamiento FHA Streamline",
+    "hero": {
+      "subtitle": "¿Ya tiene un préstamo FHA? Refinanciar puede ser más sencillo de lo que cree.",
+      "description": "Si actualmente tiene un préstamo FHA, el refinanciamiento FHA Streamline es una de las maneras más rápidas y con menos complicaciones para reducir su tasa o cambiar una hipoteca de tasa ajustable a fija. La documentación reducida y, en la mayoría de los casos, la ausencia de una nueva tasación hacen que sea un proceso genuinamente simplificado en comparación con un refinanciamiento tradicional.",
+      "bullet1": "No se requiere nueva tasación en la mayoría de los casos",
+      "bullet2": "Documentación reducida de ingresos y activos",
+      "bullet3": "Posible reembolso parcial de su prima inicial (MIP) original",
+      "disclaimer": "Cálculo estimado únicamente. Asume un plazo de 30 años en ambas tasas y no incluye seguro hipotecario ni costos de cierre. La FHA generalmente exige que un refinanciamiento Streamline proporcione un beneficio tangible neto claro, habitualmente reflejado en una reducción significativa del pago combinado. La elegibilidad y el ahorro real dependen de la suscripción completa."
+    },
+    "calculator": {
+      "badge": "Calculadora de Ahorro Streamline",
+      "subheading": "Consulte su nuevo pago estimado y su ahorro mensual.",
+      "balance_label": "Saldo actual del préstamo",
+      "balance_placeholder": "310,000",
+      "current_rate_label": "Tasa actual",
+      "current_rate_placeholder": "7.25",
+      "new_rate_label": "Nueva tasa est.",
+      "new_rate_placeholder": "6.25",
+      "current_pmt_label": "P&I mensual est. actual",
+      "new_pmt_label": "Nuevo P&I mensual est.",
+      "per_month": "/mes",
+      "est_savings_label": "Ahorro mensual estimado",
+      "higher_payment_label": "Pago mensual más alto",
+      "reduction_label": "% de reducción en el pago",
+      "verdict_empty": "Ingrese sus números para calcular",
+      "verdict_no_savings": "Esta tasa no reduce su pago; podría no cumplir con la prueba de beneficio tangible neto de la FHA",
+      "verdict_strong": "Probablemente cumple con el umbral típico de beneficio tangible neto",
+      "verdict_modest": "Reducción moderada; consulte con un asesor de préstamos si califica"
+    },
+    "what_is": {
+      "title": "¿Qué es un Refinanciamiento FHA Streamline?",
+      "p1": "Un refinanciamiento FHA Streamline es una opción simplificada disponible exclusivamente para propietarios que ya tienen un préstamo FHA. Como ya es un prestatario establecido ante la FHA, el programa está diseñado para reducir el papeleo y los pasos necesarios en comparación con un refinanciamiento estándar, destacando principalmente que casi nunca requiere una nueva tasación de la propiedad.",
+      "p2": "La condición es que los refinanciamientos FHA Streamline son únicamente de tasa y plazo: están pensados para mejorar la tasa o estructura de su hipoteca, no para retirar dinero en efectivo de la plusvalía de su vivienda. La FHA también requiere que el trámite le brinde un \"beneficio tangible neto\" real, lo que típicamente significa una reducción clara en su cuota combinada o el cambio de una tasa ajustable a una fija."
+    },
+    "how_it_works": {
+      "title": "¿Cómo Funciona un Refinanciamiento FHA Streamline?",
+      "steps": [
+        {
+          "step": "1",
+          "title": "Confirme su elegibilidad.",
+          "desc": "Su préstamo FHA actual debe tener al menos 210 días de antigüedad con un mínimo de seis pagos realizados."
+        },
+        {
+          "step": "2",
+          "title": "Revise las cifras.",
+          "desc": "Comparamos su pago actual con el nuevo pago estimado para confirmar un beneficio tangible neto."
+        },
+        {
+          "step": "3",
+          "title": "Presente documentación reducida.",
+          "desc": "Al ser ya un prestatario FHA, los requerimientos de documentación suelen ser más livianos que los de su préstamo original."
+        },
+        {
+          "step": "4",
+          "title": "Evite la tasación en la mayoría de los casos.",
+          "desc": "El nuevo monto del préstamo se basa generalmente en su saldo existente en lugar de una nueva tasación."
+        },
+        {
+          "step": "5",
+          "title": "Cierre su nuevo préstamo.",
+          "desc": "Firme sus documentos finales y comience a disfrutar de su nueva cuota mensual, con suerte más reducida."
+        }
+      ]
+    },
+    "highlights": {
+      "title": "Aspectos Destacados del Programa",
+      "subtitle": "Lo que incluye:",
+      "items": [
+        "No se requiere nueva tasación en la mayoría de los casos",
+        "Documentación reducida de ingresos y activos frente a un refinanciamiento tradicional",
+        "Disponible para convertir un préstamo FHA de tasa ajustable a tasa fija",
+        "Posible reembolso parcial del MIP inicial si refinancia en los primeros años del préstamo",
+        "Proceso de cierre a menudo más ágil y simple que el préstamo de compra FHA original"
+      ]
+    },
+    "advantages": {
+      "title": "Ventajas Estratégicas:",
+      "p1": "Omitir la tasación no es solo una comodidad: también elimina una de las mayores fuentes de demoras e incertidumbre en un refinanciamiento, al no existir riesgo de que la operación se caiga por una valoración por debajo de lo esperado.",
+      "p2": "Si contrató su préstamo FHA cuando las tasas eran significativamente más altas, un refinanciamiento Streamline es una de las vías más rápidas para aprovechar una tasa menor sin reiniciar todo el proceso hipotecario desde cero.",
+      "p3": "Refinanciar dentro de los primeros años de su préstamo original también puede permitirle un reembolso parcial de su prima inicial de seguro hipotecario (MIP), reduciendo de manera efectiva el costo de refinanciar."
+    },
+    "who_this_is_for": {
+      "title": "¿Para Quién es un Refinanciamiento FHA Streamline?",
+      "items": [
+        "Prestatarios FHA actuales cuya tasa es considerablemente más alta que las tasas vigentes hoy",
+        "Prestatarios con una hipoteca FHA de tasa ajustable que buscan la estabilidad de una tasa fija",
+        "Propietarios que desean evitar una nueva tasación y la incertidumbre que conlleva",
+        "Prestatarios que no necesitan retirar efectivo, solo optimizar su tasa o condiciones",
+        "Cualquiera que haya obtenido su préstamo FHA en los últimos años y no haya refinanciado desde entonces"
+      ]
+    },
+    "comparison": {
+      "title": "FHA Streamline vs. Opciones de Refinanciamiento Estándar",
+      "th_streamline": "FHA Streamline",
+      "th_fha_standard": "Refinanciamiento FHA Estándar",
+      "th_conv": "Refinanciamiento Convencional",
+      "rows": {
+        "existing_loan": {
+          "label": "Requiere préstamo FHA previo",
+          "streamline": "Sí",
+          "fha_standard": "No",
+          "conv": "No"
+        },
+        "appraisal": {
+          "label": "Requiere nueva tasación",
+          "streamline": "Típicamente no",
+          "fha_standard": "Sí",
+          "conv": "Sí"
+        },
+        "documentation": {
+          "label": "Documentación",
+          "streamline": "Reducida",
+          "fha_standard": "Completa",
+          "conv": "Completa"
+        },
+        "cash_out": {
+          "label": "Retiro de efectivo disponible",
+          "streamline": "No",
+          "fha_standard": "Sí",
+          "conv": "Sí"
+        },
+        "best_for": {
+          "label": "Ideal para",
+          "streamline": "Bajar la tasa de un préstamo FHA existente rápidamente",
+          "fha_standard": "Prestatarios FHA que también desean retirar efectivo",
+          "conv": "Prestatarios sin FHA o que desean eliminar el seguro hipotecario FHA"
+        }
+      }
+    },
+    "eligibility": {
+      "title": "Requisitos de Elegibilidad",
+      "items": [
+        "Debe tener actualmente una hipoteca asegurada por la FHA",
+        "El préstamo generalmente debe tener al menos 210 días de antigüedad con al menos seis pagos realizados",
+        "El historial de pagos hipotecarios debe estar al día, sin pagos atrasados recientes",
+        "El refinanciamiento debe brindar un beneficio tangible neto bajo las directrices de la FHA",
+        "No se puede utilizar para retirar dinero en efectivo de la plusvalía de su vivienda"
+      ]
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "items": [
+        {
+          "q": "¿Qué es un Refinanciamiento FHA Streamline?",
+          "a": "Un refinanciamiento FHA Streamline es una opción de refinanciamiento simplificada disponible exclusivamente para propietarios que ya tienen un préstamo FHA. Está diseñado para reducir su tasa o pago con menos papeleo y, en la mayoría de los casos, sin tasación en comparación con un refinanciamiento convencional."
+        },
+        {
+          "q": "¿Necesito una tasación para un Refinanciamiento FHA Streamline?",
+          "a": "En la mayoría de los casos, no. Los refinanciamientos FHA Streamline casi nunca requieren una nueva tasación, lo cual es una de las mayores ventajas del programa: el monto del préstamo se basa generalmente en su saldo actual y no en una nueva valoración."
+        },
+        {
+          "q": "¿Qué es el requisito de beneficio tangible neto?",
+          "a": "La FHA exige que un refinanciamiento Streamline represente un beneficio financiero claro para el prestatario: comúnmente una reducción en la cuota combinada de capital, interés y seguro hipotecario, o el cambio de una tasa ajustable a una fija. Esto protege al cliente contra refinanciamientos que no mejoren su situación."
+        },
+        {
+          "q": "¿Puedo retirar efectivo (cash-out) con un Refinanciamiento FHA Streamline?",
+          "a": "No. Los refinanciamientos FHA Streamline son estrictamente de tasa y plazo, lo que significa que están pensados para mejorar las condiciones de su crédito, no para extraer capital de la vivienda. Si desea acceder a su plusvalía, la opción indicada sería un refinanciamiento FHA con retiro de efectivo (cash-out)."
+        },
+        {
+          "q": "¿Debo volver a calificar con documentación de ingresos y crédito?",
+          "a": "Muchos refinanciamientos FHA Streamline requieren una documentación de ingresos y activos mucho menor que un refinanciamiento estándar, dado que ya es un prestatario establecido en el sistema FHA. Los requisitos pueden variar según el caso específico."
+        },
+        {
+          "q": "¿Qué es el reembolso de la prima inicial de seguro (MIP) de la FHA?",
+          "a": "Si refinancia dentro de los primeros tres años aproximados de su préstamo FHA original, puede calificar para un reembolso parcial de su prima inicial de seguro hipotecario, la cual se acredita directamente hacia el nuevo MIP de su préstamo, reduciendo el costo total."
+        },
+        {
+          "q": "¿Cuánto tiempo debo haber tenido mi préstamo FHA antes de refinanciar?",
+          "a": "La FHA suele exigir que su préstamo actual tenga al menos 210 días de antigüedad y que haya completado un mínimo de seis pagos mensuales antes de solicitar un refinanciamiento Streamline."
+        },
+        {
+          "q": "¿Puedo cambiar una tasa ajustable FHA a una tasa fija con un Streamline?",
+          "a": "Sí. Pasar de un préstamo FHA de tasa ajustable a uno de tasa fija es una de las maneras reconocidas por la FHA para cumplir con el requisito de beneficio tangible neto, aun si la reducción inmediata en la cuota es moderada."
+        }
+      ]
+    },
+    "cta": {
+      "apply_now": "Solicitar Ahora →",
+      "contact_us": "Contáctenos Ahora",
+      "note": "¿Ya tiene un préstamo FHA y le interesa saber cuánto podría ahorrar con las tasas de hoy? Contáctenos: un oficial de préstamos puede revisar sus números el mismo día."
+    },
+    "schema": {
+      "webpage_name": "Refinanciamiento FHA Streamline | MyLoanDesk",
+      "webpage_description": "Guía completa y calculadora de ahorro mensual para programas de hipotecas de refinanciamiento FHA Streamline.",
+      "product_name": "Refinanciamiento FHA Streamline",
+      "product_description": "Un programa simplificado de refinanciamiento de tasa y plazo para prestatarios FHA actuales con documentación reducida, requisitos de beneficio tangible neto y casi siempre sin requisito de tasación.",
+      "faq_q1_question": "¿Qué es un Refinanciamiento FHA Streamline?",
+      "faq_q1_answer": "Un refinanciamiento FHA Streamline es una opción simplificada disponible exclusivamente para propietarios que ya tienen un préstamo FHA. Está diseñado para reducir su tasa o pago con menos papeleo y, en la mayoría de los casos, sin tasación en comparación con un refinanciamiento convencional.",
+      "faq_q2_question": "¿Necesito una tasación para un Refinanciamiento FHA Streamline?",
+      "faq_q2_answer": "En la mayoría de los casos, no. Los refinanciamientos FHA Streamline casi nunca requieren una nueva tasación, lo cual es una de las mayores ventajas del programa: el monto del préstamo se basa generalmente en su saldo actual y no en una nueva valoración.",
+      "faq_q3_question": "¿Qué es el requisito de beneficio tangible neto?",
+      "faq_q3_answer": "La FHA exige que un refinanciamiento Streamline represente un beneficio financiero claro para el prestatario: comúnmente una reducción en la cuota combinada de capital, interés y seguro hipotecario, o el cambio de una tasa ajustable a una fija. Esto protege al cliente contra refinanciamientos que no mejoren su situación.",
+      "faq_q4_question": "¿Puedo retirar efectivo (cash-out) con un Refinanciamiento FHA Streamline?",
+      "faq_q4_answer": "No. Los refinanciamientos FHA Streamline son estrictamente de tasa y plazo, lo que significa que están pensados para mejorar las condiciones de su crédito, no para extraer capital de la vivienda. Si desea acceder a su plusvalía, la opción indicada sería un refinanciamiento FHA con retiro de efectivo (cash-out).",
+      "faq_q5_question": "¿Debo volver a calificar con documentación de ingresos y crédito?",
+      "faq_q5_answer": "Muchos refinanciamientos FHA Streamline requieren una documentación de ingresos y activos mucho menor que un refinanciamiento estándar, dado que ya es un prestatario establecido en el sistema FHA. Los requisitos pueden variar según el caso específico.",
+      "faq_q6_question": "¿Qué es el reembolso de la prima inicial de seguro (MIP) de la FHA?",
+      "faq_q6_answer": "Si refinancia dentro de los primeros tres años aproximados de su préstamo FHA original, puede calificar para un reembolso parcial de su prima inicial de seguro hipotecario, la cual se acredita directamente hacia el nuevo MIP de su préstamo, reduciendo el costo total.",
+      "faq_q7_question": "¿Cuánto tiempo debo haber tenido mi préstamo FHA antes de refinanciar?",
+      "faq_q7_answer": "La FHA suele exigir que su préstamo actual tenga al menos 210 días de antigüedad y que haya completado un mínimo de seis pagos mensuales antes de solicitar un refinanciamiento Streamline.",
+      "faq_q8_question": "¿Puedo cambiar una tasa ajustable FHA a una tasa fija con un Streamline?",
+      "faq_q8_answer": "Sí. Pasar de un préstamo FHA de tasa ajustable a uno de tasa fija es una de las maneras reconocidas por la FHA para cumplir con el requisito de beneficio tangible neto, aun si la reducción inmediata en la cuota es moderada."
+    }
+  },
+  "FixAndFlipLoans": {
+    "meta": {
+      "title": "Préstamos Fix and Flip para Inversionistas Inmobiliarios | MyLoanDesk",
+      "description": "Préstamos fix and flip con cierres rápidos, financiamiento de presupuesto de remodelación y pagos de solo interés. Use nuestra calculadora gratuita de rentabilidad según la regla del 70% antes de solicitar.",
+      "og_title": "Préstamos Fix and Flip para Inversionistas Inmobiliarios | MyLoanDesk",
+      "og_description": "Financiamiento rápido y flexible para inversionistas de compra, remodelación y reventa sin inmovilizar su propio efectivo. Calcule sus números con nuestra calculadora de operaciones fix and flip.",
+      "og_alt": "Préstamos Fix and Flip - MyLoanDesk",
+      "twitter_title": "Préstamos Fix and Flip para Inversionistas Inmobiliarios | MyLoanDesk",
+      "twitter_description": "Financiamiento rápido y flexible para inversionistas de compra, remodelación y reventa sin inmovilizar su propio efectivo."
+    },
+    "breadcrumbs": {
+      "home": "Inicio",
+      "loan_programs": "Programas de Préstamos",
+      "fix_and_flip": "Préstamos Fix and Flip"
+    },
+    "back_to_programs": "Volver a Programas de Préstamos",
+    "title": "Préstamos Fix and Flip",
+    "hero": {
+      "subtitle": "Financiamiento rápido y flexible para inversionistas de bienes raíces.",
+      "description": "Ya sea que esté renovando su primera propiedad de inversión o administrando múltiples proyectos al año, un préstamo Fix and Flip de MyLoanDesk le brinda el capital necesario para comprar, remodelar y revender rápidamente, sin inmovilizar su propio dinero durante meses. Los préstamos se evalúan en torno al inmueble y la rentabilidad del proyecto, no sobre un extenso historial de ingresos personales, permitiendo aprobaciones y cierres a la velocidad que exige un inversionista.",
+      "bullet1": "Cierre en tan solo 7 a 14 días",
+      "bullet2": "Hasta el 100% de los costos de remodelación financiados",
+      "bullet3": "Sin penalización por pago anticipado",
+      "disclaimer": "Cálculo estimado únicamente, basado en pautas habituales del sector (hasta el 90% del precio de compra, 100% de costos de remodelación, con tope aproximado del 70–75% del ARV). El monto final, tasa y condiciones dependerán de la suscripción, su experiencia y el inmueble específico."
+    },
+    "calculator": {
+      "badge": "Calculadora de Rentabilidad Fix & Flip",
+      "subheading": "Compruebe sus cifras frente a la regla del 70%.",
+      "purchase_label": "Precio de compra",
+      "purchase_placeholder": "220,000",
+      "rehab_label": "Presupuesto estimado de remodelación",
+      "rehab_placeholder": "60,000",
+      "arv_label": "Valor después de reparaciones (ARV)",
+      "arv_placeholder": "410,000",
+      "total_cost": "Costo total del proyecto",
+      "max_loan": "Monto máximo estimado del préstamo",
+      "cash_needed": "Efectivo estimado necesario al cierre",
+      "ratio_label": "Compra + remodelación como % del ARV",
+      "verdict_empty": "Ingrese las tres cifras para calcular su proyecto",
+      "verdict_low": "Dentro de la regla del 70%: margen saludable para un proyecto de reventa habitual",
+      "verdict_mid": "Ligeramente por encima del 70%: aún viable, pero con margen más ajustado",
+      "verdict_high": "Por encima del 80% del ARV: consulte con un asesor de préstamos antes de avanzar"
+    },
+    "what_is": {
+      "title": "¿Qué es un Préstamo Fix and Flip?",
+      "p1": "Un préstamo fix and flip es un financiamiento a corto plazo basado en activos diseñado para inversionistas inmobiliarios que adquieren propiedades subvaloradas o deterioradas, las remodelan y las revenden para obtener una ganancia, generalmente en un plazo de seis a dieciocho meses. A diferencia de una hipoteca convencional que se suscribe en función de sus ingresos personales, declaraciones fiscales y capacidad de pago a 15 o 30 años, un préstamo fix and flip se evalúa primordialmente según el proyecto en sí: precio de compra, presupuesto de obra y el Valor Después de Reparaciones (ARV) proyectado.",
+      "p2": "Esta estructura convierte al financiamiento fix and flip —también llamado financiamiento hard money o préstamos de rehabilitación— en una herramienta fundamentalmente distinta a una hipoteca tradicional. Está concebido para brindar velocidad y flexibilidad, no para retener un inmueble por décadas."
+    },
+    "how_it_works": {
+      "title": "¿Cómo Funciona el Financiamiento Fix and Flip?",
+      "steps": [
+        {
+          "step": "1",
+          "title": "Presente su propuesta de negocio.",
+          "text": "Comparta el precio de compra, alcance y presupuesto de remodelación, así como el valor proyectado tras la reparación (ARV)."
+        },
+        {
+          "step": "2",
+          "title": "Aprobación rápida.",
+          "text": "La suscripción se enfoca en el inmueble y los números del proyecto, logrando aprobaciones en días y no semanas."
+        },
+        {
+          "step": "3",
+          "title": "Cierre y desembolso.",
+          "text": "Los fondos para la compra se desembolsan al cierre; los fondos de remodelación suelen reservarse en custodia."
+        },
+        {
+          "step": "4",
+          "title": "Disposición conforme avanza la obra.",
+          "text": "Los fondos de remodelación se liberan en ministraciones tras inspeccionar cada etapa completada, manteniendo libre su propio efectivo."
+        },
+        {
+          "step": "5",
+          "title": "Venta y liquidación.",
+          "text": "Al vender la propiedad, el préstamo se liquida en su totalidad, sin penalizaciones por pago anticipado."
+        }
+      ]
+    },
+    "highlights": {
+      "title": "Aspectos Destacados del Programa",
+      "subtitle": "Lo que incluye:",
+      "items": [
+        "Financiamiento a corto plazo, típicamente de 6 a 18 meses",
+        "Presupuesto de remodelación financiado junto con el precio de compra",
+        "Pagos de solo interés durante la vigencia del préstamo",
+        "Cierres rápidos, frecuentemente entre 7 y 14 días",
+        "Sin penalizaciones por pago anticipado al vender o refinanciar antes de tiempo",
+        "Financiamiento disponible para viviendas unifamiliares, multifamiliares y pequeños inmuebles de uso mixto",
+        "Programas accesibles tanto para inversionistas novatos como experimentados"
+      ]
+    },
+    "advantages": {
+      "title": "Ventajas Estratégicas:",
+      "p1": "La velocidad suele ser el factor decisivo en un mercado de inversión competitivo. Las aprobaciones ágiles y la suscripción simplificada le permiten asegurar una propiedad antes que otros compradores sin esperar los 30 a 45 días de un cierre convencional.",
+      "p2": "Al estar el presupuesto de remodelación incluido en el préstamo, no se ve forzado a utilizar sus reservas personales a mitad del proyecto: los fondos se liberan conforme avanza la obra, manteniendo su liquidez para la siguiente oportunidad.",
+      "p3": "Los pagos de solo interés durante el plazo mantienen los costos de mantenimiento bajos y predecibles, protegiendo su margen de ganancia si la obra o la venta toman un poco más de tiempo de lo previsto."
+    },
+    "who_this_is_for": {
+      "title": "¿Para Quién son los Préstamos Fix and Flip?",
+      "items": [
+        "Inversionistas que adquieren propiedades deterioradas o desactualizadas por debajo del valor de mercado",
+        "Inversionistas con experiencia que gestionan múltiples proyectos simultáneos",
+        "Inversionistas principiantes con un plan de remodelación sólido y una estimación realista de ARV",
+        "Compradores que necesitan cerrar con rapidez para ganar ofertas competitivas fuera de mercado o en subastas",
+        "Inversionistas que no desean inmovilizar un crédito hipotecario convencional en una obra de remodelación"
+      ]
+    },
+    "comparison": {
+      "title": "Préstamos Fix and Flip vs. Otras Opciones de Financiamiento",
+      "th_fix_flip": "Préstamo Fix and Flip",
+      "th_conventional": "Hipoteca Convencional",
+      "th_heloc": "HELOC / Refinanciamiento Cash-Out",
+      "rows": {
+        "underwriting": {
+          "label": "Enfoque de suscripción",
+          "fix_flip": "La propiedad y el proyecto de inversión",
+          "conventional": "Ingresos personales e historial crediticio",
+          "heloc": "Plusvalía de la vivienda actual"
+        },
+        "closing_time": {
+          "label": "Tiempo de cierre típico",
+          "fix_flip": "7–14 días",
+          "conventional": "30–45 días",
+          "heloc": "2–4 semanas"
+        },
+        "rehab_financed": {
+          "label": "Presupuesto de obra financiado",
+          "fix_flip": "Frecuentemente hasta el 100%",
+          "conventional": "Generalmente no incluido",
+          "heloc": "Depende de la plusvalía disponible"
+        },
+        "payment_structure": {
+          "label": "Estructura de pago",
+          "fix_flip": "Solo interés",
+          "conventional": "Amortización completa",
+          "heloc": "Varía según el producto"
+        },
+        "best_for": {
+          "label": "Ideal para",
+          "fix_flip": "Remodelación y reventa a corto plazo",
+          "conventional": "Tenencia de inmuebles a largo plazo",
+          "heloc": "Inversionistas con sustancial plusvalía previa"
+        }
+      }
+    },
+    "eligibility": {
+      "title": "Requisitos de Elegibilidad",
+      "items": [
+        "Puntaje de crédito de aproximadamente 620+ (la solidez del proyecto puede compensar un puntaje menor)",
+        "Presupuesto de remodelación y alcance de obra detallados",
+        "Estimación realista y sustentable del Valor Después de Reparaciones (ARV)",
+        "Reservas suficientes para cubrir costos operativos durante el proyecto",
+        "No se exige experiencia previa indispensable, aunque el historial previo puede mejorar el apalancamiento y las tasas"
+      ]
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "items": [
+        {
+          "q": "¿Qué puntaje de crédito necesito para un préstamo fix and flip?",
+          "a": "La mayoría de los prestamistas fix and flip buscan un puntaje de crédito de 620 o superior, aunque algunos programas aceptan puntuaciones menores si el proyecto en sí —precio de compra, presupuesto de obra y valor tras reparaciones— es sólido. Al basarse en el activo, el crédito personal suele tener menor peso que en una hipoteca convencional."
+        },
+        {
+          "q": "¿Qué porcentaje del presupuesto de remodelación se puede financiar?",
+          "a": "Muchos programas financian hasta el 100% del presupuesto de remodelación además de una porción del precio de compra, liberando los fondos en ministraciones conforme se completan e inspeccionan las obras. El monto exacto dependerá de las relaciones préstamo-costo y préstamo-ARV."
+        },
+        {
+          "q": "¿Qué es la regla del 70% en proyectos fix and flip?",
+          "a": "La regla del 70% es un parámetro habitual que usan los inversionistas: el precio de compra más los costos de remodelación no deberían exceder el 70% del valor después de reparaciones (ARV). Mantenerse en ese rango suele dejar margen suficiente para costos financieros, mantenimiento, venta y utilidades."
+        },
+        {
+          "q": "¿Qué tan rápido puede cerrar un préstamo fix and flip?",
+          "a": "Dado que se evalúan primordialmente en función de la propiedad y la rentabilidad del proyecto sin requerir extensas comprobaciones tributarias personales, muchos préstamos cierran en tan solo 7 a 14 días, mucho más rápido que los 30 a 45 días de una hipoteca convencional."
+        },
+        {
+          "q": "¿Necesito experiencia previa en inversiones inmobiliarias para calificar?",
+          "a": "No: muchos prestamistas trabajan con inversionistas primerizos, aunque el nivel de experiencia puede influir en el apalancamiento disponible, la tasa y los plazos. Contar con un historial de proyectos finalizados suele permitir acceder a mayores ratios de préstamo sobre costo."
+        },
+        {
+          "q": "¿Los pagos de un préstamo fix and flip son de solo interés?",
+          "a": "La mayoría se estructuran como pagos de solo interés durante la vigencia del préstamo, lo que mantiene bajos los costos mensuales de tenencia mientras se culmina la remodelación y se prepara la venta."
+        },
+        {
+          "q": "¿Existe penalización por liquidar el préstamo fix and flip antes de tiempo?",
+          "a": "La gran mayoría no contempla penalizaciones por pago anticipado, ya que el modelo de negocio está diseñado para un período de retención corto; los prestamistas prevén y facilitan la cancelación anticipada al concretarse la venta."
+        },
+        {
+          "q": "¿Puedo utilizar un préstamo fix and flip para una propiedad que conservaré en alquiler?",
+          "a": "Los préstamos fix and flip están pensados para proyectos de remodelación y reventa a corto plazo. Si su plan es renovar y conservar el inmueble para renta, un préstamo DSCR o un refinanciamiento de renovación a renta suele ser más conveniente a largo plazo al terminar la obra."
+        }
+      ]
+    },
+    "cta": {
+      "apply_now": "Solicitar Ahora →",
+      "contact_us": "Contáctenos Ahora",
+      "note": "¿Tiene una oportunidad de inversión que está evaluando actualmente? Envíenos los números: un oficial de préstamos los analizará con usted el mismo día."
+    },
+    "schema": {
+      "webpage_name": "Fix and Flip Loans for Real Estate Investors | MyLoanDesk",
+      "webpage_description": "Guía completa y calculadora de evaluación de operaciones para financiamiento fix and flip a corto plazo para inversionistas de bienes raíces.",
+      "product_name": "Préstamo Fix and Flip",
+      "product_description": "Financiamiento puente a corto plazo basado en activos para inversionistas de bienes raíces, diseñado para cubrir la adquisición del inmueble y hasta el 100% de los costos de remodelación.",
+      "faq_q1_question": "¿Qué puntaje de crédito necesito para un préstamo fix and flip?",
+      "faq_q1_answer": "La mayoría de los prestamistas fix and flip buscan un puntaje de crédito de 620 o superior, aunque algunos programas aceptan puntuaciones menores si el proyecto en sí —precio de compra, presupuesto de obra y valor tras reparaciones— es sólido. Al basarse en el activo, el crédito personal suele tener menor peso que en una hipoteca convencional.",
+      "faq_q2_question": "¿Qué porcentaje del presupuesto de remodelación se puede financiar?",
+      "faq_q2_answer": "Muchos programas financian hasta el 100% del presupuesto de remodelación además de una porción del precio de compra, liberando los fondos en ministraciones conforme se completan e inspeccionan las obras. El monto exacto dependerá de las relaciones préstamo-costo y préstamo-ARV.",
+      "faq_q3_question": "¿Qué es la regla del 70% en proyectos fix and flip?",
+      "faq_q3_answer": "La regla del 70% es un parámetro habitual que usan los inversionistas: el precio de compra más los costos de remodelación no deberían exceder el 70% del valor después de reparaciones (ARV). Mantenerse en ese rango suele dejar margen suficiente para costos financieros, mantenimiento, venta y utilidades.",
+      "faq_q4_question": "¿Qué tan rápido puede cerrar un préstamo fix and flip?",
+      "faq_q4_answer": "Dado que se evalúan primordialmente en función de la propiedad y la rentabilidad del proyecto sin requerir extensas comprobaciones tributarias personales, muchos préstamos cierran en tan solo 7 a 14 días, mucho más rápido que los 30 a 45 días de una hipoteca convencional.",
+      "faq_q5_question": "¿Necesito experiencia previa en inversiones inmobiliarias para calificar?",
+      "faq_q5_answer": "No: muchos prestamistas trabajan con inversionistas primerizos, aunque el nivel de experiencia puede influir en el apalancamiento disponible, la tasa y los plazos. Contar con un historial de proyectos finalizados suele permitir acceder a mayores ratios de préstamo sobre costo.",
+      "faq_q6_question": "¿Los pagos de un préstamo fix and flip son de solo interés?",
+      "faq_q6_answer": "La mayoría se estructuran como pagos de solo interés durante la vigencia del préstamo, lo que mantiene bajos los costos mensuales de tenencia mientras se culmina la remodelación y se prepara la venta.",
+      "faq_q7_question": "¿Existe penalización por liquidar el préstamo fix and flip antes de tiempo?",
+      "faq_q7_answer": "La gran mayoría no contempla penalizaciones por pago anticipado, ya que el modelo de negocio está diseñado para un período de retención corto; los prestamistas prevén y facilitan la cancelación anticipada al concretarse la venta.",
+      "faq_q8_question": "¿Puedo utilizar un préstamo fix and flip para una propiedad que conservaré en alquiler?",
+      "faq_q8_answer": "Los préstamos fix and flip están pensados para proyectos de remodelación y reventa a corto plazo. Si su plan es renovar y conservar el inmueble para renta, un préstamo DSCR o un refinanciamiento de renovación a renta suele ser más conveniente a largo plazo al terminar la obra."
+    }
+  },
+  "ForeignNationalLoans": {
+    "meta": {
+      "title": "Préstamos para Extranjeros y Compradores Internacionales | MyLoanDesk",
+      "description": "Financiamiento de propiedades en EE. UU. para compradores internacionales y no ciudadanos. Acceda a programas hipotecarios especializados para segundas viviendas, propiedades vacacionales y de alquiler.",
+      "og_title": "Soluciones Hipotecarias para Extranjeros en EE. UU. | MyLoanDesk",
+      "og_description": "Financie bienes raíces en EE. UU. sin puntaje de crédito estadounidense ni Número de Seguro Social. Opciones con ingresos extranjeros, reservas de activos foráneos y flujo de caja de alquiler.",
+      "og_alt": "Préstamos para Extranjeros - MyLoanDesk",
+      "twitter_title": "Soluciones Hipotecarias para Extranjeros en EE. UU. | MyLoanDesk",
+      "twitter_description": "Financie bienes raíces en EE. UU. sin puntaje crediticio de EE. UU. ni SSN. Programas especializados para inversionistas internacionales y compradores de segundas viviendas."
+    },
+    "breadcrumbs": {
+      "home": "Inicio",
+      "loan_programs": "Programas de Préstamos",
+      "foreign_national": "Préstamos para Extranjeros"
+    },
+    "back_to_programs": "Volver a Programas de Préstamos",
+    "title": "Préstamos para Extranjeros y Compradores Internacionales",
+    "hero": {
+      "badge": "Financiamiento Inmobiliario Internacional",
+      "title_main": "Préstamos para Extranjeros y Compradores Internacionales",
+      "title_sub": "Financiamiento de Propiedades en EE. UU. para Compradores Internacionales",
+      "p1": "No necesita ser ciudadano estadounidense ni residente permanente para financiar bienes raíces en los Estados Unidos.",
+      "p2": "MyLoanDesk ofrece acceso a programas hipotecarios diseñados para extranjeros elegibles y compradores internacionales que compran o refinancian bienes raíces en EE. UU. Ya sea que adquiera una casa vacacional, una segunda vivienda o una propiedad de inversión, le ayudamos a explorar las opciones de financiamiento disponibles.",
+      "cta_quote": "Explorar Opciones de Préstamos para Extranjeros",
+      "cta_calc": "Calcular Pago Inicial"
+    },
+    "overview": {
+      "badge": "01 — Resumen",
+      "heading": "¿Qué es una Hipoteca para Extranjeros?",
+      "p1": "Una hipoteca para extranjeros está diseñada para prestatarios no estadounidenses que desean financiar una propiedad en EE. UU. pero que tal vez no cumplan con los requisitos documentales de una hipoteca tradicional estadounidense.",
+      "p2": "En lugar de depender exclusivamente de ingresos, crédito o declaraciones fiscales de EE. UU., los prestamistas especializados pueden evaluar ingresos internacionales, activos foráneos, cartas de referencia bancaria del extranjero y otra documentación equivalente.",
+      "side_card": {
+        "title": "¿Quién Puede Beneficiarse?",
+        "intro": "El financiamiento para extranjeros puede ser apropiado para prestatarios elegibles que:",
+        "items": [
+          "Vivan principalmente fuera de los Estados Unidos",
+          "Deseen adquirir bienes raíces en EE. UU.",
+          "Tengan un historial de crédito estadounidense limitado o nulo",
+          "Perciban sus ingresos fuera de los Estados Unidos",
+          "Mantengan sus activos en instituciones financieras extranjeras",
+          "Deseen comprar propiedades de inversión o segundas residencias en EE. UU."
+        ]
+      }
+    },
+    "property_options": {
+      "badge": "02 — Categorías del Programa",
+      "heading": "Opciones de Financiamiento de Propiedades",
+      "subtitle": "Según el prestamista y el perfil del prestatario, puede haber financiamiento disponible para:",
+      "cards": [
+        {
+          "title": "Propiedades de Inversión",
+          "desc": "Adquiera propiedades de alquiler en EE. UU. y construya un portafolio de bienes raíces."
+        },
+        {
+          "title": "Segundas Viviendas",
+          "desc": "Financie una segunda residencia o propiedad vacacional elegible."
+        },
+        {
+          "title": "Condominios",
+          "desc": "Existen programas disponibles para unidades de condominio elegibles."
+        },
+        {
+          "title": "Basadas en Ingresos por Alquiler",
+          "desc": "Ciertos programas de inversión se enfocan principalmente en el flujo de caja del alquiler más que en el empleo tradicional en EE. UU."
+        }
+      ]
+    },
+    "credit_flexibility": {
+      "badge": "03 — Flexibilidad Crediticia",
+      "heading": "¿No Tiene Historial de Crédito en EE. UU.?",
+      "p1": "Eso no le impide automáticamente obtener financiamiento.",
+      "p2": "Determinados programas para extranjeros están diseñados específicamente para personas sin historial crediticio tradicional en EE. UU. Según el prestamista, se pueden evaluar cartas de referencia de crédito internacional u otra documentación alternativa.",
+      "cta_button": "Consultar mis Opciones"
+    },
+    "documentation": {
+      "badge": "04 — Documentación",
+      "heading": "¿Qué Documentación se Requiere Habitualmente?",
+      "subtitle": "Los requisitos varían según el prestamista, pero pueden incluir:",
+      "items": [
+        "Pasaporte o documento de identificación válido",
+        "Documentación de visa cuando corresponda",
+        "Comprobantes de ingresos en el extranjero",
+        "Estados de cuenta bancarios y de activos",
+        "Referencias de crédito bancario internacional",
+        "Comprobante de fondos para el cierre",
+        "Documentación de la propiedad",
+        "Apertura de cuenta bancaria en EE. UU. cuando sea requerida"
+      ],
+      "footnote": "* Los documentos extranjeros pueden requerir traducción certificada o verificación complementaria. Le indicaremos exactamente qué se requiere tras evaluar su caso."
+    },
+    "value_prop": {
+      "badge": "05 — Propuesta de Valor",
+      "heading": "¿Por Qué Elegir MyLoanDesk?",
+      "p1": "Los prestatarios internacionales no encajan dentro de las directrices hipotecarias tradicionales.",
+      "p2": "Trabajamos para identificar programas que acepten ingresos del exterior, activos foráneos, historial crediticio internacional, estatus de residencia y el uso previsto de la propiedad.",
+      "side_card": {
+        "title": "¿Compra propiedades en EE. UU. desde el extranjero?",
+        "desc": "Permítanos ayudarle a evaluar programas hipotecarios especializados para no residentes.",
+        "cta_button": "Evaluar mis Opciones de Financiamiento"
+      }
+    },
+    "calculator": {
+      "badge": "Estimador para Compradores Internacionales",
+      "heading": "Estime el Financiamiento de su Propiedad en EE. UU.",
+      "subheading": "Calcule su pago inicial proyectado, saldo del préstamo y reservas de liquidez requeridas en USD.",
+      "price_label": "Precio de Compra de la Propiedad ($ USD)",
+      "price_placeholder": "600000",
+      "down_label": "Pago Inicial (%) — Estándar ~30%",
+      "down_placeholder": "30",
+      "reserves_label": "Meta de Reservas de Activos",
+      "options": {
+        "months_6": "6 Meses de Reservas PITIA",
+        "months_12": "12 Meses de Reservas PITIA",
+        "months_18": "18 Meses de Reservas PITIA"
+      },
+      "submit_button": "Calcular Términos del Préstamo para Extranjeros",
+      "down_payment_needed": "Pago Inicial Requerido",
+      "estimated_loan_amount": "Monto Estimado del Préstamo",
+      "target_reserve": "Reserva de Liquidez Objetivo",
+      "footnote": "* Los programas para extranjeros generalmente requieren un pago inicial del 25% al 35% y entre 6 y 12 meses de reservas líquidas de capital, intereses, impuestos y seguros (PITIA) mantenidas en cuentas extranjeras o estadounidenses."
+    },
+    "faq": {
+      "badge": "06 — Claridad",
+      "heading": "Preguntas Frecuentes sobre Hipotecas para Extranjeros",
+      "items": [
+        {
+          "q": "¿Puede un no ciudadano de EE. UU. comprar una propiedad en los Estados Unidos?",
+          "a": "Por lo general sí: la condición de extranjero no impide adquirir bienes raíces en EE. UU., aunque los requisitos de financiamiento, impositivos y legales pueden ser diferentes."
+        },
+        {
+          "q": "¿Necesito crédito de EE. UU.?",
+          "a": "No necesariamente. Diversos programas hipotecarios para extranjeros permiten documentación de crédito alternativa."
+        },
+        {
+          "q": "¿Se pueden usar ingresos generados en el extranjero?",
+          "a": "Potencialmente sí. Los requisitos de verificación documental varían de acuerdo con el prestamista."
+        },
+        {
+          "q": "¿Puedo financiar una propiedad de inversión en EE. UU.?",
+          "a": "Sí, sujeto al cumplimiento de las pautas del prestamista, del solicitante y del inmueble."
+        },
+        {
+          "q": "¿Puedo calificar con base en los ingresos de alquiler?",
+          "a": "Ciertos programas de inversión evalúan los ingresos por renta de la propiedad como factor determinante para la calificación."
+        }
+      ]
+    },
+    "bottom_cta": {
+      "heading": "¿Invierte en Bienes Raíces en EE. UU.? Comience con el Financiamiento.",
+      "cta_button": "Ver Opciones de Préstamo",
+      "disclaimer": "Los requisitos para préstamos a extranjeros, clasificaciones de residencia elegibles, documentación, tipos de propiedad, tasas, términos y disponibilidad varían según el prestamista. Se recomienda a los prestatarios consultar con asesores fiscales y legales calificados sobre las implicaciones de adquirir propiedades en EE. UU."
+    },
+    "schema": {
+      "webpage_name": "Préstamos para Extranjeros y Compradores Internacionales | MyLoanDesk",
+      "webpage_description": "Programas hipotecarios especializados en EE. UU. para compradores internacionales no residentes, inversionistas extranjeros y adquirentes de propiedades vacacionales.",
+      "product_name": "Préstamo Hipotecario para Extranjeros",
+      "product_description": "Programa hipotecario Non-QM para no ciudadanos estadounidenses que permite calificar usando activos internacionales, ingresos extranjeros o renta del inmueble sin historial crediticio de EE. UU. ni SSN.",
+      "faq_q1_question": "¿Puede un no ciudadano de EE. UU. comprar una propiedad en los Estados Unidos?",
+      "faq_q1_answer": "Por lo general sí: la condición de extranjero no impide adquirir bienes raíces en EE. UU., aunque los requisitos de financiamiento, impositivos y legales pueden ser diferentes.",
+      "faq_q2_question": "¿Necesito crédito de EE. UU. para calificar a una hipoteca para extranjeros?",
+      "faq_q2_answer": "No necesariamente. Diversos programas hipotecarios para extranjeros permiten documentación de crédito alternativa, cartas de referencia de bancos internacionales o calificación por flujo de caja de alquiler.",
+      "faq_q3_question": "¿Se pueden usar ingresos generados en el extranjero y cuentas bancarias internacionales?",
+      "faq_q3_answer": "Potencialmente sí. Los prestamistas evalúan estados de cuenta y comprobantes de ingresos foráneos verificados, que pueden requerir traducción certificada al inglés y constancias de transferencias internacionales.",
+      "faq_q4_question": "¿Puedo financiar una propiedad de inversión en EE. UU. como ciudadano extranjero?",
+      "faq_q4_answer": "Sí, sujeto a los requisitos de elegibilidad del prestamista, prestatario y propiedad para viviendas unifamiliares, condominios y propiedades multifamiliares.",
+      "faq_q5_question": "¿Puedo calificar basándome en los ingresos de alquiler en vez de empleo personal?",
+      "faq_q5_answer": "Ciertos programas de inversión, como los préstamos Foreign National DSCR, se centran en el flujo de caja proyectado o real de la propiedad en lugar de los ingresos personales globales."
+    }
+  },
+  "HelocLoans": {
+    "meta": {
+      "title": "Préstamos sobre el Capital y HELOCs | MyLoanDesk",
+      "description": "Explore opciones de préstamos sobre el capital y líneas de crédito HELOC. Compare formas de acceder a la plusvalía de su vivienda manteniendo su hipoteca actual.",
+      "og_title": "Préstamos sobre el Capital y HELOCs | MyLoanDesk",
+      "og_description": "Acceda al capital de su vivienda sin venderla ni reemplazar su tasa hipotecaria baja actual.",
+      "og_alt": "Préstamos sobre el Capital y HELOCs - MyLoanDesk",
+      "twitter_title": "Préstamos sobre el Capital y HELOCs | MyLoanDesk",
+      "twitter_description": "Acceda al capital de su vivienda sin venderla ni reemplazar su tasa hipotecaria baja actual."
+    },
+    "breadcrumbs": {
+      "home": "Inicio",
+      "loan_programs": "Programas de Préstamos",
+      "heloc": "Préstamos sobre el Capital y HELOCs"
+    },
+    "hero": {
+      "badge": "Soluciones de Financiamiento sobre el Capital",
+      "title_main": "Préstamos sobre el Capital y HELOCs",
+      "title_sub": "Acceda al Capital de su Vivienda sin Necesidad de Venderla",
+      "p1": "Su vivienda puede ser uno de sus activos financieros más valiosos. Un préstamo sobre el capital o una Línea de Crédito con Garantía Hipotecaria (HELOC) le permite disponer de una parte de esa plusvalía mientras continúa siendo dueño y residiendo en ella.",
+      "p2": "MyLoanDesk ayuda a los propietarios a evaluar alternativas de financiamiento sobre el capital para remodelaciones, gastos mayores, consolidación de deudas, oportunidades de inversión y otras necesidades financieras.",
+      "cta_chat": "Explorar mis Opciones sobre el Capital",
+      "cta_calc": "Calcular Capital Disponible"
+    },
+    "fundamentals": {
+      "badge": "01 — Fundamentos",
+      "heading": "¿Qué es el Capital de la Vivienda (Home Equity)?",
+      "p1": "El capital de la vivienda es generalmente la diferencia entre el valor de mercado actual de su propiedad y el saldo adeudado en los préstamos garantizados por la misma.",
+      "p2": "El monto que efectivamente puede pedir prestado depende de variables como el valor del inmueble, los saldos hipotecarios vigentes, su puntaje de crédito, ingresos, requisitos del programa y límites de relación préstamo-valor combinado (CLTV).",
+      "example_title": "Ejemplo Ilustrativo",
+      "current_value_label": "Valor Actual de la Vivienda:",
+      "mortgage_balance_label": "Saldo de la Hipoteca:",
+      "approx_equity_label": "Capital Aproximado de la Vivienda:"
+    },
+    "two_ways": {
+      "badge": "02 — Comparativa de Programas",
+      "heading": "Dos Formas de Acceder al Capital de su Vivienda",
+      "heloc": {
+        "badge": "Línea de Crédito Rotativa",
+        "title": "Línea de Crédito sobre el Capital (HELOC)",
+        "p1": "Un HELOC proporciona una línea de crédito rotativa garantizada por su propiedad. En lugar de recibir el dinero en una sola suma, puede retirar fondos según sus requerimientos durante el período de disposición establecido en los términos de su contrato.",
+        "p2": "Un HELOC resulta idóneo cuando busca acceso continuo a fondos en lugar de un desembolso único. Las tasas de interés de los HELOC suelen ser variables, por lo que las cuotas y los costos de financiamiento pueden fluctuar con el tiempo.",
+        "useful_for_title": "Los HELOCs son Útiles Para:",
+        "use_cases": [
+          "Mejoras y remodelaciones del hogar",
+          "Gastos de educación",
+          "Fondos de reserva para emergencias",
+          "Compras de gran volumen",
+          "Inversiones o necesidades comerciales",
+          "Consolidación de deudas con intereses altos"
+        ],
+        "cta_button": "Explorar Opciones de HELOC"
+      },
+      "loan": {
+        "badge": "Préstamo en Cuotas Fijas",
+        "title": "Préstamo sobre el Capital (Home Equity Loan)",
+        "p1": "Un préstamo sobre el capital habitualmente entrega un monto global al cierre con un calendario de pagos predeterminado a lo largo de un plazo específico.",
+        "p2": "Esta opción suele ser más conveniente cuando conoce con exactitud el capital requerido y prefiere una estructura de pagos predecible y fija.",
+        "useful_for_title": "Los Préstamos sobre el Capital son Útiles Para:",
+        "use_cases": [
+          "Remodelaciones importantes",
+          "Gastos extraordinarios de una sola vez",
+          "Consolidación de deudas",
+          "Oportunidades de inversión",
+          "Gastos universitarios",
+          "Otras necesidades financieras significativas"
+        ],
+        "cta_button": "Explorar Préstamos sobre el Capital"
+      }
+    },
+    "matrix": {
+      "badge": "03 — Matriz de Características",
+      "heading": "HELOC vs. Préstamo sobre el Capital",
+      "th_feature": "Característica",
+      "th_heloc": "HELOC",
+      "th_loan": "Préstamo sobre el Capital",
+      "rows": {
+        "access": {
+          "feature": "Disposición de fondos",
+          "heloc": "Retiros según necesidad",
+          "loan": "Suma global fija al cierre"
+        },
+        "structure": {
+          "feature": "Estructura",
+          "heloc": "Línea de crédito rotativa",
+          "loan": "Préstamo a plazos"
+        },
+        "rate": {
+          "feature": "Tasa de interés",
+          "heloc": "Generalmente variable",
+          "loan": "Frecuentemente fija, según el programa"
+        },
+        "best_suited": {
+          "feature": "Ideal para",
+          "heloc": "Gastos continuos o imprevistos",
+          "loan": "Gastos concretos en un solo pago"
+        },
+        "first_mortgage": {
+          "feature": "Primera hipoteca existente",
+          "heloc": "Permanece intacta",
+          "loan": "Permanece intacta"
+        }
+      },
+      "footnote": "* Ninguna opción es superior por definición. La elección adecuada depende de la cantidad de capital que requiera, el uso previsto para los fondos y su estrategia preferida de amortización."
+    },
+    "rate_preservation": {
+      "badge": "04 — Estrategia de Preservación de Tasa",
+      "heading": "Conserve su Primera Hipoteca Actual",
+      "p1": "Uno de los mayores atractivos de un HELOC o préstamo sobre el capital es que no necesita refinanciar ni alterar su primera hipoteca existente.",
+      "p2": "Para los propietarios con una tasa hipotecaria ventajosa, reemplazar todo el préstamo para disponer de liquidez puede resultar desfavorable. Una solución en segundo gravamen le permite conservar su hipoteca primaria sin cambios mientras accede al capital adicional de manera independiente.",
+      "cta_button": "Consultar a un Asesor"
+    },
+    "video_section": {
+      "badge": "Explicación en Video",
+      "heading": "Vea Cómo Funciona el Financiamiento sobre el Capital",
+      "subheading": "Conozca las diferencias entre un HELOC y un préstamo sobre el capital, cómo se calcula la plusvalía y qué modalidad se ajusta a cada escenario."
+    },
+    "underwriting_variables": {
+      "badge": "05 — Variables de Evaluación",
+      "heading": "¿Cuánto Capital Puedo Disponer?",
+      "subheading": "El monto disponible depende de las directrices del programa de préstamo y de su perfil financiero.",
+      "cards": [
+        {
+          "title": "Valor de la Propiedad",
+          "desc": "El valor de mercado actual de su vivienda."
+        },
+        {
+          "title": "Saldo Hipotecario Actual",
+          "desc": "El monto que aún adeuda sobre la propiedad."
+        },
+        {
+          "title": "Préstamo a Valor Combinado (CLTV)",
+          "desc": "Su hipoteca vigente sumada al nuevo financiamiento sobre el capital comparado con el valor de la propiedad."
+        },
+        {
+          "title": "Perfil Crediticio",
+          "desc": "Los requisitos de crédito varían según el prestamista y el programa."
+        },
+        {
+          "title": "Ingresos y Capacidad de Pago",
+          "desc": "La documentación de ingresos requerida dependerá del programa crediticio elegido."
+        }
+      ]
+    },
+    "calculator": {
+      "badge": "Estimador Interactivo de Capital",
+      "heading": "Calcule su CLTV Estimado",
+      "subheading": "Compruebe cómo se compara su financiamiento propuesto frente al valor de mercado actual de su vivienda.",
+      "home_value_label": "Valor Estimado de la Vivienda ($)",
+      "home_value_placeholder": "ej. 700000",
+      "mortgage_balance_label": "Saldo de Hipoteca Actual ($)",
+      "mortgage_balance_placeholder": "ej. 350000",
+      "desired_equity_label": "Monto de Capital Deseado ($)",
+      "desired_equity_placeholder": "ej. 100000",
+      "submit_button": "Calcular CLTV Estimado",
+      "total_debt_label": "Deuda Total Combinada",
+      "cltv_label": "CLTV Estimado",
+      "remaining_buffer_label": "Margen de Plusvalía Restante",
+      "verdict_good": "¡Excelente! Un CLTV estimado inferior al 80%–85% califica habitualmente para tasas de financiamiento competitivas en HELOCs o Préstamos sobre el Capital.",
+      "verdict_high": "Su CLTV estimado supera el 85%. Determinados programas especializados admiten límites superiores según su perfil de crédito e ingresos."
+    },
+    "faq": {
+      "badge": "06 — Claridad",
+      "heading": "Preguntas Frecuentes sobre Financiamiento de Capital",
+      "items": [
+        {
+          "q": "¿Cuál es la diferencia entre un HELOC y un préstamo sobre el capital?",
+          "a": "Un HELOC es una línea de crédito rotativa que le permite retirar fondos a medida que los necesita, mientras que un préstamo sobre el capital entrega los fondos en un solo pago fijo al inicio."
+        },
+        {
+          "q": "¿Debo refinanciar mi hipoteca actual?",
+          "a": "No necesariamente. Los HELOCs y préstamos sobre el capital se estructuran habitualmente como gravámenes secundarios, permitiendo conservar intacta su primera hipoteca."
+        },
+        {
+          "q": "¿Cuánto capital acumulado necesito?",
+          "a": "Los requisitos varían por entidad. El monto disponible dependerá del valor del inmueble, el saldo adeudado y el límite máximo de préstamo a valor combinado (CLTV) permitido."
+        },
+        {
+          "q": "¿Puedo utilizar el capital de mi casa para remodelaciones?",
+          "a": "Sí. Las mejoras en el hogar y reformas integrales representan una de las razones más comunes para recurrir al financiamiento sobre el capital."
+        },
+        {
+          "q": "¿Puedo utilizar un HELOC para consolidar deudas?",
+          "a": "Muchos propietarios utilizan los fondos de un HELOC para consolidar deudas. No obstante, trasladar deuda no garantizada a una deuda respaldada por su vivienda implica riesgos que deben evaluarse con prudencia."
+        },
+        {
+          "q": "¿Un HELOC tiene una tasa de interés fija?",
+          "a": "La mayoría de los HELOCs manejan tasas de interés variables, aunque las condiciones y características pueden variar según el prestamista y el programa."
+        },
+        {
+          "q": "¿Puedo obtener un HELOC sobre una propiedad de inversión?",
+          "a": "Algunos prestamistas ofrecen financiamiento sobre el capital en propiedades de inversión, si bien los límites de CLTV, tasas y condiciones pueden ser más estrictos que en una residencia principal."
+        }
+      ]
+    },
+    "bottom_cta": {
+      "heading": "Convierta el Capital de su Vivienda en Flexibilidad Financiera",
+      "subheading": "Ha trabajado para crear plusvalía en su hogar. MyLoanDesk le ayuda a explorar maneras de disponer de ella sin tener que reemplazar su primera hipoteca. Ya sea que busque un HELOC para disponer de fondos según surjan gastos o un préstamo en cuotas fijas para una inversión puntual, le ayudaremos a comparar opciones y comprender sus ventajas.",
+      "cta_button": "Ver mis Opciones sobre el Capital"
+    },
+    "schema": {
+      "webpage_name": "Home Equity Loans & HELOCs | MyLoanDesk",
+      "webpage_description": "Comprehensive guide and equity borrowing calculator for Home Equity Lines of Credit (HELOC) and fixed home equity installment loans.",
+      "product_name": "Home Equity Loan & HELOC",
+      "product_description": "Second-lien financing solutions allowing homeowners to access accumulated home equity via revolving credit lines or fixed-rate lump sums while preserving their low first mortgage rate.",
+      "faq_q1_question": "What is the difference between a HELOC and a home equity loan?",
+      "faq_q1_answer": "A HELOC is generally a revolving credit line that lets you access funds as needed during a draw period, while a home equity loan generally provides the borrowed funds as an upfront lump sum with fixed monthly payments.",
+      "faq_q2_question": "Do I have to refinance my current mortgage to get a HELOC?",
+      "faq_q2_answer": "No. HELOCs and home equity loans are structured as second mortgages, allowing your existing low-rate first mortgage to remain completely intact.",
+      "faq_q3_question": "How much equity do I need to qualify?",
+      "faq_q3_answer": "Borrowing limits depend on your property value, current mortgage balance, and maximum combined loan-to-value (CLTV) ratios, typically allowing combined financing up to 80%–90% of your home value.",
+      "faq_q4_question": "Can I use home equity to renovate my house?",
+      "faq_q4_answer": "Yes. Home improvements and renovations are among the most common reasons homeowners use home equity lines of credit or fixed loans.",
+      "faq_q5_question": "Can I use a HELOC for debt consolidation?",
+      "faq_q5_answer": "Yes. Homeowners frequently use equity financing to consolidate higher-interest credit cards and personal loans into a single lower-rate payment.",
+      "faq_q6_question": "Does a HELOC have a fixed interest rate?",
+      "faq_q6_answer": "Most HELOCs carry variable interest rates pegged to the Prime Rate, though some programs offer fixed-rate draw locks for specific withdrawal amounts.",
+      "faq_q7_question": "Can I get a HELOC on an investment property?",
+      "faq_q7_answer": "Yes. Select lenders offer home equity lines of credit and second mortgages on second homes and investment properties, though CLTV limits and qualification parameters may be slightly stricter than primary residences."
+    }
+  },
+  "HomeSafeSecond": {
+    "meta": {
+      "title": "HomeSafe Second® | Acceda al Capital sin Refinanciar",
+      "description": "Descubra HomeSafe Second®, una hipoteca revertida en segundo gravamen que permite a propietarios elegibles acceder a su capital sin reemplazar su primera hipoteca ni añadir pagos mensuales obligatorios.*",
+      "og_title": "HomeSafe Second® | Acceda al Capital sin Refinanciar",
+      "og_description": "Descubra HomeSafe Second®, una hipoteca revertida en segundo gravamen que permite a propietarios elegibles acceder a su capital sin reemplazar su primera hipoteca ni añadir pagos mensuales obligatorios.*",
+      "og_alt": "Propietario comparando opciones de hipoteca revertida HomeSafe Second y HELOC para acceder a su capital",
+      "twitter_title": "HomeSafe Second® | Acceda al Capital sin Refinanciar",
+      "twitter_description": "Acceda de $50,000 a $1M en capital de vivienda sin refinanciar su primera hipoteca existente ni añadir un pago hipotecario mensual obligatorio.*"
+    },
+    "breadcrumbs": {
+      "home": "Inicio",
+      "loan_programs": "Programas de Préstamos",
+      "homesafe_second": "HomeSafe Second"
+    },
+    "hero": {
+      "badge": "Hipoteca Revertida en Segundo Gravamen",
+      "title_main": "HomeSafe Second®:",
+      "title_sub": "Acceda a su Capital sin Reemplazar su Primera Hipoteca",
+      "lead": "Conserve su primera hipoteca actual y acceda al capital de su vivienda sin añadir un pago hipotecario mensual obligatorio.*",
+      "p1": "Si ha acumulado un capital sustancial en su vivienda pero no desea refinanciar su hipoteca actual, HomeSafe Second® brinda a los propietarios calificados otra vía para disponer de esa plusvalía.",
+      "p2_part1": "HomeSafe Second es una ",
+      "p2_link": "hipoteca revertida",
+      "p2_part2": " en segundo gravamen diseñada para propietarios de mayor edad calificados. En lugar de reemplazar su hipoteca actual, se sitúa detrás de ella como un segundo gravamen.",
+      "p3": "Esto significa que puede conservar la tasa de interés que ya tiene, acceder a una porción del capital acumulado y evitar añadir un pago hipotecario mensual obligatorio en el nuevo préstamo.*",
+      "p4": "Para los propietarios con una primera hipoteca a tasa baja, esto representa una ventaja determinante.",
+      "cta_check": "Verificar mi Elegibilidad",
+      "cta_specialist": "Hablar con un Especialista Hipotecario"
+    },
+    "advantages": {
+      "badge": "01 — Ventajas Principales",
+      "heading": "¿Por Qué Considerar HomeSafe Second®?",
+      "cards": {
+        "no_monthly_payment": {
+          "title": "Sin Pago Hipotecario Mensual Obligatorio*",
+          "p1_part1": "A diferencia de un ",
+          "p1_link": "HELOC",
+          "p1_part2": " tradicional o un préstamo sobre el capital, HomeSafe Second no exige pagos mensuales de principal e intereses sobre el nuevo préstamo.*",
+          "p2": "Los intereses y cargos aplicables se acumulan al saldo del préstamo a lo largo del tiempo.",
+          "p3": "Debe continuar cumpliendo con los términos del préstamo, incluyendo el pago de impuestos sobre la propiedad, seguro de vivienda, cuotas de HOA aplicables, el mantenimiento del inmueble y mantenerse al corriente en los pagos de su primera hipoteca existente."
+        },
+        "keep_first_mortgage": {
+          "title": "Conserve su Primera Hipoteca Existente",
+          "p1": "¿Tiene una primera hipoteca con una tasa ventajosa que no desea perder? No necesita refinanciarla simplemente para acceder a su capital.",
+          "p2": "HomeSafe Second mantiene intacta su primera hipoteca actual, permitiéndole acceder al capital disponible a través de una hipoteca revertida independiente en segundo gravamen.",
+          "p3": "Esto resulta especialmente atractivo para propietarios que obtuvieron tasas hipotecarias bajas en años anteriores."
+        },
+        "access_equity": {
+          "title": "Acceso de $50,000 a $1 Millón",
+          "p1": "Según los requisitos del programa y sus circunstancias personales, los propietarios calificados pueden acceder a entre $50,000 y $1 millón de sus opciones de capital disponibles.",
+          "factors_intro": "El monto disponible depende de factores como:",
+          "factors": [
+            "Su edad",
+            "Valor de la propiedad",
+            "Saldo de la hipoteca actual",
+            "Capital disponible en la vivienda",
+            "Tipo y ubicación del inmueble",
+            "Directrices vigentes del programa"
+          ]
+        },
+        "fixed_rate": {
+          "title": "Tasa de Interés Fija",
+          "p1": "HomeSafe Second ofrece una tasa de interés fija, brindando mayor certidumbre que un HELOC tradicional que suele operar con tasa variable.",
+          "p2": "La tasa de interés no varía ante incrementos en las tasas de interés del mercado.",
+          "p3": "Dado que no se exigen pagos mensuales de principal e intereses, los intereses acumulados generalmente se añaden al saldo insoluto del préstamo."
+        },
+        "non_recourse": {
+          "title": "Protección sin Recurso (Non-Recourse)",
+          "p1": "HomeSafe Second incluye protección sin recurso.",
+          "p2": "Por lo general, cuando el préstamo vence y es exigible, ni el prestatario ni sus herederos estarán obligados a pagar más del valor de mercado de la vivienda, con sujeción a los términos del contrato."
+        }
+      }
+    },
+    "eligibility": {
+      "badge": "02 — Elegibilidad y Perfil",
+      "heading": "¿Para Quién Está Diseñado HomeSafe Second®?",
+      "intro": "HomeSafe Second puede ser una opción a considerar si usted:",
+      "items": [
+        "Cumple con el requisito de edad mínima aplicable",
+        "Cuenta con un capital sustancial acumulado en su vivienda",
+        "Está al corriente con los pagos de su primera hipoteca existente",
+        "Desea acceder a su capital sin refinanciar su primera hipoteca",
+        "Desea evitar añadir un pago hipotecario mensual obligatorio en el nuevo préstamo*",
+        "Prefiere una tasa fija en lugar de un HELOC con tasa variable",
+        "Necesita fondos para mejoras en el hogar o gastos mayores",
+        "Busca mayor flexibilidad financiera durante su jubilación",
+        "Desea consolidar deudas con tasas de interés más elevadas",
+        "Desea disponer de liquidez preservando su hipoteca actual"
+      ],
+      "side_card": {
+        "tag": "Parámetros del Programa",
+        "title": "Requisitos de Edad Mínima",
+        "intro": "HomeSafe Second está disponible en general para propietarios:",
+        "state_most": "La Mayoría de los Estados Elegibles",
+        "state_most_age": "55+ Años",
+        "state_texas": "Texas",
+        "state_texas_age": "62+ Años",
+        "footnote": "* Se aplican requisitos adicionales sobre el solicitante, inmueble, plusvalía, crédito y directrices del programa."
+      }
+    },
+    "comparison": {
+      "badge": "03 — Comparativa de Programas",
+      "heading": "HomeSafe Second® vs. un HELOC Tradicional",
+      "th_feature": "Característica",
+      "th_homesafe": "HomeSafe Second®",
+      "th_heloc": "HELOC Tradicional",
+      "rows": {
+        "monthly_payment": {
+          "feature": "Pago mensual obligatorio en el nuevo préstamo",
+          "homesafe": "No*",
+          "heloc": "Típicamente sí, una vez que se retiran fondos"
+        },
+        "first_mortgage": {
+          "feature": "Primera hipoteca",
+          "homesafe": "Permanece intacta",
+          "heloc": "Permanece intacta"
+        },
+        "interest_rate": {
+          "feature": "Tasa de interés",
+          "homesafe": "Fija",
+          "heloc": "Típicamente variable"
+        },
+        "loan_type": {
+          "feature": "Tipo de préstamo",
+          "homesafe": "Hipoteca revertida en segundo gravamen",
+          "heloc": "Línea de crédito con garantía hipotecaria"
+        },
+        "access_funds": {
+          "feature": "Disposición de fondos",
+          "homesafe": "Según la estructura aprobada del préstamo",
+          "heloc": "Línea de crédito rotativa"
+        },
+        "interest_accrual": {
+          "feature": "Intereses",
+          "homesafe": "Se acumulan al saldo del préstamo",
+          "heloc": "Típicamente abonados mediante pagos mensuales"
+        },
+        "age_req": {
+          "feature": "Requisito de edad",
+          "homesafe": "Sí",
+          "heloc": "Generalmente sin requisito de edad de hipoteca revertida"
+        },
+        "non_recourse": {
+          "feature": "Protección sin recurso",
+          "homesafe": "Sí, sujeto a los términos del préstamo",
+          "heloc": "Generalmente no"
+        },
+        "best_suited": {
+          "feature": "Ideal para",
+          "homesafe": "Propietarios mayores calificados que buscan capital sin añadir un pago hipotecario mensual obligatorio*",
+          "heloc": "Propietarios que buscan acceso rotativo a fondos y pueden realizar pagos mensuales"
+        }
+      },
+      "footer": "Ninguna alternativa es superior por definición. La elección correcta depende de sus metas financieras, plusvalía, hipoteca vigente, ingresos, edad y el destino que dará a los fondos."
+    },
+    "refinance_comparison": {
+      "badge": "04 — Comparativa con Refinanciamiento",
+      "heading": "HomeSafe Second® vs. Refinanciamiento Cash-Out",
+      "p1": "Un refinanciamiento con retiro de efectivo (cash-out) reemplaza su primera hipoteca existente por un préstamo completamente nuevo.",
+      "p2": "Esto puede resultar desfavorable si ya disfruta de una tasa de interés atractiva.",
+      "p3": "Por ejemplo, si su primera hipoteca actual tiene una tasa fija baja, refinanciar todo el saldo a las tasas vigentes hoy aumentaría sus costos de financiamiento.",
+      "p4": "HomeSafe Second le permite acceder al capital disponible sin necesidad de refinanciar su primera hipoteca.",
+      "p5": "Su primera hipoteca original se mantiene bajo sus condiciones actuales, mientras que HomeSafe Second se incorpora como un segundo gravamen."
+    },
+    "use_of_proceeds": {
+      "badge": "05 — Uso de los Fondos",
+      "heading": "¿En Qué Puede Utilizar los Fondos?",
+      "subheading": "Los propietarios pueden destinar los fondos disponibles a diversas necesidades financieras, sujeto a los requisitos del programa.",
+      "items": [
+        "Mejoras o remodelaciones en el hogar",
+        "Pago de deudas con tasas de interés elevadas",
+        "Gastos médicos o imprevistos",
+        "Gastos de jubilación",
+        "Constitución de reservas financieras",
+        "Ayuda a familiares",
+        "Compras de gran volumen",
+        "Otras necesidades financieras personales"
+      ],
+      "closing_part1": "Su ",
+      "closing_link": "especialista en préstamos de MyLoanDesk",
+      "closing_part2": " puede ayudarle a evaluar si utilizar el capital de su vivienda resulta conveniente para su caso particular."
+    },
+    "faq": {
+      "badge": "06 — Claridad",
+      "heading": "Preguntas Frecuentes sobre HomeSafe Second®",
+      "items": [
+        {
+          "q": "¿Qué es HomeSafe Second?",
+          "a": "HomeSafe Second es una hipoteca revertida en segundo gravamen que permite a propietarios elegibles acceder a una parte del capital de su vivienda manteniendo intacta su primera hipoteca existente."
+        },
+        {
+          "q": "¿Debo hacer pagos mensuales con HomeSafe Second?",
+          "a": "HomeSafe Second no exige pagos mensuales de principal e intereses sobre el nuevo préstamo.* Los intereses y cargos aplicables se acumulan al saldo de la deuda. Los prestatarios deben continuar cumpliendo con las obligaciones del préstamo, tales como pagar impuestos sobre la propiedad, seguro de vivienda, cuotas de HOA aplicables, mantener el inmueble y mantenerse al día con la primera hipoteca existente."
+        },
+        {
+          "q": "¿HomeSafe Second reemplaza mi hipoteca actual?",
+          "a": "No. HomeSafe Second se constituye como un segundo gravamen. Su primera hipoteca permanece vigente y continúa bajo sus condiciones originales."
+        },
+        {
+          "q": "¿Quién califica para HomeSafe Second?",
+          "a": "HomeSafe Second está pensado para propietarios de mayor edad con suficiente capital acumulado. El requisito de edad mínima suele ser de 55 años o más, con edades superiores en ciertos estados (60 en Washington y 62 en Texas). También aplican requisitos de propiedad, plusvalía, crédito, hipoteca existente y ocupación."
+        },
+        {
+          "q": "¿Cuánto capital puedo disponer?",
+          "a": "Los propietarios calificados pueden acceder a entre $50,000 y $1 millón, dependiendo de las pautas del programa, tasación del inmueble, gravámenes vigentes, capital disponible, edad y otros factores de calificación."
+        },
+        {
+          "q": "¿La tasa de interés de HomeSafe Second es fija?",
+          "a": "Sí. HomeSafe Second ofrece una tasa de interés fija, a diferencia de muchos HELOCs que manejan tasas variables. Los intereses se acumulan sobre el saldo insoluto del préstamo según las condiciones pactadas."
+        },
+        {
+          "q": "¿En qué se diferencia HomeSafe Second de un HELOC?",
+          "a": "Una de las diferencias más significativas es el pago mensual exigido. Un HELOC tradicional generalmente requiere pagos mensuales tras retirar fondos y suele operar a tasa variable. HomeSafe Second es una hipoteca revertida en segundo gravamen con tasa fija y sin pagos mensuales obligatorios de principal e intereses sobre el nuevo préstamo.*"
+        },
+        {
+          "q": "¿Puedo obtener HomeSafe Second si ya tengo una hipoteca?",
+          "a": "Sí, sujeto a calificación. HomeSafe Second está concebido específicamente para permitir a propietarios elegibles conservar su primera hipoteca vigente mientras obtienen capital adicional. Debe mantenerse al día con su hipoteca actual y continuar realizando sus pagos correspondientes."
+        },
+        {
+          "q": "¿El saldo de HomeSafe Second aumenta con el tiempo?",
+          "a": "Sí. Dado que no se requiere efectuar pagos mensuales de principal e intereses en HomeSafe Second,* los intereses y cargos aplicables se van sumando al saldo del préstamo. Esto implica que la deuda puede incrementarse con el tiempo y el capital remanente en su vivienda puede disminuir."
+        },
+        {
+          "q": "¿Cuándo se debe liquidar HomeSafe Second?",
+          "a": "El préstamo se vuelve exigible y pagadero al ocurrir un evento de vencimiento según los documentos contractuales (por ejemplo, si el prestatario vende la propiedad o deja de habitarla como residencia principal). Su especialista le detallará las cláusulas de vencimiento antes de formalizar la operación."
+        },
+        {
+          "q": "¿HomeSafe Second es un HELOC?",
+          "a": "No. HomeSafe Second no es un HELOC ni un préstamo tradicional sobre el capital. Es una hipoteca revertida en segundo gravamen diseñada para propietarios mayores calificados."
+        }
+      ]
+    },
+    "low_rate_cta": {
+      "heading": "¿Ya Cuenta con una Tasa Hipotecaria Baja?",
+      "p1": "No tiene por qué renunciar a ella solo para acceder a su capital. Si obtuvo su primera hipoteca cuando las tasas eran más bajas, reemplazarla mediante un refinanciamiento cash-out no es la única vía para disponer de su plusvalía.",
+      "benefits_box_title": "HomeSafe Second le permite:",
+      "benefits": [
+        "Conservar su primera hipoteca existente.",
+        "Mantener su tasa de interés y términos actuales.",
+        "Acceder a una porción de su capital disponible.",
+        "Evitar añadir un pago hipotecario mensual obligatorio sobre el segundo préstamo.*"
+      ],
+      "compare_note_part1": "Por ello, vale la pena comparar HomeSafe Second con un ",
+      "compare_link": "HELOC",
+      "compare_note_part2": ", un préstamo sobre el capital o un refinanciamiento cash-out antes de tomar una decisión.",
+      "fit_heading": "Compruebe si HomeSafe Second® se Adapta a su Situación",
+      "fit_p1": "Su vivienda representa uno de sus activos financieros más importantes. Si necesita disponer de liquidez, la primera pregunta no debería ser simplemente: \"¿Puedo pedir prestado sobre mi casa?\"",
+      "quote": "\"¿Cuál es la mejor manera de acceder a mi capital sin alterar innecesariamente la hipoteca que ya tengo?\"",
+      "fit_p2": "MyLoanDesk puede analizar su situación y ayudarle a comparar HomeSafe Second, HELOCs, préstamos sobre el capital, refinanciamientos cash-out y otras alternativas hipotecarias disponibles.",
+      "footnote": "Sin compromiso para evaluar sus opciones disponibles."
+    },
+    "disclosures": {
+      "title": "Avisos Legales Importantes",
+      "p1": "*No se aplica ningún pago mensual obligatorio de principal e intereses al préstamo HomeSafe Second, siempre que el prestatario continúe cumpliendo con todas las obligaciones del crédito. Los intereses y cargos aplicables se acumulan al saldo de la deuda.",
+      "p2": "Los prestatarios deben continuar cumpliendo con los términos de su primera hipoteca existente y de los documentos de HomeSafe Second, lo que incluye el pago de impuestos sobre la propiedad, seguro de vivienda, cuotas de asociación de propietarios aplicables, el mantenimiento del inmueble y el cumplimiento de los requisitos de ocupación.",
+      "p3": "HomeSafe Second® es un producto propietario de hipoteca revertida en segundo gravamen. La disponibilidad del programa, edad mínima, montos de préstamo, tasas de interés, comisiones, elegibilidad de la propiedad y criterios de suscripción varían y están sujetos a cambios.",
+      "p4": "HomeSafe Second no es un HELOC ni un préstamo tradicional sobre el capital. No todos los prestatarios o inmuebles calificarán.",
+      "p5": "Consulte los documentos de su préstamo y a un profesional hipotecario calificado sobre los términos específicos aplicables a su operación."
+    },
+    "schema": {
+      "webpage_name": "HomeSafe Second® | Acceda al Capital sin Refinanciar",
+      "webpage_description": "Guía completa sobre el financiamiento de hipoteca revertida en segundo gravamen HomeSafe Second® para propietarios elegibles que buscan acceder a su capital sin refinanciar su primera hipoteca existente.",
+      "product_name": "Hipoteca Revertida HomeSafe Second®",
+      "product_description": "Una hipoteca revertida propietaria en segundo gravamen que permite a propietarios calificados de 55+ años acceder a entre $50,000 y $1,000,000 de capital de vivienda con tasa de interés fija y sin pago mensual obligatorio de principal e intereses sobre el nuevo crédito.",
+      "faq_q1_question": "¿Qué es HomeSafe Second?",
+      "faq_q1_answer": "HomeSafe Second es una hipoteca revertida en segundo gravamen que permite a propietarios elegibles acceder a una parte del capital de su vivienda manteniendo intacta su primera hipoteca existente.",
+      "faq_q2_question": "¿Debo hacer pagos mensuales con HomeSafe Second?",
+      "faq_q2_answer": "HomeSafe Second no exige pagos mensuales de principal e intereses sobre el nuevo préstamo.* Los intereses y cargos aplicables se acumulan al saldo de la deuda. Los prestatarios deben continuar cumpliendo con las obligaciones del préstamo, tales como pagar impuestos sobre la propiedad, seguro de vivienda, cuotas de HOA aplicables, mantener el inmueble y mantenerse al día con la primera hipoteca existente.",
+      "faq_q3_question": "¿HomeSafe Second reemplaza mi hipoteca actual?",
+      "faq_q3_answer": "No. HomeSafe Second se constituye como un segundo gravamen. Su primera hipoteca permanece vigente y continúa bajo sus condiciones originales.",
+      "faq_q4_question": "¿Quién califica para HomeSafe Second?",
+      "faq_q4_answer": "HomeSafe Second está pensado para propietarios de mayor edad con suficiente capital acumulado. El requisito de edad mínima suele ser de 55 años o más, con edades superiores en ciertos estados (60 en Washington y 62 en Texas). También aplican requisitos de propiedad, plusvalía, crédito, hipoteca existente y ocupación.",
+      "faq_q5_question": "¿Cuánto capital puedo disponer?",
+      "faq_q5_answer": "Los propietarios calificados pueden acceder a entre $50,000 y $1 millón, dependiendo de las pautas del programa, tasación del inmueble, gravámenes vigentes, capital disponible, edad y otros factores de calificación.",
+      "faq_q6_question": "¿La tasa de interés de HomeSafe Second es fija?",
+      "faq_q6_answer": "Sí. HomeSafe Second ofrece una tasa de interés fija, a diferencia de muchos HELOCs que manejan tasas variables. Los intereses se acumulan sobre el saldo insoluto del préstamo según las condiciones pactadas.",
+      "faq_q7_question": "¿En qué se diferencia HomeSafe Second de un HELOC?",
+      "faq_q7_answer": "Una de las diferencias más significativas es el pago mensual exigido. Un HELOC tradicional generalmente requiere pagos mensuales tras retirar fondos y suele operar a tasa variable. HomeSafe Second es una hipoteca revertida en segundo gravamen con tasa fija y sin pagos mensuales obligatorios de principal e intereses sobre el nuevo préstamo.*",
+      "faq_q8_question": "¿Puedo obtener HomeSafe Second si ya tengo una hipoteca?",
+      "faq_q8_answer": "Sí, sujeto a calificación. HomeSafe Second está concebido específicamente para permitir a propietarios elegibles conservar su primera hipoteca vigente mientras obtienen capital adicional. Debe mantenerse al día con su hipoteca actual y continuar realizando sus pagos correspondientes.",
+      "faq_q9_question": "¿El saldo de HomeSafe Second aumenta con el tiempo?",
+      "faq_q9_answer": "Sí. Dado que no se requiere efectuar pagos mensuales de principal e intereses en HomeSafe Second,* los intereses y cargos aplicables se van sumando al saldo del préstamo. Esto implica que la deuda puede incrementarse con el tiempo y el capital remanente en su vivienda puede disminuir.",
+      "faq_q10_question": "¿Cuándo se debe liquidar HomeSafe Second?",
+      "faq_q10_answer": "El préstamo se vuelve exigible y pagadero al ocurrir un evento de vencimiento según los documentos contractuales (por ejemplo, si el prestatario vende la propiedad o deja de habitarla como residencia principal). Su especialista le detallará las cláusulas de vencimiento antes de formalizar la operación.",
+      "faq_q11_question": "¿HomeSafe Second es un HELOC?",
+      "faq_q11_answer": "No. HomeSafe Second no es un HELOC ni un préstamo tradicional sobre el capital. Es una hipoteca revertida en segundo gravamen diseñada para propietarios mayores calificados."
+    }
+  },
+  "ITINLoans": {
+    "meta": {
+      "title": "Préstamos ITIN - Financiamiento de Vivienda sin Seguro Social | MyLoanDesk",
+      "description": "Explore programas hipotecarios con ITIN diseñados para prestatarios con Número de Identificación Personal del Contribuyente que no califican para financiamiento tradicional.",
+      "og_title": "Préstamos ITIN - Financiamiento de Vivienda sin SSN | MyLoanDesk",
+      "og_description": "Compre o refinancie una vivienda usando su Número de Identificación Personal del Contribuyente (ITIN). Opciones flexibles para trabajadores independientes, 1099 y crédito alternativo.",
+      "og_alt": "Préstamos ITIN - MyLoanDesk",
+      "twitter_title": "Préstamos ITIN - Financiamiento de Vivienda sin SSN | MyLoanDesk",
+      "twitter_description": "Compre o refinancie una vivienda usando su Número de Identificación Personal del Contribuyente (ITIN)."
+    },
+    "breadcrumbs": {
+      "home": "Inicio",
+      "loan_programs": "Programas de Préstamos",
+      "itin_loans": "Préstamos ITIN"
+    },
+    "hero": {
+      "badge": "Soluciones Hipotecarias Especializadas con ITIN",
+      "title_main": "Préstamos ITIN",
+      "title_sub": "Financiamiento de Vivienda sin Número de Seguro Social",
+      "p1": "No contar con un número de Seguro Social no significa necesariamente que la casa propia esté fuera de su alcance.",
+      "p2": "MyLoanDesk ofrece acceso a programas hipotecarios con ITIN diseñados para prestatarios que utilizan un Número de Identificación Personal del Contribuyente (ITIN) y tal vez no califiquen para el financiamiento hipotecario tradicional. Ya sea que compre su primera vivienda, se mude o refinancie una hipoteca existente, le ayudaremos a evaluar alternativas de financiamiento basadas en su situación individual.",
+      "cta_options": "Ver mis Opciones de Préstamo",
+      "cta_calc": "Calcular Pago Inicial"
+    },
+    "overview": {
+      "badge": "01 — Resumen",
+      "heading": "¿Qué es un Préstamo ITIN?",
+      "p1": "Un préstamo ITIN es una opción hipotecaria para prestatarios elegibles que poseen un Número de Identificación Personal del Contribuyente en lugar de un número de Seguro Social.",
+      "p2": "Las hipotecas con ITIN generalmente se ofrecen mediante programas de crédito especializados en lugar de programas de agencias hipotecarias tradicionales.",
+      "p3": "Los requisitos de calificación varían según el prestamista y pueden evaluar factores como ingresos, historial laboral o de trabajo por cuenta propia, historial crediticio, activos, pago inicial y la propiedad a financiar.",
+      "side_card": {
+        "title": "Factores Clave de Calificación",
+        "items": [
+          "Ingresos Verificables o Documentación Alternativa Calificada",
+          "Historial de Empleo o Trabajo por Cuenta Propia",
+          "Crédito Establecido en EE. UU. o Crédito Alternativo",
+          "Pago Inicial y Reservas para Costos de Cierre",
+          "Residencia Principal Elegible o Tipo de Propiedad"
+        ]
+      }
+    },
+    "who_benefits": {
+      "badge": "02 — Elegibilidad",
+      "heading": "¿Quién Puede Beneficiarse de un Préstamo ITIN?",
+      "intro": "Una hipoteca con ITIN puede ser una opción a considerar si usted:",
+      "items": [
+        "Tiene un ITIN válido",
+        "No tiene un número de Seguro Social",
+        "Desea comprar una residencia principal u otra propiedad elegible",
+        "Cuenta con ingresos comprobables o documentación alternativa válida",
+        "Dispone de fondos para el pago inicial requerido y costos de cierre",
+        "Tiene crédito en EE. UU. o crédito alternativo aceptable, según el programa"
+      ],
+      "side_card": {
+        "title": "Adaptado a sus Circunstancias",
+        "desc": "La situación de cada prestatario es única; nuestra labor es identificar los programas que mejor se adapten a sus circunstancias particulares.",
+        "cta_button": "Ver Opciones de Préstamo ITIN"
+      }
+    },
+    "program_options": {
+      "badge": "03 — Programas",
+      "heading": "Opciones de Préstamos ITIN",
+      "subtitle": "Según el prestamista y el perfil del solicitante, puede haber programas disponibles para:",
+      "cards": [
+        {
+          "title": "Compra de Vivienda",
+          "desc": "Financie la compra de una propiedad elegible utilizando su ITIN."
+        },
+        {
+          "title": "Refinanciamiento",
+          "desc": "Explore opciones de refinanciamiento para una propiedad existente."
+        },
+        {
+          "title": "Trabajadores Independientes",
+          "desc": "Ciertos programas ofrecen vías alternativas para documentar ingresos de dueños de negocios y trabajadores por cuenta propia."
+        },
+        {
+          "title": "Crédito Alternativo",
+          "desc": "Algunos prestamistas evalúan historiales de crédito alternativos cuando el crédito tradicional es limitado."
+        }
+      ]
+    },
+    "documentation": {
+      "badge": "04 — Documentación",
+      "heading": "¿Qué Documentos Pueden Requerirse?",
+      "subtitle": "Los requisitos varían, pero a los prestatarios se les puede solicitar:",
+      "items": [
+        "Documento válido de ITIN",
+        "Identificación emitida por el gobierno",
+        "Comprobante de ingresos o documentación alternativa calificada",
+        "Estados de cuenta bancarios o de activos",
+        "Información laboral o de su negocio",
+        "Historial de pagos de vivienda",
+        "Comprobantes de pago inicial y reservas de fondos"
+      ],
+      "footnote": "Le indicaremos con exactitud qué se requiere tras revisar su situación."
+    },
+    "value_prop": {
+      "badge": "05 — Propuesta de Valor",
+      "heading": "¿Por Qué Elegir MyLoanDesk?",
+      "p1": "El financiamiento con ITIN no es una solución genérica aplicable a todos por igual.",
+      "p2": "En lugar de limitarle a los criterios de un solo prestamista, MyLoanDesk evalúa múltiples programas crediticios disponibles para ayudarle a identificar opciones adaptadas a sus ingresos, activos, perfil crediticio, inmueble y metas.",
+      "side_card": {
+        "title": "¿Tiene ITIN y desea comprar una vivienda?",
+        "desc": "Permítanos ayudarle a explorar programas hipotecarios especializados estructurados en torno a su perfil individual.",
+        "cta_button": "Ver Opciones de Préstamo ITIN"
+      }
+    },
+    "calculator": {
+      "badge": "Estimador Interactivo con ITIN",
+      "heading": "Estime su Pago Inicial y Cuota con ITIN",
+      "subheading": "Calcule su requerimiento estimado de pago inicial y su cuota mensual de principal e intereses.",
+      "price_label": "Precio Objetivo de la Vivienda ($)",
+      "price_placeholder": "350000",
+      "down_label": "Pago Inicial (%)",
+      "down_placeholder": "15",
+      "rate_label": "Tasa Estimada (%)",
+      "rate_placeholder": "7.5",
+      "submit_button": "Calcular Estimación Hipotecaria con ITIN",
+      "down_payment_needed": "Pago Inicial Necesario",
+      "estimated_loan_amount": "Monto Estimado del Préstamo",
+      "monthly_pi": "P&I Mensual Estimado",
+      "per_month": "/ mes",
+      "footnote": "* La estimación cubre únicamente principal e intereses. Los impuestos sobre la propiedad, seguros y cuotas de HOA varían según la ubicación del inmueble."
+    },
+    "faq": {
+      "badge": "06 — Claridad",
+      "heading": "Preguntas Frecuentes sobre Préstamos ITIN",
+      "items": [
+        {
+          "q": "¿Puedo obtener una hipoteca con un ITIN?",
+          "a": "Potencialmente sí. Diversos prestamistas especializados ofrecen programas hipotecarios para solicitantes elegibles que utilizan un ITIN en lugar de un número de Seguro Social."
+        },
+        {
+          "q": "¿Los préstamos ITIN requieren un pago inicial elevado?",
+          "a": "Los requisitos de pago inicial varían según el prestamista, tipo de propiedad, perfil crediticio y programa de préstamo."
+        },
+        {
+          "q": "¿Pueden calificar los trabajadores independientes?",
+          "a": "Sí, según el programa. Algunos prestamistas ofrecen opciones de documentación de ingresos alternativa para trabajadores por cuenta propia calificados."
+        },
+        {
+          "q": "¿Necesito crédito establecido en EE. UU.?",
+          "a": "Los requisitos varían. Algunos programas consideran prestatarios con crédito estadounidense establecido, mientras que otros admiten documentación de crédito alternativo."
+        },
+        {
+          "q": "¿Puede MyLoanDesk ayudarme a determinar si califico?",
+          "a": "Sí. Comparta los detalles de su situación y evaluaremos las opciones disponibles para usted."
+        }
+      ]
+    },
+    "bottom_cta": {
+      "heading": "¿Listo para Explorar Opciones Hipotecarias con ITIN?",
+      "cta_button": "Ver mis Opciones de Préstamo",
+      "disclaimer": "Los programas de préstamos, requisitos de calificación, tasas, términos y disponibilidad varían según el prestamista y están sujetos a cambios. Todos los préstamos están sujetos a suscripción y aprobación."
+    },
+    "schema": {
+      "webpage_name": "Préstamos ITIN - Financiamiento de Vivienda sin Seguro Social | MyLoanDesk",
+      "webpage_description": "Guía completa y herramientas de cálculo para programas hipotecarios con ITIN diseñados para prestatarios sin SSN.",
+      "product_name": "Préstamo Hipotecario ITIN",
+      "product_description": "Financiamiento de vivienda Non-QM especializado diseñado para prestatarios que utilizan un Número de Identificación Personal del Contribuyente (ITIN) en lugar de un número de Seguro Social.",
+      "faq_q1_question": "¿Puedo obtener una hipoteca con un ITIN?",
+      "faq_q1_answer": "Sí. Prestamistas especializados Non-QM ofrecen programas hipotecarios para solicitantes calificados que declaran impuestos con un ITIN en lugar de un número de Seguro Social.",
+      "faq_q2_question": "¿Los préstamos ITIN requieren un pago inicial elevado?",
+      "faq_q2_answer": "Los requisitos de pago inicial suelen oscilar entre el 10% y el 20%, según el prestamista, tipo de propiedad, historial de crédito y si se utilizan declaraciones de impuestos estándar o extractos bancarios para comprobar ingresos.",
+      "faq_q3_question": "¿Pueden calificar los trabajadores independientes para un préstamo ITIN?",
+      "faq_q3_answer": "Sí. Muchos programas con ITIN ofrecen vías de documentación alternativa como 12 a 24 meses de estados de cuenta bancarios personales o comerciales, o formularios 1099.",
+      "faq_q4_question": "¿Necesito crédito establecido en EE. UU. para calificar?",
+      "faq_q4_answer": "No siempre. Aunque tener un puntaje de crédito establecido permite acceder a mayores límites de préstamo sobre valor, muchos programas aceptan historiales de crédito alternativos como comprobantes de pago puntual de renta, servicios públicos y seguros.",
+      "faq_q5_question": "¿Puede MyLoanDesk ayudarme a determinar si califico?",
+      "faq_q5_answer": "Sí. Comparta con nosotros sus ingresos, documentación y cronograma de compra, y nuestro equipo comparará opciones en nuestra red de prestamistas especializados con ITIN."
+    }
   }
 }

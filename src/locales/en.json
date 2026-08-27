@@ -4938,5 +4938,1296 @@
       "faq_q8_question": "Can I use an FHA loan to buy a fixer-upper?",
       "faq_q8_answer": "Yes — the FHA 203(k) rehabilitation loan lets you finance the purchase price and the cost of eligible repairs or renovations in a single loan, based on the property's value after the work is completed, rather than requiring separate financing for the purchase and the renovation."
     }
+  },
+  "FHAStreamlineLoans": {
+    "meta": {
+      "title": "FHA Streamline Refinance — Lower Your Rate, Less Paperwork | MyLoanDesk",
+      "description": "Refinance your existing FHA loan with reduced documentation and, in most cases, no new appraisal. Use our free calculator to see your potential monthly savings before you apply.",
+      "og_title": "FHA Streamline Refinance — Lower Your Rate, Less Paperwork | MyLoanDesk",
+      "og_description": "If you already have an FHA loan, a Streamline Refinance can lower your rate with reduced documentation and often no new appraisal. Estimate your savings with our free calculator.",
+      "og_alt": "FHA Streamline Refinance - MyLoanDesk",
+      "twitter_title": "FHA Streamline Refinance — Lower Your Rate, Less Paperwork | MyLoanDesk",
+      "twitter_description": "Refinance your existing FHA loan with reduced documentation and no appraisal in most cases."
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "loan_programs": "Loan Programs",
+      "fha_streamline": "FHA Streamline Refinance"
+    },
+    "back_to_programs": "Back to Loan Programs",
+    "title": "FHA Streamline Refinance",
+    "hero": {
+      "subtitle": "Already have an FHA loan? Refinancing may be simpler than you think.",
+      "description": "If you currently have an FHA loan, an FHA Streamline Refinance is one of the fastest, lowest-hassle ways to lower your rate or switch out of an adjustable-rate loan. Reduced documentation and, in most cases, no new appraisal make it a genuinely \"streamlined\" process compared to a standard refinance.",
+      "bullet1": "No new appraisal required in most cases",
+      "bullet2": "Reduced income and asset documentation",
+      "bullet3": "Possible partial refund of your original upfront MIP",
+      "disclaimer": "Estimate only. Assumes a 30-year term at both rates and does not include mortgage insurance or closing costs. FHA generally requires a Streamline Refinance to provide a clear net tangible benefit, often reflected as a meaningful reduction in combined payment. Actual eligibility and savings depend on full underwriting."
+    },
+    "calculator": {
+      "badge": "Streamline Savings Calculator",
+      "subheading": "See your estimated new payment and monthly savings.",
+      "balance_label": "Current loan balance",
+      "balance_placeholder": "310,000",
+      "current_rate_label": "Current rate",
+      "current_rate_placeholder": "7.25",
+      "new_rate_label": "New est. rate",
+      "new_rate_placeholder": "6.25",
+      "current_pmt_label": "Current est. monthly P&I",
+      "new_pmt_label": "New est. monthly P&I",
+      "per_month": "/mo",
+      "est_savings_label": "Estimated monthly savings",
+      "higher_payment_label": "Higher monthly payment",
+      "reduction_label": "% payment reduction",
+      "verdict_empty": "Enter your numbers to calculate",
+      "verdict_no_savings": "This rate doesn't lower your payment — may not meet FHA's net tangible benefit test",
+      "verdict_strong": "Likely meets a typical net tangible benefit threshold",
+      "verdict_modest": "Modest reduction — talk to a loan officer about whether this qualifies"
+    },
+    "what_is": {
+      "title": "What Is an FHA Streamline Refinance?",
+      "p1": "An FHA Streamline Refinance is a simplified refinance option available exclusively to homeowners who already have an FHA loan. Because you're already an established FHA borrower, the program is built to reduce the paperwork and steps involved compared to a standard refinance — most notably, it typically doesn't require a new home appraisal.",
+      "p2": "The tradeoff is that FHA Streamline Refinances are rate-and-term only — they're designed to improve your loan's rate or structure, not to pull cash out of your home's equity. FHA also requires the refinance to provide a genuine \"net tangible benefit\" to you, which typically means a meaningful reduction in your combined payment, or a move from an adjustable to a fixed rate."
+    },
+    "how_it_works": {
+      "title": "How an FHA Streamline Refinance Works",
+      "steps": [
+        {
+          "step": "1",
+          "title": "Confirm eligibility.",
+          "desc": "Your current FHA loan generally needs to be at least 210 days old with at least six payments made."
+        },
+        {
+          "step": "2",
+          "title": "Run the numbers.",
+          "desc": "We compare your current payment to your new estimated payment to confirm a net tangible benefit."
+        },
+        {
+          "step": "3",
+          "title": "Submit reduced documentation.",
+          "desc": "Since you're already an established FHA borrower, the paperwork is typically lighter than your original loan."
+        },
+        {
+          "step": "4",
+          "title": "Skip the appraisal, in most cases.",
+          "desc": "Your new loan amount is generally based on your existing balance rather than a fresh appraised value."
+        },
+        {
+          "step": "5",
+          "title": "Close on your new loan.",
+          "desc": "Sign your final documents and start on your new, hopefully lower, monthly payment."
+        }
+      ]
+    },
+    "highlights": {
+      "title": "Program Highlights",
+      "subtitle": "What's included:",
+      "items": [
+        "No new appraisal required in most cases",
+        "Reduced income and asset documentation compared to a standard refinance",
+        "Available to convert an adjustable-rate FHA loan to a fixed rate",
+        "Possible partial refund of your original upfront MIP if refinancing early in your loan",
+        "Often a faster, simpler closing process than your original FHA purchase loan"
+      ]
+    },
+    "advantages": {
+      "title": "Strategic Advantages:",
+      "p1": "Skipping the appraisal isn't just a convenience — it also removes one of the biggest sources of refinance delay and uncertainty, since there's no risk of the deal falling apart over an appraisal that comes in lower than expected.",
+      "p2": "If you took out your FHA loan when rates were meaningfully higher, a Streamline Refinance can be one of the fastest ways to capture a lower rate without restarting the full mortgage process from scratch.",
+      "p3": "Refinancing within the first few years of your original loan may also qualify you for a partial refund of your original upfront MIP, effectively lowering the cost of refinancing again."
+    },
+    "who_this_is_for": {
+      "title": "Who an FHA Streamline Refinance Is For",
+      "items": [
+        "Current FHA borrowers whose rate is meaningfully higher than today’s rates",
+        "Borrowers on an adjustable-rate FHA loan who want the stability of a fixed rate",
+        "Homeowners who want to avoid a new appraisal and the uncertainty that comes with it",
+        "Borrowers who don’t need to pull cash out — just improve their rate or terms",
+        "Anyone who took out their FHA loan within the last few years and hasn’t refinanced since"
+      ]
+    },
+    "comparison": {
+      "title": "FHA Streamline vs. Standard Refinance Options",
+      "th_streamline": "FHA Streamline",
+      "th_fha_standard": "Standard FHA Refinance",
+      "th_conv": "Conventional Refinance",
+      "rows": {
+        "existing_loan": {
+          "label": "Requires existing FHA loan",
+          "streamline": "Yes",
+          "fha_standard": "No",
+          "conv": "No"
+        },
+        "appraisal": {
+          "label": "New appraisal required",
+          "streamline": "Typically no",
+          "fha_standard": "Yes",
+          "conv": "Yes"
+        },
+        "documentation": {
+          "label": "Documentation",
+          "streamline": "Reduced",
+          "fha_standard": "Full",
+          "conv": "Full"
+        },
+        "cash_out": {
+          "label": "Cash-out available",
+          "streamline": "No",
+          "fha_standard": "Yes",
+          "conv": "Yes"
+        },
+        "best_for": {
+          "label": "Best for",
+          "streamline": "Lowering rate on an existing FHA loan quickly",
+          "fha_standard": "FHA borrowers who also want cash out",
+          "conv": "Non-FHA borrowers or those leaving FHA mortgage insurance"
+        }
+      }
+    },
+    "eligibility": {
+      "title": "Eligibility Requirements",
+      "items": [
+        "Must currently have an FHA-insured mortgage",
+        "Loan generally must be at least 210 days old with at least six payments made",
+        "Mortgage payment history typically must be current, with no recent late payments",
+        "The refinance must provide a net tangible benefit under FHA guidelines",
+        "Cannot be used to take cash out of your home’s equity"
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "q": "What is an FHA Streamline Refinance?",
+          "a": "An FHA Streamline Refinance is a simplified refinance option available only to homeowners who already have an FHA loan. It's designed to lower your rate or payment with reduced documentation and, in most cases, no new home appraisal, compared to a standard refinance."
+        },
+        {
+          "q": "Do I need an appraisal for an FHA Streamline Refinance?",
+          "a": "In most cases, no. FHA Streamline Refinances typically don't require a new appraisal, which is one of the program's biggest advantages — your loan amount is generally based on your existing loan balance rather than a new appraised value."
+        },
+        {
+          "q": "What is the net tangible benefit requirement?",
+          "a": "FHA requires that a Streamline Refinance provide a clear financial benefit to the borrower — commonly a reduction in combined principal, interest, and mortgage insurance payment, or a move from an adjustable-rate to a fixed-rate loan. This protects borrowers from refinancing into a loan that doesn’t actually improve their position."
+        },
+        {
+          "q": "Can I get cash out with an FHA Streamline Refinance?",
+          "a": "No. FHA Streamline Refinances are rate-and-term refinances only, meaning they’re designed to improve your rate or terms, not to pull cash out of your equity. Borrowers who want to access equity would instead look at an FHA cash-out refinance."
+        },
+        {
+          "q": "Do I need to requalify with income and credit documentation?",
+          "a": "Many FHA Streamline Refinances involve reduced income and asset documentation compared to a standard refinance, since you're already an established FHA borrower. Specific requirements can vary by lender and loan scenario."
+        },
+        {
+          "q": "What is the FHA upfront MIP refund?",
+          "a": "If you refinance within roughly the first three years of your original FHA loan, you may be eligible for a partial refund of your original upfront mortgage insurance premium, which is credited toward the upfront MIP on your new loan — reducing your overall refinance cost."
+        },
+        {
+          "q": "How long must I have had my current FHA loan before refinancing?",
+          "a": "FHA generally requires your current loan to be at least 210 days old and for you to have made at least six monthly payments before you can complete a Streamline Refinance."
+        },
+        {
+          "q": "Can I convert an adjustable-rate FHA loan to fixed with a Streamline Refinance?",
+          "a": "Yes. Converting from an adjustable-rate FHA loan to a fixed-rate FHA loan is one of the ways a Streamline Refinance can satisfy FHA's net tangible benefit requirement, even if the immediate payment change is modest."
+        }
+      ]
+    },
+    "cta": {
+      "apply_now": "Apply Now →",
+      "contact_us": "Contact Us Now",
+      "note": "Already have an FHA loan and curious what today's rate could save you? Reach out — a loan officer can check your numbers the same day."
+    },
+    "schema": {
+      "webpage_name": "FHA Streamline Refinance | MyLoanDesk",
+      "webpage_description": "Comprehensive guide and monthly savings calculator for FHA Streamline Refinance mortgage programs.",
+      "product_name": "FHA Streamline Refinance",
+      "product_description": "A simplified rate-and-term refinance program for existing FHA borrowers featuring reduced documentation, net tangible benefit requirements, and typically no appraisal requirement.",
+      "faq_q1_question": "What is an FHA Streamline Refinance?",
+      "faq_q1_answer": "An FHA Streamline Refinance is a simplified refinance option available only to homeowners who already have an FHA loan. It's designed to lower your rate or payment with reduced documentation and, in most cases, no new home appraisal, compared to a standard refinance.",
+      "faq_q2_question": "Do I need an appraisal for an FHA Streamline Refinance?",
+      "faq_q2_answer": "In most cases, no. FHA Streamline Refinances typically don't require a new appraisal, which is one of the program's biggest advantages — your loan amount is generally based on your existing loan balance rather than a new appraised value.",
+      "faq_q3_question": "What is the net tangible benefit requirement?",
+      "faq_q3_answer": "FHA requires that a Streamline Refinance provide a clear financial benefit to the borrower — commonly a reduction in combined principal, interest, and mortgage insurance payment, or a move from an adjustable-rate to a fixed-rate loan. This protects borrowers from refinancing into a loan that doesn’t actually improve their position.",
+      "faq_q4_question": "Can I get cash out with an FHA Streamline Refinance?",
+      "faq_q4_answer": "No. FHA Streamline Refinances are rate-and-term refinances only, meaning they’re designed to improve your rate or terms, not to pull cash out of your equity. Borrowers who want to access equity would instead look at an FHA cash-out refinance.",
+      "faq_q5_question": "Do I need to requalify with income and credit documentation?",
+      "faq_q5_answer": "Many FHA Streamline Refinances involve reduced income and asset documentation compared to a standard refinance, since you're already an established FHA borrower. Specific requirements can vary by lender and loan scenario.",
+      "faq_q6_question": "What is the FHA upfront MIP refund?",
+      "faq_q6_answer": "If you refinance within roughly the first three years of your original FHA loan, you may be eligible for a partial refund of your original upfront mortgage insurance premium, which is credited toward the upfront MIP on your new loan — reducing your overall refinance cost.",
+      "faq_q7_question": "How long must I have had my current FHA loan before refinancing?",
+      "faq_q7_answer": "FHA generally requires your current loan to be at least 210 days old and for you to have made at least six monthly payments before you can complete a Streamline Refinance.",
+      "faq_q8_question": "Can I convert an adjustable-rate FHA loan to fixed with a Streamline Refinance?",
+      "faq_q8_answer": "Yes. Converting from an adjustable-rate FHA loan to a fixed-rate FHA loan is one of the ways a Streamline Refinance can satisfy FHA's net tangible benefit requirement, even if the immediate payment change is modest."
+    }
+  },
+  "FixAndFlipLoans": {
+    "meta": {
+      "title": "Fix and Flip Loans for Real Estate Investors | MyLoanDesk",
+      "description": "Fix and flip loans with fast closings, rehab budget financing, and interest-only payments. Use our free deal calculator to check your numbers against the 70% rule before you apply.",
+      "og_title": "Fix and Flip Loans for Real Estate Investors | MyLoanDesk",
+      "og_description": "Fast, flexible financing for house flippers — purchase, rehab, and resell without tying up your own cash. Run your numbers with our free fix and flip deal calculator.",
+      "og_alt": "Fix and Flip Loans - MyLoanDesk",
+      "twitter_title": "Fix and Flip Loans for Real Estate Investors | MyLoanDesk",
+      "twitter_description": "Fast, flexible financing for house flippers — purchase, rehab, and resell without tying up your own cash."
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "loan_programs": "Loan Programs",
+      "fix_and_flip": "Fix and Flip Loans"
+    },
+    "back_to_programs": "Back to Loan Programs",
+    "title": "Fix and Flip Loans",
+    "hero": {
+      "subtitle": "Fast, flexible financing for real estate investors.",
+      "description": "Whether you're renovating your first investment property or managing multiple projects each year, a Fix and Flip Loan from MyLoanDesk provides the financing you need to purchase, rehab, and resell quickly — without tying up your own cash for months at a time. Loans are underwritten around the property and the deal, not a lengthy personal income file, so approvals and closings move at investor speed.",
+      "bullet1": "Close in as little as 7–14 days",
+      "bullet2": "Up to 100% of rehab costs financed",
+      "bullet3": "No prepayment penalty",
+      "disclaimer": "Estimate only, based on common industry guidelines (up to 90% of purchase price, 100% of rehab costs, capped at roughly 70–75% of ARV). Actual loan amount, rate, and terms depend on underwriting, your experience, and the specific property."
+    },
+    "calculator": {
+      "badge": "Fix & Flip Deal Calculator",
+      "subheading": "Check your numbers against the 70% rule.",
+      "purchase_label": "Purchase price",
+      "purchase_placeholder": "220,000",
+      "rehab_label": "Estimated rehab budget",
+      "rehab_placeholder": "60,000",
+      "arv_label": "After-repair value (ARV)",
+      "arv_placeholder": "410,000",
+      "total_cost": "Total project cost",
+      "max_loan": "Est. max loan amount",
+      "cash_needed": "Est. cash needed at closing",
+      "ratio_label": "Purchase + rehab as % of ARV",
+      "verdict_empty": "Enter all three numbers to run your deal",
+      "verdict_low": "Within the 70% rule — a healthy margin for a typical flip",
+      "verdict_mid": "Slightly above 70% — still workable, but margin is tighter",
+      "verdict_high": "Above 80% of ARV — talk to a loan officer before moving forward"
+    },
+    "what_is": {
+      "title": "What Is a Fix and Flip Loan?",
+      "p1": "A fix and flip loan is a short-term, asset-based loan designed for real estate investors who buy distressed or undervalued properties, renovate them, and resell them for a profit — often within six to eighteen months. Unlike a conventional mortgage, which is underwritten around your personal income, tax returns, and long-term ability to repay over 15 or 30 years, a fix and flip loan is evaluated primarily around the deal itself: the purchase price, the rehab budget, and the property's projected after-repair value (ARV).",
+      "p2": "This structure is what makes fix and flip financing — sometimes called hard money financing or rehab loans — a fundamentally different tool than a traditional mortgage. It's built for speed and flexibility, not for holding a property for decades."
+    },
+    "how_it_works": {
+      "title": "How Fix and Flip Financing Works",
+      "steps": [
+        {
+          "step": "1",
+          "title": "Submit your deal.",
+          "text": "Share the purchase price, your rehab scope and budget, and your estimated after-repair value."
+        },
+        {
+          "step": "2",
+          "title": "Get approved fast.",
+          "text": "Underwriting focuses on the property and the numbers, so approvals often happen in days, not weeks."
+        },
+        {
+          "step": "3",
+          "title": "Close and fund.",
+          "text": "Purchase funds are disbursed at closing; rehab funds are typically held in reserve."
+        },
+        {
+          "step": "4",
+          "title": "Draw as you renovate.",
+          "text": "Rehab funds are released in draws as work is completed and inspected, keeping your own cash free."
+        },
+        {
+          "step": "5",
+          "title": "Sell and payoff.",
+          "text": "Once the property sells, the loan is paid off in full — with no prepayment penalty for paying it off early."
+        }
+      ]
+    },
+    "highlights": {
+      "title": "Program Highlights",
+      "subtitle": "What's included:",
+      "items": [
+        "Short-term financing, typically 6–18 months",
+        "Rehab budget financed alongside the purchase price",
+        "Interest-only payments during the loan term",
+        "Fast closings, often within 7–14 days",
+        "No prepayment penalty when you sell or refinance early",
+        "Financing available for single-family, multifamily, and small mixed-use properties",
+        "Programs available for both new and experienced investors"
+      ]
+    },
+    "advantages": {
+      "title": "Strategic Advantages:",
+      "p1": "Speed is often the deciding factor in a competitive investment market. Fast approvals and streamlined underwriting mean you can move on a property before another investor does, without waiting on a 30–45 day conventional close.",
+      "p2": "Because the rehab budget is financed as part of the loan, you're not forced to pull from personal reserves mid-project — draws are released as work is completed, keeping your cash available for your next deal.",
+      "p3": "Interest-only payments during the loan term also keep monthly holding costs predictable and low, which protects your margin if a renovation or sale takes a little longer than planned."
+    },
+    "who_this_is_for": {
+      "title": "Who Fix and Flip Loans Are For",
+      "items": [
+        "Investors purchasing a distressed or outdated property below market value",
+        "Experienced flippers managing multiple simultaneous projects",
+        "First-time investors with a solid rehab plan and realistic ARV estimate",
+        "Buyers who need to close quickly to win a competitive off-market or auction deal",
+        "Investors who don't want a renovation project tying up a conventional mortgage"
+      ]
+    },
+    "comparison": {
+      "title": "Fix and Flip Loans vs. Other Financing Options",
+      "th_fix_flip": "Fix and Flip Loan",
+      "th_conventional": "Conventional Mortgage",
+      "th_heloc": "HELOC / Cash-Out Refi",
+      "rows": {
+        "underwriting": {
+          "label": "Underwriting focus",
+          "fix_flip": "The property and the deal",
+          "conventional": "Personal income and credit",
+          "heloc": "Existing home equity"
+        },
+        "closing_time": {
+          "label": "Typical closing time",
+          "fix_flip": "7–14 days",
+          "conventional": "30–45 days",
+          "heloc": "2–4 weeks"
+        },
+        "rehab_financed": {
+          "label": "Rehab budget financed",
+          "fix_flip": "Often up to 100%",
+          "conventional": "Not typically included",
+          "heloc": "Depends on available equity"
+        },
+        "payment_structure": {
+          "label": "Payment structure",
+          "fix_flip": "Interest-only",
+          "conventional": "Fully amortizing",
+          "heloc": "Varies by product"
+        },
+        "best_for": {
+          "label": "Best for",
+          "fix_flip": "Short-term rehab and resell",
+          "conventional": "Long-term ownership",
+          "heloc": "Investors with substantial existing equity"
+        }
+      }
+    },
+    "eligibility": {
+      "title": "Eligibility Requirements",
+      "items": [
+        "Credit score of approximately 620+ (deal strength can offset a lower score)",
+        "A clear rehab budget and scope of work",
+        "A realistic, supportable after-repair value (ARV) estimate",
+        "Sufficient reserves to cover holding costs during the project",
+        "No minimum flipping experience required, though experience can improve your leverage and terms"
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "q": "What credit score do I need for a fix and flip loan?",
+          "a": "Most fix and flip lenders look for a credit score of 620 or higher, though some programs accept lower scores if the deal itself — the purchase price, rehab budget, and after-repair value — is strong. Because these loans are asset-based, your credit score typically matters less than it would for a conventional mortgage."
+        },
+        {
+          "q": "How much of the rehab budget can be financed?",
+          "a": "Many fix and flip programs finance 100% of the rehab budget in addition to a portion of the purchase price, released in draws as work is completed and inspected. The exact amount depends on the deal's loan-to-cost and loan-to-ARV ratios."
+        },
+        {
+          "q": "What is the 70% rule in house flipping?",
+          "a": "The 70% rule is a rule of thumb many investors use to evaluate a flip: your purchase price plus rehab costs should generally not exceed 70% of the property's after-repair value (ARV). Deals within that range tend to leave enough margin for financing costs, holding costs, selling costs, and profit."
+        },
+        {
+          "q": "How fast can a fix and flip loan close?",
+          "a": "Because fix and flip loans are underwritten primarily around the property and the deal rather than extensive personal income documentation, many close in as little as 7 to 14 days — significantly faster than a conventional 30 to 45 day mortgage timeline."
+        },
+        {
+          "q": "Do I need real estate investing experience to qualify?",
+          "a": "No — many fix and flip lenders work with first-time flippers, though your experience level can affect your available leverage, rate, and terms. Investors with a track record of completed flips often qualify for higher loan-to-cost ratios."
+        },
+        {
+          "q": "Are fix and flip loan payments interest-only?",
+          "a": "Most fix and flip loans are structured as interest-only for the duration of the loan term, which keeps monthly holding costs lower while you complete the renovation and prepare the property for resale."
+        },
+        {
+          "q": "Is there a penalty for paying off a fix and flip loan early?",
+          "a": "Most fix and flip loans carry no prepayment penalty, since the entire model is built around a short holding period — lenders expect and plan for an early payoff once the property sells."
+        },
+        {
+          "q": "Can I use a fix and flip loan for a rental property instead?",
+          "a": "Fix and flip loans are designed for short-term rehab-and-resell projects. If your plan is to renovate and hold the property as a rental, a DSCR loan or a fix-to-rent refinance is typically a better long-term fit once the renovation is complete."
+        }
+      ]
+    },
+    "cta": {
+      "apply_now": "Apply Now →",
+      "contact_us": "Contact Us Now",
+      "note": "Have a deal you're evaluating right now? Send us the numbers — a loan officer will run them with you the same day."
+    },
+    "schema": {
+      "webpage_name": "Fix and Flip Loans for Real Estate Investors | MyLoanDesk",
+      "webpage_description": "Comprehensive guide and deal evaluation calculator for short-term fix and flip real estate investor financing.",
+      "product_name": "Fix and Flip Loan",
+      "product_description": "Short-term, asset-based bridge financing for real estate investors designed to cover property acquisition and up to 100% of renovation costs.",
+      "faq_q1_question": "What credit score do I need for a fix and flip loan?",
+      "faq_q1_answer": "Most fix and flip lenders look for a credit score of 620 or higher, though some programs accept lower scores if the deal itself — the purchase price, rehab budget, and after-repair value — is strong. Because these loans are asset-based, your credit score typically matters less than it would for a conventional mortgage.",
+      "faq_q2_question": "How much of the rehab budget can be financed?",
+      "faq_q2_answer": "Many fix and flip programs finance 100% of the rehab budget in addition to a portion of the purchase price, released in draws as work is completed and inspected. The exact amount depends on the deal's loan-to-cost and loan-to-ARV ratios.",
+      "faq_q3_question": "What is the 70% rule in house flipping?",
+      "faq_q3_answer": "The 70% rule is a rule of thumb many investors use to evaluate a flip: your purchase price plus rehab costs should generally not exceed 70% of the property's after-repair value (ARV). Deals within that range tend to leave enough margin for financing costs, holding costs, selling costs, and profit.",
+      "faq_q4_question": "How fast can a fix and flip loan close?",
+      "faq_q4_answer": "Because fix and flip loans are underwritten primarily around the property and the deal rather than extensive personal income documentation, many close in as little as 7 to 14 days — significantly faster than a conventional 30 to 45 day mortgage timeline.",
+      "faq_q5_question": "Do I need real estate investing experience to qualify?",
+      "faq_q5_answer": "No — many fix and flip lenders work with first-time flippers, though your experience level can affect your available leverage, rate, and terms. Investors with a track record of completed flips often qualify for higher loan-to-cost ratios.",
+      "faq_q6_question": "Are fix and flip loan payments interest-only?",
+      "faq_q6_answer": "Most fix and flip loans are structured as interest-only for the duration of the loan term, which keeps monthly holding costs lower while you complete the renovation and prepare the property for resale.",
+      "faq_q7_question": "Is there a penalty for paying off a fix and flip loan early?",
+      "faq_q7_answer": "Most fix and flip loans carry no prepayment penalty, since the entire model is built around a short holding period — lenders expect and plan for an early payoff once the property sells.",
+      "faq_q8_question": "Can I use a fix and flip loan for a rental property instead?",
+      "faq_q8_answer": "Fix and flip loans are designed for short-term rehab-and-resell projects. If your plan is to renovate and hold the property as a rental, a DSCR loan or a fix-to-rent refinance is typically a better long-term fit once the renovation is complete."
+    }
+  },
+  "ForeignNationalLoans": {
+    "meta": {
+      "title": "Foreign National & International Buyer Loans | MyLoanDesk",
+      "description": "U.S. property financing for international buyers and non-U.S. citizens. Access specialized mortgage programs for second homes, vacation properties, and rentals.",
+      "og_title": "Foreign National Mortgage Solutions in U.S. | MyLoanDesk",
+      "og_description": "Finance U.S. real estate without a U.S. credit score or Social Security number. Options for foreign income, foreign asset reserves, and rental cash-flow loans.",
+      "og_alt": "Foreign National Loans - MyLoanDesk",
+      "twitter_title": "Foreign National Mortgage Solutions in U.S. | MyLoanDesk",
+      "twitter_description": "Finance U.S. real estate without a U.S. credit score or SSN. Specialized programs for international investors and second-home buyers."
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "loan_programs": "Loan Programs",
+      "foreign_national": "Foreign National Loans"
+    },
+    "back_to_programs": "Back to Loan Programs",
+    "title": "Foreign National & International Buyer Loans",
+    "hero": {
+      "badge": "International Real Estate Financing",
+      "title_main": "Foreign National & International Buyer Loans",
+      "title_sub": "U.S. Property Financing for International Buyers",
+      "p1": "You don't necessarily need to be a U.S. citizen or permanent resident to finance real estate in the United States.",
+      "p2": "MyLoanDesk provides access to mortgage programs designed for eligible foreign nationals and international buyers purchasing or refinancing U.S. real estate. Whether you're purchasing a vacation home, second home, rental property, or investment property, we'll help you explore available financing options.",
+      "cta_quote": "Explore Foreign National Loan Options",
+      "cta_calc": "Calculate Down Payment"
+    },
+    "overview": {
+      "badge": "01 — Overview",
+      "heading": "What Is a Foreign National Mortgage?",
+      "p1": "A foreign national mortgage is designed for eligible non-U.S. borrowers who want to finance property in the United States but may not meet the documentation requirements of a traditional U.S. mortgage.",
+      "p2": "Instead of relying exclusively on U.S. income, credit, or tax documentation, specialized lenders may consider international income, assets, credit references, and other documentation.",
+      "side_card": {
+        "title": "Who May Benefit?",
+        "intro": "Foreign national financing may be appropriate for eligible borrowers who:",
+        "items": [
+          "Live primarily outside the United States",
+          "Want to purchase U.S. real estate",
+          "Have limited or no U.S. credit history",
+          "Earn income outside the United States",
+          "Hold assets in foreign financial institutions",
+          "Want to purchase U.S. investment or second-home property"
+        ]
+      }
+    },
+    "property_options": {
+      "badge": "02 — Program Categories",
+      "heading": "Property Financing Options",
+      "subtitle": "Depending on the lender and borrower profile, financing may be available for:",
+      "cards": [
+        {
+          "title": "Investment Properties",
+          "desc": "Purchase U.S. rental property and build a real estate portfolio."
+        },
+        {
+          "title": "Second Homes",
+          "desc": "Finance an eligible second home or vacation property."
+        },
+        {
+          "title": "Condominiums",
+          "desc": "Programs may be available for eligible condominium properties."
+        },
+        {
+          "title": "Rental-Income-Based",
+          "desc": "Certain investment programs focus primarily on property rental income rather than traditional U.S. employment."
+        }
+      ]
+    },
+    "credit_flexibility": {
+      "badge": "03 — Credit Flexibility",
+      "heading": "No U.S. Credit History?",
+      "p1": "That doesn't automatically prevent financing.",
+      "p2": "Certain foreign national programs are specifically designed for borrowers without traditional U.S. credit profiles. Depending on the lender, international credit references or other documentation may be considered.",
+      "cta_button": "Discuss My Options"
+    },
+    "documentation": {
+      "badge": "04 — Documentation",
+      "heading": "What Documentation Is Typically Needed?",
+      "subtitle": "Requirements vary by lender but may include:",
+      "items": [
+        "Passport or acceptable identification",
+        "Visa documentation when applicable",
+        "Foreign income documentation",
+        "Bank and asset statements",
+        "International credit references",
+        "Proof of funds",
+        "Property documentation",
+        "U.S. banking arrangements when required"
+      ],
+      "footnote": "* Foreign documents may require translation or additional verification. We'll tell you what is required after reviewing your situation."
+    },
+    "value_prop": {
+      "badge": "05 — Value Proposition",
+      "heading": "Why MyLoanDesk?",
+      "p1": "International borrowers don't fit neatly into traditional mortgage guidelines.",
+      "p2": "We work to identify financing programs that accommodate foreign income, assets, credit history, residency status, and the intended use of the property.",
+      "side_card": {
+        "title": "Buying property in the United States from abroad?",
+        "desc": "Let us help you evaluate specialized non-resident mortgage programs.",
+        "cta_button": "Discuss My Financing Options"
+      }
+    },
+    "calculator": {
+      "badge": "International Buyer Estimator",
+      "heading": "Estimate Your U.S. Property Financing",
+      "subheading": "Calculate your projected down payment requirement, loan balance, and liquidity reserves in USD.",
+      "price_label": "Property Purchase Price ($ USD)",
+      "price_placeholder": "600000",
+      "down_label": "Down Payment (%) — Standard ~30%",
+      "down_placeholder": "30",
+      "reserves_label": "Asset Reserve Target",
+      "options": {
+        "months_6": "6 Months PITIA Reserves",
+        "months_12": "12 Months PITIA Reserves",
+        "months_18": "18 Months PITIA Reserves"
+      },
+      "submit_button": "Calculate Foreign National Loan Terms",
+      "down_payment_needed": "Down Payment Needed",
+      "estimated_loan_amount": "Estimated Loan Amount",
+      "target_reserve": "Target Liquidity Reserve",
+      "footnote": "* Foreign national programs generally require 25%–35% down payment and 6–12 months of principal, interest, taxes, and insurance (PITIA) liquid reserves held in foreign or U.S. accounts."
+    },
+    "faq": {
+      "badge": "06 — Clarity",
+      "heading": "Foreign National Mortgage FAQs",
+      "items": [
+        {
+          "q": "Can a non-U.S. citizen buy property in the United States?",
+          "a": "Generally, foreign ownership itself does not prevent someone from purchasing U.S. real estate, although financing, tax, legal, and other requirements can differ."
+        },
+        {
+          "q": "Do I need U.S. credit?",
+          "a": "Not necessarily. Some foreign national mortgage programs permit alternative credit documentation."
+        },
+        {
+          "q": "Can foreign income be used?",
+          "a": "Potentially. Documentation and verification requirements vary by lender."
+        },
+        {
+          "q": "Can I finance a U.S. investment property?",
+          "a": "Yes, subject to lender, borrower, and property requirements."
+        },
+        {
+          "q": "Can I qualify based on rental income?",
+          "a": "Certain investment-property programs may use the property's rental income as an important part of qualification."
+        }
+      ]
+    },
+    "bottom_cta": {
+      "heading": "Investing in U.S. Real Estate? Start With the Financing.",
+      "cta_button": "Get My Loan Options",
+      "disclaimer": "Foreign national lending requirements, eligible residency classifications, documentation, property types, rates, terms, and availability vary by lender. Borrowers should consult appropriate tax and legal professionals regarding the implications of U.S. property ownership."
+    },
+    "schema": {
+      "webpage_name": "Foreign National & International Buyer Loans | MyLoanDesk",
+      "webpage_description": "Specialized U.S. mortgage financing programs for non-resident international buyers, foreign investors, and vacation property purchasers.",
+      "product_name": "Foreign National Mortgage Loan",
+      "product_description": "Non-QM mortgage program designed for non-U.S. citizens allowing qualification using international assets, foreign income, or property rental revenue without U.S. credit history or SSN.",
+      "faq_q1_question": "Can a non-U.S. citizen buy property in the United States?",
+      "faq_q1_answer": "Generally, foreign ownership itself does not prevent someone from purchasing U.S. real estate, although financing, tax, legal, and other requirements can differ.",
+      "faq_q2_question": "Do I need U.S. credit to qualify for a foreign national mortgage?",
+      "faq_q2_answer": "Not necessarily. Some foreign national mortgage programs permit alternative credit documentation, international credit reference letters, or rental cash-flow qualification.",
+      "faq_q3_question": "Can foreign income and foreign banking assets be used?",
+      "faq_q3_answer": "Potentially yes. Lenders evaluate verified foreign income and asset statements, which may require certified English translation and international wire documentation.",
+      "faq_q4_question": "Can I finance a U.S. investment property as a foreign national?",
+      "faq_q4_answer": "Yes, subject to lender, borrower, and property eligibility requirements across single-family, condo, and multifamily assets.",
+      "faq_q5_question": "Can I qualify based on rental income rather than personal employment?",
+      "faq_q5_answer": "Certain investment-property programs, such as Foreign National DSCR loans, focus on the property's projected or actual rental cash flow rather than personal global income."
+    }
+  },
+  "HelocLoans": {
+    "meta": {
+      "title": "Home Equity Loans & HELOCs | MyLoanDesk",
+      "description": "Explore home equity loans and HELOC options. Compare ways to access your home equity while keeping your existing first mortgage in place.",
+      "og_title": "Home Equity Loans & HELOCs | MyLoanDesk",
+      "og_description": "Access your home equity without selling your home or replacing your current low mortgage rate.",
+      "og_alt": "Home Equity Loans & HELOCs - MyLoanDesk",
+      "twitter_title": "Home Equity Loans & HELOCs | MyLoanDesk",
+      "twitter_description": "Access your home equity without selling your home or replacing your current low mortgage rate."
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "loan_programs": "Loan Programs",
+      "heloc": "HELOC & Home Equity Loans"
+    },
+    "hero": {
+      "badge": "Home Equity Financing Solutions",
+      "title_main": "Home Equity Loans & HELOCs",
+      "title_sub": "Access Your Home Equity Without Selling Your Home",
+      "p1": "Your home may be one of your largest financial assets. A home equity loan or Home Equity Line of Credit (HELOC) can allow you to access a portion of that equity while continuing to own and live in your home.",
+      "p2": "MyLoanDesk helps homeowners explore home equity financing options for renovations, major expenses, debt consolidation, investment opportunities, and other financial needs.",
+      "cta_chat": "Explore My Home Equity Options",
+      "cta_calc": "Calculate Available Equity"
+    },
+    "fundamentals": {
+      "badge": "01 — Fundamentals",
+      "heading": "What Is Home Equity?",
+      "p1": "Home equity is generally the difference between your home's current value and the amount you still owe on loans secured by the property.",
+      "p2": "The amount you may actually be able to borrow depends on factors such as property value, existing mortgage balances, credit, income, loan program requirements, and combined loan-to-value limits.",
+      "example_title": "Illustrative Example",
+      "current_value_label": "Current Home Value:",
+      "mortgage_balance_label": "Mortgage Balance:",
+      "approx_equity_label": "Approximate Home Equity:"
+    },
+    "two_ways": {
+      "badge": "02 — Program Comparison",
+      "heading": "Two Ways to Access Your Home Equity",
+      "heloc": {
+        "badge": "Revolving Credit Line",
+        "title": "Home Equity Line of Credit (HELOC)",
+        "p1": "A HELOC provides a revolving line of credit secured by your home. Instead of receiving all the money at once, you can generally draw funds as needed during the available draw period, subject to the terms of your loan.",
+        "p2": "A HELOC may be useful when you want ongoing access to your equity rather than one large lump sum. Interest rates on HELOCs are commonly variable, so payments and borrowing costs can change over time.",
+        "useful_for_title": "HELOCs May Be Useful For:",
+        "use_cases": [
+          "Home improvements and renovations",
+          "Education expenses",
+          "Emergency reserves",
+          "Large purchases",
+          "Business or investment needs",
+          "Consolidating higher-cost debt"
+        ],
+        "cta_button": "Explore HELOC Options"
+      },
+      "loan": {
+        "badge": "Fixed Installment Loan",
+        "title": "Home Equity Loan",
+        "p1": "A home equity loan typically provides a lump sum at closing with scheduled payments over a specified term.",
+        "p2": "This may be a better fit when you know approximately how much money you need and prefer a more predictable repayment structure.",
+        "useful_for_title": "Home Equity Loans May Be Useful For:",
+        "use_cases": [
+          "Major renovations",
+          "Large one-time expenses",
+          "Debt consolidation",
+          "Investment opportunities",
+          "Education expenses",
+          "Other significant financial needs"
+        ],
+        "cta_button": "Explore Home Equity Loan Options"
+      }
+    },
+    "matrix": {
+      "badge": "03 — Feature Matrix",
+      "heading": "HELOC vs. Home Equity Loan",
+      "th_feature": "Feature",
+      "th_heloc": "HELOC",
+      "th_loan": "Home Equity Loan",
+      "rows": {
+        "access": {
+          "feature": "Access to money",
+          "heloc": "Draw funds as needed",
+          "loan": "Lump sum"
+        },
+        "structure": {
+          "feature": "Structure",
+          "heloc": "Revolving credit line",
+          "loan": "Installment loan"
+        },
+        "rate": {
+          "feature": "Interest rate",
+          "heloc": "Often variable",
+          "loan": "May be fixed, depending on program"
+        },
+        "best_suited": {
+          "feature": "Best suited for",
+          "heloc": "Ongoing or uncertain expenses",
+          "loan": "Known one-time expenses"
+        },
+        "first_mortgage": {
+          "feature": "Existing first mortgage",
+          "heloc": "Typically remains in place",
+          "loan": "Typically remains in place"
+        }
+      },
+      "footnote": "* Neither option is automatically better. The right choice depends on how much equity you need, how you plan to use the money, and how you want to repay it."
+    },
+    "rate_preservation": {
+      "badge": "04 — Rate Preservation Strategy",
+      "heading": "Keep Your Existing First Mortgage",
+      "p1": "One of the biggest reasons homeowners consider a HELOC or home equity loan is that you may not need to refinance your existing first mortgage.",
+      "p2": "For homeowners who already have an attractive first-mortgage rate, replacing the entire mortgage just to access equity may not make sense. A second-lien home equity solution can potentially allow you to keep your existing first mortgage in place while accessing additional equity separately.",
+      "cta_button": "Consult an Advisor"
+    },
+    "video_section": {
+      "badge": "Video Breakdown",
+      "heading": "See How Home Equity Financing Works",
+      "subheading": "Learn the difference between a HELOC and a home equity loan, how home equity is calculated, and which type of financing may fit different situations."
+    },
+    "underwriting_variables": {
+      "badge": "05 — Underwriting Variables",
+      "heading": "How Much Equity Can I Access?",
+      "subheading": "The amount available depends on the specific loan program and your financial profile.",
+      "cards": [
+        {
+          "title": "Property Value",
+          "desc": "The current market value of your home."
+        },
+        {
+          "title": "Current Mortgage Balance",
+          "desc": "How much you currently owe against the property."
+        },
+        {
+          "title": "Combined Loan-to-Value (CLTV)",
+          "desc": "Your existing mortgage plus the proposed home equity financing compared with the property's value."
+        },
+        {
+          "title": "Credit Profile",
+          "desc": "Credit requirements vary by lender and program."
+        },
+        {
+          "title": "Income & Ability to Repay",
+          "desc": "Income and documentation requirements depend on the financing program."
+        }
+      ]
+    },
+    "calculator": {
+      "badge": "Interactive Equity Estimator",
+      "heading": "Calculate Your Estimated CLTV",
+      "subheading": "See how your proposed home equity borrowing compares against your property's current market value.",
+      "home_value_label": "Estimated Home Value ($)",
+      "home_value_placeholder": "e.g. 700000",
+      "mortgage_balance_label": "Current Mortgage Balance ($)",
+      "mortgage_balance_placeholder": "e.g. 350000",
+      "desired_equity_label": "Desired Equity Amount ($)",
+      "desired_equity_placeholder": "e.g. 100000",
+      "submit_button": "Calculate Estimated CLTV",
+      "total_debt_label": "Total Combined Debt",
+      "cltv_label": "Estimated CLTV",
+      "remaining_buffer_label": "Remaining Equity Buffer",
+      "verdict_good": "Excellent! An estimated CLTV under 80%–85% generally qualifies for competitive HELOC or Home Equity Loan financing rates.",
+      "verdict_high": "Your estimated CLTV is above 85%. Certain specialized programs still allow higher CLTV limits depending on credit and income profiles."
+    },
+    "faq": {
+      "badge": "06 — Clarity",
+      "heading": "Home Equity Financing FAQ",
+      "items": [
+        {
+          "q": "What is the difference between a HELOC and a home equity loan?",
+          "a": "A HELOC is generally a revolving credit line that lets you access funds as needed, while a home equity loan generally provides the borrowed funds as a lump sum."
+        },
+        {
+          "q": "Do I have to refinance my current mortgage?",
+          "a": "Not necessarily. HELOCs and home equity loans are commonly structured as separate liens, allowing an existing first mortgage to remain in place, subject to program requirements."
+        },
+        {
+          "q": "How much equity do I need?",
+          "a": "Requirements vary by lender and program. The amount available will depend partly on your home's value, current mortgage balance, and the maximum combined loan-to-value allowed."
+        },
+        {
+          "q": "Can I use home equity to renovate my house?",
+          "a": "Yes. Home improvements and renovations are common reasons homeowners use home equity financing."
+        },
+        {
+          "q": "Can I use a HELOC for debt consolidation?",
+          "a": "Homeowners may use HELOC proceeds for debt consolidation. However, moving unsecured debt to financing secured by your home creates additional risk and should be considered carefully."
+        },
+        {
+          "q": "Does a HELOC have a fixed interest rate?",
+          "a": "Many HELOCs have variable interest rates, although specific terms and features vary by lender and program."
+        },
+        {
+          "q": "Can I get a HELOC on an investment property?",
+          "a": "Some lenders offer home equity financing on investment properties, but eligibility, loan-to-value limits, rates, and other requirements may differ from those for a primary residence."
+        }
+      ]
+    },
+    "bottom_cta": {
+      "heading": "Turn Your Home Equity Into Financial Flexibility",
+      "subheading": "You have worked to build equity in your home. MyLoanDesk can help you explore ways to access it without automatically replacing your existing first mortgage. Whether you need a HELOC for ongoing access to funds or a home equity loan for a one-time expense, we'll help you compare available options and understand the differences.",
+      "cta_button": "Get My Home Equity Options"
+    },
+    "schema": {
+      "webpage_name": "Home Equity Loans & HELOCs | MyLoanDesk",
+      "webpage_description": "Comprehensive guide and equity borrowing calculator for Home Equity Lines of Credit (HELOC) and fixed home equity installment loans.",
+      "product_name": "Home Equity Loan & HELOC",
+      "product_description": "Second-lien financing solutions allowing homeowners to access accumulated home equity via revolving credit lines or fixed-rate lump sums while preserving their low first mortgage rate.",
+      "faq_q1_question": "What is the difference between a HELOC and a home equity loan?",
+      "faq_q1_answer": "A HELOC is generally a revolving credit line that lets you access funds as needed during a draw period, while a home equity loan generally provides the borrowed funds as an upfront lump sum with fixed monthly payments.",
+      "faq_q2_question": "Do I have to refinance my current mortgage to get a HELOC?",
+      "faq_q2_answer": "No. HELOCs and home equity loans are structured as second mortgages, allowing your existing low-rate first mortgage to remain completely intact.",
+      "faq_q3_question": "How much equity do I need to qualify?",
+      "faq_q3_answer": "Borrowing limits depend on your property value, current mortgage balance, and maximum combined loan-to-value (CLTV) ratios, typically allowing combined financing up to 80%–90% of your home value.",
+      "faq_q4_question": "Can I use home equity to renovate my house?",
+      "faq_q4_answer": "Yes. Home improvements and renovations are among the most common reasons homeowners use home equity lines of credit or fixed loans.",
+      "faq_q5_question": "Can I use a HELOC for debt consolidation?",
+      "faq_q5_answer": "Yes. Homeowners frequently use equity financing to consolidate higher-interest credit cards and personal loans into a single lower-rate payment.",
+      "faq_q6_question": "Does a HELOC have a fixed interest rate?",
+      "faq_q6_answer": "Most HELOCs carry variable interest rates pegged to the Prime Rate, though some programs offer fixed-rate draw locks for specific withdrawal amounts.",
+      "faq_q7_question": "Can I get a HELOC on an investment property?",
+      "faq_q7_answer": "Yes. Select lenders offer home equity lines of credit and second mortgages on second homes and investment properties, though CLTV limits and qualification parameters may be slightly stricter than primary residences."
+    }
+  },
+  "HomeSafeSecond": {
+    "meta": {
+      "title": "HomeSafe Second® | Access Home Equity Without Refinancing",
+      "description": "Explore HomeSafe Second®, a second-lien reverse mortgage that lets eligible homeowners access equity without replacing their first mortgage or adding a required monthly mortgage payment.*",
+      "og_title": "HomeSafe Second® | Access Home Equity Without Refinancing",
+      "og_description": "Explore HomeSafe Second®, a second-lien reverse mortgage that lets eligible homeowners access equity without replacing their first mortgage or adding a required monthly mortgage payment.*",
+      "og_alt": "Homeowner comparing HomeSafe Second reverse mortgage and HELOC options for accessing home equity",
+      "twitter_title": "HomeSafe Second® | Access Home Equity Without Refinancing",
+      "twitter_description": "Access $50,000 to $1M in home equity without refinancing your existing first mortgage or adding a required monthly mortgage payment.*"
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "loan_programs": "Loan Programs",
+      "homesafe_second": "HomeSafe Second"
+    },
+    "hero": {
+      "badge": "Second-Lien Reverse Mortgage",
+      "title_main": "HomeSafe Second®:",
+      "title_sub": "Access Your Equity Without Replacing Your First Mortgage",
+      "lead": "Keep your current first mortgage and access your home equity without adding a required monthly mortgage payment.*",
+      "p1": "If you've built substantial equity in your home but don't want to refinance your existing mortgage, HomeSafe Second® gives eligible homeowners another way to access that equity.",
+      "p2_part1": "HomeSafe Second is a second-lien ",
+      "p2_link": "reverse mortgage",
+      "p2_part2": " designed for eligible older homeowners. Instead of replacing your current mortgage, it sits behind it as a second lien.",
+      "p3": "That means you may be able to keep the mortgage rate you already have, access a portion of your home's equity, and avoid adding a required monthly mortgage payment on the new loan.*",
+      "p4": "For homeowners with a low-rate first mortgage, that can be an important difference.",
+      "cta_check": "Check My Eligibility",
+      "cta_specialist": "Talk to a Mortgage Specialist"
+    },
+    "advantages": {
+      "badge": "01 — Core Advantages",
+      "heading": "Why Consider HomeSafe Second®?",
+      "cards": {
+        "no_monthly_payment": {
+          "title": "No Required Monthly Mortgage Payment*",
+          "p1_part1": "Unlike a traditional ",
+          "p1_link": "HELOC",
+          "p1_part2": " or home equity loan, HomeSafe Second does not require monthly principal and interest payments on the new loan.*",
+          "p2": "Interest and applicable charges accrue to the loan balance over time.",
+          "p3": "You must continue to meet the terms of the loan, including paying property taxes, homeowners insurance, applicable HOA charges, maintaining the property, and continuing to make any required payments on your existing first mortgage."
+        },
+        "keep_first_mortgage": {
+          "title": "Keep Your Existing First Mortgage",
+          "p1": "Have a first mortgage with a rate you don't want to give up? You don't have to refinance it simply to access your equity.",
+          "p2": "HomeSafe Second leaves your existing first mortgage in place, allowing you to access available equity through a separate second-lien reverse mortgage.",
+          "p3": "This can be especially attractive to homeowners who secured low mortgage rates in previous years."
+        },
+        "access_equity": {
+          "title": "Access $50,000 to $1 Million",
+          "p1": "Depending on program requirements and your individual circumstances, qualified homeowners may be able to access $50,000 to $1 million of their available home equity options.",
+          "factors_intro": "The amount available depends on factors such as:",
+          "factors": [
+            "Your age",
+            "Property value",
+            "Existing mortgage balance",
+            "Available home equity",
+            "Property type & location",
+            "Current program guidelines"
+          ]
+        },
+        "fixed_rate": {
+          "title": "Fixed Interest Rate",
+          "p1": "HomeSafe Second offers a fixed interest rate, providing greater predictability than a traditional HELOC that may have a variable rate.",
+          "p2": "The interest rate does not change simply because market interest rates increase.",
+          "p3": "Because monthly principal and interest payments are not required, accrued interest is generally added to the outstanding loan balance."
+        },
+        "non_recourse": {
+          "title": "Non-Recourse Protection",
+          "p1": "HomeSafe Second includes non-recourse protection.",
+          "p2": "Generally, when the loan becomes due and payable, the borrower or estate will not be required to repay more than the value of the home, subject to the terms and conditions of the loan."
+        }
+      }
+    },
+    "eligibility": {
+      "badge": "02 — Eligibility & Fit",
+      "heading": "Who Is HomeSafe Second® Designed For?",
+      "intro": "HomeSafe Second may be worth considering if you:",
+      "items": [
+        "Meet the applicable minimum age requirement",
+        "Have substantial equity in your home",
+        "Are current on your existing first mortgage",
+        "Want to access home equity without refinancing your first mortgage",
+        "Want to avoid adding a required monthly mortgage payment on the new loan*",
+        "Prefer a fixed-rate option over a variable-rate HELOC",
+        "Need funds for home improvements or major expenses",
+        "Want additional financial flexibility during retirement",
+        "Want to consolidate certain higher-interest debts",
+        "Want access to equity while preserving your existing mortgage"
+      ],
+      "side_card": {
+        "tag": "Program Parameters",
+        "title": "Minimum Age Requirements",
+        "intro": "HomeSafe Second is generally available to homeowners:",
+        "state_most": "Most Eligible States",
+        "state_most_age": "Age 55+",
+        "state_texas": "Texas",
+        "state_texas_age": "Age 62+",
+        "footnote": "* Additional borrower, property, equity, credit, and program requirements apply."
+      }
+    },
+    "comparison": {
+      "badge": "03 — Program Comparison",
+      "heading": "HomeSafe Second® vs. a Traditional HELOC",
+      "th_feature": "Feature",
+      "th_homesafe": "HomeSafe Second®",
+      "th_heloc": "Traditional HELOC",
+      "rows": {
+        "monthly_payment": {
+          "feature": "Required monthly payment on new loan",
+          "homesafe": "No*",
+          "heloc": "Typically yes after funds are drawn"
+        },
+        "first_mortgage": {
+          "feature": "First mortgage",
+          "homesafe": "Remains in place",
+          "heloc": "Remains in place"
+        },
+        "interest_rate": {
+          "feature": "Interest rate",
+          "homesafe": "Fixed",
+          "heloc": "Typically variable"
+        },
+        "loan_type": {
+          "feature": "Type of loan",
+          "homesafe": "Second-lien reverse mortgage",
+          "heloc": "Home equity line of credit"
+        },
+        "access_funds": {
+          "feature": "Access to funds",
+          "homesafe": "Based on approved loan structure",
+          "heloc": "Revolving credit line"
+        },
+        "interest_accrual": {
+          "feature": "Interest",
+          "homesafe": "Accrues to loan balance",
+          "heloc": "Typically paid through monthly payments"
+        },
+        "age_req": {
+          "feature": "Age requirement",
+          "homesafe": "Yes",
+          "heloc": "Generally no reverse-mortgage age requirement"
+        },
+        "non_recourse": {
+          "feature": "Non-recourse protection",
+          "homesafe": "Yes, subject to loan terms",
+          "heloc": "Generally no"
+        },
+        "best_suited": {
+          "feature": "Best suited for",
+          "homesafe": "Eligible older homeowners seeking equity without a required new monthly mortgage payment*",
+          "heloc": "Homeowners wanting revolving access to equity who can make monthly payments"
+        }
+      },
+      "footer": "Neither option is automatically better. The right choice depends on your financial goals, equity, existing mortgage, income, age, and how you intend to use the funds."
+    },
+    "refinance_comparison": {
+      "badge": "04 — Refinance Comparison",
+      "heading": "HomeSafe Second® vs. a Cash-Out Refinance",
+      "p1": "A cash-out refinance replaces your existing first mortgage with an entirely new mortgage.",
+      "p2": "That can be an issue if you already have an attractive interest rate.",
+      "p3": "For example, if your current first mortgage has a low fixed rate, refinancing the entire balance at today's available rates could increase your borrowing costs.",
+      "p4": "HomeSafe Second may allow you to access available equity without refinancing your existing first mortgage.",
+      "p5": "Your original first mortgage stays in place under its existing terms, while HomeSafe Second is added as a second lien."
+    },
+    "use_of_proceeds": {
+      "badge": "05 — Use of Proceeds",
+      "heading": "What Can You Use the Money For?",
+      "subheading": "Homeowners may use their available proceeds for a variety of financial needs, subject to program requirements.",
+      "items": [
+        "Home improvements or renovations",
+        "Paying off higher-interest debt",
+        "Medical or unexpected expenses",
+        "Retirement expenses",
+        "Establishing financial reserves",
+        "Helping family members",
+        "Major purchases",
+        "Other personal financial needs"
+      ],
+      "closing_part1": "Your ",
+      "closing_link": "MyLoanDesk loan specialist",
+      "closing_part2": " can help you evaluate whether using home equity makes sense for your particular situation."
+    },
+    "faq": {
+      "badge": "06 — Clarity",
+      "heading": "Frequently Asked Questions About HomeSafe Second®",
+      "items": [
+        {
+          "q": "What is HomeSafe Second?",
+          "a": "HomeSafe Second is a second-lien reverse mortgage that allows eligible homeowners to access a portion of their home equity while keeping their existing first mortgage in place."
+        },
+        {
+          "q": "Do I have to make monthly payments on HomeSafe Second?",
+          "a": "HomeSafe Second does not require monthly principal and interest payments on the new loan.* Interest and applicable charges accrue to the loan balance. Borrowers must continue meeting the loan requirements, including paying property taxes, homeowners insurance, applicable HOA charges, maintaining the property, and remaining current on any existing first mortgage."
+        },
+        {
+          "q": "Does HomeSafe Second replace my current mortgage?",
+          "a": "No. HomeSafe Second is a second lien. Your existing first mortgage remains in place and continues under its existing terms."
+        },
+        {
+          "q": "Who qualifies for HomeSafe Second?",
+          "a": "HomeSafe Second is designed for eligible older homeowners with sufficient home equity. Minimum age requirements are generally 55 or older, with higher minimum ages in certain states, including 60 in Washington and 62 in Texas. Property, equity, credit, existing mortgage, occupancy, and other program requirements also apply."
+        },
+        {
+          "q": "How much equity can I access?",
+          "a": "Qualified homeowners may be able to access between $50,000 and $1 million, depending on current program guidelines, property value, existing liens, available equity, age, and other eligibility factors."
+        },
+        {
+          "q": "Is the HomeSafe Second interest rate fixed?",
+          "a": "Yes. HomeSafe Second offers a fixed interest rate, unlike many HELOCs that use variable interest rates. Interest accrues on the outstanding loan balance according to the terms of the loan."
+        },
+        {
+          "q": "How is HomeSafe Second different from a HELOC?",
+          "a": "One of the biggest differences is the required monthly payment. A traditional HELOC generally requires monthly payments after you borrow funds, and its interest rate is commonly variable. HomeSafe Second is a second-lien reverse mortgage with a fixed rate and no required monthly principal and interest payment on the new loan.*"
+        },
+        {
+          "q": "Can I get HomeSafe Second if I already have a mortgage?",
+          "a": "Yes, subject to qualification. HomeSafe Second is specifically designed to allow eligible homeowners to keep an existing first mortgage in place while accessing additional home equity. You must remain current on your existing mortgage and continue making its required payments."
+        },
+        {
+          "q": "Does the HomeSafe Second balance increase over time?",
+          "a": "Yes. Because you are not required to make monthly principal and interest payments on HomeSafe Second,* interest and applicable charges generally accrue and are added to the loan balance. This means the amount you owe can increase over time and your remaining home equity may decrease."
+        },
+        {
+          "q": "When does HomeSafe Second have to be repaid?",
+          "a": "The loan becomes due and payable when a maturity event occurs under the loan documents. This can include circumstances such as the borrower selling the home or no longer meeting applicable occupancy or other loan requirements. Your loan specialist will explain the repayment and maturity provisions before you decide whether the program is appropriate for you."
+        },
+        {
+          "q": "Is HomeSafe Second a HELOC?",
+          "a": "No. HomeSafe Second is not a HELOC or traditional home equity loan. It is a second-lien reverse mortgage designed for eligible older homeowners."
+        }
+      ]
+    },
+    "low_rate_cta": {
+      "heading": "Already Have a Low Mortgage Rate?",
+      "p1": "Don't automatically give it up just to access your equity. If you secured your first mortgage when interest rates were lower, replacing that mortgage through a cash-out refinance may not be the only way to access your home's equity.",
+      "benefits_box_title": "HomeSafe Second may allow you to:",
+      "benefits": [
+        "Keep your existing first mortgage.",
+        "Keep its existing interest rate and terms.",
+        "Access a portion of your available equity.",
+        "Avoid adding a required monthly mortgage payment on the second loan.*"
+      ],
+      "compare_note_part1": "That's why HomeSafe Second can be worth comparing with a ",
+      "compare_link": "HELOC",
+      "compare_note_part2": ", home equity loan, and cash-out refinance before making a decision.",
+      "fit_heading": "See If HomeSafe Second® Fits Your Situation",
+      "fit_p1": "Your home may represent one of your largest financial assets. If you need access to that equity, the first question shouldn't simply be, \"Can I borrow against my home?\"",
+      "quote": "\"What's the best way for me to access my equity without unnecessarily changing the mortgage I already have?\"",
+      "fit_p2": "MyLoanDesk can review your situation and help you compare HomeSafe Second, HELOCs, home equity loans, cash-out refinancing, and other available mortgage options.",
+      "footnote": "No obligation to review your available options."
+    },
+    "disclosures": {
+      "title": "Important Disclosures",
+      "p1": "*No required monthly principal and interest payment applies to the HomeSafe Second loan, provided the borrower continues to meet all applicable loan obligations. Interest and applicable charges accrue to the loan balance.",
+      "p2": "Borrowers must continue to comply with the terms of their existing first mortgage and HomeSafe Second loan documents, including paying property taxes, homeowners insurance, applicable homeowners association charges, maintaining the property, and satisfying applicable occupancy and other requirements.",
+      "p3": "HomeSafe Second® is a proprietary second-lien reverse mortgage product. Program availability, minimum age, loan amounts, interest rates, fees, property eligibility, underwriting requirements, and other terms may vary and are subject to change.",
+      "p4": "HomeSafe Second is not a HELOC or traditional home equity loan. Not all borrowers or properties will qualify.",
+      "p5": "Consult your loan documents and a qualified mortgage professional regarding the specific terms applicable to your transaction."
+    },
+    "schema": {
+      "webpage_name": "HomeSafe Second® | Access Home Equity Without Refinancing",
+      "webpage_description": "Comprehensive guide to HomeSafe Second® second-lien reverse mortgage financing for eligible homeowners seeking to access equity without refinancing their existing first mortgage.",
+      "product_name": "HomeSafe Second® Reverse Mortgage",
+      "product_description": "A proprietary second-lien reverse mortgage allowing qualified homeowners age 55+ to access $50,000 to $1,000,000 of home equity with a fixed interest rate and no required monthly principal and interest payment on the new loan.",
+      "faq_q1_question": "What is HomeSafe Second?",
+      "faq_q1_answer": "HomeSafe Second is a second-lien reverse mortgage that allows eligible homeowners to access a portion of their home equity while keeping their existing first mortgage in place.",
+      "faq_q2_question": "Do I have to make monthly payments on HomeSafe Second?",
+      "faq_q2_answer": "HomeSafe Second does not require monthly principal and interest payments on the new loan.* Interest and applicable charges accrue to the loan balance. Borrowers must continue meeting the loan requirements, including paying property taxes, homeowners insurance, applicable HOA charges, maintaining the property, and remaining current on any existing first mortgage.",
+      "faq_q3_question": "Does HomeSafe Second replace my current mortgage?",
+      "faq_q3_answer": "No. HomeSafe Second is a second lien. Your existing first mortgage remains in place and continues under its existing terms.",
+      "faq_q4_question": "Who qualifies for HomeSafe Second?",
+      "faq_q4_answer": "HomeSafe Second is designed for eligible older homeowners with sufficient home equity. Minimum age requirements are generally 55 or older, with higher minimum ages in certain states, including 60 in Washington and 62 in Texas. Property, equity, credit, existing mortgage, occupancy, and other program requirements also apply.",
+      "faq_q5_question": "How much equity can I access?",
+      "faq_q5_answer": "Qualified homeowners may be able to access between $50,000 and $1 million, depending on current program guidelines, property value, existing liens, available equity, age, and other eligibility factors.",
+      "faq_q6_question": "Is the HomeSafe Second interest rate fixed?",
+      "faq_q6_answer": "Yes. HomeSafe Second offers a fixed interest rate, unlike many HELOCs that use variable interest rates. Interest accrues on the outstanding loan balance according to the terms of the loan.",
+      "faq_q7_question": "How is HomeSafe Second different from a HELOC?",
+      "faq_q7_answer": "One of the biggest differences is the required monthly payment. A traditional HELOC generally requires monthly payments after you borrow funds, and its interest rate is commonly variable. HomeSafe Second is a second-lien reverse mortgage with a fixed rate and no required monthly principal and interest payment on the new loan.*",
+      "faq_q8_question": "Can I get HomeSafe Second if I already have a mortgage?",
+      "faq_q8_answer": "Yes, subject to qualification. HomeSafe Second is specifically designed to allow eligible homeowners to keep an existing first mortgage in place while accessing additional home equity. You must remain current on your existing mortgage and continue making its required payments.",
+      "faq_q9_question": "Does the HomeSafe Second balance increase over time?",
+      "faq_q9_answer": "Yes. Because you are not required to make monthly principal and interest payments on HomeSafe Second,* interest and applicable charges generally accrue and are added to the loan balance. This means the amount you owe can increase over time and your remaining home equity may decrease.",
+      "faq_q10_question": "When does HomeSafe Second have to be repaid?",
+      "faq_q10_answer": "The loan becomes due and payable when a maturity event occurs under the loan documents. This can include circumstances such as the borrower selling the home or no longer meeting applicable occupancy or other loan requirements. Your loan specialist will explain the repayment and maturity provisions before you decide whether the program is appropriate for you.",
+      "faq_q11_question": "Is HomeSafe Second a HELOC?",
+      "faq_q11_answer": "No. HomeSafe Second is not a HELOC or traditional home equity loan. It is a second-lien reverse mortgage designed for eligible older homeowners."
+    }
+  },
+  "ITINLoans": {
+    "meta": {
+      "title": "ITIN Loans - Home Financing Without a Social Security Number | MyLoanDesk",
+      "description": "Explore ITIN mortgage programs designed for borrowers with an Individual Taxpayer Identification Number who may not qualify for traditional mortgage financing.",
+      "og_title": "ITIN Loans - Home Financing Without an SSN | MyLoanDesk",
+      "og_description": "Purchase or refinance a home using your Individual Taxpayer Identification Number (ITIN). Flexible options for self-employed, 1099, and alternative credit profiles.",
+      "og_alt": "ITIN Loans - MyLoanDesk",
+      "twitter_title": "ITIN Loans - Home Financing Without an SSN | MyLoanDesk",
+      "twitter_description": "Purchase or refinance a home using your Individual Taxpayer Identification Number (ITIN)."
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "loan_programs": "Loan Programs",
+      "itin_loans": "ITIN Loans"
+    },
+    "hero": {
+      "badge": "Specialized ITIN Mortgage Solutions",
+      "title_main": "ITIN Loans",
+      "title_sub": "Home Financing Without a Social Security Number",
+      "p1": "Not having a Social Security number doesn't necessarily mean homeownership is out of reach.",
+      "p2": "MyLoanDesk offers access to ITIN mortgage programs designed for borrowers who use an Individual Taxpayer Identification Number (ITIN) and may not qualify for traditional mortgage financing. Whether you're purchasing your first home, moving to a new property, or refinancing an existing mortgage, we'll help you explore financing options based on your individual situation.",
+      "cta_options": "Get My Loan Options",
+      "cta_calc": "Calculate Down Payment"
+    },
+    "overview": {
+      "badge": "01 — Overview",
+      "heading": "What Is an ITIN Loan?",
+      "p1": "An ITIN loan is a mortgage option for eligible borrowers who have an Individual Taxpayer Identification Number instead of a Social Security number.",
+      "p2": "ITIN mortgages are generally offered through specialized lending programs rather than traditional agency mortgage programs.",
+      "p3": "Qualification requirements vary by lender and may consider factors such as income, employment or self-employment history, credit history, assets, down payment, and the property being financed.",
+      "side_card": {
+        "title": "Key Qualification Factors",
+        "items": [
+          "Verifiable Income or Qualifying Documentation",
+          "Employment or Self-Employment History",
+          "Established U.S. Credit or Alternative Credit",
+          "Down Payment and Closing Cost Reserves",
+          "Eligible Primary Residence or Property Type"
+        ]
+      }
+    },
+    "who_benefits": {
+      "badge": "02 — Eligibility",
+      "heading": "Who May Benefit From an ITIN Loan?",
+      "intro": "An ITIN mortgage may be worth exploring if you:",
+      "items": [
+        "Have a valid ITIN",
+        "Do not have a Social Security number",
+        "Want to purchase a primary residence or other eligible property",
+        "Have verifiable income or qualifying alternative documentation",
+        "Have funds available for the required down payment and closing costs",
+        "Have established U.S. credit or acceptable alternative credit, depending on the program"
+      ],
+      "side_card": {
+        "title": "Tailored To Your Circumstances",
+        "desc": "Every borrower's situation is different, so our job is to identify programs that fit your circumstances.",
+        "cta_button": "Check My ITIN Loan Options"
+      }
+    },
+    "program_options": {
+      "badge": "03 — Programs",
+      "heading": "ITIN Loan Options",
+      "subtitle": "Depending on the lender and borrower profile, programs may be available for:",
+      "cards": [
+        {
+          "title": "Home Purchase",
+          "desc": "Finance the purchase of an eligible property using your ITIN."
+        },
+        {
+          "title": "Refinance",
+          "desc": "Explore refinancing options for an existing property."
+        },
+        {
+          "title": "Self-Employed Borrowers",
+          "desc": "Certain programs may provide alternative ways of documenting income for business owners and self-employed borrowers."
+        },
+        {
+          "title": "Alternative Credit",
+          "desc": "Some lenders may consider alternative credit histories when traditional credit is limited."
+        }
+      ]
+    },
+    "documentation": {
+      "badge": "04 — Documentation",
+      "heading": "What Documents May Be Required?",
+      "subtitle": "Requirements vary, but borrowers may be asked to provide:",
+      "items": [
+        "Valid ITIN documentation",
+        "Government-issued identification",
+        "Proof of income or qualifying alternative documentation",
+        "Bank or asset statements",
+        "Employment or business information",
+        "Housing payment history",
+        "Down payment and reserve documentation"
+      ],
+      "footnote": "We'll tell you what is required after reviewing your situation."
+    },
+    "value_prop": {
+      "badge": "05 — Value Proposition",
+      "heading": "Why MyLoanDesk?",
+      "p1": "ITIN financing isn't a one-size-fits-all mortgage.",
+      "p2": "Instead of limiting you to one lender's guidelines, MyLoanDesk can review available lending programs and help identify options that may fit your income, assets, credit profile, property, and goals.",
+      "side_card": {
+        "title": "Have an ITIN and want to buy a home?",
+        "desc": "Let us help you explore specialized mortgage programs designed around your individual profile.",
+        "cta_button": "Check My ITIN Loan Options"
+      }
+    },
+    "calculator": {
+      "badge": "Interactive ITIN Estimator",
+      "heading": "Estimate Your ITIN Down Payment & Payment",
+      "subheading": "Calculate your estimated down payment requirement and monthly principal & interest payment.",
+      "price_label": "Target Home Price ($)",
+      "price_placeholder": "350000",
+      "down_label": "Down Payment (%)",
+      "down_placeholder": "15",
+      "rate_label": "Estimated Rate (%)",
+      "rate_placeholder": "7.5",
+      "submit_button": "Calculate ITIN Mortgage Estimate",
+      "down_payment_needed": "Down Payment Needed",
+      "estimated_loan_amount": "Estimated Loan Amount",
+      "monthly_pi": "Est. Monthly P&I",
+      "per_month": "/ mo",
+      "footnote": "* Estimate covers principal and interest only. Property taxes, homeowners insurance, and HOA dues vary by property location."
+    },
+    "faq": {
+      "badge": "06 — Clarity",
+      "heading": "ITIN Loan FAQs",
+      "items": [
+        {
+          "q": "Can I get a mortgage with an ITIN?",
+          "a": "Potentially. Specialized lenders offer mortgage programs for eligible borrowers who use an ITIN rather than a Social Security number."
+        },
+        {
+          "q": "Do ITIN loans require a large down payment?",
+          "a": "Down-payment requirements vary by lender, property type, credit profile, and loan program."
+        },
+        {
+          "q": "Can self-employed borrowers qualify?",
+          "a": "Yes, depending on the program. Some lenders offer alternative income-documentation options for eligible self-employed borrowers."
+        },
+        {
+          "q": "Do I need U.S. credit?",
+          "a": "Requirements vary. Some programs may consider borrowers with established U.S. credit, while others may permit alternative credit documentation."
+        },
+        {
+          "q": "Can MyLoanDesk help me determine whether I qualify?",
+          "a": "Yes. Tell us about your situation and we'll review available options."
+        }
+      ]
+    },
+    "bottom_cta": {
+      "heading": "Ready to Explore ITIN Mortgage Options?",
+      "cta_button": "Get My Loan Options",
+      "disclaimer": "Loan programs, qualification requirements, rates, terms, and availability vary by lender and are subject to change. All loans are subject to underwriting and approval."
+    },
+    "schema": {
+      "webpage_name": "ITIN Loans - Home Financing Without a Social Security Number | MyLoanDesk",
+      "webpage_description": "Comprehensive guide and calculation tools for ITIN mortgage programs designed for borrowers without an SSN.",
+      "product_name": "ITIN Mortgage Loan",
+      "product_description": "Specialized Non-QM home financing designed for borrowers using an Individual Taxpayer Identification Number (ITIN) instead of a Social Security number.",
+      "faq_q1_question": "Can I get a mortgage with an ITIN?",
+      "faq_q1_answer": "Yes. Specialized Non-QM lenders offer mortgage programs for eligible borrowers who file taxes using an Individual Taxpayer Identification Number (ITIN) rather than a Social Security number.",
+      "faq_q2_question": "Do ITIN loans require a large down payment?",
+      "faq_q2_answer": "Down payment requirements typically range from 10% to 20%, depending on the lender, property type, credit history, and whether standard tax returns or bank statements are used to document income.",
+      "faq_q3_question": "Can self-employed borrowers qualify for an ITIN loan?",
+      "faq_q3_answer": "Yes. Many ITIN loan programs provide alternative documentation pathways such as 12 to 24 months of business or personal bank statements or 1099 forms.",
+      "faq_q4_question": "Do I need established U.S. credit to qualify?",
+      "faq_q4_answer": "Not always. While established credit scores can provide access to higher loan-to-value limits, many programs allow alternative credit histories such as on-time rent, utility, and insurance payment records.",
+      "faq_q5_question": "Can MyLoanDesk help me determine whether I qualify?",
+      "faq_q5_answer": "Yes. Tell us about your income, documentation, and purchase timeline, and our loan origination team will compare programs across our network of specialized ITIN lenders."
+    }
   }
 }
