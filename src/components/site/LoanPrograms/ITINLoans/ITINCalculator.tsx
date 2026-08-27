@@ -3,8 +3,20 @@
 import { useState } from "react";
 import { Calculator, DollarSign, Percent } from "lucide-react";
 import { sendGTMEvent } from "@next/third-parties/google";
+import { useTranslations } from "next-intl";
 
-export default function ItinCalculator({ pagePath }: { pagePath: string }) {
+interface ItinCalculatorProps {
+  pagePath: string;
+  locale?: string;
+}
+
+export default function ItinCalculator({
+  pagePath,
+  locale = "en",
+}: ItinCalculatorProps) {
+  const t = useTranslations("ITINLoans.calculator");
+  const numberLocale = locale === "es" ? "es-US" : "en-US";
+
   const [homePrice, setHomeValue] = useState<string>("350000");
   const [downPaymentPercent, setDownPaymentPercent] = useState<string>("15");
   const [estimatedRate, setEstimatedRate] = useState<string>("7.5");
@@ -52,6 +64,7 @@ export default function ItinCalculator({ pagePath }: { pagePath: string }) {
         target_home_price: price,
         down_payment_percent: downPercent,
         page_path: pagePath || "/itin-loans",
+        locale,
       });
     }
   };
@@ -64,14 +77,13 @@ export default function ItinCalculator({ pagePath }: { pagePath: string }) {
       <div className="bg-primary-bg border border-line rounded-3xl p-6 sm:p-10 shadow-lg">
         <div className="text-center max-w-xl mx-auto mb-8">
           <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-orange uppercase tracking-wider mb-2">
-            <Calculator size={16} /> Interactive ITIN Estimator
+            <Calculator size={16} /> {t("badge")}
           </div>
           <h3 className="text-2xl sm:text-3xl font-display font-light text-ink">
-            Estimate Your ITIN Down Payment &amp; Payment
+            {t("heading")}
           </h3>
           <p className="text-xs sm:text-sm text-ink-2 mt-2">
-            Calculate your estimated down payment requirement and monthly
-            principal &amp; interest payment.
+            {t("subheading")}
           </p>
         </div>
 
@@ -80,7 +92,7 @@ export default function ItinCalculator({ pagePath }: { pagePath: string }) {
             {/* Target Purchase Price */}
             <div>
               <label className="block text-xs font-semibold uppercase tracking-wider text-ink-2 mb-2">
-                Target Home Price ($)
+                {t("price_label")}
               </label>
               <div className="relative">
                 <DollarSign
@@ -91,7 +103,7 @@ export default function ItinCalculator({ pagePath }: { pagePath: string }) {
                   type="number"
                   value={homePrice}
                   onChange={(e) => setHomeValue(e.target.value)}
-                  placeholder="350000"
+                  placeholder={t("price_placeholder")}
                   className="w-full pl-12 pr-4 py-3.5 bg-cream/20 border border-line rounded-xl text-ink text-sm focus:outline-none focus:border-brand-orange transition-colors"
                   required
                 />
@@ -101,7 +113,7 @@ export default function ItinCalculator({ pagePath }: { pagePath: string }) {
             {/* Estimated Down Payment % */}
             <div>
               <label className="block text-xs font-semibold uppercase tracking-wider text-ink-2 mb-2">
-                Down Payment (%)
+                {t("down_label")}
               </label>
               <div className="relative">
                 <Percent
@@ -113,7 +125,7 @@ export default function ItinCalculator({ pagePath }: { pagePath: string }) {
                   step="1"
                   value={downPaymentPercent}
                   onChange={(e) => setDownPaymentPercent(e.target.value)}
-                  placeholder="15"
+                  placeholder={t("down_placeholder")}
                   className="w-full pl-4 pr-10 py-3.5 bg-cream/20 border border-line rounded-xl text-ink text-sm focus:outline-none focus:border-brand-orange transition-colors"
                   required
                 />
@@ -123,7 +135,7 @@ export default function ItinCalculator({ pagePath }: { pagePath: string }) {
             {/* Estimated Interest Rate */}
             <div>
               <label className="block text-xs font-semibold uppercase tracking-wider text-ink-2 mb-2">
-                Estimated Rate (%)
+                {t("rate_label")}
               </label>
               <div className="relative">
                 <Percent
@@ -135,7 +147,7 @@ export default function ItinCalculator({ pagePath }: { pagePath: string }) {
                   step="0.125"
                   value={estimatedRate}
                   onChange={(e) => setEstimatedRate(e.target.value)}
-                  placeholder="7.5"
+                  placeholder={t("rate_placeholder")}
                   className="w-full pl-4 pr-10 py-3.5 bg-cream/20 border border-line rounded-xl text-ink text-sm focus:outline-none focus:border-brand-orange transition-colors"
                   required
                 />
@@ -147,7 +159,7 @@ export default function ItinCalculator({ pagePath }: { pagePath: string }) {
             type="submit"
             className="w-full bg-moss-deep text-primary-bg py-3.5 rounded-full font-semibold text-sm sm:text-base hover:bg-moss-darker transition-colors flex items-center justify-center gap-2"
           >
-            Calculate ITIN Mortgage Estimate
+            {t("submit_button")}
           </button>
         </form>
 
@@ -156,39 +168,44 @@ export default function ItinCalculator({ pagePath }: { pagePath: string }) {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
               <div className="p-3 bg-primary-bg rounded-xl border border-line/50">
                 <div className="text-[11px] uppercase tracking-wider text-ink-2 font-semibold">
-                  Down Payment Needed
+                  {t("down_payment_needed")}
                 </div>
                 <div className="text-xl font-bold text-ink mt-1">
-                  ${calcResult.downPaymentAmount.toLocaleString()}
+                  $
+                  {calcResult.downPaymentAmount.toLocaleString(numberLocale, {
+                    maximumFractionDigits: 0,
+                  })}
                 </div>
               </div>
 
               <div className="p-3 bg-primary-bg rounded-xl border border-line/50">
                 <div className="text-[11px] uppercase tracking-wider text-brand-orange font-semibold">
-                  Estimated Loan Amount
+                  {t("estimated_loan_amount")}
                 </div>
                 <div className="text-xl font-bold text-ink mt-1">
-                  ${calcResult.loanAmount.toLocaleString()}
+                  $
+                  {calcResult.loanAmount.toLocaleString(numberLocale, {
+                    maximumFractionDigits: 0,
+                  })}
                 </div>
               </div>
 
               <div className="p-3 bg-primary-bg rounded-xl border border-line/50">
                 <div className="text-[11px] uppercase tracking-wider text-moss-deep font-semibold">
-                  Est. Monthly P&amp;I
+                  {t("monthly_pi")}
                 </div>
                 <div className="text-2xl font-bold text-moss-deep mt-1">
                   $
-                  {calcResult.monthlyPI.toLocaleString("en-US", {
+                  {calcResult.monthlyPI.toLocaleString(numberLocale, {
                     maximumFractionDigits: 0,
                   })}{" "}
-                  / mo
+                  {t("per_month")}
                 </div>
               </div>
             </div>
 
             <p className="text-xs text-ink-2 mt-4 text-center max-w-lg mx-auto">
-              * Estimate covers principal and interest only. Property taxes,
-              homeowners insurance, and HOA dues vary by property location.
+              {t("footnote")}
             </p>
           </div>
         )}

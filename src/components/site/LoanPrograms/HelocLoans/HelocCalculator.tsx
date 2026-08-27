@@ -3,8 +3,20 @@
 import { useState } from "react";
 import { Calculator, DollarSign, Percent } from "lucide-react";
 import { sendGTMEvent } from "@next/third-parties/google";
+import { useTranslations } from "next-intl";
 
-export default function HelocCalculator({ pagePath }: { pagePath: string }) {
+interface HelocCalculatorProps {
+  pagePath: string;
+  locale?: string;
+}
+
+export default function HelocCalculator({
+  pagePath,
+  locale = "en",
+}: HelocCalculatorProps) {
+  const t = useTranslations("HelocLoans.calculator");
+  const numberLocale = locale === "es" ? "es-US" : "en-US";
+
   const [homeValue, setHomeValue] = useState<string>("700000");
   const [mortgageBalance, setMortgageBalance] = useState<string>("350000");
   const [desiredEquity, setDesiredEquity] = useState<string>("100000");
@@ -37,6 +49,7 @@ export default function HelocCalculator({ pagePath }: { pagePath: string }) {
         label: "CLTV Calculator Run",
         estimated_cltv: cltvPercentage.toFixed(2),
         page_path: pagePath || "/loan-programs/home-equity-loans-heloc",
+        locale,
       });
     }
   };
@@ -49,14 +62,13 @@ export default function HelocCalculator({ pagePath }: { pagePath: string }) {
       <div className="bg-primary-bg border border-line rounded-3xl p-6 sm:p-10 shadow-lg">
         <div className="text-center max-w-xl mx-auto mb-8">
           <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-orange uppercase tracking-wider mb-2">
-            <Calculator size={16} /> Interactive Equity Estimator
+            <Calculator size={16} /> {t("badge")}
           </div>
           <h3 className="text-2xl sm:text-3xl font-display font-light text-ink">
-            Calculate Your Estimated CLTV
+            {t("heading")}
           </h3>
           <p className="text-xs sm:text-sm text-ink-2 mt-2">
-            See how your proposed home equity borrowing compares against your
-            property&apos;s current market value.
+            {t("subheading")}
           </p>
         </div>
 
@@ -65,7 +77,7 @@ export default function HelocCalculator({ pagePath }: { pagePath: string }) {
             {/* Estimated Home Value */}
             <div>
               <label className="block text-xs font-semibold uppercase tracking-wider text-ink-2 mb-2">
-                Estimated Home Value ($)
+                {t("home_value_label")}
               </label>
               <div className="relative">
                 <DollarSign
@@ -76,7 +88,7 @@ export default function HelocCalculator({ pagePath }: { pagePath: string }) {
                   type="number"
                   value={homeValue}
                   onChange={(e) => setHomeValue(e.target.value)}
-                  placeholder="e.g. 700000"
+                  placeholder={t("home_value_placeholder")}
                   className="w-full pl-12 pr-4 py-3.5 bg-cream/20 border border-line rounded-xl text-ink text-sm focus:outline-none focus:border-brand-orange transition-colors"
                   required
                 />
@@ -86,7 +98,7 @@ export default function HelocCalculator({ pagePath }: { pagePath: string }) {
             {/* Current Mortgage Balance */}
             <div>
               <label className="block text-xs font-semibold uppercase tracking-wider text-ink-2 mb-2">
-                Current Mortgage Balance ($)
+                {t("mortgage_balance_label")}
               </label>
               <div className="relative">
                 <DollarSign
@@ -97,7 +109,7 @@ export default function HelocCalculator({ pagePath }: { pagePath: string }) {
                   type="number"
                   value={mortgageBalance}
                   onChange={(e) => setMortgageBalance(e.target.value)}
-                  placeholder="e.g. 350000"
+                  placeholder={t("mortgage_balance_placeholder")}
                   className="w-full pl-12 pr-4 py-3.5 bg-cream/20 border border-line rounded-xl text-ink text-sm focus:outline-none focus:border-brand-orange transition-colors"
                   required
                 />
@@ -107,7 +119,7 @@ export default function HelocCalculator({ pagePath }: { pagePath: string }) {
             {/* Desired Equity Amount */}
             <div>
               <label className="block text-xs font-semibold uppercase tracking-wider text-ink-2 mb-2">
-                Desired Equity Amount ($)
+                {t("desired_equity_label")}
               </label>
               <div className="relative">
                 <DollarSign
@@ -118,7 +130,7 @@ export default function HelocCalculator({ pagePath }: { pagePath: string }) {
                   type="number"
                   value={desiredEquity}
                   onChange={(e) => setDesiredEquity(e.target.value)}
-                  placeholder="e.g. 100000"
+                  placeholder={t("desired_equity_placeholder")}
                   className="w-full pl-12 pr-4 py-3.5 bg-cream/20 border border-line rounded-xl text-ink text-sm focus:outline-none focus:border-brand-orange transition-colors"
                   required
                 />
@@ -130,7 +142,7 @@ export default function HelocCalculator({ pagePath }: { pagePath: string }) {
             type="submit"
             className="w-full bg-moss-deep text-primary-bg py-3.5 rounded-full font-semibold text-sm sm:text-base hover:bg-moss-darker transition-colors flex items-center justify-center gap-2"
           >
-            Calculate Estimated CLTV
+            {t("submit_button")}
           </button>
         </form>
 
@@ -139,16 +151,19 @@ export default function HelocCalculator({ pagePath }: { pagePath: string }) {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
               <div className="p-3 bg-primary-bg rounded-xl border border-line/50">
                 <div className="text-[11px] uppercase tracking-wider text-ink-2 font-semibold">
-                  Total Combined Debt
+                  {t("total_debt_label")}
                 </div>
                 <div className="text-xl font-bold text-ink mt-1">
-                  ${cltvResult.totalDebt.toLocaleString()}
+                  $
+                  {cltvResult.totalDebt.toLocaleString(numberLocale, {
+                    maximumFractionDigits: 0,
+                  })}
                 </div>
               </div>
 
               <div className="p-3 bg-primary-bg rounded-xl border border-line/50">
                 <div className="text-[11px] uppercase tracking-wider text-brand-orange font-semibold">
-                  Estimated CLTV
+                  {t("cltv_label")}
                 </div>
                 <div className="text-2xl font-bold text-moss-deep mt-1 flex items-center justify-center gap-0.5">
                   {cltvResult.cltvPercentage.toFixed(1)} <Percent size={18} />
@@ -157,18 +172,22 @@ export default function HelocCalculator({ pagePath }: { pagePath: string }) {
 
               <div className="p-3 bg-primary-bg rounded-xl border border-line/50">
                 <div className="text-[11px] uppercase tracking-wider text-ink-2 font-semibold">
-                  Remaining Equity Buffer
+                  {t("remaining_buffer_label")}
                 </div>
                 <div className="text-xl font-bold text-ink mt-1">
-                  ${Math.max(0, cltvResult.remainingEquity).toLocaleString()}
+                  $
+                  {Math.max(0, cltvResult.remainingEquity).toLocaleString(
+                    numberLocale,
+                    { maximumFractionDigits: 0 },
+                  )}
                 </div>
               </div>
             </div>
 
             <p className="text-xs text-ink-2 mt-4 text-center max-w-lg mx-auto">
               {cltvResult.cltvPercentage <= 85
-                ? "Excellent! An estimated CLTV under 80%–85% generally qualifies for competitive HELOC or Home Equity Loan financing rates."
-                : "Your estimated CLTV is above 85%. Certain specialized programs still allow higher CLTV limits depending on credit and income profiles."}
+                ? t("verdict_good")
+                : t("verdict_high")}
             </p>
           </div>
         )}
