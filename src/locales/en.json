@@ -4511,5 +4511,432 @@
       "faq_q5_question": "Can I qualify if the DSCR ratio is below 1.0?",
       "faq_q5_answer": "Yes. Some lenders offer 'no-ratio' or under-1.0 DSCR options that accommodate cash-flow deficits with slightly higher down payment or liquidity reserve requirements."
     }
+  },
+  "FHAAlternativeLoans": {
+    "meta": {
+      "title": "FHA Alternative Income Documentation Programs | MyLoanDesk",
+      "description": "FHA loan options for wage earners and self-employed borrowers whose income doesn't fit a standard file — up to 96.5% financing using VOE or profit & loss documentation instead of typical income paperwork.",
+      "og_title": "FHA Alternative Income Documentation Programs | MyLoanDesk",
+      "og_description": "Up to 96.5% FHA financing for wage earners and self-employed borrowers whose income doesn't fit a standard file. Learn about VOE and profit & loss documentation options.",
+      "og_alt": "FHA Alternative Documentation Loans - MyLoanDesk",
+      "twitter_title": "FHA Alternative Income Documentation Programs | MyLoanDesk",
+      "twitter_description": "Up to 96.5% FHA financing using VOE or P&L statements without standard tax returns."
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "loan_programs": "Loan Programs",
+      "fha_alternative": "FHA Alternative Documentation"
+    },
+    "back_to_programs": "Back to Loan Programs",
+    "title": "FHA Alternative Income Documentation Programs",
+    "hero": {
+      "subtitle": "When your income doesn't fit a standard file, there may still be an FHA path.",
+      "description": "Not every qualified borrower's income fits neatly into a standard FHA documentation review — a wage earner with a nontraditional pay structure, or a business owner whose tax returns understate real income after deductions, can still be a strong borrower. These alternative documentation options finance up to 96.5% of the purchase price using a different — but still fully documented — path to verify your income.",
+      "bullet1": "Financing up to 96.5% of the purchase price",
+      "bullet2": "Gift funds allowed toward your down payment",
+      "bullet3": "Available for primary residences, 1–4 units"
+    },
+    "switcher": {
+      "badge": "Which One Fits You?",
+      "subheading": "Tell us how you're paid — we'll show the right option.",
+      "tab_voe": "I'm a W-2 wage earner",
+      "tab_pl": "I'm self-employed",
+      "voe": {
+        "title": "FHA VOE Program",
+        "financing": "Up to 96.5% financing",
+        "bullet1": "Verified directly through your employer, plus a recent pay stub",
+        "bullet2": "Minimum credit score around 580",
+        "bullet3": "Generally 2+ years of stable employment history",
+        "bullet4": "Primary residence, 1–4 units"
+      },
+      "pl": {
+        "title": "FHA Self-Employed P&L Program",
+        "financing": "Up to 96.5% financing",
+        "bullet1": "Qualify using profit & loss statements and a current balance sheet — no tax returns required",
+        "bullet2": "Mid credit score around 640",
+        "bullet3": "At least 2 full years self-employed, owning 25%+ of the business",
+        "bullet4": "Sole proprietors welcome — no LLC or corporation required"
+      }
+    },
+    "what_are": {
+      "title": "What Are Alternative Documentation FHA Loans?",
+      "p1": "A standard FHA loan typically documents income through tax returns, W-2s, and pay stubs. These alternative documentation programs are still FHA-based and still require full verification of your income and ability to repay — they simply use a different set of documents to prove it, built around how certain borrowers are actually paid.",
+      "p2": "For wage earners, that can mean verifying income directly through your employer rather than leaning solely on tax transcripts. For business owners, it can mean qualifying from your profit and loss statements and balance sheet rather than tax returns that may understate your real cash flow after deductions and write-offs."
+    },
+    "highlights": {
+      "title": "Program Highlights",
+      "subtitle": "What's included, across both options:",
+      "items": [
+        "Financing up to 96.5% of the purchase price (as low as 3.5% down)",
+        "100% of your down payment can come from an eligible family gift",
+        "Available for primary residences with 1 to 4 units",
+        "Seller-paid closing cost contributions may be allowed, subject to program limits",
+        "Purchase-focused options designed around real-world income situations"
+      ]
+    },
+    "strategic_advantages": {
+      "title": "Why This Might Be a Better Fit:",
+      "p1": "Many strong borrowers get turned away from standard FHA underwriting simply because their documentation doesn't match the file format a lender is used to reviewing — not because their income isn't real or stable. These programs exist for exactly that gap.",
+      "p2": "For self-employed borrowers in particular, tax returns often understate true income after legitimate business deductions. A profit-and-loss-based review can reflect your business's actual performance more accurately than a tax-return-only file would."
+    },
+    "comparison": {
+      "title": "FHA VOE vs. FHA Self-Employed P&L",
+      "th_voe": "FHA VOE",
+      "th_pl": "FHA Self-Employed P&L",
+      "rows": {
+        "best_for": {
+          "label": "Best for",
+          "voe": "W-2 wage earners with a nontraditional documentation situation",
+          "pl": "Business owners and sole proprietors"
+        },
+        "verified_via": {
+          "label": "Income verified via",
+          "voe": "Employer verification + recent pay stub",
+          "pl": "Profit & loss statements + current balance sheet"
+        },
+        "credit_score": {
+          "label": "Typical minimum credit score",
+          "voe": "Around 580",
+          "pl": "Around 640 (mid score of three)"
+        },
+        "history": {
+          "label": "Employment / business history",
+          "voe": "2+ years with current employer",
+          "pl": "2+ full years self-employed"
+        },
+        "max_financing": {
+          "label": "Max financing",
+          "voe": "Up to 96.5% LTV",
+          "pl": "Up to 96.5% LTV"
+        }
+      }
+    },
+    "eligibility": {
+      "title": "General Eligibility Guidelines",
+      "items": [
+        "580+ credit score for FHA VOE",
+        "640 mid score (of 3) for Self-Employed P&L",
+        "Primary residence purchases, 1–4 units",
+        "Verified funds to close, or an eligible gift",
+        "2+ years employment history (VOE)",
+        "2+ full years self-employed, 25%+ ownership (P&L)"
+      ],
+      "footnote": "Final eligibility, pricing, and loan terms are always subject to a full review of your complete scenario. This overview is general guidance, not a commitment to lend."
+    },
+    "loan_limits": {
+      "title": "A Note on FHA Loan Limits",
+      "p1": "FHA sets a maximum \"standard-balance\" loan amount that varies by state, county, property type, and number of units — higher-cost areas often have higher limits than the national baseline. As an example, standard-balance FHA limits for a high-cost county like Los Angeles County, CA currently look like this:",
+      "th_units": "Units",
+      "th_limit": "Standard-Balance Limit",
+      "rows": [
+        { "units": "1-unit", "limit": "Up to $832,750" },
+        { "units": "2-unit", "limit": "Up to $1,066,250" },
+        { "units": "3-unit", "limit": "Up to $1,288,800" },
+        { "units": "4-unit", "limit": "Up to $1,601,750" }
+      ],
+      "footnote": "Loan limits are set locally, updated periodically, and can differ significantly outside higher-cost counties — always confirm the current limit for your specific location with a loan officer rather than assuming a figure based on another area."
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "q": "What is FHA VOE and how is it different from a standard FHA loan?",
+          "a": "FHA VOE is an FHA-based option for eligible wage-earning borrowers that uses a direct verification of employment from your employer along with a recent pay stub, rather than the fuller income documentation package a standard FHA file may require. It can be a helpful path when your income is stable but doesn't fit cleanly into a typical documentation review."
+        },
+        {
+          "q": "Can I qualify for an FHA loan without providing tax returns if I'm self-employed?",
+          "a": "In some cases, yes. The FHA Self-Employed P&L option allows eligible business owners to qualify using profit and loss statements and a current balance sheet instead of tax returns, provided they've been self-employed for at least two full years and own at least 25% of the business."
+        },
+        {
+          "q": "What credit score do I need for these alternative documentation programs?",
+          "a": "The FHA VOE option generally looks for a minimum credit score of 580. The FHA Self-Employed P&L option generally looks for a mid credit score of at least 640, based on three credit scores. Exact requirements can vary based on the full loan scenario."
+        },
+        {
+          "q": "How much do I need to put down?",
+          "a": "Both programs offer financing up to 96.5% of the purchase price, meaning a minimum down payment as low as 3.5%, similar to a standard FHA loan."
+        },
+        {
+          "q": "Can I use gift funds for my down payment?",
+          "a": "Yes. Both programs allow down payment funds to come entirely from an eligible gift, typically from an immediate family member such as a spouse, parent, child, sibling, or grandparent, subject to standard gift documentation requirements."
+        },
+        {
+          "q": "Are these programs available for a duplex, triplex, or fourplex?",
+          "a": "Both programs may be available for primary residence properties with 1 to 4 units, subject to full eligibility and property review."
+        },
+        {
+          "q": "What are FHA loan limits and how do they affect how much I can borrow?",
+          "a": "FHA loan limits set the maximum standard-balance loan amount and vary by state, county, property type, and number of units. Higher-cost counties often have higher limits than the national baseline. Because limits are set locally and updated periodically, it's best to confirm the current limit for your specific county before assuming a loan amount."
+        },
+        {
+          "q": "Who is a good fit for the FHA Self-Employed P&L option versus a traditional FHA loan?",
+          "a": "Business owners with stable, provable income who don't have an LLC or corporation, or whose tax returns understate their true income due to deductions, are often a better fit for the P&L option than a tax-return-based FHA file. A loan officer can review your specific situation to confirm which path fits best."
+        }
+      ]
+    },
+    "situation": {
+      "title": "Tell Us About Your Situation",
+      "p1": "Every scenario is a little different, and these programs work best when we understand your full picture upfront. When you reach out, it helps to include:",
+      "points": [
+        "Whether you're buying or refinancing",
+        "The property type and number of units",
+        "The city and state you're buying in",
+        "Purchase price or estimated value",
+        "Your approximate credit score",
+        "Whether you're a wage earner or self-employed",
+        "Years at your job (VOE) or years in business (P&L)",
+        "For business owners: your ownership percentage and business type"
+      ]
+    },
+    "cta": {
+      "apply_now": "Apply Now →",
+      "contact_us": "Contact Us Now",
+      "note": "Have a specific scenario in mind? Share the details above and a loan officer will review your options the same day."
+    },
+    "schema": {
+      "webpage_name": "FHA Alternative Income Documentation Programs | MyLoanDesk",
+      "webpage_description": "Flexible FHA qualification programs utilizing verification of employment (VOE) or profit & loss (P&L) statements for non-traditional wage earners and self-employed borrowers.",
+      "product_name": "FHA Alternative Documentation Loan",
+      "product_description": "Government-insured FHA mortgage financing up to 96.5% LTV using non-traditional income documentation paths such as VOE and self-employed P&L statements.",
+      "faq_q1_question": "What is FHA VOE and how is it different from a standard FHA loan?",
+      "faq_q1_answer": "FHA VOE is an FHA-based option for eligible wage-earning borrowers that uses a direct verification of employment from your employer along with a recent pay stub, rather than the fuller income documentation package a standard FHA file may require. It can be a helpful path when your income is stable but doesn't fit cleanly into a typical documentation review.",
+      "faq_q2_question": "Can I qualify for an FHA loan without providing tax returns if I'm self-employed?",
+      "faq_q2_answer": "In some cases, yes. The FHA Self-Employed P&L option allows eligible business owners to qualify using profit and loss statements and a current balance sheet instead of tax returns, provided they've been self-employed for at least two full years and own at least 25% of the business.",
+      "faq_q3_question": "What credit score do I need for these alternative documentation programs?",
+      "faq_q3_answer": "The FHA VOE option generally looks for a minimum credit score of 580. The FHA Self-Employed P&L option generally looks for a mid credit score of at least 640, based on three credit scores. Exact requirements can vary based on the full loan scenario.",
+      "faq_q4_question": "How much do I need to put down?",
+      "faq_q4_answer": "Both programs offer financing up to 96.5% of the purchase price, meaning a minimum down payment as low as 3.5%, similar to a standard FHA loan.",
+      "faq_q5_question": "Can I use gift funds for my down payment?",
+      "faq_q5_answer": "Yes. Both programs allow down payment funds to come entirely from an eligible gift, typically from an immediate family member such as a spouse, parent, child, sibling, or grandparent, subject to standard gift documentation requirements.",
+      "faq_q6_question": "Are these programs available for a duplex, triplex, or fourplex?",
+      "faq_q6_answer": "Both programs may be available for primary residence properties with 1 to 4 units, subject to full eligibility and property review.",
+      "faq_q7_question": "What are FHA loan limits and how do they affect how much I can borrow?",
+      "faq_q7_answer": "FHA loan limits set the maximum standard-balance loan amount and vary by state, county, property type, and number of units. Higher-cost counties often have higher limits than the national baseline. Because limits are set locally and updated periodically, it's best to confirm the current limit for your specific county before assuming a loan amount.",
+      "faq_q8_question": "Who is a good fit for the FHA Self-Employed P&L option versus a traditional FHA loan?",
+      "faq_q8_answer": "Business owners with stable, provable income who don't have an LLC or corporation, or whose tax returns understate their true income due to deductions, are often a better fit for the P&L option than a tax-return-based FHA file. A loan officer can review your specific situation to confirm which path fits best."
+    }
+  },
+  "FHALoans": {
+    "meta": {
+      "title": "FHA Loans — Buy a Home with as Little as 3.5% Down | MyLoanDesk",
+      "description": "FHA loans with down payments as low as 3.5%, flexible credit requirements, and options after bankruptcy or foreclosure. Use our free calculator to estimate your down payment and mortgage insurance before you apply.",
+      "og_title": "FHA Loans — Buy a Home with as Little as 3.5% Down | MyLoanDesk",
+      "og_description": "Lower credit and down payment requirements make FHA one of the most accessible paths to homeownership. Estimate your down payment and mortgage insurance with our free FHA calculator.",
+      "og_alt": "FHA Loans - MyLoanDesk",
+      "twitter_title": "FHA Loans — Buy a Home with as Little as 3.5% Down | MyLoanDesk",
+      "twitter_description": "Buy a home with as little as 3.5% down and flexible credit requirements through FHA financing."
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "loan_programs": "Loan Programs",
+      "fha_loans": "FHA Loans"
+    },
+    "back_to_programs": "Back to Loan Programs",
+    "title": "FHA Loans",
+    "hero": {
+      "subtitle": "Buy with as little as 3.5% down.",
+      "description": "FHA loans are backed by the Federal Housing Administration and built for buyers who don't fit the mold of a traditional conventional mortgage — lower credit scores, smaller down payments, and a past bankruptcy or foreclosure don't have to keep you out of the market. It remains one of the most accessible paths to homeownership in the country, especially for first-time buyers.",
+      "bullet1": "3.5% down with a 580+ credit score",
+      "bullet2": "Flexible after a past bankruptcy or foreclosure",
+      "bullet3": "Gift funds allowed for your down payment",
+      "disclaimer": "Estimate only. Upfront MIP calculated at 1.75% of the base loan amount; monthly MIP estimated at 0.55% annually, both standard current FHA rates for most 30-year loans. Actual figures depend on your loan term, loan-to-value, and current FHA guidelines at the time of your application."
+    },
+    "calculator": {
+      "badge": "FHA Down Payment & MIP Calculator",
+      "subheading": "See your down payment and mortgage insurance cost.",
+      "price_label": "Home price",
+      "price_placeholder": "350,000",
+      "credit_tier_label": "Credit score range",
+      "credit_tier_select": "Select one",
+      "tier_580_plus": "580 or higher (3.5% down)",
+      "tier_500_579": "500–579 (10% down)",
+      "down_payment_required": "Down payment required",
+      "base_loan_amount": "Base loan amount",
+      "ufmip_label": "Upfront MIP (financed into loan)",
+      "total_loan_amount": "Total loan amount",
+      "monthly_mip": "Est. monthly MIP",
+      "per_month": "/mo"
+    },
+    "what_is": {
+      "title": "What Is an FHA Loan?",
+      "p1": "An FHA loan is a mortgage insured by the Federal Housing Administration, a division of the U.S. Department of Housing and Urban Development. The FHA itself doesn't lend money — instead, it insures loans made by approved lenders like MyLoanDesk, which reduces the lender's risk and allows for more flexible qualifying guidelines than a typical conventional mortgage.",
+      "p2": "That flexibility is what makes FHA financing so widely used, particularly among first-time buyers: lower minimum credit scores, a smaller required down payment, and more forgiving guidelines around past credit events like bankruptcy or foreclosure. In exchange, FHA loans require mortgage insurance, which we break down below."
+    },
+    "how_it_works": {
+      "title": "How FHA Financing Works",
+      "steps": [
+        {
+          "step": "1",
+          "title": "Get pre-qualified.",
+          "desc": "We review your credit, income, and debts to confirm your FHA eligibility and estimated buying power."
+        },
+        {
+          "step": "2",
+          "title": "Shop with confidence.",
+          "desc": "A pre-approval letter shows sellers and agents you're a serious, qualified buyer."
+        },
+        {
+          "step": "3",
+          "title": "Submit your documents.",
+          "desc": "Tax returns, pay stubs, bank statements, and ID — we'll walk you through exactly what's needed."
+        },
+        {
+          "step": "4",
+          "title": "Appraisal and underwriting.",
+          "desc": "The property is appraised to FHA standards while underwriting finalizes your approval."
+        },
+        {
+          "step": "5",
+          "title": "Close on your home.",
+          "desc": "Sign your final documents, pay your down payment and closing costs, and get your keys."
+        }
+      ]
+    },
+    "highlights": {
+      "title": "Program Highlights",
+      "subtitle": "What's included:",
+      "items": [
+        "Down payments as low as 3.5% with a qualifying credit score",
+        "Down payment can come entirely from an eligible gift or assistance program",
+        "More flexible credit and debt-to-income guidelines than conventional loans",
+        "Available for single-family homes, condos, 2-4 unit properties, and eligible manufactured homes",
+        "FHA 203(k) option to finance a home purchase and renovation costs together",
+        "Sellers can contribute up to 6% of the purchase price toward your closing costs"
+      ]
+    },
+    "advantages": {
+      "title": "Strategic Advantages:",
+      "p1": "FHA's relaxed credit guidelines mean buyers who've had a past bankruptcy, foreclosure, or a thinner credit file often qualify for FHA financing well before they'd qualify for a conventional loan — sometimes years sooner.",
+      "p2": "Because the down payment requirement is so low, FHA loans let buyers get into a home while keeping more cash in reserve for moving costs, repairs, or an emergency fund — rather than draining savings to hit a 20% conventional down payment.",
+      "p3": "Allowing seller-paid closing costs and gift funds for the down payment means many buyers can purchase a home with very little cash brought to the table beyond the 3.5% minimum."
+    },
+    "who_this_is_for": {
+      "title": "Who FHA Loans Are For",
+      "items": [
+        "First-time homebuyers without a large down payment saved up",
+        "Buyers with a credit score between 500 and 669 who don't yet qualify conventionally",
+        "Buyers within two to three years of a past bankruptcy or foreclosure",
+        "Buyers purchasing a fixer-upper who want renovation costs rolled into one loan",
+        "Buyers who'd rather keep cash in reserve than maximize their down payment"
+      ]
+    },
+    "comparison": {
+      "title": "FHA Loans vs. Conventional and VA Loans",
+      "th_fha": "FHA Loan",
+      "th_conv": "Conventional Loan",
+      "th_va": "VA Loan",
+      "rows": {
+        "down_payment": {
+          "label": "Minimum down payment",
+          "fha": "3.5% (with 580+ score)",
+          "conv": "As low as 3%, usually 5%+",
+          "va": "0% for eligible veterans"
+        },
+        "credit_score": {
+          "label": "Minimum credit score",
+          "fha": "500–580, program dependent",
+          "conv": "Typically 620+",
+          "va": "No official minimum; lender-set"
+        },
+        "mortgage_insurance": {
+          "label": "Mortgage insurance",
+          "fha": "Upfront + annual MIP, often for the loan's life",
+          "conv": "PMI, removable around 20% equity",
+          "va": "None — no monthly mortgage insurance"
+        },
+        "best_for": {
+          "label": "Best for",
+          "fha": "Buyers with lower credit or smaller down payments",
+          "conv": "Buyers with strong credit and 5%+ down",
+          "va": "Eligible active duty, veterans, and some spouses"
+        }
+      }
+    },
+    "eligibility": {
+      "title": "Eligibility Requirements",
+      "items": [
+        "Credit score of 580+ for 3.5% down, or 500–579 for 10% down",
+        "Debt-to-income ratio generally up to 43–50%, depending on compensating factors",
+        "Steady employment history, typically at least two years",
+        "At least two years since a Chapter 7 bankruptcy discharge, or three years since a foreclosure",
+        "Property must be your primary residence and meet FHA minimum property standards"
+      ]
+    },
+    "documents": {
+      "title": "Documents You'll Likely Need",
+      "items": [
+        "Two years of federal tax returns",
+        "Two years of W-2s or 1099s",
+        "Most recent pay stub (YTD earnings)",
+        "Two months of full bank statements",
+        "Recent retirement or investment account statements",
+        "Government-issued photo ID",
+        "Two years of business returns (if self-employed)",
+        "YTD profit & loss statement (if self-employed)"
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "q": "What credit score do I need for an FHA loan?",
+          "a": "Borrowers with a credit score of 580 or higher typically qualify for FHA's minimum 3.5% down payment. Scores between 500 and 579 may still qualify, but usually require a larger 10% down payment. Scores below 500 generally do not qualify for FHA financing."
+        },
+        {
+          "q": "How much down payment do I need for an FHA loan?",
+          "a": "With a credit score of 580 or higher, the minimum down payment is 3.5% of the purchase price. With a credit score between 500 and 579, most lenders require at least 10% down. Down payment funds can often come from savings, an eligible gift, or a qualifying down payment assistance program."
+        },
+        {
+          "q": "What is FHA mortgage insurance (MIP) and how much does it cost?",
+          "a": "FHA loans require two forms of mortgage insurance: an upfront premium (UFMIP), typically 1.75% of the loan amount and usually financed into the loan, and an annual premium (MIP), typically around 0.55% of the loan balance per year, paid monthly. Unlike conventional PMI, FHA's annual MIP often continues for the life of the loan unless you refinance out of FHA financing."
+        },
+        {
+          "q": "Can I get an FHA loan after a bankruptcy or foreclosure?",
+          "a": "Yes, in many cases. FHA guidelines generally allow borrowers to qualify roughly two years after a Chapter 7 bankruptcy discharge and around three years after a foreclosure, provided credit has been reestablished and payment history since then has been solid. Specific timelines can vary by lender and circumstance."
+        },
+        {
+          "q": "What property types are eligible for FHA financing?",
+          "a": "FHA loans can be used for single-family homes, FHA-approved condominiums, 2-4 unit properties (as long as the borrower occupies one unit), and many manufactured and modular homes that meet FHA construction standards."
+        },
+        {
+          "q": "What documents do I need to apply for an FHA loan?",
+          "a": "Typical documentation includes two years of tax returns, W-2s or 1099s, your most recent pay stub, two months of bank statements, recent statements for any investment or retirement accounts, and a valid government-issued ID. Self-employed borrowers generally also provide two years of business tax returns and a year-to-date profit and loss statement."
+        },
+        {
+          "q": "Is there a maximum debt-to-income ratio for FHA loans?",
+          "a": "FHA guidelines are generally more flexible than conventional loans, with many borrowers qualifying up to around a 43-50% debt-to-income ratio depending on credit score, reserves, and other compensating factors. Your total monthly debts, including the new mortgage payment, are weighed against your gross monthly income."
+        },
+        {
+          "q": "Can I use an FHA loan to buy a fixer-upper?",
+          "a": "Yes — the FHA 203(k) rehabilitation loan lets you finance the purchase price and the cost of eligible repairs or renovations in a single loan, based on the property's value after the work is completed, rather than requiring separate financing for the purchase and the renovation."
+        }
+      ]
+    },
+    "cta": {
+      "apply_now": "Apply Now →",
+      "contact_us": "Contact Us Now",
+      "note": "Not sure if FHA is the right fit? Send us your numbers — a loan officer will compare it against your other options the same day."
+    },
+    "schema": {
+      "webpage_name": "FHA Loans — Buy a Home with as Little as 3.5% Down | MyLoanDesk",
+      "webpage_description": "Comprehensive guide and calculation tools for government-backed FHA home purchase and refinance loans.",
+      "product_name": "FHA Loan",
+      "product_description": "A government-insured mortgage loan backed by the Federal Housing Administration offering low down payments from 3.5% and flexible credit qualifying guidelines.",
+      "faq_q1_question": "What credit score do I need for an FHA loan?",
+      "faq_q1_answer": "Borrowers with a credit score of 580 or higher typically qualify for FHA's minimum 3.5% down payment. Scores between 500 and 579 may still qualify, but usually require a larger 10% down payment. Scores below 500 generally do not qualify for FHA financing.",
+      "faq_q2_question": "How much down payment do I need for an FHA loan?",
+      "faq_q2_answer": "With a credit score of 580 or higher, the minimum down payment is 3.5% of the purchase price. With a credit score between 500 and 579, most lenders require at least 10% down. Down payment funds can often come from savings, an eligible gift, or a qualifying down payment assistance program.",
+      "faq_q3_question": "What is FHA mortgage insurance (MIP) and how much does it cost?",
+      "faq_q3_answer": "FHA loans require two forms of mortgage insurance: an upfront premium (UFMIP), typically 1.75% of the loan amount and usually financed into the loan, and an annual premium (MIP), typically around 0.55% of the loan balance per year, paid monthly. Unlike conventional PMI, FHA's annual MIP often continues for the life of the loan unless you refinance out of FHA financing.",
+      "faq_q4_question": "Can I get an FHA loan after a bankruptcy or foreclosure?",
+      "faq_q4_answer": "Yes, in many cases. FHA guidelines generally allow borrowers to qualify roughly two years after a Chapter 7 bankruptcy discharge and around three years after a foreclosure, provided credit has been reestablished and payment history since then has been solid. Specific timelines can vary by lender and circumstance.",
+      "faq_q5_question": "What property types are eligible for FHA financing?",
+      "faq_q5_answer": "FHA loans can be used for single-family homes, FHA-approved condominiums, 2-4 unit properties (as long as the borrower occupies one unit), and many manufactured and modular homes that meet FHA construction standards.",
+      "faq_q6_question": "What documents do I need to apply for an FHA loan?",
+      "faq_q6_answer": "Typical documentation includes two years of tax returns, W-2s or 1099s, your most recent pay stub, two months of bank statements, recent statements for any investment or retirement accounts, and a valid government-issued ID. Self-employed borrowers generally also provide two years of business tax returns and a year-to-date profit and loss statement.",
+      "faq_q7_question": "Is there a maximum debt-to-income ratio for FHA loans?",
+      "faq_q7_answer": "FHA guidelines are generally more flexible than conventional loans, with many borrowers qualifying up to around a 43-50% debt-to-income ratio depending on credit score, reserves, and other compensating factors. Your total monthly debts, including the new mortgage payment, are weighed against your gross monthly income.",
+      "faq_q8_question": "Can I use an FHA loan to buy a fixer-upper?",
+      "faq_q8_answer": "Yes — the FHA 203(k) rehabilitation loan lets you finance the purchase price and the cost of eligible repairs or renovations in a single loan, based on the property's value after the work is completed, rather than requiring separate financing for the purchase and the renovation."
+    }
   }
 }

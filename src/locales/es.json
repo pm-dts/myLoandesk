@@ -4518,5 +4518,432 @@
       "faq_q5_question": "¿Puedo calificar si el ratio DSCR es inferior a 1.0?",
       "faq_q5_answer": "Sí. Ciertos prestamistas disponen de opciones 'sin ratio' o con DSCR menor a 1.0 que cubren déficits de flujo de caja mediante requisitos de pago inicial o reservas de liquidez ligeramente superiores."
     }
+  },
+  "FHAAlternativeLoans": {
+    "meta": {
+      "title": "Programas FHA con Documentación Alternativa de Ingresos | MyLoanDesk",
+      "description": "Opciones de préstamos FHA para asalariados y trabajadores independientes cuyos ingresos no encajan en el trámite estándar: hasta 96.5% de financiamiento usando VOE o estados de pérdidas y ganancias en lugar del papeleo tributario habitual.",
+      "og_title": "Programas FHA con Documentación Alternativa de Ingresos | MyLoanDesk",
+      "og_description": "Hasta 96.5% de financiamiento FHA para asalariados e independientes con ingresos no convencionales. Conozca las opciones de verificación de empleo (VOE) y estados de pérdidas y ganancias (P&L).",
+      "og_alt": "Préstamos FHA con Documentación Alternativa - MyLoanDesk",
+      "twitter_title": "Programas FHA con Documentación Alternativa de Ingresos | MyLoanDesk",
+      "twitter_description": "Hasta 96.5% de financiamiento FHA usando VOE o estados de pérdidas y ganancias sin declaraciones de impuestos estándar."
+    },
+    "breadcrumbs": {
+      "home": "Inicio",
+      "loan_programs": "Programas de Préstamos",
+      "fha_alternative": "Documentación Alternativa FHA"
+    },
+    "back_to_programs": "Volver a Programas de Préstamos",
+    "title": "Programas FHA con Documentación Alternativa de Ingresos",
+    "hero": {
+      "subtitle": "Cuando sus ingresos no se ajustan a un trámite estándar, aún puede haber un camino con la FHA.",
+      "description": "No todos los ingresos de prestatarios calificados encajan en la revisión documental estándar de la FHA: un asalariado con una estructura de pago no tradicional o un dueño de negocio cuyas declaraciones de impuestos reflejan deducciones importantes siguen siendo prestatarios sólidos. Estas opciones financian hasta el 96.5% del precio de compra utilizando vías alternativas pero totalmente documentadas para verificar sus ingresos.",
+      "bullet1": "Financiamiento de hasta el 96.5% del precio de compra",
+      "bullet2": "Se permiten fondos de regalo para su pago inicial",
+      "bullet3": "Disponible para residencias principales de 1 a 4 unidades"
+    },
+    "switcher": {
+      "badge": "¿Cuál se Adapta a Usted?",
+      "subheading": "Indíquenos cómo percibe sus ingresos y le mostraremos la opción indicada.",
+      "tab_voe": "Soy asalariado W-2",
+      "tab_pl": "Trabajo por cuenta propia",
+      "voe": {
+        "title": "Programa FHA VOE",
+        "financing": "Hasta 96.5% de financiamiento",
+        "bullet1": "Verificación directa a través de su empleador más un recibo de nómina reciente",
+        "bullet2": "Puntaje de crédito mínimo alrededor de 580",
+        "bullet3": "Generalmente más de 2 años de historial laboral estable",
+        "bullet4": "Residencia principal, 1–4 unidades"
+      },
+      "pl": {
+        "title": "Programa FHA P&L para Independientes",
+        "financing": "Hasta 96.5% de financiamiento",
+        "bullet1": "Califique con estados de pérdidas y ganancias y balance general actual: sin declaraciones de impuestos",
+        "bullet2": "Puntaje de crédito medio alrededor de 640",
+        "bullet3": "Al menos 2 años completos como independiente con 25%+ de propiedad de la empresa",
+        "bullet4": "Se aceptan empresas unipersonales: no se requiere LLC ni corporación"
+      }
+    },
+    "what_are": {
+      "title": "¿Qué son los Préstamos FHA con Documentación Alternativa?",
+      "p1": "Un préstamo FHA estándar suele comprobar los ingresos mediante declaraciones de impuestos, formularios W-2 y recibos de pago. Estos programas alternativos siguen basándose en las directrices de la FHA y exigen la verificación completa de ingresos y capacidad de pago; simplemente utilizan documentación adaptada a la forma real en que cobran ciertos prestatarios.",
+      "p2": "Para asalariados, esto significa validar los ingresos directamente con el empleador sin depender únicamente de transcripciones fiscales. Para dueños de negocios, permite calificar con base en estados de pérdidas y ganancias y balance general, en vez de declaraciones de impuestos que puedan subestimar el flujo de caja real tras aplicar deducciones."
+    },
+    "highlights": {
+      "title": "Aspectos Destacados del Programa",
+      "subtitle": "Lo que incluye en ambas opciones:",
+      "items": [
+        "Financiamiento de hasta el 96.5% del precio de compra (pago inicial desde 3.5%)",
+        "El 100% de su pago inicial puede provenir de un regalo familiar elegible",
+        "Disponible para residencias principales de 1 a 4 unidades",
+        "Se pueden permitir aportes del vendedor para gastos de cierre dentro de los límites del programa",
+        "Opciones de compra estructuradas en torno a situaciones reales de ingresos"
+      ]
+    },
+    "strategic_advantages": {
+      "title": "Por Qué Esta Opción Puede Ser Más Conveniente:",
+      "p1": "Muchos prestatarios solventes son rechazados en la suscripción FHA tradicional simplemente porque sus documentos no coinciden con el formato bancario habitual, no porque sus ingresos carezcan de solidez. Estos programas cubren exactamente esa necesidad.",
+      "p2": "En el caso de trabajadores independientes, las declaraciones de impuestos suelen reflejar ingresos gravables reducidos por deducciones legítimas. Una evaluación basada en pérdidas y ganancias refleja con mayor precisión el desempeño real del negocio que una basada exclusivamente en declaraciones fiscales."
+    },
+    "comparison": {
+      "title": "FHA VOE vs. FHA P&L para Independientes",
+      "th_voe": "FHA VOE",
+      "th_pl": "FHA P&L para Independientes",
+      "rows": {
+        "best_for": {
+          "label": "Ideal para",
+          "voe": "Asalariados W-2 con esquemas de documentación no tradicionales",
+          "pl": "Dueños de negocios y propietarios únicos"
+        },
+        "verified_via": {
+          "label": "Verificación de ingresos",
+          "voe": "Verificación del empleador + recibo de nómina reciente",
+          "pl": "Estados de pérdidas y ganancias + balance general actual"
+        },
+        "credit_score": {
+          "label": "Puntaje de crédito mínimo típico",
+          "voe": "Alrededor de 580",
+          "pl": "Alrededor de 640 (puntuación media de tres)"
+        },
+        "history": {
+          "label": "Antigüedad laboral o del negocio",
+          "voe": "2+ años con el empleador actual",
+          "pl": "2+ años completos como trabajador independiente"
+        },
+        "max_financing": {
+          "label": "Financiamiento máximo",
+          "voe": "Hasta 96.5% LTV",
+          "pl": "Hasta 96.5% LTV"
+        }
+      }
+    },
+    "eligibility": {
+      "title": "Pautas Generales de Elegibilidad",
+      "items": [
+        "Puntaje de crédito de 580+ para FHA VOE",
+        "Puntaje medio de 640 (de 3 burós) para P&L de independientes",
+        "Compras de residencia principal de 1 a 4 unidades",
+        "Fondos verificados para el cierre o donación familiar elegible",
+        "Historial laboral de más de 2 años (VOE)",
+        "2+ años completos de actividad independiente con 25%+ de participación (P&L)"
+      ],
+      "footnote": "La elegibilidad final, precios y términos están sujetos a la evaluación completa de su solicitud. Este resumen constituye una guía general y no un compromiso de préstamo."
+    },
+    "loan_limits": {
+      "title": "Nota sobre los Límites de Préstamos FHA",
+      "p1": "La FHA establece montos máximos estándar que varían por estado, condado, tipo de propiedad y número de unidades; las zonas de mayor costo presentan límites superiores a la media nacional. A modo de ejemplo, los límites FHA para un condado de alto costo como Los Angeles County, CA corresponden actualmente a:",
+      "th_units": "Unidades",
+      "th_limit": "Límite Estándar FHA",
+      "rows": [
+        { "units": "1 unidad", "limit": "Hasta $832,750" },
+        { "units": "2 unidades", "limit": "Hasta $1,066,250" },
+        { "units": "3 unidades", "limit": "Hasta $1,288,800" },
+        { "units": "4 unidades", "limit": "Hasta $1,601,750" }
+      ],
+      "footnote": "Los límites se fijan a nivel local, se actualizan periódicamente y pueden variar notablemente fuera de condados de alto costo; verifique siempre el límite vigente para su ubicación con un oficial de préstamos."
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "items": [
+        {
+          "q": "¿Qué es FHA VOE y en qué se diferencia de un préstamo FHA estándar?",
+          "a": "FHA VOE es una modalidad basada en la FHA para asalariados elegibles que utiliza una verificación de empleo directa de su empresa junto con un recibo de nómina reciente, en lugar de todo el paquete documental habitual. Es ideal cuando el ingreso es estable pero no se ajusta al proceso tradicional."
+        },
+        {
+          "q": "¿Puedo calificar para un préstamo FHA sin presentar declaraciones de impuestos si soy independiente?",
+          "a": "En algunos casos sí. La opción FHA P&L permite a dueños de negocios calificar mediante estados de pérdidas y ganancias y balance general en vez de declaraciones fiscales, siempre que cuenten con al menos dos años completos de actividad independiente y posean el 25% o más del negocio."
+        },
+        {
+          "q": "¿Qué puntaje de crédito necesito para estos programas alternativos?",
+          "a": "La opción FHA VOE suele requerir un puntaje de crédito mínimo de 580. La opción FHA P&L para independientes suele requerir un puntaje medio de al menos 640 (entre tres burós). Los requisitos exactos varían según el perfil crediticio integral."
+        },
+        {
+          "q": "¿Cuánto pago inicial debo aportar?",
+          "a": "Ambos programas permiten financiar hasta el 96.5% del precio de compra, lo que representa un pago inicial mínimo de solo el 3.5%, igual que un préstamo FHA convencional."
+        },
+        {
+          "q": "¿Puedo usar fondos de regalo para mi pago inicial?",
+          "a": "Sí. Ambos programas permiten que la totalidad del pago inicial provenga de una donación familiar elegible (cónyuge, padres, hijos, hermanos o abuelos), sujeta a la documentación estándar requerida."
+        },
+        {
+          "q": "¿Estos programas aplican a dúplex, tríplex o cuádruplex?",
+          "a": "Ambos programas pueden utilizarse para propiedades de residencia principal de 1 a 4 unidades, sujeto a la evaluación de la propiedad y del solicitante."
+        },
+        {
+          "q": "¿Qué son los límites de préstamos FHA y cómo determinan mi monto máximo?",
+          "a": "Los límites de la FHA definen el monto máximo de financiamiento y varían por estado, condado, tipo de inmueble y número de unidades. Al actualizarse periódicamente y diferir entre regiones, es indispensable confirmar el límite vigente con su asesor hipotecario."
+        },
+        {
+          "q": "¿Quién es un buen candidato para la opción FHA P&L frente a un préstamo FHA tradicional?",
+          "a": "Dueños de negocios con ingresos estables comprobables que operan como personas físicas o cuyas declaraciones de impuestos reflejan deducciones sustanciales. Un asesor puede revisar su caso para orientarle hacia la vía más conveniente."
+        }
+      ]
+    },
+    "situation": {
+      "title": "Cuéntenos Sobre su Situación",
+      "p1": "Cada caso tiene particularidades únicas y estos programas funcionan mejor cuando conocemos su panorama completo. Al comunicarse con nosotros, es de gran utilidad incluir:",
+      "points": [
+        "Si desea comprar o refinanciar",
+        "El tipo de propiedad y número de unidades",
+        "La ciudad y el estado donde planea adquirir",
+        "Precio de compra o valor estimado",
+        "Su puntaje de crédito aproximado",
+        "Si percibe ingresos como asalariado o trabajador independiente",
+        "Antigüedad en su empleo (VOE) o en su negocio (P&L)",
+        "Para dueños de empresa: porcentaje de propiedad y tipo de entidad"
+      ]
+    },
+    "cta": {
+      "apply_now": "Solicitar Ahora →",
+      "contact_us": "Contáctenos Ahora",
+      "note": "¿Tiene un escenario en mente? Comparta sus detalles y un oficial de préstamos evaluará sus opciones el mismo día."
+    },
+    "schema": {
+      "webpage_name": "Programas FHA con Documentación Alternativa de Ingresos | MyLoanDesk",
+      "webpage_description": "Programas flexibles de calificación FHA utilizando verificación de empleo (VOE) o estados de pérdidas y ganancias (P&L) para asalariados e independientes no tradicionales.",
+      "product_name": "Préstamo FHA con Documentación Alternativa",
+      "product_description": "Financiamiento hipotecario FHA asegurado por el gobierno hasta 96.5% LTV mediante vías alternativas de verificación de ingresos como VOE y P&L.",
+      "faq_q1_question": "¿Qué es FHA VOE y en qué se diferencia de un préstamo FHA estándar?",
+      "faq_q1_answer": "FHA VOE es una modalidad basada en la FHA para asalariados elegibles que utiliza una verificación de empleo directa de su empresa junto con un recibo de nómina reciente, en lugar de todo el paquete documental habitual. Es ideal cuando el ingreso es estable pero no se ajusta al proceso tradicional.",
+      "faq_q2_question": "¿Puedo calificar para un préstamo FHA sin presentar declaraciones de impuestos si soy independiente?",
+      "faq_q2_answer": "En algunos casos sí. La opción FHA P&L permite a dueños de negocios calificar mediante estados de pérdidas y ganancias y balance general en vez de declaraciones fiscales, siempre que cuenten con al menos dos años completos de actividad independiente y posean el 25% o más del negocio.",
+      "faq_q3_question": "¿Qué puntaje de crédito necesito para estos programas alternativos?",
+      "faq_q3_answer": "La opción FHA VOE suele requerir un puntaje de crédito mínimo de 580. La opción FHA P&L para independientes suele requerir un puntaje medio de al menos 640 (entre tres burós). Los requisitos exactos varían según el perfil crediticio integral.",
+      "faq_q4_question": "¿Cuánto pago inicial debo aportar?",
+      "faq_q4_answer": "Ambos programas permiten financiar hasta el 96.5% del precio de compra, lo que representa un pago inicial mínimo de solo el 3.5%, igual que un préstamo FHA convencional.",
+      "faq_q5_question": "¿Puedo usar fondos de regalo para mi pago inicial?",
+      "faq_q5_answer": "Sí. Ambos programas permiten que la totalidad del pago inicial provenga de una donación familiar elegible (cónyuge, padres, hijos, hermanos o abuelos), sujeta a la documentación estándar requerida.",
+      "faq_q6_question": "¿Estos programas aplican a dúplex, tríplex o cuádruplex?",
+      "faq_q6_answer": "Ambos programas pueden utilizarse para propiedades de residencia principal de 1 a 4 unidades, sujeto a la evaluación de la propiedad y del solicitante.",
+      "faq_q7_question": "¿Qué son los límites de préstamos FHA y cómo determinan mi monto máximo?",
+      "faq_q7_answer": "Los límites de la FHA definen el monto máximo de financiamiento y varían por estado, condado, tipo de inmueble y número de unidades. Al actualizarse periódicamente y diferir entre regiones, es indispensable confirmar el límite vigente con su asesor hipotecario.",
+      "faq_q8_question": "¿Quién es un buen candidato para la opción FHA P&L frente a un préstamo FHA tradicional?",
+      "faq_q8_answer": "Dueños de negocios con ingresos estables comprobables que operan como personas físicas o cuyas declaraciones de impuestos reflejan deducciones sustanciales. Un asesor puede revisar su caso para orientarle hacia la vía más conveniente."
+    }
+  },
+  "FHALoans": {
+    "meta": {
+      "title": "Préstamos FHA — Compre Casa con tan solo 3.5% de Enganche | MyLoanDesk",
+      "description": "Préstamos FHA con pagos iniciales desde 3.5%, requisitos de crédito flexibles y opciones tras bancarrota o ejecución hipotecaria. Use nuestra calculadora gratuita para estimar su pago inicial y seguro hipotecario antes de solicitar.",
+      "og_title": "Préstamos FHA — Compre Casa con tan solo 3.5% de Enganche | MyLoanDesk",
+      "og_description": "Menores exigencias de crédito y pago inicial hacen de la FHA una de las vías más accesibles hacia la casa propia. Estime su pago inicial y seguro con nuestra calculadora FHA gratuita.",
+      "og_alt": "Préstamos FHA - MyLoanDesk",
+      "twitter_title": "Préstamos FHA — Compre Casa con tan solo 3.5% de Enganche | MyLoanDesk",
+      "twitter_description": "Compre casa con tan solo 3.5% de pago inicial y requisitos de crédito flexibles mediante financiamiento FHA."
+    },
+    "breadcrumbs": {
+      "home": "Inicio",
+      "loan_programs": "Programas de Préstamos",
+      "fha_loans": "Préstamos FHA"
+    },
+    "back_to_programs": "Volver a Programas de Préstamos",
+    "title": "Préstamos FHA",
+    "hero": {
+      "subtitle": "Compre con tan solo 3.5% de pago inicial.",
+      "description": "Los préstamos FHA están respaldados por la Administración Federal de Vivienda y diseñados para compradores que no se ajustan a las exigencias de una hipoteca convencional tradicional: puntuaciones de crédito más bajas, menor enganche e incluso una bancarrota o ejecución hipotecaria previa no tienen por qué dejarle fuera del mercado. Sigue siendo una de las vías más accesibles hacia la propiedad de vivienda en el país, especialmente para compradores de primera casa.",
+      "bullet1": "3.5% de enganche con puntaje de crédito de 580+",
+      "bullet2": "Flexibilidad tras bancarrota o ejecución hipotecaria previa",
+      "bullet3": "Se permiten fondos de regalo para su pago inicial",
+      "disclaimer": "Cálculo estimado únicamente. MIP inicial calculado al 1.75% del monto base del préstamo; MIP mensual estimado al 0.55% anual, ambas tasas estándar vigentes de la FHA para la mayoría de préstamos a 30 años. Las cifras definitivas dependen del plazo, la relación préstamo-valor y las directrices vigentes de la FHA al momento de su solicitud."
+    },
+    "calculator": {
+      "badge": "Calculadora de Pago Inicial y MIP de la FHA",
+      "subheading": "Consulte su pago inicial y el costo del seguro hipotecario.",
+      "price_label": "Precio de la vivienda",
+      "price_placeholder": "350,000",
+      "credit_tier_label": "Rango de puntaje de crédito",
+      "credit_tier_select": "Seleccione uno",
+      "tier_580_plus": "580 o superior (3.5% de enganche)",
+      "tier_500_579": "500–579 (10% de enganche)",
+      "down_payment_required": "Pago inicial requerido",
+      "base_loan_amount": "Monto base del préstamo",
+      "ufmip_label": "MIP Inicial (financiado en el préstamo)",
+      "total_loan_amount": "Monto total del préstamo",
+      "monthly_mip": "MIP mensual estimado",
+      "per_month": "/mes"
+    },
+    "what_is": {
+      "title": "¿Qué es un Préstamo FHA?",
+      "p1": "Un préstamo FHA es una hipoteca asegurada por la Administración Federal de Vivienda, una división del Departamento de Vivienda y Desarrollo Urbano de EE. UU. (HUD). La FHA no presta el dinero directamente; asegura los préstamos otorgados por entidades aprobadas como MyLoanDesk, lo que reduce el riesgo del prestamista y permite criterios de calificación más flexibles que una hipoteca convencional.",
+      "p2": "Esa flexibilidad es la razón por la que el financiamiento FHA es tan popular, en particular entre compradores primerizos: puntajes de crédito mínimos más bajos, menor enganche y mayor tolerancia ante eventos crediticios pasados como bancarrotas o ejecuciones. A cambio, los préstamos FHA requieren un seguro hipotecario que desglosamos a continuación."
+    },
+    "how_it_works": {
+      "title": "¿Cómo Funciona el Financiamiento FHA?",
+      "steps": [
+        {
+          "step": "1",
+          "title": "Precalifíquese.",
+          "desc": "Revisamos su crédito, ingresos y deudas para confirmar su elegibilidad FHA y su capacidad de compra estimada."
+        },
+        {
+          "step": "2",
+          "title": "Busque vivienda con seguridad.",
+          "desc": "Una carta de preaprobación demuestra a vendedores y agentes que usted es un comprador calificado y formal."
+        },
+        {
+          "step": "3",
+          "title": "Presente sus documentos.",
+          "desc": "Declaraciones de impuestos, recibos de nómina, estados de cuenta e identificación: le guiaremos en lo que se necesita."
+        },
+        {
+          "step": "4",
+          "title": "Tasación y suscripción.",
+          "desc": "La propiedad se tasa bajo estándares FHA mientras el equipo de suscripción formaliza su aprobación."
+        },
+        {
+          "step": "5",
+          "title": "Cierre de su vivienda.",
+          "desc": "Firme sus documentos finales, abone el pago inicial y costos de cierre, y reciba sus llaves."
+        }
+      ]
+    },
+    "highlights": {
+      "title": "Aspectos Destacados del Programa",
+      "subtitle": "Lo que incluye:",
+      "items": [
+        "Pagos iniciales desde tan solo 3.5% con puntaje crediticio calificado",
+        "El pago inicial puede provenir en su totalidad de una donación familiar elegible o programa de asistencia",
+        "Directrices de crédito y relación deuda-ingreso más flexibles que en préstamos convencionales",
+        "Disponible para viviendas unifamiliares, condominios, propiedades de 2 a 4 unidades y casas manufacturadas elegibles",
+        "Opción FHA 203(k) para financiar la compra y costos de renovación de la casa en un solo crédito",
+        "Los vendedores pueden aportar hasta el 6% del precio de compra para sus costos de cierre"
+      ]
+    },
+    "advantages": {
+      "title": "Ventajas Estratégicas:",
+      "p1": "Los criterios crediticios flexibles de la FHA permiten que compradores con antecedentes de bancarrota, ejecución hipotecaria o historial crediticio reducido califiquen mucho antes que con un préstamo convencional, a veces años antes.",
+      "p2": "Al ser el pago inicial tan bajo, los préstamos FHA permiten acceder a una vivienda conservando mayores reservas de efectivo para mudanza, reparaciones o emergencias, en lugar de agotar ahorros para alcanzar el 20% convencional.",
+      "p3": "Permitir costos de cierre cubiertos por el vendedor y donaciones para el enganche significa que muchos compradores adquieren su vivienda aportando muy poco efectivo propio más allá del 3.5% mínimo."
+    },
+    "who_this_is_for": {
+      "title": "¿Para Quién son los Préstamos FHA?",
+      "items": [
+        "Compradores de primera vivienda sin grandes ahorros acumulados para el pago inicial",
+        "Compradores con puntajes de crédito entre 500 y 669 que aún no califican por la vía convencional",
+        "Compradores con dos o tres años posteriores a una bancarrota o ejecución hipotecaria",
+        "Compradores de viviendas por remodelar que desean incluir las mejoras en un solo préstamo",
+        "Compradores que prefieren mantener reservas de liquidez en vez de maximizar el enganche"
+      ]
+    },
+    "comparison": {
+      "title": "Préstamos FHA vs. Préstamos Convencionales y VA",
+      "th_fha": "Préstamo FHA",
+      "th_conv": "Préstamo Convencional",
+      "th_va": "Préstamo VA",
+      "rows": {
+        "down_payment": {
+          "label": "Pago inicial mínimo",
+          "fha": "3.5% (con puntaje 580+)",
+          "conv": "Desde 3%, comúnmente 5%+",
+          "va": "0% para veteranos elegibles"
+        },
+        "credit_score": {
+          "label": "Puntaje de crédito mínimo",
+          "fha": "500–580, según el programa",
+          "conv": "Típicamente 620+",
+          "va": "Sin mínimo oficial; fijado por el prestamista"
+        },
+        "mortgage_insurance": {
+          "label": "Seguro hipotecario",
+          "fha": "MIP inicial + mensual, a menudo por la vida del préstamo",
+          "conv": "PMI, eliminable al alcanzar ~20% de plusvalía",
+          "va": "Ninguno: sin seguro hipotecario mensual"
+        },
+        "best_for": {
+          "label": "Ideal para",
+          "fha": "Compradores con menor crédito o ahorros reducidos para el enganche",
+          "conv": "Compradores con buen crédito y 5%+ de enganche",
+          "va": "Militares activos, veteranos elegibles y cónyuges calificados"
+        }
+      }
+    },
+    "eligibility": {
+      "title": "Requisitos de Elegibilidad",
+      "items": [
+        "Puntaje de crédito de 580+ para 3.5% de enganche, o 500–579 para 10% de enganche",
+        "Relación deuda-ingreso generalmente hasta 43–50%, según factores compensatorios",
+        "Historial de empleo estable, generalmente de al menos dos años",
+        "Al menos dos años tras liquidación de bancarrota Capítulo 7, o tres años tras ejecución",
+        "La propiedad debe ser su residencia principal y cumplir con los estándares mínimos de la FHA"
+      ]
+    },
+    "documents": {
+      "title": "Documentos que Probablemente Necesitará",
+      "items": [
+        "Dos años de declaraciones de impuestos federales",
+        "Dos años de formularios W-2 o 1099",
+        "Recibo de nómina más reciente (ingresos acumulados del año)",
+        "Dos meses de estados de cuenta bancarios completos",
+        "Estados de cuenta recientes de cuentas de inversión o retiro",
+        "Identificación oficial con fotografía emitida por el gobierno",
+        "Dos años de declaraciones de impuestos del negocio (si trabaja por cuenta propia)",
+        "Estado de pérdidas y ganancias acumulado del año (si trabaja por cuenta propia)"
+      ]
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "items": [
+        {
+          "q": "¿Qué puntaje de crédito necesito para un préstamo FHA?",
+          "a": "Los prestatarios con un puntaje de crédito de 580 o superior califican habitualmente para el pago inicial mínimo del 3.5% de la FHA. Las puntuaciones entre 500 y 579 pueden calificar pero suelen requerir un enganche mayor del 10%. Por debajo de 500 generalmente no se califica para financiamiento FHA."
+        },
+        {
+          "q": "¿Cuánto pago inicial necesito para un préstamo FHA?",
+          "a": "Con un puntaje de 580 o más, el pago inicial mínimo es del 3.5% del precio de compra. Entre 500 y 579, la mayoría de prestamistas exige al menos el 10%. Los fondos pueden provenir de ahorros, una donación familiar elegible o un programa calificado de asistencia para el enganche."
+        },
+        {
+          "q": "¿Qué es el seguro hipotecario de la FHA (MIP) y cuánto cuesta?",
+          "a": "Los préstamos FHA requieren dos modalidades de seguro: una prima inicial (UFMIP), habitualmente del 1.75% del monto del préstamo y financiada en el saldo, y una prima anual (MIP), generalmente de alrededor del 0.55% del saldo anual, abonada mensualmente. A diferencia del PMI convencional, el MIP anual de la FHA suele mantenerse durante toda la vigencia del crédito a menos que se refinancie hacia otra modalidad."
+        },
+        {
+          "q": "¿Puedo obtener un préstamo FHA después de una bancarrota o ejecución hipotecaria?",
+          "a": "Sí, en muchos casos. Las directrices de la FHA suelen permitir calificar aproximadamente dos años después de una bancarrota Capítulo 7 y unos tres años tras una ejecución hipotecaria, siempre que se haya restablecido un historial crediticio sólido y puntual."
+        },
+        {
+          "q": "¿Qué tipos de propiedad son elegibles para financiamiento FHA?",
+          "a": "Los préstamos FHA pueden emplearse para viviendas unifamiliares, condominios aprobados por la FHA, propiedades de 2 a 4 unidades (siempre que el prestatario resida en una) y casas manufacturadas o modulares que cumplan con los estándares de construcción de la FHA."
+        },
+        {
+          "q": "¿Qué documentos debo presentar para solicitar un préstamo FHA?",
+          "a": "La documentación típica incluye dos años de declaraciones tributarias, W-2s o 1099s, su recibo de nómina más reciente, dos meses de extractos bancarios, estados de cuentas de inversión o jubilación e identificación oficial. Para trabajadores independientes se añaden dos años de declaraciones comerciales y un estado de pérdidas y ganancias actualizado."
+        },
+        {
+          "q": "¿Existe un límite máximo de relación deuda-ingreso para préstamos FHA?",
+          "a": "Las normas de la FHA son más flexibles que las convencionales, permitiendo a muchos prestatarios calificar con ratios DTI de hasta el 43–50% en función del puntaje de crédito, reservas y factores compensatorios."
+        },
+        {
+          "q": "¿Puedo usar un préstamo FHA para comprar una vivienda por remodelar?",
+          "a": "Sí: el préstamo de rehabilitación FHA 203(k) le permite financiar el precio de compra y los costos de reparaciones o remodelaciones elegibles en un solo crédito basado en el valor proyectado de la propiedad tras las obras."
+        }
+      ]
+    },
+    "cta": {
+      "apply_now": "Solicitar Ahora →",
+      "contact_us": "Contáctenos Ahora",
+      "note": "¿No está seguro de si la FHA es la opción indicada? Envíenos sus cifras: un oficial de préstamos evaluará sus opciones frente a otras alternativas el mismo día."
+    },
+    "schema": {
+      "webpage_name": "FHA Loans — Buy a Home with as Little as 3.5% Down | MyLoanDesk",
+      "webpage_description": "Comprehensive guide and calculation tools for government-backed FHA home purchase and refinance loans.",
+      "product_name": "FHA Loan",
+      "product_description": "A government-insured mortgage loan backed by the Federal Housing Administration offering low down payments from 3.5% and flexible credit qualifying guidelines.",
+      "faq_q1_question": "What credit score do I need for an FHA loan?",
+      "faq_q1_answer": "Borrowers with a credit score of 580 or higher typically qualify for FHA's minimum 3.5% down payment. Scores between 500 and 579 may still qualify, but usually require a larger 10% down payment. Scores below 500 generally do not qualify for FHA financing.",
+      "faq_q2_question": "How much down payment do I need for an FHA loan?",
+      "faq_q2_answer": "With a credit score of 580 or higher, the minimum down payment is 3.5% of the purchase price. With a credit score between 500 and 579, most lenders require at least 10% down. Down payment funds can often come from savings, an eligible gift, or a qualifying down payment assistance program.",
+      "faq_q3_question": "What is FHA mortgage insurance (MIP) and how much does it cost?",
+      "faq_q3_answer": "FHA loans require two forms of mortgage insurance: an upfront premium (UFMIP), typically 1.75% of the loan amount and usually financed into the loan, and an annual premium (MIP), typically around 0.55% of the loan balance per year, paid monthly. Unlike conventional PMI, FHA's annual MIP often continues for the life of the loan unless you refinance out of FHA financing.",
+      "faq_q4_question": "Can I get an FHA loan after a bankruptcy or foreclosure?",
+      "faq_q4_answer": "Yes, in many cases. FHA guidelines generally allow borrowers to qualify roughly two years after a Chapter 7 bankruptcy discharge and around three years after a foreclosure, provided credit has been reestablished and payment history since then has been solid. Specific timelines can vary by lender and circumstance.",
+      "faq_q5_question": "What property types are eligible for FHA financing?",
+      "faq_q5_answer": "FHA loans can be used for single-family homes, FHA-approved condominiums, 2-4 unit properties (as long as the borrower occupies one unit), and many manufactured and modular homes that meet FHA construction standards.",
+      "faq_q6_question": "What documents do I need to apply for an FHA loan?",
+      "faq_q6_answer": "Typical documentation includes two years of tax returns, W-2s or 1099s, your most recent pay stub, two months of bank statements, recent statements for any investment or retirement accounts, and a valid government-issued ID. Self-employed borrowers generally also provide two years of business tax returns and a year-to-date profit and loss statement.",
+      "faq_q7_question": "Is there a maximum debt-to-income ratio for FHA loans?",
+      "faq_q7_answer": "FHA guidelines are generally more flexible than conventional loans, with many borrowers qualifying up to around a 43-50% debt-to-income ratio depending on credit score, reserves, and other compensating factors. Your total monthly debts, including the new mortgage payment, are weighed against your gross monthly income.",
+      "faq_q8_question": "Can I use an FHA loan to buy a fixer-upper?",
+      "faq_q8_answer": "Yes — the FHA 203(k) rehabilitation loan lets you finance the purchase price and the cost of eligible repairs or renovations in a single loan, based on the property's value after the work is completed, rather than requiring separate financing for the purchase and the renovation."
+    }
   }
 }
