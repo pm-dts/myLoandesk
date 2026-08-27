@@ -3,12 +3,20 @@
 import { useState } from "react";
 import { Calculator, DollarSign, Percent, Scale } from "lucide-react";
 import { sendGTMEvent } from "@next/third-parties/google";
+import { useTranslations } from "next-intl";
+
+interface BridgeToSaleCalculatorProps {
+  pagePath: string;
+  locale?: string;
+}
 
 export default function BridgeToSaleCalculator({
   pagePath,
-}: {
-  pagePath: string;
-}) {
+  locale = "en",
+}: BridgeToSaleCalculatorProps) {
+  const t = useTranslations("BridgeToSaleLoans.calculator");
+  const numberLocale = locale === "es" ? "es-US" : "en-US";
+
   const [currentHomeValue, setCurrentHomeValue] = useState<string>("600000");
   const [existingMortgage, setExistingMortgage] = useState<string>("250000");
   const [maxCltvPercent, setMaxCltvPercent] = useState<string>("80");
@@ -42,6 +50,7 @@ export default function BridgeToSaleCalculator({
         current_home_value: val,
         estimated_bridge_limit: netBridgeLimit,
         page_path: pagePath || "/loan-programs/bridge-to-sale-loans",
+        locale,
       });
     }
   };
@@ -54,14 +63,13 @@ export default function BridgeToSaleCalculator({
       <div className="bg-primary-bg border border-line rounded-3xl p-6 sm:p-10 shadow-lg">
         <div className="text-center max-w-xl mx-auto mb-8">
           <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-orange uppercase tracking-wider mb-2">
-            <Calculator size={16} /> Interactive Equity Estimator
+            <Calculator size={16} /> {t("badge")}
           </div>
           <h3 className="text-2xl sm:text-3xl font-display font-light text-ink">
-            Estimate Your Bridge Loan Capacity
+            {t("heading")}
           </h3>
           <p className="text-xs sm:text-sm text-ink-2 mt-2">
-            See how much equity you can unlock from your current home before it
-            sells.
+            {t("subheading")}
           </p>
         </div>
 
@@ -70,7 +78,7 @@ export default function BridgeToSaleCalculator({
             {/* Current Home Estimated Value */}
             <div>
               <label className="block text-xs font-semibold uppercase tracking-wider text-ink-2 mb-2 h-8 flex items-end">
-                Current Home Value ($)
+                {t("current_value_label")}
               </label>
               <div className="relative">
                 <DollarSign
@@ -81,7 +89,7 @@ export default function BridgeToSaleCalculator({
                   type="number"
                   value={currentHomeValue}
                   onChange={(e) => setCurrentHomeValue(e.target.value)}
-                  placeholder="600000"
+                  placeholder={t("current_value_placeholder")}
                   className="w-full h-[50px] pl-12 pr-4 bg-cream/20 border border-line rounded-xl text-ink text-sm focus:outline-none focus:border-brand-orange transition-colors"
                   required
                 />
@@ -91,7 +99,7 @@ export default function BridgeToSaleCalculator({
             {/* Existing Mortgage Balance */}
             <div>
               <label className="block text-xs font-semibold uppercase tracking-wider text-ink-2 mb-2 h-8 flex items-end">
-                Existing Mortgage Balance ($)
+                {t("existing_mortgage_label")}
               </label>
               <div className="relative">
                 <DollarSign
@@ -102,7 +110,7 @@ export default function BridgeToSaleCalculator({
                   type="number"
                   value={existingMortgage}
                   onChange={(e) => setExistingMortgage(e.target.value)}
-                  placeholder="250000"
+                  placeholder={t("existing_mortgage_placeholder")}
                   className="w-full h-[50px] pl-12 pr-4 bg-cream/20 border border-line rounded-xl text-ink text-sm focus:outline-none focus:border-brand-orange transition-colors"
                   required
                 />
@@ -112,7 +120,7 @@ export default function BridgeToSaleCalculator({
             {/* Max Lender CLTV % */}
             <div>
               <label className="block text-xs font-semibold uppercase tracking-wider text-ink-2 mb-2 h-8 flex items-end">
-                Max Lender CLTV (%)
+                {t("cltv_label")}
               </label>
               <div className="relative">
                 <Percent
@@ -124,7 +132,7 @@ export default function BridgeToSaleCalculator({
                   step="1"
                   value={maxCltvPercent}
                   onChange={(e) => setMaxCltvPercent(e.target.value)}
-                  placeholder="80"
+                  placeholder={t("cltv_placeholder")}
                   className="w-full h-[50px] pl-4 pr-10 bg-cream/20 border border-line rounded-xl text-ink text-sm focus:outline-none focus:border-brand-orange transition-colors"
                   required
                 />
@@ -136,7 +144,7 @@ export default function BridgeToSaleCalculator({
             type="submit"
             className="w-full bg-moss-deep text-primary-bg py-3.5 rounded-full font-semibold text-sm sm:text-base hover:bg-moss-darker transition-colors flex items-center justify-center gap-2"
           >
-            <Scale size={18} /> Calculate Estimated Bridge Limit
+            <Scale size={18} /> {t("submit_button")}
           </button>
         </form>
 
@@ -145,36 +153,43 @@ export default function BridgeToSaleCalculator({
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
               <div className="p-3 bg-primary-bg rounded-xl border border-line/50">
                 <div className="text-[11px] uppercase tracking-wider text-ink-2 font-semibold">
-                  Total Gross Equity
+                  {t("total_equity_label")}
                 </div>
                 <div className="text-xl font-bold text-ink mt-1">
-                  ${calcResult.totalEquity.toLocaleString()}
+                  $
+                  {calcResult.totalEquity.toLocaleString(numberLocale, {
+                    maximumFractionDigits: 0,
+                  })}
                 </div>
               </div>
 
               <div className="p-3 bg-primary-bg rounded-xl border border-line/50">
                 <div className="text-[11px] uppercase tracking-wider text-brand-orange font-semibold">
-                  Max Combined Financing
+                  {t("max_borrowable_label")}
                 </div>
                 <div className="text-xl font-bold text-ink mt-1">
-                  ${calcResult.maxBorrowableEquity.toLocaleString()}
+                  $
+                  {calcResult.maxBorrowableEquity.toLocaleString(numberLocale, {
+                    maximumFractionDigits: 0,
+                  })}
                 </div>
               </div>
 
               <div className="p-3 bg-primary-bg rounded-xl border border-line/50">
                 <div className="text-[11px] uppercase tracking-wider text-moss-deep font-semibold">
-                  Est. Available Bridge Cash
+                  {t("available_cash_label")}
                 </div>
                 <div className="text-2xl font-bold text-moss-deep mt-1">
-                  ${calcResult.netBridgeLimit.toLocaleString()}
+                  $
+                  {calcResult.netBridgeLimit.toLocaleString(numberLocale, {
+                    maximumFractionDigits: 0,
+                  })}
                 </div>
               </div>
             </div>
 
             <p className="text-xs text-ink-2 mt-4 text-center max-w-lg mx-auto">
-              * Exact bridge borrowing capacity depends on your home&apos;s
-              appraised value, existing liens, credit profile, and lender
-              underwriting parameters.
+              {t("footnote")}
             </p>
           </div>
         )}

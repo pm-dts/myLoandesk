@@ -3583,5 +3583,376 @@
       "faq_q5_question": "What is the minimum credit score required for bank statement loans?",
       "faq_q5_answer": "Most bank statement programs accept credit scores starting at 620, with optimal terms and higher LTV ratios available for scores above 700."
     }
+  },
+  "BridgeLoans": {
+    "meta": {
+      "title": "Bridge Loans: Fast, Flexible Residential & Commercial Financing | MyLoanDesk",
+      "description": "Bridge loans for residential buy-before-you-sell transitions and commercial property acquisitions or repositioning. Close in days with interest-only options and flexible terms.",
+      "og_title": "Bridge Loans: Fast, Flexible Residential & Commercial Financing | MyLoanDesk",
+      "og_description": "Short-term bridge financing for residential and commercial real estate. Move fast, bypass contingencies, and secure property before permanent financing is in place.",
+      "og_alt": "Bridge Loans - MyLoanDesk",
+      "twitter_title": "Bridge Loans: Fast, Flexible Residential & Commercial Financing | MyLoanDesk",
+      "twitter_description": "Short-term bridge financing for residential and commercial real estate. Close quickly with flexible terms."
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "loan_programs": "Loan Programs",
+      "bridge_loans": "Bridge Loans"
+    },
+    "back_to_programs": "Back to Loan Programs",
+    "title": "Bridge Loans",
+    "hero": {
+      "subtitle": "Fast, Flexible Financing for Residential and Commercial Real Estate",
+      "description": "A bridge loan is short-term financing that \"bridges\" the gap between where you are now and where you need to be — whether that's closing on a new home before your current one sells, or acquiring a commercial property before permanent financing is in place.",
+      "bullet1": "Funding speed: Close in as fast as 7–14 days",
+      "bullet2": "Terms from 6 to 24 months with interest-only options",
+      "bullet3": "Asset-based underwriting across residential & commercial",
+      "disclaimer": "Estimate only. Assumes interest-only payment structures. Does not include origination points, closing costs, taxes, or property insurance. Actual terms depend on property equity, asset evaluation, and underwriting review."
+    },
+    "calculator": {
+      "badge": "Bridge Loan Payment Estimator",
+      "subheading": "Estimate interest-only payments and loan amounts.",
+      "residential_tab": "Residential Bridge",
+      "commercial_tab": "Commercial Bridge",
+      "property_value_label_res": "Combined Property Value",
+      "property_value_label_comm": "Property As-Is / Stabilized Value",
+      "ltv_label": "LTV / CLTV Target",
+      "rate_label": "Est. Interest Rate",
+      "term_label": "Bridge Loan Term",
+      "month_suffix": "Months",
+      "est_loan_amount": "Estimated Loan Amount",
+      "est_monthly_payment": "Est. Monthly Payment (I/O)",
+      "per_month": "/mo",
+      "repayment_label": "Repayment Structure",
+      "repayment_value": "Interest-Only / Exit at Maturity"
+    },
+    "what_is": {
+      "title": "What Is a Bridge Loan?",
+      "p1": "Unlike a conventional mortgage, a bridge loan is built for speed and flexibility. Terms typically run 6 to 24 months, funding can close in days rather than weeks, and approval is based more on the value and equity of the real estate involved than on a lengthy income-verification process.",
+      "p2": "Once your permanent financing, sale, or refinance comes through, the bridge loan is paid off — that's the \"exit strategy\" every bridge loan is built around. Bridge loans work for both residential and commercial properties, though the way they're structured and underwritten differs between the two."
+    },
+    "residential": {
+      "title": "Residential Bridge Loans",
+      "intro": "Residential bridge loans are most common for homeowners who need to buy their next house before selling their current one. Common scenarios include:",
+      "points": {
+        "buy_before_sell_title": "Buy before you sell:",
+        "buy_before_sell_desc": "Access equity in your existing home to fund the down payment or full purchase of the new property.",
+        "avoid_contingent_title": "Avoiding contingent offers:",
+        "avoid_contingent_desc": "Remove sale contingencies to make purchase offers significantly more competitive in hot markets.",
+        "renovation_title": "Renovation & staging timing:",
+        "renovation_desc": "Close on a new residence while making repairs or staging your current home for maximum sale value.",
+        "estate_title": "Estate & transition liquidity:",
+        "estate_desc": "Bridge the timing gap while an inherited estate is settled or sold."
+      }
+    },
+    "commercial": {
+      "title": "Commercial Bridge Loans",
+      "intro": "Commercial bridge loans serve investors, developers, and business owners who need to move quickly on a property before long-term financing is arranged. Common uses include:",
+      "points": {
+        "stabilization_title": "Acquisition before stabilization:",
+        "stabilization_desc": "Purchasing underperforming multifamily or retail assets that require lease-up or renovation before qualifying for conventional financing.",
+        "time_sensitive_title": "Time-sensitive transactions:",
+        "time_sensitive_desc": "Fast execution for off-market opportunities, auctions, or strict 1031 exchange deadlines.",
+        "repositioning_title": "Repositioning & capital improvements:",
+        "repositioning_desc": "Carrying a property through major construction until it becomes stabilized and cash-flowing.",
+        "maturing_debt_title": "Maturing debt payoff:",
+        "maturing_debt_desc": "Refinancing notes coming due to avoid default while permanent financing packages are assembled."
+      },
+      "asset_classes_title": "Eligible Commercial Asset Classes",
+      "asset_classes": [
+        "Multifamily (5+ units)",
+        "Office Buildings",
+        "Retail Centers",
+        "Industrial & Warehouse",
+        "Mixed-Use Assets",
+        "Hospitality Properties",
+        "Special Purpose Properties"
+      ]
+    },
+    "comparison": {
+      "title": "Residential vs. Commercial Bridge Loans",
+      "th_res": "Residential Bridge Loan",
+      "th_comm": "Commercial Bridge Loan",
+      "rows": {
+        "primary_use": {
+          "label": "Primary use",
+          "res": "Buy new home before selling current one",
+          "comm": "Acquire, reposition, or refinance investment property"
+        },
+        "underwriting": {
+          "label": "Underwriting focus",
+          "res": "Equity in current + new home",
+          "comm": "Asset value, business plan, sponsor experience"
+        },
+        "term": {
+          "label": "Typical term",
+          "res": "6–12 months",
+          "comm": "12–24 months"
+        },
+        "exit_strategy": {
+          "label": "Exit strategy",
+          "res": "Sale of current home or conventional refi",
+          "comm": "Refinance into permanent debt (DSCR) or asset sale"
+        },
+        "property_types": {
+          "label": "Property types",
+          "res": "Primary residences, second homes",
+          "comm": "Multifamily, retail, office, industrial, mixed-use"
+        },
+        "payment": {
+          "label": "Payment structure",
+          "res": "Interest-only or deferred",
+          "comm": "Interest-only with balloon at maturity"
+        }
+      }
+    },
+    "why_choose": {
+      "title": "Why Choose a Bridge Loan:",
+      "speed_title": "Speed:",
+      "speed_desc": "Close in days or weeks, not months — critical for competitive purchase offers, auction acquisitions, or maturing debt deadlines.",
+      "flexibility_title": "Flexibility:",
+      "flexibility_desc": "Underwriting is centered on real estate value and equity rather than rigid debt-to-income and conventional documentation checks.",
+      "timing_title": "Leverage Timing:",
+      "timing_desc": "Move on high-upside properties immediately rather than waiting for another transaction or stabilization cycle to finish.",
+      "permanent_title": "Bridge to Permanent Capital:",
+      "permanent_desc": "Secure time to optimize property performance before taking out long-term conventional, DSCR, or agency loans."
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "q": "Do I need to sell my current home before getting a residential bridge loan?",
+          "a": "No — that's the point of a bridge loan. It lets you access equity in your current home to fund your next purchase before the sale closes."
+        },
+        {
+          "q": "Can a bridge loan be used for a property that needs renovation?",
+          "a": "Yes, especially on the commercial side. Bridge loans are commonly used to fund acquisition and renovation of value-add properties before refinancing into permanent financing once the property is stabilized."
+        },
+        {
+          "q": "What's the difference between a bridge loan and a hard money loan?",
+          "a": "There is overlap — both are short-term and asset-focused — but bridge loans are typically used for a clear transition (sale, refinance, or stabilization) with a defined exit strategy, while hard money loans are often used more broadly for quick-turn financing, including fix-and-flip projects."
+        },
+        {
+          "q": "How do I pay off a bridge loan?",
+          "a": "Most bridge loans are paid off through one of three exit strategies: sale of the property, refinance into permanent/long-term financing, or (for residential) sale of your previous home."
+        },
+        {
+          "q": "Is a bridge loan more expensive than a conventional loan?",
+          "a": "Generally, yes — rates and fees are higher than conventional financing because of the short term and speed of execution. The trade-off is flexibility and the ability to move on time-sensitive opportunities that conventional financing can't accommodate."
+        }
+      ]
+    },
+    "cta": {
+      "apply_now": "Apply Now →",
+      "get_quote": "Get a Personalized Quote",
+      "contact_text": "Ready to explore bridge loan options for your next residential or commercial move? Call/text (305) 891-6500 to talk through your timeline."
+    },
+    "schema": {
+      "webpage_name": "Bridge Loans | MyLoanDesk",
+      "webpage_description": "Fast and flexible short-term bridge financing for residential and commercial real estate transactions.",
+      "product_name": "Residential & Commercial Bridge Loans",
+      "product_description": "Short-term gap financing enabling homeowners and commercial real estate investors to close quickly before securing permanent financing or selling an existing property.",
+      "faq_q1_question": "Do I need to sell my current home before getting a residential bridge loan?",
+      "faq_q1_answer": "No — that is the primary purpose of a bridge loan. It allows you to access equity in your current home to fund your next purchase before the sale closes.",
+      "faq_q2_question": "Can a bridge loan be used for a property that needs renovation?",
+      "faq_q2_answer": "Yes, particularly on the commercial side. Bridge loans are commonly used to fund the acquisition and renovation of value-add properties before refinancing into permanent debt once stabilized.",
+      "faq_q3_question": "What's the difference between a bridge loan and a hard money loan?",
+      "faq_q3_answer": "While both are short-term and asset-focused, bridge loans are typically structured for a clear transition (sale, refinance, or stabilization) with a defined exit strategy, whereas hard money loans are used broadly across short-turn financing including fix-and-flips.",
+      "faq_q4_question": "How do I pay off a bridge loan?",
+      "faq_q4_answer": "Most bridge loans are paid off through one of three exit strategies: sale of the acquired property, refinance into permanent long-term financing, or (for residential) the sale of your previous home.",
+      "faq_q5_question": "Is a bridge loan more expensive than a conventional loan?",
+      "faq_q5_answer": "Generally, yes. Rates and fees are higher than conventional financing because of the short duration, speed of execution, and underwriting flexibility. The trade-off allows buyers and investors to execute time-sensitive opportunities without contingencies."
+    }
+  },
+  "BridgeToSaleLoans": {
+    "meta": {
+      "title": "Bridge to Sale Loans - Buy Your Next Home Before You Sell | MyLoanDesk",
+      "description": "Unlock equity in your current home to buy your next property without waiting for a sale. Submit strong, non-contingent offers with flexible bridge financing.",
+      "og_title": "Bridge to Sale Loans | MyLoanDesk",
+      "og_description": "Access equity in your current property before it sells. Submit strong non-contingent offers and sell on your timeline without pressure.",
+      "og_alt": "Bridge to Sale Loans - MyLoanDesk",
+      "twitter_title": "Bridge to Sale Loans | MyLoanDesk",
+      "twitter_description": "Unlock equity in your current home to buy your next property without waiting for a sale."
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "loan_programs": "Loan Programs",
+      "bridge_to_sale": "Bridge to Sale Loans"
+    },
+    "hero": {
+      "badge": "Transition & Move-Up Financing",
+      "title_main": "Bridge to Sale Loans",
+      "title_sub": "Buy Your Next Home Before Selling Your Current One",
+      "description": "Found your dream home but haven't sold your current property yet? A Bridge to Sale loan unlocks your home equity so you can make a strong, non-contingent offer and move on your terms.",
+      "cta_options": "Get My Loan Options",
+      "cta_calc": "Calculate Bridge Capacity"
+    },
+    "who_this_is_for": {
+      "badge": "01 — Suitability",
+      "heading": "Who This Is For",
+      "description": "Bridge to Sale loans remove the timing friction between buying and selling, protecting your equity and purchase flexibility.",
+      "items": [
+        "Homeowners who've found their next home but haven't sold their current one yet",
+        "Buyers in competitive markets who need to submit non-contingent offers to compete",
+        "Sellers who want to move out, stage, and list their current home vacant, often for a higher sale price",
+        "Anyone who wants to avoid a rushed sale just to hit a purchase deadline"
+      ],
+      "side_card": {
+        "tag": "Strategic Advantages",
+        "title": "Eliminate Time Pressure",
+        "description": "Timing the sale of your current home to the local market rather than to your purchase deadline often means a stronger sale price. Sellers who list with pressure to close quickly tend to accept lower offers than sellers who can wait for the right buyer. A Bridge to Sale loan removes that time pressure entirely."
+      }
+    },
+    "how_it_works": {
+      "badge": "02 — Process",
+      "heading": "How It Works",
+      "steps": [
+        {
+          "step": "1",
+          "title": "Get Approved",
+          "desc": "Qualify based on the equity in your current home and your ability to carry the bridge financing."
+        },
+        {
+          "step": "2",
+          "title": "Access Equity",
+          "desc": "Funds are made available against your current home's equity, before it sells."
+        },
+        {
+          "step": "3",
+          "title": "Buy Your Next Home",
+          "desc": "Submit a strong, non-contingent offer and close on your new property."
+        },
+        {
+          "step": "4",
+          "title": "Sell on Your Timeline",
+          "desc": "List and sell your current home without pressure to accept a lowball offer."
+        },
+        {
+          "step": "5",
+          "title": "Pay Off the Loan",
+          "desc": "Proceeds from the sale pay off the bridge balance, with no prepayment penalty."
+        }
+      ]
+    },
+    "eligibility": {
+      "badge": "03 — Requirements",
+      "heading": "Eligibility at a Glance",
+      "cards": [
+        {
+          "title": "Sufficient Equity",
+          "desc": "Typically enough equity to cover the new bridge loan plus your existing mortgage balance."
+        },
+        {
+          "title": "Qualifying Exit Plan",
+          "desc": "A clear plan to list and sell your current home within the bridge term."
+        },
+        {
+          "title": "New Mortgage Qualification",
+          "desc": "Demonstrated ability to qualify for the long-term mortgage on your next home."
+        },
+        {
+          "title": "Credit & Reserves",
+          "desc": "Requirements vary by lender; a loan officer can confirm your exact numbers."
+        }
+      ]
+    },
+    "comparison": {
+      "badge": "04 — Comparison",
+      "heading": "Compare Your Options",
+      "th_feature": "Feature",
+      "th_bridge": "Bridge to Sale",
+      "th_contingent": "Contingent Offer",
+      "th_heloc": "HELOC",
+      "rows": {
+        "buy_before_sell": {
+          "feature": "Can buy before selling",
+          "bridge": "Yes",
+          "contingent": "No",
+          "heloc": "Yes, if enough equity"
+        },
+        "offer_strength": {
+          "feature": "Offer strength in competitive market",
+          "bridge": "Strong (non-contingent)",
+          "contingent": "Weaker (depends on your sale)",
+          "heloc": "Strong"
+        },
+        "payment_structure": {
+          "feature": "Monthly payment structure",
+          "bridge": "Interest-only or none for qualified borrowers",
+          "contingent": "N/A",
+          "heloc": "Yes, from day one"
+        },
+        "best_for": {
+          "feature": "Best for",
+          "bridge": "Buyers who need to move fast without waiting on their sale",
+          "contingent": "Buyers with flexible timelines",
+          "heloc": "Buyers with substantial equity and no rush"
+        }
+      }
+    },
+    "calculator": {
+      "badge": "Interactive Equity Estimator",
+      "heading": "Estimate Your Bridge Loan Capacity",
+      "subheading": "See how much equity you can unlock from your current home before it sells.",
+      "current_value_label": "Current Home Value ($)",
+      "current_value_placeholder": "600000",
+      "existing_mortgage_label": "Existing Mortgage Balance ($)",
+      "existing_mortgage_placeholder": "250000",
+      "cltv_label": "Max Lender CLTV (%)",
+      "cltv_placeholder": "80",
+      "submit_button": "Calculate Estimated Bridge Limit",
+      "total_equity_label": "Total Gross Equity",
+      "max_borrowable_label": "Max Combined Financing",
+      "available_cash_label": "Est. Available Bridge Cash",
+      "footnote": "* Exact bridge borrowing capacity depends on your home's appraised value, existing liens, credit profile, and lender underwriting parameters."
+    },
+    "faq": {
+      "badge": "05 — Clarity",
+      "heading": "Frequently Asked Questions",
+      "items": [
+        {
+          "q": "How much can I borrow against my current home?",
+          "a": "This depends on your home's value, your existing mortgage balance, and the lender's maximum combined loan-to-value — a loan officer can give you an exact number after a quick equity review."
+        },
+        {
+          "q": "Do I have to make payments while I own both homes?",
+          "a": "Some bridge programs offer no-monthly-payment options for qualified borrowers, with the balance due when your current home sells. Others are interest-only. It depends on the program you qualify for."
+        },
+        {
+          "q": "What happens if my home takes longer to sell than expected?",
+          "a": "Bridge terms are typically up to 12 months, which gives most sellers a comfortable window. If needed, extensions may be available — worth discussing upfront with your loan officer."
+        },
+        {
+          "q": "Is there a penalty for paying off the bridge loan early?",
+          "a": "No. Once your current home sells, the proceeds go straight to paying off the bridge balance with no prepayment penalty."
+        },
+        {
+          "q": "How is this different from a HELOC?",
+          "a": "A HELOC is a revolving line of credit against your home, typically used alongside your existing mortgage. A bridge loan is specifically structured around the short-term gap between buying your next home and selling your current one, often with more flexible qualifying and payment structures for that exact purpose."
+        }
+      ]
+    },
+    "bottom_cta": {
+      "heading": "Ready to Transition to Your Next Home?",
+      "subheading": "Not sure if bridge financing is right for your situation? Talk to a loan officer for a free equity review — no obligation, no impact to your credit.",
+      "cta_quote": "Get My Loan Options",
+      "cta_contact": "Contact Us Now"
+    },
+    "schema": {
+      "webpage_name": "Bridge to Sale Loans | MyLoanDesk",
+      "webpage_description": "Comprehensive guide and capacity calculators for residential bridge-to-sale mortgage programs.",
+      "product_name": "Bridge to Sale Loan",
+      "product_description": "Short-term residential bridge loan enabling homeowners to unlock equity in their existing home to buy a new home before selling their current property.",
+      "faq_q1_question": "How much can I borrow against my current home?",
+      "faq_q1_answer": "This depends on your home's appraised value, your existing mortgage balance, and the lender's maximum combined loan-to-value (CLTV) limit. A loan officer can confirm exact borrowing capacity with a quick equity review.",
+      "faq_q2_question": "Do I have to make monthly payments while I own both homes?",
+      "faq_q2_answer": "Some bridge programs offer no-monthly-payment options for qualified borrowers, with the balance repaid when your current home sells. Other programs structure interest-only monthly payments.",
+      "faq_q3_question": "What happens if my home takes longer to sell than expected?",
+      "faq_q3_answer": "Bridge terms are typically structured for 6 to 12 months, providing a comfortable window to sell. In many scenarios, term extensions may be requested if additional listing time is needed.",
+      "faq_q4_question": "Is there a prepayment penalty for paying off the bridge loan early?",
+      "faq_q4_answer": "No. Once your current home sells, proceeds directly pay off the remaining bridge loan balance without any prepayment penalties.",
+      "faq_q5_question": "How is a Bridge to Sale loan different from a HELOC?",
+      "faq_q5_answer": "While a HELOC is a revolving line of credit requiring ongoing debt qualification, a Bridge to Sale loan is specifically structured for the gap between buying and selling, often offering deferred payments and underwriting centered on asset equity."
+    }
   }
 }

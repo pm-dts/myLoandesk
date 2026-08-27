@@ -1,8 +1,18 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
-export default function BridgeCalculator() {
+interface BridgeCalculatorProps {
+  locale?: string;
+}
+
+export default function BridgeCalculator({
+  locale = "en",
+}: BridgeCalculatorProps) {
+  const t = useTranslations("BridgeLoans.calculator");
+  const numberLocale = locale === "es" ? "es-US" : "en-US";
+
   const [loanType, setLoanType] = useState<"residential" | "commercial">(
     "residential",
   );
@@ -14,7 +24,6 @@ export default function BridgeCalculator() {
   const numValue = parseFloat(propertyValue);
   const numLtv = parseFloat(ltv);
   const numRate = parseFloat(rate);
-  const numTerm = parseInt(termMonths, 10);
 
   const isValid =
     !isNaN(numValue) &&
@@ -25,7 +34,11 @@ export default function BridgeCalculator() {
     !isNaN(numRate) &&
     numRate > 0;
 
-  const fmt = (n: number) => "$" + Math.round(n).toLocaleString("en-US");
+  const fmt = (n: number) =>
+    "$" +
+    Math.round(n).toLocaleString(numberLocale, {
+      maximumFractionDigits: 0,
+    });
 
   const loanAmount = isValid ? numValue * (numLtv / 100) : 0;
   const monthlyInterestOnly = isValid ? (loanAmount * (numRate / 100)) / 12 : 0;
@@ -33,10 +46,10 @@ export default function BridgeCalculator() {
   return (
     <div className="relative overflow-hidden rounded-2xl bg-[#1C1C1C] p-[30px] text-white before:pointer-events-none before:absolute before:-right-[60px] before:-top-[60px] before:h-[200px] before:w-[200px] before:rounded-full before:bg-[radial-gradient(circle,rgba(217,114,44,0.35),transparent_70%)]">
       <div className="relative z-10 font-sans text-xs font-bold uppercase tracking-[0.08em] text-[#D9B896]">
-        Bridge Loan Payment Estimator
+        {t("badge")}
       </div>
       <div className="relative z-10 mb-5 text-[13px] text-[#C9C4B8]">
-        Estimate interest-only payments and loan amounts.
+        {t("subheading")}
       </div>
 
       <div className="relative z-10 mb-5 flex rounded-[10px] border border-white/15 bg-white/[0.07] p-[3px]">
@@ -53,7 +66,7 @@ export default function BridgeCalculator() {
               : "bg-transparent text-[#C9C4B8] hover:text-white"
           }`}
         >
-          Residential Bridge
+          {t("residential_tab")}
         </button>
         <button
           type="button"
@@ -68,15 +81,15 @@ export default function BridgeCalculator() {
               : "bg-transparent text-[#C9C4B8] hover:text-white"
           }`}
         >
-          Commercial Bridge
+          {t("commercial_tab")}
         </button>
       </div>
 
       <div className="relative z-10 mb-3.5">
         <label className="mb-1.5 block text-[12.5px] font-semibold text-[#C9C4B8]">
           {loanType === "residential"
-            ? "Combined Property Value"
-            : "Property As-Is / Stabilized Value"}
+            ? t("property_value_label_res")
+            : t("property_value_label_comm")}
         </label>
         <div className="relative">
           <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 font-sans text-[15px] text-[#8F8A7C]">
@@ -87,7 +100,7 @@ export default function BridgeCalculator() {
             inputMode="numeric"
             value={propertyValue}
             onChange={(e) => setPropertyValue(e.target.value)}
-            placeholder={loanType === "residential" ? "850,000" : "2,500,000"}
+            placeholder={loanType === "residential" ? "850000" : "2500000"}
             className="w-full rounded-[10px] border border-white/20 bg-white/[0.07] py-3 pl-[30px] pr-3.5 font-sans text-[15px] font-semibold text-white outline-none transition duration-150 placeholder:text-[#6E6A5F] focus:border-[#D9722C] focus:bg-white/10"
           />
         </div>
@@ -96,7 +109,7 @@ export default function BridgeCalculator() {
       <div className="relative z-10 grid grid-cols-2 gap-3">
         <div className="mb-3.5">
           <label className="mb-1.5 block text-[12.5px] font-semibold text-[#C9C4B8]">
-            LTV / CLTV Target
+            {t("ltv_label")}
           </label>
           <div className="relative">
             <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 font-sans text-[15px] text-[#8F8A7C]">
@@ -114,7 +127,7 @@ export default function BridgeCalculator() {
         </div>
         <div className="mb-3.5">
           <label className="mb-1.5 block text-[12.5px] font-semibold text-[#C9C4B8]">
-            Est. Interest Rate
+            {t("rate_label")}
           </label>
           <div className="relative">
             <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 font-sans text-[15px] text-[#8F8A7C]">
@@ -135,7 +148,7 @@ export default function BridgeCalculator() {
 
       <div className="relative z-10 mb-3.5">
         <label className="mb-1.5 block text-[12.5px] font-semibold text-[#C9C4B8]">
-          Bridge Loan Term
+          {t("term_label")}
         </label>
         <select
           value={termMonths}
@@ -143,16 +156,16 @@ export default function BridgeCalculator() {
           className="w-full rounded-[10px] border border-white/20 bg-white/[0.07] px-3.5 py-3 font-sans text-[15px] font-semibold text-white outline-none transition duration-150 focus:border-[#D9722C] focus:bg-white/10"
         >
           <option value="6" className="bg-[#1C1C1C] text-white">
-            6 Months
+            6 {t("month_suffix")}
           </option>
           <option value="12" className="bg-[#1C1C1C] text-white">
-            12 Months
+            12 {t("month_suffix")}
           </option>
           <option value="18" className="bg-[#1C1C1C] text-white">
-            18 Months
+            18 {t("month_suffix")}
           </option>
           <option value="24" className="bg-[#1C1C1C] text-white">
-            24 Months
+            24 {t("month_suffix")}
           </option>
         </select>
       </div>
@@ -160,21 +173,22 @@ export default function BridgeCalculator() {
       {isValid && (
         <div className="relative z-10 mt-5 border-t border-white/15 pt-5 text-[13.5px] text-[#C9C4B8]">
           <div className="flex items-baseline justify-between py-1.5">
-            <span>Estimated Loan Amount</span>
+            <span>{t("est_loan_amount")}</span>
             <strong className="font-sans text-[15px] font-bold text-white">
               {fmt(loanAmount)}
             </strong>
           </div>
           <div className="mt-1.5 flex items-baseline justify-between border-t border-white/15 pt-3">
-            <span>Est. Monthly Payment (I/O)</span>
+            <span>{t("est_monthly_payment")}</span>
             <strong className="font-sans text-[19px] font-bold text-[#F5C89A]">
-              {fmt(monthlyInterestOnly)}/mo
+              {fmt(monthlyInterestOnly)}
+              {t("per_month")}
             </strong>
           </div>
           <div className="flex items-baseline justify-between py-1.5 text-xs text-[#8F8A7C]">
-            <span>Repayment Structure</span>
+            <span>{t("repayment_label")}</span>
             <span className="font-medium text-[#C9C4B8]">
-              Interest-Only / Exit at Maturity
+              {t("repayment_value")}
             </span>
           </div>
         </div>

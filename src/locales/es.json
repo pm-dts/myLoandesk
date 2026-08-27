@@ -3590,5 +3590,376 @@
       "faq_q5_question": "¿Cuál es el puntaje de crédito mínimo exigido para préstamos por estados de cuenta?",
       "faq_q5_answer": "La mayoría de los programas por extractos bancarios admiten puntajes de crédito a partir de 620, con condiciones óptimas y mayores ratios LTV disponibles para puntuaciones superiores a 700."
     }
+  },
+  "BridgeLoans": {
+    "meta": {
+      "title": "Préstamos Puente: Financiamiento Rápido y Flexible Residencial y Comercial | MyLoanDesk",
+      "description": "Préstamos puente para transiciones residenciales de compra antes de venta y adquisición o reposicionamiento de inmuebles comerciales. Cierre en días con opciones de solo interés.",
+      "og_title": "Préstamos Puente: Financiamiento Rápido y Flexible Residencial y Comercial | MyLoanDesk",
+      "og_description": "Financiamiento puente a corto plazo para bienes raíces residenciales y comerciales. Actúe rápido, elimine contingencias y asegure propiedades antes del financiamiento permanente.",
+      "og_alt": "Préstamos Puente - MyLoanDesk",
+      "twitter_title": "Préstamos Puente: Financiamiento Rápido y Flexible Residencial y Comercial | MyLoanDesk",
+      "twitter_description": "Financiamiento puente a corto plazo para bienes raíces residenciales y comerciales. Cierre rápido con términos flexibles."
+    },
+    "breadcrumbs": {
+      "home": "Inicio",
+      "loan_programs": "Programas de Préstamos",
+      "bridge_loans": "Préstamos Puente"
+    },
+    "back_to_programs": "Volver a Programas de Préstamos",
+    "title": "Préstamos Puente",
+    "hero": {
+      "subtitle": "Financiamiento Rápido y Flexible para Bienes Raíces Residenciales y Comerciales",
+      "description": "Un préstamo puente es un financiamiento a corto plazo que cubre la brecha temporal entre su situación actual y su meta inmobiliaria, ya sea comprar una nueva vivienda antes de vender la actual o adquirir un inmueble comercial antes de concretar financiamiento a largo plazo.",
+      "bullet1": "Velocidad de desembolso: Cierre rápido en tan solo 7 a 14 días",
+      "bullet2": "Plazos de 6 a 24 meses con opciones de pago de solo interés",
+      "bullet3": "Suscripción basada en activos para propiedades residenciales y comerciales",
+      "disclaimer": "Cálculo estimado únicamente. Asume esquemas de pago de solo interés. No incluye puntos de originación, costos de cierre, impuestos ni seguros. Los términos finales dependen del capital, la tasación y la suscripción crediticia."
+    },
+    "calculator": {
+      "badge": "Estimador de Pagos de Préstamo Puente",
+      "subheading": "Estime pagos de solo interés y montos de préstamo.",
+      "residential_tab": "Puente Residencial",
+      "commercial_tab": "Puente Comercial",
+      "property_value_label_res": "Valor Combinado de la Propiedad",
+      "property_value_label_comm": "Valor Actual / Estabilizado de la Propiedad",
+      "ltv_label": "Objetivo de LTV / CLTV",
+      "rate_label": "Tasa de Interés Estimada",
+      "term_label": "Plazo del Préstamo Puente",
+      "month_suffix": "Meses",
+      "est_loan_amount": "Monto Estimado del Préstamo",
+      "est_monthly_payment": "Pago Mensual Est. (Solo Interés)",
+      "per_month": "/mes",
+      "repayment_label": "Estructura de Pago",
+      "repayment_value": "Solo Interés / Saldo al Vencimiento"
+    },
+    "what_is": {
+      "title": "¿Qué es un Préstamo Puente?",
+      "p1": "A diferencia de una hipoteca tradicional, un préstamo puente está diseñado para brindar velocidad y flexibilidad. Los plazos suelen ser de 6 a 24 meses, el desembolso puede concretarse en días y la aprobación se fundamenta en el valor y plusvalía del inmueble más que en largos procesos de verificación de ingresos.",
+      "p2": "Una vez obtenido el financiamiento definitivo, la venta o el refinanciamiento, se cancela el préstamo puente: esa es la \"estrategia de salida\" sobre la cual se estructura cada operación. Funcionan para propiedades residenciales y comerciales, aunque la suscripción varía según el tipo de activo."
+    },
+    "residential": {
+      "title": "Préstamos Puente Residenciales",
+      "intro": "Los préstamos puente residenciales son habituales para propietarios que necesitan comprar su siguiente casa antes de vender la actual. Los casos comunes incluyen:",
+      "points": {
+        "buy_before_sell_title": "Comprar antes de vender:",
+        "buy_before_sell_desc": "Acceda al capital de su vivienda actual para cubrir el pago inicial o la compra total del nuevo inmueble.",
+        "avoid_contingent_title": "Evitar ofertas contingentes:",
+        "avoid_contingent_desc": "Elimine cláusulas de venta contingente para hacer sus ofertas de compra mucho más competitivas en mercados activos.",
+        "renovation_title": "Tiempo para remodelación y puesta en escena:",
+        "renovation_desc": "Cierre la compra de su nueva residencia mientras repara o acondiciona su casa actual para maximizar su precio de venta.",
+        "estate_title": "Liquidez en sucesiones y transiciones:",
+        "estate_desc": "Cubra el lapso de tiempo mientras se liquida o vende una propiedad heredada."
+      }
+    },
+    "commercial": {
+      "title": "Préstamos Puente Comerciales",
+      "intro": "Los préstamos puente comerciales atienden a inversionistas, desarrolladores y dueños de negocios que necesitan actuar con rapidez ante una oportunidad antes de estructurar financiamiento permanente. Los usos comunes incluyen:",
+      "points": {
+        "stabilization_title": "Adquisición previa a la estabilización:",
+        "stabilization_desc": "Compra de activos comerciales o multifamiliares de bajo rendimiento que requieren ocupación o mejoras antes de calificar para financiamiento tradicional.",
+        "time_sensitive_title": "Operaciones con plazos críticos:",
+        "time_sensitive_desc": "Ejecución ágil para oportunidades fuera de mercado, subastas o vencimientos estrictos de intercambio 1031.",
+        "repositioning_title": "Reposicionamiento y mejoras de capital:",
+        "repositioning_desc": "Mantener la propiedad durante obras de remodelación mayor hasta que se estabilice y genere flujo de caja positivo.",
+        "maturing_debt_title": "Pago de deuda por vencer:",
+        "maturing_debt_desc": "Refinanciar pagarés próximos a vencer para evitar incumplimientos mientras se tramita el financiamiento permanente."
+      },
+      "asset_classes_title": "Tipos de Activos Comerciales Elegibles",
+      "asset_classes": [
+        "Multifamiliares (5+ unidades)",
+        "Edificios de Oficinas",
+        "Centros Comerciales",
+        "Naves Industriales y Bodegas",
+        "Propiedades de Uso Mixto",
+        "Propiedades de Hospitalidad",
+        "Inmuebles de Uso Especial"
+      ]
+    },
+    "comparison": {
+      "title": "Préstamos Puente Residenciales vs. Comerciales",
+      "th_res": "Préstamo Puente Residencial",
+      "th_comm": "Préstamo Puente Comercial",
+      "rows": {
+        "primary_use": {
+          "label": "Uso principal",
+          "res": "Comprar nueva vivienda antes de vender la actual",
+          "comm": "Adquirir, reposicionar o refinanciar inmueble de inversión"
+        },
+        "underwriting": {
+          "label": "Enfoque de suscripción",
+          "res": "Capital en la vivienda actual + nueva propiedad",
+          "comm": "Valor del activo, plan de negocio y experiencia del patrocinador"
+        },
+        "term": {
+          "label": "Plazo típico",
+          "res": "6–12 meses",
+          "comm": "12–24 meses"
+        },
+        "exit_strategy": {
+          "label": "Estrategia de salida",
+          "res": "Venta de la vivienda actual o refinanciamiento convencional",
+          "comm": "Refinanciamiento a deuda permanente (DSCR) o venta del activo"
+        },
+        "property_types": {
+          "label": "Tipos de propiedad",
+          "res": "Residencias principales, segundas viviendas",
+          "comm": "Multifamiliares, retail, oficinas, industrial, uso mixto"
+        },
+        "payment": {
+          "label": "Estructura de pago",
+          "res": "Solo interés o diferido",
+          "comm": "Solo interés con pago global al vencimiento"
+        }
+      }
+    },
+    "why_choose": {
+      "title": "Por Qué Elegir un Préstamo Puente:",
+      "speed_title": "Rapidez:",
+      "speed_desc": "Cierre en días o semanas, no meses; esencial para ofertas competitivas, subastas o vencimientos de deuda.",
+      "flexibility_title": "Flexibilidad:",
+      "flexibility_desc": "La suscripción se enfoca en el valor del inmueble y el capital disponible en lugar de rígidas fórmulas de deuda-ingreso.",
+      "timing_title": "Aprovechamiento de Oportunidades:",
+      "timing_desc": "Asegure propiedades de alto potencial de inmediato sin esperar a que culminen otros ciclos de venta o estabilización.",
+      "permanent_title": "Transición a Capital Permanente:",
+      "permanent_desc": "Gane tiempo para optimizar el rendimiento del inmueble antes de solicitar créditos convencionales, DSCR o de agencia a largo plazo."
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "items": [
+        {
+          "q": "¿Debo vender mi casa actual antes de obtener un préstamo puente residencial?",
+          "a": "No: ese es el objetivo central de un préstamo puente. Le permite acceder al capital de su vivienda actual para financiar su nueva compra antes de que se concrete la venta."
+        },
+        {
+          "q": "¿Se puede usar un préstamo puente para una propiedad que requiere remodelación?",
+          "a": "Sí, especialmente en el sector comercial. Se utilizan habitualmente para la adquisición y mejora de activos de valor agregado antes de refinanciar a largo plazo una vez estabilizada la propiedad."
+        },
+        {
+          "q": "¿Cuál es la diferencia entre un préstamo puente y un préstamo de dinero privado (hard money)?",
+          "a": "Ambos son a corto plazo y basados en activos, pero los préstamos puente se estructuran para una transición definida (venta, refinanciamiento o estabilización) con una salida clara, mientras que el hard money se emplea de forma más general para proyectos rápidos como fix-and-flip."
+        },
+        {
+          "q": "¿Cómo se liquida un préstamo puente?",
+          "a": "La mayoría se liquida mediante una de tres estrategias: venta del inmueble, refinanciamiento a largo plazo o (en el caso residencial) la venta de su vivienda previa."
+        },
+        {
+          "q": "¿Es un préstamo puente más costoso que uno convencional?",
+          "a": "Por lo general sí: las tasas y comisiones son más altas debido a la corta duración y velocidad de desembolso. La ventaja es la flexibilidad y la capacidad de cerrar transacciones urgentes sin contingencias."
+        }
+      ]
+    },
+    "cta": {
+      "apply_now": "Solicitar Ahora →",
+      "get_quote": "Obtener Cotización Personalizada",
+      "contact_text": "¿Listo para explorar opciones de préstamos puente para su próxima operación residencial o comercial? Llame o envíe un mensaje al (305) 891-6500 para evaluar sus plazos."
+    },
+    "schema": {
+      "webpage_name": "Préstamos Puente | MyLoanDesk",
+      "webpage_description": "Financiamiento puente a corto plazo rápido y flexible para transacciones inmobiliarias residenciales y comerciales.",
+      "product_name": "Préstamos Puente Residenciales y Comerciales",
+      "product_description": "Financiamiento temporal que permite a propietarios e inversionistas comerciales cerrar compras con rapidez antes de obtener financiamiento definitivo o vender un inmueble existente.",
+      "faq_q1_question": "¿Debo vender mi casa actual antes de obtener un préstamo puente residencial?",
+      "faq_q1_answer": "No: ese es el propósito central de un préstamo puente. Le permite utilizar el capital de su vivienda actual para financiar su nueva compra antes de concretar la venta.",
+      "faq_q2_question": "¿Se puede usar un préstamo puente para una propiedad que requiere remodelación?",
+      "faq_q2_answer": "Sí, sobre todo en el ámbito comercial. Se utilizan con frecuencia para comprar y renovar propiedades de valor agregado antes de refinanciar con deuda permanente una vez estabilizadas.",
+      "faq_q3_question": "¿Cuál es la diferencia entre un préstamo puente y un préstamo hard money?",
+      "faq_q3_answer": "Aunque ambos se basan en activos, los préstamos puente se estructuran para una transición clara con una estrategia de salida definida, mientras que el hard money se usa de forma más amplia para giros rápidos como remodelaciones fix-and-flip.",
+      "faq_q4_question": "¿Cómo se liquida un préstamo puente?",
+      "faq_q4_answer": "La mayoría se cancela mediante tres vías principales: venta del inmueble, refinanciamiento a largo plazo o la venta de su vivienda anterior en el caso residencial.",
+      "faq_q5_question": "¿Es un préstamo puente más costoso que uno convencional?",
+      "faq_q5_answer": "Generalmente sí, debido a su corto plazo y agilidad de desembolso. La contrapartida es la flexibilidad para cerrar operaciones de compra sin contingencias."
+    }
+  },
+  "BridgeToSaleLoans": {
+    "meta": {
+      "title": "Préstamos Puente para Venta - Compre su Próxima Casa Antes de Vender | MyLoanDesk",
+      "description": "Acceda al capital de su vivienda actual para comprar su próxima propiedad sin esperar a vender. Presente ofertas sólidas y no contingentes con financiamiento puente flexible.",
+      "og_title": "Préstamos Puente para Venta | MyLoanDesk",
+      "og_description": "Acceda al capital de su propiedad actual antes de que se venda. Presente ofertas sólidas no contingentes y venda en sus propios tiempos sin presiones.",
+      "og_alt": "Préstamos Puente para Venta - MyLoanDesk",
+      "twitter_title": "Préstamos Puente para Venta | MyLoanDesk",
+      "twitter_description": "Libere el capital de su vivienda actual para comprar su próxima propiedad sin esperar a vender."
+    },
+    "breadcrumbs": {
+      "home": "Inicio",
+      "loan_programs": "Programas de Préstamos",
+      "bridge_to_sale": "Préstamos Puente para Venta"
+    },
+    "hero": {
+      "badge": "Financiamiento de Transición y Crecimiento",
+      "title_main": "Préstamos Puente para Venta",
+      "title_sub": "Compre su Próxima Casa Antes de Vender la Actual",
+      "description": "¿Encontró la casa de sus sueños pero aún no ha vendido su propiedad actual? Un préstamo Puente para Venta libera la plusvalía de su vivienda para que pueda hacer una oferta sólida, no contingente y mudarse a su propio ritmo.",
+      "cta_options": "Ver Opciones de Préstamo",
+      "cta_calc": "Calcular Capacidad de Préstamo Puente"
+    },
+    "who_this_is_for": {
+      "badge": "01 — Idoneidad",
+      "heading": "¿Para Quién es Este Préstamo?",
+      "description": "Los préstamos Puente para Venta eliminan la fricción de tiempos entre comprar y vender, protegiendo su patrimonio y su flexibilidad de compra.",
+      "items": [
+        "Propietarios que encontraron su próxima casa pero aún no han vendido la actual",
+        "Compradores en mercados competitivos que necesitan presentar ofertas no contingentes para competir",
+        "Vendedores que desean mudarse, ambientar y listar su casa vacía para obtener un mejor precio de venta",
+        "Cualquiera que desee evitar una venta apresurada solo para cumplir con un plazo de compra"
+      ],
+      "side_card": {
+        "tag": "Ventajas Estratégicas",
+        "title": "Elimine la Presión de Tiempo",
+        "description": "Vincular la venta de su casa actual al mercado local en lugar de a su fecha límite de compra suele traducirse en un precio de venta más alto. Quienes listan con prisa por cerrar tienden a aceptar ofertas más bajas que aquellos que pueden esperar al comprador ideal. Un préstamo Puente para Venta elimina esa presión por completo."
+      }
+    },
+    "how_it_works": {
+      "badge": "02 — Proceso",
+      "heading": "¿Cómo Funciona?",
+      "steps": [
+        {
+          "step": "1",
+          "title": "Obtenga Aprobación",
+          "desc": "Califique en función del capital en su vivienda actual y su capacidad para asumir el financiamiento puente."
+        },
+        {
+          "step": "2",
+          "title": "Acceda al Capital",
+          "desc": "Los fondos se ponen a su disposición con base en la plusvalía de su vivienda actual antes de su venta."
+        },
+        {
+          "step": "3",
+          "title": "Compre su Próxima Casa",
+          "desc": "Presente una oferta sólida no contingente y cierre la compra de su nueva propiedad."
+        },
+        {
+          "step": "4",
+          "title": "Venda en sus Tiempos",
+          "desc": "Publique y venda su vivienda actual sin la presión de aceptar ofertas por debajo de su valor real."
+        },
+        {
+          "step": "5",
+          "title": "Liquide el Préstamo",
+          "desc": "Los fondos obtenidos de la venta cancelan el saldo del préstamo puente, sin penalizaciones por pago anticipado."
+        }
+      ]
+    },
+    "eligibility": {
+      "badge": "03 — Requisitos",
+      "heading": "Elegibilidad en un Vistazo",
+      "cards": [
+        {
+          "title": "Capital Suficiente",
+          "desc": "Generalmente el capital acumulado debe cubrir el nuevo préstamo puente más el saldo de su hipoteca actual."
+        },
+        {
+          "title": "Plan de Salida Calificado",
+          "desc": "Un plan claro para listar y vender su vivienda actual dentro del plazo del préstamo puente."
+        },
+        {
+          "title": "Calificación para Nueva Hipoteca",
+          "desc": "Capacidad demostrada para calificar para la hipoteca a largo plazo de su próxima vivienda."
+        },
+        {
+          "title": "Crédito y Reservas",
+          "desc": "Los requisitos varían según el prestamista; un asesor hipotecario puede confirmar sus números exactos."
+        }
+      ]
+    },
+    "comparison": {
+      "badge": "04 — Comparación",
+      "heading": "Compare sus Opciones",
+      "th_feature": "Característica",
+      "th_bridge": "Puente para Venta",
+      "th_contingent": "Oferta Contingente",
+      "th_heloc": "HELOC",
+      "rows": {
+        "buy_before_sell": {
+          "feature": "Puede comprar antes de vender",
+          "bridge": "Sí",
+          "contingent": "No",
+          "heloc": "Sí, si tiene suficiente capital"
+        },
+        "offer_strength": {
+          "feature": "Fuerza de la oferta en mercado competitivo",
+          "bridge": "Fuerte (no contingente)",
+          "contingent": "Más débil (depende de su venta)",
+          "heloc": "Fuerte"
+        },
+        "payment_structure": {
+          "feature": "Estructura de pagos mensuales",
+          "bridge": "Solo interés o diferido para prestatarios calificados",
+          "contingent": "N/A",
+          "heloc": "Sí, desde el primer día"
+        },
+        "best_for": {
+          "feature": "Ideal para",
+          "bridge": "Compradores que necesitan mudarse rápido sin esperar la venta",
+          "contingent": "Compradores con plazos flexibles",
+          "heloc": "Compradores con gran capital y sin prisa"
+        }
+      }
+    },
+    "calculator": {
+      "badge": "Estimador Interactivo de Capital",
+      "heading": "Estime su Capacidad de Préstamo Puente",
+      "subheading": "Vea cuánto capital puede liberar de su vivienda actual antes de que se venda.",
+      "current_value_label": "Valor Estimado de la Vivienda Actual ($)",
+      "current_value_placeholder": "600000",
+      "existing_mortgage_label": "Saldo Hipotecario Actual ($)",
+      "existing_mortgage_placeholder": "250000",
+      "cltv_label": "CLTV Máximo del Prestamista (%)",
+      "cltv_placeholder": "80",
+      "submit_button": "Calcular Límite Estimado del Préstamo Puente",
+      "total_equity_label": "Capital Bruto Total",
+      "max_borrowable_label": "Financiamiento Combinado Máximo",
+      "available_cash_label": "Efectivo Puente Disponible Estimado",
+      "footnote": "* La capacidad exacta de endeudamiento puente depende del valor de tasación de su vivienda, gravámenes existentes, perfil crediticio y criterios de suscripción del prestamista."
+    },
+    "faq": {
+      "badge": "05 — Claridad",
+      "heading": "Preguntas Frecuentes",
+      "items": [
+        {
+          "q": "¿Cuánto puedo pedir prestado sobre mi vivienda actual?",
+          "a": "Depende del valor de su propiedad, el saldo de su hipoteca actual y el ratio máximo de préstamo a valor combinado (CLTV) del prestamista; un asesor hipotecario puede darle la cifra exacta tras revisar su plusvalía."
+        },
+        {
+          "q": "¿Debo hacer pagos mensuales mientras soy dueño de ambas propiedades?",
+          "a": "Algunos programas puente ofrecen opciones sin pagos mensuales para prestatarios calificados, liquidando el saldo al vender su casa. Otros contemplan pagos mensuales de solo interés."
+        },
+        {
+          "q": "¿Qué ocurre si mi casa tarda más en venderse de lo previsto?",
+          "a": "Los plazos de los préstamos puente son comúnmente de hasta 12 meses, lo que otorga un margen cómodo. Si fuera necesario, pueden solicitarse extensiones de plazo con el prestamista."
+        },
+        {
+          "q": "¿Existe alguna penalización por liquidar el préstamo puente antes de tiempo?",
+          "a": "No. Una vez vendida su casa actual, los ingresos se destinan directamente a saldar el préstamo puente sin ninguna penalización por pago anticipado."
+        },
+        {
+          "q": "¿En qué se diferencia este préstamo de un HELOC?",
+          "a": "Un HELOC es una línea de crédito rotativa que requiere calificación crediticia continua. Un préstamo puente está específicamente estructurado para el período de transición entre comprar y vender, con pagos más flexibles adaptados a ese fin."
+        }
+      ]
+    },
+    "bottom_cta": {
+      "heading": "¿Listo para la Transición a su Próxima Casa?",
+      "subheading": "¿No está seguro de si el financiamiento puente es adecuado para su caso? Hable con un asesor hipotecario para una evaluación gratuita de su plusvalía: sin compromiso y sin impacto en su crédito.",
+      "cta_quote": "Ver Opciones de Préstamo",
+      "cta_contact": "Contáctenos Ahora"
+    },
+    "schema": {
+      "webpage_name": "Préstamos Puente para Venta | MyLoanDesk",
+      "webpage_description": "Guía completa y calculadoras de capacidad para programas de hipotecas puente residenciales para venta.",
+      "product_name": "Préstamo Puente para Venta",
+      "product_description": "Préstamo puente residencial a corto plazo que permite a los propietarios desbloquear el capital de su vivienda actual para comprar una nueva propiedad antes de vender la existente.",
+      "faq_q1_question": "¿Cuánto puedo pedir prestado sobre mi vivienda actual?",
+      "faq_q1_answer": "Depende del valor tasado de su vivienda, el saldo de su hipoteca actual y el límite máximo de préstamo a valor combinado (CLTV) del prestamista. Un asesor puede confirmarle la capacidad exacta tras revisar su plusvalía.",
+      "faq_q2_question": "¿Debo hacer pagos mensuales mientras soy dueño de ambas propiedades?",
+      "faq_q2_answer": "Algunos programas puente ofrecen opciones sin pagos mensuales para prestatarios calificados, pagando el saldo al venderse la propiedad. Otros se estructuran con pagos de solo interés.",
+      "faq_q3_question": "¿Qué ocurre si mi casa tarda más en venderse de lo previsto?",
+      "faq_q3_answer": "Los plazos suelen ser de 6 a 12 meses, lo que ofrece un margen cómodo. En muchos casos pueden solicitarse extensiones de plazo si se necesita más tiempo de publicación.",
+      "faq_q4_question": "¿Existe alguna penalización por liquidar el préstamo puente antes de tiempo?",
+      "faq_q4_answer": "No. Al venderse la vivienda actual, los ingresos pagan directamente el saldo del préstamo puente sin penalizaciones por pago anticipado.",
+      "faq_q5_question": "¿En qué se diferencia un préstamo Puente para Venta de un HELOC?",
+      "faq_q5_answer": "Mientras que un HELOC es una línea de crédito rotativa tradicional, un préstamo Puente para Venta está diseñado específicamente para la brecha entre comprar y vender, ofreciendo a menudo pagos diferidos y evaluación basada en el valor del activo."
+    }
   }
 }
