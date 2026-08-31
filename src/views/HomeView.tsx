@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowRight,
   Star,
@@ -13,7 +14,6 @@ import { Fraunces } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
-import Calculator from "@/components/site/Home/Calculator";
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
 import LenderMarquee from "@/components/site/Home/LenderMarquee";
 import Faq from "@/components/site/Home/FAQ";
@@ -22,6 +22,8 @@ import CalculatorSection from "@/components/site/Home/CalculatorSection";
 import RateAlert from "@/components/site/Home/RateAlert";
 import HeroSmallIcons from "@/components/site/Home/HeroSmallIcons";
 import LoansSection from "@/components/site/Home/LoanCards";
+
+import heroImg from "@/assets/hero-home.jpeg";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -302,10 +304,18 @@ export default async function HomeView({ locale }: { locale: "en" | "es" }) {
             </div>
           </div>
 
-          <div className="relative w-full max-w-xl mx-auto lg:ml-auto lg:mr-0 mt-8 lg:mt-0">
-            <div className="absolute inset-0 bg-[#E8E4D8] rounded-3xl transform rotate-2 translate-x-3 translate-y-3 -z-10"></div>
-            <div className="relative z-10">
-              <Calculator />
+          {/* Hero Image Container */}
+          <div className="relative w-full max-w-md lg:max-w-lg mx-auto lg:ml-auto lg:mr-0 mt-8 lg:mt-0">
+            <div className="absolute inset-0 bg-[#E8E4D8] rounded-3xl transform rotate-2 translate-x-3 translate-y-3 -z-10" />
+            <div className="relative z-10 overflow-hidden rounded-3xl border border-line/60 shadow-[0_20px_50px_-20px_rgba(15,61,46,0.25)] bg-cream aspect-[3/4] sm:aspect-[4/5]">
+              <Image
+                src={heroImg}
+                alt="Modern luxury home representing wholesale mortgage opportunities"
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 500px"
+                className="object-cover object-center transform"
+              />
             </div>
           </div>
         </div>
